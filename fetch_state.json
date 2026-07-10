@@ -1,0 +1,8521 @@
+{
+  "done_leagues": [
+    "10637",
+    "10639",
+    "10692",
+    "10715",
+    "10717",
+    "10731",
+    "10733",
+    "10734",
+    "10769",
+    "10839",
+    "11123",
+    "11125",
+    "11169",
+    "11182",
+    "11268",
+    "11279",
+    "11323",
+    "11344",
+    "11348",
+    "11374",
+    "11379",
+    "11381",
+    "11535",
+    "11542",
+    "11552",
+    "11564",
+    "11647",
+    "11698",
+    "11811",
+    "11824",
+    "11853",
+    "11865",
+    "11871",
+    "11892",
+    "11910",
+    "12014",
+    "12247",
+    "12251",
+    "12252",
+    "12255",
+    "12270",
+    "12376",
+    "12416",
+    "12427",
+    "12456",
+    "12558",
+    "12614",
+    "12657",
+    "12674",
+    "12687",
+    "12709",
+    "12771",
+    "12877",
+    "12881",
+    "12882",
+    "12991",
+    "13000",
+    "13009",
+    "13028",
+    "13070",
+    "13085",
+    "13192",
+    "13234",
+    "13330",
+    "13362",
+    "13377",
+    "13401",
+    "13404",
+    "13427",
+    "13454",
+    "13609",
+    "13723",
+    "13738",
+    "13748",
+    "13757",
+    "13763",
+    "13802",
+    "13814",
+    "13917",
+    "13958",
+    "14064",
+    "14113",
+    "14141",
+    "14158",
+    "14166",
+    "14190",
+    "14217",
+    "14365",
+    "14391",
+    "14394",
+    "14443",
+    "14459",
+    "14474",
+    "14486",
+    "14499",
+    "14561",
+    "14622",
+    "14624",
+    "14656",
+    "14669",
+    "14687",
+    "14707",
+    "14710",
+    "14720",
+    "14732",
+    "14741",
+    "14777",
+    "14872",
+    "14887",
+    "14918",
+    "14923",
+    "14924",
+    "14929",
+    "14933",
+    "14934",
+    "15050",
+    "15060",
+    "15136",
+    "15250",
+    "15253",
+    "15267",
+    "15281",
+    "15335",
+    "15358",
+    "15368",
+    "15386",
+    "15390",
+    "15422",
+    "15435",
+    "15455",
+    "15490",
+    "15532",
+    "15556",
+    "15585",
+    "15594",
+    "15598",
+    "15707",
+    "15710",
+    "15744",
+    "15754",
+    "15766",
+    "15852",
+    "15864",
+    "15865",
+    "15870",
+    "15872",
+    "15892",
+    "15894",
+    "15895",
+    "15960",
+    "15992",
+    "16015",
+    "16016",
+    "16032",
+    "16037",
+    "16043",
+    "16072",
+    "16103",
+    "16104",
+    "16112",
+    "16126",
+    "16127",
+    "16138",
+    "16146",
+    "16148",
+    "16184",
+    "16244",
+    "16252",
+    "16253",
+    "16321",
+    "16325",
+    "16326",
+    "16352",
+    "16354",
+    "16355",
+    "16364",
+    "16390",
+    "16406",
+    "16418",
+    "16427",
+    "16434",
+    "16436",
+    "16438",
+    "16454",
+    "16458",
+    "16463",
+    "16469",
+    "16474",
+    "16475",
+    "16476",
+    "16520",
+    "16523",
+    "16525",
+    "16564",
+    "16567",
+    "16581",
+    "16585",
+    "16614",
+    "16615",
+    "16628",
+    "16635",
+    "16636",
+    "16655",
+    "16657",
+    "16658",
+    "16668",
+    "16675",
+    "16676",
+    "16720",
+    "16723",
+    "16728",
+    "16757",
+    "16760",
+    "16761",
+    "16766",
+    "16767",
+    "16768",
+    "16782",
+    "16783",
+    "16784",
+    "16811",
+    "16834",
+    "16847",
+    "16849",
+    "16883",
+    "16884",
+    "16892",
+    "16893",
+    "16894",
+    "16896",
+    "16931",
+    "16932",
+    "16934",
+    "16935",
+    "16936",
+    "16955",
+    "16959",
+    "16960",
+    "16966",
+    "16967",
+    "16968",
+    "16976",
+    "16977",
+    "16979",
+    "17002",
+    "17003",
+    "17021",
+    "17022",
+    "17033",
+    "17036",
+    "17037",
+    "17041",
+    "17057",
+    "17065",
+    "17069",
+    "17070",
+    "17071",
+    "17073",
+    "17108",
+    "17116",
+    "17117",
+    "17118",
+    "17138",
+    "17139",
+    "17160",
+    "17161",
+    "17162",
+    "17163",
+    "17178",
+    "17179",
+    "17180",
+    "17182",
+    "17205",
+    "17212",
+    "17240",
+    "17241",
+    "17254",
+    "17261",
+    "17262",
+    "17273",
+    "17275",
+    "17278",
+    "17279",
+    "17295",
+    "17296",
+    "17298",
+    "17299",
+    "17303",
+    "17307",
+    "17308",
+    "17329",
+    "17330",
+    "17339",
+    "17340",
+    "17344",
+    "17345",
+    "17358",
+    "17359",
+    "17362",
+    "17363",
+    "17374",
+    "17381",
+    "17382",
+    "17386",
+    "17393",
+    "17394",
+    "17411",
+    "17412",
+    "17421",
+    "17422",
+    "17434",
+    "17435",
+    "17451",
+    "17452",
+    "17455",
+    "17456",
+    "17458",
+    "17466",
+    "17467",
+    "17494",
+    "17507",
+    "17516",
+    "17550",
+    "17551",
+    "17568",
+    "17569",
+    "17575",
+    "17576",
+    "17889",
+    "17890",
+    "17892",
+    "17972",
+    "17973",
+    "18016",
+    "18017",
+    "18018",
+    "18027",
+    "18028",
+    "18029",
+    "18062",
+    "18063",
+    "18071",
+    "18072",
+    "18073",
+    "18138",
+    "18189",
+    "18543",
+    "18609",
+    "18679",
+    "18681",
+    "18693",
+    "18806",
+    "18807",
+    "18899",
+    "18900",
+    "18901",
+    "19057",
+    "19058",
+    "19302",
+    "19303",
+    "19305",
+    "19307",
+    "19308",
+    "19310",
+    "19311",
+    "19314",
+    "19318",
+    "19319",
+    "19321",
+    "19330",
+    "19331",
+    "19332",
+    "19333",
+    "19586",
+    "19846",
+    "19851",
+    "19854",
+    "19974",
+    "19975",
+    "20139",
+    "20140",
+    "20322",
+    "20324",
+    "20325",
+    "20331",
+    "20334",
+    "20336",
+    "20360",
+    "20362",
+    "20363",
+    "20364",
+    "20366",
+    "20368",
+    "20369",
+    "20370",
+    "20611",
+    "20773",
+    "20774",
+    "20877",
+    "20878",
+    "20902",
+    "20930",
+    "20931",
+    "20932",
+    "20933",
+    "21106",
+    "21107",
+    "21192",
+    "21194",
+    "21195",
+    "21196",
+    "21197",
+    "21198",
+    "21199",
+    "21482",
+    "21483",
+    "21484",
+    "21543",
+    "21569",
+    "21570",
+    "22002",
+    "22003",
+    "22005",
+    "22006",
+    "22111",
+    "22130",
+    "22132",
+    "22705",
+    "22706",
+    "22707",
+    "22708",
+    "22709",
+    "22710",
+    "22711",
+    "22712",
+    "22746",
+    "22747",
+    "22802",
+    "22853",
+    "23263",
+    "23264",
+    "23265",
+    "23274",
+    "23275",
+    "23277",
+    "23278",
+    "23279",
+    "23299",
+    "23300",
+    "23692",
+    "23693",
+    "23694",
+    "23807",
+    "23809",
+    "23810",
+    "24225",
+    "24226",
+    "24227",
+    "24257",
+    "24258",
+    "24282",
+    "24284",
+    "24285",
+    "24287",
+    "24288",
+    "24300",
+    "24301",
+    "24466",
+    "24467",
+    "24468",
+    "24469",
+    "24566",
+    "8425",
+    "8569"
+  ],
+  "written": [
+    {
+      "id": "1187004",
+      "league": "19311",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "1st T20I (N), South Africa tour of India at Dharamsala, Sep 15 2019",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2019-09-15"
+    },
+    {
+      "id": "1187010",
+      "league": "19311",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "1st ODI (D/N), South Africa tour of India at Dharamsala, Mar 12 2020",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2020-03-12"
+    },
+    {
+      "id": "1187011",
+      "league": "19311",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), South Africa tour of India at Lucknow, Mar 15 2020",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2020-03-15"
+    },
+    {
+      "id": "1187012",
+      "league": "19311",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), South Africa tour of India at Kolkata, Mar 18 2020",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2020-03-18"
+    },
+    {
+      "id": "64736",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 585,
+      "desc": "1st ODI (D/N), England tour of India at Kolkata, Jan 19 2002",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2002-01-19"
+    },
+    {
+      "id": "64738",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 375,
+      "desc": "2nd ODI, England tour of India at Cuttack, Jan 22 2002",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2002-01-22"
+    },
+    {
+      "id": "64741",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 275,
+      "desc": "3rd ODI (D/N), England tour of India at Chennai, Jan 25 2002",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2002-01-25"
+    },
+    {
+      "id": "64742",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 420,
+      "desc": "4th ODI, England tour of India at Kanpur, Jan 28 2002",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2002-01-28"
+    },
+    {
+      "id": "64743",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 550,
+      "desc": "5th ODI, England tour of India at Delhi, Jan 31 2002",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2002-01-31"
+    },
+    {
+      "id": "64744",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 617,
+      "desc": "6th ODI (D/N), England tour of India at Mumbai, Feb 3 2002",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2002-02-03"
+    },
+    {
+      "id": "64753",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 613,
+      "desc": "1st ODI, Zimbabwe tour of India at Faridabad, Mar 7 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-03-07"
+    },
+    {
+      "id": "64754",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 525,
+      "desc": "2nd ODI (D/N), Zimbabwe tour of India at Mohali, Mar 10 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-03-10"
+    },
+    {
+      "id": "64755",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 150,
+      "desc": "3rd ODI, Zimbabwe tour of India at Kochi, Mar 13 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-03-13"
+    },
+    {
+      "id": "64756",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 604,
+      "desc": "4th ODI (D/N), Zimbabwe tour of India at Hyderabad, Mar 16 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-03-16"
+    },
+    {
+      "id": "64757",
+      "league": "15422",
+      "type": "ODI",
+      "deliveries": 571,
+      "desc": "5th ODI, Zimbabwe tour of India at Guwahati, Mar 19 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-03-19"
+    },
+    {
+      "id": "238187",
+      "league": "14656",
+      "type": "Test",
+      "deliveries": 325,
+      "desc": "3rd Test, England tour of India at Mumbai, Mar 18-22 2006",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2006-03-18"
+    },
+    {
+      "id": "238191",
+      "league": "14656",
+      "type": "ODI",
+      "deliveries": 593,
+      "desc": "4th ODI, England tour of India at Kochi, Apr 6 2006",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2006-04-06"
+    },
+    {
+      "id": "238192",
+      "league": "14656",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, England tour of India at Guwahati, Apr 9 2006",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2006-04-09"
+    },
+    {
+      "id": "361048",
+      "league": "13814",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI, England tour of India at Guwahati, Nov 29 2008",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2008-11-29"
+    },
+    {
+      "id": "361049",
+      "league": "13814",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "7th ODI (D/N), England tour of India at Delhi, Dec 2 2008",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2008-12-02"
+    },
+    {
+      "id": "565819",
+      "league": "12247",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "1st T20I (N), New Zealand tour of India at Visakhapatnam, Sep 8 2012",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "2012-09-08"
+    },
+    {
+      "id": "63951",
+      "league": "15435",
+      "type": "Test",
+      "deliveries": 1850,
+      "desc": "1st Test, India tour of South Africa at Bloemfontein, Nov 3-6 2001",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "2001-11-03"
+    },
+    {
+      "id": "63952",
+      "league": "15435",
+      "type": "Test",
+      "deliveries": 400,
+      "desc": "2nd Test, India tour of South Africa at Gqeberha, Nov 16-20 2001",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "2001-11-16"
+    },
+    {
+      "id": "63961",
+      "league": "15435",
+      "type": "Test",
+      "deliveries": 50,
+      "desc": "1st Test, England tour of India at Mohali, Dec 3-6 2001",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "2001-12-03"
+    },
+    {
+      "id": "63976",
+      "league": "15435",
+      "type": "Test",
+      "deliveries": 100,
+      "desc": "1st Test, Zimbabwe tour of India at Nagpur, Feb 21-25 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-02-21"
+    },
+    {
+      "id": "63945",
+      "league": "15435",
+      "type": "Test",
+      "deliveries": 425,
+      "desc": "3rd Test, India tour of Sri Lanka at Colombo, Aug 29-Sep 2 2001",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2001-08-29"
+    },
+    {
+      "id": "63977",
+      "league": "15435",
+      "type": "Test",
+      "deliveries": 100,
+      "desc": "2nd Test, Zimbabwe tour of India at Delhi, Feb 28-Mar 4 2002",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2002-02-28"
+    },
+    {
+      "id": "64046",
+      "league": "15136",
+      "type": "Test",
+      "deliveries": 775,
+      "desc": "1st Test, New Zealand tour of India at Ahmedabad, Oct 8-12 2003",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "2003-10-08"
+    },
+    {
+      "id": "64061",
+      "league": "15136",
+      "type": "Test",
+      "deliveries": 2300,
+      "desc": "3rd Test, India tour of Australia at Melbourne, Dec 26-30 2003",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "2003-12-26"
+    },
+    {
+      "id": "464528",
+      "league": "13070",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "1st ODI, Australia tour of India [Sep-Oct 2010] at Kochi, Oct 17 2010",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2010-10-17"
+    },
+    {
+      "id": "464530",
+      "league": "13070",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "3rd ODI, Australia tour of India [Sep-Oct 2010] at Margao, Oct 24 2010",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2010-10-24"
+    },
+    {
+      "id": "64706",
+      "league": "15556",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), Australia tour of India at Bengaluru, Mar 25 2001",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2001-03-25"
+    },
+    {
+      "id": "64708",
+      "league": "15556",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Australia tour of India at Pune, Mar 28 2001",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2001-03-28"
+    },
+    {
+      "id": "64709",
+      "league": "15556",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Australia tour of India at Indore, Mar 31 2001",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2001-03-31"
+    },
+    {
+      "id": "64710",
+      "league": "15556",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, Australia tour of India at Visakhapatnam, Apr 3 2001",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2001-04-03"
+    },
+    {
+      "id": "64711",
+      "league": "15556",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, Australia tour of India at Margao, Apr 6 2001",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2001-04-06"
+    },
+    {
+      "id": "416242",
+      "league": "13454",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "7th ODI (D/N), Australia tour of India at Navi Mumbai, Nov 11 2009",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2009-11-11"
+    },
+    {
+      "id": "1119503",
+      "league": "17972",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "3rd T20I (N), Australia tour of India at Hyderabad, Oct 13 2017",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2017-10-13"
+    },
+    {
+      "id": "64916",
+      "league": "14918",
+      "type": "ODI",
+      "deliveries": 605,
+      "desc": "2nd ODI (D/N), India tour of Bangladesh at Dhaka, Dec 26 2004",
+      "teams": [
+        "Bangladesh",
+        "India"
+      ],
+      "date": "2004-12-26"
+    },
+    {
+      "id": "282690",
+      "league": "14394",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "3rd ODI, India tour of Bangladesh at Chattogram, May 15 2007",
+      "teams": [
+        "Bangladesh",
+        "India"
+      ],
+      "date": "2007-05-15"
+    },
+    {
+      "id": "63898",
+      "league": "15598",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, India tour of Bangladesh at Dhaka, Nov 10-13 2000",
+      "teams": [
+        "Bangladesh",
+        "India"
+      ],
+      "date": "2000-11-10"
+    },
+    {
+      "id": "63905",
+      "league": "15598",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Zimbabwe tour of India at Delhi, Nov 18-22 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-11-18"
+    },
+    {
+      "id": "63906",
+      "league": "15598",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Zimbabwe tour of India at Nagpur, Nov 25-29 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-11-25"
+    },
+    {
+      "id": "64112",
+      "league": "14924",
+      "type": "Test",
+      "deliveries": 1100,
+      "desc": "2nd Test, India tour of Bangladesh at Chattogram, Dec 17-20 2004",
+      "teams": [
+        "Bangladesh",
+        "India"
+      ],
+      "date": "2004-12-17"
+    },
+    {
+      "id": "1496575",
+      "league": "23807",
+      "type": "T20",
+      "deliveries": 246,
+      "desc": "2nd T20I, India tour of England at Manchester, Jul 4 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-04"
+    },
+    {
+      "id": "1496576",
+      "league": "23807",
+      "type": "T20",
+      "deliveries": 195,
+      "desc": "3rd T20I (D/N), India tour of England at Nottingham, Jul 7 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "id": "1496577",
+      "league": "23807",
+      "type": "T20",
+      "deliveries": 213,
+      "desc": "4th T20I (D/N), India tour of England at Bristol, Jul 9 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-09"
+    },
+    {
+      "id": "1496578",
+      "league": "23807",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "5th T20I, India tour of England at Southampton, Jul 11 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-11"
+    },
+    {
+      "id": "1496579",
+      "league": "23807",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of England at Birmingham, Jul 14 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-14"
+    },
+    {
+      "id": "1496580",
+      "league": "23807",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), India tour of England at Cardiff, Jul 16 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-16"
+    },
+    {
+      "id": "1496581",
+      "league": "23807",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of England at London, Jul 19 2026",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "id": "63997",
+      "league": "15335",
+      "type": "Test",
+      "deliveries": 600,
+      "desc": "1st Test, India tour of England at London, Jul 25-29 2002",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2002-07-25"
+    },
+    {
+      "id": "63998",
+      "league": "15335",
+      "type": "Test",
+      "deliveries": 2204,
+      "desc": "2nd Test, India tour of England at Nottingham, Aug 8-12 2002",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2002-08-08"
+    },
+    {
+      "id": "63999",
+      "league": "15335",
+      "type": "Test",
+      "deliveries": 2225,
+      "desc": "3rd Test, India tour of England at Leeds, Aug 22-26 2002",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2002-08-22"
+    },
+    {
+      "id": "64000",
+      "league": "15335",
+      "type": "Test",
+      "deliveries": 1475,
+      "desc": "4th Test, India tour of England at London, Sep 5-9 2002",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "2002-09-05"
+    },
+    {
+      "id": "64004",
+      "league": "15335",
+      "type": "Test",
+      "deliveries": 375,
+      "desc": "1st Test, West Indies tour of India at Mumbai, Oct 9-12 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-10-09"
+    },
+    {
+      "id": "64005",
+      "league": "15335",
+      "type": "Test",
+      "deliveries": 475,
+      "desc": "2nd Test, West Indies tour of India at Chennai, Oct 17-20 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-10-17"
+    },
+    {
+      "id": "1384638",
+      "league": "21543",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "3rd T20I, India tour of Ireland at Dublin, Aug 23 2023",
+      "teams": [
+        "Ireland",
+        "India"
+      ],
+      "date": "2023-08-23"
+    },
+    {
+      "id": "64818",
+      "league": "15250",
+      "type": "ODI",
+      "deliveries": 350,
+      "desc": "6th ODI (D/N), India tour of New Zealand at Auckland, Jan 11 2003",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2003-01-11"
+    },
+    {
+      "id": "1539432",
+      "league": "24467",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "1st T20I (N), India tour of New Zealand at Christchurch, Oct 22 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-10-22"
+    },
+    {
+      "id": "1539433",
+      "league": "24467",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "2nd T20I (N), India tour of New Zealand at Christchurch, Oct 24 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-10-24"
+    },
+    {
+      "id": "1539434",
+      "league": "24467",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "3rd T20I (N), India tour of New Zealand at Wellington, Oct 27 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-10-27"
+    },
+    {
+      "id": "1539435",
+      "league": "24467",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "4th T20I (N), India tour of New Zealand at Auckland, Oct 30 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-10-30"
+    },
+    {
+      "id": "1539436",
+      "league": "24467",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "5th T20I (N), India tour of New Zealand at Hamilton, Nov 1 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-01"
+    },
+    {
+      "id": "1539437",
+      "league": "24467",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), India tour of New Zealand at Auckland, Nov 4 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-04"
+    },
+    {
+      "id": "1539438",
+      "league": "24467",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), India tour of New Zealand at Wellington, Nov 7 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-07"
+    },
+    {
+      "id": "1539439",
+      "league": "24467",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), India tour of New Zealand at Hamilton, Nov 10 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-10"
+    },
+    {
+      "id": "1539440",
+      "league": "24467",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI (D/N), India tour of New Zealand at Mount Maunganui, Nov 13 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-13"
+    },
+    {
+      "id": "1539441",
+      "league": "24467",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI (D/N), India tour of New Zealand at Mount Maunganui, Nov 15 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-15"
+    },
+    {
+      "id": "1539442",
+      "league": "24467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of New Zealand at Wellington, Nov 19-23 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-18"
+    },
+    {
+      "id": "1539443",
+      "league": "24467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of New Zealand at Christchurch, Nov 27-Dec 1 2026",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2026-11-26"
+    },
+    {
+      "id": "1322275",
+      "league": "20878",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "1st T20I (N), India tour of New Zealand at Wellington, Nov 18 2022",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2022-11-18"
+    },
+    {
+      "id": "64020",
+      "league": "15253",
+      "type": "Test",
+      "deliveries": 600,
+      "desc": "1st Test, India tour of New Zealand at Wellington, Dec 12-14 2002",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2002-12-11"
+    },
+    {
+      "id": "64021",
+      "league": "15253",
+      "type": "Test",
+      "deliveries": 600,
+      "desc": "2nd Test, India tour of New Zealand at Hamilton, Dec 19-22 2002",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "2002-12-18"
+    },
+    {
+      "id": "64081",
+      "league": "15050",
+      "type": "Test",
+      "deliveries": 1325,
+      "desc": "1st Test, India tour of Pakistan at Multan, Mar 28-Apr 1 2004",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "2004-03-28"
+    },
+    {
+      "id": "64082",
+      "league": "15050",
+      "type": "Test",
+      "deliveries": 675,
+      "desc": "2nd Test, India tour of Pakistan at Lahore, Apr 5-8 2004",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "2004-04-05"
+    },
+    {
+      "id": "1387597",
+      "league": "21570",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "1st T20I (D/N), India tour of South Africa at Durban, Dec 10 2023",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "2023-12-10"
+    },
+    {
+      "id": "256669",
+      "league": "14561",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "2nd ODI, India tour of Sri Lanka at Colombo, Aug 20 2006",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2006-08-20"
+    },
+    {
+      "id": "256670",
+      "league": "14561",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Sri Lanka at Colombo, Aug 22 2006",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2006-08-22"
+    },
+    {
+      "id": "343735",
+      "league": "13917",
+      "type": "ODI",
+      "deliveries": 1,
+      "desc": "4th ODI (D/N), India tour of Sri Lanka at Colombo, Aug 26 2008",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2008-08-26"
+    },
+    {
+      "id": "63943",
+      "league": "15490",
+      "type": "Test",
+      "deliveries": 1727,
+      "desc": "1st Test, India tour of Sri Lanka at Galle, Aug 14-17 2001",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2001-08-14"
+    },
+    {
+      "id": "63944",
+      "league": "15490",
+      "type": "Test",
+      "deliveries": 150,
+      "desc": "2nd Test, India tour of Sri Lanka at Kandy, Aug 22-25 2001",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2001-08-22"
+    },
+    {
+      "id": "1544001",
+      "league": "24566",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Sri Lanka at Galle, Aug 15-19 2026",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2026-08-15"
+    },
+    {
+      "id": "1544002",
+      "league": "24566",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Sri Lanka at Colombo, Aug 23-27 2026",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "2026-08-23"
+    },
+    {
+      "id": "64768",
+      "league": "15358",
+      "type": "ODI",
+      "deliveries": 548,
+      "desc": "3rd ODI, India tour of West Indies at Bridgetown, May 29 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-05-29"
+    },
+    {
+      "id": "64769",
+      "league": "15358",
+      "type": "ODI",
+      "deliveries": 295,
+      "desc": "4th ODI, India tour of West Indies at Port of Spain, Jun 1 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-06-01"
+    },
+    {
+      "id": "64770",
+      "league": "15358",
+      "type": "ODI",
+      "deliveries": 175,
+      "desc": "5th ODI, India tour of West Indies at Port of Spain, Jun 2 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-06-02"
+    },
+    {
+      "id": "63984",
+      "league": "15368",
+      "type": "Test",
+      "deliveries": 1325,
+      "desc": "1st Test, India tour of West Indies at Georgetown, Apr 11-15 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-04-11"
+    },
+    {
+      "id": "63985",
+      "league": "15368",
+      "type": "Test",
+      "deliveries": 800,
+      "desc": "2nd Test, India tour of West Indies at Port of Spain, Apr 19-23 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-04-19"
+    },
+    {
+      "id": "63986",
+      "league": "15368",
+      "type": "Test",
+      "deliveries": 900,
+      "desc": "3rd Test, India tour of West Indies at Bridgetown, May 2-5 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-05-02"
+    },
+    {
+      "id": "63987",
+      "league": "15368",
+      "type": "Test",
+      "deliveries": 325,
+      "desc": "4th Test, India tour of West Indies at St John's, May 10-14 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-05-10"
+    },
+    {
+      "id": "63988",
+      "league": "15368",
+      "type": "Test",
+      "deliveries": 2175,
+      "desc": "5th Test, India tour of West Indies at Kingston, May 18-22 2002",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "2002-05-18"
+    },
+    {
+      "id": "1530060",
+      "league": "24300",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "1st T20I, India tour of Zimbabwe at Harare, Jul 23 2026",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "2026-07-23"
+    },
+    {
+      "id": "1530061",
+      "league": "24300",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "2nd T20I, India tour of Zimbabwe at Harare, Jul 25 2026",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "2026-07-25"
+    },
+    {
+      "id": "1530062",
+      "league": "24300",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "3rd T20I, India tour of Zimbabwe at Harare, Jul 26 2026",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "id": "63935",
+      "league": "15532",
+      "type": "Test",
+      "deliveries": 300,
+      "desc": "2nd Test, India tour of Zimbabwe at Harare, Jun 15-18 2001",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "2001-06-15"
+    },
+    {
+      "id": "64125",
+      "league": "14887",
+      "type": "Test",
+      "deliveries": 475,
+      "desc": "1st Test, Pakistan tour of India at Mohali, Mar 8-12 2005",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2005-03-08"
+    },
+    {
+      "id": "64126",
+      "league": "14887",
+      "type": "Test",
+      "deliveries": 1400,
+      "desc": "2nd Test, Pakistan tour of India at Kolkata, Mar 16-20 2005",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2005-03-16"
+    },
+    {
+      "id": "64127",
+      "league": "14887",
+      "type": "Test",
+      "deliveries": 550,
+      "desc": "3rd Test, Pakistan tour of India at Bengaluru, Mar 24-28 2005",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2005-03-24"
+    },
+    {
+      "id": "226358",
+      "league": "14732",
+      "type": "ODI",
+      "deliveries": 506,
+      "desc": "4th ODI (D/N), South Africa tour of India at Kolkata, Nov 25 2005",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2005-11-25"
+    },
+    {
+      "id": "903591",
+      "league": "11279",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "3rd T20I (N), South Africa tour of India at Kolkata, Oct 8 2015",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2015-10-08"
+    },
+    {
+      "id": "1479579",
+      "league": "23274",
+      "type": "T20",
+      "deliveries": 1,
+      "desc": "4th T20I (N), South Africa tour of India at Lucknow, Dec 17 2025",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2025-12-17"
+    },
+    {
+      "id": "1529227",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), West Indies tour of India at Thiruvananthapuram, Sep 27 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-09-27"
+    },
+    {
+      "id": "1529228",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), West Indies tour of India at Guwahati, Sep 30 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-09-30"
+    },
+    {
+      "id": "1529229",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), West Indies tour of India at New Chandigarh, Oct 3 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "1529230",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "1st T20I (N), West Indies tour of India at Lucknow, Oct 6 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-10-06"
+    },
+    {
+      "id": "1529231",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "2nd T20I (N), West Indies tour of India at Ranchi, Oct 9 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-10-09"
+    },
+    {
+      "id": "1529232",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "3rd T20I (N), West Indies tour of India at Indore, Oct 11 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-10-11"
+    },
+    {
+      "id": "1529233",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "4th T20I (N), West Indies tour of India at Hyderabad, Oct 14 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "1529234",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "5th T20I (N), West Indies tour of India at Bengaluru, Oct 17 2026",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2026-10-17"
+    },
+    {
+      "id": "1529236",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), Sri Lanka tour of India at Bengaluru, Dec 16 2026",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2026-12-16"
+    },
+    {
+      "id": "1529237",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), Sri Lanka tour of India at Ahmedabad, Dec 19 2026",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2026-12-19"
+    },
+    {
+      "id": "1529238",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "1st T20I (N), Sri Lanka tour of India at Rajkot, Dec 22 2026",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2026-12-22"
+    },
+    {
+      "id": "1529239",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "2nd T20I (N), Sri Lanka tour of India at Cuttack, Dec 24 2026",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2026-12-24"
+    },
+    {
+      "id": "1529240",
+      "league": "24285",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "3rd T20I (N), Sri Lanka tour of India at Pune, Dec 27 2026",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2026-12-27"
+    },
+    {
+      "id": "1529241",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), Zimbabwe tour of India at Kolkata, Jan 3 2027",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2027-01-03"
+    },
+    {
+      "id": "1529242",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), Zimbabwe tour of India at Hyderabad, Jan 6 2027",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2027-01-06"
+    },
+    {
+      "id": "1529243",
+      "league": "24285",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), Zimbabwe tour of India at Mumbai, Jan 9 2027",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2027-01-09"
+    },
+    {
+      "id": "1529244",
+      "league": "24285",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Nagpur, Jan 21-25 2027",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2027-01-21"
+    },
+    {
+      "id": "1529245",
+      "league": "24285",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Chennai, Jan 29-Feb 2 2027",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "2027-01-29"
+    },
+    {
+      "id": "226361",
+      "league": "14720",
+      "type": "Test",
+      "deliveries": 712,
+      "desc": "1st Test, Sri Lanka tour of India at Chennai, Dec 2-6 2005",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2005-12-02"
+    },
+    {
+      "id": "226362",
+      "league": "14720",
+      "type": "Test",
+      "deliveries": 925,
+      "desc": "2nd Test, Sri Lanka tour of India at Delhi, Dec 10-14 2005",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "2005-12-10"
+    },
+    {
+      "id": "64785",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 614,
+      "desc": "1st ODI, West Indies tour of India at Jamshedpur, Nov 6 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-06"
+    },
+    {
+      "id": "64786",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 300,
+      "desc": "2nd ODI, West Indies tour of India at Nagpur, Nov 9 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-09"
+    },
+    {
+      "id": "64787",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 480,
+      "desc": "3rd ODI, West Indies tour of India at Rajkot, Nov 12 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-12"
+    },
+    {
+      "id": "64788",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 100,
+      "desc": "4th ODI (D/N), West Indies tour of India at Ahmedabad, Nov 15 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-15"
+    },
+    {
+      "id": "64789",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 175,
+      "desc": "5th ODI, West Indies tour of India at Vadodara, Nov 18 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-18"
+    },
+    {
+      "id": "64790",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 425,
+      "desc": "6th ODI, West Indies tour of India at Jodhpur, Nov 21 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-21"
+    },
+    {
+      "id": "64792",
+      "league": "15267",
+      "type": "ODI",
+      "deliveries": 539,
+      "desc": "7th ODI, West Indies tour of India at Vijayawada, Nov 24 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-11-24"
+    },
+    {
+      "id": "267707",
+      "league": "14459",
+      "type": "ODI",
+      "deliveries": 500,
+      "desc": "2nd ODI (D/N), West Indies tour of India at Cuttack, Jan 24 2007",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2007-01-24"
+    },
+    {
+      "id": "770125",
+      "league": "11564",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), West Indies tour of India at Visakhapatnam, Oct 14 2014",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2014-10-14"
+    },
+    {
+      "id": "770129",
+      "league": "11564",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI (D/N), West Indies tour of India at Kolkata, Oct 20 2014",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2014-10-20"
+    },
+    {
+      "id": "770131",
+      "league": "11564",
+      "type": "T20",
+      "deliveries": 0,
+      "desc": "Only T20I (N), West Indies tour of India at Cuttack, Oct 22 2014",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2014-10-22"
+    },
+    {
+      "id": "770133",
+      "league": "11564",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Hyderabad, Oct 30-Nov 3 2014",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2014-10-30"
+    },
+    {
+      "id": "770135",
+      "league": "11564",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Bengaluru, Nov 7-11 2014",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2014-11-07"
+    },
+    {
+      "id": "64006",
+      "league": "15281",
+      "type": "Test",
+      "deliveries": 650,
+      "desc": "3rd Test, West Indies tour of India at Kolkata, Oct 30-Nov 3 2002",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2002-10-30"
+    },
+    {
+      "id": "770137",
+      "league": "11542",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Ahmedabad, Nov 15-19 2014",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "2014-11-15"
+    },
+    {
+      "id": "64680",
+      "league": "15585",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Zimbabwe tour of India at Cuttack, Dec 2 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-12-02"
+    },
+    {
+      "id": "64681",
+      "league": "15585",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Zimbabwe tour of India at Ahmedabad, Dec 5 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-12-05"
+    },
+    {
+      "id": "64682",
+      "league": "15585",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Zimbabwe tour of India at Jodhpur, Dec 8 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-12-08"
+    },
+    {
+      "id": "64683",
+      "league": "15585",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, Zimbabwe tour of India at Kanpur, Dec 11 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-12-11"
+    },
+    {
+      "id": "64684",
+      "league": "15585",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, Zimbabwe tour of India at Rajkot, Dec 14 2000",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "2000-12-14"
+    },
+    {
+      "id": "64234",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), Australia tour of India at Delhi, Sep 28 1984",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1984-09-28"
+    },
+    {
+      "id": "64235",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Australia tour of India at Thiruvananthapuram, Oct 1 1984",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1984-10-01"
+    },
+    {
+      "id": "64238",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, Australia tour of India at Indore, Oct 6 1984",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1984-10-06"
+    },
+    {
+      "id": "64239",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Pakistan at Quetta, Oct 12 1984",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1984-10-12"
+    },
+    {
+      "id": "64240",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Pakistan at Sialkot, Oct 31 1984",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1984-10-31"
+    },
+    {
+      "id": "64246",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, England tour of India at Pune, Dec 5 1984",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1984-12-05"
+    },
+    {
+      "id": "64248",
+      "league": "16896",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, England tour of India at Cuttack, Dec 27 1984",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1984-12-27"
+    },
+    {
+      "id": "64285",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Australia tour of India at Jaipur, Sep 7 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-09-07"
+    },
+    {
+      "id": "64286",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Australia tour of India at Srinagar, Sep 9 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-09-09"
+    },
+    {
+      "id": "64287",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Australia tour of India at Hyderabad, Sep 24 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-09-24"
+    },
+    {
+      "id": "64288",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, Australia tour of India at Delhi, Oct 2 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-10-02"
+    },
+    {
+      "id": "64289",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, Australia tour of India at Ahmedabad, Oct 5 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-10-05"
+    },
+    {
+      "id": "64290",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI, Australia tour of India at Rajkot, Oct 7 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-10-07"
+    },
+    {
+      "id": "64296",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Sri Lanka tour of India at Kanpur, Dec 24 1986",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1986-12-24"
+    },
+    {
+      "id": "64297",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Sri Lanka tour of India at Guwahati, Jan 11 1987",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1987-01-11"
+    },
+    {
+      "id": "64298",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Sri Lanka tour of India at Delhi, Jan 13 1987",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1987-01-13"
+    },
+    {
+      "id": "64299",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, Sri Lanka tour of India at Vadodara, Jan 15 1987",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1987-01-15"
+    },
+    {
+      "id": "64300",
+      "league": "16784",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, Sri Lanka tour of India at Mumbai, Jan 17 1987",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1987-01-17"
+    },
+    {
+      "id": "62817",
+      "league": "17412",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Chennai, Oct 19-23 1956",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1956-10-19"
+    },
+    {
+      "id": "62818",
+      "league": "17412",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Mumbai, Oct 26-31 1956",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1956-10-26"
+    },
+    {
+      "id": "62819",
+      "league": "17412",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Australia tour of India at Kolkata, Nov 2-6 1956",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1956-11-02"
+    },
+    {
+      "id": "62863",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of England at Manchester, Jul 23-28 1959",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1959-07-23"
+    },
+    {
+      "id": "62864",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of England at London, Aug 20-24 1959",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1959-08-20"
+    },
+    {
+      "id": "62868",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Delhi, Dec 12-16 1959",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1959-12-12"
+    },
+    {
+      "id": "62869",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Kanpur, Dec 19-24 1959",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1959-12-19"
+    },
+    {
+      "id": "62870",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Australia tour of India at Mumbai, Jan 1-6 1960",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1960-01-01"
+    },
+    {
+      "id": "62871",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Australia tour of India at Chennai, Jan 13-17 1960",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1960-01-13"
+    },
+    {
+      "id": "62872",
+      "league": "17382",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Australia tour of India at Kolkata, Jan 23-28 1960",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1960-01-23"
+    },
+    {
+      "id": "62952",
+      "league": "17340",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Chennai, Oct 2-7 1964",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1964-10-02"
+    },
+    {
+      "id": "62953",
+      "league": "17340",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Mumbai, Oct 10-15 1964",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1964-10-10"
+    },
+    {
+      "id": "62954",
+      "league": "17340",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Australia tour of India at Kolkata, Oct 17-22 1964",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1964-10-17"
+    },
+    {
+      "id": "63047",
+      "league": "17273",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, New Zealand tour of India at Hyderabad, Oct 15-20 1969",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1969-10-15"
+    },
+    {
+      "id": "63051",
+      "league": "17273",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Mumbai, Nov 4-9 1969",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1969-11-04"
+    },
+    {
+      "id": "63052",
+      "league": "17273",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Kanpur, Nov 15-20 1969",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1969-11-15"
+    },
+    {
+      "id": "63053",
+      "league": "17273",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Australia tour of India at Delhi, Nov 28-Dec 2 1969",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1969-11-28"
+    },
+    {
+      "id": "63054",
+      "league": "17273",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Australia tour of India at Kolkata, Dec 12-16 1969",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1969-12-12"
+    },
+    {
+      "id": "63055",
+      "league": "17273",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Australia tour of India at Chennai, Dec 24-28 1969",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1969-12-24"
+    },
+    {
+      "id": "63237",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at Birmingham, Jul 12-16 1979",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1979-07-12"
+    },
+    {
+      "id": "63238",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at London, Aug 2-7 1979",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1979-08-02"
+    },
+    {
+      "id": "63239",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Leeds, Aug 16-21 1979",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1979-08-16"
+    },
+    {
+      "id": "63240",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of England at London, Aug 30-Sep 4 1979",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1979-08-30"
+    },
+    {
+      "id": "63241",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Chennai, Sep 11-16 1979",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1979-09-11"
+    },
+    {
+      "id": "63242",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Bengaluru, Sep 19-24 1979",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1979-09-19"
+    },
+    {
+      "id": "63243",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Australia tour of India at Kanpur, Oct 2-7 1979",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1979-10-02"
+    },
+    {
+      "id": "63244",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Australia tour of India at Delhi, Oct 13-18 1979",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1979-10-13"
+    },
+    {
+      "id": "63245",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Australia tour of India at Kolkata, Oct 26-31 1979",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1979-10-26"
+    },
+    {
+      "id": "63246",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "6th Test, Australia tour of India at Mumbai, Nov 3-7 1979",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1979-11-03"
+    },
+    {
+      "id": "63248",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Pakistan tour of India at Delhi, Dec 4-9 1979",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1979-12-04"
+    },
+    {
+      "id": "63249",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Pakistan tour of India at Mumbai, Dec 16-20 1979",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1979-12-16"
+    },
+    {
+      "id": "63250",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Pakistan tour of India at Kanpur, Dec 25-30 1979",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1979-12-25"
+    },
+    {
+      "id": "63251",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Pakistan tour of India at Chennai, Jan 15-20 1980",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1980-01-15"
+    },
+    {
+      "id": "63252",
+      "league": "17070",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "6th Test, Pakistan tour of India at Kolkata, Jan 29-Feb 3 1980",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1980-01-29"
+    },
+    {
+      "id": "63433",
+      "league": "16782",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at Leeds, Jun 19-23 1986",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1986-06-19"
+    },
+    {
+      "id": "63434",
+      "league": "16782",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Birmingham, Jul 3-8 1986",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1986-07-03"
+    },
+    {
+      "id": "63438",
+      "league": "16782",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Australia tour of India at Chennai, Sep 18-22 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-09-18"
+    },
+    {
+      "id": "63439",
+      "league": "16782",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Australia tour of India at Delhi, Sep 26-30 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-09-26"
+    },
+    {
+      "id": "63440",
+      "league": "16782",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Australia tour of India at Mumbai, Oct 15-19 1986",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1986-10-15"
+    },
+    {
+      "id": "63449",
+      "league": "16782",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Sri Lanka tour of India at Kanpur, Dec 17-22 1986",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1986-12-17"
+    },
+    {
+      "id": "63247",
+      "league": "17069",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Pakistan tour of India at Bengaluru, Nov 21-26 1979",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1979-11-21"
+    },
+    {
+      "id": "66059",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Match (D/N), Titan Cup at Hyderabad, Oct 17 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-10-17"
+    },
+    {
+      "id": "66061",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 613,
+      "desc": "3rd Match (D/N), Titan Cup at Bengaluru, Oct 21 1996",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1996-10-21"
+    },
+    {
+      "id": "66062",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th Match, Titan Cup at Jaipur, Oct 23 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-10-23"
+    },
+    {
+      "id": "66064",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "7th Match, Titan Cup at Rajkot, Oct 29 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-10-29"
+    },
+    {
+      "id": "66066",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 609,
+      "desc": "9th Match (D/N), Titan Cup at Mohali, Nov 3 1996",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1996-11-03"
+    },
+    {
+      "id": "66067",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final (D/N), Titan Cup at Mumbai, Nov 6 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-11-06"
+    },
+    {
+      "id": "66068",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Match (D/N), Standard Bank International One-Day Series at Bloemfontein, Jan 23 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-01-23"
+    },
+    {
+      "id": "66070",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Match (D/N), Standard Bank International One-Day Series at Paarl, Jan 27 1997",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1997-01-27"
+    },
+    {
+      "id": "66073",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match, Standard Bank International One-Day Series at Gqeberha, Feb 2 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-02-02"
+    },
+    {
+      "id": "66074",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "7th Match (D/N), Standard Bank International One-Day Series at KuGompo City, Feb 4 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-02-04"
+    },
+    {
+      "id": "66075",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "8th Match (D/N), Standard Bank International One-Day Series at Centurion, Feb 7 1997",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1997-02-07"
+    },
+    {
+      "id": "66076",
+      "league": "16148",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "9th Match, Standard Bank International One-Day Series at Benoni, Feb 9 1997",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1997-02-09"
+    },
+    {
+      "id": "66134",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Final, Silver Jubilee Independence Cup at Dhaka, Jan 14 1998",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1998-01-14"
+    },
+    {
+      "id": "66135",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd Final, Silver Jubilee Independence Cup at Dhaka, Jan 16 1998",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1998-01-16"
+    },
+    {
+      "id": "66136",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Final, Silver Jubilee Independence Cup at Dhaka, Jan 18 1998",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1998-01-18"
+    },
+    {
+      "id": "66137",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Match, Pepsi Triangular Series at Kochi, Apr 1 1998",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1998-04-01"
+    },
+    {
+      "id": "66139",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Match, Pepsi Triangular Series at Vadodara, Apr 5 1998",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1998-04-05"
+    },
+    {
+      "id": "66140",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th Match, Pepsi Triangular Series at Kanpur, Apr 7 1998",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1998-04-07"
+    },
+    {
+      "id": "66141",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th Match, Pepsi Triangular Series at Cuttack, Apr 9 1998",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1998-04-09"
+    },
+    {
+      "id": "66143",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final, Pepsi Triangular Series at Delhi, Apr 14 1998",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1998-04-14"
+    },
+    {
+      "id": "66144",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Match (D/N), Coca-Cola Triangular Series at Mohali, May 14 1998",
+      "teams": [
+        "India",
+        "Bangladesh"
+      ],
+      "date": "1998-05-14"
+    },
+    {
+      "id": "66146",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Match (D/N), Coca-Cola Triangular Series at Bengaluru, May 20 1998",
+      "teams": [
+        "India",
+        "Kenya"
+      ],
+      "date": "1998-05-20"
+    },
+    {
+      "id": "66149",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match (D/N), Coca-Cola Triangular Series at Gwalior, May 28 1998",
+      "teams": [
+        "India",
+        "Kenya"
+      ],
+      "date": "1998-05-28"
+    },
+    {
+      "id": "66150",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final (D/N), Coca-Cola Triangular Series at Kolkata, May 31 1998",
+      "teams": [
+        "India",
+        "Kenya"
+      ],
+      "date": "1998-05-31"
+    },
+    {
+      "id": "66151",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Match (D/N), Singer-Akai Nidahas Trophy at Colombo, Jun 19 1998",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1998-06-19"
+    },
+    {
+      "id": "66153",
+      "league": "15960",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Match (D/N), Singer-Akai Nidahas Trophy at Colombo, Jun 23 1998",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1998-06-23"
+    },
+    {
+      "id": "64177",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of New Zealand at Auckland, Feb 14 1981",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1981-02-13"
+    },
+    {
+      "id": "64178",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of New Zealand at Hamilton, Feb 15 1981",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1981-02-14"
+    },
+    {
+      "id": "64180",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, England tour of India at Ahmedabad, Nov 25 1981",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1981-11-25"
+    },
+    {
+      "id": "64181",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, England tour of India at Jalandhar, Dec 20 1981",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1981-12-20"
+    },
+    {
+      "id": "64182",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, England tour of India at Cuttack, Jan 27 1982",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1982-01-27"
+    },
+    {
+      "id": "64191",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Sri Lanka tour of India at Amritsar, Sep 12 1982",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1982-09-12"
+    },
+    {
+      "id": "64192",
+      "league": "17022",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Sri Lanka tour of India at Delhi, Sep 15 1982",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1982-09-15"
+    },
+    {
+      "id": "64251",
+      "league": "16883",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, England tour of India at Bengaluru, Jan 20 1985",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1985-01-20"
+    },
+    {
+      "id": "64252",
+      "league": "16883",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, England tour of India at Nagpur, Jan 23 1985",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1985-01-23"
+    },
+    {
+      "id": "64253",
+      "league": "16883",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, England tour of India at Chandigarh, Jan 27 1985",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1985-01-27"
+    },
+    {
+      "id": "64261",
+      "league": "16883",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Sri Lanka at Colombo, Aug 25 1985",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1985-08-25"
+    },
+    {
+      "id": "64262",
+      "league": "16883",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Sri Lanka at Colombo, Sep 21 1985",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1985-09-21"
+    },
+    {
+      "id": "64263",
+      "league": "16883",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Sri Lanka at Colombo, Sep 22 1985",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1985-09-22"
+    },
+    {
+      "id": "64407",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "7th ODI (D/N), India tour of South Africa at KuGompo City, Dec 19 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-12-19"
+    },
+    {
+      "id": "64411",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, England tour of India at Jaipur, Jan 18 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-01-18"
+    },
+    {
+      "id": "64412",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, England tour of India at Chandigarh, Jan 21 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-01-21"
+    },
+    {
+      "id": "64413",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, England tour of India at Bengaluru, Feb 26 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-02-26"
+    },
+    {
+      "id": "64414",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, England tour of India at Jamshedpur, Mar 1 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-03-01"
+    },
+    {
+      "id": "64416",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI, England tour of India at Gwalior, Mar 4 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-03-04"
+    },
+    {
+      "id": "64417",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "7th ODI, England tour of India at Gwalior, Mar 5 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-03-05"
+    },
+    {
+      "id": "64420",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Zimbabwe tour of India at Faridabad, Mar 19 1993",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1993-03-19"
+    },
+    {
+      "id": "64423",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Zimbabwe tour of India at Guwahati, Mar 22 1993",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1993-03-22"
+    },
+    {
+      "id": "64426",
+      "league": "16458",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Zimbabwe tour of India at Pune, Mar 25 1993",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1993-03-25"
+    },
+    {
+      "id": "62617",
+      "league": "17569",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Kolkata, Jan 5-8 1934",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1934-01-05"
+    },
+    {
+      "id": "62618",
+      "league": "17569",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Chennai, Feb 10-13 1934",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1934-02-10"
+    },
+    {
+      "id": "62725",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Delhi, Nov 2-7 1951",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1951-11-02"
+    },
+    {
+      "id": "62726",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Mumbai, Dec 14-19 1951",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1951-12-14"
+    },
+    {
+      "id": "62727",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Kolkata, Dec 30 1951 - Jan 4 1952",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1951-12-30"
+    },
+    {
+      "id": "62728",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Kanpur, Jan 12-14 1952",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1952-01-12"
+    },
+    {
+      "id": "62729",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Chennai, Feb 6-10 1952",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1952-02-06"
+    },
+    {
+      "id": "62737",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at Leeds, Jun 5-9 1952",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1952-06-05"
+    },
+    {
+      "id": "62738",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at London, Jun 19-24 1952",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1952-06-19"
+    },
+    {
+      "id": "62739",
+      "league": "17467",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Manchester, Jul 17-19 1952",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1952-07-17"
+    },
+    {
+      "id": "62901",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Mumbai, Nov 11-16 1961",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1961-11-11"
+    },
+    {
+      "id": "62902",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Kanpur, Dec 1-6 1961",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1961-12-01"
+    },
+    {
+      "id": "62903",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Delhi, Dec 13-18 1961",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1961-12-13"
+    },
+    {
+      "id": "62904",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Kolkata, Dec 30 1961 - Jan 4 1962",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1961-12-30"
+    },
+    {
+      "id": "62905",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Chennai, Jan 10-15 1962",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1962-01-10"
+    },
+    {
+      "id": "62911",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of West Indies at Port of Spain, Feb 16-20 1962",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1962-02-16"
+    },
+    {
+      "id": "62912",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of West Indies at Kingston, Mar 7-12 1962",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1962-03-07"
+    },
+    {
+      "id": "62913",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Bridgetown, Mar 23-28 1962",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1962-03-23"
+    },
+    {
+      "id": "62914",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at Port of Spain, Apr 4-9 1962",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1962-04-04"
+    },
+    {
+      "id": "62915",
+      "league": "17363",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of West Indies at Kingston, Apr 13-18 1962",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1962-04-13"
+    },
+    {
+      "id": "62939",
+      "league": "17345",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Chennai, Jan 10-15 1964",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1964-01-10"
+    },
+    {
+      "id": "62940",
+      "league": "17345",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Mumbai, Jan 21-26 1964",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1964-01-21"
+    },
+    {
+      "id": "62941",
+      "league": "17345",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Kolkata, Jan 29-Feb 3 1964",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1964-01-29"
+    },
+    {
+      "id": "62942",
+      "league": "17345",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Delhi, Feb 8-13 1964",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1964-02-08"
+    },
+    {
+      "id": "62943",
+      "league": "17345",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Kanpur, Feb 15-20 1964",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1964-02-15"
+    },
+    {
+      "id": "63089",
+      "league": "17241",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Delhi, Dec 20-25 1972",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1972-12-20"
+    },
+    {
+      "id": "63090",
+      "league": "17241",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Kolkata, Dec 30 1972 - Jan 4 1973",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1972-12-30"
+    },
+    {
+      "id": "63093",
+      "league": "17241",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Mumbai, Feb 6-11 1973",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1973-02-06"
+    },
+    {
+      "id": "63171",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, New Zealand tour of India at Mumbai, Nov 10-15 1976",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1976-11-10"
+    },
+    {
+      "id": "63173",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, New Zealand tour of India at Chennai, Nov 26-Dec 2 1976",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1976-11-26"
+    },
+    {
+      "id": "63174",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Delhi, Dec 17-22 1976",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1976-12-17"
+    },
+    {
+      "id": "63175",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Kolkata, Jan 1-6 1977",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1977-01-01"
+    },
+    {
+      "id": "63176",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Chennai, Jan 14-19 1977",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1977-01-14"
+    },
+    {
+      "id": "63177",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Bengaluru, Jan 28-Feb 2 1977",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1977-01-28"
+    },
+    {
+      "id": "63178",
+      "league": "17161",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Mumbai, Feb 11-16 1977",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1977-02-11"
+    },
+    {
+      "id": "63298",
+      "league": "17021",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Mumbai, Nov 27-Dec 1 1981",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1981-11-27"
+    },
+    {
+      "id": "63299",
+      "league": "17021",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Bengaluru, Dec 9-14 1981",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1981-12-09"
+    },
+    {
+      "id": "63300",
+      "league": "17021",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Delhi, Dec 23-28 1981",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1981-12-23"
+    },
+    {
+      "id": "63301",
+      "league": "17021",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Kolkata, Jan 1-6 1982",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1982-01-01"
+    },
+    {
+      "id": "63302",
+      "league": "17021",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Chennai, Jan 13-18 1982",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1982-01-13"
+    },
+    {
+      "id": "63303",
+      "league": "17021",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "6th Test, England tour of India at Kanpur, Jan 30-Feb 4 1982",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1982-01-30"
+    },
+    {
+      "id": "63391",
+      "league": "16884",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Mumbai, Nov 28-Dec 3 1984",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1984-11-28"
+    },
+    {
+      "id": "63392",
+      "league": "16884",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Delhi, Dec 12-17 1984",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1984-12-12"
+    },
+    {
+      "id": "63393",
+      "league": "16884",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Kolkata, Dec 31 1984 - Jan 5 1985",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1984-12-31"
+    },
+    {
+      "id": "63394",
+      "league": "16884",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Chennai, Jan 13-18 1985",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1985-01-13"
+    },
+    {
+      "id": "63395",
+      "league": "16884",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, England tour of India at Kanpur, Jan 31-Feb 5 1985",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1985-01-31"
+    },
+    {
+      "id": "63598",
+      "league": "16454",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Kolkata, Jan 29-Feb 2 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-01-29"
+    },
+    {
+      "id": "63599",
+      "league": "16454",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, England tour of India at Chennai, Feb 11-15 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-02-11"
+    },
+    {
+      "id": "63600",
+      "league": "16454",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Mumbai, Feb 19-23 1993",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1993-02-19"
+    },
+    {
+      "id": "63604",
+      "league": "16454",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, Zimbabwe tour of India at Delhi, Mar 13-17 1993",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1993-03-13"
+    },
+    {
+      "id": "62616",
+      "league": "17568",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, England tour of India at Mumbai, Dec 15-18 1933",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1933-12-15"
+    },
+    {
+      "id": "63091",
+      "league": "17240",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, England tour of India at Chennai, Jan 12-17 1973",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1973-01-12"
+    },
+    {
+      "id": "63092",
+      "league": "17240",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, England tour of India at Kanpur, Jan 25-30 1973",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1973-01-25"
+    },
+    {
+      "id": "63262",
+      "league": "17057",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, England tour of India at Mumbai, Feb 15-19 1980",
+      "teams": [
+        "India",
+        "England"
+      ],
+      "date": "1980-02-15"
+    },
+    {
+      "id": "62676",
+      "league": "17507",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Australia at Brisbane, Nov 28-Dec 4 1947",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1947-11-28"
+    },
+    {
+      "id": "62677",
+      "league": "17507",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Australia at Sydney, Dec 12-18 1947",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1947-12-12"
+    },
+    {
+      "id": "62678",
+      "league": "17507",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Melbourne, Jan 1-5 1948",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1948-01-01"
+    },
+    {
+      "id": "62679",
+      "league": "17507",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Australia at Adelaide, Jan 23-28 1948",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1948-01-23"
+    },
+    {
+      "id": "62690",
+      "league": "17507",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Delhi, Nov 10-14 1948",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1948-11-10"
+    },
+    {
+      "id": "63004",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at Leeds, Jun 8-13 1967",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1967-06-08"
+    },
+    {
+      "id": "63005",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at London, Jun 22-26 1967",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1967-06-22"
+    },
+    {
+      "id": "63006",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Birmingham, Jul 13-15 1967",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1967-07-13"
+    },
+    {
+      "id": "63010",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Australia at Adelaide, Dec 23-28 1967",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1967-12-23"
+    },
+    {
+      "id": "63011",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Australia at Melbourne, Dec 30 1967 - Jan 3 1968",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1967-12-30"
+    },
+    {
+      "id": "63012",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Brisbane, Jan 19-24 1968",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1968-01-19"
+    },
+    {
+      "id": "63013",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Australia at Sydney, Jan 26-31 1968",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1968-01-26"
+    },
+    {
+      "id": "63019",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of New Zealand at Dunedin, Feb 15-20 1968",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1968-02-14"
+    },
+    {
+      "id": "63020",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of New Zealand at Christchurch, Feb 22-27 1968",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1968-02-21"
+    },
+    {
+      "id": "63021",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of New Zealand at Wellington, Feb 29-Mar 4 1968",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1968-02-28"
+    },
+    {
+      "id": "63022",
+      "league": "17299",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of New Zealand at Auckland, Mar 7-12 1968",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1968-03-06"
+    },
+    {
+      "id": "63195",
+      "league": "17139",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Australia at Brisbane, Dec 2-6 1977",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1977-12-02"
+    },
+    {
+      "id": "63196",
+      "league": "17139",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Australia at Perth, Dec 16-21 1977",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1977-12-16"
+    },
+    {
+      "id": "63197",
+      "league": "17139",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Melbourne, Dec 30 1977 - Jan 4 1978",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1977-12-30"
+    },
+    {
+      "id": "63198",
+      "league": "17139",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Australia at Sydney, Jan 7-12 1978",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1978-01-07"
+    },
+    {
+      "id": "63199",
+      "league": "17139",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of Australia at Adelaide, Jan 28-Feb 3 1978",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1978-01-28"
+    },
+    {
+      "id": "63281",
+      "league": "17041",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Melbourne, Feb 7-11 1981",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1981-02-07"
+    },
+    {
+      "id": "63286",
+      "league": "17041",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of New Zealand at Wellington, Feb 21-25 1981",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1981-02-20"
+    },
+    {
+      "id": "63287",
+      "league": "17041",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of New Zealand at Christchurch, Mar 6-11 1981",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1981-03-05"
+    },
+    {
+      "id": "63288",
+      "league": "17041",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of New Zealand at Auckland, Mar 13-18 1981",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1981-03-12"
+    },
+    {
+      "id": "63410",
+      "league": "16834",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Sri Lanka at Colombo, Sep 6-11 1985",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1985-09-06"
+    },
+    {
+      "id": "63411",
+      "league": "16834",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Sri Lanka at Kandy, Sep 14-19 1985",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1985-09-14"
+    },
+    {
+      "id": "63418",
+      "league": "16834",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Australia at Adelaide, Dec 13-17 1985",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1985-12-13"
+    },
+    {
+      "id": "63419",
+      "league": "16834",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Australia at Melbourne, Dec 26-30 1985",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1985-12-26"
+    },
+    {
+      "id": "63420",
+      "league": "16834",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Sydney, Jan 2-6 1986",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1986-01-02"
+    },
+    {
+      "id": "63564",
+      "league": "16520",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Australia at Melbourne, Dec 26-29 1991",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1991-12-26"
+    },
+    {
+      "id": "63565",
+      "league": "16520",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Sydney, Jan 2-6 1992",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1992-01-02"
+    },
+    {
+      "id": "63566",
+      "league": "16520",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Australia at Adelaide, Jan 25-29 1992",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1992-01-25"
+    },
+    {
+      "id": "63567",
+      "league": "16520",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of Australia at Perth, Feb 1-5 1992",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1992-02-01"
+    },
+    {
+      "id": "62605",
+      "league": "17576",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, India tour of England at London, Jun 25-28 1932",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1932-06-25"
+    },
+    {
+      "id": "62638",
+      "league": "17551",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at London, Jun 27-30 1936",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1936-06-27"
+    },
+    {
+      "id": "62639",
+      "league": "17551",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at Manchester, Jul 25-28 1936",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1936-07-25"
+    },
+    {
+      "id": "62640",
+      "league": "17551",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at London, Aug 15-18 1936",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1936-08-15"
+    },
+    {
+      "id": "62662",
+      "league": "17516",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at London, Jun 22-25 1946",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1946-06-22"
+    },
+    {
+      "id": "62663",
+      "league": "17516",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at Manchester, Jul 20-23 1946",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1946-07-20"
+    },
+    {
+      "id": "62664",
+      "league": "17516",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at London, Aug 17-20 1946",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1946-08-17"
+    },
+    {
+      "id": "62740",
+      "league": "17458",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of England at London, Aug 14-19 1952",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1952-08-14"
+    },
+    {
+      "id": "62741",
+      "league": "17458",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Pakistan tour of India at Delhi, Oct 16-18 1952",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1952-10-16"
+    },
+    {
+      "id": "62742",
+      "league": "17458",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Pakistan tour of India at Lucknow, Oct 23-26 1952",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1952-10-23"
+    },
+    {
+      "id": "62743",
+      "league": "17458",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Pakistan tour of India at Mumbai, Nov 13-16 1952",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1952-11-13"
+    },
+    {
+      "id": "62744",
+      "league": "17458",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Pakistan tour of India at Chennai, Nov 28-Dec 1 1952",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1952-11-28"
+    },
+    {
+      "id": "62745",
+      "league": "17458",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Pakistan tour of India at Kolkata, Dec 12-15 1952",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1952-12-12"
+    },
+    {
+      "id": "62862",
+      "league": "17386",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Leeds, Jul 2-4 1959",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1959-07-02"
+    },
+    {
+      "id": "63069",
+      "league": "17254",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at Bridgetown, Apr 1-6 1971",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1971-04-01"
+    },
+    {
+      "id": "63070",
+      "league": "17254",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of West Indies at Port of Spain, Apr 13-19 1971",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1971-04-13"
+    },
+    {
+      "id": "63076",
+      "league": "17254",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at London, Jul 22-27 1971",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1971-07-22"
+    },
+    {
+      "id": "63077",
+      "league": "17254",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at Manchester, Aug 5-10 1971",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1971-08-05"
+    },
+    {
+      "id": "63078",
+      "league": "17254",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at London, Aug 19-24 1971",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1971-08-19"
+    },
+    {
+      "id": "63125",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at Manchester, Jun 6-11 1974",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1974-06-06"
+    },
+    {
+      "id": "63126",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at London, Jun 20-24 1974",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1974-06-20"
+    },
+    {
+      "id": "63127",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Birmingham, Jul 4-8 1974",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1974-07-04"
+    },
+    {
+      "id": "63131",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Bengaluru, Nov 22-27 1974",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1974-11-22"
+    },
+    {
+      "id": "63132",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Delhi, Dec 11-15 1974",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1974-12-11"
+    },
+    {
+      "id": "63133",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Kolkata, Dec 27 1974 - Jan 1 1975",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1974-12-27"
+    },
+    {
+      "id": "63135",
+      "league": "17212",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, West Indies tour of India at Mumbai, Jan 23-29 1975",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1975-01-23"
+    },
+    {
+      "id": "63314",
+      "league": "17002",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at London, Jun 10-15 1982",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1982-06-10"
+    },
+    {
+      "id": "63315",
+      "league": "17002",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at Manchester, Jun 24-28 1982",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1982-06-24"
+    },
+    {
+      "id": "63316",
+      "league": "17002",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at London, Jul 8-13 1982",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1982-07-08"
+    },
+    {
+      "id": "63432",
+      "league": "16811",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at London, Jun 5-10 1986",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1986-06-05"
+    },
+    {
+      "id": "63534",
+      "league": "16581",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at London, Jul 26-31 1990",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1990-07-26"
+    },
+    {
+      "id": "63713",
+      "league": "16184",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of England at Birmingham, Jun 6-9 1996",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1996-06-06"
+    },
+    {
+      "id": "63714",
+      "league": "16184",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at London, Jun 20-24 1996",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1996-06-20"
+    },
+    {
+      "id": "63715",
+      "league": "16184",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of England at Nottingham, Jul 4-9 1996",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1996-07-04"
+    },
+    {
+      "id": "63724",
+      "league": "16184",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, South Africa tour of India at Ahmedabad, Nov 20-23 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-11-20"
+    },
+    {
+      "id": "63725",
+      "league": "16184",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, South Africa tour of India at Kolkata, Nov 27-Dec 1 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-11-27"
+    },
+    {
+      "id": "64156",
+      "league": "17180",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of New Zealand at Christchurch, Feb 21 1976",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1976-02-20"
+    },
+    {
+      "id": "64157",
+      "league": "17180",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of New Zealand at Auckland, Feb 22 1976",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1976-02-21"
+    },
+    {
+      "id": "64165",
+      "league": "17180",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Pakistan at Quetta, Oct 1 1978",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1978-10-01"
+    },
+    {
+      "id": "64166",
+      "league": "17180",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Pakistan at Sialkot, Oct 13 1978",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1978-10-13"
+    },
+    {
+      "id": "64167",
+      "league": "17180",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Pakistan at Sahiwal, Nov 3 1978",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1978-11-03"
+    },
+    {
+      "id": "64462",
+      "league": "16352",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of New Zealand at Napier, Mar 25 1994",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1994-03-24"
+    },
+    {
+      "id": "64463",
+      "league": "16352",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of New Zealand at Auckland, Mar 27 1994",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1994-03-26"
+    },
+    {
+      "id": "64464",
+      "league": "16352",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of New Zealand at Wellington, Mar 30 1994",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1994-03-29"
+    },
+    {
+      "id": "64465",
+      "league": "16352",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, India tour of New Zealand at Christchurch, Apr 2 1994",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1994-04-01"
+    },
+    {
+      "id": "64598",
+      "league": "15870",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), India tour of New Zealand at Taupo, Jan 9 1999",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1999-01-09"
+    },
+    {
+      "id": "64599",
+      "league": "15870",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), India tour of New Zealand at Napier, Jan 12 1999",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1999-01-12"
+    },
+    {
+      "id": "64600",
+      "league": "15870",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of New Zealand at Wellington, Jan 14 1999",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1999-01-13"
+    },
+    {
+      "id": "64601",
+      "league": "15870",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, India tour of New Zealand at Auckland, Jan 16 1999",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1999-01-15"
+    },
+    {
+      "id": "64602",
+      "league": "15870",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI (D/N), India tour of New Zealand at Christchurch, Jan 19 1999",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1999-01-19"
+    },
+    {
+      "id": "63156",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of New Zealand at Auckland, Jan 24-28 1976",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1976-01-23"
+    },
+    {
+      "id": "63157",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of New Zealand at Christchurch, Feb 5-10 1976",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1976-02-04"
+    },
+    {
+      "id": "63158",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of New Zealand at Wellington, Feb 13-17 1976",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1976-02-12"
+    },
+    {
+      "id": "63159",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of West Indies at Bridgetown, Mar 10-13 1976",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1976-03-10"
+    },
+    {
+      "id": "63160",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of West Indies at Port of Spain, Mar 24-29 1976",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1976-03-24"
+    },
+    {
+      "id": "63161",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Port of Spain, Apr 7-12 1976",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1976-04-07"
+    },
+    {
+      "id": "63162",
+      "league": "17182",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at Kingston, Apr 21-25 1976",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1976-04-21"
+    },
+    {
+      "id": "63524",
+      "league": "16615",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of New Zealand at Napier, Feb 9-13 1990",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1990-02-08"
+    },
+    {
+      "id": "63525",
+      "league": "16615",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of New Zealand at Auckland, Feb 22-26 1990",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1990-02-21"
+    },
+    {
+      "id": "63535",
+      "league": "16615",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of England at Manchester, Aug 9-14 1990",
+      "teams": [
+        "England",
+        "India"
+      ],
+      "date": "1990-08-09"
+    },
+    {
+      "id": "63826",
+      "league": "15872",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of New Zealand at Wellington, Dec 26-30 1998",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1998-12-25"
+    },
+    {
+      "id": "63827",
+      "league": "15872",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of New Zealand at Hamilton, Jan 2-6 1999",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1999-01-01"
+    },
+    {
+      "id": "63828",
+      "league": "15872",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Pakistan tour of India at Chennai, Jan 28-31 1999",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1999-01-28"
+    },
+    {
+      "id": "63829",
+      "league": "15872",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Pakistan tour of India at Delhi, Feb 4-7 1999",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1999-02-04"
+    },
+    {
+      "id": "63830",
+      "league": "15872",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Match, Asian Test Championship at Kolkata, Feb 16-20 1999",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1999-02-16"
+    },
+    {
+      "id": "63831",
+      "league": "15872",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Match, Asian Test Championship at Colombo, Feb 24-28 1999",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1999-02-24"
+    },
+    {
+      "id": "64194",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Sri Lanka tour of India at Bengaluru, Sep 26 1982",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1982-09-26"
+    },
+    {
+      "id": "64198",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Pakistan at Multan, Dec 17 1982",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1982-12-17"
+    },
+    {
+      "id": "64199",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Pakistan at Lahore, Dec 31 1982",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1982-12-31"
+    },
+    {
+      "id": "64200",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, India tour of Pakistan at Karachi, Jan 21 1983",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1983-01-21"
+    },
+    {
+      "id": "64205",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of West Indies at Port of Spain, Mar 9 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-03-09"
+    },
+    {
+      "id": "64209",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of West Indies at Albion, Mar 29 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-03-29"
+    },
+    {
+      "id": "64210",
+      "league": "16968",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of West Indies at St George's, Apr 7 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-04-07"
+    },
+    {
+      "id": "66384",
+      "league": "16894",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Only ODI (D/N), Pakistan tour of India at Kolkata, Nov 13 2004",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2004-11-13"
+    },
+    {
+      "id": "66390",
+      "league": "16894",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Pakistan at Peshawar, Nov 2 1984",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1984-11-02"
+    },
+    {
+      "id": "66395",
+      "league": "16894",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, New Zealand tour of India at Jammu, Dec 19 1988",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1988-12-19"
+    },
+    {
+      "id": "66396",
+      "league": "16894",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Pakistan at Peshawar, Dec 16 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-12-16"
+    },
+    {
+      "id": "66400",
+      "league": "16894",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match (D/N), Singer World Series at Colombo, Sep 15-16 1994",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1994-09-15"
+    },
+    {
+      "id": "64338",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of West Indies at Bridgetown, Mar 7 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-03-07"
+    },
+    {
+      "id": "64340",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of West Indies at Port of Spain, Mar 9 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-03-09"
+    },
+    {
+      "id": "64342",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of West Indies at Port of Spain, Mar 11 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-03-11"
+    },
+    {
+      "id": "64344",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, India tour of West Indies at St John's, Mar 18 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-03-18"
+    },
+    {
+      "id": "64345",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, India tour of West Indies at Georgetown, Mar 21 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-03-21"
+    },
+    {
+      "id": "64346",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Pakistan at Gujranwala, Dec 18 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-12-18"
+    },
+    {
+      "id": "64348",
+      "league": "16628",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, India tour of Pakistan at Lahore, Dec 22 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-12-22"
+    },
+    {
+      "id": "64554",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of West Indies at Kingstown, Apr 30 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-04-30"
+    },
+    {
+      "id": "64555",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, India tour of West Indies at Bridgetown, May 3 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-05-03"
+    },
+    {
+      "id": "64557",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI (D/N), India tour of Sri Lanka at Colombo, Aug 17 1997",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1997-08-17"
+    },
+    {
+      "id": "64558",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), India tour of Sri Lanka at Colombo, Aug 20 1997",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1997-08-20"
+    },
+    {
+      "id": "64559",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Sri Lanka at Colombo, Aug 23 1997",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1997-08-23"
+    },
+    {
+      "id": "64560",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Sri Lanka at Colombo, Aug 24 1997",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1997-08-24"
+    },
+    {
+      "id": "64561",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Pakistan at Hyderabad, Sep 28 1997",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1997-09-28"
+    },
+    {
+      "id": "64562",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Pakistan at Karachi, Sep 30 1997",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1997-09-30"
+    },
+    {
+      "id": "64564",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), India tour of Pakistan at Lahore, Oct 2 1997",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1997-10-02"
+    },
+    {
+      "id": "64567",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Sri Lanka tour of India at Guwahati, Dec 22 1997",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1997-12-22"
+    },
+    {
+      "id": "64568",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Sri Lanka tour of India at Indore, Dec 25 1997",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1997-12-25"
+    },
+    {
+      "id": "64569",
+      "league": "16032",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Sri Lanka tour of India at Margao, Dec 28 1997",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1997-12-28"
+    },
+    {
+      "id": "62782",
+      "league": "17435",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Pakistan at Dhaka, Jan 1-4 1955",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1955-01-01"
+    },
+    {
+      "id": "62784",
+      "league": "17435",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Pakistan at Lahore, Jan 29-Feb 1 1955",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1955-01-29"
+    },
+    {
+      "id": "62785",
+      "league": "17435",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Pakistan at Peshawar, Feb 12-15 1955",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1955-02-12"
+    },
+    {
+      "id": "62786",
+      "league": "17435",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of Pakistan at Karachi, Feb 26-Mar 1 1955",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1955-02-26"
+    },
+    {
+      "id": "63217",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Pakistan at Faisalabad, Oct 16-21 1978",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1978-10-16"
+    },
+    {
+      "id": "63218",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Pakistan at Lahore, Oct 27-Nov 1 1978",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1978-10-27"
+    },
+    {
+      "id": "63219",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Pakistan at Karachi, Nov 14-19 1978",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1978-11-14"
+    },
+    {
+      "id": "63226",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Mumbai, Dec 1-6 1978",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1978-12-01"
+    },
+    {
+      "id": "63227",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Bengaluru, Dec 15-20 1978",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1978-12-15"
+    },
+    {
+      "id": "63228",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Kolkata, Dec 29 1978 - Jan 3 1979",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1978-12-29"
+    },
+    {
+      "id": "63229",
+      "league": "17116",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, West Indies tour of India at Chennai, Jan 12-16 1979",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1979-01-12"
+    },
+    {
+      "id": "63329",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Pakistan at Lahore, Dec 10-15 1982",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1982-12-10"
+    },
+    {
+      "id": "63330",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Pakistan at Karachi, Dec 23-27 1982",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1982-12-23"
+    },
+    {
+      "id": "63331",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Pakistan at Faisalabad, Jan 3-8 1983",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1983-01-03"
+    },
+    {
+      "id": "63332",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Pakistan at Hyderabad, Jan 14-19 1983",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1983-01-14"
+    },
+    {
+      "id": "63333",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of Pakistan at Lahore, Jan 23-28 1983",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1983-01-23"
+    },
+    {
+      "id": "63334",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "6th Test, India tour of Pakistan at Karachi, Jan 30-Feb 4 1983",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1983-01-30"
+    },
+    {
+      "id": "63337",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Georgetown, Mar 31-Apr 5 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-03-31"
+    },
+    {
+      "id": "63338",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at Bridgetown, Apr 15-20 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-04-15"
+    },
+    {
+      "id": "63339",
+      "league": "16966",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of West Indies at St John's, Apr 28-May 3 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-04-28"
+    },
+    {
+      "id": "64139",
+      "league": "16892",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Pakistan at Karachi, Nov 4-9 1984",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1984-11-04"
+    },
+    {
+      "id": "64146",
+      "league": "16892",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of New Zealand at Dunedin, Dec 18-22 1998",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1998-12-17"
+    },
+    {
+      "id": "63506",
+      "league": "16636",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at Kingston, Apr 28-May 3 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-04-28"
+    },
+    {
+      "id": "63513",
+      "league": "16636",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Pakistan at Karachi, Nov 15-20 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-11-15"
+    },
+    {
+      "id": "63514",
+      "league": "16636",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Pakistan at Faisalabad, Nov 23-28 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-11-23"
+    },
+    {
+      "id": "63515",
+      "league": "16636",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Pakistan at Lahore, Dec 1-6 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-12-01"
+    },
+    {
+      "id": "63516",
+      "league": "16636",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of Pakistan at Sialkot, Dec 9-14 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-12-09"
+    },
+    {
+      "id": "63523",
+      "league": "16636",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of New Zealand at Christchurch, Feb 2-5 1990",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1990-02-01"
+    },
+    {
+      "id": "64405",
+      "league": "16463",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI (D/N), India tour of South Africa at Bloemfontein, Dec 15 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-12-15"
+    },
+    {
+      "id": "64406",
+      "league": "16463",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI (D/N), India tour of South Africa at Durban, Dec 17 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-12-17"
+    },
+    {
+      "id": "63583",
+      "league": "16469",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, India tour of Zimbabwe at Harare, Oct 18-22 1992",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1992-10-18"
+    },
+    {
+      "id": "63586",
+      "league": "16469",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of South Africa at Durban, Nov 13-17 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-11-13"
+    },
+    {
+      "id": "63587",
+      "league": "16469",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of South Africa at Johannesburg, Nov 26-30 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-11-26"
+    },
+    {
+      "id": "63589",
+      "league": "16469",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of South Africa at Cape Town, Jan 2-6 1993",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1993-01-02"
+    },
+    {
+      "id": "63736",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of South Africa at Durban, Dec 26-28 1996",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1996-12-26"
+    },
+    {
+      "id": "63737",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of South Africa at Cape Town, Jan 2-6 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-01-02"
+    },
+    {
+      "id": "63738",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of South Africa at Johannesburg, Jan 16-20 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-01-16"
+    },
+    {
+      "id": "63745",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of West Indies at Kingston, Mar 6-10 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-03-06"
+    },
+    {
+      "id": "63746",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of West Indies at Port of Spain, Mar 14-18 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-03-14"
+    },
+    {
+      "id": "63747",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Bridgetown, Mar 27-31 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-03-27"
+    },
+    {
+      "id": "63748",
+      "league": "16127",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at St John's, Apr 4-8 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-04-04"
+    },
+    {
+      "id": "64433",
+      "league": "16418",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Sri Lanka at Colombo, Jul 25 1993",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1993-07-25"
+    },
+    {
+      "id": "64434",
+      "league": "16418",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), India tour of Sri Lanka at Colombo, Aug 12 1993",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1993-08-12"
+    },
+    {
+      "id": "64435",
+      "league": "16418",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Sri Lanka at Moratuwa, Aug 14 1993",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1993-08-14"
+    },
+    {
+      "id": "63409",
+      "league": "16847",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Sri Lanka at Colombo, Aug 30-Sep 4 1985",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1985-08-30"
+    },
+    {
+      "id": "63615",
+      "league": "16427",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Sri Lanka at Kandy, Jul 17-22 1993",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1993-07-17"
+    },
+    {
+      "id": "63616",
+      "league": "16427",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Sri Lanka at Colombo, Jul 27-Aug 1 1993",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1993-07-27"
+    },
+    {
+      "id": "63617",
+      "league": "16427",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Sri Lanka at Colombo, Aug 4-9 1993",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1993-08-04"
+    },
+    {
+      "id": "63762",
+      "league": "16043",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Sri Lanka at Colombo, Aug 2-6 1997",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1997-08-02"
+    },
+    {
+      "id": "63763",
+      "league": "16043",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Sri Lanka at Colombo, Aug 9-13 1997",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1997-08-09"
+    },
+    {
+      "id": "64347",
+      "league": "16658",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Pakistan at Karachi, Dec 20 1989",
+      "teams": [
+        "Pakistan",
+        "India"
+      ],
+      "date": "1989-12-20"
+    },
+    {
+      "id": "64553",
+      "league": "16072",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of West Indies at Port of Spain, Apr 27 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-04-27"
+    },
+    {
+      "id": "62751",
+      "league": "17452",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of West Indies at Port of Spain, Jan 21-28 1953",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1953-01-21"
+    },
+    {
+      "id": "62752",
+      "league": "17452",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of West Indies at Bridgetown, Feb 7-12 1953",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1953-02-07"
+    },
+    {
+      "id": "62753",
+      "league": "17452",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Port of Spain, Feb 19-25 1953",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1953-02-19"
+    },
+    {
+      "id": "62754",
+      "league": "17452",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, India tour of West Indies at Georgetown, Mar 11-17 1953",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1953-03-11"
+    },
+    {
+      "id": "62755",
+      "league": "17452",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of West Indies at Kingston, Mar 28-Apr 4 1953",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1953-03-28"
+    },
+    {
+      "id": "63068",
+      "league": "17262",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Georgetown, Mar 19-24 1971",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1971-03-19"
+    },
+    {
+      "id": "63504",
+      "league": "16655",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of West Indies at Bridgetown, Apr 7-12 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-04-07"
+    },
+    {
+      "id": "63505",
+      "league": "16655",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of West Indies at Port of Spain, Apr 15-20 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-04-15"
+    },
+    {
+      "id": "63749",
+      "league": "16104",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, India tour of West Indies at Georgetown, Apr 17-21 1997",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1997-04-17"
+    },
+    {
+      "id": "64395",
+      "league": "16474",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Only ODI, India tour of Zimbabwe at Harare, Oct 25 1992",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1992-10-25"
+    },
+    {
+      "id": "64400",
+      "league": "16474",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI (D/N), India tour of South Africa at Gqeberha, Dec 9 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-12-09"
+    },
+    {
+      "id": "64401",
+      "league": "16474",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI (D/N), India tour of South Africa at Centurion, Dec 11 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-12-11"
+    },
+    {
+      "id": "64404",
+      "league": "16474",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI (D/N), India tour of South Africa at Johannesburg, Dec 13 1992",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1992-12-13"
+    },
+    {
+      "id": "66410",
+      "league": "16112",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, New Zealand tour of India at Margao, Nov 21 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-11-21"
+    },
+    {
+      "id": "66413",
+      "league": "16112",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match, Titan Cup at Cuttack, Oct 27 1996",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1996-10-27"
+    },
+    {
+      "id": "66414",
+      "league": "16112",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Zimbabwe at Harare, Feb 17 1997",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1997-02-17"
+    },
+    {
+      "id": "66416",
+      "league": "16112",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th Match, Pepsi Asia Cup at Colombo, Jul 21 1997",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1997-07-21"
+    },
+    {
+      "id": "66417",
+      "league": "16112",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th Match, Singer-Akai Nidahas Trophy at Galle, Jun 25 1998",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1998-06-25"
+    },
+    {
+      "id": "66419",
+      "league": "16112",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match, Singer-Akai Nidahas Trophy at Galle, Jun 29 1998",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1998-06-29"
+    },
+    {
+      "id": "64589",
+      "league": "15895",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Zimbabwe at Bulawayo, Sep 26 1998",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1998-09-26"
+    },
+    {
+      "id": "64590",
+      "league": "15895",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, India tour of Zimbabwe at Bulawayo, Sep 27 1998",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1998-09-27"
+    },
+    {
+      "id": "64591",
+      "league": "15895",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, India tour of Zimbabwe at Harare, Sep 30 1998",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1998-09-30"
+    },
+    {
+      "id": "63813",
+      "league": "15892",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, India tour of Zimbabwe at Harare, Oct 7-10 1998",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1998-10-07"
+    },
+    {
+      "id": "65141",
+      "league": "16523",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "24th Match, Benson & Hedges World Cup at Wellington, Mar 10 1992",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1992-03-09"
+    },
+    {
+      "id": "65149",
+      "league": "16523",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "32nd Match, Benson & Hedges World Cup at Adelaide, Mar 15 1992",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1992-03-15"
+    },
+    {
+      "id": "65588",
+      "league": "15744",
+      "type": "ODI",
+      "deliveries": 611,
+      "desc": "2nd Match (D/N), Carlton & United Series at Brisbane, Jan 10 2000",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2000-01-10"
+    },
+    {
+      "id": "65589",
+      "league": "15744",
+      "type": "ODI",
+      "deliveries": 623,
+      "desc": "3rd Match (D/N), Carlton & United Series at Melbourne, Jan 12 2000",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "2000-01-12"
+    },
+    {
+      "id": "65590",
+      "league": "15744",
+      "type": "ODI",
+      "deliveries": 405,
+      "desc": "4th Match (D/N), Carlton & United Series at Sydney, Jan 14 2000",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "2000-01-14"
+    },
+    {
+      "id": "65593",
+      "league": "15744",
+      "type": "ODI",
+      "deliveries": 125,
+      "desc": "7th Match, Carlton & United Series at Hobart, Jan 21 2000",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2000-01-21"
+    },
+    {
+      "id": "65595",
+      "league": "15744",
+      "type": "ODI",
+      "deliveries": 583,
+      "desc": "9th Match (D/N), Carlton & United Series at Adelaide, Jan 25 2000",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "2000-01-25"
+    },
+    {
+      "id": "65598",
+      "league": "15744",
+      "type": "ODI",
+      "deliveries": 628,
+      "desc": "12th Match, Carlton & United Series at Perth, Jan 30 2000",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "2000-01-30"
+    },
+    {
+      "id": "65927",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "13th Match, MRF World Series (Nehru Cup) at Bengaluru, Oct 27 1989",
+      "teams": [
+        "India",
+        "Australia"
+      ],
+      "date": "1989-10-27"
+    },
+    {
+      "id": "65929",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "15th Match, MRF World Series (Nehru Cup) at Kolkata, Oct 28 1989",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1989-10-28"
+    },
+    {
+      "id": "65931",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd Semi-Final, MRF World Series (Nehru Cup) at Mumbai, Oct 30 1989",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1989-10-30"
+    },
+    {
+      "id": "65933",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Match, Rothmans Cup Triangular Series at Dunedin, Mar 1 1990",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1990-02-28"
+    },
+    {
+      "id": "65934",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd Match, Rothmans Cup Triangular Series at Christchurch, Mar 3 1990",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1990-03-02"
+    },
+    {
+      "id": "65936",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th Match, Rothmans Cup Triangular Series at Wellington, Mar 6 1990",
+      "teams": [
+        "New Zealand",
+        "India"
+      ],
+      "date": "1990-03-05"
+    },
+    {
+      "id": "65937",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th Match, Rothmans Cup Triangular Series at Hamilton, Mar 8 1990",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1990-03-07"
+    },
+    {
+      "id": "65941",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd Match, Wills Trophy at Sharjah, Oct 18 1991",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1991-10-18"
+    },
+    {
+      "id": "65942",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Match, Wills Trophy at Sharjah, Oct 19 1991",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1991-10-19"
+    },
+    {
+      "id": "65944",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th Match, Wills Trophy at Sharjah, Oct 22 1991",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1991-10-22"
+    },
+    {
+      "id": "65945",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match, Wills Trophy at Sharjah, Oct 23 1991",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1991-10-23"
+    },
+    {
+      "id": "65946",
+      "league": "16614",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final, Wills Trophy at Sharjah, Oct 25 1991",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1991-10-25"
+    },
+    {
+      "id": "63335",
+      "league": "16967",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of West Indies at Kingston, Feb 23-28 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-02-23"
+    },
+    {
+      "id": "63336",
+      "league": "16967",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of West Indies at Port of Spain, Mar 11-16 1983",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1983-03-11"
+    },
+    {
+      "id": "66077",
+      "league": "16126",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final (D/N), Standard Bank International One-Day Series at Durban, Feb 12 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-02-12"
+    },
+    {
+      "id": "66078",
+      "league": "16126",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final (D/N), Standard Bank International One-Day Series at Durban, Feb 13 1997",
+      "teams": [
+        "South Africa",
+        "India"
+      ],
+      "date": "1997-02-13"
+    },
+    {
+      "id": "64502",
+      "league": "16244",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, New Zealand tour of India at Jamshedpur, Nov 15 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-11-15"
+    },
+    {
+      "id": "64503",
+      "league": "16244",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, New Zealand tour of India at Amritsar, Nov 18 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-11-18"
+    },
+    {
+      "id": "64504",
+      "league": "16244",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, New Zealand tour of India at Pune, Nov 24 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-11-24"
+    },
+    {
+      "id": "64506",
+      "league": "16244",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI, New Zealand tour of India at Mumbai, Nov 29 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-11-29"
+    },
+    {
+      "id": "64630",
+      "league": "15754",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, New Zealand tour of India at Rajkot, Nov 5 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-11-05"
+    },
+    {
+      "id": "64631",
+      "league": "15754",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, New Zealand tour of India at Hyderabad, Nov 8 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-11-08"
+    },
+    {
+      "id": "64632",
+      "league": "15754",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, New Zealand tour of India at Gwalior, Nov 11 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-11-11"
+    },
+    {
+      "id": "64633",
+      "league": "15754",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, New Zealand tour of India at Guwahati, Nov 14 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-11-14"
+    },
+    {
+      "id": "64634",
+      "league": "15754",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, New Zealand tour of India at Delhi, Nov 17 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-11-17"
+    },
+    {
+      "id": "62802",
+      "league": "17422",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, New Zealand tour of India at Hyderabad, Nov 19-24 1955",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1955-11-19"
+    },
+    {
+      "id": "62803",
+      "league": "17422",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, New Zealand tour of India at Mumbai, Dec 2-7 1955",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1955-12-02"
+    },
+    {
+      "id": "62804",
+      "league": "17422",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, New Zealand tour of India at Delhi, Dec 16-21 1955",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1955-12-16"
+    },
+    {
+      "id": "62805",
+      "league": "17422",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, New Zealand tour of India at Kolkata, Dec 28 1955 - Jan 2 1956",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1955-12-28"
+    },
+    {
+      "id": "62806",
+      "league": "17422",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, New Zealand tour of India at Chennai, Jan 6-11 1956",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1956-01-06"
+    },
+    {
+      "id": "62965",
+      "league": "17330",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, New Zealand tour of India at Chennai, Feb 27-Mar 2 1965",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1965-02-27"
+    },
+    {
+      "id": "62966",
+      "league": "17330",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, New Zealand tour of India at Kolkata, Mar 5-8 1965",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1965-03-05"
+    },
+    {
+      "id": "62967",
+      "league": "17330",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, New Zealand tour of India at Mumbai, Mar 12-15 1965",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1965-03-12"
+    },
+    {
+      "id": "62968",
+      "league": "17330",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, New Zealand tour of India at Delhi, Mar 19-22 1965",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1965-03-19"
+    },
+    {
+      "id": "63045",
+      "league": "17279",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, New Zealand tour of India at Mumbai, Sep 25-30 1969",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1969-09-25"
+    },
+    {
+      "id": "63046",
+      "league": "17279",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, New Zealand tour of India at Nagpur, Oct 3-8 1969",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1969-10-03"
+    },
+    {
+      "id": "63172",
+      "league": "17163",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, New Zealand tour of India at Kanpur, Nov 18-23 1976",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1976-11-18"
+    },
+    {
+      "id": "63493",
+      "league": "16676",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, New Zealand tour of India at Bengaluru, Nov 12-17 1988",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1988-11-12"
+    },
+    {
+      "id": "63494",
+      "league": "16676",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, New Zealand tour of India at Mumbai, Nov 24-29 1988",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1988-11-24"
+    },
+    {
+      "id": "63495",
+      "league": "16676",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, New Zealand tour of India at Hyderabad, Dec 2-6 1988",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1988-12-02"
+    },
+    {
+      "id": "63503",
+      "league": "16676",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of West Indies at Georgetown, Mar 25-30 1989",
+      "teams": [
+        "West Indies",
+        "India"
+      ],
+      "date": "1989-03-25"
+    },
+    {
+      "id": "63694",
+      "league": "16253",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, New Zealand tour of India at Bengaluru, Oct 18-20 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-10-18"
+    },
+    {
+      "id": "63695",
+      "league": "16253",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, New Zealand tour of India at Chennai, Oct 25-29 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-10-25"
+    },
+    {
+      "id": "63696",
+      "league": "16253",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, New Zealand tour of India at Cuttack, Nov 8-12 1995",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1995-11-08"
+    },
+    {
+      "id": "63848",
+      "league": "15766",
+      "type": "Test",
+      "deliveries": 175,
+      "desc": "1st Test, New Zealand tour of India at Mohali, Oct 10-14 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-10-10"
+    },
+    {
+      "id": "63849",
+      "league": "15766",
+      "type": "Test",
+      "deliveries": 700,
+      "desc": "2nd Test, New Zealand tour of India at Kanpur, Oct 22-25 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-10-22"
+    },
+    {
+      "id": "63850",
+      "league": "15766",
+      "type": "Test",
+      "deliveries": 1325,
+      "desc": "3rd Test, New Zealand tour of India at Ahmedabad, Oct 29-Nov 2 1999",
+      "teams": [
+        "India",
+        "New Zealand"
+      ],
+      "date": "1999-10-29"
+    },
+    {
+      "id": "65179",
+      "league": "16252",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "24th Match, Wills World Cup at Delhi, Mar 2 1996",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1996-03-02"
+    },
+    {
+      "id": "65184",
+      "league": "16252",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "29th Match, Wills World Cup at Kanpur, Mar 6 1996",
+      "teams": [
+        "India",
+        "Zimbabwe"
+      ],
+      "date": "1996-03-06"
+    },
+    {
+      "id": "65187",
+      "league": "16252",
+      "type": "ODI",
+      "deliveries": 225,
+      "desc": "2nd QF (D/N), Wills World Cup at Bengaluru, Mar 9 1996",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1996-03-09"
+    },
+    {
+      "id": "65190",
+      "league": "16252",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st Semi-Final (D/N), Wills World Cup at Kolkata, Mar 13 1996",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1996-03-13"
+    },
+    {
+      "id": "65194",
+      "league": "16252",
+      "type": "ODI",
+      "deliveries": 150,
+      "desc": "2nd Match, ICC World Cup at Brighton, May 15 1999",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1999-05-15"
+    },
+    {
+      "id": "64215",
+      "league": "16936",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Pakistan tour of India at Hyderabad, Sep 10 1983",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1983-09-10"
+    },
+    {
+      "id": "64216",
+      "league": "16936",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Pakistan tour of India at Jaipur, Oct 2 1983",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1983-10-02"
+    },
+    {
+      "id": "64217",
+      "league": "16936",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, West Indies tour of India at Srinagar, Oct 13 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-10-13"
+    },
+    {
+      "id": "64219",
+      "league": "16936",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, West Indies tour of India at Indore, Dec 1 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-12-01"
+    },
+    {
+      "id": "64220",
+      "league": "16936",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, West Indies tour of India at Jamshedpur, Dec 7 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-12-07"
+    },
+    {
+      "id": "64221",
+      "league": "16936",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, West Indies tour of India at Guwahati, Dec 17 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-12-17"
+    },
+    {
+      "id": "64301",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Pakistan tour of India at Indore, Jan 27 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-01-27"
+    },
+    {
+      "id": "64302",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Pakistan tour of India at Kolkata, Feb 18 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-02-18"
+    },
+    {
+      "id": "64304",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Pakistan tour of India at Hyderabad, Mar 20 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-03-20"
+    },
+    {
+      "id": "64306",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, Pakistan tour of India at Pune, Mar 22 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-03-22"
+    },
+    {
+      "id": "64307",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, Pakistan tour of India at Nagpur, Mar 24 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-03-24"
+    },
+    {
+      "id": "64308",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI, Pakistan tour of India at Jamshedpur, Mar 26 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-03-26"
+    },
+    {
+      "id": "64313",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, West Indies tour of India at Nagpur, Dec 8 1987",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1987-12-08"
+    },
+    {
+      "id": "64314",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, West Indies tour of India at Guwahati, Dec 23 1987",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1987-12-23"
+    },
+    {
+      "id": "64315",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, West Indies tour of India at Kolkata, Jan 2 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-02"
+    },
+    {
+      "id": "64316",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, West Indies tour of India at Rajkot, Jan 5 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-05"
+    },
+    {
+      "id": "64317",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Only ODI, West Indies tour of India at Ahmedabad, Jan 7 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-07"
+    },
+    {
+      "id": "64318",
+      "league": "16761",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, West Indies tour of India at Faridabad, Jan 19 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-19"
+    },
+    {
+      "id": "62883",
+      "league": "17374",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Pakistan tour of India at Mumbai, Dec 2-7 1960",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1960-12-02"
+    },
+    {
+      "id": "62884",
+      "league": "17374",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Pakistan tour of India at Kanpur, Dec 16-21 1960",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1960-12-16"
+    },
+    {
+      "id": "62885",
+      "league": "17374",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Pakistan tour of India at Kolkata, Dec 30 1960 - Jan 4 1961",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1960-12-30"
+    },
+    {
+      "id": "62886",
+      "league": "17374",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Pakistan tour of India at Chennai, Jan 13-18 1961",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1961-01-13"
+    },
+    {
+      "id": "62887",
+      "league": "17374",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Pakistan tour of India at Delhi, Feb 8-13 1961",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1961-02-08"
+    },
+    {
+      "id": "63347",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Pakistan tour of India at Bengaluru, Sep 14-19 1983",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1983-09-14"
+    },
+    {
+      "id": "63348",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Pakistan tour of India at Jalandhar, Sep 24-29 1983",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1983-09-24"
+    },
+    {
+      "id": "63349",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Pakistan tour of India at Nagpur, Oct 5-10 1983",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1983-10-05"
+    },
+    {
+      "id": "63350",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Kanpur, Oct 21-25 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-10-21"
+    },
+    {
+      "id": "63351",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Delhi, Oct 29-Nov 3 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-10-29"
+    },
+    {
+      "id": "63352",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Ahmedabad, Nov 12-16 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-11-12"
+    },
+    {
+      "id": "63353",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, West Indies tour of India at Mumbai, Nov 24-29 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-11-24"
+    },
+    {
+      "id": "63354",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, West Indies tour of India at Kolkata, Dec 10-14 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-12-10"
+    },
+    {
+      "id": "63355",
+      "league": "16934",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "6th Test, West Indies tour of India at Chennai, Dec 24-29 1983",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1983-12-24"
+    },
+    {
+      "id": "63450",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Sri Lanka tour of India at Nagpur, Dec 27-31 1986",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1986-12-27"
+    },
+    {
+      "id": "63451",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Sri Lanka tour of India at Cuttack, Jan 4-7 1987",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1987-01-04"
+    },
+    {
+      "id": "63452",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Pakistan tour of India at Chennai, Feb 3-8 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-02-03"
+    },
+    {
+      "id": "63453",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Pakistan tour of India at Kolkata, Feb 11-16 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-02-11"
+    },
+    {
+      "id": "63454",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Pakistan tour of India at Jaipur, Feb 21-26 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-02-21"
+    },
+    {
+      "id": "63455",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, Pakistan tour of India at Ahmedabad, Mar 4-9 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-03-04"
+    },
+    {
+      "id": "63456",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, Pakistan tour of India at Bengaluru, Mar 13-17 1987",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1987-03-13"
+    },
+    {
+      "id": "63466",
+      "league": "16757",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Delhi, Nov 25-29 1987",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1987-11-25"
+    },
+    {
+      "id": "66212",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd Match, Pepsi Cup at Nagpur, Mar 22 1999",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1999-03-22"
+    },
+    {
+      "id": "66213",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd Match, Pepsi Cup at Jaipur, Mar 24 1999",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1999-03-24"
+    },
+    {
+      "id": "66215",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th Match, Pepsi Cup at Pune, Mar 30 1999",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1999-03-30"
+    },
+    {
+      "id": "66216",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th Match (D/N), Pepsi Cup at Mohali, Apr 1 1999",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1999-04-01"
+    },
+    {
+      "id": "66217",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Final (D/N), Pepsi Cup at Bengaluru, Apr 4 1999",
+      "teams": [
+        "India",
+        "Pakistan"
+      ],
+      "date": "1999-04-04"
+    },
+    {
+      "id": "66226",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 414,
+      "desc": "2nd Match, Aiwa Cup at Galle, Aug 23 1999",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1999-08-23"
+    },
+    {
+      "id": "66227",
+      "league": "15864",
+      "type": "ODI",
+      "deliveries": 608,
+      "desc": "3rd Match (D/N), Aiwa Cup at Colombo, Aug 25 1999",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "date": "1999-08-25"
+    },
+    {
+      "id": "64657",
+      "league": "15707",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, South Africa tour of India at Kochi, Mar 9 2000",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2000-03-09"
+    },
+    {
+      "id": "64658",
+      "league": "15707",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, South Africa tour of India at Jamshedpur, Mar 12 2000",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2000-03-12"
+    },
+    {
+      "id": "64659",
+      "league": "15707",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, South Africa tour of India at Faridabad, Mar 15 2000",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2000-03-15"
+    },
+    {
+      "id": "64660",
+      "league": "15707",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, South Africa tour of India at Vadodara, Mar 17 2000",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2000-03-17"
+    },
+    {
+      "id": "64661",
+      "league": "15707",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, South Africa tour of India at Nagpur, Mar 19 2000",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2000-03-19"
+    },
+    {
+      "id": "63726",
+      "league": "16138",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, South Africa tour of India at Kanpur, Dec 8-12 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-12-08"
+    },
+    {
+      "id": "63865",
+      "league": "15710",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, India tour of Australia at Adelaide, Dec 10-14 1999",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1999-12-10"
+    },
+    {
+      "id": "63866",
+      "league": "15710",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, India tour of Australia at Melbourne, Dec 26-30 1999",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "1999-12-26"
+    },
+    {
+      "id": "63867",
+      "league": "15710",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, India tour of Australia at Sydney, Jan 2-4 2000",
+      "teams": [
+        "Australia",
+        "India"
+      ],
+      "date": "2000-01-02"
+    },
+    {
+      "id": "63870",
+      "league": "15710",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, South Africa tour of India at Mumbai, Feb 24-26 2000",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "2000-02-24"
+    },
+    {
+      "id": "64533",
+      "league": "16146",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "Only ODI (D/N), South Africa tour of India at Mumbai, Dec 14 1996",
+      "teams": [
+        "India",
+        "South Africa"
+      ],
+      "date": "1996-12-14"
+    },
+    {
+      "id": "64537",
+      "league": "16146",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, India tour of Zimbabwe at Bulawayo, Feb 15 1997",
+      "teams": [
+        "Zimbabwe",
+        "India"
+      ],
+      "date": "1997-02-15"
+    },
+    {
+      "id": "64361",
+      "league": "16564",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Sri Lanka tour of India at Nagpur, Dec 1 1990",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1990-12-01"
+    },
+    {
+      "id": "64362",
+      "league": "16564",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Sri Lanka tour of India at Pune, Dec 5 1990",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1990-12-05"
+    },
+    {
+      "id": "64363",
+      "league": "16564",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Sri Lanka tour of India at Margao, Dec 8 1990",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1990-12-08"
+    },
+    {
+      "id": "64445",
+      "league": "16364",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, Sri Lanka tour of India at Rajkot, Feb 15 1994",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1994-02-15"
+    },
+    {
+      "id": "64447",
+      "league": "16364",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, Sri Lanka tour of India at Hyderabad, Feb 18 1994",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1994-02-18"
+    },
+    {
+      "id": "64449",
+      "league": "16364",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, Sri Lanka tour of India at Jalandhar, Feb 20 1994",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1994-02-20"
+    },
+    {
+      "id": "63320",
+      "league": "16976",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, Sri Lanka tour of India at Chennai, Sep 17-22 1982",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1982-09-17"
+    },
+    {
+      "id": "63548",
+      "league": "16567",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "Only Test, Sri Lanka tour of India at Chandigarh, Nov 23-27 1990",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1990-11-23"
+    },
+    {
+      "id": "63631",
+      "league": "16390",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Sri Lanka tour of India at Lucknow, Jan 18-22 1994",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1994-01-18"
+    },
+    {
+      "id": "63633",
+      "league": "16390",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Sri Lanka tour of India at Ahmedabad, Feb 8-12 1994",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1994-02-08"
+    },
+    {
+      "id": "63775",
+      "league": "16016",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, Sri Lanka tour of India at Mohali, Nov 19-23 1997",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1997-11-19"
+    },
+    {
+      "id": "63776",
+      "league": "16016",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, Sri Lanka tour of India at Nagpur, Nov 26-30 1997",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1997-11-26"
+    },
+    {
+      "id": "63777",
+      "league": "16016",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, Sri Lanka tour of India at Mumbai, Dec 3-7 1997",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "date": "1997-12-03"
+    },
+    {
+      "id": "64319",
+      "league": "16720",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "6th ODI, West Indies tour of India at Gwalior, Jan 22 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-22"
+    },
+    {
+      "id": "64320",
+      "league": "16720",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "7th ODI, West Indies tour of India at Thiruvananthapuram, Jan 25 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-25"
+    },
+    {
+      "id": "64475",
+      "league": "16326",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "1st ODI, West Indies tour of India at Faridabad, Oct 17 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-10-17"
+    },
+    {
+      "id": "64476",
+      "league": "16326",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "2nd ODI, West Indies tour of India at Mumbai, Oct 20 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-10-20"
+    },
+    {
+      "id": "64480",
+      "league": "16326",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "3rd ODI, West Indies tour of India at Visakhapatnam, Nov 7 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-11-07"
+    },
+    {
+      "id": "64481",
+      "league": "16326",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "4th ODI, West Indies tour of India at Cuttack, Nov 9 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-11-09"
+    },
+    {
+      "id": "64482",
+      "league": "16326",
+      "type": "ODI",
+      "deliveries": 0,
+      "desc": "5th ODI, West Indies tour of India at Jaipur, Nov 11 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-11-11"
+    },
+    {
+      "id": "62691",
+      "league": "17494",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Mumbai, Dec 9-13 1948",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1948-12-09"
+    },
+    {
+      "id": "62692",
+      "league": "17494",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Kolkata, Dec 31 1948 - Jan 4 1949",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1948-12-31"
+    },
+    {
+      "id": "62693",
+      "league": "17494",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, West Indies tour of India at Chennai, Jan 27-31 1949",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1949-01-27"
+    },
+    {
+      "id": "62694",
+      "league": "17494",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, West Indies tour of India at Mumbai, Feb 4-8 1949",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1949-02-04"
+    },
+    {
+      "id": "62845",
+      "league": "17394",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Mumbai, Nov 28-Dec 3 1958",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1958-11-28"
+    },
+    {
+      "id": "62846",
+      "league": "17394",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Kanpur, Dec 12-17 1958",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1958-12-12"
+    },
+    {
+      "id": "62847",
+      "league": "17394",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Kolkata, Dec 31 1958 - Jan 4 1959",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1958-12-31"
+    },
+    {
+      "id": "62848",
+      "league": "17394",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, West Indies tour of India at Chennai, Jan 21-26 1959",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1959-01-21"
+    },
+    {
+      "id": "62849",
+      "league": "17394",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, West Indies tour of India at Delhi, Feb 6-11 1959",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1959-02-06"
+    },
+    {
+      "id": "62996",
+      "league": "17308",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Mumbai, Dec 13-18 1966",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1966-12-13"
+    },
+    {
+      "id": "62997",
+      "league": "17308",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Kolkata, Dec 31 1966 - Jan 5 1967",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1966-12-31"
+    },
+    {
+      "id": "62998",
+      "league": "17308",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Chennai, Jan 13-18 1967",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1967-01-13"
+    },
+    {
+      "id": "63134",
+      "league": "17205",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, West Indies tour of India at Chennai, Jan 11-15 1975",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1975-01-11"
+    },
+    {
+      "id": "63230",
+      "league": "17108",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "5th Test, West Indies tour of India at Delhi, Jan 24-29 1979",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1979-01-24"
+    },
+    {
+      "id": "63231",
+      "league": "17108",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "6th Test, West Indies tour of India at Kanpur, Feb 2-8 1979",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1979-02-02"
+    },
+    {
+      "id": "63467",
+      "league": "16723",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Mumbai, Dec 11-16 1987",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1987-12-11"
+    },
+    {
+      "id": "63468",
+      "league": "16723",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Kolkata, Dec 26-31 1987",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1987-12-26"
+    },
+    {
+      "id": "63469",
+      "league": "16723",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "4th Test, West Indies tour of India at Chennai, Jan 11-15 1988",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1988-01-11"
+    },
+    {
+      "id": "63660",
+      "league": "16321",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "1st Test, West Indies tour of India at Mumbai, Nov 18-22 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-11-18"
+    },
+    {
+      "id": "63661",
+      "league": "16321",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "2nd Test, West Indies tour of India at Nagpur, Dec 1-5 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-12-01"
+    },
+    {
+      "id": "63662",
+      "league": "16321",
+      "type": "Test",
+      "deliveries": 0,
+      "desc": "3rd Test, West Indies tour of India at Mohali, Dec 10-14 1994",
+      "teams": [
+        "India",
+        "West Indies"
+      ],
+      "date": "1994-12-10"
+    }
+  ],
+  "failed": []
+}

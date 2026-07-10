@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A0F" />
+  <title>Team India · Cricket Records Dashboard</title>
+  <meta name="description" content="Team India cricket dashboard — official career records plus ball-by-ball archive analytics across Tests, ODIs & T20Is." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- Mobile top bar -->
+  <div class="mobile-bar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#" class="brand brand-sm" onclick="showView('overview'); return false;">
+      <span class="brand-mark">IND</span>
+      <strong>Team India</strong>
+    </a>
+    <span class="mobile-meta" id="mobileMeta"></span>
+  </div>
+
+  <div class="app-shell">
+    <!-- ═══ SIDE PANEL ═══ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a href="#" class="brand" onclick="showView('overview'); closeSidebar(); return false;">
+          <span class="brand-mark">IND</span>
+          <div class="brand-text">
+            <strong>Team India</strong>
+            <span>Cricket Records</span>
+          </div>
+        </a>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation">×</button>
+      </div>
+
+      <nav class="side-nav" id="sideNav">
+        <div class="nav-group-label">Main</div>
+        <button class="nav-item active" data-view="overview">
+          <span class="nav-icon">◈</span>
+          <span>Overview</span>
+        </button>
+        <button class="nav-item nav-item-official" data-view="official">
+          <span class="nav-icon">★</span>
+          <span>Official Records</span>
+          <span class="nav-badge">Verified</span>
+        </button>
+
+        <div class="nav-group-label">Archive analytics</div>
+        <button class="nav-item" data-view="formats">
+          <span class="nav-icon">▣</span>
+          <span>Formats</span>
+        </button>
+        <button class="nav-item" data-view="batting">
+          <span class="nav-icon">◆</span>
+          <span>Batting</span>
+        </button>
+        <button class="nav-item" data-view="bowling">
+          <span class="nav-icon">●</span>
+          <span>Bowling</span>
+        </button>
+        <button class="nav-item" data-view="fielding">
+          <span class="nav-icon">◎</span>
+          <span>Fielding</span>
+        </button>
+        <button class="nav-item" data-view="h2h">
+          <span class="nav-icon">⇄</span>
+          <span>Head-to-Head</span>
+        </button>
+        <button class="nav-item" data-view="venues">
+          <span class="nav-icon">⌂</span>
+          <span>Venues</span>
+        </button>
+        <button class="nav-item" data-view="records">
+          <span class="nav-icon">▲</span>
+          <span>Archive records</span>
+        </button>
+        <button class="nav-item" data-view="matches">
+          <span class="nav-icon">≡</span>
+          <span>Matches</span>
+        </button>
+        <button class="nav-item" data-view="missing">
+          <span class="nav-icon">?</span>
+          <span>Coverage</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="sidebar-meta" id="headerMeta">Loading…</div>
+        <a class="sidebar-link" href="https://crickrida.rkjat.in" target="_blank" rel="noopener">Inspired by Crickrida →</a>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- ═══ MAIN ═══ -->
+    <div class="content-wrap">
+      <main class="main">
+        <!-- LOADING -->
+        <section id="loading" class="loading-screen">
+          <div class="loader-ring"></div>
+          <p>Loading Team India data…</p>
+        </section>
+
+        <!-- OFFICIAL RECORDS -->
+        <section id="view-official" class="view hidden">
+          <div class="hero-banner">
+            <img src="images/hero-stadium.jpg" alt="Cricket stadium at dusk" class="hero-banner-img" />
+            <div class="hero-banner-overlay">
+              <div class="hero-badge">Official career totals · Wikipedia / ESPNcricinfo</div>
+              <h1>Official Team India records</h1>
+              <p class="hero-sub">Verified career statistics across Tests, ODIs and T20Is — independent of this folder’s ball-by-ball archive. Source dates shown per format.</p>
+              <p class="source-line" id="officialAsOf"></p>
+            </div>
+          </div>
+
+          <div class="stat-grid official-grid stagger" id="officialOverall"></div>
+
+          <div class="grid-2 mt-6">
+            <div class="card card-media">
+              <img src="images/trophies.jpg" alt="Abstract trophy celebration art" class="card-img" />
+              <div class="card-media-body">
+                <div class="card-head"><h2>ICC trophy cabinet</h2><span class="chip">Men’s senior</span></div>
+                <div id="trophyList" class="trophy-list"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Key milestones</h2></div>
+              <div id="milestoneList" class="milestone-list"></div>
+            </div>
+          </div>
+
+          <div class="section-head mt-8">
+            <h2 class="section-title">Format-by-format</h2>
+            <p>Team results and landmark scores from official public records</p>
+          </div>
+
+          <div class="format-tabs" id="officialFormatTabs">
+            <button class="seg-btn active" data-ofmt="test">Test</button>
+            <button class="seg-btn" data-ofmt="odi">ODI</button>
+            <button class="seg-btn" data-ofmt="t20i">T20I</button>
+          </div>
+
+          <div id="officialFormatPanel" class="mt-4"></div>
+
+          <div class="section-head mt-8">
+            <h2 class="section-title">All-time icons</h2>
+            <p>Career landmarks that define Indian cricket history</p>
+          </div>
+          <div class="icon-grid" id="iconGrid"></div>
+
+          <div class="section-head mt-8">
+            <h2 class="section-title">Player gallery</h2>
+            <p>Portraits from Wikipedia / Wikimedia Commons (used on this dashboard)</p>
+          </div>
+          <div class="players-gallery" id="playersGallery"></div>
+
+          <div class="grid-2 mt-6">
+            <div class="card card-media vertical">
+              <img src="images/bat-stumps.jpg" alt="Cricket bat and stumps" class="card-img" />
+              <div class="card-media-body">
+                <div class="card-head"><h2>Test head-to-head</h2><span class="chip">As of June 2026</span></div>
+                <div class="table-scroll max-h">
+                  <table class="data-table" id="officialH2H">
+                    <thead>
+                      <tr><th>Opponent</th><th>P</th><th>W</th><th>L</th><th>D</th><th>T</th></tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card card-media vertical">
+              <img src="images/cricket-ball.jpg" alt="Cricket ball close-up" class="card-img square" />
+              <div class="card-media-body">
+                <div class="card-head"><h2>Sources &amp; methodology</h2></div>
+                <ul class="source-list" id="sourceList"></ul>
+                <p class="footnote mt-3" id="officialNote"></p>
+                <div class="alert-banner compact mt-4">
+                  <div class="alert-icon">i</div>
+                  <div>
+                    <strong>Archive vs official</strong>
+                    <p>Other pages on this site use the local Cricsheet / recovered match files and may not match full career totals. Use <em>Official Records</em> for correct all-time figures.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section id="view-overview" class="view hidden">
+          <div class="hero-banner short">
+            <img src="images/hero-stadium.jpg" alt="" class="hero-banner-img" />
+            <div class="hero-banner-overlay">
+              <div class="hero-badge">Local archive · Ball-by-ball · Male internationals</div>
+              <h1>India by the numbers</h1>
+              <p class="hero-sub">Analytics from matches in this folder — batting, bowling, venues, and coverage. For full career totals see <button class="inline-link" onclick="showView('official')">Official Records</button>.</p>
+            </div>
+          </div>
+
+          <div class="stat-grid stagger" id="overviewStats"></div>
+
+          <div class="grid-2 mt-6">
+            <div class="card">
+              <div class="card-head">
+                <h2>Results by format</h2>
+                <span class="chip">Win / Loss / Draw</span>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="chartFormatResults"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <h2>Yearly win rate</h2>
+                <span class="chip">All formats</span>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="chartYearly"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-3 mt-6">
+            <div class="card">
+              <div class="card-head"><h2>Home vs Away</h2></div>
+              <div id="homeAwayCards" class="mini-stats"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Toss impact</h2></div>
+              <div id="tossCards" class="mini-stats"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Bat first vs Chase</h2><span class="chip">ODI + T20</span></div>
+              <div id="chaseCards" class="mini-stats"></div>
+            </div>
+          </div>
+
+          <div class="grid-2 mt-6">
+            <div class="card">
+              <div class="card-head">
+                <h2>Top run-scorers</h2>
+                <button class="link-btn" onclick="showView('batting')">View all →</button>
+              </div>
+              <div id="topBatters" class="rank-list"></div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <h2>Top wicket-takers</h2>
+                <button class="link-btn" onclick="showView('bowling')">View all →</button>
+              </div>
+              <div id="topBowlers" class="rank-list"></div>
+            </div>
+          </div>
+
+          <div class="card mt-6">
+            <div class="card-head">
+              <h2>Recent results</h2>
+              <button class="link-btn" onclick="showView('matches')">Match browser →</button>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table" id="recentTable">
+                <thead>
+                  <tr><th>Date</th><th>Format</th><th>Opponent</th><th>Result</th><th>Margin</th><th>Venue</th><th>PoM</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- FORMATS -->
+        <section id="view-formats" class="view hidden">
+          <div class="section-head">
+            <h1>Format breakdown</h1>
+            <p>Test · ODI · T20I performance from this dataset</p>
+          </div>
+          <div class="format-cards" id="formatCards"></div>
+          <div class="grid-2 mt-6">
+            <div class="card">
+              <div class="card-head"><h2>Matches per year by format</h2></div>
+              <div class="chart-wrap tall"><canvas id="chartYearFormat"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Win share by format</h2></div>
+              <div class="chart-wrap tall"><canvas id="chartFormatPie"></canvas></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BATTING -->
+        <section id="view-batting" class="view hidden">
+          <div class="section-head">
+            <h1>Batting records</h1>
+            <p>India batters · ball-by-ball aggregates in this archive</p>
+          </div>
+          <div class="toolbar">
+            <div class="seg" id="batFormatSeg">
+              <button class="seg-btn active" data-fmt="all">All</button>
+              <button class="seg-btn" data-fmt="Test">Test</button>
+              <button class="seg-btn" data-fmt="ODI">ODI</button>
+              <button class="seg-btn" data-fmt="T20">T20</button>
+            </div>
+            <input type="search" id="batSearch" class="search" placeholder="Search batter…" />
+            <select id="batSort" class="select">
+              <option value="runs">Sort: Runs</option>
+              <option value="avg">Sort: Average</option>
+              <option value="sr">Sort: Strike rate</option>
+              <option value="hundreds">Sort: Hundreds</option>
+              <option value="fifties">Sort: Fifties</option>
+              <option value="sixes">Sort: Sixes</option>
+              <option value="matches">Sort: Matches</option>
+            </select>
+          </div>
+          <div class="card">
+            <div class="table-scroll">
+              <table class="data-table sticky" id="battingTable">
+                <thead>
+                  <tr>
+                    <th>#</th><th>Player</th><th>Mat</th><th>Inn</th><th>Runs</th><th>HS</th><th>Avg</th><th>SR</th>
+                    <th>50s</th><th>100s</th><th>4s</th><th>6s</th><th>NO</th><th>Ducks</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOWLING -->
+        <section id="view-bowling" class="view hidden">
+          <div class="section-head">
+            <h1>Bowling records</h1>
+            <p>India bowlers · wickets, economy, best figures</p>
+          </div>
+          <div class="toolbar">
+            <div class="seg" id="bowlFormatSeg">
+              <button class="seg-btn active" data-fmt="all">All</button>
+              <button class="seg-btn" data-fmt="Test">Test</button>
+              <button class="seg-btn" data-fmt="ODI">ODI</button>
+              <button class="seg-btn" data-fmt="T20">T20</button>
+            </div>
+            <input type="search" id="bowlSearch" class="search" placeholder="Search bowler…" />
+            <select id="bowlSort" class="select">
+              <option value="wickets">Sort: Wickets</option>
+              <option value="avg">Sort: Average</option>
+              <option value="econ">Sort: Economy</option>
+              <option value="sr">Sort: Strike rate</option>
+              <option value="five_w">Sort: 5-fors</option>
+              <option value="matches">Sort: Matches</option>
+            </select>
+          </div>
+          <div class="card">
+            <div class="table-scroll">
+              <table class="data-table sticky" id="bowlingTable">
+                <thead>
+                  <tr>
+                    <th>#</th><th>Player</th><th>Mat</th><th>Inn</th><th>Overs</th><th>Runs</th><th>Wkts</th>
+                    <th>BBI</th><th>Avg</th><th>Econ</th><th>SR</th><th>4W</th><th>5W</th><th>Mdns</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- FIELDING -->
+        <section id="view-fielding" class="view hidden">
+          <div class="section-head">
+            <h1>Fielding &amp; keeping</h1>
+            <p>Catches, stumpings and run-outs credited to India players</p>
+          </div>
+          <div class="card">
+            <div class="table-scroll">
+              <table class="data-table sticky" id="fieldingTable">
+                <thead>
+                  <tr><th>#</th><th>Player</th><th>Matches</th><th>Catches</th><th>Stumpings</th><th>Run-outs</th><th>Total dismissals</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card mt-6">
+            <div class="card-head"><h2>Most Player of the Match awards</h2></div>
+            <div id="pomList" class="rank-list wide"></div>
+          </div>
+        </section>
+
+        <!-- H2H -->
+        <section id="view-h2h" class="view hidden">
+          <div class="section-head">
+            <h1>Head-to-head</h1>
+            <p>India vs every opponent in this dataset</p>
+          </div>
+          <div class="toolbar">
+            <input type="search" id="h2hSearch" class="search" placeholder="Filter opponent…" />
+            <select id="h2hSort" class="select">
+              <option value="played">Sort: Matches</option>
+              <option value="won">Sort: Wins</option>
+              <option value="win_pct">Sort: Win %</option>
+            </select>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-head"><h2>Win % vs opponents (min 10 matches)</h2></div>
+              <div class="chart-wrap tall"><canvas id="chartH2H"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="table-scroll max-h">
+                <table class="data-table sticky" id="h2hTable">
+                  <thead>
+                    <tr><th>Opponent</th><th>P</th><th>W</th><th>L</th><th>D</th><th>T</th><th>NR</th><th>Win%</th><th>By format</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VENUES -->
+        <section id="view-venues" class="view hidden">
+          <div class="section-head">
+            <h1>Venues</h1>
+            <p>Where India played · home &amp; away form</p>
+          </div>
+          <div class="toolbar">
+            <input type="search" id="venueSearch" class="search" placeholder="Search venue or city…" />
+            <select id="venueFilter" class="select">
+              <option value="all">All venues</option>
+              <option value="home">Home only</option>
+              <option value="away">Away only</option>
+            </select>
+          </div>
+          <div class="card">
+            <div class="table-scroll">
+              <table class="data-table sticky" id="venueTable">
+                <thead>
+                  <tr><th>Venue</th><th>City</th><th>Home</th><th>P</th><th>W</th><th>L</th><th>D/T/NR</th><th>Win%</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ARCHIVE RECORDS -->
+        <section id="view-records" class="view hidden">
+          <div class="section-head">
+            <h1>Archive team &amp; individual records</h1>
+            <p>Highest totals and best figures from matches in this folder · for full career see <button class="inline-link" onclick="showView('official')">Official Records</button></p>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-head"><h2>Highest team totals</h2></div>
+              <div class="table-scroll max-h"><table class="data-table" id="highTotals"><thead><tr><th>Score</th><th>Fmt</th><th>vs</th><th>Date</th><th>Venue</th></tr></thead><tbody></tbody></table></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Lowest team totals</h2></div>
+              <div class="table-scroll max-h"><table class="data-table" id="lowTotals"><thead><tr><th>Score</th><th>Fmt</th><th>vs</th><th>Date</th><th>Venue</th></tr></thead><tbody></tbody></table></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Highest individual scores</h2></div>
+              <div class="table-scroll max-h"><table class="data-table" id="highInd"><thead><tr><th>Player</th><th>Runs</th><th>Balls</th><th>Fmt</th><th>vs</th><th>Date</th></tr></thead><tbody></tbody></table></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Best bowling figures</h2></div>
+              <div class="table-scroll max-h"><table class="data-table" id="bestBowl"><thead><tr><th>Player</th><th>Figures</th><th>Overs</th><th>Fmt</th><th>vs</th><th>Date</th></tr></thead><tbody></tbody></table></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Biggest wins (by runs)</h2></div>
+              <div class="table-scroll max-h"><table class="data-table" id="bigWinsR"><thead><tr><th>Margin</th><th>Fmt</th><th>vs</th><th>Date</th><th>Venue</th></tr></thead><tbody></tbody></table></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Biggest wins (by wickets)</h2></div>
+              <div class="table-scroll max-h"><table class="data-table" id="bigWinsW"><thead><tr><th>Margin</th><th>Fmt</th><th>vs</th><th>Date</th><th>Venue</th></tr></thead><tbody></tbody></table></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MATCHES -->
+        <section id="view-matches" class="view hidden">
+          <div class="section-head">
+            <h1>Match browser</h1>
+            <p id="matchCount">All matches in the archive</p>
+          </div>
+          <div class="toolbar wrap">
+            <input type="search" id="matchSearch" class="search" placeholder="Search opponent, venue, event…" />
+            <select id="matchFormat" class="select">
+              <option value="all">All formats</option>
+              <option value="Test">Test</option>
+              <option value="ODI">ODI</option>
+              <option value="T20">T20</option>
+            </select>
+            <select id="matchResult" class="select">
+              <option value="all">All results</option>
+              <option value="won">Won</option>
+              <option value="lost">Lost</option>
+              <option value="draw">Draw</option>
+              <option value="tied">Tied</option>
+              <option value="nr">No result</option>
+            </select>
+            <select id="matchHome" class="select">
+              <option value="all">Home &amp; away</option>
+              <option value="home">Home</option>
+              <option value="away">Away</option>
+            </select>
+          </div>
+          <div class="card">
+            <div class="table-scroll">
+              <table class="data-table sticky" id="matchesTable">
+                <thead>
+                  <tr><th>Date</th><th>Fmt</th><th>Opponent</th><th>Result</th><th>Margin</th><th>Venue</th><th>Event</th><th>PoM</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="pager" id="matchPager"></div>
+          </div>
+        </section>
+
+        <!-- MISSING -->
+        <section id="view-missing" class="view hidden">
+          <div class="section-head">
+            <h1>Coverage &amp; missing matches</h1>
+            <p>What this folder covers — and what it doesn’t</p>
+          </div>
+
+          <div class="alert-banner">
+            <div class="alert-icon">!</div>
+            <div>
+              <strong>This is a partial career archive</strong>
+              <p>Ball-by-ball files in this folder plus recovered matches. Full India history is larger. See <button class="inline-link" onclick="showView('official')">Official Records</button> for correct career totals.</p>
+            </div>
+          </div>
+
+          <div class="stat-grid mt-6" id="missingCoverage"></div>
+
+          <div class="grid-2 mt-6">
+            <div class="card">
+              <div class="card-head"><h2>Coverage vs official career totals</h2></div>
+              <div class="chart-wrap"><canvas id="chartCoverage"></canvas></div>
+              <p class="footnote">Official totals are approximate career figures (Wikipedia / ICC, mid-2026). Dataset ends at latest match in the folder.</p>
+            </div>
+            <div class="card missing-detail">
+              <div class="card-head"><h2>Why matches are missing</h2></div>
+              <div class="missing-blocks" id="missingBlocks"></div>
+            </div>
+          </div>
+
+          <div class="card mt-6">
+            <div class="card-head"><h2>Dataset window</h2></div>
+            <div id="missingWindow" class="missing-window"></div>
+          </div>
+
+          <div class="card mt-6">
+            <div class="card-head"><h2>Estimated missing by format</h2></div>
+            <div class="table-scroll">
+              <table class="data-table" id="missingTable">
+                <thead>
+                  <tr><th>Format</th><th>In this folder</th><th>Official ~total</th><th>Est. missing</th><th>Coverage</th><th>Notes</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>Team India Dashboard</strong>
+          <span>Official records from public sources · Archive from Cricsheet JSON · Design inspired by <a href="https://crickrida.rkjat.in" target="_blank" rel="noopener">Crickrida</a></span>
+        </div>
+        <span id="footerMeta"></span>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Official Team India Records",
+    "sources": [
+      {
+        "name": "Wikipedia — India national cricket team",
+        "url": "https://en.wikipedia.org/wiki/India_national_cricket_team"
+      },
+      {
+        "name": "Wikipedia — India Test records",
+        "url": "https://en.wikipedia.org/wiki/List_of_India_Test_cricket_records"
+      },
+      {
+        "name": "Wikipedia — India ODI records",
+        "url": "https://en.wikipedia.org/wiki/List_of_India_One_Day_International_cricket_records"
+      },
+      {
+        "name": "Wikipedia — India T20I records",
+        "url": "https://en.wikipedia.org/wiki/List_of_India_Twenty20_International_cricket_records"
+      },
+      {
+        "name": "ESPNcricinfo / BCCI (cross-checked)",
+        "url": "https://www.bcci.tv/international/men/stats/test"
+      }
+    ],
+    "as_of": "2026-07-09",
+    "note": "Career totals from public records (Wikipedia citing ESPNcricinfo). Updated as of mid-July 2026. This page is independent of the local Cricsheet archive."
+  },
+  "overall": {
+    "tests": { "played": 599, "won": 186, "lost": 188, "draw": 224, "tied": 1, "nr": 0, "win_pct": 31.13, "as_of": "8 June 2026" },
+    "odis": { "played": 1078, "won": 574, "lost": 450, "draw": 0, "tied": 10, "nr": 44, "win_pct": 55.99, "as_of": "20 June 2026" },
+    "t20is": { "played": 283, "won": 187, "lost": 80, "draw": 0, "tied": 1, "tie_win": 6, "tie_loss": 0, "nr": 9, "win_pct": 66.08, "as_of": "9 July 2026" }
+  },
+  "icc_trophies": [
+    { "title": "Cricket World Cup", "years": ["1983", "2011"], "count": 2, "format": "ODI" },
+    { "title": "T20 World Cup", "years": ["2007", "2024", "2026"], "count": 3, "format": "T20I" },
+    { "title": "Champions Trophy", "years": ["2002 (shared)", "2013"], "count": 2, "format": "ODI" },
+    { "title": "World Test Championship", "years": [], "count": 0, "format": "Test", "note": "Finalists 2021 & 2023" }
+  ],
+  "milestones": [
+    { "label": "First Test", "value": "25–28 June 1932", "detail": "vs England at Lord's" },
+    { "label": "First ODI", "value": "13 July 1974", "detail": "vs England at Headingley" },
+    { "label": "First T20I", "value": "1 December 2006", "detail": "vs South Africa at Johannesburg" },
+    { "label": "First World Cup", "value": "1983", "detail": "Beat West Indies in final (Lord's)" },
+    { "label": "Home World Cup", "value": "2011", "detail": "Beat Sri Lanka in final (Mumbai)" },
+    { "label": "T20 World Cups", "value": "3 titles", "detail": "2007 · 2024 · 2026 — most successful nation" }
+  ],
+  "test": {
+    "team": {
+      "highest_total": { "score": "759/7d", "vs": "England", "venue": "M. A. Chidambaram Stadium, Chennai", "date": "16 Dec 2016" },
+      "lowest_total": { "score": "36", "vs": "Australia", "venue": "Adelaide Oval", "date": "17 Dec 2020" },
+      "highest_chase": { "score": "403/4", "target": 403, "vs": "West Indies", "venue": "Queen's Park Oval, Port of Spain", "date": "7 Apr 1976" },
+      "highest_conceded": { "score": "952/6d", "by": "Sri Lanka", "venue": "R. Premadasa Stadium, Colombo", "date": "2 Aug 1997" }
+    },
+    "batting": [
+      { "rank": 1, "player": "Sachin Tendulkar", "runs": 15921, "mat": 200, "avg": 53.78, "hundreds": 51, "hs": "248*" },
+      { "rank": 2, "player": "Rahul Dravid", "runs": 13288, "mat": 164, "avg": 52.31, "hundreds": 36, "hs": "270" },
+      { "rank": 3, "player": "Sunil Gavaskar", "runs": 10122, "mat": 125, "avg": 51.12, "hundreds": 34, "hs": "236*" },
+      { "rank": 4, "player": "Virat Kohli", "runs": 9230, "mat": 123, "avg": 46.85, "hundreds": 30, "hs": "254*" },
+      { "rank": 5, "player": "VVS Laxman", "runs": 8781, "mat": 134, "avg": 45.97, "hundreds": 17, "hs": "281" }
+    ],
+    "bowling": [
+      { "rank": 1, "player": "Anil Kumble", "wickets": 619, "mat": 132, "avg": 29.65, "bbi": "10/74", "five": 35 },
+      { "rank": 2, "player": "Ravichandran Ashwin", "wickets": 537, "mat": 106, "avg": 24.00, "bbi": "7/59", "five": 37 },
+      { "rank": 3, "player": "Kapil Dev", "wickets": 434, "mat": 131, "avg": 29.64, "bbi": "9/83", "five": 23 },
+      { "rank": 4, "player": "Harbhajan Singh", "wickets": 417, "mat": 103, "avg": 32.46, "bbi": "8/84", "five": 25 },
+      { "rank": 5, "player": "Ravindra Jadeja", "wickets": 323, "mat": 80, "avg": 24.50, "bbi": "7/42", "five": 15 }
+    ]
+  },
+  "odi": {
+    "team": {
+      "highest_total": { "score": "418/5", "vs": "West Indies", "venue": "Holkar Stadium, Indore", "date": "8 Dec 2011" },
+      "lowest_total": { "score": "54", "vs": "Sri Lanka", "venue": "Sharjah Cricket Stadium", "date": "29 Oct 2000" },
+      "highest_individual": { "score": "264", "player": "Rohit Sharma", "vs": "Sri Lanka", "venue": "Eden Gardens, Kolkata", "date": "13 Nov 2014" }
+    },
+    "batting": [
+      { "rank": 1, "player": "Sachin Tendulkar", "runs": 18426, "mat": 463, "avg": 44.83, "hundreds": 49, "hs": "200*" },
+      { "rank": 2, "player": "Virat Kohli", "runs": 14181, "mat": 302, "avg": 57.88, "hundreds": 51, "hs": "183" },
+      { "rank": 3, "player": "Rohit Sharma", "runs": 11168, "mat": 273, "avg": 48.76, "hundreds": 32, "hs": "264" },
+      { "rank": 4, "player": "Sourav Ganguly", "runs": 11363, "mat": 311, "avg": 41.02, "hundreds": 22, "hs": "183" },
+      { "rank": 5, "player": "Rahul Dravid", "runs": 10889, "mat": 344, "avg": 39.16, "hundreds": 12, "hs": "153" }
+    ],
+    "bowling": [
+      { "rank": 1, "player": "Anil Kumble", "wickets": 337, "mat": 271, "avg": 30.89, "bbi": "6/12", "five": 2 },
+      { "rank": 2, "player": "Javagal Srinath", "wickets": 315, "mat": 229, "avg": 28.08, "bbi": "5/23", "five": 3 },
+      { "rank": 3, "player": "Ajit Agarkar", "wickets": 288, "mat": 191, "avg": 27.85, "bbi": "6/42", "five": 2 },
+      { "rank": 4, "player": "Zaheer Khan", "wickets": 282, "mat": 200, "avg": 29.43, "bbi": "5/42", "five": 1 },
+      { "rank": 5, "player": "Harbhajan Singh", "wickets": 269, "mat": 236, "avg": 33.35, "bbi": "5/31", "five": 3 }
+    ]
+  },
+  "t20i": {
+    "team": {
+      "note": "India are the most successful T20 World Cup nation with three titles (2007, 2024, 2026)."
+    },
+    "batting": [
+      { "rank": 1, "player": "Rohit Sharma", "runs": 4231, "mat": 159, "avg": 32.05, "sr": 140.89, "hs": "121*" },
+      { "rank": 2, "player": "Virat Kohli", "runs": 4188, "mat": 125, "avg": 48.69, "sr": 137.04, "hs": "122*" },
+      { "rank": 3, "player": "Suryakumar Yadav", "runs": 2598, "mat": 83, "avg": 38.20, "sr": 167.00, "hs": "117" },
+      { "rank": 4, "player": "KL Rahul", "runs": 2265, "mat": 72, "avg": 37.75, "sr": 139.00, "hs": "110*" },
+      { "rank": 5, "player": "Hardik Pandya", "runs": 1812, "mat": 114, "avg": 27.45, "sr": 142.00, "hs": "71*" }
+    ],
+    "bowling": [
+      { "rank": 1, "player": "Yuzvendra Chahal", "wickets": 96, "mat": 80, "avg": 25.09, "econ": 8.19, "bbi": "6/25" },
+      { "rank": 2, "player": "Bhuvneshwar Kumar", "wickets": 90, "mat": 87, "avg": 23.10, "econ": 6.96, "bbi": "5/4" },
+      { "rank": 3, "player": "Jasprit Bumrah", "wickets": 89, "mat": 70, "avg": 17.74, "econ": 6.27, "bbi": "3/7" },
+      { "rank": 4, "player": "Hardik Pandya", "wickets": 88, "mat": 114, "avg": 26.40, "econ": 8.10, "bbi": "4/16" },
+      { "rank": 5, "player": "Arshdeep Singh", "wickets": 76, "mat": 53, "avg": 18.50, "econ": 8.00, "bbi": "4/9" }
+    ]
+  },
+  "all_time_icons": [
+    { "player": "Sachin Tendulkar", "tagline": "Most international runs · 100 centuries", "highlights": ["15,921 Test runs", "18,426 ODI runs", "100 international hundreds"] },
+    { "player": "Anil Kumble", "tagline": "India's leading wicket-taker", "highlights": ["619 Test wickets", "337 ODI wickets", "10/74 vs Pakistan"] },
+    { "player": "Virat Kohli", "tagline": "Modern ODI great · chase master", "highlights": ["Most ODI centuries for India", "World Cup 2024 captain's legacy", "Consistent multi-format star"] },
+    { "player": "Kapil Dev", "tagline": "1983 World Cup winning captain", "highlights": ["434 Test wickets", "5,000+ Test runs", "All-round pioneer"] },
+    { "player": "MS Dhoni", "tagline": "Only captain with all ICC white-ball titles (pre-2026 era base)", "highlights": ["WC 2011 · CT 2013 · T20 2007", "Finisher legend", "Keeping innovator"] },
+    { "player": "Rohit Sharma", "tagline": "Double-ton king · T20 WC 2024 captain", "highlights": ["264 highest ODI score", "3 ODI double-centuries", "T20 World Cup 2024"] }
+  ],
+  "h2h_tests_top": [
+    { "opponent": "England", "played": 141, "won": 37, "lost": 53, "draw": 51, "tied": 0 },
+    { "opponent": "Australia", "played": 112, "won": 33, "lost": 48, "draw": 30, "tied": 1 },
+    { "opponent": "West Indies", "played": 102, "won": 25, "lost": 30, "draw": 47, "tied": 0 },
+    { "opponent": "New Zealand", "played": 65, "won": 22, "lost": 16, "draw": 27, "tied": 0 },
+    { "opponent": "South Africa", "played": 46, "won": 16, "lost": 20, "draw": 10, "tied": 0 },
+    { "opponent": "Sri Lanka", "played": 46, "won": 22, "lost": 7, "draw": 17, "tied": 0 },
+    { "opponent": "Pakistan", "played": 59, "won": 9, "lost": 12, "draw": 38, "tied": 0 },
+    { "opponent": "Bangladesh", "played": 15, "won": 13, "lost": 0, "draw": 2, "tied": 0 },
+    { "opponent": "Zimbabwe", "played": 11, "won": 7, "lost": 2, "draw": 2, "tied": 0 },
+    { "opponent": "Afghanistan", "played": 2, "won": 2, "lost": 0, "draw": 0, "tied": 0 }
+  ]
+}

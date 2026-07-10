@@ -1,0 +1,59 @@
+{
+  "written": [
+    {
+      "id": "1133983",
+      "path": "/Users/rkjat/Desktop/Team India/1133983.json",
+      "deliveries": 1031,
+      "desc": "Only Test, Afghanistan tour of India at Bengaluru, Jun 14-15 2018"
+    },
+    {
+      "id": "1384400",
+      "path": "/Users/rkjat/Desktop/Team India/1384400.json",
+      "deliveries": 125,
+      "desc": "9th Match (D/N), ICC Cricket World Cup at Delhi, Oct 11 2023"
+    },
+    {
+      "id": "1389396",
+      "path": "/Users/rkjat/Desktop/Team India/1389396.json",
+      "deliveries": 233,
+      "desc": "1st T20I (N), Afghanistan tour of India at Mohali, Jan 11 2024"
+    },
+    {
+      "id": "1389397",
+      "path": "/Users/rkjat/Desktop/Team India/1389397.json",
+      "deliveries": 223,
+      "desc": "2nd T20I (N), Afghanistan tour of India at Indore, Jan 14 2024"
+    },
+    {
+      "id": "1389398",
+      "path": "/Users/rkjat/Desktop/Team India/1389398.json",
+      "deliveries": 256,
+      "desc": "3rd T20I (N), Afghanistan tour of India at Bengaluru, Jan 17 2024"
+    },
+    {
+      "id": "1527150",
+      "path": "/Users/rkjat/Desktop/Team India/1527150.json",
+      "deliveries": 350,
+      "desc": "Only Test, Afghanistan tour of India at New Chandigarh, Jun 6-8 2026"
+    },
+    {
+      "id": "1527151",
+      "path": "/Users/rkjat/Desktop/Team India/1527151.json",
+      "deliveries": 295,
+      "desc": "1st ODI (D/N), Afghanistan tour of India at Dharamsala, Jun 13 2026"
+    },
+    {
+      "id": "1527152",
+      "path": "/Users/rkjat/Desktop/Team India/1527152.json",
+      "deliveries": 150,
+      "desc": "2nd ODI (D/N), Afghanistan tour of India at Lucknow, Jun 17 2026"
+    },
+    {
+      "id": "1527153",
+      "path": "/Users/rkjat/Desktop/Team India/1527153.json",
+      "deliveries": 455,
+      "desc": "3rd ODI (D/N), Afghanistan tour of India at Chennai, Jun 20 2026"
+    }
+  ],
+  "count": 9
+}
