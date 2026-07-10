@@ -168,6 +168,11 @@ def main():
     notable_innings, notable_bowling = [], []
     biggest_wins_runs, biggest_wins_wickets, biggest_defeats_runs = [], [], []
     match_list = []
+    by_event = defaultdict(lambda: {
+        "played": 0, "won": 0, "lost": 0, "draw": 0, "tied": 0, "nr": 0,
+        "formats": set(), "match_ids": [], "first": "", "last": "",
+    })
+    quality = {"full": 0, "partial": 0, "empty": 0}
 
     for idx, path in enumerate(files):
         if idx % 100 == 0:
@@ -241,6 +246,10 @@ def main():
             pom[p] += 1
 
         india_totals = []
+        opp_totals = []
+        india_bat_card = []  # condensed scorecard for match detail
+        india_bowl_card = []
+        total_deliveries = 0
         for inn_idx, inn in enumerate(innings):
             team = inn.get("team")
             overs = inn.get("overs") or []
@@ -251,6 +260,7 @@ def main():
                 legal = 0
                 for over in overs:
                     for d in over.get("deliveries") or []:
+                        total_deliveries += 1
                         batter = d.get("batter")
                         runs = d.get("runs") or {}
                         extras = d.get("extras") or {}
@@ -271,6 +281,14 @@ def main():
                                     bat_state[w["player_out"]]["out"] = True
                                 if w.get("kind") != "retired hurt":
                                     total_wkts += 1
+
+                # scorecard lines
+                for name, st in bat_state.items():
+                    india_bat_card.append({
+                        "player": name, "runs": st["runs"], "balls": st["balls"],
+                        "fours": st["fours"], "sixes": st["sixes"], "out": st["out"],
+                        "innings": inn_idx + 1,
+                    })
 
                 for name, st in bat_state.items():
                     b = batters[name]
@@ -336,15 +354,20 @@ def main():
                     "balls": 0, "runs": 0, "wickets": 0, "dots": 0, "fours": 0, "sixes": 0,
                     "wides": 0, "noballs": 0, "maidens": 0,
                 })
+                opp_runs = 0
+                opp_wkts = 0
+                opp_legal = 0
                 for over in overs:
                     bowler_overs_runs = defaultdict(int)
                     bowler_overs_legal = defaultdict(int)
                     for d in over.get("deliveries") or []:
+                        total_deliveries += 1
                         bowler = d.get("bowler")
                         runs = d.get("runs") or {}
                         extras = d.get("extras") or {}
                         total = runs.get("total", 0)
                         br = runs.get("batter", 0)
+                        opp_runs += total
                         bowl_state[bowler]["runs"] += total
                         is_wide = "wides" in extras
                         is_nb = "noballs" in extras
@@ -355,6 +378,7 @@ def main():
                         if not is_wide and not is_nb:
                             bowl_state[bowler]["balls"] += 1
                             bowler_overs_legal[bowler] += 1
+                            opp_legal += 1
                             if total == 0:
                                 bowl_state[bowler]["dots"] += 1
                         if br == 4:
@@ -365,6 +389,8 @@ def main():
                         if "wickets" in d:
                             for w in d["wickets"]:
                                 kind = w.get("kind", "")
+                                if kind != "retired hurt":
+                                    opp_wkts += 1
                                 if kind in ("bowled", "lbw", "caught", "stumped", "hit wicket", "caught and bowled"):
                                     bowl_state[bowler]["wickets"] += 1
                                 for fl in w.get("fielders") or []:
@@ -385,6 +411,16 @@ def main():
                     for bowler, legal_ct in bowler_overs_legal.items():
                         if legal_ct >= 6 and bowler_overs_runs[bowler] == 0:
                             bowl_state[bowler]["maidens"] += 1
+
+                opp_totals.append({
+                    "runs": opp_runs, "wickets": opp_wkts, "balls": opp_legal, "innings": inn_idx + 1,
+                })
+                for name, st in bowl_state.items():
+                    if st["balls"] or st["wickets"] or st["runs"]:
+                        india_bowl_card.append({
+                            "player": name, "wickets": st["wickets"], "runs": st["runs"],
+                            "balls": st["balls"], "maidens": st["maidens"], "innings": inn_idx + 1,
+                        })
 
                 for name, st in bowl_state.items():
                     if st["balls"] == 0 and st["wickets"] == 0 and st["runs"] == 0:
@@ -453,6 +489,32 @@ def main():
         elif outcome.get("result"):
             margin = str(outcome.get("result"))
 
+        # quality bucket
+        if total_deliveries >= 50:
+            q = "full"
+        elif total_deliveries > 0:
+            q = "partial"
+        else:
+            q = "empty"
+        quality[q] += 1
+
+        # series / event rollup
+        ename = event_name or "(unnamed series)"
+        ev = by_event[ename]
+        ev["played"] += 1
+        ev[result] = ev.get(result, 0) + 1
+        ev["formats"].add(mt)
+        if len(ev["match_ids"]) < 80:
+            ev["match_ids"].append(mid)
+        if not ev["first"] or (date and date < ev["first"]):
+            ev["first"] = date
+        if not ev["last"] or (date and date > ev["last"]):
+            ev["last"] = date
+
+        # sort scorecard lines
+        india_bat_card.sort(key=lambda x: (-x["runs"], x["innings"]))
+        india_bowl_card.sort(key=lambda x: (-x["wickets"], x["runs"]))
+
         match_list.append({
             "id": mid, "date": date, "format": mt, "opponent": opp,
             "venue": venue, "city": city, "result": result,
@@ -462,6 +524,12 @@ def main():
             "home": home, "season": info.get("season", ""),
             "match_type_number": info.get("match_type_number"),
             "india_totals": india_totals,
+            "opp_totals": opp_totals,
+            "xi": list(india_xi)[:15],
+            "balls": total_deliveries,
+            "quality": q,
+            "bat_card": india_bat_card[:22],
+            "bowl_card": india_bowl_card[:15],
         })
 
     print("Serializing...")
@@ -524,50 +592,78 @@ def main():
         p = v["played"]
         v["win_pct"] = round(v.get("won", 0) / p * 100, 1) if p else 0
 
-    # Official career totals (approx mid-2026)
+    # Official career totals (Wikipedia / ESPNcricinfo mid-2026)
     official = {
         "Test": {"total": 599, "won": 186, "lost": 188, "draw": 224, "tied": 1},
         "ODI": {"total": 1078, "won": 574, "lost": 450, "tied": 10, "nr": 44},
-        "T20": {"total": 281, "won": 187, "lost": 78, "tied": 1, "nr": 9},
+        "T20": {"total": 283, "won": 187, "lost": 80, "tied": 1, "nr": 9},
     }
     our = {fmt: by_format[fmt]["played"] for fmt in ("Test", "ODI", "T20")}
     earliest = min(m["date"] for m in match_list if m["date"])
     latest = max(m["date"] for m in match_list if m["date"])
 
+    # full-ball matches only for quality-aware coverage note
+    full_by_fmt = Counter(m["format"] for m in match_list if m.get("quality") == "full")
+
     missing = {
         "summary": {
             "dataset_matches": len(match_list),
+            "full_ball_matches": quality["full"],
+            "partial_matches": quality["partial"],
+            "empty_shells": quality["empty"],
             "cricsheet_claimed": 1009,
             "withheld_afghanistan_policy": 18,
             "date_range": [earliest, latest],
-            "note": "Cricsheet India male international archive (ball-by-ball). Historical matches before the archive start and Afghanistan-related matches are not included.",
+            "note": "Cricsheet + recovered India male internationals. Empty shells lack ball-by-ball; official totals are independent.",
         },
+        "quality": quality,
         "by_format_vs_official": {
             fmt: {
                 "in_dataset": our[fmt],
+                "full_ball": full_by_fmt.get(fmt, 0),
                 "official_approx": official[fmt]["total"],
                 "estimated_missing": max(0, official[fmt]["total"] - our[fmt]),
-                "coverage_pct": round(our[fmt] / official[fmt]["total"] * 100, 1),
-                "official_source_note": "Wikipedia / ICC career totals as of mid-2026 (approximate)",
+                "coverage_pct": round(our[fmt] / official[fmt]["total"] * 100, 1) if official[fmt]["total"] else 0,
+                "full_ball_pct": round(full_by_fmt.get(fmt, 0) / official[fmt]["total"] * 100, 1) if official[fmt]["total"] else 0,
+                "official_source_note": "Wikipedia / ICC career totals as of mid-2026",
             }
             for fmt in ("Test", "ODI", "T20")
         },
         "historical_gap": {
-            "tests_before_dataset": "India played Tests from 1932. This dataset starts Dec 2001 — roughly 380+ earlier Tests missing.",
-            "odis_before_dataset": "India played ODIs from 1974. This dataset starts mid-2002 for ODIs — roughly 500+ earlier ODIs missing.",
-            "t20_coverage": "T20Is began in 2006; dataset is near-complete for T20Is aside from Afghanistan policy withholdings.",
+            "tests_before_dataset": "India played Tests from 1932. Full ball-by-ball is sparse pre-2000s.",
+            "odis_before_dataset": "India ODIs from 1974. Largest gap vs official ~1,078 is pre-archive + incomplete shells.",
+            "t20_coverage": "T20Is from 2006; archive is near/at full career count (reconcile ties/NR vs official 283).",
         },
         "withheld": {
             "count": 18,
             "reason": "Cricsheet policy: matches featuring Afghanistan men's team or Afghanistan Premier League are withheld.",
             "url": "https://cricsheet.org/withheld-matches",
-            "impact": "India vs Afghanistan internationals (and any APL-related) after the policy are not in this folder.",
+            "impact": "India vs Afghanistan internationals (and any APL-related) after the policy are not always present.",
         },
         "coverage": {
-            fmt: f"{our[fmt]} of ~{official[fmt]['total']} ({round(our[fmt] / official[fmt]['total'] * 100, 1)}%)"
+            fmt: f"{our[fmt]} of ~{official[fmt]['total']} ({round(our[fmt] / official[fmt]['total'] * 100, 1)}%); full-ball {full_by_fmt.get(fmt, 0)}"
             for fmt in ("Test", "ODI", "T20")
         },
     }
+
+    event_list = []
+    for name, s in by_event.items():
+        p = s["played"]
+        event_list.append({
+            "name": name,
+            "played": p,
+            "won": s.get("won", 0),
+            "lost": s.get("lost", 0),
+            "draw": s.get("draw", 0),
+            "tied": s.get("tied", 0),
+            "nr": s.get("nr", 0),
+            "win_pct": round(s.get("won", 0) / p * 100, 1) if p else 0,
+            "formats": sorted(s["formats"]),
+            "first": s["first"],
+            "last": s["last"],
+            "match_ids": s["match_ids"][:40],
+        })
+    event_list.sort(key=lambda x: -x["played"])
 
     india_names = set(batters) | set(bowlers)
     pom_list_out = [{"player": p, "awards": c} for p, c in pom.most_common() if p in india_names]
@@ -592,10 +688,11 @@ def main():
         "opponents": opp_list,
         "years": year_list,
         "venues": venue_list[:80],
-        "batting": batting_list[:150],
-        "bowling": bowling_list[:150],
-        "fielding": fielding_list[:80],
-        "pom": pom_list_out[:40],
+        "batting": batting_list[:200],
+        "bowling": bowling_list[:200],
+        "fielding": fielding_list[:100],
+        "pom": pom_list_out[:50],
+        "events": event_list[:200],
         "records": {
             "highest_totals": highest_totals[:40],
             "lowest_totals": lowest_completed[:25],
