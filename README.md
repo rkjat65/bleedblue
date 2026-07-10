@@ -25,11 +25,21 @@ Open **http://127.0.0.1:8765**
 
 Or open the folder with any static server (`npx serve`, VS Code Live Server, etc.).
 
-## GitHub Pages
+## GitHub Pages + custom domain
 
 1. Push this repo (root = site files).
 2. **Settings → Pages → Deploy from branch** → `main` → `/` (root).
-3. Site URL: `https://rkjat65.github.io/bleedblue/`
+3. Custom domain: **`cricket.rkjat.in`** (repo includes a `CNAME` file).
+4. At your DNS for `rkjat.in`, add the same style of record as `crickrida.rkjat.in`:
+
+   | Type | Name / host | Value / target |
+   |------|-------------|----------------|
+   | `CNAME` | `cricket` | `rkjat65.github.io` |
+
+5. In GitHub Pages, wait for DNS to check green, then enable **Enforce HTTPS**.
+
+Default GitHub URL: `https://rkjat65.github.io/bleedblue/`  
+Custom domain: `https://cricket.rkjat.in`
 
 No build step. `index.html` is the entry point.
 
