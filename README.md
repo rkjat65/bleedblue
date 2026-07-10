@@ -78,9 +78,25 @@ Approx coverage vs official (mid-2026): Tests ~96%, ODIs ~74%, T20Is ~full.
 
 Player photos: Wikipedia / Wikimedia Commons (educational display).
 
-## Hash routes
+## SEO & AI discovery
 
-Examples: `#view=official` · `#view=tournaments` · `#view=player&name=Virat%20Kohli` · `#view=match&id=...` · `#view=search&q=...`
+- Clean paths: `/`, `/tournaments`, `/batting`, `/player/Name`, `/match/id`, …
+- Crawlable HTML summary + JSON-LD (SportsTeam, FAQ, WebSite SearchAction)
+- `robots.txt`, `sitemap.xml`, `llms.txt`, `humans.txt`, `site.webmanifest`
+- GitHub Pages SPA fallback via `404.html` for dynamic player/match URLs
+
+### Search Console (do this once)
+
+1. [Google Search Console](https://search.google.com/search-console) → Add property `https://cricket.rkjat.in`
+2. Verify via DNS TXT or HTML file
+3. Submit sitemap: `https://cricket.rkjat.in/sitemap.xml`
+4. Optional: Bing Webmaster Tools → same sitemap
+
+Indexing is not instant (days–weeks). Content quality + links help.
+
+## Routes
+
+Examples: `/` · `/tournaments` · `/player/Virat%20Kohli` · `/match/1496577` · `/search?q=kohli`
 
 ## Credits
 

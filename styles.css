@@ -1266,6 +1266,55 @@ a:hover { text-decoration: underline; }
   .site-footer { padding: 1rem 0.85rem; }
 }
 
+/* SEO bootstrap (crawlable content; hidden after app boots) */
+.seo-bootstrap {
+  max-width: 52rem;
+  padding: 0.5rem 0 2rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+.seo-bootstrap h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+.seo-bootstrap h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--cyan);
+}
+.seo-bootstrap p,
+.seo-bootstrap li {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.45rem;
+}
+.seo-bootstrap ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.seo-bootstrap a {
+  color: var(--cyan);
+}
+.seo-bootstrap.seo-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.seo-disclaimer {
+  margin-top: 1.25rem;
+  font-size: 0.8rem !important;
+  color: var(--text-dim) !important;
+}
+
 /* ═══════════════════════════════════════════════════════════
    SPA upgrade — player, match, series, search, tournaments
    ═══════════════════════════════════════════════════════════ */

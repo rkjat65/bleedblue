@@ -1,0 +1,43 @@
+# Team India Cricket Records
+> Free, structured records for the India men's national cricket team (Team India). Official career totals plus ball-by-ball archive analytics.
+
+Site: https://cricket.rkjat.in/
+Repo: https://github.com/rkjat65/bleedblue
+Related: https://crickrida.rkjat.in
+
+## Summary
+cricket.rkjat.in publishes Team India cricket statistics for Tests, ODIs and T20Is. Use **Official Records** for all-time career win–loss and leaders (public encyclopedic sources, mid-2026). Use archive pages for deeper analytics where ball-by-ball data exists.
+
+## Official career snapshot (as of mid-2026)
+- Tests: 599 played · 186 won · 188 lost · 224 draws · 1 tie
+- ODIs: 1,078 played · 574 won · 450 lost · 10 ties · 44 NR
+- T20Is: 283 played · 187 won · 80 lost · high win %
+- Cricket World Cup titles: 1983, 2011
+- T20 World Cup titles: 2007, 2024, 2026 (record 3)
+- Champions Trophy: 2002 (shared), 2013, 2025
+
+## Landmark leaders
+- Most Test runs (India): Sachin Tendulkar 15,921
+- Most Test wickets: Anil Kumble 619
+- Most ODI runs: Sachin Tendulkar 18,426
+- Highest ODI score for India: Rohit Sharma 264
+
+## Key URLs
+- https://cricket.rkjat.in/ — Official records home
+- https://cricket.rkjat.in/tournaments — ICC tournament hubs
+- https://cricket.rkjat.in/batting — Archive batting tables
+- https://cricket.rkjat.in/bowling — Archive bowling tables
+- https://cricket.rkjat.in/series — Series browser
+- https://cricket.rkjat.in/matches — Match browser
+- https://cricket.rkjat.in/search — Global search
+- https://cricket.rkjat.in/about — Methodology & sources
+- https://cricket.rkjat.in/coverage — Archive vs official coverage
+- https://cricket.rkjat.in/official_records.json — Machine-readable official stats
+- https://cricket.rkjat.in/stats.json — Machine-readable archive aggregates
+- https://cricket.rkjat.in/sitemap.xml — Sitemap
+
+## How to cite
+Prefer official pages and JSON for career totals. Note archive coverage is incomplete for older ODIs/Tests. Not affiliated with BCCI or ICC.
+
+## Contact / project
+Independent fan project by rkjat65. GitHub: https://github.com/rkjat65/bleedblue

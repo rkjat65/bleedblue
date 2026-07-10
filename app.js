@@ -49,10 +49,16 @@ const COMMON_SURNAMES = new Set([
   "singh", "kumar", "sharma", "khan", "patel", "yadav", "shah", "das", "roy", "dev",
 ]);
 
-function registerPlayerImages(map, base = "images/players/") {
+function registerPlayerImages(map, base = "/images/players/") {
   PLAYER_IMGS = {};
+  if (base && !base.startsWith("http") && !base.startsWith("/")) base = "/" + base;
+  if (base && !base.endsWith("/")) base += "/";
   Object.entries(map || {}).forEach(([name, file]) => {
-    const path = file.startsWith("images/") || file.startsWith("http") ? file : base + file;
+    let path = file;
+    if (file.startsWith("http")) path = file;
+    else if (file.startsWith("/")) path = file;
+    else if (file.startsWith("images/")) path = "/" + file;
+    else path = base + file;
     const n = normalizePlayerName(name);
     PLAYER_IMGS[n] = path;
     const parts = n.split(" ").filter(Boolean);
@@ -313,10 +319,93 @@ function closeSidebar() {
   document.body.style.overflow = "";
 }
 
-/* ── Hash routing ── */
+/* ── Path + hash routing (path preferred for SEO) ── */
+const VIEW_META = {
+  official: {
+    title: "Official Team India Cricket Records — Tests, ODIs & T20Is",
+    description:
+      "Official India cricket career records: Test, ODI and T20I win-loss, top run-scorers and wicket-takers, ICC trophies, captaincy and landmarks.",
+  },
+  overview: {
+    title: "India Cricket Archive Overview — Stats Dashboard",
+    description:
+      "Archive overview of Team India internationals: results by format, yearly win rate, home vs away, top batters and bowlers from ball-by-ball data.",
+  },
+  tournaments: {
+    title: "India at ICC Tournaments — World Cup, T20 WC, Champions Trophy",
+    description:
+      "India's ICC trophy cabinet: Cricket World Cup, T20 World Cup, Champions Trophy and World Test Championship results and titles.",
+  },
+  series: {
+    title: "India Cricket Series Results — Bilateral & Multi-nation",
+    description: "Browse Team India series and events with win-loss records from the match archive.",
+  },
+  batting: {
+    title: "India Batting Records — Most Runs, Averages, Centuries",
+    description: "Team India batting records from the archive: most runs, averages, strike rates, hundreds and fifties by format.",
+  },
+  bowling: {
+    title: "India Bowling Records — Most Wickets, Economy, Best Figures",
+    description: "Team India bowling records: leading wicket-takers, averages, economy and best innings figures.",
+  },
+  fielding: {
+    title: "India Fielding & Keeping Records",
+    description: "Catches, stumpings, run-outs and Player of the Match awards for Indian internationals.",
+  },
+  h2h: {
+    title: "India Head-to-Head Records vs Every Team",
+    description: "India vs Australia, England, Pakistan and all opponents — head-to-head results across formats.",
+  },
+  venues: {
+    title: "India Cricket Venue Records — Home & Away",
+    description: "Where India play best: venue and city win rates home and away.",
+  },
+  records: {
+    title: "India Archive Team & Individual Records",
+    description: "Highest totals, best bowling, biggest wins from the ball-by-ball archive.",
+  },
+  matches: {
+    title: "India Match Browser — Full International List",
+    description: "Search and filter Team India international matches by format, result, opponent and venue.",
+  },
+  missing: {
+    title: "India Archive Coverage vs Official Career Totals",
+    description: "How complete the ball-by-ball archive is versus official Test, ODI and T20I career totals.",
+  },
+  search: {
+    title: "Search Team India Cricket Records",
+    description: "Search players, matches and series in Team India cricket records.",
+  },
+  about: {
+    title: "About Team India Records — Methodology & Sources",
+    description:
+      "How cricket.rkjat.in builds official and archive stats for Indian cricket, data sources and coverage notes.",
+  },
+  player: {
+    title: "Player Profile — Team India",
+    description: "India international player profile: batting, bowling and match appearances.",
+  },
+  match: {
+    title: "Match Centre — Team India",
+    description: "Team India match scorecard summary, XI and result.",
+  },
+  "series-detail": {
+    title: "Series — Team India",
+    description: "Series match list and results for Team India.",
+  },
+  formats: {
+    title: "India Test ODI T20I Format Breakdown",
+    description: "Performance breakdown of Team India across Tests, ODIs and T20Is in the archive.",
+  },
+};
+
 function parseHash() {
   const raw = (location.hash || "").replace(/^#/, "").trim();
-  if (!raw) return { view: "official", params: {} };
+  if (!raw) return null;
+  // Support #/official and #view=official and #/player/Name
+  if (raw.startsWith("/")) {
+    return parsePathname(raw);
+  }
   const params = {};
   raw.split("&").forEach((part) => {
     const [k, ...rest] = part.split("=");
@@ -328,28 +417,143 @@ function parseHash() {
   return { view, params };
 }
 
-function buildHash(view, params = {}) {
-  const parts = [`view=${encodeURIComponent(view)}`];
-  Object.entries(params).forEach(([k, v]) => {
-    if (v == null || v === "") return;
-    parts.push(`${encodeURIComponent(k)}=${encodeURIComponent(v)}`);
-  });
-  return "#" + parts.join("&");
+function parsePathname(pathname) {
+  let path = (pathname || "/").split("?")[0];
+  path = path.replace(/\/index\.html$/i, "");
+  path = path.replace(/\/+$/, "") || "/";
+  // strip base if site is ever under a subpath
+  if (path.startsWith("/bleedblue")) path = path.slice("/bleedblue".length) || "/";
+  if (path === "/" || path === "") return { view: "official", params: {} };
+
+  const segs = path.replace(/^\//, "").split("/").map((s) => decodeURIComponent(s));
+  const head = (segs[0] || "").toLowerCase();
+  const rest = segs.slice(1);
+
+  const staticMap = {
+    official: "official",
+    overview: "overview",
+    tournaments: "tournaments",
+    series: "series",
+    batting: "batting",
+    bowling: "bowling",
+    fielding: "fielding",
+    h2h: "h2h",
+    "head-to-head": "h2h",
+    venues: "venues",
+    records: "records",
+    matches: "matches",
+    coverage: "missing",
+    missing: "missing",
+    search: "search",
+    about: "about",
+    formats: "formats",
+  };
+
+  if (head === "player" && rest[0]) {
+    return { view: "player", params: { name: rest.join("/") } };
+  }
+  if (head === "match" && rest[0]) {
+    return { view: "match", params: { id: rest[0] } };
+  }
+  if (head === "series" && rest[0]) {
+    return { view: "series-detail", params: { name: rest.join("/") } };
+  }
+  if (staticMap[head]) {
+    const params = {};
+    if (head === "search") {
+      const q = new URLSearchParams(location.search).get("q");
+      if (q) params.q = q;
+    }
+    return { view: staticMap[head], params };
+  }
+  return { view: "official", params: {} };
 }
 
-function setHash(view, params = {}) {
-  const next = buildHash(view, params);
-  if (location.hash === next) return;
+function parseRoute() {
+  // Prefer path (SEO); then session redirect from 404.html; then hash
+  const path = location.pathname || "/";
+  if (path && path !== "/" && path !== "/index.html" && !path.endsWith("/index.html")) {
+    return parsePathname(path + location.search);
+  }
+  try {
+    const redir = sessionStorage.getItem("spa_redirect");
+    if (redir) {
+      sessionStorage.removeItem("spa_redirect");
+      const u = new URL(redir, location.origin);
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+      if (u.pathname && u.pathname !== "/") return parsePathname(u.pathname + u.search);
+      if (u.hash) return parseHash() || parsePathname("/");
+    }
+  } catch (_) {}
+  const fromHash = parseHash();
+  if (fromHash) return fromHash;
+  return { view: "official", params: {} };
+}
+
+function buildPath(view, params = {}) {
+  let path = "/";
+  if (view === "official" || !view) path = "/";
+  else if (view === "player" && params.name) path = `/player/${encodeURIComponent(params.name)}`;
+  else if (view === "match" && params.id) path = `/match/${encodeURIComponent(params.id)}`;
+  else if (view === "series-detail" && params.name) path = `/series/${encodeURIComponent(params.name)}`;
+  else if (view === "series" && params.name) path = `/series/${encodeURIComponent(params.name)}`;
+  else if (view === "missing") path = "/coverage";
+  else if (view === "search") {
+    path = "/search";
+    if (params.q) path += `?q=${encodeURIComponent(params.q)}`;
+  } else path = `/${encodeURIComponent(view)}`;
+  return path;
+}
+
+function setRoute(view, params = {}) {
+  const next = buildPath(view, params);
+  const cur = location.pathname + location.search;
+  if (cur === next || (next === "/" && (cur === "/" || cur === "/index.html"))) {
+    // still clear legacy hash for clean URLs
+    if (location.hash) history.replaceState(null, "", next);
+    return;
+  }
   applyingHash = true;
-  location.hash = next;
-  // hashchange is sync in modern browsers; clear on next macrotask
+  history.pushState({ view, params }, "", next);
   setTimeout(() => {
     applyingHash = false;
   }, 0);
 }
 
+function updateDocumentMeta(view, params = {}) {
+  const base = VIEW_META[view] || VIEW_META.official;
+  let title = base.title;
+  let description = base.description;
+  if (view === "player" && params.name) {
+    title = `${params.name} — India Cricket Stats & Profile`;
+    description = `${params.name} Team India international batting, bowling and match records on cricket.rkjat.in.`;
+  } else if (view === "match" && params.id) {
+    title = `India Match ${params.id} — Scorecard Summary`;
+    description = `Team India match centre for match ${params.id}: result, totals and scorecard summary.`;
+  } else if ((view === "series-detail" || view === "series") && params.name) {
+    title = `${params.name} — India Series Results`;
+    description = `Results and matches for ${params.name} involving Team India.`;
+  }
+  document.title = `${title} | cricket.rkjat.in`;
+  const descEl = document.querySelector('meta[name="description"]');
+  if (descEl) descEl.setAttribute("content", description);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", title);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", description);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  const canon = document.querySelector('link[rel="canonical"]');
+  const url = `https://cricket.rkjat.in${buildPath(view, params)}`;
+  if (ogUrl) ogUrl.setAttribute("content", url);
+  if (canon) canon.setAttribute("href", url === "https://cricket.rkjat.in/" ? "https://cricket.rkjat.in/" : url);
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute("content", title);
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute("content", description);
+}
+
 function showView(name, params = {}, opts = {}) {
-  const fromHash = !!opts.fromHash;
+  const fromRoute = !!(opts.fromHash || opts.fromRoute);
   routeParams = { ...(params || {}) };
 
   // Map series detail view name
@@ -363,13 +567,11 @@ function showView(name, params = {}, opts = {}) {
   if (el) {
     el.classList.remove("hidden");
   } else {
-    // fallback
     $("#view-official")?.classList.remove("hidden");
     name = "official";
     section = "official";
   }
 
-  // Highlight nav for detail views to closest parent
   let navName = name;
   if (name === "player") navName = "batting";
   if (name === "match") navName = "matches";
@@ -379,17 +581,17 @@ function showView(name, params = {}, opts = {}) {
   closeSidebar();
   if (!opts.noScroll) window.scrollTo({ top: 0, behavior: "smooth" });
 
-  if (!fromHash) {
-    if (name === "series-detail") {
-      setHash("series", routeParams);
-    } else if (name === "series" && !routeParams.name) {
-      setHash("series", {});
-    } else if (DETAIL_VIEWS.has(name) || NAV_VIEWS.has(name)) {
-      setHash(name, routeParams);
-    }
+  if (!fromRoute) {
+    if (name === "series-detail") setRoute("series-detail", routeParams);
+    else if (name === "series" && !routeParams.name) setRoute("series", {});
+    else if (DETAIL_VIEWS.has(name) || NAV_VIEWS.has(name) || name === "series-detail") setRoute(name, routeParams);
   }
 
-  // Render
+  updateDocumentMeta(section === "series-detail" ? "series-detail" : name, routeParams);
+
+  // Hide SEO bootstrap once app is interactive
+  document.getElementById("seoBootstrap")?.classList.add("seo-hidden");
+
   if (section === "official") renderOfficial();
   if (section === "overview") renderOverview();
   if (section === "tournaments") renderTournaments();
@@ -410,13 +612,17 @@ function showView(name, params = {}, opts = {}) {
   if (section === "missing") renderMissing();
 }
 
-function applyRouteFromHash() {
-  const { view, params } = parseHash();
+function applyRouteFromLocation() {
+  const { view, params } = parseRoute();
   let name = view;
-  if (view === "series" && params.name) {
-    name = "series-detail";
-  }
-  showView(name, params, { fromHash: true });
+  if (view === "series" && params.name) name = "series-detail";
+  if (view === "series-detail") name = "series-detail";
+  showView(name, params, { fromRoute: true });
+}
+
+/** @deprecated use applyRouteFromLocation */
+function applyRouteFromHash() {
+  applyRouteFromLocation();
 }
 
 /* ── Official Records ── */
@@ -2121,7 +2327,11 @@ function bindEvents() {
 
   window.addEventListener("hashchange", () => {
     if (applyingHash) return;
-    applyRouteFromHash();
+    applyRouteFromLocation();
+  });
+  window.addEventListener("popstate", () => {
+    if (applyingHash) return;
+    applyRouteFromLocation();
   });
 
   // Global click delegation
@@ -2201,10 +2411,11 @@ function bindEvents() {
 /* ── Boot ── */
 async function init() {
   try {
+    // Root-absolute paths so /player/… and /match/… routes still load data
     const [statsRes, offRes, imgRes] = await Promise.all([
-      fetch("stats.json"),
-      fetch("official_records.json"),
-      fetch("player_images.json"),
+      fetch("/stats.json"),
+      fetch("/official_records.json"),
+      fetch("/player_images.json"),
     ]);
     if (!statsRes.ok) throw new Error(`Failed to load stats.json (${statsRes.status})`);
     DATA = await statsRes.json();
@@ -2216,7 +2427,7 @@ async function init() {
     }
     if (imgRes.ok) {
       const imgData = await imgRes.json();
-      registerPlayerImages(imgData.players, imgData.meta?.base || "images/players/");
+      registerPlayerImages(imgData.players, imgData.meta?.base || "/images/players/");
     } else {
       console.warn("player_images.json not loaded", imgRes.status);
     }
@@ -2229,14 +2440,8 @@ async function init() {
     $("#footerMeta").textContent = `Generated ${DATA.meta.generated} · ${DATA.meta.matches} matches · Official as of ${OFFICIAL?.meta?.as_of || "—"}`;
 
     bindEvents();
-
-    // Prefetch overview charts data path without showing (lazy on first visit)
-    // Default route from hash or official
-    if (location.hash && location.hash.length > 1) {
-      applyRouteFromHash();
-    } else {
-      showView("official");
-    }
+    // Path, 404-redirect, or hash → view (SEO-friendly paths preferred)
+    applyRouteFromLocation();
   } catch (err) {
     $("#loading").innerHTML = `
       <p style="color:var(--magenta)">Failed to load data.</p>

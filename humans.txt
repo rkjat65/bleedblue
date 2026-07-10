@@ -1,0 +1,16 @@
+/* TEAM */
+Site: cricket.rkjat.in
+Project: Bleed Blue — Team India cricket records
+GitHub: https://github.com/rkjat65/bleedblue
+Related: https://crickrida.rkjat.in
+
+/* THANKS */
+Cricsheet.org — ball-by-ball data
+Wikipedia / ESPNcricinfo — public career totals (cited on site)
+Design inspiration: Crickrida
+
+/* SITE */
+Standards: HTML5, CSS3, JSON-LD, llms.txt
+Components: Chart.js
+Hosting: GitHub Pages
+Language: English

@@ -2,7 +2,7 @@
   "meta": {
     "source": "Wikipedia page images (Wikimedia Commons where available)",
     "note": "Photos used for educational/local dashboard display. Credit Wikipedia/Wikimedia contributors.",
-    "base": "images/players/"
+    "base": "/images/players/"
   },
   "players": {
     "Sachin Tendulkar": "sachin-tendulkar.jpg",
