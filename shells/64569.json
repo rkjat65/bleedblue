@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64569",
+  "espn_league_id": "16032",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Margao",
+  "dates": [
+   "1997-12-28"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1997/98",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Krishna Hariharan",
+    "Raman Sharma"
+   ],
+   "match_referees": [
+    "Ahmed Ebrahim"
+   ],
+   "tv_umpires": [
+    "R Nagarajan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ajay Jadeja",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Navjot Sidhu",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Sairaj Bahutule",
+    "Javagal Srinath",
+    "Rajesh Chauhan",
+    "Debasis Mohanty"
+   ],
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Marvan Atapattu",
+    "Roshan Mahanama",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Romesh Kaluwitharana",
+    "Kumar Dharmasena",
+    "Hashan Tillakaratne",
+    "Chaminda Vaas",
+    "Muthiah Muralidaran",
+    "Sajeewa de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ajay Jadeja": "29632",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Navjot Sidhu": "34028",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Sairaj Bahutule": "26815",
+    "Javagal Srinath": "34105",
+    "Rajesh Chauhan": "27622",
+    "Debasis Mohanty": "31025",
+    "Sanath Jayasuriya": "49209",
+    "Marvan Atapattu": "48124",
+    "Roshan Mahanama": "49626",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Romesh Kaluwitharana": "49361",
+    "Kumar Dharmasena": "48469",
+    "Hashan Tillakaratne": "50744",
+    "Chaminda Vaas": "50804",
+    "Muthiah Muralidaran": "49636",
+    "Sajeewa de Silva": "48460"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Nehru Stadium, Fatorda, Margao",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 228,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 290,
+    "description": "target reached"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 229,
+    "wickets": 5,
+    "balls": 290,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

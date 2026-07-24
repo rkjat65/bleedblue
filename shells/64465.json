@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64465",
+  "espn_league_id": "16352",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Christchurch",
+  "dates": [
+   "1994-04-01"
+  ],
+  "event": {
+   "name": "India in New Zealand ODI Series 1993/94",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Brian Aldridge",
+    "Doug Cowie"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Dave Quested"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Bryan Young",
+    "Chris Harris",
+    "Ken Rutherford",
+    "Stephen Fleming",
+    "Shane Thomson",
+    "Adam Parore",
+    "Dion Nash",
+    "Gavin Larsen",
+    "Matthew Hart",
+    "Danny Morrison",
+    "Chris Pringle"
+   ],
+   "India": [
+    "Ajay Jadeja",
+    "Sachin Tendulkar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Salil Ankola",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bryan Young": "38929",
+    "Chris Harris": "37232",
+    "Ken Rutherford": "38258",
+    "Stephen Fleming": "37000",
+    "Shane Thomson": "38613",
+    "Adam Parore": "38117",
+    "Dion Nash": "38008",
+    "Gavin Larsen": "37601",
+    "Matthew Hart": "37237",
+    "Danny Morrison": "37730",
+    "Chris Pringle": "38133",
+    "Ajay Jadeja": "29632",
+    "Sachin Tendulkar": "35320",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Salil Ankola": "26257",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "AMI Stadium, Christchurch",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 223,
+    "wickets": 4,
+    "balls": 299,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 222,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 299,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

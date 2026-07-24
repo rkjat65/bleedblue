@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66395",
+  "espn_league_id": "16894"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jammu",
+  "dates": [
+   "1988-12-19"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1984/85",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [],
+   "New Zealand": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "1988",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Molana Azad Stadium, Jammu",
+  "overs": 50
+ },
+ "innings": []
+}

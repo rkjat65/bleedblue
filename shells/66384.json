@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66384",
+  "espn_league_id": "16894",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "2004-11-13"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1984/85"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Krishna Hariharan",
+    "Simon Taufel"
+   ],
+   "match_referees": [
+    "Clive Lloyd"
+   ],
+   "tv_umpires": [
+    "Ivaturi Shivram"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Virender Sehwag",
+    "Sachin Tendulkar",
+    "VVS Laxman",
+    "Sourav Ganguly",
+    "Rahul Dravid",
+    "Yuvraj Singh",
+    "Mohammad Kaif",
+    "Irfan Pathan",
+    "Harbhajan Singh",
+    "Zaheer Khan",
+    "Ashish Nehra"
+   ],
+   "Pakistan": [
+    "Salman Butt",
+    "Younis Khan",
+    "Shoaib Malik",
+    "Inzamam-ul-Haq",
+    "Mohammad Yousuf",
+    "Abdul Razzaq",
+    "Shahid Afridi",
+    "Kamran Akmal",
+    "Naved-ul-Hasan",
+    "Mohammad Sami",
+    "Shoaib Akhtar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Virender Sehwag": "35263",
+    "Sachin Tendulkar": "35320",
+    "VVS Laxman": "30750",
+    "Sourav Ganguly": "28779",
+    "Rahul Dravid": "28114",
+    "Yuvraj Singh": "36084",
+    "Mohammad Kaif": "29990",
+    "Irfan Pathan": "32685",
+    "Harbhajan Singh": "29264",
+    "Zaheer Khan": "30102",
+    "Ashish Nehra": "31820",
+    "Salman Butt": "42683",
+    "Younis Khan": "43652",
+    "Shoaib Malik": "42657",
+    "Inzamam-ul-Haq": "40570",
+    "Mohammad Yousuf": "43650",
+    "Abdul Razzaq": "39836",
+    "Shahid Afridi": "42639",
+    "Kamran Akmal": "41028",
+    "Naved-ul-Hasan": "42272",
+    "Mohammad Sami": "41324",
+    "Shoaib Akhtar": "42655"
+   }
+  },
+  "season": "2004",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 292,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 294,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 293,
+    "wickets": 4,
+    "balls": 294,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

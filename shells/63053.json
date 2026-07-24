@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63053",
+  "espn_league_id": "17273",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1969-11-28"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1969/70",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "I Gopalakrishnan",
+    "Samar Roy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Farokh Engineer",
+    "Ashok Mankad",
+    "Ajit Wadekar",
+    "Gundappa Viswanath",
+    "Srinivas Venkataraghavan",
+    "Mansur Ali Khan Pataudi",
+    "Ambar Roy",
+    "Eknath Solkar",
+    "Subrata Guha",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ],
+   "Australia": [
+    "Keith Stackpole",
+    "Bill Lawry",
+    "Ian Chappell",
+    "Doug Walters",
+    "Ian Redpath",
+    "Paul Sheahan",
+    "Brian Taber",
+    "Ashley Mallett",
+    "Graham McKenzie",
+    "John Gleeson",
+    "Alan Connolly"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Farokh Engineer": "28624",
+    "Ashok Mankad": "30938",
+    "Ajit Wadekar": "35933",
+    "Gundappa Viswanath": "35712",
+    "Srinivas Venkataraghavan": "35656",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Ambar Roy": "33182",
+    "Eknath Solkar": "34085",
+    "Subrata Guha": "28864",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Keith Stackpole": "7666",
+    "Bill Lawry": "6270",
+    "Ian Chappell": "4560",
+    "Doug Walters": "8151",
+    "Ian Redpath": "7314",
+    "Paul Sheahan": "7597",
+    "Brian Taber": "7912",
+    "Ashley Mallett": "6472",
+    "Graham McKenzie": "6576",
+    "John Gleeson": "5398",
+    "Alan Connolly": "4613"
+   }
+  },
+  "season": "1969",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 718,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 223,
+    "wickets": 10,
+    "balls": 651,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 350,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 181,
+    "wickets": 3,
+    "balls": 484,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 296,
+    "wickets": 10,
+    "balls": 718,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 651,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 107,
+    "wickets": 10,
+    "balls": 350,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 484,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

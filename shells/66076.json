@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66076",
+  "espn_league_id": "16148"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Benoni",
+  "dates": [
+   "1997-02-09"
+  ],
+  "event": {
+   "name": "Australia tour of India 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Danzel Becker",
+    "Wilf Diedricks"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Barry Lambson"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Rahul Dravid",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Javagal Srinath",
+    "Sunil Joshi",
+    "Anil Kumble",
+    "Venkatesh Prasad"
+   ],
+   "Zimbabwe": [
+    "Grant Flower",
+    "Stuart Carlisle",
+    "Alistair Campbell",
+    "Guy Whittall",
+    "Andy Flower",
+    "Dave Houghton",
+    "Craig Evans",
+    "Paul Strang",
+    "Heath Streak",
+    "Eddo Brandes",
+    "John Rennie"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Rahul Dravid": "28114",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Javagal Srinath": "34105",
+    "Sunil Joshi": "29725",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Grant Flower": "55429",
+    "Stuart Carlisle": "55307",
+    "Alistair Campbell": "55301",
+    "Guy Whittall": "55848",
+    "Andy Flower": "55427",
+    "Dave Houghton": "55497",
+    "Craig Evans": "55408",
+    "Paul Strang": "55758",
+    "Heath Streak": "55761",
+    "Eddo Brandes": "55267",
+    "John Rennie": "55714"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Willowmoore Park, Benoni",
+  "overs": 50
+ },
+ "innings": []
+}

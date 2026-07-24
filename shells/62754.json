@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62754",
+  "espn_league_id": "17452",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Georgetown",
+  "dates": [
+   "1953-03-11"
+  ],
+  "event": {
+   "name": "India in West Indies Test Series 1952/53",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Wing Gillette",
+    "Toby Rollox"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Bruce Pairaudeau",
+    "Jeffrey Stollmeyer",
+    "Frank Worrell",
+    "Everton Weekes",
+    "Clyde Walcott",
+    "Leslie Wight",
+    "Ralph Legall",
+    "Roy Miller",
+    "Frank King",
+    "Sonny Ramadhin",
+    "Alf Valentine"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Madhav Apte",
+    "Gulabrai Ramchand",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Vijay Hazare",
+    "Vinoo Mankad",
+    "Dattu Phadkar",
+    "Chandrasekhar Gadkari",
+    "Nana Joshi",
+    "Subhash Gupte"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bruce Pairaudeau": "52669",
+    "Jeffrey Stollmeyer": "52953",
+    "Frank Worrell": "53238",
+    "Everton Weekes": "53241",
+    "Clyde Walcott": "53211",
+    "Leslie Wight": "53225",
+    "Ralph Legall": "52341",
+    "Roy Miller": "52537",
+    "Frank King": "52291",
+    "Sonny Ramadhin": "52804",
+    "Alf Valentine": "53196",
+    "Pankaj Roy": "33186",
+    "Madhav Apte": "26269",
+    "Gulabrai Ramchand": "33062",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Vijay Hazare": "29290",
+    "Vinoo Mankad": "30939",
+    "Dattu Phadkar": "32309",
+    "Chandrasekhar Gadkari": "28751",
+    "Nana Joshi": "29721",
+    "Subhash Gupte": "28880"
+   }
+  },
+  "season": "1953",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Bourda, Georgetown, Guyana",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 749,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 364,
+    "wickets": 10,
+    "balls": 938,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 588,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 262,
+    "wickets": 10,
+    "balls": 749,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 938,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 190,
+    "wickets": 5,
+    "balls": 588,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

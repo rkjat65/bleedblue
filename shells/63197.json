@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63197",
+  "espn_league_id": "17139",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Melbourne",
+  "dates": [
+   "1977-12-30"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1977/78",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dick French",
+    "Max O'Connell"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "John Dyson",
+    "Gary Cosier",
+    "David Ogilvie",
+    "Craig Serjeant",
+    "Bob Simpson",
+    "Peter Toohey",
+    "Tony Mann",
+    "Steve Rixon",
+    "Wayne Clark",
+    "Jeff Thomson",
+    "Sam Gannon"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Dilip Vengsarkar",
+    "Ashok Mankad",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Dyson": "5001",
+    "Gary Cosier": "4629",
+    "David Ogilvie": "6996",
+    "Craig Serjeant": "7594",
+    "Bob Simpson": "7619",
+    "Peter Toohey": "7959",
+    "Tony Mann": "6477",
+    "Steve Rixon": "7360",
+    "Wayne Clark": "4584",
+    "Jeff Thomson": "7946",
+    "Sam Gannon": "5358",
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Mankad": "30938",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1977",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Melbourne Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 416,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 213,
+    "wickets": 10,
+    "balls": 301,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 535,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 164,
+    "wickets": 10,
+    "balls": 307,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 256,
+    "wickets": 10,
+    "balls": 416,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 301,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 343,
+    "wickets": 10,
+    "balls": 535,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 307,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

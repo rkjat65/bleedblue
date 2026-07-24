@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65149",
+  "espn_league_id": "16523",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Adelaide",
+  "dates": [
+   "1992-03-15"
+  ],
+  "event": {
+   "name": "India tour of Australia 1991/92"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Dooland Buultjens",
+    "Khizer Hayat"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Kapil Dev",
+    "Vinod Kambli",
+    "Pravin Amre",
+    "Javagal Srinath",
+    "Kiran More",
+    "Manoj Prabhakar",
+    "Venkatapathy Raju"
+   ],
+   "South Africa": [
+    "Andrew Hudson",
+    "Peter Kirsten",
+    "Adrian Kuiper",
+    "Jonty Rhodes",
+    "Kepler Wessels",
+    "Hansie Cronje",
+    "Brian McMillan",
+    "David Richardson",
+    "Richard Snell",
+    "Meyrick Pringle",
+    "Allan Donald"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Kapil Dev": "30028",
+    "Vinod Kambli": "30009",
+    "Pravin Amre": "26238",
+    "Javagal Srinath": "34105",
+    "Kiran More": "31038",
+    "Manoj Prabhakar": "32323",
+    "Venkatapathy Raju": "33044",
+    "Andrew Hudson": "45458",
+    "Peter Kirsten": "45815",
+    "Adrian Kuiper": "45840",
+    "Jonty Rhodes": "46973",
+    "Kepler Wessels": "47884",
+    "Hansie Cronje": "44485",
+    "Brian McMillan": "46214",
+    "David Richardson": "46978",
+    "Richard Snell": "47215",
+    "Meyrick Pringle": "46790",
+    "Allan Donald": "44716"
+   }
+  },
+  "season": "1992",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Adelaide Oval",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 180,
+    "wickets": 6,
+    "balls": 180,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 175,
+    "description": "target reached"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 180,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 181,
+    "wickets": 4,
+    "balls": 175,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

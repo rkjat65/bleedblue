@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64219",
+  "espn_league_id": "16936"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Indore",
+  "dates": [
+   "1983-12-01"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1983/84",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "MY Gupte",
+    "RV Ramani"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Arun Lal",
+    "Ashok Malhotra",
+    "Kapil Dev",
+    "Roger Binny",
+    "Ravi Shastri",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Balwinder Sandhu"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Viv Richards",
+    "Clive Lloyd",
+    "Larry Gomes",
+    "Jeff Dujon",
+    "Eldine Baptiste",
+    "Roger Harper",
+    "Malcolm Marshall",
+    "Andy Roberts",
+    "Michael Holding"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Arun Lal": "26295",
+    "Ashok Malhotra": "30912",
+    "Kapil Dev": "30028",
+    "Roger Binny": "26948",
+    "Ravi Shastri": "33975",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Balwinder Sandhu": "33816",
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Viv Richards": "52812",
+    "Clive Lloyd": "52345",
+    "Larry Gomes": "51891",
+    "Jeff Dujon": "51657",
+    "Eldine Baptiste": "51211",
+    "Roger Harper": "52045",
+    "Malcolm Marshall": "52419",
+    "Andy Roberts": "52817",
+    "Michael Holding": "52063"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Nehru Stadium, Indore",
+  "overs": 50
+ },
+ "innings": []
+}

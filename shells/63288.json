@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63288",
+  "espn_league_id": "17041"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Auckland",
+  "dates": [
+   "1981-03-12"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1980/81",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Fred Goodall",
+    "Steve Woodward"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "John Wright",
+    "Bruce Edgar",
+    "John Reid",
+    "Geoff Howarth",
+    "Jeremy Coney",
+    "Jock Edwards",
+    "Richard Hadlee",
+    "Lance Cairns",
+    "Ian Smith",
+    "John Bracewell",
+    "Martin Snedden"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Sandeep Patil",
+    "Gundappa Viswanath",
+    "Tirumalai Srinivasan",
+    "Ravi Shastri",
+    "Syed Kirmani",
+    "Kapil Dev",
+    "Shivlal Yadav",
+    "Dilip Doshi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Wright": "38757",
+    "Bruce Edgar": "36951",
+    "John Reid": "38246",
+    "Geoff Howarth": "37254",
+    "Jeremy Coney": "36609",
+    "Jock Edwards": "36952",
+    "Richard Hadlee": "37224",
+    "Lance Cairns": "36595",
+    "Ian Smith": "38396",
+    "John Bracewell": "36306",
+    "Martin Snedden": "38398",
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Sandeep Patil": "32283",
+    "Gundappa Viswanath": "35712",
+    "Tirumalai Srinivasan": "34109",
+    "Ravi Shastri": "33975",
+    "Syed Kirmani": "30116",
+    "Kapil Dev": "30028",
+    "Shivlal Yadav": "36064",
+    "Dilip Doshi": "28107"
+   }
+  },
+  "season": "1981",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Eden Park, Auckland"
+ },
+ "innings": []
+}

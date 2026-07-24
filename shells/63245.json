@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63245",
+  "espn_league_id": "17070",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1979-10-26"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1979/80",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "SN Hanumantha Rao",
+    "Swaroop Kishen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Yashpal Sharma",
+    "Bobjee Narasimha Rao",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Shivlal Yadav",
+    "Dilip Doshi"
+   ],
+   "Australia": [
+    "Andrew Hilditch",
+    "Graham Yallop",
+    "Allan Border",
+    "Kim Hughes",
+    "Dav Whatmore",
+    "Rick Darling",
+    "Bruce Yardley",
+    "Kevin Wright",
+    "Geoff Dymock",
+    "Rodney Hogg",
+    "Jim Higgs"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Yashpal Sharma": "36075",
+    "Bobjee Narasimha Rao": "31795",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Shivlal Yadav": "36064",
+    "Dilip Doshi": "28107",
+    "Andrew Hilditch": "5656",
+    "Graham Yallop": "8448",
+    "Allan Border": "4174",
+    "Kim Hughes": "5724",
+    "Dav Whatmore": "8210",
+    "Rick Darling": "4900",
+    "Bruce Yardley": "8449",
+    "Kevin Wright": "8264",
+    "Geoff Dymock": "4999",
+    "Rodney Hogg": "5685",
+    "Jim Higgs": "5652"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 918,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 347,
+    "wickets": 10,
+    "balls": 754,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 345,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 200,
+    "wickets": 4,
+    "balls": 380,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 442,
+    "wickets": 10,
+    "balls": 918,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 754,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 151,
+    "wickets": 6,
+    "balls": 345,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 380,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

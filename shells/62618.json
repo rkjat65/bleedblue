@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62618",
+  "espn_league_id": "17569",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1934-02-10"
+  ],
+  "event": {
+   "name": "England in India Test Series 1933/34",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "John Higgins",
+    "Bill Hitch"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Dilawar Hussain",
+    "Naoomal Jeoomal",
+    "Syed Wazir Ali",
+    "C.K.Nayudu",
+    "Lala Amarnath",
+    "Vijay Merchant",
+    "Yuvraj of Patiala",
+    "Nazir Ali",
+    "C.S. Nayudu",
+    "Mushtaq Ali",
+    "Amar Singh"
+   ],
+   "England": [
+    "Fred Bakewell",
+    "Cyril Walters",
+    "Arthur Mitchell",
+    "James Langridge",
+    "Douglas Jardine",
+    "Charlie Barnett",
+    "Stan Nichols",
+    "Leslie Townsend",
+    "Hedley Verity",
+    "Harry Elliott",
+    "Nobby Clark"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dilawar Hussain": "28092",
+    "Naoomal Jeoomal": "31939",
+    "Syed Wazir Ali": "35940",
+    "C.K.Nayudu": "31811",
+    "Lala Amarnath": "26223",
+    "Vijay Merchant": "30996",
+    "Yuvraj of Patiala": "32278",
+    "Nazir Ali": "31816",
+    "C.S. Nayudu": "31813",
+    "Mushtaq Ali": "31061",
+    "Amar Singh": "26228",
+    "Fred Bakewell": "8960",
+    "Cyril Walters": "22283",
+    "Arthur Mitchell": "17045",
+    "James Langridge": "16195",
+    "Douglas Jardine": "15481",
+    "Charlie Barnett": "9000",
+    "Stan Nichols": "18021",
+    "Leslie Townsend": "21568",
+    "Hedley Verity": "22185",
+    "Harry Elliott": "12504",
+    "Nobby Clark": "10739"
+   }
+  },
+  "season": "1934",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 790,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 145,
+    "wickets": 9,
+    "balls": 359,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 455,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 249,
+    "wickets": 9,
+    "balls": 416,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 335,
+    "wickets": 10,
+    "balls": 790,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 359,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 261,
+    "wickets": 7,
+    "balls": 455,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 416,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

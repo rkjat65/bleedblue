@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1384638",
+  "espn_league_id": "21543"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dublin",
+  "dates": [
+   "2023-08-23"
+  ],
+  "event": {
+   "name": "India in Ireland T20I Series 2023",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Jareth McCready",
+    "Paul Reynolds"
+   ],
+   "match_referees": [
+    "Graham McCrea"
+   ],
+   "tv_umpires": [
+    "Roly Black"
+   ],
+   "reserve_umpires": [
+    "Mark Hawthorne"
+   ]
+  },
+  "outcome": {
+   "winner": "Ireland"
+  },
+  "players": {
+   "Ireland": [
+    "Ross Adair",
+    "Mark Adair",
+    "Andy Balbirnie",
+    "Curtis Campher",
+    "Gareth Delany",
+    "George Dockrell",
+    "Fionn Hand",
+    "Josh Little",
+    "Barry McCarthy",
+    "Paul Stirling",
+    "Harry Tector",
+    "Lorcan Tucker",
+    "Theo van Woerkom",
+    "Ben White",
+    "Craig Young"
+   ],
+   "India": [
+    "Arshdeep Singh",
+    "Avesh Khan",
+    "Jasprit Bumrah",
+    "Shivam Dube",
+    "Ruturaj Gaikwad",
+    "Yashasvi Jaiswal",
+    "Mukesh Kumar",
+    "Prasidh Krishna",
+    "Ravi Bishnoi",
+    "Shahbaz Ahmed",
+    "Sanju Samson",
+    "Jitesh Sharma",
+    "Rinku Singh",
+    "Tilak Varma",
+    "Washington Sundar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ross Adair": "468573",
+    "Mark Adair": "526441",
+    "Andy Balbirnie": "303423",
+    "Curtis Campher": "595921",
+    "Gareth Delany": "1099379",
+    "George Dockrell": "348034",
+    "Fionn Hand": "1099225",
+    "Josh Little": "928067",
+    "Barry McCarthy": "348059",
+    "Paul Stirling": "303427",
+    "Harry Tector": "961407",
+    "Lorcan Tucker": "928057",
+    "Theo van Woerkom": "547760",
+    "Ben White": "928059",
+    "Craig Young": "364343",
+    "Arshdeep Singh": "1125976",
+    "Avesh Khan": "694211",
+    "Jasprit Bumrah": "625383",
+    "Shivam Dube": "714451",
+    "Ruturaj Gaikwad": "1060380",
+    "Yashasvi Jaiswal": "1151278",
+    "Mukesh Kumar": "926851",
+    "Prasidh Krishna": "917159",
+    "Ravi Bishnoi": "1175441",
+    "Shahbaz Ahmed": "1159711",
+    "Sanju Samson": "425943",
+    "Jitesh Sharma": "721867",
+    "Rinku Singh": "723105",
+    "Tilak Varma": "1170265",
+    "Washington Sundar": "719715"
+   }
+  },
+  "season": "2023",
+  "team_type": "international",
+  "teams": [
+   "Ireland",
+   "India"
+  ],
+  "venue": "The Village, Malahide, Dublin",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "Ireland",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

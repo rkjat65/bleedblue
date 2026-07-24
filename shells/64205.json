@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64205",
+  "espn_league_id": "16968",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1983-03-09"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1982/83",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "David Narine",
+    "Andrew Weekes"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Viv Richards",
+    "Gus Logie",
+    "Clive Lloyd",
+    "Larry Gomes",
+    "Jeff Dujon",
+    "Malcolm Marshall",
+    "Andy Roberts",
+    "Michael Holding",
+    "Joel Garner"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Ashok Malhotra",
+    "Syed Kirmani",
+    "Madan Lal",
+    "Maninder Singh",
+    "Srinivas Venkataraghavan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Viv Richards": "52812",
+    "Gus Logie": "52347",
+    "Clive Lloyd": "52345",
+    "Larry Gomes": "51891",
+    "Jeff Dujon": "51657",
+    "Malcolm Marshall": "52419",
+    "Andy Roberts": "52817",
+    "Michael Holding": "52063",
+    "Joel Garner": "51876",
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Ashok Malhotra": "30912",
+    "Syed Kirmani": "30116",
+    "Madan Lal": "30873",
+    "Maninder Singh": "30923",
+    "Srinivas Venkataraghavan": "35656"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 215,
+    "wickets": 4,
+    "balls": 233,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 234,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 233,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 163,
+    "wickets": 7,
+    "balls": 234,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

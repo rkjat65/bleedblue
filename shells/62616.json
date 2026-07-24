@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62616",
+  "espn_league_id": "17568",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1933-12-15"
+  ],
+  "event": {
+   "name": "England tour of India 1933/34",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bill Hitch",
+    "Frank Tarrant"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Syed Wazir Ali",
+    "Janardan Navle",
+    "Lala Amarnath",
+    "C.K.Nayudu",
+    "Laxmidas Jai",
+    "Vijay Merchant",
+    "Sorabji Colah",
+    "Amar Singh",
+    "Mohammad Nissar",
+    "Ladha Ramji",
+    "Rustomji Jamshedji"
+   ],
+   "England": [
+    "Arthur Mitchell",
+    "Cyril Walters",
+    "Charlie Barnett",
+    "James Langridge",
+    "Douglas Jardine",
+    "Bryan Valentine",
+    "Leslie Townsend",
+    "Stan Nichols",
+    "Hedley Verity",
+    "Harry Elliott",
+    "Nobby Clark"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Syed Wazir Ali": "35940",
+    "Janardan Navle": "31806",
+    "Lala Amarnath": "26223",
+    "C.K.Nayudu": "31811",
+    "Laxmidas Jai": "29667",
+    "Vijay Merchant": "30996",
+    "Sorabji Colah": "27665",
+    "Amar Singh": "26228",
+    "Mohammad Nissar": "31791",
+    "Ladha Ramji": "33068",
+    "Rustomji Jamshedji": "29674",
+    "Arthur Mitchell": "17045",
+    "Cyril Walters": "22283",
+    "Charlie Barnett": "9000",
+    "James Langridge": "16195",
+    "Douglas Jardine": "15481",
+    "Bryan Valentine": "22173",
+    "Leslie Townsend": "21568",
+    "Stan Nichols": "18021",
+    "Hedley Verity": "22185",
+    "Harry Elliott": "12504",
+    "Nobby Clark": "10739"
+   }
+  },
+  "season": "1933",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Gymkhana Ground, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 219,
+    "wickets": 10,
+    "balls": 548,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 821,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 258,
+    "wickets": 10,
+    "balls": 545,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 44,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 548,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 438,
+    "wickets": 10,
+    "balls": 821,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 545,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 40,
+    "wickets": 1,
+    "balls": 44,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

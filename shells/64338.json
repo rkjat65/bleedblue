@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64338",
+  "espn_league_id": "16628",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bridgetown",
+  "dates": [
+   "1989-03-07"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1989/90",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "David Archer",
+    "Lloyd Barker"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Keith Arthurton",
+    "Viv Richards",
+    "Gus Logie",
+    "Jeff Dujon",
+    "Eldine Baptiste",
+    "Curtly Ambrose",
+    "Ian Bishop",
+    "Courtney Walsh"
+   ],
+   "India": [
+    "Ravi Shastri",
+    "Kris Srikkanth",
+    "Navjot Sidhu",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Ajay Sharma",
+    "Kiran More",
+    "Sanjeev Sharma",
+    "Arshad Ayub",
+    "Chetan Sharma"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Keith Arthurton": "51110",
+    "Viv Richards": "52812",
+    "Gus Logie": "52347",
+    "Jeff Dujon": "51657",
+    "Eldine Baptiste": "51211",
+    "Curtly Ambrose": "51107",
+    "Ian Bishop": "51226",
+    "Courtney Walsh": "53216",
+    "Ravi Shastri": "33975",
+    "Kris Srikkanth": "34103",
+    "Navjot Sidhu": "34028",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Ajay Sharma": "33943",
+    "Kiran More": "31038",
+    "Sanjeev Sharma": "33963",
+    "Arshad Ayub": "26290",
+    "Chetan Sharma": "33949"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Kensington Oval, Bridgetown, Barbados",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 248,
+    "wickets": 4,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 198,
+    "wickets": 8,
+    "balls": 288,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62678",
+  "espn_league_id": "17507",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Melbourne",
+  "dates": [
+   "1948-01-01"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1947/48",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Andrew Barlow",
+    "Herb Elphinstone"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Sid Barnes",
+    "Arthur Morris",
+    "Donald Bradman",
+    "Lindsay Hassett",
+    "Keith Miller",
+    "Ron Hamence",
+    "Ray Lindwall",
+    "Don Tallon",
+    "Bruce Dooland",
+    "Ian Johnson",
+    "Bill Johnston"
+   ],
+   "India": [
+    "Vinoo Mankad",
+    "Chandu Sarwate",
+    "Gul Mohammad",
+    "Vijay Hazare",
+    "Lala Amarnath",
+    "Dattu Phadkar",
+    "Hemu Adhikari",
+    "Kanwar Rai Singh",
+    "Khandu Rangnekar",
+    "Khokhan Sen",
+    "C.S. Nayudu"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sid Barnes": "4098",
+    "Arthur Morris": "6644",
+    "Donald Bradman": "4188",
+    "Lindsay Hassett": "5607",
+    "Keith Miller": "6612",
+    "Ron Hamence": "5565",
+    "Ray Lindwall": "6299",
+    "Don Tallon": "7913",
+    "Bruce Dooland": "4971",
+    "Ian Johnson": "6100",
+    "Bill Johnston": "6041",
+    "Vinoo Mankad": "30939",
+    "Chandu Sarwate": "33859",
+    "Gul Mohammad": "40329",
+    "Vijay Hazare": "29290",
+    "Lala Amarnath": "26223",
+    "Dattu Phadkar": "32309",
+    "Hemu Adhikari": "26179",
+    "Kanwar Rai Singh": "33009",
+    "Khandu Rangnekar": "33091",
+    "Khokhan Sen": "34741",
+    "C.S. Nayudu": "31813"
+   }
+  },
+  "season": "1948",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Melbourne Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 394,
+    "wickets": 10,
+    "balls": 565,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 414,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 255,
+    "wickets": 4,
+    "balls": 390,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 157,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 565,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 291,
+    "wickets": 9,
+    "balls": 414,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 390,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 125,
+    "wickets": 10,
+    "balls": 157,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

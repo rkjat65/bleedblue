@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62805",
+  "espn_league_id": "17422",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1955-12-28"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1955/56",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "DD Desai",
+    "Santosh Ganguli"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "Nari Contractor",
+    "Pankaj Roy",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Gulabrai Ramchand",
+    "Jayasinghrao Ghorpade",
+    "Dattu Phadkar",
+    "Chandrakant Patankar",
+    "Gundibail Sunderam",
+    "Subhash Gupte"
+   ],
+   "New Zealand": [
+    "Gordon Leggat",
+    "Bert Sutcliffe",
+    "John Guy",
+    "John Reid",
+    "Noel McGregor",
+    "Tony MacGibbon",
+    "Noel Harford",
+    "Harry Cave",
+    "Jack Alabaster",
+    "Johnny Hayes",
+    "Trevor McMahon"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "Nari Contractor": "27667",
+    "Pankaj Roy": "33186",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Gulabrai Ramchand": "33062",
+    "Jayasinghrao Ghorpade": "28814",
+    "Dattu Phadkar": "32309",
+    "Chandrakant Patankar": "32220",
+    "Gundibail Sunderam": "34154",
+    "Subhash Gupte": "28880",
+    "Gordon Leggat": "37607",
+    "Bert Sutcliffe": "38413",
+    "John Guy": "37107",
+    "John Reid": "38248",
+    "Noel McGregor": "37705",
+    "Tony MacGibbon": "37694",
+    "Noel Harford": "37229",
+    "Harry Cave": "36600",
+    "Jack Alabaster": "36175",
+    "Johnny Hayes": "37244",
+    "Trevor McMahon": "37710"
+   }
+  },
+  "season": "1955",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 132,
+    "wickets": 10,
+    "balls": 357,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 875,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 438,
+    "wickets": 7,
+    "balls": 1254,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 204,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 357,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 336,
+    "wickets": 10,
+    "balls": 875,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1254,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 75,
+    "wickets": 6,
+    "balls": 204,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

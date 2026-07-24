@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64361",
+  "espn_league_id": "16564",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1990-12-01"
+  ],
+  "event": {
+   "name": "Sri Lanka in India ODI Series 1990/91",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Subrata Banerjee",
+    "Shyam Bansal"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Navjot Sidhu",
+    "Ravi Shastri",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Kapil Dev",
+    "Vivek Razdan",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Arshad Ayub",
+    "Anil Kumble"
+   ],
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Athula Samarasekera",
+    "Asanka Gurusinha",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Rumesh Ratnayake",
+    "Graeme Labrooy",
+    "Marvan Atapattu",
+    "Ranjith Madurasinghe",
+    "Kapila Wijegunawardene"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Navjot Sidhu": "34028",
+    "Ravi Shastri": "33975",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Kapil Dev": "30028",
+    "Vivek Razdan": "33151",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Anil Kumble": "30176",
+    "Roshan Mahanama": "49626",
+    "Athula Samarasekera": "50421",
+    "Asanka Gurusinha": "49005",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Rumesh Ratnayake": "50249",
+    "Graeme Labrooy": "49552",
+    "Marvan Atapattu": "48124",
+    "Ranjith Madurasinghe": "49624",
+    "Kapila Wijegunawardene": "50852"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 245,
+    "wickets": 5,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 226,
+    "wickets": 7,
+    "balls": 270,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

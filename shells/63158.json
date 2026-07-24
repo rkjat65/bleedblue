@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63158",
+  "espn_league_id": "17182",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Wellington",
+  "dates": [
+   "1976-02-12"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1975/76",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ralph Gardiner",
+    "Robert Monteith"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Glenn Turner",
+    "John Morrison",
+    "Bevan Congdon",
+    "John Parker",
+    "Mark Burgess",
+    "Andy Roberts",
+    "Ken Wadsworth",
+    "Lance Cairns",
+    "Richard Hadlee",
+    "Dayle Hadlee",
+    "Richard Collinge"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Dilip Vengsarkar",
+    "Surinder Amarnath",
+    "Gundappa Viswanath",
+    "Brijesh Patel",
+    "Mohinder Amarnath",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Glenn Turner": "38622",
+    "John Morrison": "37731",
+    "Bevan Congdon": "36611",
+    "John Parker": "38113",
+    "Mark Burgess": "36314",
+    "Andy Roberts": "38253",
+    "Ken Wadsworth": "38735",
+    "Lance Cairns": "36595",
+    "Richard Hadlee": "37224",
+    "Dayle Hadlee": "37222",
+    "Richard Collinge": "36606",
+    "Sunil Gavaskar": "28794",
+    "Dilip Vengsarkar": "35654",
+    "Surinder Amarnath": "26226",
+    "Gundappa Viswanath": "35712",
+    "Brijesh Patel": "32231",
+    "Mohinder Amarnath": "26225",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1976",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Basin Reserve, Wellington",
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 445,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 334,
+    "wickets": 10,
+    "balls": 685,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 159,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 220,
+    "wickets": 10,
+    "balls": 445,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 685,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 81,
+    "wickets": 9,
+    "balls": 159,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

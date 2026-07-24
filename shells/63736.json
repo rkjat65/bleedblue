@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63736",
+  "espn_league_id": "16127",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Durban",
+  "dates": [
+   "1996-12-26"
+  ],
+  "event": {
+   "name": "India in South Africa Test Series 1996/97",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Dunne",
+    "David Orchard"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Rudi Koertzen"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Andrew Hudson",
+    "Gary Kirsten",
+    "Adam Bacher",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Herschelle Gibbs",
+    "Brian McMillan",
+    "Shaun Pollock",
+    "David Richardson",
+    "Lance Klusener",
+    "Allan Donald"
+   ],
+   "India": [
+    "Vikram Rathour",
+    "Woorkeri Raman",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Rahul Dravid",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "David Johnson",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Andrew Hudson": "45458",
+    "Gary Kirsten": "45813",
+    "Adam Bacher": "44024",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Herschelle Gibbs": "45224",
+    "Brian McMillan": "46214",
+    "Shaun Pollock": "46774",
+    "David Richardson": "46978",
+    "Lance Klusener": "45821",
+    "Allan Donald": "44716",
+    "Vikram Rathour": "33120",
+    "Woorkeri Raman": "33058",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Rahul Dravid": "28114",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "David Johnson": "29712",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "Kingsmead, Durban",
+  "scorecard_totals": [
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 235,
+    "wickets": 10,
+    "balls": 516,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 235,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 3,
+    "runs": 259,
+    "wickets": 10,
+    "balls": 420,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 205,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 516,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 100,
+    "wickets": 10,
+    "balls": 235,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 420,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 66,
+    "wickets": 10,
+    "balls": 205,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

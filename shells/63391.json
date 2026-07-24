@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63391",
+  "espn_league_id": "16884"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1984-11-28"
+  ],
+  "event": {
+   "name": "England in India Test Series 1984/85",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bhairab Ganguli",
+    "Swaroop Kishen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Dilip Vengsarkar",
+    "Mohinder Amarnath",
+    "Sandeep Patil",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Chetan Sharma",
+    "Shivlal Yadav",
+    "Laxman Sivaramakrishnan"
+   ],
+   "England": [
+    "Graeme Fowler",
+    "Tim Robinson",
+    "Mike Gatting",
+    "David Gower",
+    "Allan Lamb",
+    "Chris Cowdrey",
+    "Richard Ellison",
+    "Paul Downton",
+    "Phil Edmonds",
+    "Pat Pocock",
+    "Norman Cowans"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Dilip Vengsarkar": "35654",
+    "Mohinder Amarnath": "26225",
+    "Sandeep Patil": "32283",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Chetan Sharma": "33949",
+    "Shivlal Yadav": "36064",
+    "Laxman Sivaramakrishnan": "34074",
+    "Graeme Fowler": "12884",
+    "Tim Robinson": "19445",
+    "Mike Gatting": "13340",
+    "David Gower": "13418",
+    "Allan Lamb": "16178",
+    "Chris Cowdrey": "10843",
+    "Richard Ellison": "12507",
+    "Paul Downton": "11931",
+    "Phil Edmonds": "12486",
+    "Pat Pocock": "18557",
+    "Norman Cowans": "10839"
+   }
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Wankhede Stadium, Mumbai"
+ },
+ "innings": []
+}

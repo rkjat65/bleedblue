@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63829",
+  "espn_league_id": "15872",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1999-02-04"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1998/99",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Bucknor",
+    "Arani Jayaprakash"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "SK Sharma"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sadagoppan Ramesh",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sourav Ganguly",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad",
+    "Harbhajan Singh"
+   ],
+   "Pakistan": [
+    "Saeed Anwar",
+    "Shahid Afridi",
+    "Ijaz Ahmed",
+    "Inzamam-ul-Haq",
+    "Mohammad Yousuf",
+    "Saleem Malik",
+    "Moin Khan",
+    "Wasim Akram",
+    "Mushtaq Ahmed",
+    "Saqlain Mushtaq",
+    "Waqar Younis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sadagoppan Ramesh": "33066",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sourav Ganguly": "28779",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Harbhajan Singh": "29264",
+    "Saeed Anwar": "42605",
+    "Shahid Afridi": "42639",
+    "Ijaz Ahmed": "40551",
+    "Inzamam-ul-Haq": "40570",
+    "Mohammad Yousuf": "43650",
+    "Saleem Malik": "42623",
+    "Moin Khan": "41306",
+    "Wasim Akram": "43547",
+    "Mushtaq Ahmed": "41316",
+    "Saqlain Mushtaq": "42628",
+    "Waqar Younis": "43543"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 252,
+    "wickets": 10,
+    "balls": 551,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 387,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 339,
+    "wickets": 10,
+    "balls": 682,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 363,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 551,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 172,
+    "wickets": 10,
+    "balls": 387,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 682,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 207,
+    "wickets": 10,
+    "balls": 363,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

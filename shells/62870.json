@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62870",
+  "espn_league_id": "17382",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1960-01-01"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1959/60",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Habib Choudhury",
+    "Noshirvan Nagarwala"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Nari Contractor",
+    "Polly Umrigar",
+    "Abbas Ali Baig",
+    "Chandu Borde",
+    "Gulabrai Ramchand",
+    "Ramnath Kenny",
+    "Budhi Kunderan",
+    "Bapu Nadkarni",
+    "Salim Durani",
+    "Ghulam Guard"
+   ],
+   "Australia": [
+    "Colin McDonald",
+    "Gavin Stevens",
+    "Neil Harvey",
+    "Norm O'Neill",
+    "Les Favell",
+    "Wally Grout",
+    "Richie Benaud",
+    "Alan Davidson",
+    "Ken Mackay",
+    "Ray Lindwall",
+    "Ian Meckiff"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Nari Contractor": "27667",
+    "Polly Umrigar": "35577",
+    "Abbas Ali Baig": "26817",
+    "Chandu Borde": "26962",
+    "Gulabrai Ramchand": "33062",
+    "Ramnath Kenny": "30066",
+    "Budhi Kunderan": "30178",
+    "Bapu Nadkarni": "31760",
+    "Salim Durani": "28118",
+    "Ghulam Guard": "28861",
+    "Colin McDonald": "6554",
+    "Gavin Stevens": "7674",
+    "Neil Harvey": "5603",
+    "Norm O'Neill": "7015",
+    "Les Favell": "5220",
+    "Wally Grout": "5449",
+    "Richie Benaud": "4123",
+    "Alan Davidson": "4902",
+    "Ken Mackay": "6445",
+    "Ray Lindwall": "6299",
+    "Ian Meckiff": "6598"
+   }
+  },
+  "season": "1960",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 289,
+    "wickets": 10,
+    "balls": 857,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 840,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 226,
+    "wickets": 5,
+    "balls": 606,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 48,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 857,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 387,
+    "wickets": 8,
+    "balls": 840,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 606,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 34,
+    "wickets": 1,
+    "balls": 48,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

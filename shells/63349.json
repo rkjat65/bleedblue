@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63349",
+  "espn_league_id": "16934",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1983-10-05"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1983/84",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sukha Bose",
+    "MG Subramaniam"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Dilip Vengsarkar",
+    "Yashpal Sharma",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Kirti Azad",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Raghuram Bhat"
+   ],
+   "Pakistan": [
+    "Mohsin Khan",
+    "Shoaib Mohammad",
+    "Saleem Malik",
+    "Javed Miandad",
+    "Zaheer Abbas",
+    "Mudassar Nazar",
+    "Wasim Raja",
+    "Wasim Bari",
+    "Tahir Naqqash",
+    "Mohammad Nazir",
+    "Azeem Hafeez"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Dilip Vengsarkar": "35654",
+    "Yashpal Sharma": "36075",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Kirti Azad": "26325",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Raghuram Bhat": "26928",
+    "Mohsin Khan": "41303",
+    "Shoaib Mohammad": "42658",
+    "Saleem Malik": "42623",
+    "Javed Miandad": "40879",
+    "Zaheer Abbas": "43695",
+    "Mudassar Nazar": "41308",
+    "Wasim Raja": "43553",
+    "Wasim Bari": "43549",
+    "Tahir Naqqash": "43271",
+    "Mohammad Nazir": "41294",
+    "Azeem Hafeez": "39021"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 245,
+    "wickets": 10,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 808,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 262,
+    "wickets": 8,
+    "balls": 642,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 48,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 322,
+    "wickets": 10,
+    "balls": 808,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 642,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 42,
+    "wickets": 1,
+    "balls": 48,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

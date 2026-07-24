@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62847",
+  "espn_league_id": "17394",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1958-12-31"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1958/59",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Mohammad Yunus",
+    "Noshirvan Nagarwala"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Nari Contractor",
+    "Jayasinghrao Ghorpade",
+    "Ramnath Kenny",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "Dattu Phadkar",
+    "Naren Tamhane",
+    "Surendra Nath",
+    "Ghulam Ahmed",
+    "Subhash Gupte"
+   ],
+   "West Indies": [
+    "John Holt",
+    "Conrad Hunte",
+    "Rohan Kanhai",
+    "Collie Smith",
+    "Basil Butcher",
+    "Garry Sobers",
+    "Joe Solomon",
+    "Gerry Alexander",
+    "Sonny Ramadhin",
+    "Wes Hall",
+    "Roy Gilchrist"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Nari Contractor": "27667",
+    "Jayasinghrao Ghorpade": "28814",
+    "Ramnath Kenny": "30066",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "Dattu Phadkar": "32309",
+    "Naren Tamhane": "35308",
+    "Surendra Nath": "34814",
+    "Ghulam Ahmed": "28821",
+    "Subhash Gupte": "28880",
+    "John Holt": "52186",
+    "Conrad Hunte": "52070",
+    "Rohan Kanhai": "52287",
+    "Collie Smith": "52941",
+    "Basil Butcher": "51239",
+    "Garry Sobers": "52946",
+    "Joe Solomon": "52944",
+    "Gerry Alexander": "51101",
+    "Sonny Ramadhin": "52804",
+    "Wes Hall": "52043",
+    "Roy Gilchrist": "51887"
+   }
+  },
+  "season": "1958",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 973,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 124,
+    "wickets": 10,
+    "balls": 377,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 154,
+    "wickets": 10,
+    "balls": 294,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 614,
+    "wickets": 5,
+    "balls": 973,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 377,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 294,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64297",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Guwahati",
+  "dates": [
+   "1987-01-11"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Ram Gupta",
+    "Padmakar Pandit"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sunil Gavaskar",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Chandrakant Pandit",
+    "Madan Lal",
+    "Shivlal Yadav",
+    "Maninder Singh"
+   ],
+   "Sri Lanka": [
+    "Ravi Ratnayeke",
+    "Aravinda de Silva",
+    "Asanka Gurusinha",
+    "Roy Dias",
+    "Arjuna Ranatunga",
+    "Duleep Mendis",
+    "Ranjan Madugalle",
+    "Rumesh Ratnayake",
+    "Ashantha de Mel",
+    "Guy de Alwis",
+    "Asoka de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sunil Gavaskar": "28794",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Chandrakant Pandit": "32179",
+    "Madan Lal": "30873",
+    "Shivlal Yadav": "36064",
+    "Maninder Singh": "30923",
+    "Ravi Ratnayeke": "50250",
+    "Aravinda de Silva": "48462",
+    "Asanka Gurusinha": "49005",
+    "Roy Dias": "48470",
+    "Arjuna Ranatunga": "50244",
+    "Duleep Mendis": "49629",
+    "Ranjan Madugalle": "49623",
+    "Rumesh Ratnayake": "50249",
+    "Ashantha de Mel": "48447",
+    "Guy de Alwis": "48446",
+    "Asoka de Silva": "48456"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Nehru Stadium, Guwahati",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 146,
+    "wickets": 2,
+    "balls": 165,
+    "description": "target reached"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 145,
+    "wickets": 8,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 165,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

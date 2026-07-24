@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65179",
+  "espn_league_id": "16252",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1996-03-02"
+  ],
+  "event": {
+   "name": "New Zealand tour of India 1995/96"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Cyril Mitchley",
+    "Ian Robinson"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "Ikram Rabbani"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Sachin Tendulkar",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Salil Ankola",
+    "Venkatesh Prasad"
+   ],
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Romesh Kaluwitharana",
+    "Asanka Gurusinha",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Roshan Mahanama",
+    "Kumar Dharmasena",
+    "Chaminda Vaas",
+    "Ravindra Pushpakumara",
+    "Muthiah Muralidaran"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Sachin Tendulkar": "35320",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Salil Ankola": "26257",
+    "Venkatesh Prasad": "32345",
+    "Sanath Jayasuriya": "49209",
+    "Romesh Kaluwitharana": "49361",
+    "Asanka Gurusinha": "49005",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Roshan Mahanama": "49626",
+    "Kumar Dharmasena": "48469",
+    "Chaminda Vaas": "50804",
+    "Ravindra Pushpakumara": "49863",
+    "Muthiah Muralidaran": "49636"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 271,
+    "wickets": 3,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 292,
+    "description": "target reached"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 272,
+    "wickets": 4,
+    "balls": 292,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

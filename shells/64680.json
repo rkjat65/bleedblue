@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64680",
+  "espn_league_id": "15585",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cuttack",
+  "dates": [
+   "2000-12-02"
+  ],
+  "event": {
+   "name": "Zimbabwe in India ODI Series 2000/01",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Jasbir Singh",
+    "Arani Jayaprakash"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Satish Gupta"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Yuvraj Singh",
+    "Hemang Badani",
+    "Reetinder Sodhi",
+    "Vijay Dahiya",
+    "Sunil Joshi",
+    "Ajit Agarkar",
+    "Venkatesh Prasad",
+    "Zaheer Khan"
+   ],
+   "Zimbabwe": [
+    "Alistair Campbell",
+    "Dougie Marillier",
+    "Stuart Carlisle",
+    "Andy Flower",
+    "Grant Flower",
+    "Guy Whittall",
+    "Heath Streak",
+    "Dirk Viljoen",
+    "Travis Friend",
+    "Brian Murphy",
+    "Henry Olonga"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Yuvraj Singh": "36084",
+    "Hemang Badani": "26802",
+    "Reetinder Sodhi": "34078",
+    "Vijay Dahiya": "27978",
+    "Sunil Joshi": "29725",
+    "Ajit Agarkar": "26184",
+    "Venkatesh Prasad": "32345",
+    "Zaheer Khan": "30102",
+    "Alistair Campbell": "55301",
+    "Dougie Marillier": "55578",
+    "Stuart Carlisle": "55307",
+    "Andy Flower": "55427",
+    "Grant Flower": "55429",
+    "Guy Whittall": "55848",
+    "Heath Streak": "55761",
+    "Dirk Viljoen": "55825",
+    "Travis Friend": "55438",
+    "Brian Murphy": "55610",
+    "Henry Olonga": "55675"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Barabati Stadium, Cuttack",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 255,
+    "wickets": 7,
+    "balls": 284,
+    "description": "target reached"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 253,
+    "wickets": 7,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 284,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

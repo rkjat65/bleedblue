@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63054",
+  "espn_league_id": "17273",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1969-12-12"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1969/70",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sambhu Pan",
+    "Judah Reuben"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Farokh Engineer",
+    "Ashok Mankad",
+    "Ajit Wadekar",
+    "Gundappa Viswanath",
+    "Mansur Ali Khan Pataudi",
+    "Ambar Roy",
+    "Eknath Solkar",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Subrata Guha",
+    "Bishan Bedi"
+   ],
+   "Australia": [
+    "Bill Lawry",
+    "Keith Stackpole",
+    "Ian Chappell",
+    "Doug Walters",
+    "Ian Redpath",
+    "Paul Sheahan",
+    "Eric Freeman",
+    "Brian Taber",
+    "Graham McKenzie",
+    "Ashley Mallett",
+    "Alan Connolly"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Farokh Engineer": "28624",
+    "Ashok Mankad": "30938",
+    "Ajit Wadekar": "35933",
+    "Gundappa Viswanath": "35712",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Ambar Roy": "33182",
+    "Eknath Solkar": "34085",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Subrata Guha": "28864",
+    "Bishan Bedi": "26875",
+    "Bill Lawry": "6270",
+    "Keith Stackpole": "7666",
+    "Ian Chappell": "4560",
+    "Doug Walters": "8151",
+    "Ian Redpath": "7314",
+    "Paul Sheahan": "7597",
+    "Eric Freeman": "5258",
+    "Brian Taber": "7912",
+    "Graham McKenzie": "6576",
+    "Ashley Mallett": "6472",
+    "Alan Connolly": "4613"
+   }
+  },
+  "season": "1969",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 212,
+    "wickets": 10,
+    "balls": 580,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 859,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 161,
+    "wickets": 10,
+    "balls": 463,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 30,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 580,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 335,
+    "wickets": 10,
+    "balls": 859,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 463,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 42,
+    "wickets": 0,
+    "balls": 30,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

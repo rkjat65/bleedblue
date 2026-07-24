@@ -1,0 +1,152 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63583",
+  "espn_league_id": "16469",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Harare",
+  "dates": [
+   "1992-10-18"
+  ],
+  "event": {
+   "name": "India in South Africa Test Series 1992/93"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dickie Bird",
+    "Kantilal Kanjee",
+    "Ian Robinson",
+    "Sean Davies"
+   ],
+   "match_referees": [
+    "Peter van der Merwe"
+   ]
+  },
+  "outcome": {
+   "winner": "Zimbabwe"
+  },
+  "players": {
+   "Zimbabwe": [
+    "Kevin Arnott",
+    "Grant Flower",
+    "Alistair Campbell",
+    "Andy Pycroft",
+    "Mark Burmester",
+    "Dave Houghton",
+    "Andy Flower",
+    "Gary Crocker",
+    "Eddo Brandes",
+    "John Traicos",
+    "Malcolm Jarvis"
+   ],
+   "India": [
+    "Ravi Shastri",
+    "Woorkeri Raman",
+    "Sanjay Manjrekar",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Venkatapathy Raju",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Anil Kumble",
+    "Javagal Srinath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kevin Arnott": "55235",
+    "Grant Flower": "55429",
+    "Alistair Campbell": "55301",
+    "Andy Pycroft": "55700",
+    "Mark Burmester": "55279",
+    "Dave Houghton": "55497",
+    "Andy Flower": "55427",
+    "Gary Crocker": "55321",
+    "Eddo Brandes": "55267",
+    "John Traicos": "55802",
+    "Malcolm Jarvis": "55525",
+    "Ravi Shastri": "33975",
+    "Woorkeri Raman": "33058",
+    "Sanjay Manjrekar": "30934",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Venkatapathy Raju": "33044",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105"
+   }
+  },
+  "season": "1992",
+  "team_type": "international",
+  "teams": [
+   "Zimbabwe",
+   "India"
+  ],
+  "venue": "Harare Sports Club",
+  "scorecard_totals": [
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 456,
+    "wickets": 10,
+    "balls": 1286,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1018,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 3,
+    "runs": 146,
+    "wickets": 4,
+    "balls": 396,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1286,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 307,
+    "wickets": 10,
+    "balls": 1018,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 396,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

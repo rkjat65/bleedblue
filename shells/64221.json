@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64221",
+  "espn_league_id": "16936"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Guwahati",
+  "dates": [
+   "1983-12-17"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1983/84",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "R Mrithyunjayan",
+    "AL Narasimhan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Ghulam Parkar",
+    "Dilip Vengsarkar",
+    "Ashok Malhotra",
+    "Mohinder Amarnath",
+    "Roger Binny",
+    "Ravi Shastri",
+    "Syed Kirmani",
+    "Raju Kulkarni",
+    "Chetan Sharma",
+    "Randhir Singh"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Viv Richards",
+    "Larry Gomes",
+    "Malcolm Marshall",
+    "Eldine Baptiste",
+    "Roger Harper",
+    "Milton Pydanna",
+    "Michael Holding",
+    "Wayne Daniel"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Ghulam Parkar": "32201",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Malhotra": "30912",
+    "Mohinder Amarnath": "26225",
+    "Roger Binny": "26948",
+    "Ravi Shastri": "33975",
+    "Syed Kirmani": "30116",
+    "Raju Kulkarni": "30151",
+    "Chetan Sharma": "33949",
+    "Randhir Singh": "33085",
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Viv Richards": "52812",
+    "Larry Gomes": "51891",
+    "Malcolm Marshall": "52419",
+    "Eldine Baptiste": "51211",
+    "Roger Harper": "52045",
+    "Milton Pydanna": "52683",
+    "Michael Holding": "52063",
+    "Wayne Daniel": "51639"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Nehru Stadium, Guwahati",
+  "overs": 50
+ },
+ "innings": []
+}

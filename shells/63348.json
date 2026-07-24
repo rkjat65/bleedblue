@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63348",
+  "espn_league_id": "16934",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jalandhar",
+  "dates": [
+   "1983-09-24"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1983/84",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dara Dotiwalla",
+    "Bhairab Ganguli"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Yashpal Sharma",
+    "Sandeep Patil",
+    "Ravi Shastri",
+    "Roger Binny",
+    "Kapil Dev",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Srinivas Venkataraghavan"
+   ],
+   "Pakistan": [
+    "Mohsin Khan",
+    "Shoaib Mohammad",
+    "Qasim Umar",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Mudassar Nazar",
+    "Wasim Raja",
+    "Wasim Bari",
+    "Tahir Naqqash",
+    "Mohammad Nazir",
+    "Azeem Hafeez"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Yashpal Sharma": "36075",
+    "Sandeep Patil": "32283",
+    "Ravi Shastri": "33975",
+    "Roger Binny": "26948",
+    "Kapil Dev": "30028",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Srinivas Venkataraghavan": "35656",
+    "Mohsin Khan": "41303",
+    "Shoaib Mohammad": "42658",
+    "Qasim Umar": "42362",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Mudassar Nazar": "41308",
+    "Wasim Raja": "43553",
+    "Wasim Bari": "43549",
+    "Tahir Naqqash": "43271",
+    "Mohammad Nazir": "41294",
+    "Azeem Hafeez": "39021"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Gandhi Stadium, Jalandhar",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 800,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 374,
+    "wickets": 10,
+    "balls": 1019,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 54,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 337,
+    "wickets": 10,
+    "balls": 800,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1019,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 16,
+    "wickets": 0,
+    "balls": 54,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

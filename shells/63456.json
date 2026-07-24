@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63456",
+  "espn_league_id": "16757"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1987-03-13"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1986/87",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ram Gupta",
+    "V.K.Ramaswamy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Roger Binny",
+    "Kiran More",
+    "Shivlal Yadav",
+    "Maninder Singh"
+   ],
+   "Pakistan": [
+    "Ramiz Raja",
+    "Rizwan-uz-Zaman",
+    "Saleem Malik",
+    "Javed Miandad",
+    "Manzoor Elahi",
+    "Imran Khan",
+    "Wasim Akram",
+    "Saleem Yousuf",
+    "Iqbal Qasim",
+    "Tauseef Ahmed",
+    "Saleem Jaffar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Roger Binny": "26948",
+    "Kiran More": "31038",
+    "Shivlal Yadav": "36064",
+    "Maninder Singh": "30923",
+    "Ramiz Raja": "42420",
+    "Rizwan-uz-Zaman": "42428",
+    "Saleem Malik": "42623",
+    "Javed Miandad": "40879",
+    "Manzoor Elahi": "41262",
+    "Imran Khan": "40560",
+    "Wasim Akram": "43547",
+    "Saleem Yousuf": "42626",
+    "Iqbal Qasim": "40572",
+    "Tauseef Ahmed": "43277",
+    "Saleem Jaffar": "42879"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru"
+ },
+ "innings": []
+}

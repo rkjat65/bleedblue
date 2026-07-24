@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63434",
+  "espn_league_id": "16782",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Birmingham",
+  "dates": [
+   "1986-07-03"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dickie Bird",
+    "Barrie Meyer"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Graham Gooch",
+    "Mark Benson",
+    "Bill Athey",
+    "David Gower",
+    "Mike Gatting",
+    "Derek Pringle",
+    "John Emburey",
+    "Neil Foster",
+    "Phil Edmonds",
+    "Bruce French",
+    "Neal Radford"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Kiran More",
+    "Roger Binny",
+    "Chetan Sharma",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Graham Gooch": "13399",
+    "Mark Benson": "9074",
+    "Bill Athey": "8581",
+    "David Gower": "13418",
+    "Mike Gatting": "13340",
+    "Derek Pringle": "18627",
+    "John Emburey": "12514",
+    "Neil Foster": "12879",
+    "Phil Edmonds": "12486",
+    "Bruce French": "12923",
+    "Neal Radford": "19314",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Roger Binny": "26948",
+    "Chetan Sharma": "33949",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Edgbaston, Birmingham",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 390,
+    "wickets": 10,
+    "balls": 699,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 839,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 235,
+    "wickets": 10,
+    "balls": 564,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 468,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 699,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 390,
+    "wickets": 10,
+    "balls": 839,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 564,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 174,
+    "wickets": 5,
+    "balls": 468,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

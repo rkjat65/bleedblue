@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63726",
+  "espn_league_id": "16138",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1996-12-08"
+  ],
+  "event": {
+   "name": "South Africa in India Test Series 1996/97",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "David Shepherd",
+    "Srinivas Venkataraghavan",
+    "VVS Laxman"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "Arani Jayaprakash"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Nayan Mongia",
+    "Woorkeri Raman",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Sunil Joshi",
+    "Anil Kumble",
+    "Aashish Kapoor",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ],
+   "South Africa": [
+    "Andrew Hudson",
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Brian McMillan",
+    "David Richardson",
+    "Lance Klusener",
+    "Pat Symcox",
+    "Fanie de Villiers",
+    "Paul Adams"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nayan Mongia": "31036",
+    "Woorkeri Raman": "33058",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Sunil Joshi": "29725",
+    "Anil Kumble": "30176",
+    "Aashish Kapoor": "30030",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Andrew Hudson": "45458",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Brian McMillan": "46214",
+    "David Richardson": "46978",
+    "Lance Klusener": "45821",
+    "Pat Symcox": "47267",
+    "Fanie de Villiers": "44696",
+    "Paul Adams": "43919"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 237,
+    "wickets": 10,
+    "balls": 601,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 435,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 400,
+    "wickets": 7,
+    "balls": 756,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 577,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 601,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 177,
+    "wickets": 10,
+    "balls": 435,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 756,
+    "description": "declared"
+   },
+   {
+    "team": "South Africa",
+    "innings": 4,
+    "runs": 180,
+    "wickets": 10,
+    "balls": 577,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

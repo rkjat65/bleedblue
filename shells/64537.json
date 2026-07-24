@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64537",
+  "espn_league_id": "16146",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bulawayo",
+  "dates": [
+   "1997-02-15"
+  ],
+  "event": {
+   "name": "South Africa tour of India 1996/97",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Quintin Goosen",
+    "Ian Robinson"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Russell Tiffin"
+   ]
+  },
+  "outcome": {
+   "winner": "Zimbabwe"
+  },
+  "players": {
+   "Zimbabwe": [
+    "Andy Waller",
+    "Grant Flower",
+    "Alistair Campbell",
+    "Guy Whittall",
+    "Andy Flower",
+    "Dave Houghton",
+    "Craig Evans",
+    "Paul Strang",
+    "Heath Streak",
+    "Eddo Brandes",
+    "John Rennie"
+   ],
+   "India": [
+    "Vikram Rathour",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Sunil Joshi",
+    "Dodda Ganesh",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Andy Waller": "55840",
+    "Grant Flower": "55429",
+    "Alistair Campbell": "55301",
+    "Guy Whittall": "55848",
+    "Andy Flower": "55427",
+    "Dave Houghton": "55497",
+    "Craig Evans": "55408",
+    "Paul Strang": "55758",
+    "Heath Streak": "55761",
+    "Eddo Brandes": "55267",
+    "John Rennie": "55714",
+    "Vikram Rathour": "33120",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Sunil Joshi": "29725",
+    "Dodda Ganesh": "28774",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "Zimbabwe",
+   "India"
+  ],
+  "venue": "Queens Sports Club, Bulawayo",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 263,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 139,
+    "wickets": 2,
+    "balls": 155,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 168,
+    "wickets": 10,
+    "balls": 263,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 155,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

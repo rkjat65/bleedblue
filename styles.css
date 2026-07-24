@@ -192,6 +192,13 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 20px rgba(255, 153, 51, 0.25);
   flex-shrink: 0;
 }
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: block;
+}
+.brand-sm-logo { width: 32px; height: 32px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
 .brand-text strong {
   font-family: var(--font-display);
@@ -1434,6 +1441,11 @@ button.gallery-card:hover {
   background: rgba(139, 139, 158, 0.12);
   color: var(--text-muted);
   border-color: rgba(139, 139, 158, 0.25);
+}
+.quality-scorecard {
+  background: rgba(255, 153, 51, 0.12);
+  color: #ffb366;
+  border-color: rgba(255, 153, 51, 0.35);
 }
 
 /* Avatar XL */

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63020",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Christchurch",
+  "dates": [
+   "1968-02-21"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Fred Goodall",
+    "Dick Shortt"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Bruce Murray",
+    "Graham Dowling",
+    "Bevan Congdon",
+    "Vic Pollard",
+    "Mark Burgess",
+    "Keith Thomson",
+    "Gary Bartlett",
+    "Dick Motz",
+    "Richard Collinge",
+    "Jack Alabaster",
+    "Roy Harford"
+   ],
+   "India": [
+    "Syed Abid Ali",
+    "Farokh Engineer",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Mansur Ali Khan Pataudi",
+    "Motganhalli Jaisimha",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Umesh Kulkarni"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bruce Murray": "37734",
+    "Graham Dowling": "36837",
+    "Bevan Congdon": "36611",
+    "Vic Pollard": "38129",
+    "Mark Burgess": "36314",
+    "Keith Thomson": "38611",
+    "Gary Bartlett": "36288",
+    "Dick Motz": "37733",
+    "Richard Collinge": "36606",
+    "Jack Alabaster": "36175",
+    "Roy Harford": "37230",
+    "Syed Abid Ali": "26169",
+    "Farokh Engineer": "28624",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Motganhalli Jaisimha": "29663",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Umesh Kulkarni": "30154"
+   }
+  },
+  "season": "1968",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "AMI Stadium, Christchurch",
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 502,
+    "wickets": 10,
+    "balls": 1119,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 554,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 593,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 88,
+    "wickets": 4,
+    "balls": 244,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1119,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 288,
+    "wickets": 10,
+    "balls": 554,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 301,
+    "wickets": 10,
+    "balls": 593,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 244,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

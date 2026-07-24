@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62725",
+  "espn_league_id": "17467",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1951-11-02"
+  ],
+  "event": {
+   "name": "England in India Test Series 1951/52",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Balkrishna Mohoni",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vijay Merchant",
+    "Pankaj Roy",
+    "Polly Umrigar",
+    "Vijay Hazare",
+    "Dattu Phadkar",
+    "Vinoo Mankad",
+    "Rusi Modi",
+    "Hemu Adhikari",
+    "Sadu Shinde",
+    "Nana Joshi",
+    "Nirode Chowdhury"
+   ],
+   "England": [
+    "Jack Robertson",
+    "Frank Lowson",
+    "Don Kenyon",
+    "Donald Carr",
+    "Allan Watkins",
+    "Dick Spooner",
+    "Nigel Howard",
+    "Derek Shackleton",
+    "Brian Statham",
+    "Roy Tattersall",
+    "Fred Ridgway"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vijay Merchant": "30996",
+    "Pankaj Roy": "33186",
+    "Polly Umrigar": "35577",
+    "Vijay Hazare": "29290",
+    "Dattu Phadkar": "32309",
+    "Vinoo Mankad": "30939",
+    "Rusi Modi": "31021",
+    "Hemu Adhikari": "26179",
+    "Sadu Shinde": "33999",
+    "Nana Joshi": "29721",
+    "Nirode Chowdhury": "27659",
+    "Jack Robertson": "19423",
+    "Frank Lowson": "16360",
+    "Don Kenyon": "15866",
+    "Donald Carr": "10668",
+    "Allan Watkins": "22329",
+    "Dick Spooner": "20317",
+    "Nigel Howard": "14282",
+    "Derek Shackleton": "20115",
+    "Brian Statham": "20341",
+    "Roy Tattersall": "21464",
+    "Fred Ridgway": "19405"
+   }
+  },
+  "season": "1951",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 615,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 418,
+    "wickets": 6,
+    "balls": 1050,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1326,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 203,
+    "wickets": 10,
+    "balls": 615,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1050,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 368,
+    "wickets": 6,
+    "balls": 1326,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63078",
+  "espn_league_id": "17254",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1971-08-19"
+  ],
+  "event": {
+   "name": "India in England Test Series 1971",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Charlie Elliott",
+    "Dusty Rhodes"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Brian Luckhurst",
+    "John Jameson",
+    "John Edrich",
+    "Keith Fletcher",
+    "Basil D'Oliveira",
+    "Alan Knott",
+    "Ray Illingworth",
+    "Richard Hutton",
+    "John Snow",
+    "Derek Underwood",
+    "John Price"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Ashok Mankad",
+    "Ajit Wadekar",
+    "Dilip Sardesai",
+    "Gundappa Viswanath",
+    "Eknath Solkar",
+    "Farokh Engineer",
+    "Syed Abid Ali",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Brian Luckhurst": "16370",
+    "John Jameson": "15468",
+    "John Edrich": "12490",
+    "Keith Fletcher": "12854",
+    "Basil D'Oliveira": "11914",
+    "Alan Knott": "15917",
+    "Ray Illingworth": "15385",
+    "Richard Hutton": "14336",
+    "John Snow": "20282",
+    "Derek Underwood": "22149",
+    "John Price": "18616",
+    "Sunil Gavaskar": "28794",
+    "Ashok Mankad": "30938",
+    "Ajit Wadekar": "35933",
+    "Dilip Sardesai": "33850",
+    "Gundappa Viswanath": "35712",
+    "Eknath Solkar": "34085",
+    "Farokh Engineer": "28624",
+    "Syed Abid Ali": "26169",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1971",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Kennington Oval, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 355,
+    "wickets": 10,
+    "balls": 652,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 705,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 101,
+    "wickets": 10,
+    "balls": 271,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 606,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 652,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 284,
+    "wickets": 10,
+    "balls": 705,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 271,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 174,
+    "wickets": 6,
+    "balls": 606,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

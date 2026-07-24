@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1479579",
+  "espn_league_id": "23274"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lucknow",
+  "dates": [
+   "2025-12-17"
+  ],
+  "event": {
+   "name": "South Africa in India T20I Series 2025/26",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "KN Ananthapadmanabhan",
+    "Rohan Pandit"
+   ],
+   "match_referees": [
+    "Richie Richardson"
+   ],
+   "tv_umpires": [
+    "Virender Sharma"
+   ],
+   "reserve_umpires": [
+    "Jayaraman Madanagopal"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Abhishek Sharma",
+    "Arshdeep Singh",
+    "Jasprit Bumrah",
+    "Shivam Dube",
+    "Harshit Rana",
+    "Kuldeep Yadav",
+    "Hardik Pandya",
+    "Shahbaz Ahmed",
+    "Sanju Samson",
+    "Jitesh Sharma",
+    "Shubman Gill",
+    "Tilak Varma",
+    "Varun Chakravarthy",
+    "Washington Sundar",
+    "Suryakumar Yadav"
+   ],
+   "South Africa": [
+    "Ottneil Baartman",
+    "Corbin Bosch",
+    "Dewald Brevis",
+    "Quinton de Kock",
+    "Donovan Ferreira",
+    "Reeza Hendricks",
+    "Marco Jansen",
+    "George Linde",
+    "Keshav Maharaj",
+    "Aiden Markram",
+    "David Miller",
+    "Lungi Ngidi",
+    "Anrich Nortje",
+    "Lutho Sipamla",
+    "Tristan Stubbs"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Abhishek Sharma": "1070183",
+    "Arshdeep Singh": "1125976",
+    "Jasprit Bumrah": "625383",
+    "Shivam Dube": "714451",
+    "Harshit Rana": "1312645",
+    "Kuldeep Yadav": "559235",
+    "Hardik Pandya": "625371",
+    "Shahbaz Ahmed": "1159711",
+    "Sanju Samson": "425943",
+    "Jitesh Sharma": "721867",
+    "Shubman Gill": "1070173",
+    "Tilak Varma": "1170265",
+    "Varun Chakravarthy": "1108375",
+    "Washington Sundar": "719715",
+    "Suryakumar Yadav": "446507",
+    "Ottneil Baartman": "535353",
+    "Corbin Bosch": "594322",
+    "Dewald Brevis": "1070665",
+    "Quinton de Kock": "379143",
+    "Donovan Ferreira": "698315",
+    "Reeza Hendricks": "269280",
+    "Marco Jansen": "696401",
+    "George Linde": "481875",
+    "Keshav Maharaj": "267724",
+    "Aiden Markram": "600498",
+    "David Miller": "321777",
+    "Lungi Ngidi": "542023",
+    "Anrich Nortje": "481979",
+    "Lutho Sipamla": "698143",
+    "Tristan Stubbs": "595978"
+   }
+  },
+  "season": "2025",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63133",
+  "espn_league_id": "17212",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1974-12-27"
+  ],
+  "event": {
+   "name": "India in England Test Series 1974",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Judah Reuben",
+    "Har Sharma"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sudhir Naik",
+    "Farokh Engineer",
+    "Parthasarthi Sharma",
+    "Gundappa Viswanath",
+    "Mansur Ali Khan Pataudi",
+    "Aunshuman Gaekwad",
+    "Madan Lal",
+    "Karsan Ghavri",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Roy Fredericks",
+    "Gordon Greenidge",
+    "Alvin Kallicharran",
+    "Viv Richards",
+    "Clive Lloyd",
+    "Deryck Murray",
+    "Bernard Julien",
+    "Elquemedo Willett",
+    "Vanburn Holder",
+    "Lance Gibbs",
+    "Andy Roberts"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sudhir Naik": "31778",
+    "Farokh Engineer": "28624",
+    "Parthasarthi Sharma": "33958",
+    "Gundappa Viswanath": "35712",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Aunshuman Gaekwad": "28754",
+    "Madan Lal": "30873",
+    "Karsan Ghavri": "28813",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Roy Fredericks": "51797",
+    "Gordon Greenidge": "51901",
+    "Alvin Kallicharran": "52285",
+    "Viv Richards": "52812",
+    "Clive Lloyd": "52345",
+    "Deryck Murray": "52441",
+    "Bernard Julien": "52208",
+    "Elquemedo Willett": "53227",
+    "Vanburn Holder": "52061",
+    "Lance Gibbs": "51883",
+    "Andy Roberts": "52817"
+   }
+  },
+  "season": "1974",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 233,
+    "wickets": 10,
+    "balls": 483,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 487,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 316,
+    "wickets": 10,
+    "balls": 860,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 506,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 483,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 240,
+    "wickets": 10,
+    "balls": 487,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 860,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 224,
+    "wickets": 10,
+    "balls": 506,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

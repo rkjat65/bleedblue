@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63505",
+  "espn_league_id": "16655",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1989-04-15"
+  ],
+  "event": {
+   "name": "India in West Indies Test Series 1988/89",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Clyde Cumberbatch",
+    "Andrew Weekes"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Keith Arthurton",
+    "Viv Richards",
+    "Gus Logie",
+    "Jeff Dujon",
+    "Malcolm Marshall",
+    "Curtly Ambrose",
+    "Ian Bishop",
+    "Courtney Walsh"
+   ],
+   "India": [
+    "Arun Lal",
+    "Navjot Sidhu",
+    "Ravi Shastri",
+    "Dilip Vengsarkar",
+    "Woorkeri Raman",
+    "Sanjay Manjrekar",
+    "Kapil Dev",
+    "Kiran More",
+    "Arshad Ayub",
+    "Chetan Sharma",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Keith Arthurton": "51110",
+    "Viv Richards": "52812",
+    "Gus Logie": "52347",
+    "Jeff Dujon": "51657",
+    "Malcolm Marshall": "52419",
+    "Curtly Ambrose": "51107",
+    "Ian Bishop": "51226",
+    "Courtney Walsh": "53216",
+    "Arun Lal": "26295",
+    "Navjot Sidhu": "34028",
+    "Ravi Shastri": "33975",
+    "Dilip Vengsarkar": "35654",
+    "Woorkeri Raman": "33058",
+    "Sanjay Manjrekar": "30934",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Chetan Sharma": "33949",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 314,
+    "wickets": 10,
+    "balls": 741,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 402,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 266,
+    "wickets": 10,
+    "balls": 582,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 491,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 741,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 150,
+    "wickets": 10,
+    "balls": 402,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 582,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 213,
+    "wickets": 10,
+    "balls": 491,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

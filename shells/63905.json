@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63905",
+  "espn_league_id": "15598",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "2000-11-18"
+  ],
+  "event": {
+   "name": "India in Bangladesh Test Match 2000/01",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "John Hampshire",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Vijay Chopra"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Shiv Sunder Das",
+    "Sadagoppan Ramesh",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "VVS Laxman",
+    "Javagal Srinath",
+    "Vijay Dahiya",
+    "Murali Kartik",
+    "Ajit Agarkar",
+    "Sunil Joshi"
+   ],
+   "Zimbabwe": [
+    "Grant Flower",
+    "Gavin Rennie",
+    "Stuart Carlisle",
+    "Alistair Campbell",
+    "Andy Flower",
+    "Guy Whittall",
+    "Heath Streak",
+    "Paul Strang",
+    "Brian Murphy",
+    "Bryan Strang",
+    "Henry Olonga"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Shiv Sunder Das": "28010",
+    "Sadagoppan Ramesh": "33066",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "VVS Laxman": "30750",
+    "Javagal Srinath": "34105",
+    "Vijay Dahiya": "27978",
+    "Murali Kartik": "30049",
+    "Ajit Agarkar": "26184",
+    "Sunil Joshi": "29725",
+    "Grant Flower": "55429",
+    "Gavin Rennie": "55713",
+    "Stuart Carlisle": "55307",
+    "Alistair Campbell": "55301",
+    "Andy Flower": "55427",
+    "Guy Whittall": "55848",
+    "Heath Streak": "55761",
+    "Paul Strang": "55758",
+    "Brian Murphy": "55610",
+    "Bryan Strang": "55756",
+    "Henry Olonga": "55675"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1008,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 458,
+    "wickets": 4,
+    "balls": 856,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 481,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 190,
+    "wickets": 3,
+    "balls": 225,
+    "description": "target reached"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 422,
+    "wickets": 9,
+    "balls": 1008,
+    "description": "declared"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 856,
+    "description": "declared"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 3,
+    "runs": 225,
+    "wickets": 10,
+    "balls": 481,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 225,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

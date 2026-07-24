@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66146",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1998-05-20"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Aloke Bhattacharjee",
+    "Devendra Sharma"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "Shavir Tarapore"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Gagan Khoda",
+    "Sourav Ganguly",
+    "Rahul Dravid",
+    "Ajay Jadeja",
+    "Hrishikesh Kanitkar",
+    "VVS Laxman",
+    "Robin Singh",
+    "MSK Prasad",
+    "Ajit Agarkar",
+    "Rahul Sanghvi",
+    "Debasis Mohanty"
+   ],
+   "Kenya": [
+    "Dipak Chudasama",
+    "Kennedy Otieno",
+    "Steve Tikolo",
+    "Maurice Odumbe",
+    "Hitesh Modi",
+    "Ravi Shah",
+    "Thomas Odoyo",
+    "Tony Suji",
+    "Aasif Karim",
+    "Martin Suji",
+    "Mohammad Sheikh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gagan Khoda": "30107",
+    "Sourav Ganguly": "28779",
+    "Rahul Dravid": "28114",
+    "Ajay Jadeja": "29632",
+    "Hrishikesh Kanitkar": "30018",
+    "VVS Laxman": "30750",
+    "Robin Singh": "34059",
+    "MSK Prasad": "32346",
+    "Ajit Agarkar": "26184",
+    "Rahul Sanghvi": "34214",
+    "Debasis Mohanty": "31025",
+    "Dipak Chudasama": "24692",
+    "Kennedy Otieno": "24714",
+    "Steve Tikolo": "24728",
+    "Maurice Odumbe": "24708",
+    "Hitesh Modi": "24701",
+    "Ravi Shah": "24719",
+    "Thomas Odoyo": "24705",
+    "Tony Suji": "24723",
+    "Aasif Karim": "24699",
+    "Martin Suji": "24725",
+    "Mohammad Sheikh": "24721"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Kenya"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 224,
+    "wickets": 6,
+    "balls": 282,
+    "description": "target reached"
+   },
+   {
+    "team": "Kenya",
+    "innings": 1,
+    "runs": 223,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Kenya",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

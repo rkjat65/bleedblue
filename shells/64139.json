@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64139",
+  "espn_league_id": "16892"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Karachi",
+  "dates": [
+   "1984-11-04"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1984/85",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [],
+   "India": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "National Stadium, Karachi"
+ },
+ "innings": []
+}

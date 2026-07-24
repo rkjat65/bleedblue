@@ -1,0 +1,117 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64347",
+  "espn_league_id": "16658",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Karachi",
+  "dates": [
+   "1989-12-20"
+  ],
+  "event": {
+   "name": "India in West Indies ODI Series 1988/89",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Mahboob Shah",
+    "Saleem Badar"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Ramiz Raja",
+    "Shoaib Mohammad",
+    "Saleem Malik",
+    "Javed Miandad",
+    "Imran Khan",
+    "Saeed Anwar",
+    "Wasim Akram",
+    "Abdul Qadir",
+    "Zulqarnain",
+    "Waqar Younis",
+    "Aaqib Javed"
+   ],
+   "India": [
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Salil Ankola",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ramiz Raja": "42420",
+    "Shoaib Mohammad": "42658",
+    "Saleem Malik": "42623",
+    "Javed Miandad": "40879",
+    "Imran Khan": "40560",
+    "Saeed Anwar": "42605",
+    "Wasim Akram": "43547",
+    "Abdul Qadir": "38973",
+    "Zulqarnain": "43707",
+    "Waqar Younis": "43543",
+    "Aaqib Javed": "38970",
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Salil Ankola": "26257",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "National Stadium, Karachi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 28,
+    "wickets": 3,
+    "balls": 87,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 87,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

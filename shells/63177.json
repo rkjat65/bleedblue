@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63177",
+  "espn_league_id": "17161"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1977-01-28"
+  ],
+  "event": {
+   "name": "England in India Test Series 1976/77",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Mohammad Ghouse",
+    "MV Nagendra"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Surinder Amarnath",
+    "Gundappa Viswanath",
+    "Brijesh Patel",
+    "Yajurvindra Singh",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Dennis Amiss",
+    "Mike Brearley",
+    "Keith Fletcher",
+    "Derek Randall",
+    "Roger Tolchard",
+    "Tony Greig",
+    "Alan Knott",
+    "Chris Old",
+    "John Lever",
+    "Derek Underwood",
+    "Bob Willis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Surinder Amarnath": "26226",
+    "Gundappa Viswanath": "35712",
+    "Brijesh Patel": "32231",
+    "Yajurvindra Singh": "36072",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Dennis Amiss": "8535",
+    "Mike Brearley": "9208",
+    "Keith Fletcher": "12854",
+    "Derek Randall": "19327",
+    "Roger Tolchard": "21550",
+    "Tony Greig": "13463",
+    "Alan Knott": "15917",
+    "Chris Old": "18256",
+    "John Lever": "16260",
+    "Derek Underwood": "22149",
+    "Bob Willis": "22462"
+   }
+  },
+  "season": "1977",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru"
+ },
+ "innings": []
+}

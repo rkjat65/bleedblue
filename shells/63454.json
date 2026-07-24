@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63454",
+  "espn_league_id": "16757",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jaipur",
+  "dates": [
+   "1987-02-21"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "V.K.Ramaswamy",
+    "Piloo Reporter"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Kiran More",
+    "Roger Binny",
+    "Shivlal Yadav",
+    "Gopal Sharma"
+   ],
+   "Pakistan": [
+    "Ramiz Raja",
+    "Shoaib Mohammad",
+    "Rizwan-uz-Zaman",
+    "Javed Miandad",
+    "Younis Ahmed",
+    "Saleem Malik",
+    "Imran Khan",
+    "Saleem Yousuf",
+    "Wasim Akram",
+    "Iqbal Qasim",
+    "Tauseef Ahmed"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Roger Binny": "26948",
+    "Shivlal Yadav": "36064",
+    "Gopal Sharma": "33952",
+    "Ramiz Raja": "42420",
+    "Shoaib Mohammad": "42658",
+    "Rizwan-uz-Zaman": "42428",
+    "Javed Miandad": "40879",
+    "Younis Ahmed": "43648",
+    "Saleem Malik": "42623",
+    "Imran Khan": "40560",
+    "Saleem Yousuf": "42626",
+    "Wasim Akram": "43547",
+    "Iqbal Qasim": "40572",
+    "Tauseef Ahmed": "43277"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Sawai Mansingh Stadium, Jaipur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 465,
+    "wickets": 8,
+    "balls": 981,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 773,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 114,
+    "wickets": 2,
+    "balls": 228,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 981,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 341,
+    "wickets": 10,
+    "balls": 773,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 228,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

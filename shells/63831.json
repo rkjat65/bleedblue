@@ -1,0 +1,155 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63831",
+  "espn_league_id": "15872",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1999-02-24"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1998/99"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Rudi Koertzen",
+    "Russell Tiffin",
+    "Hrishikesh Kanitkar",
+    "Ruwan Kalpage"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Saleem Badar"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Russel Arnold",
+    "Marvan Atapattu",
+    "Mahela Jayawardene",
+    "Chandika Hathurusinghe",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Romesh Kaluwitharana",
+    "Chaminda Vaas",
+    "Eric Upashantha",
+    "Ruchira Perera"
+   ],
+   "India": [
+    "Sadagoppan Ramesh",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sourav Ganguly",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Venkatesh Prasad",
+    "Harbhajan Singh",
+    "Ashish Nehra"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Russel Arnold": "48122",
+    "Marvan Atapattu": "48124",
+    "Mahela Jayawardene": "49289",
+    "Chandika Hathurusinghe": "49125",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Romesh Kaluwitharana": "49361",
+    "Chaminda Vaas": "50804",
+    "Eric Upashantha": "50791",
+    "Ruchira Perera": "49870",
+    "Sadagoppan Ramesh": "33066",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sourav Ganguly": "28779",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Harbhajan Singh": "29264",
+    "Ashish Nehra": "31820"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Sinhalese Sports Club Ground, Colombo",
+  "scorecard_totals": [
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 857,
+    "description": "declared"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 485,
+    "wickets": 10,
+    "balls": 955,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 624,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 518,
+    "wickets": 7,
+    "balls": 857,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 955,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 306,
+    "wickets": 5,
+    "balls": 624,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

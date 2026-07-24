@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63012",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Brisbane",
+  "dates": [
+   "1968-01-19"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Col Egar",
+    "Lou Rowan"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Bill Lawry",
+    "Ian Redpath",
+    "Bob Cowper",
+    "Paul Sheahan",
+    "Ian Chappell",
+    "Doug Walters",
+    "Barry Jarman",
+    "Eric Freeman",
+    "John Gleeson",
+    "Alan Connolly",
+    "David Renneberg"
+   ],
+   "India": [
+    "Farokh Engineer",
+    "Syed Abid Ali",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Mansur Ali Khan Pataudi",
+    "Motganhalli Jaisimha",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Umesh Kulkarni"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bill Lawry": "6270",
+    "Ian Redpath": "7314",
+    "Bob Cowper": "4645",
+    "Paul Sheahan": "7597",
+    "Ian Chappell": "4560",
+    "Doug Walters": "8151",
+    "Barry Jarman": "6013",
+    "Eric Freeman": "5258",
+    "John Gleeson": "5398",
+    "Alan Connolly": "4613",
+    "David Renneberg": "7328",
+    "Farokh Engineer": "28624",
+    "Syed Abid Ali": "26169",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Motganhalli Jaisimha": "29663",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Umesh Kulkarni": "30154"
+   }
+  },
+  "season": "1968",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Brisbane Cricket Ground, Woolloongabba, Brisbane",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 379,
+    "wickets": 10,
+    "balls": 674,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 600,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 294,
+    "wickets": 10,
+    "balls": 502,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 660,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 674,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 279,
+    "wickets": 10,
+    "balls": 600,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 502,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 355,
+    "wickets": 10,
+    "balls": 660,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63410",
+  "espn_league_id": "16834",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1985-09-06"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1985/86",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Selliah Ponnadurai",
+    "PW Vidanagamage"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Sidath Wettimuny",
+    "Amal Silva",
+    "Ranjan Madugalle",
+    "Roy Dias",
+    "Duleep Mendis",
+    "Arjuna Ranatunga",
+    "Aravinda de Silva",
+    "Ashantha de Mel",
+    "Rumesh Ratnayake",
+    "Sanjeewa Weerasinghe",
+    "Saliya Ahangama"
+   ],
+   "India": [
+    "Lalchand Rajput",
+    "Kris Srikkanth",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Laxman Sivaramakrishnan",
+    "Sunil Gavaskar",
+    "Mohinder Amarnath",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Sadanand Viswanath",
+    "Chetan Sharma"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sidath Wettimuny": "50844",
+    "Amal Silva": "50432",
+    "Ranjan Madugalle": "49623",
+    "Roy Dias": "48470",
+    "Duleep Mendis": "49629",
+    "Arjuna Ranatunga": "50244",
+    "Aravinda de Silva": "48462",
+    "Ashantha de Mel": "48447",
+    "Rumesh Ratnayake": "50249",
+    "Sanjeewa Weerasinghe": "50838",
+    "Saliya Ahangama": "48116",
+    "Lalchand Rajput": "33034",
+    "Kris Srikkanth": "34103",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Laxman Sivaramakrishnan": "34074",
+    "Sunil Gavaskar": "28794",
+    "Mohinder Amarnath": "26225",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Sadanand Viswanath": "35713",
+    "Chetan Sharma": "33949"
+   }
+  },
+  "season": "1985",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "P Sara Oval, Colombo",
+  "scorecard_totals": [
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 385,
+    "wickets": 10,
+    "balls": 939,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 571,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 206,
+    "wickets": 3,
+    "balls": 318,
+    "description": "declared"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 398,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 939,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 244,
+    "wickets": 10,
+    "balls": 571,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 318,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 198,
+    "wickets": 10,
+    "balls": 398,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

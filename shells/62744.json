@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62744",
+  "espn_league_id": "17458",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1952-11-28"
+  ],
+  "event": {
+   "name": "India in England Test Series 1952",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Noshirvan Nagarwala",
+    "Prasad Sinha"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "Madhav Apte",
+    "Vijay Hazare",
+    "Chingleput Gopinath",
+    "Polly Umrigar",
+    "Lala Amarnath",
+    "Dattu Phadkar",
+    "Gulabrai Ramchand",
+    "Ramesh Divecha",
+    "Ebrahim Maka",
+    "Subhash Gupte"
+   ],
+   "Pakistan": [
+    "Nazar Mohammad",
+    "Hanif Mohammad",
+    "Waqar Hasan",
+    "Imtiaz Ahmed",
+    "Abdul Kardar",
+    "Maqsood Ahmed",
+    "Anwar Hussain",
+    "Fazal Mahmood",
+    "Zulfiqar Ahmed",
+    "Mahmood Hussain",
+    "Amir Elahi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "Madhav Apte": "26269",
+    "Vijay Hazare": "29290",
+    "Chingleput Gopinath": "28855",
+    "Polly Umrigar": "35577",
+    "Lala Amarnath": "26223",
+    "Dattu Phadkar": "32309",
+    "Gulabrai Ramchand": "33062",
+    "Ramesh Divecha": "28095",
+    "Ebrahim Maka": "30908",
+    "Subhash Gupte": "28880",
+    "Nazar Mohammad": "42068",
+    "Hanif Mohammad": "40373",
+    "Waqar Hasan": "43541",
+    "Imtiaz Ahmed": "40565",
+    "Abdul Kardar": "41030",
+    "Maqsood Ahmed": "41270",
+    "Anwar Hussain": "39001",
+    "Fazal Mahmood": "40092",
+    "Zulfiqar Ahmed": "43706",
+    "Mahmood Hussain": "41267",
+    "Amir Elahi": "38997"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 665,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 175,
+    "wickets": 6,
+    "balls": 444,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 344,
+    "wickets": 10,
+    "balls": 665,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 444,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

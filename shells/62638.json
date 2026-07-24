@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62638",
+  "espn_league_id": "17551",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1936-06-27"
+  ],
+  "event": {
+   "name": "India in England Test Series 1936",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Arthur Dolphin",
+    "Fanny Walden"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Arthur Mitchell",
+    "Harold Gimblett",
+    "Maurice Turnbull",
+    "Maurice Leyland",
+    "Bob Wyatt",
+    "Joe Hardstaff",
+    "James Langridge",
+    "Gubby Allen",
+    "George Duckworth",
+    "Walter Robins",
+    "Hedley Verity"
+   ],
+   "India": [
+    "Vijay Merchant",
+    "Dattaram Hindlekar",
+    "Mushtaq Ali",
+    "C.K.Nayudu",
+    "Syed Wazir Ali",
+    "Amar Singh",
+    "Phiroze Palia",
+    "Jahangir Khan",
+    "Maharajah of Vizianagram",
+    "C.S. Nayudu",
+    "Mohammad Nissar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Arthur Mitchell": "17045",
+    "Harold Gimblett": "13379",
+    "Maurice Turnbull": "21614",
+    "Maurice Leyland": "16287",
+    "Bob Wyatt": "22545",
+    "Joe Hardstaff": "14041",
+    "James Langridge": "16195",
+    "Gubby Allen": "8515",
+    "George Duckworth": "11946",
+    "Walter Robins": "19450",
+    "Hedley Verity": "22185",
+    "Vijay Merchant": "30996",
+    "Dattaram Hindlekar": "29297",
+    "Mushtaq Ali": "31061",
+    "C.K.Nayudu": "31811",
+    "Syed Wazir Ali": "35940",
+    "Amar Singh": "26228",
+    "Phiroze Palia": "32157",
+    "Jahangir Khan": "29654",
+    "Maharajah of Vizianagram": "35930",
+    "C.S. Nayudu": "31813",
+    "Mohammad Nissar": "31791"
+   }
+  },
+  "season": "1936",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 331,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 134,
+    "wickets": 10,
+    "balls": 367,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 108,
+    "wickets": 1,
+    "balls": 237,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 147,
+    "wickets": 10,
+    "balls": 331,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 367,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 93,
+    "wickets": 10,
+    "balls": 276,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 237,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

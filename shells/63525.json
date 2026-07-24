@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63525",
+  "espn_league_id": "16615",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Auckland",
+  "dates": [
+   "1990-02-21"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1989/90",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Brian Aldridge",
+    "Steve Dunne"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Trevor Franklin",
+    "John Wright",
+    "Andrew Jones",
+    "Martin Crowe",
+    "Mark Greatbatch",
+    "Ken Rutherford",
+    "Shane Thomson",
+    "Richard Hadlee",
+    "Ian Smith",
+    "Martin Snedden",
+    "Danny Morrison"
+   ],
+   "India": [
+    "Woorkeri Raman",
+    "Manoj Prabhakar",
+    "Sanjay Manjrekar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Gursharan Singh",
+    "Kapil Dev",
+    "Kiran More",
+    "Atul Wassan",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Trevor Franklin": "37002",
+    "John Wright": "38757",
+    "Andrew Jones": "37491",
+    "Martin Crowe": "36622",
+    "Mark Greatbatch": "37105",
+    "Ken Rutherford": "38258",
+    "Shane Thomson": "38613",
+    "Richard Hadlee": "37224",
+    "Ian Smith": "38396",
+    "Martin Snedden": "38398",
+    "Danny Morrison": "37730",
+    "Woorkeri Raman": "33058",
+    "Manoj Prabhakar": "32323",
+    "Sanjay Manjrekar": "30934",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Gursharan Singh": "28884",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Atul Wassan": "35939",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Eden Park, Auckland",
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 391,
+    "wickets": 10,
+    "balls": 554,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 627,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 483,
+    "wickets": 5,
+    "balls": 954,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 554,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 482,
+    "wickets": 10,
+    "balls": 627,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 954,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 149,
+    "wickets": 0,
+    "balls": 270,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

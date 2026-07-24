@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "770131",
+  "espn_league_id": "11564"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cuttack",
+  "dates": [
+   "2014-10-22"
+  ],
+  "event": {
+   "name": "West Indies in India ODI Series 2014/15"
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [],
+   "West Indies": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "2014",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Barabati Stadium, Cuttack",
+  "overs": 20
+ },
+ "innings": []
+}

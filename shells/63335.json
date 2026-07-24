@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63335",
+  "espn_league_id": "16967",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kingston",
+  "dates": [
+   "1983-02-23"
+  ],
+  "event": {
+   "name": "India tour of Pakistan 1982/83",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "David Archer",
+    "Wesley Malcolm"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Viv Richards",
+    "Larry Gomes",
+    "Gus Logie",
+    "Clive Lloyd",
+    "Jeff Dujon",
+    "Malcolm Marshall",
+    "Andy Roberts",
+    "Michael Holding",
+    "Joel Garner"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Yashpal Sharma",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Balwinder Sandhu",
+    "Srinivas Venkataraghavan",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Viv Richards": "52812",
+    "Larry Gomes": "51891",
+    "Gus Logie": "52347",
+    "Clive Lloyd": "52345",
+    "Jeff Dujon": "51657",
+    "Malcolm Marshall": "52419",
+    "Andy Roberts": "52817",
+    "Michael Holding": "52063",
+    "Joel Garner": "51876",
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Yashpal Sharma": "36075",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Balwinder Sandhu": "33816",
+    "Srinivas Venkataraghavan": "35656",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Sabina Park, Kingston, Jamaica",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 526,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 254,
+    "wickets": 10,
+    "balls": 699,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 173,
+    "wickets": 6,
+    "balls": 152,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 251,
+    "wickets": 10,
+    "balls": 526,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 699,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 174,
+    "wickets": 10,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 152,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

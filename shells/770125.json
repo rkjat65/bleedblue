@@ -1,0 +1,118 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "770125",
+  "espn_league_id": "11564"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Visakhapatnam",
+  "dates": [
+   "2014-10-14"
+  ],
+  "event": {
+   "name": "West Indies in India ODI Series 2014/15",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Ian Gould",
+    "Sundaram Ravi"
+   ],
+   "match_referees": [
+    "Jeff Crowe"
+   ],
+   "tv_umpires": [
+    "Chettithody Shamshuddin"
+   ],
+   "reserve_umpires": [
+    "Pashchim Pathak"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Shikhar Dhawan",
+    "MS Dhoni",
+    "Ravindra Jadeja",
+    "Virat Kohli",
+    "Kuldeep Yadav",
+    "Bhuvneshwar Kumar",
+    "Amit Mishra",
+    "Mohammed Shami",
+    "Ajinkya Rahane",
+    "Suresh Raina",
+    "Ambati Rayudu",
+    "Ishant Sharma",
+    "Murali Vijay",
+    "Umesh Yadav"
+   ],
+   "West Indies": [
+    "Sulieman Benn",
+    "Dwayne Bravo",
+    "Darren Bravo",
+    "Jason Holder",
+    "Leon Johnson",
+    "Kieron Pollard",
+    "Denesh Ramdin",
+    "Ravi Rampaul",
+    "Kemar Roach",
+    "Andre Russell",
+    "Daren Sammy",
+    "Marlon Samuels",
+    "Lendl Simmons",
+    "Dwayne Smith",
+    "Jerome Taylor"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Shikhar Dhawan": "28235",
+    "MS Dhoni": "28081",
+    "Ravindra Jadeja": "234675",
+    "Virat Kohli": "253802",
+    "Kuldeep Yadav": "559235",
+    "Bhuvneshwar Kumar": "326016",
+    "Amit Mishra": "31107",
+    "Mohammed Shami": "481896",
+    "Ajinkya Rahane": "277916",
+    "Suresh Raina": "33335",
+    "Ambati Rayudu": "33141",
+    "Ishant Sharma": "236779",
+    "Murali Vijay": "237095",
+    "Umesh Yadav": "376116",
+    "Sulieman Benn": "51248",
+    "Dwayne Bravo": "51439",
+    "Darren Bravo": "277472",
+    "Jason Holder": "391485",
+    "Leon Johnson": "52280",
+    "Kieron Pollard": "230559",
+    "Denesh Ramdin": "52917",
+    "Ravi Rampaul": "52912",
+    "Kemar Roach": "230553",
+    "Andre Russell": "276298",
+    "Daren Sammy": "53115",
+    "Marlon Samuels": "52983",
+    "Lendl Simmons": "53116",
+    "Dwayne Smith": "53118",
+    "Jerome Taylor": "53191"
+   }
+  },
+  "season": "2014",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",
+  "overs": 50
+ },
+ "innings": []
+}

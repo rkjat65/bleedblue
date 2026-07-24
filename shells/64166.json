@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64166",
+  "espn_league_id": "17180",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sialkot",
+  "dates": [
+   "1978-10-13"
+  ],
+  "event": {
+   "name": "India in New Zealand ODI Series 1975/76",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Agha Saadat Ali",
+    "Shakoor Rana"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Sadiq Mohammad",
+    "Azmat Rana",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Wasim Raja",
+    "Mushtaq Mohammad",
+    "Hasan Jamil",
+    "Sarfraz Nawaz",
+    "Wasim Bari",
+    "Saleem Altaf",
+    "Sikander Bakht"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Dilip Vengsarkar",
+    "Surinder Amarnath",
+    "Gundappa Viswanath",
+    "Mohinder Amarnath",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sadiq Mohammad": "42601",
+    "Azmat Rana": "39026",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Wasim Raja": "43553",
+    "Mushtaq Mohammad": "41318",
+    "Hasan Jamil": "40376",
+    "Sarfraz Nawaz": "42630",
+    "Wasim Bari": "43549",
+    "Saleem Altaf": "42616",
+    "Sikander Bakht": "42661",
+    "Sunil Gavaskar": "28794",
+    "Dilip Vengsarkar": "35654",
+    "Surinder Amarnath": "26226",
+    "Gundappa Viswanath": "35712",
+    "Mohinder Amarnath": "26225",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875"
+   }
+  },
+  "season": "1978",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Jinnah Stadium, Sialkot",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 206,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 83,
+    "wickets": 2,
+    "balls": 101,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 79,
+    "wickets": 10,
+    "balls": 206,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 101,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

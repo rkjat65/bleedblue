@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62871",
+  "espn_league_id": "17382",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1960-01-13"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1959/60",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Narayan Sane",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Budhi Kunderan",
+    "Ramnath Kenny",
+    "Nari Contractor",
+    "Chandu Borde",
+    "Gulabrai Ramchand",
+    "AG Milkha Singh",
+    "Bapu Nadkarni",
+    "Man Sood",
+    "Ramakant Desai",
+    "Jasubhai Patel"
+   ],
+   "Australia": [
+    "Colin McDonald",
+    "Les Favell",
+    "Neil Harvey",
+    "Norm O'Neill",
+    "Peter Burge",
+    "Ken Mackay",
+    "Alan Davidson",
+    "Wally Grout",
+    "Richie Benaud",
+    "Ian Meckiff",
+    "Lindsay Kline"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Budhi Kunderan": "30178",
+    "Ramnath Kenny": "30066",
+    "Nari Contractor": "27667",
+    "Chandu Borde": "26962",
+    "Gulabrai Ramchand": "33062",
+    "AG Milkha Singh": "31004",
+    "Bapu Nadkarni": "31760",
+    "Man Sood": "34090",
+    "Ramakant Desai": "28045",
+    "Jasubhai Patel": "32236",
+    "Colin McDonald": "6554",
+    "Les Favell": "5220",
+    "Neil Harvey": "5603",
+    "Norm O'Neill": "7015",
+    "Peter Burge": "4241",
+    "Ken Mackay": "6445",
+    "Alan Davidson": "4902",
+    "Wally Grout": "5449",
+    "Richie Benaud": "4123",
+    "Ian Meckiff": "6598",
+    "Lindsay Kline": "6159"
+   }
+  },
+  "season": "1960",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Nehru Stadium, Madras",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 918,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 149,
+    "wickets": 10,
+    "balls": 463,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 138,
+    "wickets": 10,
+    "balls": 630,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 342,
+    "wickets": 10,
+    "balls": 918,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 463,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 630,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

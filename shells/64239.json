@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64239",
+  "espn_league_id": "16896",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Quetta",
+  "dates": [
+   "1984-10-12"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1984/85",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Javed Akhtar",
+    "Khizer Hayat"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Mohsin Khan",
+    "Saadat Ali",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Naved Anjum",
+    "Manzoor Elahi",
+    "Ashraf Ali",
+    "Mudassar Nazar",
+    "Tahir Naqqash",
+    "Rashid Khan",
+    "Tauseef Ahmed"
+   ],
+   "India": [
+    "Ravi Shastri",
+    "Surinder Khanna",
+    "Roger Binny",
+    "Sunil Gavaskar",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Mohinder Amarnath",
+    "Madan Lal",
+    "Chetan Sharma",
+    "Balwinder Sandhu",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mohsin Khan": "41303",
+    "Saadat Ali": "42599",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Naved Anjum": "42062",
+    "Manzoor Elahi": "41262",
+    "Ashraf Ali": "39008",
+    "Mudassar Nazar": "41308",
+    "Tahir Naqqash": "43271",
+    "Rashid Khan": "42421",
+    "Tauseef Ahmed": "43277",
+    "Ravi Shastri": "33975",
+    "Surinder Khanna": "30077",
+    "Roger Binny": "26948",
+    "Sunil Gavaskar": "28794",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Mohinder Amarnath": "26225",
+    "Madan Lal": "30873",
+    "Chetan Sharma": "33949",
+    "Balwinder Sandhu": "33816",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Ayub National Stadium, Quetta",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 199,
+    "wickets": 7,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 223,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 153,
+    "wickets": 10,
+    "balls": 223,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

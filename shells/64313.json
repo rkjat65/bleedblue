@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64313",
+  "espn_league_id": "16761",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1987-12-08"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Rajan Mehra",
+    "V Vikramraju"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Arun Lal",
+    "Aunshuman Gaekwad",
+    "Dilip Vengsarkar",
+    "Chandrakant Pandit",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Kiran More",
+    "Arshad Ayub",
+    "Chetan Sharma",
+    "Maninder Singh"
+   ],
+   "West Indies": [
+    "Desmond Haynes",
+    "Gordon Greenidge",
+    "Richie Richardson",
+    "Viv Richards",
+    "Gus Logie",
+    "Carl Hooper",
+    "Jeff Dujon",
+    "Roger Harper",
+    "Winston Benjamin",
+    "Courtney Walsh",
+    "Patrick Patterson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Arun Lal": "26295",
+    "Aunshuman Gaekwad": "28754",
+    "Dilip Vengsarkar": "35654",
+    "Chandrakant Pandit": "32179",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Chetan Sharma": "33949",
+    "Maninder Singh": "30923",
+    "Desmond Haynes": "52047",
+    "Gordon Greenidge": "51901",
+    "Richie Richardson": "52810",
+    "Viv Richards": "52812",
+    "Gus Logie": "52347",
+    "Carl Hooper": "52066",
+    "Jeff Dujon": "51657",
+    "Roger Harper": "52045",
+    "Winston Benjamin": "51220",
+    "Courtney Walsh": "53216",
+    "Patrick Patterson": "52671"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 193,
+    "wickets": 10,
+    "balls": 268,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 203,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 268,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

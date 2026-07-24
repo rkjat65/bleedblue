@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62952",
+  "espn_league_id": "17340",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1964-10-02"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1964/65",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "Samar Roy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Prince Indrajitsinhji",
+    "Dilip Sardesai",
+    "Vijay Manjrekar",
+    "Hanumant Singh",
+    "Mansur Ali Khan Pataudi",
+    "Chandu Borde",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "AG Kripal Singh",
+    "Vasant Ranjane"
+   ],
+   "Australia": [
+    "Bill Lawry",
+    "Bob Simpson",
+    "Norm O'Neill",
+    "Peter Burge",
+    "Brian Booth",
+    "Johnny Martin",
+    "Ian Redpath",
+    "Tom Veivers",
+    "Graham McKenzie",
+    "Wally Grout",
+    "Neil Hawke"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Prince Indrajitsinhji": "29533",
+    "Dilip Sardesai": "33850",
+    "Vijay Manjrekar": "30936",
+    "Hanumant Singh": "29260",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "AG Kripal Singh": "30132",
+    "Vasant Ranjane": "33092",
+    "Bill Lawry": "6270",
+    "Bob Simpson": "7619",
+    "Norm O'Neill": "7015",
+    "Peter Burge": "4241",
+    "Brian Booth": "4171",
+    "Johnny Martin": "6509",
+    "Ian Redpath": "7314",
+    "Tom Veivers": "8103",
+    "Graham McKenzie": "6576",
+    "Wally Grout": "5449",
+    "Neil Hawke": "5611"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Nehru Stadium, Madras",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 432,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 276,
+    "wickets": 10,
+    "balls": 795,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 952,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 193,
+    "wickets": 10,
+    "balls": 480,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 211,
+    "wickets": 10,
+    "balls": 432,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 795,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 397,
+    "wickets": 10,
+    "balls": 952,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 480,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

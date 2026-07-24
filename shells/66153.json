@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66153",
+  "espn_league_id": "15960"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1998-06-23"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "K.T.Francis",
+    "TM Samarasinghe"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Peter Manuel"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Hrishikesh Kanitkar",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Ajit Agarkar",
+    "Venkatesh Prasad",
+    "Harbhajan Singh"
+   ],
+   "New Zealand": [
+    "Bryan Young",
+    "Nathan Astle",
+    "Stephen Fleming",
+    "Craig McMillan",
+    "Matt Horne",
+    "Chris Cairns",
+    "Adam Parore",
+    "Chris Harris",
+    "Mark Priest",
+    "Daniel Vettori",
+    "Paul Wiseman"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Hrishikesh Kanitkar": "30018",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Ajit Agarkar": "26184",
+    "Venkatesh Prasad": "32345",
+    "Harbhajan Singh": "29264",
+    "Bryan Young": "38929",
+    "Nathan Astle": "36185",
+    "Stephen Fleming": "37000",
+    "Craig McMillan": "37712",
+    "Matt Horne": "37250",
+    "Chris Cairns": "36597",
+    "Adam Parore": "38117",
+    "Chris Harris": "37232",
+    "Mark Priest": "38132",
+    "Daniel Vettori": "38710",
+    "Paul Wiseman": "38753"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "R.Premadasa Stadium, Khettarama, Colombo",
+  "overs": 50
+ },
+ "innings": []
+}

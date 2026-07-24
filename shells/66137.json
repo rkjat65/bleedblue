@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66137",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kochi",
+  "dates": [
+   "1998-04-01"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Shyam Bansal",
+    "Arani Jayaprakash"
+   ],
+   "match_referees": [
+    "Peter van der Merwe"
+   ],
+   "tv_umpires": [
+    "KN Raghavan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Navjot Sidhu",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Ajay Jadeja",
+    "Hrishikesh Kanitkar",
+    "Nayan Mongia",
+    "Ajit Agarkar",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Debasis Mohanty"
+   ],
+   "Australia": [
+    "Mark Waugh",
+    "Adam Gilchrist",
+    "Ricky Ponting",
+    "Michael Bevan",
+    "Steve Waugh",
+    "Darren Lehmann",
+    "Tom Moody",
+    "Damien Martyn",
+    "Shane Warne",
+    "Michael Kasprowicz",
+    "Damien Fleming"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Navjot Sidhu": "34028",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Ajay Jadeja": "29632",
+    "Hrishikesh Kanitkar": "30018",
+    "Nayan Mongia": "31036",
+    "Ajit Agarkar": "26184",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Debasis Mohanty": "31025",
+    "Mark Waugh": "8189",
+    "Adam Gilchrist": "5390",
+    "Ricky Ponting": "7133",
+    "Michael Bevan": "4144",
+    "Steve Waugh": "8192",
+    "Darren Lehmann": "6285",
+    "Tom Moody": "6628",
+    "Damien Martyn": "6513",
+    "Shane Warne": "8166",
+    "Michael Kasprowicz": "6126",
+    "Damien Fleming": "5239"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Nehru Stadium, Kochi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 309,
+    "wickets": 5,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 275,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 268,
+    "wickets": 10,
+    "balls": 275,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

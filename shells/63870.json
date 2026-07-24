@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63870",
+  "espn_league_id": "15710",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "2000-02-24"
+  ],
+  "event": {
+   "name": "South Africa in India Test Series 1999/00",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "David Shepherd",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Sameer Bandekar"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Wasim Jaffer",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Ajit Agarkar",
+    "Javagal Srinath",
+    "Murali Kartik"
+   ],
+   "South Africa": [
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Jacques Kallis",
+    "Hansie Cronje",
+    "Pieter Strydom",
+    "Lance Klusener",
+    "Shaun Pollock",
+    "Mark Boucher",
+    "Nicky Boje",
+    "Clive Eksteen",
+    "Allan Donald"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Wasim Jaffer": "29646",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Ajit Agarkar": "26184",
+    "Javagal Srinath": "34105",
+    "Murali Kartik": "30049",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Jacques Kallis": "45789",
+    "Hansie Cronje": "44485",
+    "Pieter Strydom": "47255",
+    "Lance Klusener": "45821",
+    "Shaun Pollock": "46774",
+    "Mark Boucher": "44111",
+    "Nicky Boje": "44091",
+    "Clive Eksteen": "44954",
+    "Allan Donald": "44716"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 225,
+    "wickets": 10,
+    "balls": 476,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 384,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 113,
+    "wickets": 10,
+    "balls": 302,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 378,
+    "description": "target reached"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 476,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 176,
+    "wickets": 10,
+    "balls": 384,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 302,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 4,
+    "runs": 164,
+    "wickets": 6,
+    "balls": 378,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

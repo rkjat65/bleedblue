@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "903591",
+  "espn_league_id": "11279"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "2015-10-08"
+  ],
+  "event": {
+   "name": "South Africa in India T20I Series 2015/16",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Anil Chaudhary",
+    "Vineet Kulkarni"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Nandan"
+   ],
+   "reserve_umpires": [
+    "Chettithody Shamshuddin"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sreenath Aravind",
+    "Ravichandran Ashwin",
+    "Stuart Binny",
+    "Shikhar Dhawan",
+    "MS Dhoni",
+    "Harbhajan Singh",
+    "Virat Kohli",
+    "Bhuvneshwar Kumar",
+    "Amit Mishra",
+    "Axar Patel",
+    "Ajinkya Rahane",
+    "Suresh Raina",
+    "Ambati Rayudu",
+    "Mohit Sharma",
+    "Rohit Sharma"
+   ],
+   "South Africa": [
+    "Kyle Abbott",
+    "Hashim Amla",
+    "Farhaan Behardien",
+    "Quinton de Kock",
+    "Marchant de Lange",
+    "AB de Villiers",
+    "Jean-Paul Duminy",
+    "Faf du Plessis",
+    "Imran Tahir",
+    "Eddie Leie",
+    "David Miller",
+    "Albie Morkel",
+    "Chris Morris",
+    "Kagiso Rabada",
+    "Khaya Zondo"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sreenath Aravind": "290632",
+    "Ravichandran Ashwin": "26421",
+    "Stuart Binny": "27223",
+    "Shikhar Dhawan": "28235",
+    "MS Dhoni": "28081",
+    "Harbhajan Singh": "29264",
+    "Virat Kohli": "253802",
+    "Bhuvneshwar Kumar": "326016",
+    "Amit Mishra": "31107",
+    "Axar Patel": "554691",
+    "Ajinkya Rahane": "277916",
+    "Suresh Raina": "33335",
+    "Ambati Rayudu": "33141",
+    "Mohit Sharma": "537119",
+    "Rohit Sharma": "34102",
+    "Kyle Abbott": "297583",
+    "Hashim Amla": "43906",
+    "Farhaan Behardien": "44410",
+    "Quinton de Kock": "379143",
+    "Marchant de Lange": "393279",
+    "AB de Villiers": "44936",
+    "Jean-Paul Duminy": "44932",
+    "Faf du Plessis": "44828",
+    "Imran Tahir": "40618",
+    "Eddie Leie": "46149",
+    "David Miller": "321777",
+    "Albie Morkel": "46248",
+    "Chris Morris": "439952",
+    "Kagiso Rabada": "550215",
+    "Khaya Zondo": "318842"
+   }
+  },
+  "season": "2015",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

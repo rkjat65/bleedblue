@@ -1,0 +1,149 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63339",
+  "espn_league_id": "16966",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "St John's",
+  "dates": [
+   "1983-04-28"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1982/83",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "David Archer",
+    "Andrew Weekes",
+    "Faoud Bacchus"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Winston Davis",
+    "Viv Richards",
+    "Larry Gomes",
+    "Gus Logie",
+    "Jeff Dujon",
+    "Clive Lloyd",
+    "Malcolm Marshall",
+    "Andy Roberts",
+    "Michael Holding"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Yashpal Sharma",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Madan Lal",
+    "Laxman Sivaramakrishnan",
+    "Srinivas Venkataraghavan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Winston Davis": "51643",
+    "Viv Richards": "52812",
+    "Larry Gomes": "51891",
+    "Gus Logie": "52347",
+    "Jeff Dujon": "51657",
+    "Clive Lloyd": "52345",
+    "Malcolm Marshall": "52419",
+    "Andy Roberts": "52817",
+    "Michael Holding": "52063",
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Yashpal Sharma": "36075",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Madan Lal": "30873",
+    "Laxman Sivaramakrishnan": "34074",
+    "Srinivas Venkataraghavan": "35656"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Antigua Recreation Ground, St John's, Antigua",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 761,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 550,
+    "wickets": 9,
+    "balls": 1000,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 528,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 457,
+    "wickets": 10,
+    "balls": 761,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1000,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 247,
+    "wickets": 5,
+    "balls": 528,
+    "description": "declared"
+   }
+  ]
+ },
+ "innings": []
+}

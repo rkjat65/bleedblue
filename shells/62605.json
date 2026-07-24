@@ -1,0 +1,163 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62605",
+  "espn_league_id": "17576",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1932-06-25"
+  ],
+  "event": {
+   "name": "India in England Test Match 1932"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Frank Chester",
+    "Joe Hardstaff"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Percy Holmes",
+    "Herbert Sutcliffe",
+    "Frank Woolley",
+    "Wally Hammond",
+    "Douglas Jardine",
+    "Eddie Paynter",
+    "Les Ames",
+    "Walter Robins",
+    "Freddie Brown",
+    "Bill Voce",
+    "Bill Bowes"
+   ],
+   "India": [
+    "Janardan Navle",
+    "Naoomal Jeoomal",
+    "Syed Wazir Ali",
+    "C.K.Nayudu",
+    "Sorabji Colah",
+    "Nazir Ali",
+    "Phiroze Palia",
+    "Lall Singh",
+    "Jahangir Khan",
+    "Amar Singh",
+    "Mohammad Nissar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Percy Holmes": "14254",
+    "Herbert Sutcliffe": "20413",
+    "Frank Woolley": "22518",
+    "Wally Hammond": "14022",
+    "Douglas Jardine": "15481",
+    "Eddie Paynter": "18475",
+    "Les Ames": "8532",
+    "Walter Robins": "19450",
+    "Freddie Brown": "9255",
+    "Bill Voce": "22192",
+    "Bill Bowes": "9181",
+    "Janardan Navle": "31806",
+    "Naoomal Jeoomal": "31939",
+    "Syed Wazir Ali": "35940",
+    "C.K.Nayudu": "31811",
+    "Sorabji Colah": "27665",
+    "Nazir Ali": "31816",
+    "Phiroze Palia": "32157",
+    "Lall Singh": "30743",
+    "Jahangir Khan": "29654",
+    "Amar Singh": "26228",
+    "Mohammad Nissar": "31791"
+   }
+  },
+  "season": "1932",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 259,
+    "wickets": 10,
+    "balls": 631,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 558,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 275,
+    "wickets": 8,
+    "balls": 660,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 357,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 631,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 189,
+    "wickets": 10,
+    "balls": 558,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 660,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 187,
+    "wickets": 10,
+    "balls": 357,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

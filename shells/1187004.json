@@ -1,0 +1,146 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1187004",
+  "espn_league_id": "19311"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dharamsala",
+  "dates": [
+   "2019-09-15"
+  ],
+  "event": {
+   "name": "Bangladesh in India T20I Series 2019/20",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Nitin Menon",
+    "Nandan"
+   ],
+   "match_referees": [
+    "Richie Richardson"
+   ],
+   "tv_umpires": [
+    "Chettithody Shamshuddin"
+   ],
+   "reserve_umpires": [
+    "Anil Chaudhary"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Khaleel Ahmed",
+    "Deepak Chahar",
+    "Rahul Chahar",
+    "Shikhar Dhawan",
+    "Shreyas Iyer",
+    "Ravindra Jadeja",
+    "Virat Kohli",
+    "Manish Pandey",
+    "Hardik Pandya",
+    "Krunal Pandya",
+    "Rishabh Pant",
+    "KL Rahul",
+    "Navdeep Saini",
+    "Rohit Sharma",
+    "Washington Sundar"
+   ],
+   "South Africa": [
+    "Temba Bavuma",
+    "Junior Dala",
+    "Quinton de Kock",
+    "Bjorn Fortuin",
+    "Beuran Hendricks",
+    "Reeza Hendricks",
+    "George Linde",
+    "David Miller",
+    "Anrich Nortje",
+    "Andile Phehlukwayo",
+    "Dwaine Pretorius",
+    "Kagiso Rabada",
+    "Tabraiz Shamsi",
+    "Rassie van der Dussen"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Khaleel Ahmed": "942645",
+    "Deepak Chahar": "447261",
+    "Rahul Chahar": "1064812",
+    "Shikhar Dhawan": "28235",
+    "Shreyas Iyer": "642519",
+    "Ravindra Jadeja": "234675",
+    "Virat Kohli": "253802",
+    "Manish Pandey": "290630",
+    "Hardik Pandya": "625371",
+    "Krunal Pandya": "471342",
+    "Rishabh Pant": "931581",
+    "KL Rahul": "422108",
+    "Navdeep Saini": "700167",
+    "Rohit Sharma": "34102",
+    "Washington Sundar": "719715",
+    "Temba Bavuma": "372116",
+    "Junior Dala": "545467",
+    "Quinton de Kock": "379143",
+    "Bjorn Fortuin": "553249",
+    "Beuran Hendricks": "379927",
+    "Reeza Hendricks": "269280",
+    "George Linde": "481875",
+    "David Miller": "321777",
+    "Anrich Nortje": "481979",
+    "Andile Phehlukwayo": "540316",
+    "Dwaine Pretorius": "327830",
+    "Kagiso Rabada": "550215",
+    "Tabraiz Shamsi": "379145",
+    "Rassie van der Dussen": "337790"
+   }
+  },
+  "season": "2019",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

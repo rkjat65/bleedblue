@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64199",
+  "espn_league_id": "16968",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lahore",
+  "dates": [
+   "1982-12-31"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1982/83",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Khizer Hayat",
+    "Shakoor Rana"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Mohsin Khan",
+    "Mudassar Nazar",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Wasim Raja",
+    "Mansoor Akhtar",
+    "Imran Khan",
+    "Ijaz Faqih",
+    "Tahir Naqqash",
+    "Wasim Bari",
+    "Shahid Mahboob"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Syed Kirmani",
+    "Ravi Shastri",
+    "Madan Lal",
+    "Balwinder Sandhu"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mohsin Khan": "41303",
+    "Mudassar Nazar": "41308",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Wasim Raja": "43553",
+    "Mansoor Akhtar": "41263",
+    "Imran Khan": "40560",
+    "Ijaz Faqih": "40556",
+    "Tahir Naqqash": "43271",
+    "Wasim Bari": "43549",
+    "Shahid Mahboob": "42644",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Syed Kirmani": "30116",
+    "Ravi Shastri": "33975",
+    "Madan Lal": "30873",
+    "Balwinder Sandhu": "33816"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Gaddafi Stadium, Lahore",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 252,
+    "wickets": 3,
+    "balls": 198,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 162,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 198,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 193,
+    "wickets": 4,
+    "balls": 162,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

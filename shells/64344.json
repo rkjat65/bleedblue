@@ -1,0 +1,134 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64344",
+  "espn_league_id": "16628",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "St John's",
+  "dates": [
+   "1989-03-18"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1989/90",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Steve Bucknor",
+    "Andrew Weekes",
+    "Winston Benjamin"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Jeff Dujon",
+    "Viv Richards",
+    "Keith Arthurton",
+    "Gus Logie",
+    "Eldine Baptiste",
+    "Curtly Ambrose",
+    "Ian Bishop",
+    "Courtney Walsh"
+   ],
+   "India": [
+    "Kris Srikkanth",
+    "Arun Lal",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Ajay Sharma",
+    "Robin Singh",
+    "Kiran More",
+    "Arshad Ayub",
+    "Chetan Sharma"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Jeff Dujon": "51657",
+    "Viv Richards": "52812",
+    "Keith Arthurton": "51110",
+    "Gus Logie": "52347",
+    "Eldine Baptiste": "51211",
+    "Curtly Ambrose": "51107",
+    "Ian Bishop": "51226",
+    "Courtney Walsh": "53216",
+    "Kris Srikkanth": "34103",
+    "Arun Lal": "26295",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Ajay Sharma": "33943",
+    "Robin Singh": "34059",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Chetan Sharma": "33949"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Antigua Recreation Ground, St John's, Antigua",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 240,
+    "wickets": 2,
+    "balls": 260,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 237,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 260,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

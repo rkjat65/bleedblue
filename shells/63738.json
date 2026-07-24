@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63738",
+  "espn_league_id": "16127"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Johannesburg",
+  "dates": [
+   "1997-01-16"
+  ],
+  "event": {
+   "name": "India in South Africa Test Series 1996/97",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Cyril Mitchley",
+    "Peter Willey",
+    "Pankaj Dharmani"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "David Orchard"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Andrew Hudson",
+    "Gary Kirsten",
+    "Adam Bacher",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Brian McMillan",
+    "Shaun Pollock",
+    "David Richardson",
+    "Lance Klusener",
+    "Allan Donald",
+    "Paul Adams"
+   ],
+   "India": [
+    "Vikram Rathour",
+    "Nayan Mongia",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Mohammad Azharuddin",
+    "VVS Laxman",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Dodda Ganesh",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Andrew Hudson": "45458",
+    "Gary Kirsten": "45813",
+    "Adam Bacher": "44024",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Brian McMillan": "46214",
+    "Shaun Pollock": "46774",
+    "David Richardson": "46978",
+    "Lance Klusener": "45821",
+    "Allan Donald": "44716",
+    "Paul Adams": "43919",
+    "Vikram Rathour": "33120",
+    "Nayan Mongia": "31036",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Mohammad Azharuddin": "26329",
+    "VVS Laxman": "30750",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Dodda Ganesh": "28774",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "The Wanderers Stadium, Johannesburg"
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63134",
+  "espn_league_id": "17205",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1975-01-11"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1974/75",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "B Satyaji Rao",
+    "MS Sivasankariah"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Farokh Engineer",
+    "Eknath Solkar",
+    "Aunshuman Gaekwad",
+    "Gundappa Viswanath",
+    "Mansur Ali Khan Pataudi",
+    "Ashok Mankad",
+    "Madan Lal",
+    "Karsan Ghavri",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Roy Fredericks",
+    "Gordon Greenidge",
+    "Alvin Kallicharran",
+    "Vanburn Holder",
+    "Viv Richards",
+    "Clive Lloyd",
+    "Deryck Murray",
+    "Bernard Julien",
+    "Keith Boyce",
+    "Lance Gibbs",
+    "Andy Roberts"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Farokh Engineer": "28624",
+    "Eknath Solkar": "34085",
+    "Aunshuman Gaekwad": "28754",
+    "Gundappa Viswanath": "35712",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Ashok Mankad": "30938",
+    "Madan Lal": "30873",
+    "Karsan Ghavri": "28813",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Roy Fredericks": "51797",
+    "Gordon Greenidge": "51901",
+    "Alvin Kallicharran": "52285",
+    "Vanburn Holder": "52061",
+    "Viv Richards": "52812",
+    "Clive Lloyd": "52345",
+    "Deryck Murray": "52441",
+    "Bernard Julien": "52208",
+    "Keith Boyce": "51229",
+    "Lance Gibbs": "51883",
+    "Andy Roberts": "52817"
+   }
+  },
+  "season": "1975",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 190,
+    "wickets": 10,
+    "balls": 353,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 356,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 256,
+    "wickets": 10,
+    "balls": 628,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 402,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 353,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 192,
+    "wickets": 10,
+    "balls": 356,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 628,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 154,
+    "wickets": 10,
+    "balls": 402,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

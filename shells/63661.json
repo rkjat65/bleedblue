@@ -1,0 +1,167 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63661",
+  "espn_league_id": "16321",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1994-12-01"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1994/95",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Nigel Plews",
+    "V.K.Ramaswamy"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Venkatapathy Raju",
+    "Mohammad Azharuddin",
+    "Sanjay Manjrekar",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Rajesh Chauhan"
+   ],
+   "West Indies": [
+    "Phil Simmons",
+    "Stuart Williams",
+    "Anderson Cummins",
+    "Brian Lara",
+    "Jimmy Adams",
+    "Carl Hooper",
+    "Keith Arthurton",
+    "Shivnarine Chanderpaul",
+    "Junior Murray",
+    "Kenny Benjamin",
+    "Courtney Walsh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Venkatapathy Raju": "33044",
+    "Mohammad Azharuddin": "26329",
+    "Sanjay Manjrekar": "30934",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Rajesh Chauhan": "27622",
+    "Phil Simmons": "52934",
+    "Stuart Williams": "53234",
+    "Anderson Cummins": "51488",
+    "Brian Lara": "52337",
+    "Jimmy Adams": "51100",
+    "Carl Hooper": "52066",
+    "Keith Arthurton": "51110",
+    "Shivnarine Chanderpaul": "51469",
+    "Junior Murray": "52442",
+    "Kenny Benjamin": "51218",
+    "Courtney Walsh": "53216"
+   }
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 546,
+    "wickets": 9,
+    "balls": 930,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 918,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 208,
+    "wickets": 7,
+    "balls": 382,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 372,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 930,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 428,
+    "wickets": 10,
+    "balls": 918,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 382,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 132,
+    "wickets": 5,
+    "balls": 372,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

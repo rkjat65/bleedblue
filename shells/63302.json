@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63302",
+  "espn_league_id": "17021",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1982-01-13"
+  ],
+  "event": {
+   "name": "England in India Test Series 1981/82",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bhairab Ganguli",
+    "SN Hanumantha Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Pranab Roy",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Ashok Malhotra",
+    "Syed Kirmani",
+    "Ravi Shastri",
+    "Madan Lal",
+    "Dilip Doshi"
+   ],
+   "England": [
+    "Graham Gooch",
+    "Chris Tavar\u00e9",
+    "Keith Fletcher",
+    "David Gower",
+    "Ian Botham",
+    "Mike Gatting",
+    "Graham Dilley",
+    "Bob Taylor",
+    "Derek Underwood",
+    "Paul Allott",
+    "Bob Willis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Pranab Roy": "33187",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Ashok Malhotra": "30912",
+    "Syed Kirmani": "30116",
+    "Ravi Shastri": "33975",
+    "Madan Lal": "30873",
+    "Dilip Doshi": "28107",
+    "Graham Gooch": "13399",
+    "Chris Tavar\u00e9": "21466",
+    "Keith Fletcher": "12854",
+    "David Gower": "13418",
+    "Ian Botham": "9163",
+    "Mike Gatting": "13340",
+    "Graham Dilley": "11893",
+    "Bob Taylor": "21494",
+    "Derek Underwood": "22149",
+    "Paul Allott": "8526",
+    "Bob Willis": "22462"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 481,
+    "wickets": 4,
+    "balls": 913,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 935,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 160,
+    "wickets": 3,
+    "balls": 300,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 913,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 328,
+    "wickets": 10,
+    "balls": 935,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "declared"
+   }
+  ]
+ },
+ "innings": []
+}

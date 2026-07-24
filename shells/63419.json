@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63419",
+  "espn_league_id": "16834",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Melbourne",
+  "dates": [
+   "1985-12-26"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1985/86",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dick French",
+    "Raymond Isherwood"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Wayne Phillips",
+    "David Boon",
+    "Geoff Marsh",
+    "Allan Border",
+    "David Hookes",
+    "Steve Waugh",
+    "Greg Matthews",
+    "Ray Bright",
+    "Craig McDermott",
+    "Bruce Reid",
+    "Dave Gilbert"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Roger Binny",
+    "Syed Kirmani",
+    "Laxman Sivaramakrishnan",
+    "Shivlal Yadav"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Wayne Phillips": "7115",
+    "David Boon": "4169",
+    "Geoff Marsh": "6499",
+    "Allan Border": "4174",
+    "David Hookes": "5696",
+    "Steve Waugh": "8192",
+    "Greg Matthews": "6525",
+    "Ray Bright": "4208",
+    "Craig McDermott": "6551",
+    "Bruce Reid": "7319",
+    "Dave Gilbert": "5385",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Roger Binny": "26948",
+    "Syed Kirmani": "30116",
+    "Laxman Sivaramakrishnan": "34074",
+    "Shivlal Yadav": "36064"
+   }
+  },
+  "season": "1985",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Melbourne Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 262,
+    "wickets": 10,
+    "balls": 623,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 890,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 308,
+    "wickets": 10,
+    "balls": 743,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 150,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 623,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 445,
+    "wickets": 10,
+    "balls": 890,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 743,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 59,
+    "wickets": 2,
+    "balls": 150,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62690",
+  "espn_league_id": "17507",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1948-11-10"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1947/48",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dattatreya Naik",
+    "Jamshed Patel"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "KC Ibrahim",
+    "Rusi Modi",
+    "Lala Amarnath",
+    "Vijay Hazare",
+    "Dattu Phadkar",
+    "Hemu Adhikari",
+    "Chandu Sarwate",
+    "Khokhan Sen",
+    "Commandur Rangachari",
+    "Keki Tarapore"
+   ],
+   "West Indies": [
+    "Allan Rae",
+    "Jeffrey Stollmeyer",
+    "George Headley",
+    "Clyde Walcott",
+    "Gerry Gomez",
+    "John Goddard",
+    "Everton Weekes",
+    "Robert Christiani",
+    "Jimmy Cameron",
+    "Denis Atkinson",
+    "Prior Jones"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "KC Ibrahim": "29529",
+    "Rusi Modi": "31021",
+    "Lala Amarnath": "26223",
+    "Vijay Hazare": "29290",
+    "Dattu Phadkar": "32309",
+    "Hemu Adhikari": "26179",
+    "Chandu Sarwate": "33859",
+    "Khokhan Sen": "34741",
+    "Commandur Rangachari": "33088",
+    "Keki Tarapore": "35313",
+    "Allan Rae": "52801",
+    "Jeffrey Stollmeyer": "52953",
+    "George Headley": "52050",
+    "Clyde Walcott": "53211",
+    "Gerry Gomez": "51893",
+    "John Goddard": "51889",
+    "Everton Weekes": "53241",
+    "Robert Christiani": "51473",
+    "Jimmy Cameron": "51458",
+    "Denis Atkinson": "51134",
+    "Prior Jones": "52220"
+   }
+  },
+  "season": "1948",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1102,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 454,
+    "wickets": 10,
+    "balls": 952,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 220,
+    "wickets": 6,
+    "balls": 612,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 631,
+    "wickets": 10,
+    "balls": 1102,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 952,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 612,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

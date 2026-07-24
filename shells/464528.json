@@ -1,0 +1,144 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "464528",
+  "espn_league_id": "13070"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kochi",
+  "dates": [
+   "2010-10-17"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 2010/11",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Billy Bowden",
+    "Amiesh Saheba"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Sanjay Hazare"
+   ],
+   "reserve_umpires": [
+    "Chettithody Shamshuddin"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ravichandran Ashwin",
+    "Shikhar Dhawan",
+    "MS Dhoni",
+    "Ravindra Jadeja",
+    "Virat Kohli",
+    "Praveen Kumar",
+    "Ashish Nehra",
+    "Munaf Patel",
+    "Suresh Raina",
+    "Rohit Sharma",
+    "Saurabh Tiwary",
+    "Murali Vijay",
+    "Vinay Kumar",
+    "Yuvraj Singh"
+   ],
+   "Australia": [
+    "Doug Bollinger",
+    "Michael Clarke",
+    "Callum Ferguson",
+    "John Hastings",
+    "Nathan Hauritz",
+    "James Hopes",
+    "Michael Hussey",
+    "Clint McKay",
+    "Shaun Marsh",
+    "Tim Paine",
+    "Steven Smith",
+    "Mitchell Starc",
+    "David Warner",
+    "Cameron White"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ravichandran Ashwin": "26421",
+    "Shikhar Dhawan": "28235",
+    "MS Dhoni": "28081",
+    "Ravindra Jadeja": "234675",
+    "Virat Kohli": "253802",
+    "Praveen Kumar": "30732",
+    "Ashish Nehra": "31820",
+    "Munaf Patel": "32965",
+    "Suresh Raina": "33335",
+    "Rohit Sharma": "34102",
+    "Saurabh Tiwary": "35390",
+    "Murali Vijay": "237095",
+    "Vinay Kumar": "35731",
+    "Yuvraj Singh": "36084",
+    "Doug Bollinger": "4508",
+    "Michael Clarke": "4578",
+    "Callum Ferguson": "5236",
+    "John Hastings": "228622",
+    "Nathan Hauritz": "5593",
+    "James Hopes": "5702",
+    "Michael Hussey": "5939",
+    "Clint McKay": "6903",
+    "Shaun Marsh": "6683",
+    "Tim Paine": "7252",
+    "Steven Smith": "267192",
+    "Mitchell Starc": "311592",
+    "David Warner": "219889",
+    "Cameron White": "8291"
+   }
+  },
+  "season": "2010",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Nehru Stadium, Kochi",
+  "overs": 50
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 9.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63237",
+  "espn_league_id": "17070",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Birmingham",
+  "dates": [
+   "1979-07-12"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1979/80",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "David Constant",
+    "Barrie Meyer"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Mike Brearley",
+    "Geoff Boycott",
+    "Derek Randall",
+    "Graham Gooch",
+    "David Gower",
+    "Ian Botham",
+    "Geoff Miller",
+    "Phil Edmonds",
+    "Bob Taylor",
+    "Bob Willis",
+    "Mike Hendrick"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Kapil Dev",
+    "Karsan Ghavri",
+    "Bharath Reddy",
+    "Srinivas Venkataraghavan",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mike Brearley": "9208",
+    "Geoff Boycott": "9187",
+    "Derek Randall": "19327",
+    "Graham Gooch": "13399",
+    "David Gower": "13418",
+    "Ian Botham": "9163",
+    "Geoff Miller": "17025",
+    "Phil Edmonds": "12486",
+    "Bob Taylor": "21494",
+    "Bob Willis": "22462",
+    "Mike Hendrick": "14159",
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Kapil Dev": "30028",
+    "Karsan Ghavri": "28813",
+    "Bharath Reddy": "33152",
+    "Srinivas Venkataraghavan": "35656",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Edgbaston, Birmingham",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 633,
+    "wickets": 5,
+    "balls": 992,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 697,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 574,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 992,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 297,
+    "wickets": 10,
+    "balls": 697,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 253,
+    "wickets": 10,
+    "balls": 574,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

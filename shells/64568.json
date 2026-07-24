@@ -1,0 +1,123 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64568",
+  "espn_league_id": "16032",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Indore",
+  "dates": [
+   "1997-12-25"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1997/98",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Subroto Porel",
+    "Devendra Sharma"
+   ],
+   "match_referees": [
+    "Ahmed Ebrahim"
+   ],
+   "tv_umpires": [
+    "Sudhir Asnani"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Ajay Jadeja",
+    "Navjot Sidhu",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Javagal Srinath",
+    "Rajesh Chauhan",
+    "Sairaj Bahutule",
+    "Hrishikesh Kanitkar"
+   ],
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Romesh Kaluwitharana",
+    "Roshan Mahanama",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Upul Chandana",
+    "Kumar Dharmasena",
+    "Chaminda Vaas",
+    "Muthiah Muralidaran",
+    "Sajeewa de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Ajay Jadeja": "29632",
+    "Navjot Sidhu": "34028",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Javagal Srinath": "34105",
+    "Rajesh Chauhan": "27622",
+    "Sairaj Bahutule": "26815",
+    "Hrishikesh Kanitkar": "30018",
+    "Sanath Jayasuriya": "49209",
+    "Romesh Kaluwitharana": "49361",
+    "Roshan Mahanama": "49626",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Upul Chandana": "48369",
+    "Kumar Dharmasena": "48469",
+    "Chaminda Vaas": "50804",
+    "Muthiah Muralidaran": "49636",
+    "Sajeewa de Silva": "48460"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Nehru Stadium, Indore",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 18,
+    "description": ""
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 17,
+    "wickets": 1,
+    "balls": 18,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

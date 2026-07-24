@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64178",
+  "espn_league_id": "17022",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hamilton",
+  "dates": [
+   "1981-02-14"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1981/82",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "John Hastie",
+    "Robert Monteith"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "John Wright",
+    "Bruce Edgar",
+    "Jock Edwards",
+    "Geoff Howarth",
+    "Jeremy Coney",
+    "Ian Smith",
+    "Richard Hadlee",
+    "Gary Robertson",
+    "Martin Snedden",
+    "Gary Troup",
+    "Ewen Chatfield"
+   ],
+   "India": [
+    "Chetan Chauhan",
+    "Roger Binny",
+    "Dilip Vengsarkar",
+    "Kirti Azad",
+    "Gundappa Viswanath",
+    "Sandeep Patil",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Yograj Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Wright": "38757",
+    "Bruce Edgar": "36951",
+    "Jock Edwards": "36952",
+    "Geoff Howarth": "37254",
+    "Jeremy Coney": "36609",
+    "Ian Smith": "38396",
+    "Richard Hadlee": "37224",
+    "Gary Robertson": "38252",
+    "Martin Snedden": "38398",
+    "Gary Troup": "38617",
+    "Ewen Chatfield": "36603",
+    "Chetan Chauhan": "27619",
+    "Roger Binny": "26948",
+    "Dilip Vengsarkar": "35654",
+    "Kirti Azad": "26325",
+    "Gundappa Viswanath": "35712",
+    "Sandeep Patil": "32283",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Yograj Singh": "36078"
+   }
+  },
+  "season": "1981",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Seddon Park, Hamilton",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 210,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 272,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 153,
+    "wickets": 10,
+    "balls": 272,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

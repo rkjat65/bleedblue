@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63005",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1967-06-22"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Syd Buller",
+    "Arthur Jepson"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "John Edrich",
+    "Ken Barrington",
+    "Dennis Amiss",
+    "Tom Graveney",
+    "Basil D'Oliveira",
+    "Brian Close",
+    "John Murray",
+    "Ray Illingworth",
+    "Robin Hobbs",
+    "David Brown",
+    "John Snow"
+   ],
+   "India": [
+    "Dilip Sardesai",
+    "Farokh Engineer",
+    "Ajit Wadekar",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Rusi Surti",
+    "Venkataraman Subramanya",
+    "Budhi Kunderan",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Edrich": "12490",
+    "Ken Barrington": "9014",
+    "Dennis Amiss": "8535",
+    "Tom Graveney": "13434",
+    "Basil D'Oliveira": "11914",
+    "Brian Close": "10754",
+    "John Murray": "17130",
+    "Ray Illingworth": "15385",
+    "Robin Hobbs": "14227",
+    "David Brown": "9252",
+    "John Snow": "20282",
+    "Dilip Sardesai": "33850",
+    "Farokh Engineer": "28624",
+    "Ajit Wadekar": "35933",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Rusi Surti": "34174",
+    "Venkataraman Subramanya": "34215",
+    "Budhi Kunderan": "30178",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1967",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 334,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 386,
+    "wickets": 10,
+    "balls": 926,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 339,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 152,
+    "wickets": 10,
+    "balls": 334,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 926,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 110,
+    "wickets": 9,
+    "balls": 339,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

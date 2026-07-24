@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63132",
+  "espn_league_id": "17212",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1974-12-11"
+  ],
+  "event": {
+   "name": "India in England Test Series 1974",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sudhir Naik",
+    "Farokh Engineer",
+    "Hemant Kanitkar",
+    "Gundappa Viswanath",
+    "Parthasarthi Sharma",
+    "Brijesh Patel",
+    "Eknath Solkar",
+    "Syed Abid Ali",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Deryck Murray",
+    "Elquemedo Willett",
+    "Alvin Kallicharran",
+    "Viv Richards",
+    "Clive Lloyd",
+    "Roy Fredericks",
+    "Bernard Julien",
+    "Keith Boyce",
+    "Lance Gibbs",
+    "Andy Roberts"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sudhir Naik": "31778",
+    "Farokh Engineer": "28624",
+    "Hemant Kanitkar": "30019",
+    "Gundappa Viswanath": "35712",
+    "Parthasarthi Sharma": "33958",
+    "Brijesh Patel": "32231",
+    "Eknath Solkar": "34085",
+    "Syed Abid Ali": "26169",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Gordon Greenidge": "51901",
+    "Deryck Murray": "52441",
+    "Elquemedo Willett": "53227",
+    "Alvin Kallicharran": "52285",
+    "Viv Richards": "52812",
+    "Clive Lloyd": "52345",
+    "Roy Fredericks": "51797",
+    "Bernard Julien": "52208",
+    "Keith Boyce": "51229",
+    "Lance Gibbs": "51883",
+    "Andy Roberts": "52817"
+   }
+  },
+  "season": "1974",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 220,
+    "wickets": 10,
+    "balls": 519,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 846,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 256,
+    "wickets": 10,
+    "balls": 581,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 519,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 493,
+    "wickets": 10,
+    "balls": 846,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 581,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

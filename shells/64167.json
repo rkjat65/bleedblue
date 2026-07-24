@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64167",
+  "espn_league_id": "17180",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sahiwal",
+  "dates": [
+   "1978-11-03"
+  ],
+  "event": {
+   "name": "India in New Zealand ODI Series 1975/76",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Javed Akhtar",
+    "Khizer Hayat"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Majid Khan",
+    "Azmat Rana",
+    "Zaheer Abbas",
+    "Asif Iqbal",
+    "Javed Miandad",
+    "Hasan Jamil",
+    "Mushtaq Mohammad",
+    "Imran Khan",
+    "Sarfraz Nawaz",
+    "Wasim Bari",
+    "Saleem Altaf"
+   ],
+   "India": [
+    "Chetan Chauhan",
+    "Aunshuman Gaekwad",
+    "Surinder Amarnath",
+    "Gundappa Viswanath",
+    "Mohinder Amarnath",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Karsan Ghavri",
+    "Bharath Reddy",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Majid Khan": "41919",
+    "Azmat Rana": "39026",
+    "Zaheer Abbas": "43695",
+    "Asif Iqbal": "39010",
+    "Javed Miandad": "40879",
+    "Hasan Jamil": "40376",
+    "Mushtaq Mohammad": "41318",
+    "Imran Khan": "40560",
+    "Sarfraz Nawaz": "42630",
+    "Wasim Bari": "43549",
+    "Saleem Altaf": "42616",
+    "Chetan Chauhan": "27619",
+    "Aunshuman Gaekwad": "28754",
+    "Surinder Amarnath": "26226",
+    "Gundappa Viswanath": "35712",
+    "Mohinder Amarnath": "26225",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Karsan Ghavri": "28813",
+    "Bharath Reddy": "33152",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875"
+   }
+  },
+  "season": "1978",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Zafar Ali Stadium, Sahiwal",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 205,
+    "wickets": 7,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 226,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 183,
+    "wickets": 2,
+    "balls": 226,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62968",
+  "espn_league_id": "17330"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1965-03-19"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1964/65",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sambhu Pan",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Dilip Sardesai",
+    "Motganhalli Jaisimha",
+    "Hanumant Singh",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Venkataraman Subramanya",
+    "Farokh Engineer",
+    "Bapu Nadkarni",
+    "Ramakant Desai",
+    "Srinivas Venkataraghavan",
+    "Bhagwath Chandrasekhar"
+   ],
+   "New Zealand": [
+    "Graham Dowling",
+    "Terry Jarvis",
+    "Ross Morgan",
+    "Bevan Congdon",
+    "John Reid",
+    "Bert Sutcliffe",
+    "Bruce Taylor",
+    "Vic Pollard",
+    "John Ward",
+    "Richard Collinge",
+    "Frank Cameron"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dilip Sardesai": "33850",
+    "Motganhalli Jaisimha": "29663",
+    "Hanumant Singh": "29260",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Venkataraman Subramanya": "34215",
+    "Farokh Engineer": "28624",
+    "Bapu Nadkarni": "31760",
+    "Ramakant Desai": "28045",
+    "Srinivas Venkataraghavan": "35656",
+    "Bhagwath Chandrasekhar": "27591",
+    "Graham Dowling": "36837",
+    "Terry Jarvis": "37488",
+    "Ross Morgan": "37727",
+    "Bevan Congdon": "36611",
+    "John Reid": "38248",
+    "Bert Sutcliffe": "38413",
+    "Bruce Taylor": "38609",
+    "Vic Pollard": "38129",
+    "John Ward": "38741",
+    "Richard Collinge": "36606",
+    "Frank Cameron": "36599"
+   }
+  },
+  "season": "1965",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi"
+ },
+ "innings": []
+}

@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64504",
+  "espn_league_id": "16244",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Pune",
+  "dates": [
+   "1995-11-24"
+  ],
+  "event": {
+   "name": "New Zealand in India ODI Series 1995/96",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Sekhar Choudhary",
+    "K Parthasarathy"
+   ],
+   "match_referees": [
+    "Peter Burge"
+   ],
+   "tv_umpires": [
+    "Tirumalasetti Sreedhar"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Sachin Tendulkar",
+    "Vinod Kambli",
+    "Mohammad Azharuddin",
+    "Sanjay Manjrekar",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Aashish Kapoor",
+    "Venkatesh Prasad"
+   ],
+   "New Zealand": [
+    "Mark Greatbatch",
+    "Nathan Astle",
+    "Martin Crowe",
+    "Stephen Fleming",
+    "Roger Twose",
+    "Chris Cairns",
+    "Shane Thomson",
+    "Lee Germon",
+    "Gavin Larsen",
+    "Dion Nash",
+    "Danny Morrison"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Sachin Tendulkar": "35320",
+    "Vinod Kambli": "30009",
+    "Mohammad Azharuddin": "26329",
+    "Sanjay Manjrekar": "30934",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Aashish Kapoor": "30030",
+    "Venkatesh Prasad": "32345",
+    "Mark Greatbatch": "37105",
+    "Nathan Astle": "36185",
+    "Martin Crowe": "36622",
+    "Stephen Fleming": "37000",
+    "Roger Twose": "38624",
+    "Chris Cairns": "36597",
+    "Shane Thomson": "38613",
+    "Lee Germon": "37101",
+    "Gavin Larsen": "37601",
+    "Dion Nash": "38008",
+    "Danny Morrison": "37730"
+   }
+  },
+  "season": "1995",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Nehru Stadium, Pune",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 236,
+    "wickets": 5,
+    "balls": 275,
+    "description": "target reached"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 235,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 275,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

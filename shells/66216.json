@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66216",
+  "espn_league_id": "15864",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mohali",
+  "dates": [
+   "1999-04-01"
+  ],
+  "event": {
+   "name": "Pakistan tour of India 1998/99"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Shyam Bansal",
+    "Krishna Hariharan"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Amiesh Saheba"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Saba Karim",
+    "Rahul Dravid",
+    "Ajay Jadeja",
+    "Amay Khurasiya",
+    "Robin Singh",
+    "Virender Sehwag",
+    "Hrishikesh Kanitkar",
+    "Laxmi Shukla",
+    "Gyanendra Pandey",
+    "Venkatesh Prasad"
+   ],
+   "Pakistan": [
+    "Saeed Anwar",
+    "Shahid Afridi",
+    "Imran Nazir",
+    "Ijaz Ahmed",
+    "Inzamam-ul-Haq",
+    "Azhar Mahmood",
+    "Moin Khan",
+    "Wasim Akram",
+    "Shoaib Akhtar",
+    "Saqlain Mushtaq",
+    "Shahid Nazir"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Saba Karim": "30042",
+    "Rahul Dravid": "28114",
+    "Ajay Jadeja": "29632",
+    "Amay Khurasiya": "30112",
+    "Robin Singh": "34059",
+    "Virender Sehwag": "35263",
+    "Hrishikesh Kanitkar": "30018",
+    "Laxmi Shukla": "34019",
+    "Gyanendra Pandey": "32168",
+    "Venkatesh Prasad": "32345",
+    "Saeed Anwar": "42605",
+    "Shahid Afridi": "42639",
+    "Imran Nazir": "40563",
+    "Ijaz Ahmed": "40551",
+    "Inzamam-ul-Haq": "40570",
+    "Azhar Mahmood": "39024",
+    "Moin Khan": "41306",
+    "Wasim Akram": "43547",
+    "Shoaib Akhtar": "42655",
+    "Saqlain Mushtaq": "42628",
+    "Shahid Nazir": "42646"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "I.S. Bindra Punjab Cricket Association Stadium",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 196,
+    "wickets": 10,
+    "balls": 299,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 252,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 299,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 197,
+    "wickets": 3,
+    "balls": 252,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

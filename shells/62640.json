@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62640",
+  "espn_league_id": "17551",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1936-08-15"
+  ],
+  "event": {
+   "name": "India in England Test Series 1936",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Frank Chester",
+    "Fanny Walden"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Charlie Barnett",
+    "Arthur Fagg",
+    "Wally Hammond",
+    "Maurice Leyland",
+    "Stan Worthington",
+    "Laurie Fishlock",
+    "Gubby Allen",
+    "Hedley Verity",
+    "Jim Sims",
+    "Bill Voce",
+    "George Duckworth"
+   ],
+   "India": [
+    "Vijay Merchant",
+    "Mushtaq Ali",
+    "Dilawar Hussain",
+    "C.K.Nayudu",
+    "Cotar Ramaswami",
+    "Syed Wazir Ali",
+    "Amar Singh",
+    "Jahangir Khan",
+    "Maharajah of Vizianagram",
+    "Baqa Jilani",
+    "Mohammad Nissar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Charlie Barnett": "9000",
+    "Arthur Fagg": "12800",
+    "Wally Hammond": "14022",
+    "Maurice Leyland": "16287",
+    "Stan Worthington": "22526",
+    "Laurie Fishlock": "12845",
+    "Gubby Allen": "8515",
+    "Hedley Verity": "22185",
+    "Jim Sims": "20200",
+    "Bill Voce": "22192",
+    "George Duckworth": "11946",
+    "Vijay Merchant": "30996",
+    "Mushtaq Ali": "31061",
+    "Dilawar Hussain": "28092",
+    "C.K.Nayudu": "31811",
+    "Cotar Ramaswami": "33059",
+    "Syed Wazir Ali": "35940",
+    "Amar Singh": "26228",
+    "Jahangir Khan": "29654",
+    "Maharajah of Vizianagram": "35930",
+    "Baqa Jilani": "26860",
+    "Mohammad Nissar": "31791"
+   }
+  },
+  "season": "1936",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Kennington Oval, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 471,
+    "wickets": 8,
+    "balls": 774,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 515,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 558,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 64,
+    "wickets": 1,
+    "balls": 78,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 774,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 222,
+    "wickets": 10,
+    "balls": 515,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 312,
+    "wickets": 10,
+    "balls": 558,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 78,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

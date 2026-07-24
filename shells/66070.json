@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66070",
+  "espn_league_id": "16148",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Paarl",
+  "dates": [
+   "1997-01-27"
+  ],
+  "event": {
+   "name": "Australia tour of India 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Wilf Diedricks",
+    "Rudi Koertzen"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "David Orchard"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Javagal Srinath",
+    "Mohammad Azharuddin",
+    "Rahul Dravid",
+    "Ajay Jadeja",
+    "Saba Karim",
+    "Robin Singh",
+    "Anil Kumble",
+    "Salil Ankola",
+    "Venkatesh Prasad"
+   ],
+   "Zimbabwe": [
+    "Grant Flower",
+    "Andy Waller",
+    "Andy Flower",
+    "Paul Strang",
+    "Alistair Campbell",
+    "Dave Houghton",
+    "Guy Whittall",
+    "Craig Evans",
+    "Heath Streak",
+    "Eddo Brandes",
+    "John Rennie"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Javagal Srinath": "34105",
+    "Mohammad Azharuddin": "26329",
+    "Rahul Dravid": "28114",
+    "Ajay Jadeja": "29632",
+    "Saba Karim": "30042",
+    "Robin Singh": "34059",
+    "Anil Kumble": "30176",
+    "Salil Ankola": "26257",
+    "Venkatesh Prasad": "32345",
+    "Grant Flower": "55429",
+    "Andy Waller": "55840",
+    "Andy Flower": "55427",
+    "Paul Strang": "55758",
+    "Alistair Campbell": "55301",
+    "Dave Houghton": "55497",
+    "Guy Whittall": "55848",
+    "Craig Evans": "55408",
+    "Heath Streak": "55761",
+    "Eddo Brandes": "55267",
+    "John Rennie": "55714"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Boland Park, Paarl",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 236,
+    "wickets": 10,
+    "balls": 299,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 236,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 299,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

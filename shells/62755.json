@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62755",
+  "espn_league_id": "17452",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kingston",
+  "dates": [
+   "1953-03-28"
+  ],
+  "event": {
+   "name": "India in West Indies Test Series 1952/53",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sam Burke",
+    "Tom Ewart"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Bruce Pairaudeau",
+    "Jeffrey Stollmeyer",
+    "Frank Worrell",
+    "Everton Weekes",
+    "Clyde Walcott",
+    "Robert Christiani",
+    "Gerry Gomez",
+    "Ralph Legall",
+    "Frank King",
+    "Alfred Scott",
+    "Alf Valentine"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Madhav Apte",
+    "Gulabrai Ramchand",
+    "Vijay Hazare",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "Vinoo Mankad",
+    "Chandrasekhar Gadkari",
+    "Jayasinghrao Ghorpade",
+    "Subhash Gupte",
+    "Deepak Shodhan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bruce Pairaudeau": "52669",
+    "Jeffrey Stollmeyer": "52953",
+    "Frank Worrell": "53238",
+    "Everton Weekes": "53241",
+    "Clyde Walcott": "53211",
+    "Robert Christiani": "51473",
+    "Gerry Gomez": "51893",
+    "Ralph Legall": "52341",
+    "Frank King": "52291",
+    "Alfred Scott": "53110",
+    "Alf Valentine": "53196",
+    "Pankaj Roy": "33186",
+    "Madhav Apte": "26269",
+    "Gulabrai Ramchand": "33062",
+    "Vijay Hazare": "29290",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "Vinoo Mankad": "30939",
+    "Chandrasekhar Gadkari": "28751",
+    "Jayasinghrao Ghorpade": "28814",
+    "Subhash Gupte": "28880",
+    "Deepak Shodhan": "34007"
+   }
+  },
+  "season": "1953",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Sabina Park, Kingston, Jamaica",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 851,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 576,
+    "wickets": 10,
+    "balls": 1237,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1068,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 92,
+    "wickets": 4,
+    "balls": 282,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 312,
+    "wickets": 9,
+    "balls": 851,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1237,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 444,
+    "wickets": 10,
+    "balls": 1068,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

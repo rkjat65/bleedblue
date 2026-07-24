@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63827",
+  "espn_league_id": "15872",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hamilton",
+  "dates": [
+   "1999-01-01"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1998/99",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Doug Cowie",
+    "Rudi Koertzen",
+    "VVS Laxman"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Billy Bowden"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Matthew Bell",
+    "Matt Horne",
+    "Stephen Fleming",
+    "Roger Twose",
+    "Craig McMillan",
+    "Adam Parore",
+    "Paul Wiseman",
+    "Chris Cairns",
+    "Dion Nash",
+    "Daniel Vettori",
+    "Simon Doull"
+   ],
+   "India": [
+    "Navjot Sidhu",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Mohammad Azharuddin",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad",
+    "Robin Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Matthew Bell": "36294",
+    "Matt Horne": "37250",
+    "Stephen Fleming": "37000",
+    "Roger Twose": "38624",
+    "Craig McMillan": "37712",
+    "Adam Parore": "38117",
+    "Paul Wiseman": "38753",
+    "Chris Cairns": "36597",
+    "Dion Nash": "38008",
+    "Daniel Vettori": "38710",
+    "Simon Doull": "36835",
+    "Navjot Sidhu": "34028",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Mohammad Azharuddin": "26329",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Robin Singh": "34060"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Seddon Park, Hamilton",
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 366,
+    "wickets": 10,
+    "balls": 728,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 771,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 464,
+    "wickets": 8,
+    "balls": 827,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 313,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 728,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 416,
+    "wickets": 10,
+    "balls": 771,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 827,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 249,
+    "wickets": 2,
+    "balls": 313,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

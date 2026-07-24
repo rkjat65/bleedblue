@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64598",
+  "espn_league_id": "15870",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Taupo",
+  "dates": [
+   "1999-01-09"
+  ],
+  "event": {
+   "name": "India in New Zealand ODI Series 1998/99",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Billy Bowden",
+    "Doug Cowie"
+   ],
+   "match_referees": [
+    "Talat Ali"
+   ],
+   "tv_umpires": [
+    "Tony Hill"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Roger Twose",
+    "Matt Horne",
+    "Craig McMillan",
+    "Chris Cairns",
+    "Adam Parore",
+    "Chris Harris",
+    "Dion Nash",
+    "Stephen Fleming",
+    "Daniel Vettori",
+    "Gavin Larsen",
+    "Simon Doull"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Hrishikesh Kanitkar",
+    "Nayan Mongia",
+    "Nikhil Chopra",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roger Twose": "38624",
+    "Matt Horne": "37250",
+    "Craig McMillan": "37712",
+    "Chris Cairns": "36597",
+    "Adam Parore": "38117",
+    "Chris Harris": "37232",
+    "Dion Nash": "38008",
+    "Stephen Fleming": "37000",
+    "Daniel Vettori": "38710",
+    "Gavin Larsen": "37601",
+    "Simon Doull": "36835",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Hrishikesh Kanitkar": "30018",
+    "Nayan Mongia": "31036",
+    "Nikhil Chopra": "27641",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Owen Delany Park, Taupo",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 200,
+    "wickets": 5,
+    "balls": 228,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 257,
+    "wickets": 5,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 228,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

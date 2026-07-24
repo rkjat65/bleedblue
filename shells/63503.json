@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63503",
+  "espn_league_id": "16676",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Georgetown",
+  "dates": [
+   "1989-03-25"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1988/89",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "David Archer",
+    "Lloyd Barker"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Keith Arthurton",
+    "Viv Richards",
+    "Ian Bishop",
+    "Gus Logie",
+    "Jeff Dujon",
+    "Curtly Ambrose",
+    "Winston Benjamin",
+    "Courtney Walsh"
+   ],
+   "India": [
+    "Arun Lal",
+    "Navjot Sidhu",
+    "Ravi Shastri",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sanjay Manjrekar",
+    "Kapil Dev",
+    "Kiran More",
+    "Arshad Ayub",
+    "Chetan Sharma",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Keith Arthurton": "51110",
+    "Viv Richards": "52812",
+    "Ian Bishop": "51226",
+    "Gus Logie": "52347",
+    "Jeff Dujon": "51657",
+    "Curtly Ambrose": "51107",
+    "Winston Benjamin": "51220",
+    "Courtney Walsh": "53216",
+    "Arun Lal": "26295",
+    "Navjot Sidhu": "34028",
+    "Ravi Shastri": "33975",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sanjay Manjrekar": "30934",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Chetan Sharma": "33949",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Bourda, Georgetown, Guyana",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 437,
+    "wickets": 10,
+    "balls": 846,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 234,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 846,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 86,
+    "wickets": 1,
+    "balls": 234,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

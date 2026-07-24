@@ -1,0 +1,167 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63567",
+  "espn_league_id": "16520",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Perth",
+  "dates": [
+   "1992-02-01"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1991/92",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Tony Crafter",
+    "Terry Prue"
+   ],
+   "match_referees": [
+    "Peter May"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Mark Taylor",
+    "Wayne Phillips",
+    "David Boon",
+    "Allan Border",
+    "Dean Jones",
+    "Tom Moody",
+    "Ian Healy",
+    "Merv Hughes",
+    "Paul Reiffel",
+    "Craig McDermott",
+    "Mike Whitney"
+   ],
+   "India": [
+    "Kris Srikkanth",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Sachin Tendulkar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Venkatapathy Raju",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Javagal Srinath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mark Taylor": "7924",
+    "Wayne Phillips": "7116",
+    "David Boon": "4169",
+    "Allan Border": "4174",
+    "Dean Jones": "6044",
+    "Tom Moody": "6628",
+    "Ian Healy": "5628",
+    "Merv Hughes": "5726",
+    "Paul Reiffel": "7326",
+    "Craig McDermott": "6551",
+    "Mike Whitney": "8220",
+    "Kris Srikkanth": "34103",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Sachin Tendulkar": "35320",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Venkatapathy Raju": "33044",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Javagal Srinath": "34105"
+   }
+  },
+  "season": "1992",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "W.A.C.A. Ground, Perth",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 346,
+    "wickets": 10,
+    "balls": 755,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 539,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 367,
+    "wickets": 6,
+    "balls": 681,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 331,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 755,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 272,
+    "wickets": 10,
+    "balls": 539,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 681,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 141,
+    "wickets": 10,
+    "balls": 331,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

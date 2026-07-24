@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63334",
+  "espn_league_id": "16966",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Karachi",
+  "dates": [
+   "1983-01-30"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1982/83",
+   "match_number": 6
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Javed Akhtar",
+    "Khizer Hayat"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Mohsin Khan",
+    "Mudassar Nazar",
+    "Javed Miandad",
+    "Zaheer Abbas",
+    "Wasim Raja",
+    "Imran Khan",
+    "Wasim Bari",
+    "Sarfraz Nawaz",
+    "Saleem Malik",
+    "Tahir Naqqash",
+    "Abdul Qadir"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Ravi Shastri",
+    "Mohinder Amarnath",
+    "Yashpal Sharma",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Syed Kirmani",
+    "Kapil Dev",
+    "Balwinder Sandhu",
+    "Thirumalai Sekar",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mohsin Khan": "41303",
+    "Mudassar Nazar": "41308",
+    "Javed Miandad": "40879",
+    "Zaheer Abbas": "43695",
+    "Wasim Raja": "43553",
+    "Imran Khan": "40560",
+    "Wasim Bari": "43549",
+    "Sarfraz Nawaz": "42630",
+    "Saleem Malik": "42623",
+    "Tahir Naqqash": "43271",
+    "Abdul Qadir": "38973",
+    "Sunil Gavaskar": "28794",
+    "Ravi Shastri": "33975",
+    "Mohinder Amarnath": "26225",
+    "Yashpal Sharma": "36075",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Syed Kirmani": "30116",
+    "Kapil Dev": "30028",
+    "Balwinder Sandhu": "33816",
+    "Thirumalai Sekar": "33891",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "National Stadium, Karachi",
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 816,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 420,
+    "wickets": 6,
+    "balls": 704,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 408,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 393,
+    "wickets": 8,
+    "balls": 816,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 704,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 224,
+    "wickets": 2,
+    "balls": 408,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

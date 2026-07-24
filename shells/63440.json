@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63440",
+  "espn_league_id": "16782",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1986-10-15"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jiban Ghosh",
+    "Ram Gupta",
+    "Mike Veletta",
+    "Laxman Sivaramakrishnan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Kiran More",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Shivlal Yadav",
+    "Raju Kulkarni",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "Geoff Marsh",
+    "David Boon",
+    "Dean Jones",
+    "Allan Border",
+    "Greg Ritchie",
+    "Greg Matthews",
+    "Steve Waugh",
+    "Tim Zoehrer",
+    "Ray Bright",
+    "Dave Gilbert",
+    "Bruce Reid"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Kiran More": "31038",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Shivlal Yadav": "36064",
+    "Raju Kulkarni": "30151",
+    "Maninder Singh": "30923",
+    "Geoff Marsh": "6499",
+    "David Boon": "4169",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Greg Matthews": "6525",
+    "Steve Waugh": "8192",
+    "Tim Zoehrer": "8468",
+    "Ray Bright": "4208",
+    "Dave Gilbert": "5385",
+    "Bruce Reid": "7319"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 886,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 517,
+    "wickets": 5,
+    "balls": 1020,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 528,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 345,
+    "wickets": 10,
+    "balls": 886,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1020,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 216,
+    "wickets": 2,
+    "balls": 528,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

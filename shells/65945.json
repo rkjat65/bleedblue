@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65945",
+  "espn_league_id": "16614",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sharjah",
+  "dates": [
+   "1991-10-23"
+  ],
+  "event": {
+   "name": "India tour of New Zealand 1989/90"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "B.C. Cooray",
+    "Udaya Wickramasinghe",
+    "Mushtaq Ahmed"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ravi Shastri",
+    "Vinod Kambli",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Javagal Srinath",
+    "Venkatapathy Raju",
+    "Anil Kumble"
+   ],
+   "Pakistan": [
+    "Aamer Sohail",
+    "Saeed Anwar",
+    "Zahid Fazal",
+    "Saleem Malik",
+    "Imran Khan",
+    "Wasim Akram",
+    "Ijaz Ahmed",
+    "Moin Khan",
+    "Akram Raza",
+    "Waqar Younis",
+    "Aaqib Javed"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ravi Shastri": "33975",
+    "Vinod Kambli": "30009",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Javagal Srinath": "34105",
+    "Venkatapathy Raju": "33044",
+    "Anil Kumble": "30176",
+    "Aamer Sohail": "38967",
+    "Saeed Anwar": "42605",
+    "Zahid Fazal": "43697",
+    "Saleem Malik": "42623",
+    "Imran Khan": "40560",
+    "Wasim Akram": "43547",
+    "Ijaz Ahmed": "40551",
+    "Moin Khan": "41306",
+    "Akram Raza": "38989",
+    "Waqar Younis": "43543",
+    "Aaqib Javed": "38970"
+   }
+  },
+  "season": "1991",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Sharjah Cricket Stadium",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 253,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 257,
+    "wickets": 7,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

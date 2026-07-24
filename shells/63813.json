@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63813",
+  "espn_league_id": "15892",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Harare",
+  "dates": [
+   "1998-10-07"
+  ],
+  "event": {
+   "name": "India in Zimbabwe Test Match 1998/99"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Rudi Koertzen",
+    "Ian Robinson",
+    "Debasis Mohanty",
+    "Andy Whittall"
+   ],
+   "match_referees": [
+    "Alan Smith"
+   ],
+   "tv_umpires": [
+    "Kevan Barbour"
+   ]
+  },
+  "outcome": {
+   "winner": "Zimbabwe"
+  },
+  "players": {
+   "Zimbabwe": [
+    "Craig Wishart",
+    "Gavin Rennie",
+    "Murray Goodwin",
+    "Alistair Campbell",
+    "Andy Flower",
+    "Neil Johnson",
+    "Craig Evans",
+    "Heath Streak",
+    "Henry Olonga",
+    "Adam Huckle",
+    "Pommie Mbangwa"
+   ],
+   "India": [
+    "Nayan Mongia",
+    "Navjot Sidhu",
+    "Anil Kumble",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sourav Ganguly",
+    "Robin Singh",
+    "Ajit Agarkar",
+    "Javagal Srinath",
+    "Harbhajan Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Craig Wishart": "55854",
+    "Gavin Rennie": "55713",
+    "Murray Goodwin": "55456",
+    "Alistair Campbell": "55301",
+    "Andy Flower": "55427",
+    "Neil Johnson": "55528",
+    "Craig Evans": "55408",
+    "Heath Streak": "55761",
+    "Henry Olonga": "55675",
+    "Adam Huckle": "55502",
+    "Pommie Mbangwa": "55584",
+    "Nayan Mongia": "31036",
+    "Navjot Sidhu": "34028",
+    "Anil Kumble": "30176",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sourav Ganguly": "28779",
+    "Robin Singh": "34059",
+    "Ajit Agarkar": "26184",
+    "Javagal Srinath": "34105",
+    "Harbhajan Singh": "29264"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "Zimbabwe",
+   "India"
+  ],
+  "venue": "Harare Sports Club",
+  "scorecard_totals": [
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 221,
+    "wickets": 10,
+    "balls": 484,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 644,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 3,
+    "runs": 293,
+    "wickets": 10,
+    "balls": 633,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 340,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 484,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 280,
+    "wickets": 10,
+    "balls": 644,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 633,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 173,
+    "wickets": 10,
+    "balls": 340,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

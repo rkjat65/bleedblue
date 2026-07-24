@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1387597",
+  "espn_league_id": "21570"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Durban",
+  "dates": [
+   "2023-12-10"
+  ],
+  "event": {
+   "name": "India in South Africa T20I Series 2023/24",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Stephen Harris",
+    "Bongani Jele"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Allahuddien Paleker"
+   ],
+   "reserve_umpires": [
+    "Lubabalo Gcuma"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Matthew Breetzke",
+    "Gerald Coetzee",
+    "Donovan Ferreira",
+    "Reeza Hendricks",
+    "Marco Jansen",
+    "Heinrich Klaasen",
+    "Keshav Maharaj",
+    "Aiden Markram",
+    "David Miller",
+    "Lungi Ngidi",
+    "Andile Phehlukwayo",
+    "Tabraiz Shamsi",
+    "Tristan Stubbs",
+    "Lizaad Williams"
+   ],
+   "India": [
+    "Arshdeep Singh",
+    "Deepak Chahar",
+    "Ruturaj Gaikwad",
+    "Ishan Kishan",
+    "Shreyas Iyer",
+    "Ravindra Jadeja",
+    "Yashasvi Jaiswal",
+    "Kuldeep Yadav",
+    "Mohammed Siraj",
+    "Mukesh Kumar",
+    "Ravi Bishnoi",
+    "Jitesh Sharma",
+    "Shubman Gill",
+    "Rinku Singh",
+    "Tilak Varma",
+    "Washington Sundar",
+    "Suryakumar Yadav"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Matthew Breetzke": "595267",
+    "Gerald Coetzee": "596010",
+    "Donovan Ferreira": "698315",
+    "Reeza Hendricks": "269280",
+    "Marco Jansen": "696401",
+    "Heinrich Klaasen": "436757",
+    "Keshav Maharaj": "267724",
+    "Aiden Markram": "600498",
+    "David Miller": "321777",
+    "Lungi Ngidi": "542023",
+    "Andile Phehlukwayo": "540316",
+    "Tabraiz Shamsi": "379145",
+    "Tristan Stubbs": "595978",
+    "Lizaad Williams": "379887",
+    "Arshdeep Singh": "1125976",
+    "Deepak Chahar": "447261",
+    "Ruturaj Gaikwad": "1060380",
+    "Ishan Kishan": "720471",
+    "Shreyas Iyer": "642519",
+    "Ravindra Jadeja": "234675",
+    "Yashasvi Jaiswal": "1151278",
+    "Kuldeep Yadav": "559235",
+    "Mohammed Siraj": "940973",
+    "Mukesh Kumar": "926851",
+    "Ravi Bishnoi": "1175441",
+    "Jitesh Sharma": "721867",
+    "Shubman Gill": "1070173",
+    "Rinku Singh": "723105",
+    "Tilak Varma": "1170265",
+    "Washington Sundar": "719715",
+    "Suryakumar Yadav": "446507"
+   }
+  },
+  "season": "2023",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "Kingsmead, Durban",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "South Africa",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

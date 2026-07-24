@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64553",
+  "espn_league_id": "16072",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1997-04-27"
+  ],
+  "event": {
+   "name": "India in West Indies ODI Series 1996/97",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Clyde Cumberbatch",
+    "Eddie Nicholls"
+   ],
+   "match_referees": [
+    "Peter van der Merwe"
+   ],
+   "tv_umpires": [
+    "Ralph Gosein"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Stuart Williams",
+    "Shivnarine Chanderpaul",
+    "Brian Lara",
+    "Carl Hooper",
+    "Jimmy Adams",
+    "Roland Holder",
+    "Courtney Browne",
+    "Ian Bishop",
+    "Curtly Ambrose",
+    "Franklyn Rose",
+    "Courtney Walsh"
+   ],
+   "India": [
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Navjot Sidhu",
+    "Rahul Dravid",
+    "Ajay Jadeja",
+    "Mohammad Azharuddin",
+    "Saba Karim",
+    "Anil Kumble",
+    "Noel David",
+    "Abey Kuruvilla",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Stuart Williams": "53234",
+    "Shivnarine Chanderpaul": "51469",
+    "Brian Lara": "52337",
+    "Carl Hooper": "52066",
+    "Jimmy Adams": "51100",
+    "Roland Holder": "52059",
+    "Courtney Browne": "51232",
+    "Ian Bishop": "51226",
+    "Curtly Ambrose": "51107",
+    "Franklyn Rose": "52821",
+    "Courtney Walsh": "53216",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Navjot Sidhu": "34028",
+    "Rahul Dravid": "28114",
+    "Ajay Jadeja": "29632",
+    "Mohammad Azharuddin": "26329",
+    "Saba Karim": "30042",
+    "Anil Kumble": "30176",
+    "Noel David": "28149",
+    "Abey Kuruvilla": "30182",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 121,
+    "wickets": 10,
+    "balls": 263,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 139,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 263,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 116,
+    "wickets": 0,
+    "balls": 139,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

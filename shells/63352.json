@@ -1,0 +1,165 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63352",
+  "espn_league_id": "16934",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Ahmedabad",
+  "dates": [
+   "1983-11-12"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1983/84",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "SN Hanumantha Rao",
+    "Kasturi Ramaswami",
+    "Gursharan Singh"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Navjot Sidhu",
+    "Sandeep Patil",
+    "Ravi Shastri",
+    "Roger Binny",
+    "Kapil Dev",
+    "Kirti Azad",
+    "Syed Kirmani",
+    "Balwinder Sandhu",
+    "Maninder Singh"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Viv Richards",
+    "Larry Gomes",
+    "Clive Lloyd",
+    "Gus Logie",
+    "Jeff Dujon",
+    "Malcolm Marshall",
+    "Wayne Daniel",
+    "Michael Holding",
+    "Winston Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Navjot Sidhu": "34028",
+    "Sandeep Patil": "32283",
+    "Ravi Shastri": "33975",
+    "Roger Binny": "26948",
+    "Kapil Dev": "30028",
+    "Kirti Azad": "26325",
+    "Syed Kirmani": "30116",
+    "Balwinder Sandhu": "33816",
+    "Maninder Singh": "30923",
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Viv Richards": "52812",
+    "Larry Gomes": "51891",
+    "Clive Lloyd": "52345",
+    "Gus Logie": "52347",
+    "Jeff Dujon": "51657",
+    "Malcolm Marshall": "52419",
+    "Wayne Daniel": "51639",
+    "Michael Holding": "52063",
+    "Winston Davis": "51643"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Narendra Modi Stadium, Motera, Ahmedabad",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 627,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 241,
+    "wickets": 10,
+    "balls": 485,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 363,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 103,
+    "wickets": 10,
+    "balls": 283,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 281,
+    "wickets": 10,
+    "balls": 627,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 485,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 201,
+    "wickets": 10,
+    "balls": 363,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 283,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

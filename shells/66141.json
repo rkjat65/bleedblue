@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66141",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cuttack",
+  "dates": [
+   "1998-04-09"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Narendra Menon",
+    "R Nagarajan"
+   ],
+   "match_referees": [
+    "Peter van der Merwe"
+   ],
+   "tv_umpires": [
+    "Subrata Banerjee"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "VVS Laxman",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Hrishikesh Kanitkar",
+    "Nayan Mongia",
+    "Ajit Agarkar",
+    "Venkatesh Prasad",
+    "Debasis Mohanty",
+    "Rahul Sanghvi"
+   ],
+   "Zimbabwe": [
+    "Grant Flower",
+    "Alistair Campbell",
+    "Murray Goodwin",
+    "Andy Flower",
+    "Guy Whittall",
+    "Heath Streak",
+    "Paul Strang",
+    "Craig Evans",
+    "Gary Brent",
+    "Pommie Mbangwa",
+    "Adam Huckle"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "VVS Laxman": "30750",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Hrishikesh Kanitkar": "30018",
+    "Nayan Mongia": "31036",
+    "Ajit Agarkar": "26184",
+    "Venkatesh Prasad": "32345",
+    "Debasis Mohanty": "31025",
+    "Rahul Sanghvi": "34214",
+    "Grant Flower": "55429",
+    "Alistair Campbell": "55301",
+    "Murray Goodwin": "55456",
+    "Andy Flower": "55427",
+    "Guy Whittall": "55848",
+    "Heath Streak": "55761",
+    "Paul Strang": "55758",
+    "Craig Evans": "55408",
+    "Gary Brent": "55269",
+    "Pommie Mbangwa": "55584",
+    "Adam Huckle": "55502"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Barabati Stadium, Cuttack",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 301,
+    "wickets": 3,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 292,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 269,
+    "wickets": 10,
+    "balls": 292,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,154 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63775",
+  "espn_league_id": "16016",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mohali",
+  "dates": [
+   "1997-11-19"
+  ],
+  "event": {
+   "name": "Sri Lanka in India Test Series 1997/98",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Bucknor",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Bob Simpson"
+   ],
+   "tv_umpires": [
+    "Umesh Kumar"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Nayan Mongia",
+    "Navjot Sidhu",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sourav Ganguly",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Rajesh Chauhan",
+    "Abey Kuruvilla",
+    "Debasis Mohanty"
+   ],
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Marvan Atapattu",
+    "Roshan Mahanama",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Lanka de Silva",
+    "Kumar Dharmasena",
+    "Chaminda Vaas",
+    "Muthiah Muralidaran",
+    "Sajeewa de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nayan Mongia": "31036",
+    "Navjot Sidhu": "34028",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sourav Ganguly": "28779",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Rajesh Chauhan": "27622",
+    "Abey Kuruvilla": "30182",
+    "Debasis Mohanty": "31025",
+    "Sanath Jayasuriya": "49209",
+    "Marvan Atapattu": "48124",
+    "Roshan Mahanama": "49626",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Lanka de Silva": "48465",
+    "Kumar Dharmasena": "48469",
+    "Chaminda Vaas": "50804",
+    "Muthiah Muralidaran": "49636",
+    "Sajeewa de Silva": "48460"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "I.S. Bindra Punjab Cricket Association Stadium",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 752,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 515,
+    "wickets": 9,
+    "balls": 1241,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 559,
+    "description": ""
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 369,
+    "wickets": 10,
+    "balls": 752,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1241,
+    "description": "declared"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 251,
+    "wickets": 6,
+    "balls": 559,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

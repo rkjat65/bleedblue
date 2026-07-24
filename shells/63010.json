@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63010",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Adelaide",
+  "dates": [
+   "1967-12-23"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Col Egar",
+    "Lou Rowan"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Bob Simpson",
+    "Bill Lawry",
+    "Paul Sheahan",
+    "Bob Cowper",
+    "Ian Redpath",
+    "Ian Chappell",
+    "Barry Jarman",
+    "Graham McKenzie",
+    "John Gleeson",
+    "Alan Connolly",
+    "David Renneberg"
+   ],
+   "India": [
+    "Farokh Engineer",
+    "Dilip Sardesai",
+    "Ajit Wadekar",
+    "Chandu Borde",
+    "Rusi Surti",
+    "Bapu Nadkarni",
+    "Syed Abid Ali",
+    "Venkataraman Subramanya",
+    "Erapalli Prasanna",
+    "Umesh Kulkarni",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bob Simpson": "7619",
+    "Bill Lawry": "6270",
+    "Paul Sheahan": "7597",
+    "Bob Cowper": "4645",
+    "Ian Redpath": "7314",
+    "Ian Chappell": "4560",
+    "Barry Jarman": "6013",
+    "Graham McKenzie": "6576",
+    "John Gleeson": "5398",
+    "Alan Connolly": "4613",
+    "David Renneberg": "7328",
+    "Farokh Engineer": "28624",
+    "Dilip Sardesai": "33850",
+    "Ajit Wadekar": "35933",
+    "Chandu Borde": "26962",
+    "Rusi Surti": "34174",
+    "Bapu Nadkarni": "31760",
+    "Syed Abid Ali": "26169",
+    "Venkataraman Subramanya": "34215",
+    "Erapalli Prasanna": "32357",
+    "Umesh Kulkarni": "30154",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1967",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Adelaide Oval",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 335,
+    "wickets": 10,
+    "balls": 553,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 430,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 369,
+    "wickets": 10,
+    "balls": 533,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 362,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 553,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 307,
+    "wickets": 10,
+    "balls": 430,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 533,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 251,
+    "wickets": 10,
+    "balls": 362,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

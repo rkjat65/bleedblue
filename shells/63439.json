@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63439",
+  "espn_league_id": "16782",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1986-09-26"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1986/87",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "V.K.Ramaswamy",
+    "Piloo Reporter"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Chandrakant Pandit",
+    "Mohinder Amarnath",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Chetan Sharma",
+    "Shivlal Yadav",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "Geoff Marsh",
+    "David Boon",
+    "Dean Jones",
+    "Steve Waugh",
+    "Tim Zoehrer",
+    "Allan Border",
+    "Greg Ritchie",
+    "Greg Matthews",
+    "Ray Bright",
+    "Craig McDermott",
+    "Dave Gilbert"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Chandrakant Pandit": "32179",
+    "Mohinder Amarnath": "26225",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Chetan Sharma": "33949",
+    "Shivlal Yadav": "36064",
+    "Maninder Singh": "30923",
+    "Geoff Marsh": "6499",
+    "David Boon": "4169",
+    "Dean Jones": "6044",
+    "Steve Waugh": "8192",
+    "Tim Zoehrer": "8468",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Greg Matthews": "6525",
+    "Ray Bright": "4208",
+    "Craig McDermott": "6551",
+    "Dave Gilbert": "5385"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 454,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 107,
+    "wickets": 3,
+    "balls": 156,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 207,
+    "wickets": 3,
+    "balls": 454,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 156,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64296",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1986-12-24"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Dara Dotiwalla",
+    "Suren Phookan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Chandrakant Pandit",
+    "Bharat Arun",
+    "Madan Lal",
+    "Chetan Sharma",
+    "Maninder Singh"
+   ],
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Ravi Ratnayeke",
+    "Asanka Gurusinha",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Roy Dias",
+    "Duleep Mendis",
+    "Guy de Alwis",
+    "Ashantha de Mel",
+    "Rumesh Ratnayake",
+    "Asoka de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Chandrakant Pandit": "32179",
+    "Bharat Arun": "26293",
+    "Madan Lal": "30873",
+    "Chetan Sharma": "33949",
+    "Maninder Singh": "30923",
+    "Roshan Mahanama": "49626",
+    "Ravi Ratnayeke": "50250",
+    "Asanka Gurusinha": "49005",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Roy Dias": "48470",
+    "Duleep Mendis": "49629",
+    "Guy de Alwis": "48446",
+    "Ashantha de Mel": "48447",
+    "Rumesh Ratnayake": "50249",
+    "Asoka de Silva": "48456"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Green Park, Kanpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 78,
+    "wickets": 10,
+    "balls": 145,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 195,
+    "wickets": 8,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 145,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

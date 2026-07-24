@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63450",
+  "espn_league_id": "16757",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1986-12-27"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1986/87",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Rajan Mehra",
+    "Piloo Reporter",
+    "Arun Lal",
+    "Roshan Mahanama"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Sunil Gavaskar",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Kiran More",
+    "Chetan Sharma",
+    "Shivlal Yadav",
+    "Maninder Singh"
+   ],
+   "Sri Lanka": [
+    "Sidath Wettimuny",
+    "Ravi Ratnayeke",
+    "Asanka Gurusinha",
+    "Roy Dias",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Duleep Mendis",
+    "Roshan Jurangpathy",
+    "Guy de Alwis",
+    "Rumesh Ratnayake",
+    "Asoka de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Sunil Gavaskar": "28794",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Kiran More": "31038",
+    "Chetan Sharma": "33949",
+    "Shivlal Yadav": "36064",
+    "Maninder Singh": "30923",
+    "Sidath Wettimuny": "50844",
+    "Ravi Ratnayeke": "50250",
+    "Asanka Gurusinha": "49005",
+    "Roy Dias": "48470",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Duleep Mendis": "49629",
+    "Roshan Jurangpathy": "49214",
+    "Guy de Alwis": "48446",
+    "Rumesh Ratnayake": "50249",
+    "Asoka de Silva": "48456"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 355,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 451,
+    "wickets": 6,
+    "balls": 779,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 292,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 204,
+    "wickets": 10,
+    "balls": 355,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 779,
+    "description": "declared"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 141,
+    "wickets": 10,
+    "balls": 292,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

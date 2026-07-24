@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "343735",
+  "espn_league_id": "13917"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "2008-08-26"
+  ],
+  "event": {
+   "name": "India in Sri Lanka ODI Series 2008",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Billy Doctrove",
+    "Gamini Silva"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Tyron Wijewardene"
+   ],
+   "reserve_umpires": [
+    "Kumar Dharmasena"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Tillakaratne Dilshan",
+    "Dilhara Fernando",
+    "Sanath Jayasuriya",
+    "Mahela Jayawardene",
+    "Chamara Kapugedera",
+    "Nuwan Kulasekara",
+    "Ajantha Mendis",
+    "Jehan Mubarak",
+    "Muthiah Muralidaran",
+    "Kumar Sangakkara",
+    "Chamara Silva",
+    "Thilan Thushara",
+    "Mahela Udawatte",
+    "Chaminda Vaas",
+    "Malinda Warnapura"
+   ],
+   "India": [
+    "S Badrinath",
+    "MS Dhoni",
+    "Gautam Gambhir",
+    "Harbhajan Singh",
+    "Zaheer Khan",
+    "Virat Kohli",
+    "Praveen Kumar",
+    "Pragyan Ojha",
+    "Munaf Patel",
+    "Parthiv Patel",
+    "Irfan Pathan",
+    "Suresh Raina",
+    "Rohit Sharma",
+    "RP Singh",
+    "Yuvraj Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Tillakaratne Dilshan": "48472",
+    "Dilhara Fernando": "48835",
+    "Sanath Jayasuriya": "49209",
+    "Mahela Jayawardene": "49289",
+    "Chamara Kapugedera": "209457",
+    "Nuwan Kulasekara": "49535",
+    "Ajantha Mendis": "268739",
+    "Jehan Mubarak": "49633",
+    "Muthiah Muralidaran": "49636",
+    "Kumar Sangakkara": "50710",
+    "Chamara Silva": "50431",
+    "Thilan Thushara": "49677",
+    "Mahela Udawatte": "50802",
+    "Chaminda Vaas": "50804",
+    "Malinda Warnapura": "50874",
+    "S Badrinath": "26806",
+    "MS Dhoni": "28081",
+    "Gautam Gambhir": "28763",
+    "Harbhajan Singh": "29264",
+    "Zaheer Khan": "30102",
+    "Virat Kohli": "253802",
+    "Praveen Kumar": "30732",
+    "Pragyan Ojha": "32130",
+    "Munaf Patel": "32965",
+    "Parthiv Patel": "32242",
+    "Irfan Pathan": "32685",
+    "Suresh Raina": "33335",
+    "Rohit Sharma": "34102",
+    "RP Singh": "35280",
+    "Yuvraj Singh": "36084"
+   }
+  },
+  "season": "2008",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "R.Premadasa Stadium, Khettarama, Colombo",
+  "overs": 50
+ },
+ "innings": [
+  {
+   "team": "Sri Lanka",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 9.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

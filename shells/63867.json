@@ -1,0 +1,154 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63867",
+  "espn_league_id": "15710",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sydney",
+  "dates": [
+   "2000-01-02"
+  ],
+  "event": {
+   "name": "South Africa in India Test Series 1999/00",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Darrell Hair",
+    "Ian Robinson"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "Simon Taufel"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Greg Blewett",
+    "Michael Slater",
+    "Justin Langer",
+    "Mark Waugh",
+    "Steve Waugh",
+    "Ricky Ponting",
+    "Adam Gilchrist",
+    "Shane Warne",
+    "Damien Fleming",
+    "Brett Lee",
+    "Glenn McGrath"
+   ],
+   "India": [
+    "MSK Prasad",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Hrishikesh Kanitkar",
+    "Vijay Bharadwaj",
+    "Anil Kumble",
+    "Ajit Agarkar",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Greg Blewett": "4161",
+    "Michael Slater": "7629",
+    "Justin Langer": "6256",
+    "Mark Waugh": "8189",
+    "Steve Waugh": "8192",
+    "Ricky Ponting": "7133",
+    "Adam Gilchrist": "5390",
+    "Shane Warne": "8166",
+    "Damien Fleming": "5239",
+    "Brett Lee": "6278",
+    "Glenn McGrath": "6565",
+    "MSK Prasad": "32346",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Hrishikesh Kanitkar": "30018",
+    "Vijay Bharadwaj": "35673",
+    "Anil Kumble": "30176",
+    "Ajit Agarkar": "26184",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Sydney Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 407,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 552,
+    "wickets": 5,
+    "balls": 842,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 348,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 150,
+    "wickets": 10,
+    "balls": 407,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 842,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 261,
+    "wickets": 9,
+    "balls": 348,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

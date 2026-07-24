@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62887",
+  "espn_league_id": "17374",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1961-02-08"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1960/61",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "I Gopalakrishnan",
+    "SK Raghunatha Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Nari Contractor",
+    "Rusi Surti",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Chandu Borde",
+    "AG Milkha Singh",
+    "Bapu Nadkarni",
+    "Budhi Kunderan",
+    "Ramakant Desai",
+    "Vaman Kumar"
+   ],
+   "Pakistan": [
+    "Hanif Mohammad",
+    "Imtiaz Ahmed",
+    "Saeed Ahmed",
+    "Javed Burki",
+    "Wallis Mathias",
+    "Mushtaq Mohammad",
+    "Intikhab Alam",
+    "Fazal Mahmood",
+    "Mahmood Hussain",
+    "Haseeb Ahsan",
+    "Mohammad Farooq"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Nari Contractor": "27667",
+    "Rusi Surti": "34174",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Chandu Borde": "26962",
+    "AG Milkha Singh": "31004",
+    "Bapu Nadkarni": "31760",
+    "Budhi Kunderan": "30178",
+    "Ramakant Desai": "28045",
+    "Vaman Kumar": "30173",
+    "Hanif Mohammad": "40373",
+    "Imtiaz Ahmed": "40565",
+    "Saeed Ahmed": "42603",
+    "Javed Burki": "40877",
+    "Wallis Mathias": "41278",
+    "Mushtaq Mohammad": "41318",
+    "Intikhab Alam": "40567",
+    "Fazal Mahmood": "40092",
+    "Mahmood Hussain": "41267",
+    "Haseeb Ahsan": "40380",
+    "Mohammad Farooq": "41284"
+   }
+  },
+  "season": "1961",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 463,
+    "wickets": 10,
+    "balls": 948,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 755,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 766,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 16,
+    "wickets": 0,
+    "balls": 12,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 948,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 286,
+    "wickets": 10,
+    "balls": 755,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 250,
+    "wickets": 10,
+    "balls": 766,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 12,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

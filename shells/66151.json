@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66151",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1998-06-19"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "K.T.Francis",
+    "Peter Manuel"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "B.C. Cooray"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Romesh Kaluwitharana",
+    "Marvan Atapattu",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Roshan Mahanama",
+    "Mahela Jayawardene",
+    "Kumar Dharmasena",
+    "Pramodya Wickramasinghe",
+    "Muthiah Muralidaran",
+    "Suresh Perera"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Hrishikesh Kanitkar",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Ajit Agarkar",
+    "Venkatesh Prasad",
+    "Harbhajan Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sanath Jayasuriya": "49209",
+    "Romesh Kaluwitharana": "49361",
+    "Marvan Atapattu": "48124",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Roshan Mahanama": "49626",
+    "Mahela Jayawardene": "49289",
+    "Kumar Dharmasena": "48469",
+    "Pramodya Wickramasinghe": "50848",
+    "Muthiah Muralidaran": "49636",
+    "Suresh Perera": "49854",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Hrishikesh Kanitkar": "30018",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Ajit Agarkar": "26184",
+    "Venkatesh Prasad": "32345",
+    "Harbhajan Singh": "29264"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "R.Premadasa Stadium, Khettarama, Colombo",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 243,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 262,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 246,
+    "wickets": 2,
+    "balls": 262,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

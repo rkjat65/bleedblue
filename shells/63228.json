@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63228",
+  "espn_league_id": "17116",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1978-12-29"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1978/79",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "SN Hanumantha Rao",
+    "Ram Punjabi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Aunshuman Gaekwad",
+    "Gundappa Viswanath",
+    "Dilip Vengsarkar",
+    "Bobjee Narasimha Rao",
+    "Karsan Ghavri",
+    "Syed Kirmani",
+    "Kapil Dev",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi"
+   ],
+   "West Indies": [
+    "Basil Williams",
+    "Faoud Bacchus",
+    "Larry Gomes",
+    "Alvin Kallicharran",
+    "Vanburn Holder",
+    "David Murray",
+    "Sew Shivnarine",
+    "Derick Parry",
+    "Norbert Phillip",
+    "Malcolm Marshall",
+    "Sylvester Clarke"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Aunshuman Gaekwad": "28754",
+    "Gundappa Viswanath": "35712",
+    "Dilip Vengsarkar": "35654",
+    "Bobjee Narasimha Rao": "31795",
+    "Karsan Ghavri": "28813",
+    "Syed Kirmani": "30116",
+    "Kapil Dev": "30028",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875",
+    "Basil Williams": "53228",
+    "Faoud Bacchus": "51208",
+    "Larry Gomes": "51891",
+    "Alvin Kallicharran": "52285",
+    "Vanburn Holder": "52061",
+    "David Murray": "52439",
+    "Sew Shivnarine": "52932",
+    "Derick Parry": "52670",
+    "Norbert Phillip": "52678",
+    "Malcolm Marshall": "52419",
+    "Sylvester Clarke": "51477"
+   }
+  },
+  "season": "1978",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 300,
+    "wickets": 10,
+    "balls": 627,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 706,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 361,
+    "wickets": 1,
+    "balls": 558,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 631,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 627,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 327,
+    "wickets": 10,
+    "balls": 706,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 558,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 197,
+    "wickets": 9,
+    "balls": 631,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

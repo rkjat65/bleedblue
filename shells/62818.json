@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62818",
+  "espn_league_id": "17412",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1956-10-26"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1956/57",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bapu Joshi",
+    "Balkrishna Mohoni"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "Pankaj Roy",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "Jayasinghrao Ghorpade",
+    "Gulabrai Ramchand",
+    "Dattu Phadkar",
+    "Hemu Adhikari",
+    "Naren Tamhane",
+    "Jasubhai Patel",
+    "Subhash Gupte"
+   ],
+   "Australia": [
+    "Jim Burke",
+    "John Rutherford",
+    "Neil Harvey",
+    "Peter Burge",
+    "Ken Mackay",
+    "Alan Davidson",
+    "Richie Benaud",
+    "Ray Lindwall",
+    "Len Maddocks",
+    "Pat Crawford",
+    "Jack Wilson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "Pankaj Roy": "33186",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "Jayasinghrao Ghorpade": "28814",
+    "Gulabrai Ramchand": "33062",
+    "Dattu Phadkar": "32309",
+    "Hemu Adhikari": "26179",
+    "Naren Tamhane": "35308",
+    "Jasubhai Patel": "32236",
+    "Subhash Gupte": "28880",
+    "Jim Burke": "4242",
+    "John Rutherford": "7411",
+    "Neil Harvey": "5603",
+    "Peter Burge": "4241",
+    "Ken Mackay": "6445",
+    "Alan Davidson": "4902",
+    "Richie Benaud": "4123",
+    "Ray Lindwall": "6299",
+    "Len Maddocks": "6457",
+    "Pat Crawford": "4656",
+    "Jack Wilson": "8237"
+   }
+  },
+  "season": "1956",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 251,
+    "wickets": 10,
+    "balls": 602,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1080,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 250,
+    "wickets": 5,
+    "balls": 822,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 602,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 523,
+    "wickets": 7,
+    "balls": 1080,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 822,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

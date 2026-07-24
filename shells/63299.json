@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63299",
+  "espn_league_id": "17021",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1981-12-09"
+  ],
+  "event": {
+   "name": "England in India Test Series 1981/82",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Ram Punjabi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Ravi Shastri",
+    "Sandeep Patil",
+    "Kirti Azad",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Madan Lal",
+    "Dilip Doshi"
+   ],
+   "England": [
+    "Graham Gooch",
+    "Geoff Boycott",
+    "Chris Tavar\u00e9",
+    "David Gower",
+    "John Lever",
+    "Keith Fletcher",
+    "Ian Botham",
+    "Mike Gatting",
+    "Graham Dilley",
+    "Bob Taylor",
+    "Derek Underwood"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Ravi Shastri": "33975",
+    "Sandeep Patil": "32283",
+    "Kirti Azad": "26325",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Madan Lal": "30873",
+    "Dilip Doshi": "28107",
+    "Graham Gooch": "13399",
+    "Geoff Boycott": "9187",
+    "Chris Tavar\u00e9": "21466",
+    "David Gower": "13418",
+    "John Lever": "16260",
+    "Keith Fletcher": "12854",
+    "Ian Botham": "9163",
+    "Mike Gatting": "13340",
+    "Graham Dilley": "11893",
+    "Bob Taylor": "21494",
+    "Derek Underwood": "22149"
+   }
+  },
+  "season": "1981",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 948,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 428,
+    "wickets": 10,
+    "balls": 900,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 414,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 400,
+    "wickets": 10,
+    "balls": 948,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 900,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 174,
+    "wickets": 3,
+    "balls": 414,
+    "description": "declared"
+   }
+  ]
+ },
+ "innings": []
+}

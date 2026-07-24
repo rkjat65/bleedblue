@@ -1,0 +1,129 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "256669",
+  "espn_league_id": "14561"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "2006-08-20"
+  ],
+  "event": {
+   "name": "India in Sri Lanka ODI Series 2006",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Billy Bowden",
+    "Tyron Wijewardene"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Peter Manuel"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Tillakaratne Dilshan",
+    "Dilhara Fernando",
+    "Sanath Jayasuriya",
+    "Mahela Jayawardene",
+    "Chamara Kapugedera",
+    "Farveez Maharoof",
+    "Lasith Malinga",
+    "Muthiah Muralidaran",
+    "Kumar Sangakkara",
+    "Upul Tharanga",
+    "Chaminda Vaas"
+   ],
+   "India": [
+    "Ajit Agarkar",
+    "MS Dhoni",
+    "Rahul Dravid",
+    "Harbhajan Singh",
+    "Mohammad Kaif",
+    "Munaf Patel",
+    "Irfan Pathan",
+    "Ramesh Powar",
+    "Virender Sehwag",
+    "Sachin Tendulkar",
+    "Yuvraj Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Tillakaratne Dilshan": "48472",
+    "Dilhara Fernando": "48835",
+    "Sanath Jayasuriya": "49209",
+    "Mahela Jayawardene": "49289",
+    "Chamara Kapugedera": "209457",
+    "Farveez Maharoof": "49638",
+    "Lasith Malinga": "49758",
+    "Muthiah Muralidaran": "49636",
+    "Kumar Sangakkara": "50710",
+    "Upul Tharanga": "50747",
+    "Chaminda Vaas": "50804",
+    "Ajit Agarkar": "26184",
+    "MS Dhoni": "28081",
+    "Rahul Dravid": "28114",
+    "Harbhajan Singh": "29264",
+    "Mohammad Kaif": "29990",
+    "Munaf Patel": "32965",
+    "Irfan Pathan": "32685",
+    "Ramesh Powar": "32391",
+    "Virender Sehwag": "35263",
+    "Sachin Tendulkar": "35320",
+    "Yuvraj Singh": "36084"
+   }
+  },
+  "season": "2006",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Sinhalese Sports Club Ground, Colombo",
+  "overs": 50
+ },
+ "innings": [
+  {
+   "team": "Sri Lanka",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 9.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

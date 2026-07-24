@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63247",
+  "espn_league_id": "17069",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1979-11-21"
+  ],
+  "event": {
+   "name": "Australia tour of India 1979/80",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Swaroop Kishen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Yashpal Sharma",
+    "Roger Binny",
+    "Syed Kirmani",
+    "Kapil Dev",
+    "Karsan Ghavri",
+    "Shivlal Yadav",
+    "Dilip Doshi"
+   ],
+   "Pakistan": [
+    "Majid Khan",
+    "Mudassar Nazar",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Wasim Raja",
+    "Asif Iqbal",
+    "Imran Khan",
+    "Wasim Bari",
+    "Abdul Qadir",
+    "Iqbal Qasim",
+    "Ehteshamuddin"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Yashpal Sharma": "36075",
+    "Roger Binny": "26948",
+    "Syed Kirmani": "30116",
+    "Kapil Dev": "30028",
+    "Karsan Ghavri": "28813",
+    "Shivlal Yadav": "36064",
+    "Dilip Doshi": "28107",
+    "Majid Khan": "41919",
+    "Mudassar Nazar": "41308",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Wasim Raja": "43553",
+    "Asif Iqbal": "39010",
+    "Imran Khan": "40560",
+    "Wasim Bari": "43549",
+    "Abdul Qadir": "38973",
+    "Iqbal Qasim": "40572",
+    "Ehteshamuddin": "40067"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 897,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 416,
+    "wickets": 10,
+    "balls": 988,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 252,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 431,
+    "wickets": 9,
+    "balls": 897,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 988,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 108,
+    "wickets": 2,
+    "balls": 252,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64182",
+  "espn_league_id": "17022",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cuttack",
+  "dates": [
+   "1982-01-27"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1981/82",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Ram Punjabi",
+    "Kasturi Ramaswami"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Arun Lal",
+    "Dilip Vengsarkar",
+    "Sandeep Patil",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Ashok Malhotra",
+    "Syed Kirmani",
+    "Suru Nayak",
+    "Madan Lal",
+    "Ravi Shastri"
+   ],
+   "England": [
+    "Graham Gooch",
+    "Geoff Cook",
+    "Chris Tavar\u00e9",
+    "David Gower",
+    "Ian Botham",
+    "Keith Fletcher",
+    "Mike Gatting",
+    "Bob Taylor",
+    "John Lever",
+    "Derek Underwood",
+    "Bob Willis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Arun Lal": "26295",
+    "Dilip Vengsarkar": "35654",
+    "Sandeep Patil": "32283",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Ashok Malhotra": "30912",
+    "Syed Kirmani": "30116",
+    "Suru Nayak": "31808",
+    "Madan Lal": "30873",
+    "Ravi Shastri": "33975",
+    "Graham Gooch": "13399",
+    "Geoff Cook": "10793",
+    "Chris Tavar\u00e9": "21466",
+    "David Gower": "13418",
+    "Ian Botham": "9163",
+    "Keith Fletcher": "12854",
+    "Mike Gatting": "13340",
+    "Bob Taylor": "21494",
+    "John Lever": "16260",
+    "Derek Underwood": "22149",
+    "Bob Willis": "22462"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Barabati Stadium, Cuttack",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 231,
+    "wickets": 5,
+    "balls": 252,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 230,
+    "wickets": 6,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 252,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

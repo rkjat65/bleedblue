@@ -36,7 +36,9 @@ from fetch_afg_matches import (  # noqa: E402
 )
 
 OUT_DIR = ROOT
+SHELLS_DIR = Path(__file__).resolve().parent / "shells"
 STATE_PATH = Path(__file__).resolve().parent / "fetch_state.json"
+MIN_ANALYTICS_DELIVERIES = 50  # matches build_stats "full" threshold
 UA = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
     "Accept": "application/json",
@@ -300,6 +302,29 @@ def save_match(league_id: str, event_id: str, summary: dict) -> dict | None:
         for inn in doc.get("innings") or []
         for d in inn.get("overs") or []
     )
+    if nd < MIN_ANALYTICS_DELIVERIES:
+        # Do not pollute the analytics match set with ESPN meta-only shells.
+        SHELLS_DIR.mkdir(exist_ok=True)
+        shell_path = SHELLS_DIR / f"{event_id}.json"
+        doc.setdefault("meta", {})["quality"] = "empty"
+        doc["meta"]["analytics_excluded"] = True
+        doc["meta"]["note"] = "ESPN summary only — no ball-by-ball; not used for W/L or player aggregates"
+        with shell_path.open("w") as f:
+            json.dump(doc, f, indent=1)
+        print(
+            f"    SKIP analytics set (dels={nd}) — saved meta shell to {shell_path.relative_to(ROOT.parent)}",
+            flush=True,
+        )
+        return {
+            "id": str(event_id),
+            "league": str(league_id),
+            "type": mt,
+            "deliveries": nd,
+            "desc": meta["description"],
+            "teams": teams,
+            "date": (meta.get("date") or "")[:10],
+            "shell_only": True,
+        }
     out_path = OUT_DIR / f"{event_id}.json"
     with out_path.open("w") as f:
         json.dump(doc, f, indent=1)
@@ -312,6 +337,7 @@ def save_match(league_id: str, event_id: str, summary: dict) -> dict | None:
         "desc": meta["description"],
         "teams": teams,
         "date": (meta.get("date") or "")[:10],
+        "shell_only": False,
     }
 
 

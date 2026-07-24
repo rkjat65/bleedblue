@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64198",
+  "espn_league_id": "16968",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Multan",
+  "dates": [
+   "1982-12-17"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1982/83",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Khizer Hayat",
+    "Shakoor Rana"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Mohsin Khan",
+    "Mudassar Nazar",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Mansoor Akhtar",
+    "Imran Khan",
+    "Wasim Raja",
+    "Ijaz Faqih",
+    "Wasim Bari",
+    "Jalal-ud-Din",
+    "Sikander Bakht"
+   ],
+   "India": [
+    "Kris Srikkanth",
+    "Arun Lal",
+    "Dilip Vengsarkar",
+    "Mohinder Amarnath",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Syed Kirmani",
+    "Ravi Shastri",
+    "Balwinder Sandhu",
+    "Dilip Doshi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mohsin Khan": "41303",
+    "Mudassar Nazar": "41308",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Mansoor Akhtar": "41263",
+    "Imran Khan": "40560",
+    "Wasim Raja": "43553",
+    "Ijaz Faqih": "40556",
+    "Wasim Bari": "43549",
+    "Jalal-ud-Din": "40872",
+    "Sikander Bakht": "42661",
+    "Kris Srikkanth": "34103",
+    "Arun Lal": "26295",
+    "Dilip Vengsarkar": "35654",
+    "Mohinder Amarnath": "26225",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Syed Kirmani": "30116",
+    "Ravi Shastri": "33975",
+    "Balwinder Sandhu": "33816",
+    "Dilip Doshi": "28107"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Ibn-e-Qasim Bagh Stadium, Multan",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 263,
+    "wickets": 2,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 226,
+    "wickets": 7,
+    "balls": 240,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63420",
+  "espn_league_id": "16834"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sydney",
+  "dates": [
+   "1986-01-02"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1985/86",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Peter McConnell",
+    "Steve Randell"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "David Boon",
+    "Geoff Marsh",
+    "Allan Border",
+    "Greg Ritchie",
+    "Wayne Phillips",
+    "Greg Matthews",
+    "Steve Waugh",
+    "Ray Bright",
+    "Dave Gilbert",
+    "Bruce Reid",
+    "Bob Holland"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Kapil Dev",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Syed Kirmani",
+    "Chetan Sharma",
+    "Laxman Sivaramakrishnan",
+    "Shivlal Yadav"
+   ]
+  },
+  "registry": {
+   "people": {
+    "David Boon": "4169",
+    "Geoff Marsh": "6499",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Wayne Phillips": "7115",
+    "Greg Matthews": "6525",
+    "Steve Waugh": "8192",
+    "Ray Bright": "4208",
+    "Dave Gilbert": "5385",
+    "Bruce Reid": "7319",
+    "Bob Holland": "5692",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Kapil Dev": "30028",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Syed Kirmani": "30116",
+    "Chetan Sharma": "33949",
+    "Laxman Sivaramakrishnan": "34074",
+    "Shivlal Yadav": "36064"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Sydney Cricket Ground"
+ },
+ "innings": []
+}

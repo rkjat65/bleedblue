@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66143",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1998-04-14"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98",
+   "stage": "Final"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Vijay Chopra",
+    "V.K.Ramaswamy"
+   ],
+   "match_referees": [
+    "Peter van der Merwe"
+   ],
+   "tv_umpires": [
+    "Krishna Hariharan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Navjot Sidhu",
+    "Ajay Jadeja",
+    "Hrishikesh Kanitkar",
+    "Ajit Agarkar",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Venkatesh Prasad",
+    "Rahul Sanghvi"
+   ],
+   "Australia": [
+    "Mark Waugh",
+    "Adam Gilchrist",
+    "Ricky Ponting",
+    "Michael Bevan",
+    "Shane Warne",
+    "Steve Waugh",
+    "Tom Moody",
+    "Darren Lehmann",
+    "Damien Martyn",
+    "Damien Fleming",
+    "Michael Kasprowicz"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Navjot Sidhu": "34028",
+    "Ajay Jadeja": "29632",
+    "Hrishikesh Kanitkar": "30018",
+    "Ajit Agarkar": "26184",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Rahul Sanghvi": "34214",
+    "Mark Waugh": "8189",
+    "Adam Gilchrist": "5390",
+    "Ricky Ponting": "7133",
+    "Michael Bevan": "4144",
+    "Shane Warne": "8166",
+    "Steve Waugh": "8192",
+    "Tom Moody": "6628",
+    "Darren Lehmann": "6285",
+    "Damien Martyn": "6513",
+    "Damien Fleming": "5239",
+    "Michael Kasprowicz": "6126"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 227,
+    "wickets": 10,
+    "balls": 297,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 292,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 297,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 231,
+    "wickets": 6,
+    "balls": 292,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63320",
+  "espn_league_id": "16976",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1982-09-17"
+  ],
+  "event": {
+   "name": "Sri Lanka in India Test Match 1982/83"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Swaroop Kishen",
+    "Kris Srikkanth"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Arun Lal",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Sandeep Patil",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Rakesh Shukla",
+    "Dilip Doshi"
+   ],
+   "Sri Lanka": [
+    "Bandula Warnapura",
+    "Mahes Goonatilleke",
+    "Roy Dias",
+    "Duleep Mendis",
+    "Arjuna Ranatunga",
+    "Ranjan Madugalle",
+    "Anura Ranasinghe",
+    "Somachandra De Silva",
+    "Ravi Ratnayeke",
+    "Ashantha de Mel",
+    "Ajit de Silva"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Arun Lal": "26295",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Sandeep Patil": "32283",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Rakesh Shukla": "34020",
+    "Dilip Doshi": "28107",
+    "Bandula Warnapura": "50835",
+    "Mahes Goonatilleke": "49097",
+    "Roy Dias": "48470",
+    "Duleep Mendis": "49629",
+    "Arjuna Ranatunga": "50244",
+    "Ranjan Madugalle": "49623",
+    "Anura Ranasinghe": "50241",
+    "Somachandra De Silva": "48454",
+    "Ravi Ratnayeke": "50250",
+    "Ashantha de Mel": "48447",
+    "Ajit de Silva": "48458"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 557,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 566,
+    "wickets": 6,
+    "balls": 786,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 579,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 135,
+    "wickets": 7,
+    "balls": 168,
+    "description": ""
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 346,
+    "wickets": 10,
+    "balls": 557,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 786,
+    "description": "declared"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 394,
+    "wickets": 10,
+    "balls": 579,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 168,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

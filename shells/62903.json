@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62903",
+  "espn_league_id": "17363",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1961-12-13"
+  ],
+  "event": {
+   "name": "England in India Test Series 1961/62",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "SV Kumaraswamy",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Nari Contractor",
+    "Vijay Manjrekar",
+    "Mansur Ali Khan Pataudi",
+    "Polly Umrigar",
+    "Chandu Borde",
+    "Salim Durani",
+    "Farokh Engineer",
+    "AG Kripal Singh",
+    "Ramakant Desai",
+    "Subhash Gupte"
+   ],
+   "England": [
+    "Peter Richardson",
+    "Geoff Pullar",
+    "Ken Barrington",
+    "Mike Smith",
+    "Ted Dexter",
+    "Bob Barber",
+    "John Murray",
+    "Barry Knight",
+    "David Allen",
+    "Tony Lock",
+    "David Smith"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Nari Contractor": "27667",
+    "Vijay Manjrekar": "30936",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Polly Umrigar": "35577",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "Farokh Engineer": "28624",
+    "AG Kripal Singh": "30132",
+    "Ramakant Desai": "28045",
+    "Subhash Gupte": "28880",
+    "Peter Richardson": "19386",
+    "Geoff Pullar": "18640",
+    "Ken Barrington": "9014",
+    "Mike Smith": "20255",
+    "Ted Dexter": "11886",
+    "Bob Barber": "8982",
+    "John Murray": "17130",
+    "Barry Knight": "15910",
+    "David Allen": "8513",
+    "Tony Lock": "16331",
+    "David Smith": "20236"
+   }
+  },
+  "season": "1961",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 466,
+    "wickets": 10,
+    "balls": 1065,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 684,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1065,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 256,
+    "wickets": 3,
+    "balls": 684,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

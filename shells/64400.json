@@ -1,0 +1,140 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64400",
+  "espn_league_id": "16474",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Gqeberha",
+  "dates": [
+   "1992-12-09"
+  ],
+  "event": {
+   "name": "India in Zimbabwe ODI Match 1992/93",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Rudi Koertzen",
+    "Cyril Mitchley",
+    "Fanie de Villiers"
+   ],
+   "match_referees": [
+    "Clive Lloyd"
+   ],
+   "tv_umpires": [
+    "Wilf Diedricks"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Andrew Hudson",
+    "Kepler Wessels",
+    "Peter Kirsten",
+    "Jonty Rhodes",
+    "Dave Callaghan",
+    "Hansie Cronje",
+    "Brian McMillan",
+    "David Richardson",
+    "Craig Matthews",
+    "Allan Donald",
+    "Brett Schultz"
+   ],
+   "India": [
+    "Ajay Jadeja",
+    "Woorkeri Raman",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Sanjay Manjrekar",
+    "Pravin Amre",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Anil Kumble",
+    "Javagal Srinath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Andrew Hudson": "45458",
+    "Kepler Wessels": "47884",
+    "Peter Kirsten": "45815",
+    "Jonty Rhodes": "46973",
+    "Dave Callaghan": "44416",
+    "Hansie Cronje": "44485",
+    "Brian McMillan": "46214",
+    "David Richardson": "46978",
+    "Craig Matthews": "46189",
+    "Allan Donald": "44716",
+    "Brett Schultz": "47165",
+    "Ajay Jadeja": "29632",
+    "Woorkeri Raman": "33058",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Sanjay Manjrekar": "30934",
+    "Pravin Amre": "26238",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105"
+   }
+  },
+  "season": "1992",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "St George's Park, Gqeberha",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 298,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 148,
+    "wickets": 4,
+    "balls": 280,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 147,
+    "wickets": 10,
+    "balls": 298,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 280,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

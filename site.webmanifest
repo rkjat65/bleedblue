@@ -22,9 +22,10 @@
       "type": "image/png"
     },
     {
-      "src": "/favicon.svg",
+      "src": "/logo.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
-    }
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
   ]
 }

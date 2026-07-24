@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63160",
+  "espn_league_id": "17182",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1976-03-24"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1975/76",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ralph Gosein",
+    "Douglas Sang Hue"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Roy Fredericks",
+    "Lawrence Rowe",
+    "Viv Richards",
+    "Alvin Kallicharran",
+    "Clive Lloyd",
+    "Deryck Murray",
+    "Bernard Julien",
+    "David Holford",
+    "Michael Holding",
+    "Andy Roberts",
+    "Raphick Jumadeen"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Dilip Vengsarkar",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Surinder Amarnath",
+    "Brijesh Patel",
+    "Madan Lal",
+    "Srinivas Venkataraghavan",
+    "Syed Kirmani",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roy Fredericks": "51797",
+    "Lawrence Rowe": "52823",
+    "Viv Richards": "52812",
+    "Alvin Kallicharran": "52285",
+    "Clive Lloyd": "52345",
+    "Deryck Murray": "52441",
+    "Bernard Julien": "52208",
+    "David Holford": "52064",
+    "Michael Holding": "52063",
+    "Andy Roberts": "52817",
+    "Raphick Jumadeen": "52209",
+    "Sunil Gavaskar": "28794",
+    "Dilip Vengsarkar": "35654",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Surinder Amarnath": "26226",
+    "Brijesh Patel": "32231",
+    "Madan Lal": "30873",
+    "Srinivas Venkataraghavan": "35656",
+    "Syed Kirmani": "30116",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1976",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 241,
+    "wickets": 10,
+    "balls": 582,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 936,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 215,
+    "wickets": 8,
+    "balls": 744,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 582,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 402,
+    "wickets": 5,
+    "balls": 936,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 744,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

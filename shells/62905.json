@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62905",
+  "espn_league_id": "17363",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1962-01-10"
+  ],
+  "event": {
+   "name": "England in India Test Series 1961/62",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "I Gopalakrishnan",
+    "Sambhu Pan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Nari Contractor",
+    "Vijay Manjrekar",
+    "Mansur Ali Khan Pataudi",
+    "Polly Umrigar",
+    "Chandu Borde",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "Farokh Engineer",
+    "Ramakant Desai",
+    "Erapalli Prasanna"
+   ],
+   "England": [
+    "Peter Richardson",
+    "Bob Barber",
+    "Ken Barrington",
+    "Ted Dexter",
+    "Mike Smith",
+    "Peter Parfitt",
+    "Barry Knight",
+    "David Allen",
+    "Geoff Millman",
+    "Tony Lock",
+    "David Smith"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Nari Contractor": "27667",
+    "Vijay Manjrekar": "30936",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Polly Umrigar": "35577",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "Farokh Engineer": "28624",
+    "Ramakant Desai": "28045",
+    "Erapalli Prasanna": "32357",
+    "Peter Richardson": "19386",
+    "Bob Barber": "8982",
+    "Ken Barrington": "9014",
+    "Ted Dexter": "11886",
+    "Mike Smith": "20255",
+    "Peter Parfitt": "18411",
+    "Barry Knight": "15910",
+    "David Allen": "8513",
+    "Geoff Millman": "17032",
+    "Tony Lock": "16331",
+    "David Smith": "20236"
+   }
+  },
+  "season": "1962",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Nehru Stadium, Madras",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 428,
+    "wickets": 10,
+    "balls": 867,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 661,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 190,
+    "wickets": 10,
+    "balls": 567,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 555,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 867,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 281,
+    "wickets": 10,
+    "balls": 661,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 567,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 209,
+    "wickets": 10,
+    "balls": 555,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

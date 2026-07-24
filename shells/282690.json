@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "282690",
+  "espn_league_id": "14394"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chattogram",
+  "dates": [
+   "2007-05-15"
+  ],
+  "event": {
+   "name": "India in Bangladesh ODI Series 2007",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Asoka de Silva",
+    "Enamul Haque"
+   ],
+   "match_referees": [
+    "Roshan Mahanama"
+   ],
+   "tv_umpires": [
+    "AFM Akhtaruddin"
+   ],
+   "reserve_umpires": [
+    "Jahangir Alam"
+   ]
+  },
+  "outcome": {
+   "winner": "Bangladesh"
+  },
+  "players": {
+   "Bangladesh": [
+    "Abdur Razzak",
+    "Aftab Ahmed",
+    "Habibul Bashar",
+    "Javed Omer",
+    "Mashrafe Mortaza",
+    "Mohammad Ashraful",
+    "Mohammad Rafique",
+    "Mushfiqur Rahim",
+    "Shakib Al Hasan",
+    "Syed Rasel",
+    "Tamim Iqbal"
+   ],
+   "India": [
+    "Piyush Chawla",
+    "MS Dhoni",
+    "Rahul Dravid",
+    "Gautam Gambhir",
+    "Dinesh Karthik",
+    "Munaf Patel",
+    "Ramesh Powar",
+    "Virender Sehwag",
+    "RP Singh",
+    "Robin Uthappa",
+    "Yuvraj Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Abdur Razzak": "56283",
+    "Aftab Ahmed": "56266",
+    "Habibul Bashar": "55906",
+    "Javed Omer": "55935",
+    "Mashrafe Mortaza": "56007",
+    "Mohammad Ashraful": "55988",
+    "Mohammad Rafique": "55973",
+    "Mushfiqur Rahim": "56029",
+    "Shakib Al Hasan": "56143",
+    "Syed Rasel": "56160",
+    "Tamim Iqbal": "56194",
+    "Piyush Chawla": "32966",
+    "MS Dhoni": "28081",
+    "Rahul Dravid": "28114",
+    "Gautam Gambhir": "28763",
+    "Dinesh Karthik": "30045",
+    "Munaf Patel": "32965",
+    "Ramesh Powar": "32391",
+    "Virender Sehwag": "35263",
+    "RP Singh": "35280",
+    "Robin Uthappa": "35582",
+    "Yuvraj Singh": "36084"
+   }
+  },
+  "season": "2007",
+  "team_type": "international",
+  "teams": [
+   "Bangladesh",
+   "India"
+  ],
+  "venue": "Bir Sreshtho Flight Lieutenant Matiur Rahman Stadium, Chattogram",
+  "overs": 50
+ },
+ "innings": [
+  {
+   "team": "Bangladesh",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 9.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

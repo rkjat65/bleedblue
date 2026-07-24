@@ -1,0 +1,117 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64240",
+  "espn_league_id": "16896",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sialkot",
+  "dates": [
+   "1984-10-31"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1984/85",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Mohammad Aslam",
+    "Shakoor Rana"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Saadat Ali",
+    "Sajid Ali",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Naved Anjum",
+    "Manzoor Elahi",
+    "Mudassar Nazar",
+    "Ashraf Ali",
+    "Tahir Naqqash",
+    "Rashid Khan",
+    "Tauseef Ahmed"
+   ],
+   "India": [
+    "Aunshuman Gaekwad",
+    "Ghulam Parkar",
+    "Dilip Vengsarkar",
+    "Sandeep Patil",
+    "Ravi Shastri",
+    "Mohinder Amarnath",
+    "Roger Binny",
+    "Syed Kirmani",
+    "Madan Lal",
+    "Balwinder Sandhu",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Saadat Ali": "42599",
+    "Sajid Ali": "42610",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Naved Anjum": "42062",
+    "Manzoor Elahi": "41262",
+    "Mudassar Nazar": "41308",
+    "Ashraf Ali": "39008",
+    "Tahir Naqqash": "43271",
+    "Rashid Khan": "42421",
+    "Tauseef Ahmed": "43277",
+    "Aunshuman Gaekwad": "28754",
+    "Ghulam Parkar": "32201",
+    "Dilip Vengsarkar": "35654",
+    "Sandeep Patil": "32283",
+    "Ravi Shastri": "33975",
+    "Mohinder Amarnath": "26225",
+    "Roger Binny": "26948",
+    "Syed Kirmani": "30116",
+    "Madan Lal": "30873",
+    "Balwinder Sandhu": "33816",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Jinnah Stadium, Sialkot",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 210,
+    "wickets": 3,
+    "balls": 240,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

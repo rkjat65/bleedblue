@@ -1,0 +1,97 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63633",
+  "espn_league_id": "16390"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Ahmedabad",
+  "dates": [
+   "1994-02-08"
+  ],
+  "event": {
+   "name": "Sri Lanka in India Test Series 1993/94",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "AL Narasimhan",
+    "V.K.Ramaswamy"
+   ],
+   "match_referees": [
+    "Everton Weekes"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sanjay Manjrekar",
+    "Kapil Dev",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Rajesh Chauhan",
+    "Venkatapathy Raju"
+   ],
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Dulip Samaraweera",
+    "Hashan Tillakaratne",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Marvan Atapattu",
+    "Ruwan Kalpage",
+    "Pubudu Dassanayake",
+    "Don Anurasiri",
+    "Pramodya Wickramasinghe",
+    "Muthiah Muralidaran"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sanjay Manjrekar": "30934",
+    "Kapil Dev": "30028",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Venkatapathy Raju": "33044",
+    "Roshan Mahanama": "49626",
+    "Dulip Samaraweera": "50422",
+    "Hashan Tillakaratne": "50744",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Marvan Atapattu": "48124",
+    "Ruwan Kalpage": "49356",
+    "Pubudu Dassanayake": "48445",
+    "Don Anurasiri": "48120",
+    "Pramodya Wickramasinghe": "50848",
+    "Muthiah Muralidaran": "49636"
+   }
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Narendra Modi Stadium, Motera, Ahmedabad"
+ },
+ "innings": []
+}

@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64709",
+  "espn_league_id": "15556"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Indore",
+  "dates": [
+   "2001-03-31"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 2000/01",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Vijay Chopra",
+    "Krishna Hariharan"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Suhas Phadkar"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "VVS Laxman",
+    "Sourav Ganguly",
+    "Hemang Badani",
+    "Dinesh Mongia",
+    "Ajit Agarkar",
+    "Vijay Dahiya",
+    "Zaheer Khan",
+    "Harbhajan Singh",
+    "Javagal Srinath"
+   ],
+   "Australia": [
+    "Adam Gilchrist",
+    "Damien Martyn",
+    "Ricky Ponting",
+    "Michael Bevan",
+    "Steve Waugh",
+    "Andrew Symonds",
+    "Darren Lehmann",
+    "Ian Harvey",
+    "Shane Warne",
+    "Damien Fleming",
+    "Glenn McGrath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "VVS Laxman": "30750",
+    "Sourav Ganguly": "28779",
+    "Hemang Badani": "26802",
+    "Dinesh Mongia": "31034",
+    "Ajit Agarkar": "26184",
+    "Vijay Dahiya": "27978",
+    "Zaheer Khan": "30102",
+    "Harbhajan Singh": "29264",
+    "Javagal Srinath": "34105",
+    "Adam Gilchrist": "5390",
+    "Damien Martyn": "6513",
+    "Ricky Ponting": "7133",
+    "Michael Bevan": "4144",
+    "Steve Waugh": "8192",
+    "Andrew Symonds": "7702",
+    "Darren Lehmann": "6285",
+    "Ian Harvey": "5597",
+    "Shane Warne": "8166",
+    "Damien Fleming": "5239",
+    "Glenn McGrath": "6565"
+   }
+  },
+  "season": "2001",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Nehru Stadium, Indore",
+  "overs": 50
+ },
+ "innings": []
+}

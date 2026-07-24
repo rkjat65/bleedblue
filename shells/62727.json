@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62727",
+  "espn_league_id": "17467",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1951-12-30"
+  ],
+  "event": {
+   "name": "England in India Test Series 1951/52",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bapu Joshi",
+    "Balkrishna Mohoni"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Vinoo Mankad",
+    "Polly Umrigar",
+    "Vijay Hazare",
+    "Lala Amarnath",
+    "Dattu Phadkar",
+    "Vijay Manjrekar",
+    "Chingleput Gopinath",
+    "Ramesh Divecha",
+    "Subhash Gupte",
+    "Khokhan Sen"
+   ],
+   "England": [
+    "Jack Robertson",
+    "Dick Spooner",
+    "Tom Graveney",
+    "Allan Watkins",
+    "Don Kenyon",
+    "Cyril Poole",
+    "Nigel Howard",
+    "Brian Statham",
+    "Eddie Leadbeater",
+    "Fred Ridgway",
+    "Roy Tattersall"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Vinoo Mankad": "30939",
+    "Polly Umrigar": "35577",
+    "Vijay Hazare": "29290",
+    "Lala Amarnath": "26223",
+    "Dattu Phadkar": "32309",
+    "Vijay Manjrekar": "30936",
+    "Chingleput Gopinath": "28855",
+    "Ramesh Divecha": "28095",
+    "Subhash Gupte": "28880",
+    "Khokhan Sen": "34741",
+    "Jack Robertson": "19423",
+    "Dick Spooner": "20317",
+    "Tom Graveney": "13434",
+    "Allan Watkins": "22329",
+    "Don Kenyon": "15866",
+    "Cyril Poole": "18569",
+    "Nigel Howard": "14282",
+    "Brian Statham": "20341",
+    "Eddie Leadbeater": "16235",
+    "Fred Ridgway": "19405",
+    "Roy Tattersall": "21464"
+   }
+  },
+  "season": "1951",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 959,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 344,
+    "wickets": 10,
+    "balls": 895,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 720,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 103,
+    "wickets": 0,
+    "balls": 174,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 342,
+    "wickets": 10,
+    "balls": 959,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 895,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 252,
+    "wickets": 5,
+    "balls": 720,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 174,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,151 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63600",
+  "espn_league_id": "16454",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1993-02-19"
+  ],
+  "event": {
+   "name": "England in India Test Series 1992/93",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Piloo Reporter",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Navjot Sidhu",
+    "Manoj Prabhakar",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Pravin Amre",
+    "Kapil Dev",
+    "Kiran More",
+    "Anil Kumble",
+    "Rajesh Chauhan",
+    "Venkatapathy Raju"
+   ],
+   "England": [
+    "Graham Gooch",
+    "Alec Stewart",
+    "Mike Atherton",
+    "Robin Smith",
+    "Mike Gatting",
+    "Graeme Hick",
+    "Richard Blakey",
+    "Chris Lewis",
+    "John Emburey",
+    "Phil DeFreitas",
+    "Phil Tufnell"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Navjot Sidhu": "34028",
+    "Manoj Prabhakar": "32323",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Pravin Amre": "26238",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Venkatapathy Raju": "33044",
+    "Graham Gooch": "13399",
+    "Alec Stewart": "20372",
+    "Mike Atherton": "8579",
+    "Robin Smith": "20263",
+    "Mike Gatting": "13340",
+    "Graeme Hick": "14187",
+    "Richard Blakey": "9121",
+    "Chris Lewis": "16274",
+    "John Emburey": "12514",
+    "Phil DeFreitas": "11865",
+    "Phil Tufnell": "21611"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 810,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 591,
+    "wickets": 10,
+    "balls": 1137,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 497,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 347,
+    "wickets": 10,
+    "balls": 810,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1137,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 229,
+    "wickets": 10,
+    "balls": 497,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

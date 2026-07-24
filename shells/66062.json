@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66062",
+  "espn_league_id": "16148",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jaipur",
+  "dates": [
+   "1996-10-23"
+  ],
+  "event": {
+   "name": "Australia tour of India 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Sekhar Choudhary",
+    "Jose Kurushinkal"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "MSS Ranawat"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Javagal Srinath",
+    "Ajay Jadeja",
+    "Pankaj Dharmani",
+    "Anil Kumble",
+    "Nayan Mongia",
+    "Sunil Joshi",
+    "Venkatesh Prasad"
+   ],
+   "South Africa": [
+    "Andrew Hudson",
+    "Gary Kirsten",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Jonty Rhodes",
+    "Derek Crookes",
+    "Brian McMillan",
+    "David Richardson",
+    "Pat Symcox",
+    "Fanie de Villiers",
+    "Allan Donald"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Javagal Srinath": "34105",
+    "Ajay Jadeja": "29632",
+    "Pankaj Dharmani": "28067",
+    "Anil Kumble": "30176",
+    "Nayan Mongia": "31036",
+    "Sunil Joshi": "29725",
+    "Venkatesh Prasad": "32345",
+    "Andrew Hudson": "45458",
+    "Gary Kirsten": "45813",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Jonty Rhodes": "46973",
+    "Derek Crookes": "44486",
+    "Brian McMillan": "46214",
+    "David Richardson": "46978",
+    "Pat Symcox": "47267",
+    "Fanie de Villiers": "44696",
+    "Allan Donald": "44716"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Sawai Mansingh Stadium, Jaipur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 222,
+    "wickets": 7,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 249,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

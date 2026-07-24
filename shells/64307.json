@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64307",
+  "espn_league_id": "16761",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1987-03-24"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "SB Kulkarni",
+    "RS Rathore"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Lalchand Rajput",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Chetan Sharma",
+    "Mohammad Azharuddin",
+    "Sadanand Viswanath",
+    "Manoj Prabhakar",
+    "Maninder Singh"
+   ],
+   "Pakistan": [
+    "Ramiz Raja",
+    "Ijaz Ahmed",
+    "Saleem Malik",
+    "Javed Miandad",
+    "Manzoor Elahi",
+    "Imran Khan",
+    "Wasim Akram",
+    "Saleem Yousuf",
+    "Abdul Qadir",
+    "Tauseef Ahmed",
+    "Saleem Jaffar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Lalchand Rajput": "33034",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Chetan Sharma": "33949",
+    "Mohammad Azharuddin": "26329",
+    "Sadanand Viswanath": "35713",
+    "Manoj Prabhakar": "32323",
+    "Maninder Singh": "30923",
+    "Ramiz Raja": "42420",
+    "Ijaz Ahmed": "40551",
+    "Saleem Malik": "42623",
+    "Javed Miandad": "40879",
+    "Manzoor Elahi": "41262",
+    "Imran Khan": "40560",
+    "Wasim Akram": "43547",
+    "Saleem Yousuf": "42626",
+    "Abdul Qadir": "38973",
+    "Tauseef Ahmed": "43277",
+    "Saleem Jaffar": "42879"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 264,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 245,
+    "wickets": 9,
+    "balls": 264,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 286,
+    "wickets": 6,
+    "balls": 264,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 264,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

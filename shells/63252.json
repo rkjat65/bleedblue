@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63252",
+  "espn_league_id": "17070",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1980-01-29"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1979/80",
+   "match_number": 6
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ram Punjabi",
+    "Kasturi Ramaswami"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Roger Binny",
+    "Gundappa Viswanath",
+    "Sandeep Patil",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Shivlal Yadav",
+    "Dilip Doshi"
+   ],
+   "Pakistan": [
+    "Taslim Arif",
+    "Sadiq Mohammad",
+    "Majid Khan",
+    "Javed Miandad",
+    "Wasim Raja",
+    "Asif Iqbal",
+    "Imran Khan",
+    "Wasim Bari",
+    "Iqbal Qasim",
+    "Sikander Bakht",
+    "Ehteshamuddin"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Roger Binny": "26948",
+    "Gundappa Viswanath": "35712",
+    "Sandeep Patil": "32283",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Shivlal Yadav": "36064",
+    "Dilip Doshi": "28107",
+    "Taslim Arif": "43275",
+    "Sadiq Mohammad": "42601",
+    "Majid Khan": "41919",
+    "Javed Miandad": "40879",
+    "Wasim Raja": "43553",
+    "Asif Iqbal": "39010",
+    "Imran Khan": "40560",
+    "Wasim Bari": "43549",
+    "Iqbal Qasim": "40572",
+    "Sikander Bakht": "42661",
+    "Ehteshamuddin": "40067"
+   }
+  },
+  "season": "1980",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 331,
+    "wickets": 10,
+    "balls": 654,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 599,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 205,
+    "wickets": 10,
+    "balls": 425,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 378,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 654,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 272,
+    "wickets": 4,
+    "balls": 599,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 425,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 179,
+    "wickets": 6,
+    "balls": 378,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

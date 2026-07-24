@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63046",
+  "espn_league_id": "17279",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1969-10-03"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1969/70",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sambhu Pan",
+    "V Rajagopal"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Syed Abid Ali",
+    "Chetan Chauhan",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Srinivas Venkataraghavan",
+    "Mansur Ali Khan Pataudi",
+    "Ashok Mankad",
+    "Ambar Roy",
+    "Farokh Engineer",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ],
+   "New Zealand": [
+    "Graham Dowling",
+    "Bruce Murray",
+    "Bevan Congdon",
+    "Mark Burgess",
+    "Glenn Turner",
+    "Vic Pollard",
+    "Bryan Yuile",
+    "Ken Wadsworth",
+    "Dayle Hadlee",
+    "Bob Cunis",
+    "Hedley Howarth"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Syed Abid Ali": "26169",
+    "Chetan Chauhan": "27619",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Srinivas Venkataraghavan": "35656",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Ashok Mankad": "30938",
+    "Ambar Roy": "33182",
+    "Farokh Engineer": "28624",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Graham Dowling": "36837",
+    "Bruce Murray": "37734",
+    "Bevan Congdon": "36611",
+    "Mark Burgess": "36314",
+    "Glenn Turner": "38622",
+    "Vic Pollard": "38129",
+    "Bryan Yuile": "38930",
+    "Ken Wadsworth": "38735",
+    "Dayle Hadlee": "37222",
+    "Bob Cunis": "36628",
+    "Hedley Howarth": "37255"
+   }
+  },
+  "season": "1969",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 780,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 257,
+    "wickets": 10,
+    "balls": 596,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 631,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 109,
+    "wickets": 10,
+    "balls": 335,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 319,
+    "wickets": 10,
+    "balls": 780,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 596,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 214,
+    "wickets": 10,
+    "balls": 631,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 335,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62953",
+  "espn_league_id": "17340",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1964-10-10"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1964/65",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Habib Choudhury",
+    "SK Raghunatha Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Dilip Sardesai",
+    "Motganhalli Jaisimha",
+    "Salim Durani",
+    "Vijay Manjrekar",
+    "Hanumant Singh",
+    "Mansur Ali Khan Pataudi",
+    "Chandu Borde",
+    "Rusi Surti",
+    "Bapu Nadkarni",
+    "Prince Indrajitsinhji",
+    "Bhagwath Chandrasekhar"
+   ],
+   "Australia": [
+    "Bill Lawry",
+    "Bob Simpson",
+    "Brian Booth",
+    "Peter Burge",
+    "Bob Cowper",
+    "Tom Veivers",
+    "Barry Jarman",
+    "Johnny Martin",
+    "Graham McKenzie",
+    "Alan Connolly",
+    "Norm O'Neill"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dilip Sardesai": "33850",
+    "Motganhalli Jaisimha": "29663",
+    "Salim Durani": "28118",
+    "Vijay Manjrekar": "30936",
+    "Hanumant Singh": "29260",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Chandu Borde": "26962",
+    "Rusi Surti": "34174",
+    "Bapu Nadkarni": "31760",
+    "Prince Indrajitsinhji": "29533",
+    "Bhagwath Chandrasekhar": "27591",
+    "Bill Lawry": "6270",
+    "Bob Simpson": "7619",
+    "Brian Booth": "4171",
+    "Peter Burge": "4241",
+    "Bob Cowper": "4645",
+    "Tom Veivers": "8103",
+    "Barry Jarman": "6013",
+    "Johnny Martin": "6509",
+    "Graham McKenzie": "6576",
+    "Alan Connolly": "4613",
+    "Norm O'Neill": "7015"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 623,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 341,
+    "wickets": 10,
+    "balls": 915,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 598,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 256,
+    "wickets": 8,
+    "balls": 772,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 320,
+    "wickets": 9,
+    "balls": 623,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 915,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 274,
+    "wickets": 9,
+    "balls": 598,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 772,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

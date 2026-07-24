@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64308",
+  "espn_league_id": "16761"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jamshedpur",
+  "dates": [
+   "1987-03-26"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87",
+   "match_number": 6
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Subrata Banerjee",
+    "V Vikramraju"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Manoj Prabhakar",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Ravi Shastri",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Sadanand Viswanath",
+    "Raju Kulkarni",
+    "Gopal Sharma",
+    "Maninder Singh"
+   ],
+   "Pakistan": [
+    "Ramiz Raja",
+    "Ijaz Ahmed",
+    "Saleem Malik",
+    "Javed Miandad",
+    "Imran Khan",
+    "Manzoor Elahi",
+    "Wasim Akram",
+    "Saleem Yousuf",
+    "Abdul Qadir",
+    "Tauseef Ahmed",
+    "Saleem Jaffar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Manoj Prabhakar": "32323",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Ravi Shastri": "33975",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Sadanand Viswanath": "35713",
+    "Raju Kulkarni": "30151",
+    "Gopal Sharma": "33952",
+    "Maninder Singh": "30923",
+    "Ramiz Raja": "42420",
+    "Ijaz Ahmed": "40551",
+    "Saleem Malik": "42623",
+    "Javed Miandad": "40879",
+    "Imran Khan": "40560",
+    "Manzoor Elahi": "41262",
+    "Wasim Akram": "43547",
+    "Saleem Yousuf": "42626",
+    "Abdul Qadir": "38973",
+    "Tauseef Ahmed": "43277",
+    "Saleem Jaffar": "42879"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Keenan Stadium, Jamshedpur",
+  "overs": 50
+ },
+ "innings": []
+}

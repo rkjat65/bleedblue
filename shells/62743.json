@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62743",
+  "espn_league_id": "17458",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1952-11-13"
+  ],
+  "event": {
+   "name": "India in England Test Series 1952",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jamshed Patel",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "Madhav Apte",
+    "Rusi Modi",
+    "Vijay Hazare",
+    "Polly Umrigar",
+    "Hemu Adhikari",
+    "Lala Amarnath",
+    "Bal Dani",
+    "Vijay Rajindernath",
+    "Subhash Gupte",
+    "Ghulam Ahmed"
+   ],
+   "Pakistan": [
+    "Nazar Mohammad",
+    "Hanif Mohammad",
+    "Abdul Kardar",
+    "Imtiaz Ahmed",
+    "Maqsood Ahmed",
+    "Wazir Mohammad",
+    "Waqar Hasan",
+    "Fazal Mahmood",
+    "Israr Ali",
+    "Mahmood Hussain",
+    "Amir Elahi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "Madhav Apte": "26269",
+    "Rusi Modi": "31021",
+    "Vijay Hazare": "29290",
+    "Polly Umrigar": "35577",
+    "Hemu Adhikari": "26179",
+    "Lala Amarnath": "26223",
+    "Bal Dani": "27988",
+    "Vijay Rajindernath": "33027",
+    "Subhash Gupte": "28880",
+    "Ghulam Ahmed": "28821",
+    "Nazar Mohammad": "42068",
+    "Hanif Mohammad": "40373",
+    "Abdul Kardar": "41030",
+    "Imtiaz Ahmed": "40565",
+    "Maqsood Ahmed": "41270",
+    "Wazir Mohammad": "43557",
+    "Waqar Hasan": "43541",
+    "Fazal Mahmood": "40092",
+    "Israr Ali": "40579",
+    "Mahmood Hussain": "41267",
+    "Amir Elahi": "38997"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 438,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 387,
+    "wickets": 4,
+    "balls": 672,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 896,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 45,
+    "wickets": 0,
+    "balls": 92,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 186,
+    "wickets": 10,
+    "balls": 438,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 672,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 242,
+    "wickets": 10,
+    "balls": 896,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 92,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

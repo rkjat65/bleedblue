@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64590",
+  "espn_league_id": "15895",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bulawayo",
+  "dates": [
+   "1998-09-27"
+  ],
+  "event": {
+   "name": "India in Zimbabwe ODI Series 1998/99",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Graeme Evans",
+    "Ian Robinson"
+   ],
+   "match_referees": [
+    "Alan Smith"
+   ],
+   "tv_umpires": [
+    "Russell Tiffin"
+   ]
+  },
+  "outcome": {
+   "winner": "Zimbabwe"
+  },
+  "players": {
+   "Zimbabwe": [
+    "Alistair Campbell",
+    "Trevor Madondo",
+    "Murray Goodwin",
+    "Andy Flower",
+    "Craig Wishart",
+    "Craig Evans",
+    "Heath Streak",
+    "Paul Strang",
+    "Andy Whittall",
+    "John Rennie",
+    "Mluleki Nkala"
+   ],
+   "India": [
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Javagal Srinath",
+    "Ajit Agarkar",
+    "Anil Kumble",
+    "Harbhajan Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Alistair Campbell": "55301",
+    "Trevor Madondo": "55571",
+    "Murray Goodwin": "55456",
+    "Andy Flower": "55427",
+    "Craig Wishart": "55854",
+    "Craig Evans": "55408",
+    "Heath Streak": "55761",
+    "Paul Strang": "55758",
+    "Andy Whittall": "55846",
+    "John Rennie": "55714",
+    "Mluleki Nkala": "55663",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Javagal Srinath": "34105",
+    "Ajit Agarkar": "26184",
+    "Anil Kumble": "30176",
+    "Harbhajan Singh": "29264"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "Zimbabwe",
+   "India"
+  ],
+  "venue": "Queens Sports Club, Bulawayo",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 235,
+    "wickets": 7,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 251,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 236,
+    "wickets": 2,
+    "balls": 251,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

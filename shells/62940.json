@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62940",
+  "espn_league_id": "17345",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1964-01-21"
+  ],
+  "event": {
+   "name": "England in India Test Series 1963/64",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Habib Choudhury",
+    "Ahmed Mamsa"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vijay Mehra",
+    "Budhi Kunderan",
+    "Dilip Sardesai",
+    "Vijay Manjrekar",
+    "Mansur Ali Khan Pataudi",
+    "Motganhalli Jaisimha",
+    "Chandu Borde",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "Rajinder Pal",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Brian Bolus",
+    "Mike Smith",
+    "Jim Parks",
+    "Barry Knight",
+    "Fred Titmus",
+    "Don Wilson",
+    "Jimmy Binks",
+    "John Price",
+    "David Larter",
+    "Jeff Jones",
+    "Micky Stewart"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vijay Mehra": "30974",
+    "Budhi Kunderan": "30178",
+    "Dilip Sardesai": "33850",
+    "Vijay Manjrekar": "30936",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Motganhalli Jaisimha": "29663",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "Rajinder Pal": "33028",
+    "Bhagwath Chandrasekhar": "27591",
+    "Brian Bolus": "9142",
+    "Mike Smith": "20255",
+    "Jim Parks": "18435",
+    "Barry Knight": "15910",
+    "Fred Titmus": "21548",
+    "Don Wilson": "22469",
+    "Jimmy Binks": "9095",
+    "John Price": "18616",
+    "David Larter": "16205",
+    "Jeff Jones": "15547",
+    "Micky Stewart": "20376"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 300,
+    "wickets": 10,
+    "balls": 681,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 780,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 249,
+    "wickets": 8,
+    "balls": 690,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 804,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 681,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 233,
+    "wickets": 9,
+    "balls": 780,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 690,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 206,
+    "wickets": 3,
+    "balls": 804,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62997",
+  "espn_league_id": "17308",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1966-12-31"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1966/67",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "I Gopalakrishnan",
+    "Sambhu Pan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Budhi Kunderan",
+    "Motganhalli Jaisimha",
+    "Rusi Surti",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Hanumant Singh",
+    "Venkataraman Subramanya",
+    "Srinivas Venkataraghavan",
+    "Abbas Ali Baig",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Conrad Hunte",
+    "Robin Bynoe",
+    "Rohan Kanhai",
+    "Basil Butcher",
+    "Clive Lloyd",
+    "Seymour Nurse",
+    "Garry Sobers",
+    "Jackie Hendriks",
+    "Wes Hall",
+    "Lance Gibbs",
+    "Charlie Griffith"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Budhi Kunderan": "30178",
+    "Motganhalli Jaisimha": "29663",
+    "Rusi Surti": "34174",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Hanumant Singh": "29260",
+    "Venkataraman Subramanya": "34215",
+    "Srinivas Venkataraghavan": "35656",
+    "Abbas Ali Baig": "26817",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Conrad Hunte": "52070",
+    "Robin Bynoe": "51242",
+    "Rohan Kanhai": "52287",
+    "Basil Butcher": "51239",
+    "Clive Lloyd": "52345",
+    "Seymour Nurse": "52636",
+    "Garry Sobers": "52946",
+    "Jackie Hendriks": "52053",
+    "Wes Hall": "52043",
+    "Lance Gibbs": "51883",
+    "Charlie Griffith": "51907"
+   }
+  },
+  "season": "1966",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 828,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 167,
+    "wickets": 10,
+    "balls": 515,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 178,
+    "wickets": 10,
+    "balls": 466,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 390,
+    "wickets": 10,
+    "balls": 828,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 515,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 466,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,165 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63535",
+  "espn_league_id": "16615",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Manchester",
+  "dates": [
+   "1990-08-09"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1989/90",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "John Hampshire",
+    "John Holder",
+    "Chris Adams"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Graham Gooch",
+    "Mike Atherton",
+    "David Gower",
+    "Allan Lamb",
+    "Jack Russell",
+    "Robin Smith",
+    "John Morris",
+    "Chris Lewis",
+    "Eddie Hemmings",
+    "Angus Fraser",
+    "Devon Malcolm"
+   ],
+   "India": [
+    "Ravi Shastri",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Manoj Prabhakar",
+    "Kapil Dev",
+    "Kiran More",
+    "Anil Kumble",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Graham Gooch": "13399",
+    "Mike Atherton": "8579",
+    "David Gower": "13418",
+    "Allan Lamb": "16178",
+    "Jack Russell": "19500",
+    "Robin Smith": "20263",
+    "John Morris": "17102",
+    "Chris Lewis": "16274",
+    "Eddie Hemmings": "14152",
+    "Angus Fraser": "12909",
+    "Devon Malcolm": "16885",
+    "Ravi Shastri": "33975",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Manoj Prabhakar": "32323",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Old Trafford, Manchester",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 519,
+    "wickets": 10,
+    "balls": 965,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 716,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 320,
+    "wickets": 4,
+    "balls": 486,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 540,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 965,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 432,
+    "wickets": 10,
+    "balls": 716,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 486,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 343,
+    "wickets": 6,
+    "balls": 540,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,136 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64420",
+  "espn_league_id": "16458",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Faridabad",
+  "dates": [
+   "1993-03-19"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1992/93",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Narendra Menon",
+    "Raman Sharma"
+   ],
+   "match_referees": [
+    "Asif Iqbal"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Pravin Amre",
+    "Vijay Yadav",
+    "Anil Kumble",
+    "Salil Ankola",
+    "Javagal Srinath",
+    "Venkatapathy Raju"
+   ],
+   "Zimbabwe": [
+    "Andy Flower",
+    "Grant Flower",
+    "Alistair Campbell",
+    "Dave Houghton",
+    "Mark Dekker",
+    "Wayne James",
+    "Ali Shah",
+    "Eddo Brandes",
+    "Gary Crocker",
+    "David Brain",
+    "John Traicos"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Pravin Amre": "26238",
+    "Vijay Yadav": "36069",
+    "Anil Kumble": "30176",
+    "Salil Ankola": "26257",
+    "Javagal Srinath": "34105",
+    "Venkatapathy Raju": "33044",
+    "Andy Flower": "55427",
+    "Grant Flower": "55429",
+    "Alistair Campbell": "55301",
+    "Dave Houghton": "55497",
+    "Mark Dekker": "55367",
+    "Wayne James": "55524",
+    "Ali Shah": "55680",
+    "Eddo Brandes": "55267",
+    "Gary Crocker": "55321",
+    "David Brain": "55265",
+    "John Traicos": "55802"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Nahar Singh Stadium, Faridabad",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 249,
+    "wickets": 7,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 278,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 182,
+    "wickets": 10,
+    "balls": 278,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

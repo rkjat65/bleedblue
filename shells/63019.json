@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63019",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dunedin",
+  "dates": [
+   "1968-02-14"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dennis Copps",
+    "WT Martin"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Bruce Murray",
+    "Graham Dowling",
+    "Bevan Congdon",
+    "Barry Sinclair",
+    "Vic Pollard",
+    "Mark Burgess",
+    "Bryan Yuile",
+    "Bruce Taylor",
+    "Dick Motz",
+    "Jack Alabaster",
+    "Roy Harford"
+   ],
+   "India": [
+    "Syed Abid Ali",
+    "Farokh Engineer",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Erapalli Prasanna",
+    "Mansur Ali Khan Pataudi",
+    "Motganhalli Jaisimha",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Ramakant Desai",
+    "Bishan Bedi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bruce Murray": "37734",
+    "Graham Dowling": "36837",
+    "Bevan Congdon": "36611",
+    "Barry Sinclair": "38390",
+    "Vic Pollard": "38129",
+    "Mark Burgess": "36314",
+    "Bryan Yuile": "38930",
+    "Bruce Taylor": "38609",
+    "Dick Motz": "37733",
+    "Jack Alabaster": "36175",
+    "Roy Harford": "37230",
+    "Syed Abid Ali": "26169",
+    "Farokh Engineer": "28624",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Erapalli Prasanna": "32357",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Motganhalli Jaisimha": "29663",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Ramakant Desai": "28045",
+    "Bishan Bedi": "26875"
+   }
+  },
+  "season": "1968",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Carisbrook, Dunedin",
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 350,
+    "wickets": 10,
+    "balls": 945,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 744,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 208,
+    "wickets": 10,
+    "balls": 624,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 448,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 945,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 359,
+    "wickets": 10,
+    "balls": 744,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 624,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 200,
+    "wickets": 5,
+    "balls": 448,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

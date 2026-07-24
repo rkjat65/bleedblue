@@ -1,0 +1,121 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "238192",
+  "espn_league_id": "14656"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Guwahati",
+  "dates": [
+   "2006-04-09"
+  ],
+  "event": {
+   "name": "England in India ODI Series 2005/06",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Arani Jayaprakash",
+    "Rudi Koertzen"
+   ],
+   "match_referees": [
+    "Roshan Mahanama"
+   ],
+   "tv_umpires": [
+    "Ivaturi Shivram"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ajit Agarkar",
+    "MS Dhoni",
+    "Rahul Dravid",
+    "Harbhajan Singh",
+    "Mohammad Kaif",
+    "Munaf Patel",
+    "Irfan Pathan",
+    "Ramesh Powar",
+    "Suresh Raina",
+    "Virender Sehwag",
+    "RP Singh",
+    "Vikram Singh",
+    "Sreesanth",
+    "Robin Uthappa",
+    "Venugopal Rao",
+    "Yuvraj Singh"
+   ],
+   "England": [
+    "Kabir Ali",
+    "James Anderson",
+    "Gareth Batty",
+    "Ian Bell",
+    "Ian Blackwell",
+    "Paul Collingwood",
+    "Andrew Flintoff",
+    "Matthew Hoggard",
+    "Geraint Jones",
+    "Sajid Mahmood",
+    "Kevin Pietersen",
+    "Liam Plunkett",
+    "Matt Prior",
+    "Owais Shah",
+    "Vikram Solanki",
+    "Andrew Strauss"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ajit Agarkar": "26184",
+    "MS Dhoni": "28081",
+    "Rahul Dravid": "28114",
+    "Harbhajan Singh": "29264",
+    "Mohammad Kaif": "29990",
+    "Munaf Patel": "32965",
+    "Irfan Pathan": "32685",
+    "Ramesh Powar": "32391",
+    "Suresh Raina": "33335",
+    "Virender Sehwag": "35263",
+    "RP Singh": "35280",
+    "Vikram Singh": "35281",
+    "Sreesanth": "34274",
+    "Robin Uthappa": "35582",
+    "Venugopal Rao": "35805",
+    "Yuvraj Singh": "36084",
+    "Kabir Ali": "8476",
+    "James Anderson": "8608",
+    "Gareth Batty": "9042",
+    "Ian Bell": "9062",
+    "Ian Blackwell": "9117",
+    "Paul Collingwood": "10772",
+    "Andrew Flintoff": "12856",
+    "Matthew Hoggard": "14236",
+    "Geraint Jones": "15501",
+    "Sajid Mahmood": "17944",
+    "Kevin Pietersen": "19296",
+    "Liam Plunkett": "19264",
+    "Matt Prior": "18675",
+    "Owais Shah": "20123",
+    "Vikram Solanki": "20286",
+    "Andrew Strauss": "20387"
+   }
+  },
+  "season": "2006",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Nehru Stadium, Guwahati",
+  "overs": 50
+ },
+ "innings": []
+}

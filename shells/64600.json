@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64600",
+  "espn_league_id": "15870",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Wellington",
+  "dates": [
+   "1999-01-13"
+  ],
+  "event": {
+   "name": "India in New Zealand ODI Series 1998/99",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Dave Quested",
+    "Evan Watkin"
+   ],
+   "match_referees": [
+    "Talat Ali"
+   ],
+   "tv_umpires": [
+    "Steve Dunne"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Matt Horne",
+    "Bryan Young",
+    "Craig McMillan",
+    "Roger Twose",
+    "Chris Cairns",
+    "Dion Nash",
+    "Chris Harris",
+    "Adam Parore",
+    "Daniel Vettori",
+    "Gavin Larsen",
+    "Chris Drum"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Nikhil Chopra",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Matt Horne": "37250",
+    "Bryan Young": "38929",
+    "Craig McMillan": "37712",
+    "Roger Twose": "38624",
+    "Chris Cairns": "36597",
+    "Dion Nash": "38008",
+    "Chris Harris": "37232",
+    "Adam Parore": "38117",
+    "Daniel Vettori": "38710",
+    "Gavin Larsen": "37601",
+    "Chris Drum": "36839",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Nikhil Chopra": "27641",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Basin Reserve, Wellington",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 192,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 89,
+    "wickets": 2,
+    "balls": 73,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 208,
+    "wickets": 4,
+    "balls": 192,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 73,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

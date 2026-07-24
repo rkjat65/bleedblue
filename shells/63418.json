@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63418",
+  "espn_league_id": "16834",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Adelaide",
+  "dates": [
+   "1985-12-13"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1985/86",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Tony Crafter",
+    "Steve Randell"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Wayne Phillips",
+    "David Boon",
+    "Geoff Marsh",
+    "Allan Border",
+    "Greg Ritchie",
+    "David Hookes",
+    "Greg Matthews",
+    "Ray Bright",
+    "Craig McDermott",
+    "Bruce Reid",
+    "Merv Hughes"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Chetan Sharma",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Mohinder Amarnath",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Roger Binny",
+    "Syed Kirmani",
+    "Shivlal Yadav"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Wayne Phillips": "7115",
+    "David Boon": "4169",
+    "Geoff Marsh": "6499",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "David Hookes": "5696",
+    "Greg Matthews": "6525",
+    "Ray Bright": "4208",
+    "Craig McDermott": "6551",
+    "Bruce Reid": "7319",
+    "Merv Hughes": "5726",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Chetan Sharma": "33949",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Mohinder Amarnath": "26225",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Roger Binny": "26948",
+    "Syed Kirmani": "30116",
+    "Shivlal Yadav": "36064"
+   }
+  },
+  "season": "1985",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Adelaide Oval",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 381,
+    "wickets": 10,
+    "balls": 894,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1212,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 17,
+    "wickets": 0,
+    "balls": 48,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 894,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 520,
+    "wickets": 10,
+    "balls": 1212,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 48,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

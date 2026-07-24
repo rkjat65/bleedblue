@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62885",
+  "espn_league_id": "17374",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1960-12-30"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1960/61",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Santosh Ganguli",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Nari Contractor",
+    "Motganhalli Jaisimha",
+    "Abbas Ali Baig",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Ramakant Desai",
+    "Naren Tamhane",
+    "Surendra Nath",
+    "Subhash Gupte"
+   ],
+   "Pakistan": [
+    "Hanif Mohammad",
+    "Imtiaz Ahmed",
+    "Saeed Ahmed",
+    "Javed Burki",
+    "Wallis Mathias",
+    "Mushtaq Mohammad",
+    "Nasim-ul-Ghani",
+    "Intikhab Alam",
+    "Fazal Mahmood",
+    "Mahmood Hussain",
+    "Haseeb Ahsan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nari Contractor": "27667",
+    "Motganhalli Jaisimha": "29663",
+    "Abbas Ali Baig": "26817",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Ramakant Desai": "28045",
+    "Naren Tamhane": "35308",
+    "Surendra Nath": "34814",
+    "Subhash Gupte": "28880",
+    "Hanif Mohammad": "40373",
+    "Imtiaz Ahmed": "40565",
+    "Saeed Ahmed": "42603",
+    "Javed Burki": "40877",
+    "Wallis Mathias": "41278",
+    "Mushtaq Mohammad": "41318",
+    "Nasim-ul-Ghani": "42057",
+    "Intikhab Alam": "40567",
+    "Fazal Mahmood": "40092",
+    "Mahmood Hussain": "41267",
+    "Haseeb Ahsan": "40380"
+   }
+  },
+  "season": "1960",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 764,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 180,
+    "wickets": 10,
+    "balls": 597,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 294,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 127,
+    "wickets": 4,
+    "balls": 342,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 301,
+    "wickets": 10,
+    "balls": 764,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 597,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 146,
+    "wickets": 3,
+    "balls": 294,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 342,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

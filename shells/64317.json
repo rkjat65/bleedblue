@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64317",
+  "espn_league_id": "16761",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Ahmedabad",
+  "dates": [
+   "1988-01-07"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Padmakar Pandit",
+    "RV Ramani"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Arun Lal",
+    "Mohinder Amarnath",
+    "Woorkeri Raman",
+    "Kapil Dev",
+    "Sanjay Manjrekar",
+    "Ravi Shastri",
+    "Sadanand Viswanath",
+    "Chetan Sharma",
+    "Arshad Ayub",
+    "Sanjeev Sharma"
+   ],
+   "West Indies": [
+    "Richie Richardson",
+    "Phil Simmons",
+    "Jeff Dujon",
+    "Viv Richards",
+    "Gus Logie",
+    "Carl Hooper",
+    "Eldine Baptiste",
+    "Winston Benjamin",
+    "David Williams",
+    "Winston Davis",
+    "Patrick Patterson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Arun Lal": "26295",
+    "Mohinder Amarnath": "26225",
+    "Woorkeri Raman": "33058",
+    "Kapil Dev": "30028",
+    "Sanjay Manjrekar": "30934",
+    "Ravi Shastri": "33975",
+    "Sadanand Viswanath": "35713",
+    "Chetan Sharma": "33949",
+    "Arshad Ayub": "26290",
+    "Sanjeev Sharma": "33963",
+    "Richie Richardson": "52810",
+    "Phil Simmons": "52934",
+    "Jeff Dujon": "51657",
+    "Viv Richards": "52812",
+    "Gus Logie": "52347",
+    "Carl Hooper": "52066",
+    "Eldine Baptiste": "51211",
+    "Winston Benjamin": "51220",
+    "David Williams": "53230",
+    "Winston Davis": "51643",
+    "Patrick Patterson": "52671"
+   }
+  },
+  "season": "1988",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Narendra Modi Stadium, Motera, Ahmedabad",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 291,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 194,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 196,
+    "wickets": 10,
+    "balls": 291,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62804",
+  "espn_league_id": "17422",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1955-12-16"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1955/56",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "DD Desai",
+    "Noshirvan Nagarwala"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vijay Mehra",
+    "Nari Contractor",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "AG Kripal Singh",
+    "Gulabrai Ramchand",
+    "Bapu Nadkarni",
+    "Prakash Bhandari",
+    "Naren Tamhane",
+    "Gundibail Sunderam",
+    "Subhash Gupte"
+   ],
+   "New Zealand": [
+    "Gordon Leggat",
+    "Bert Sutcliffe",
+    "John Guy",
+    "John Reid",
+    "Noel McGregor",
+    "Tony MacGibbon",
+    "Matt Poore",
+    "Harry Cave",
+    "Jack Alabaster",
+    "Trevor McMahon",
+    "Johnny Hayes"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vijay Mehra": "30974",
+    "Nari Contractor": "27667",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "AG Kripal Singh": "30132",
+    "Gulabrai Ramchand": "33062",
+    "Bapu Nadkarni": "31760",
+    "Prakash Bhandari": "26897",
+    "Naren Tamhane": "35308",
+    "Gundibail Sunderam": "34154",
+    "Subhash Gupte": "28880",
+    "Gordon Leggat": "37607",
+    "Bert Sutcliffe": "38413",
+    "John Guy": "37107",
+    "John Reid": "38248",
+    "Noel McGregor": "37705",
+    "Tony MacGibbon": "37694",
+    "Matt Poore": "38130",
+    "Harry Cave": "36600",
+    "Jack Alabaster": "36175",
+    "Trevor McMahon": "37710",
+    "Johnny Hayes": "37244"
+   }
+  },
+  "season": "1955",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1056,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 531,
+    "wickets": 7,
+    "balls": 1451,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 348,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 450,
+    "wickets": 2,
+    "balls": 1056,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1451,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 112,
+    "wickets": 1,
+    "balls": 348,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

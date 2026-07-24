@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63021",
+  "espn_league_id": "17299"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Wellington",
+  "dates": [
+   "1968-02-28"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dennis Copps",
+    "WT Martin"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Graham Dowling",
+    "Bruce Murray",
+    "Bevan Congdon",
+    "Mark Burgess",
+    "Keith Thomson",
+    "Vic Pollard",
+    "Bruce Taylor",
+    "Dick Motz",
+    "Richard Collinge",
+    "Jack Alabaster",
+    "Roy Harford"
+   ],
+   "India": [
+    "Syed Abid Ali",
+    "Farokh Engineer",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Mansur Ali Khan Pataudi",
+    "Chandu Borde",
+    "Motganhalli Jaisimha",
+    "Bapu Nadkarni",
+    "Venkataraman Subramanya",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Graham Dowling": "36837",
+    "Bruce Murray": "37734",
+    "Bevan Congdon": "36611",
+    "Mark Burgess": "36314",
+    "Keith Thomson": "38611",
+    "Vic Pollard": "38129",
+    "Bruce Taylor": "38609",
+    "Dick Motz": "37733",
+    "Richard Collinge": "36606",
+    "Jack Alabaster": "36175",
+    "Roy Harford": "37230",
+    "Syed Abid Ali": "26169",
+    "Farokh Engineer": "28624",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Chandu Borde": "26962",
+    "Motganhalli Jaisimha": "29663",
+    "Bapu Nadkarni": "31760",
+    "Venkataraman Subramanya": "34215",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875"
+   }
+  },
+  "season": "1968",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Basin Reserve, Wellington"
+ },
+ "innings": []
+}

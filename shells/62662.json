@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62662",
+  "espn_league_id": "17516"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1946-06-22"
+  ],
+  "event": {
+   "name": "India in England Test Series 1946",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Herbert Baldwin",
+    "Jack Smart"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Leonard Hutton",
+    "Cyril Washbrook",
+    "Denis Compton",
+    "Wally Hammond",
+    "Joe Hardstaff",
+    "Paul Gibb",
+    "Jack Ikin",
+    "Frank Smailes",
+    "Alec Bedser",
+    "Doug Wright",
+    "Bill Bowes"
+   ],
+   "India": [
+    "Vijay Merchant",
+    "Vinoo Mankad",
+    "Lala Amarnath",
+    "Vijay Hazare",
+    "Rusi Modi",
+    "Iftikhar Ali Khan Pataudi",
+    "Gul Mohammad",
+    "Abdul Kardar",
+    "Dattaram Hindlekar",
+    "C.S. Nayudu",
+    "Sadu Shinde"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Leonard Hutton": "14334",
+    "Cyril Washbrook": "22322",
+    "Denis Compton": "10777",
+    "Wally Hammond": "14022",
+    "Joe Hardstaff": "14041",
+    "Paul Gibb": "13357",
+    "Jack Ikin": "15381",
+    "Frank Smailes": "20213",
+    "Alec Bedser": "9057",
+    "Doug Wright": "22536",
+    "Bill Bowes": "9181",
+    "Vijay Merchant": "30996",
+    "Vinoo Mankad": "30939",
+    "Lala Amarnath": "26223",
+    "Vijay Hazare": "29290",
+    "Rusi Modi": "31021",
+    "Iftikhar Ali Khan Pataudi": "32224",
+    "Gul Mohammad": "40329",
+    "Abdul Kardar": "41030",
+    "Dattaram Hindlekar": "29297",
+    "C.S. Nayudu": "31813",
+    "Sadu Shinde": "33999"
+   }
+  },
+  "season": "1946",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London"
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63047",
+  "espn_league_id": "17273",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hyderabad",
+  "dates": [
+   "1969-10-15"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1969/70",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sudhendu Bhattacharya",
+    "MV Nagendra"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Syed Abid Ali",
+    "Prince Indrajitsinhji",
+    "Ajit Wadekar",
+    "Motganhalli Jaisimha",
+    "Mansur Ali Khan Pataudi",
+    "Ambar Roy",
+    "Ashok Gandotra",
+    "Eknath Solkar",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ],
+   "New Zealand": [
+    "Graham Dowling",
+    "Bruce Murray",
+    "Glenn Turner",
+    "Bevan Congdon",
+    "Brian Hastings",
+    "Mark Burgess",
+    "Bruce Taylor",
+    "Dayle Hadlee",
+    "Ken Wadsworth",
+    "Bob Cunis",
+    "Hedley Howarth"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Syed Abid Ali": "26169",
+    "Prince Indrajitsinhji": "29533",
+    "Ajit Wadekar": "35933",
+    "Motganhalli Jaisimha": "29663",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Ambar Roy": "33182",
+    "Ashok Gandotra": "28772",
+    "Eknath Solkar": "34085",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Graham Dowling": "36837",
+    "Bruce Murray": "37734",
+    "Glenn Turner": "38622",
+    "Bevan Congdon": "36611",
+    "Brian Hastings": "37243",
+    "Mark Burgess": "36314",
+    "Bruce Taylor": "38609",
+    "Dayle Hadlee": "37222",
+    "Ken Wadsworth": "38735",
+    "Bob Cunis": "36628",
+    "Hedley Howarth": "37255"
+   }
+  },
+  "season": "1969",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Lal Bahadur Shastri Stadium, Hyderabad",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 595,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 89,
+    "wickets": 10,
+    "balls": 326,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 492,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 76,
+    "wickets": 7,
+    "balls": 280,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 181,
+    "wickets": 10,
+    "balls": 595,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 326,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 175,
+    "wickets": 8,
+    "balls": 492,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 280,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

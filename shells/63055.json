@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63055",
+  "espn_league_id": "17273",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1969-12-24"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1969/70",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "I Gopalakrishnan",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Chetan Chauhan",
+    "Ashok Mankad",
+    "Ajit Wadekar",
+    "Gundappa Viswanath",
+    "Farokh Engineer",
+    "Mansur Ali Khan Pataudi",
+    "Eknath Solkar",
+    "Mohinder Amarnath",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ],
+   "Australia": [
+    "Keith Stackpole",
+    "Bill Lawry",
+    "Ian Chappell",
+    "Doug Walters",
+    "Paul Sheahan",
+    "Ian Redpath",
+    "Brian Taber",
+    "Graham McKenzie",
+    "Laurie Mayne",
+    "Ashley Mallett",
+    "Alan Connolly"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Chetan Chauhan": "27619",
+    "Ashok Mankad": "30938",
+    "Ajit Wadekar": "35933",
+    "Gundappa Viswanath": "35712",
+    "Farokh Engineer": "28624",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Eknath Solkar": "34085",
+    "Mohinder Amarnath": "26225",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Keith Stackpole": "7666",
+    "Bill Lawry": "6270",
+    "Ian Chappell": "4560",
+    "Doug Walters": "8151",
+    "Paul Sheahan": "7597",
+    "Ian Redpath": "7314",
+    "Brian Taber": "7912",
+    "Graham McKenzie": "6576",
+    "Laurie Mayne": "6531",
+    "Ashley Mallett": "6472",
+    "Alan Connolly": "4613"
+   }
+  },
+  "season": "1969",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 692,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 163,
+    "wickets": 9,
+    "balls": 376,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 485,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 171,
+    "wickets": 10,
+    "balls": 512,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 258,
+    "wickets": 10,
+    "balls": 692,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 376,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 153,
+    "wickets": 10,
+    "balls": 485,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 512,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

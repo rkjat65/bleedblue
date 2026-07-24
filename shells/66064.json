@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66064",
+  "espn_league_id": "16148",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Rajkot",
+  "dates": [
+   "1996-10-29"
+  ],
+  "event": {
+   "name": "Australia tour of India 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Vijay Chopra",
+    "Surya Prakash Rao"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "CR Mohite"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sachin Tendulkar",
+    "Navjot Sidhu",
+    "Javagal Srinath",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Sunil Joshi",
+    "Aashish Kapoor",
+    "Anil Kumble",
+    "Venkatesh Prasad"
+   ],
+   "South Africa": [
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Jonty Rhodes",
+    "Nicky Boje",
+    "David Richardson",
+    "Lance Klusener",
+    "Pat Symcox",
+    "Fanie de Villiers",
+    "Allan Donald"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sachin Tendulkar": "35320",
+    "Navjot Sidhu": "34028",
+    "Javagal Srinath": "34105",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Sunil Joshi": "29725",
+    "Aashish Kapoor": "30030",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Jonty Rhodes": "46973",
+    "Nicky Boje": "44091",
+    "David Richardson": "46978",
+    "Lance Klusener": "45821",
+    "Pat Symcox": "47267",
+    "Fanie de Villiers": "44696",
+    "Allan Donald": "44716"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Madhavrao Scindia Cricket Ground, Rajkot",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 185,
+    "wickets": 10,
+    "balls": 289,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 292,
+    "description": "target reached"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 289,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 188,
+    "wickets": 5,
+    "balls": 292,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

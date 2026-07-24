@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62745",
+  "espn_league_id": "17458",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1952-12-12"
+  ],
+  "event": {
+   "name": "India in England Test Series 1952",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jamshed Patel",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Datta Gaekwad",
+    "Vinoo Mankad",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Dattu Phadkar",
+    "Lala Amarnath",
+    "Deepak Shodhan",
+    "Gulabrai Ramchand",
+    "Khokhan Sen",
+    "Ghulam Ahmed"
+   ],
+   "Pakistan": [
+    "Nazar Mohammad",
+    "Hanif Mohammad",
+    "Waqar Hasan",
+    "Imtiaz Ahmed",
+    "Abdul Kardar",
+    "Maqsood Ahmed",
+    "Anwar Hussain",
+    "Fazal Mahmood",
+    "Zulfiqar Ahmed",
+    "Mahmood Hussain",
+    "Amir Elahi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Datta Gaekwad": "28755",
+    "Vinoo Mankad": "30939",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Dattu Phadkar": "32309",
+    "Lala Amarnath": "26223",
+    "Deepak Shodhan": "34007",
+    "Gulabrai Ramchand": "33062",
+    "Khokhan Sen": "34741",
+    "Ghulam Ahmed": "28821",
+    "Nazar Mohammad": "42068",
+    "Hanif Mohammad": "40373",
+    "Waqar Hasan": "43541",
+    "Imtiaz Ahmed": "40565",
+    "Abdul Kardar": "41030",
+    "Maqsood Ahmed": "41270",
+    "Anwar Hussain": "39001",
+    "Fazal Mahmood": "40092",
+    "Zulfiqar Ahmed": "43706",
+    "Mahmood Hussain": "41267",
+    "Amir Elahi": "38997"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 696,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 397,
+    "wickets": 10,
+    "balls": 864,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 720,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 28,
+    "wickets": 0,
+    "balls": 36,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 257,
+    "wickets": 10,
+    "balls": 696,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 864,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 236,
+    "wickets": 7,
+    "balls": 720,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 36,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

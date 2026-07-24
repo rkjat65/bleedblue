@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64315",
+  "espn_league_id": "16761",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1988-01-02"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Ram Gupta",
+    "Piloo Reporter"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Arun Lal",
+    "Mohinder Amarnath",
+    "Sanjeev Sharma",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Woorkeri Raman",
+    "Kiran More",
+    "Ajay Sharma",
+    "Maninder Singh"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Viv Richards",
+    "Gus Logie",
+    "Carl Hooper",
+    "Winston Benjamin",
+    "Jeff Dujon",
+    "Eldine Baptiste",
+    "Courtney Walsh",
+    "Patrick Patterson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Arun Lal": "26295",
+    "Mohinder Amarnath": "26225",
+    "Sanjeev Sharma": "33963",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Woorkeri Raman": "33058",
+    "Kiran More": "31038",
+    "Ajay Sharma": "33943",
+    "Maninder Singh": "30923",
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Viv Richards": "52812",
+    "Gus Logie": "52347",
+    "Carl Hooper": "52066",
+    "Winston Benjamin": "51220",
+    "Jeff Dujon": "51657",
+    "Eldine Baptiste": "51211",
+    "Courtney Walsh": "53216",
+    "Patrick Patterson": "52671"
+   }
+  },
+  "season": "1988",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 222,
+    "wickets": 7,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 251,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 166,
+    "wickets": 10,
+    "balls": 251,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

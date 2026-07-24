@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63513",
+  "espn_league_id": "16636",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Karachi",
+  "dates": [
+   "1989-11-15"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1989/90",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "John Hampshire",
+    "John Holder"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Aamer Malik",
+    "Ramiz Raja",
+    "Shoaib Mohammad",
+    "Javed Miandad",
+    "Saleem Malik",
+    "Imran Khan",
+    "Shahid Saeed",
+    "Saleem Yousuf",
+    "Wasim Akram",
+    "Abdul Qadir",
+    "Waqar Younis"
+   ],
+   "India": [
+    "Kris Srikkanth",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Manoj Prabhakar",
+    "Sachin Tendulkar",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Kiran More",
+    "Arshad Ayub",
+    "Salil Ankola"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Aamer Malik": "38965",
+    "Ramiz Raja": "42420",
+    "Shoaib Mohammad": "42658",
+    "Javed Miandad": "40879",
+    "Saleem Malik": "42623",
+    "Imran Khan": "40560",
+    "Shahid Saeed": "42647",
+    "Saleem Yousuf": "42626",
+    "Wasim Akram": "43547",
+    "Abdul Qadir": "38973",
+    "Waqar Younis": "43543",
+    "Kris Srikkanth": "34103",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Manoj Prabhakar": "32323",
+    "Sachin Tendulkar": "35320",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Salil Ankola": "26257"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "National Stadium, Karachi",
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 409,
+    "wickets": 10,
+    "balls": 701,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 434,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 305,
+    "wickets": 5,
+    "balls": 576,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 576,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 701,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 262,
+    "wickets": 10,
+    "balls": 434,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 576,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 303,
+    "wickets": 3,
+    "balls": 576,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

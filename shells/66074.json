@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66074",
+  "espn_league_id": "16148",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "KuGompo City",
+  "dates": [
+   "1997-02-04"
+  ],
+  "event": {
+   "name": "Australia tour of India 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Wilf Diedricks",
+    "David Orchard"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Rudi Koertzen"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Adam Bacher",
+    "Gary Kirsten",
+    "Daryll Cullinan",
+    "Jacques Kallis",
+    "Jonty Rhodes",
+    "Hansie Cronje",
+    "Shaun Pollock",
+    "Lance Klusener",
+    "David Richardson",
+    "Allan Donald",
+    "Paul Adams"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Saba Karim",
+    "Sunil Joshi",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Adam Bacher": "44024",
+    "Gary Kirsten": "45813",
+    "Daryll Cullinan": "44489",
+    "Jacques Kallis": "45789",
+    "Jonty Rhodes": "46973",
+    "Hansie Cronje": "44485",
+    "Shaun Pollock": "46774",
+    "Lance Klusener": "45821",
+    "David Richardson": "46978",
+    "Allan Donald": "44716",
+    "Paul Adams": "43919",
+    "Sourav Ganguly": "28779",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Saba Karim": "30042",
+    "Sunil Joshi": "29725",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "Buffalo Park, KuGumpo City",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 236,
+    "wickets": 4,
+    "balls": 296,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 232,
+    "wickets": 5,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 296,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

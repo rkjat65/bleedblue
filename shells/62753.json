@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62753",
+  "espn_league_id": "17452",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1953-02-19"
+  ],
+  "event": {
+   "name": "India in West Indies Test Series 1952/53",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Carlton John",
+    "Eric Lee Kow"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Allan Rae",
+    "Bruce Pairaudeau",
+    "Clyde Walcott",
+    "Everton Weekes",
+    "Frank Worrell",
+    "Gerry Gomez",
+    "Ralph Legall",
+    "Jeffrey Stollmeyer",
+    "Frank King",
+    "Sonny Ramadhin",
+    "Alf Valentine"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Madhav Apte",
+    "Gulabrai Ramchand",
+    "Vijay Hazare",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "Vinoo Mankad",
+    "Dattu Phadkar",
+    "Jayasinghrao Ghorpade",
+    "Ebrahim Maka",
+    "Subhash Gupte"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Allan Rae": "52801",
+    "Bruce Pairaudeau": "52669",
+    "Clyde Walcott": "53211",
+    "Everton Weekes": "53241",
+    "Frank Worrell": "53238",
+    "Gerry Gomez": "51893",
+    "Ralph Legall": "52341",
+    "Jeffrey Stollmeyer": "52953",
+    "Frank King": "52291",
+    "Sonny Ramadhin": "52804",
+    "Alf Valentine": "53196",
+    "Pankaj Roy": "33186",
+    "Madhav Apte": "26269",
+    "Gulabrai Ramchand": "33062",
+    "Vijay Hazare": "29290",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "Vinoo Mankad": "30939",
+    "Dattu Phadkar": "32309",
+    "Jayasinghrao Ghorpade": "28814",
+    "Ebrahim Maka": "30908",
+    "Subhash Gupte": "28880"
+   }
+  },
+  "season": "1953",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 788,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 315,
+    "wickets": 10,
+    "balls": 876,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1201,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 192,
+    "wickets": 2,
+    "balls": 324,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 279,
+    "wickets": 9,
+    "balls": 788,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 876,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 362,
+    "wickets": 7,
+    "balls": 1201,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 324,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

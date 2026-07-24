@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66134",
+  "espn_league_id": "15960"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dhaka",
+  "dates": [
+   "1998-01-14"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98",
+   "stage": "Final"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Doug Cowie",
+    "Russell Tiffin"
+   ],
+   "match_referees": [
+    "Mike Denness"
+   ],
+   "tv_umpires": [
+    "Rudi Koertzen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Navjot Sidhu",
+    "Robin Singh",
+    "Sairaj Bahutule",
+    "Nayan Mongia",
+    "Javagal Srinath",
+    "Debasis Mohanty",
+    "Harvinder Singh"
+   ],
+   "Pakistan": [
+    "Saeed Anwar",
+    "Shahid Afridi",
+    "Aamer Sohail",
+    "Ijaz Ahmed",
+    "Inzamam-ul-Haq",
+    "Azhar Mahmood",
+    "Manzoor Akhtar",
+    "Rashid Latif",
+    "Saqlain Mushtaq",
+    "Mushtaq Ahmed",
+    "Aaqib Javed"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Navjot Sidhu": "34028",
+    "Robin Singh": "34059",
+    "Sairaj Bahutule": "26815",
+    "Nayan Mongia": "31036",
+    "Javagal Srinath": "34105",
+    "Debasis Mohanty": "31025",
+    "Harvinder Singh": "29280",
+    "Saeed Anwar": "42605",
+    "Shahid Afridi": "42639",
+    "Aamer Sohail": "38967",
+    "Ijaz Ahmed": "40551",
+    "Inzamam-ul-Haq": "40570",
+    "Azhar Mahmood": "39024",
+    "Manzoor Akhtar": "41264",
+    "Rashid Latif": "42423",
+    "Saqlain Mushtaq": "42628",
+    "Mushtaq Ahmed": "41316",
+    "Aaqib Javed": "38970"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Bangabandhu National Stadium, Dhaka",
+  "overs": 50
+ },
+ "innings": []
+}

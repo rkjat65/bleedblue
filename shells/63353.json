@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63353",
+  "espn_league_id": "16934",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1983-11-24"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1983/84",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Swaroop Kishen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Dilip Vengsarkar",
+    "Ashok Malhotra",
+    "Ravi Shastri",
+    "Roger Binny",
+    "Kapil Dev",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Shivlal Yadav",
+    "Maninder Singh"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Richie Richardson",
+    "Viv Richards",
+    "Larry Gomes",
+    "Jeff Dujon",
+    "Clive Lloyd",
+    "Malcolm Marshall",
+    "Michael Holding",
+    "Wayne Daniel",
+    "Winston Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Malhotra": "30912",
+    "Ravi Shastri": "33975",
+    "Roger Binny": "26948",
+    "Kapil Dev": "30028",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Shivlal Yadav": "36064",
+    "Maninder Singh": "30923",
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Richie Richardson": "52810",
+    "Viv Richards": "52812",
+    "Larry Gomes": "51891",
+    "Jeff Dujon": "51657",
+    "Clive Lloyd": "52345",
+    "Malcolm Marshall": "52419",
+    "Michael Holding": "52063",
+    "Wayne Daniel": "51639",
+    "Winston Davis": "51643"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 463,
+    "wickets": 10,
+    "balls": 857,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 877,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 173,
+    "wickets": 5,
+    "balls": 276,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 306,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 857,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 393,
+    "wickets": 10,
+    "balls": 877,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 104,
+    "wickets": 4,
+    "balls": 306,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

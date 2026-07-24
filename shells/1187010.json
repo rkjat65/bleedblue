@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1187010",
+  "espn_league_id": "19311"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dharamsala",
+  "dates": [
+   "2020-03-12"
+  ],
+  "event": {
+   "name": "Bangladesh in India T20I Series 2019/20",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Virender Sharma",
+    "Joel Wilson"
+   ],
+   "match_referees": [
+    "Richie Richardson"
+   ],
+   "tv_umpires": [
+    "Richard Kettleborough"
+   ],
+   "reserve_umpires": [
+    "Anil Chaudhary"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Jasprit Bumrah",
+    "Yuzvendra Chahal",
+    "Shikhar Dhawan",
+    "Shreyas Iyer",
+    "Ravindra Jadeja",
+    "Virat Kohli",
+    "Kuldeep Yadav",
+    "Bhuvneshwar Kumar",
+    "Manish Pandey",
+    "Hardik Pandya",
+    "Rishabh Pant",
+    "KL Rahul",
+    "Navdeep Saini",
+    "Prithvi Shaw",
+    "Shubman Gill"
+   ],
+   "South Africa": [
+    "Temba Bavuma",
+    "Quinton de Kock",
+    "Faf du Plessis",
+    "Beuran Hendricks",
+    "Heinrich Klaasen",
+    "George Linde",
+    "Keshav Maharaj",
+    "Janneman Malan",
+    "David Miller",
+    "Lungi Ngidi",
+    "Anrich Nortje",
+    "Andile Phehlukwayo",
+    "Lutho Sipamla",
+    "JJ Smuts",
+    "Rassie van der Dussen",
+    "Kyle Verreynne"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Jasprit Bumrah": "625383",
+    "Yuzvendra Chahal": "430246",
+    "Shikhar Dhawan": "28235",
+    "Shreyas Iyer": "642519",
+    "Ravindra Jadeja": "234675",
+    "Virat Kohli": "253802",
+    "Kuldeep Yadav": "559235",
+    "Bhuvneshwar Kumar": "326016",
+    "Manish Pandey": "290630",
+    "Hardik Pandya": "625371",
+    "Rishabh Pant": "931581",
+    "KL Rahul": "422108",
+    "Navdeep Saini": "700167",
+    "Prithvi Shaw": "1070168",
+    "Shubman Gill": "1070173",
+    "Temba Bavuma": "372116",
+    "Quinton de Kock": "379143",
+    "Faf du Plessis": "44828",
+    "Beuran Hendricks": "379927",
+    "Heinrich Klaasen": "436757",
+    "George Linde": "481875",
+    "Keshav Maharaj": "267724",
+    "Janneman Malan": "605680",
+    "David Miller": "321777",
+    "Lungi Ngidi": "542023",
+    "Anrich Nortje": "481979",
+    "Andile Phehlukwayo": "540316",
+    "Lutho Sipamla": "698143",
+    "JJ Smuts": "280490",
+    "Rassie van der Dussen": "337790",
+    "Kyle Verreynne": "595004"
+   }
+  },
+  "season": "2020",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+  "overs": 50
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 9.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

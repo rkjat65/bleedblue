@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62913",
+  "espn_league_id": "17363",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bridgetown",
+  "dates": [
+   "1962-03-23"
+  ],
+  "event": {
+   "name": "England in India Test Series 1961/62",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Cortez Jordan",
+    "Jackie Roberts"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Conrad Hunte",
+    "Easton McMorris",
+    "Rohan Kanhai",
+    "Garry Sobers",
+    "Joe Solomon",
+    "Lance Gibbs",
+    "Frank Worrell",
+    "Charlie Stayers",
+    "Wes Hall",
+    "David Allan",
+    "Alf Valentine"
+   ],
+   "India": [
+    "Motganhalli Jaisimha",
+    "Dilip Sardesai",
+    "Rusi Surti",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Mansur Ali Khan Pataudi",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Farokh Engineer",
+    "Salim Durani",
+    "Ramakant Desai"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Conrad Hunte": "52070",
+    "Easton McMorris": "52512",
+    "Rohan Kanhai": "52287",
+    "Garry Sobers": "52946",
+    "Joe Solomon": "52944",
+    "Lance Gibbs": "51883",
+    "Frank Worrell": "53238",
+    "Charlie Stayers": "52947",
+    "Wes Hall": "52043",
+    "David Allan": "51104",
+    "Alf Valentine": "53196",
+    "Motganhalli Jaisimha": "29663",
+    "Dilip Sardesai": "33850",
+    "Rusi Surti": "34174",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Farokh Engineer": "28624",
+    "Salim Durani": "28118",
+    "Ramakant Desai": "28045"
+   }
+  },
+  "season": "1962",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Kensington Oval, Bridgetown, Barbados",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 535,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 475,
+    "wickets": 10,
+    "balls": 1449,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1113,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 258,
+    "wickets": 10,
+    "balls": 535,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1449,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 187,
+    "wickets": 10,
+    "balls": 1113,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

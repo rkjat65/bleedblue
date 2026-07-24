@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64710",
+  "espn_league_id": "15556",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Visakhapatnam",
+  "dates": [
+   "2001-04-03"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 2000/01",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "GA Pratapkumar",
+    "Shavir Tarapore"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Aloke Bhattacharjee"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Hemang Badani",
+    "Robin Singh",
+    "Vijay Dahiya",
+    "Ajit Agarkar",
+    "Zaheer Khan",
+    "Harbhajan Singh",
+    "Javagal Srinath"
+   ],
+   "Australia": [
+    "Adam Gilchrist",
+    "Matthew Hayden",
+    "Ricky Ponting",
+    "Michael Bevan",
+    "Steve Waugh",
+    "Shane Lee",
+    "Damien Martyn",
+    "Shane Warne",
+    "Damien Fleming",
+    "Nathan Bracken",
+    "Glenn McGrath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Hemang Badani": "26802",
+    "Robin Singh": "34059",
+    "Vijay Dahiya": "27978",
+    "Ajit Agarkar": "26184",
+    "Zaheer Khan": "30102",
+    "Harbhajan Singh": "29264",
+    "Javagal Srinath": "34105",
+    "Adam Gilchrist": "5390",
+    "Matthew Hayden": "5616",
+    "Ricky Ponting": "7133",
+    "Michael Bevan": "4144",
+    "Steve Waugh": "8192",
+    "Shane Lee": "6282",
+    "Damien Martyn": "6513",
+    "Shane Warne": "8166",
+    "Damien Fleming": "5239",
+    "Nathan Bracken": "4185",
+    "Glenn McGrath": "6565"
+   }
+  },
+  "season": "2001",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Indira Priyadarshini Stadium, Visakhapatnam",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 245,
+    "wickets": 10,
+    "balls": 270,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 338,
+    "wickets": 4,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

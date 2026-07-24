@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63332",
+  "espn_league_id": "16966",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hyderabad",
+  "dates": [
+   "1983-01-14"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1982/83",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Javed Akhtar",
+    "Khizer Hayat"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Mohsin Khan",
+    "Mudassar Nazar",
+    "Haroon Rasheed",
+    "Javed Miandad",
+    "Zaheer Abbas",
+    "Saleem Malik",
+    "Imran Khan",
+    "Wasim Bari",
+    "Sarfraz Nawaz",
+    "Abdul Qadir",
+    "Iqbal Qasim"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Dilip Vengsarkar",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Sandeep Patil",
+    "Balwinder Sandhu",
+    "Maninder Singh",
+    "Dilip Doshi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mohsin Khan": "41303",
+    "Mudassar Nazar": "41308",
+    "Haroon Rasheed": "40375",
+    "Javed Miandad": "40879",
+    "Zaheer Abbas": "43695",
+    "Saleem Malik": "42623",
+    "Imran Khan": "40560",
+    "Wasim Bari": "43549",
+    "Sarfraz Nawaz": "42630",
+    "Abdul Qadir": "38973",
+    "Iqbal Qasim": "40572",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Dilip Vengsarkar": "35654",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Sandeep Patil": "32283",
+    "Balwinder Sandhu": "33816",
+    "Maninder Singh": "30923",
+    "Dilip Doshi": "28107"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Niaz Stadium, Hyderabad",
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 581,
+    "wickets": 3,
+    "balls": 996,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 338,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 670,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 996,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 189,
+    "wickets": 10,
+    "balls": 338,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 273,
+    "wickets": 10,
+    "balls": 670,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

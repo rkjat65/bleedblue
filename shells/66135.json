@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66135",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dhaka",
+  "dates": [
+   "1998-01-16"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98",
+   "stage": "Final"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Doug Cowie",
+    "Rudi Koertzen"
+   ],
+   "match_referees": [
+    "Mike Denness"
+   ],
+   "tv_umpires": [
+    "Russell Tiffin"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Navjot Sidhu",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Sairaj Bahutule",
+    "Javagal Srinath",
+    "Harvinder Singh",
+    "Debasis Mohanty"
+   ],
+   "Pakistan": [
+    "Saeed Anwar",
+    "Shahid Afridi",
+    "Aamer Sohail",
+    "Ijaz Ahmed",
+    "Inzamam-ul-Haq",
+    "Mohammad Hussain",
+    "Azhar Mahmood",
+    "Rashid Latif",
+    "Saqlain Mushtaq",
+    "Manzoor Akhtar",
+    "Aaqib Javed"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Navjot Sidhu": "34028",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Sairaj Bahutule": "26815",
+    "Javagal Srinath": "34105",
+    "Harvinder Singh": "29280",
+    "Debasis Mohanty": "31025",
+    "Saeed Anwar": "42605",
+    "Shahid Afridi": "42639",
+    "Aamer Sohail": "38967",
+    "Ijaz Ahmed": "40551",
+    "Inzamam-ul-Haq": "40570",
+    "Mohammad Hussain": "41285",
+    "Azhar Mahmood": "39024",
+    "Rashid Latif": "42423",
+    "Saqlain Mushtaq": "42628",
+    "Manzoor Akhtar": "41264",
+    "Aaqib Javed": "38970"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Bangabandhu National Stadium, Dhaka",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 189,
+    "wickets": 10,
+    "balls": 299,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 189,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 299,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 193,
+    "wickets": 4,
+    "balls": 189,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62864",
+  "espn_league_id": "17382",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1959-08-20"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1959/60",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Emrys Davies",
+    "Frank Lee"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Geoff Pullar",
+    "Raman Subba Row",
+    "Colin Cowdrey",
+    "Mike Smith",
+    "Ken Barrington",
+    "Ted Dexter",
+    "Ray Illingworth",
+    "Roy Swetman",
+    "Fred Trueman",
+    "Brian Statham",
+    "Tommy Greenhough"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Nari Contractor",
+    "Abbas Ali Baig",
+    "Bapu Nadkarni",
+    "Chandu Borde",
+    "Datta Gaekwad",
+    "Jayasinghrao Ghorpade",
+    "Naren Tamhane",
+    "Surendra Nath",
+    "Subhash Gupte",
+    "Ramakant Desai"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Geoff Pullar": "18640",
+    "Raman Subba Row": "20406",
+    "Colin Cowdrey": "10846",
+    "Mike Smith": "20255",
+    "Ken Barrington": "9014",
+    "Ted Dexter": "11886",
+    "Ray Illingworth": "15385",
+    "Roy Swetman": "20436",
+    "Fred Trueman": "21600",
+    "Brian Statham": "20341",
+    "Tommy Greenhough": "13446",
+    "Pankaj Roy": "33186",
+    "Nari Contractor": "27667",
+    "Abbas Ali Baig": "26817",
+    "Bapu Nadkarni": "31760",
+    "Chandu Borde": "26962",
+    "Datta Gaekwad": "28755",
+    "Jayasinghrao Ghorpade": "28814",
+    "Naren Tamhane": "35308",
+    "Surendra Nath": "34814",
+    "Subhash Gupte": "28880",
+    "Ramakant Desai": "28045"
+   }
+  },
+  "season": "1959",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Kennington Oval, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 361,
+    "wickets": 10,
+    "balls": 885,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 570,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 140,
+    "wickets": 10,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 885,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 194,
+    "wickets": 10,
+    "balls": 570,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

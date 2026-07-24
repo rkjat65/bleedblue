@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64286",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Srinagar",
+  "dates": [
+   "1986-09-09"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "SB Kulkarni",
+    "RS Rathore"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sunil Gavaskar",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Chandrakant Pandit",
+    "Kapil Dev",
+    "Chetan Sharma",
+    "Roger Binny",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "David Boon",
+    "Geoff Marsh",
+    "Dean Jones",
+    "Allan Border",
+    "Greg Ritchie",
+    "Greg Matthews",
+    "Steve Waugh",
+    "Tim Zoehrer",
+    "Craig McDermott",
+    "Bruce Reid",
+    "Simon Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sunil Gavaskar": "28794",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Chandrakant Pandit": "32179",
+    "Kapil Dev": "30028",
+    "Chetan Sharma": "33949",
+    "Roger Binny": "26948",
+    "Maninder Singh": "30923",
+    "David Boon": "4169",
+    "Geoff Marsh": "6499",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Greg Matthews": "6525",
+    "Steve Waugh": "8192",
+    "Tim Zoehrer": "8468",
+    "Craig McDermott": "6551",
+    "Bruce Reid": "7319",
+    "Simon Davis": "4923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Sher-i-Kashmir Stadium, Srinagar",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 222,
+    "wickets": 8,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 226,
+    "wickets": 7,
+    "balls": 276,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

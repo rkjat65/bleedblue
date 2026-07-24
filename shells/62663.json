@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62663",
+  "espn_league_id": "17516",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Manchester",
+  "dates": [
+   "1946-07-20"
+  ],
+  "event": {
+   "name": "India in England Test Series 1946",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "George Beet",
+    "Frank Chester"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Leonard Hutton",
+    "Cyril Washbrook",
+    "Denis Compton",
+    "Wally Hammond",
+    "Joe Hardstaff",
+    "Paul Gibb",
+    "Jack Ikin",
+    "Bill Voce",
+    "Dick Pollard",
+    "Alec Bedser",
+    "Doug Wright"
+   ],
+   "India": [
+    "Vijay Merchant",
+    "Mushtaq Ali",
+    "Abdul Kardar",
+    "Vinoo Mankad",
+    "Vijay Hazare",
+    "Rusi Modi",
+    "Iftikhar Ali Khan Pataudi",
+    "Lala Amarnath",
+    "Ranga Sohoni",
+    "Chandu Sarwate",
+    "Dattaram Hindlekar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Leonard Hutton": "14334",
+    "Cyril Washbrook": "22322",
+    "Denis Compton": "10777",
+    "Wally Hammond": "14022",
+    "Joe Hardstaff": "14041",
+    "Paul Gibb": "13357",
+    "Jack Ikin": "15381",
+    "Bill Voce": "22192",
+    "Dick Pollard": "18561",
+    "Alec Bedser": "9057",
+    "Doug Wright": "22536",
+    "Vijay Merchant": "30996",
+    "Mushtaq Ali": "31061",
+    "Abdul Kardar": "41030",
+    "Vinoo Mankad": "30939",
+    "Vijay Hazare": "29290",
+    "Rusi Modi": "31021",
+    "Iftikhar Ali Khan Pataudi": "32224",
+    "Lala Amarnath": "26223",
+    "Ranga Sohoni": "34081",
+    "Chandu Sarwate": "33859",
+    "Dattaram Hindlekar": "29297"
+   }
+  },
+  "season": "1946",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Old Trafford, Manchester",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 294,
+    "wickets": 10,
+    "balls": 774,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 492,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 153,
+    "wickets": 5,
+    "balls": 366,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 366,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 774,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 170,
+    "wickets": 10,
+    "balls": 492,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 366,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 152,
+    "wickets": 9,
+    "balls": 366,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

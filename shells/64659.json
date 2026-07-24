@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64659",
+  "espn_league_id": "15707"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Faridabad",
+  "dates": [
+   "2000-03-15"
+  ],
+  "event": {
+   "name": "South Africa in India ODI Series 1999/00",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Vijay Chopra",
+    "TR Kashyappan"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Satish Gupta"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Sunil Joshi",
+    "Robin Singh",
+    "Sameer Dighe",
+    "Ajit Agarkar",
+    "Thirunavukkarasu Kumaran",
+    "Anil Kumble"
+   ],
+   "South Africa": [
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Nicky Boje",
+    "Jacques Kallis",
+    "Hansie Cronje",
+    "Dale Benkenstein",
+    "Lance Klusener",
+    "Shaun Pollock",
+    "Mark Boucher",
+    "Pieter Strydom",
+    "Steve Elworthy"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Sunil Joshi": "29725",
+    "Robin Singh": "34059",
+    "Sameer Dighe": "28090",
+    "Ajit Agarkar": "26184",
+    "Thirunavukkarasu Kumaran": "30157",
+    "Anil Kumble": "30176",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Nicky Boje": "44091",
+    "Jacques Kallis": "45789",
+    "Hansie Cronje": "44485",
+    "Dale Benkenstein": "44070",
+    "Lance Klusener": "45821",
+    "Shaun Pollock": "46774",
+    "Mark Boucher": "44111",
+    "Pieter Strydom": "47255",
+    "Steve Elworthy": "44960"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Nahar Singh Stadium, Faridabad",
+  "overs": 50
+ },
+ "innings": []
+}

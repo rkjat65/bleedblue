@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64657",
+  "espn_league_id": "15707",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kochi",
+  "dates": [
+   "2000-03-09"
+  ],
+  "event": {
+   "name": "South Africa in India ODI Series 1999/00",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "MR Singh",
+    "Rangachari Vijayaraghavan"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Laliteshwar Verma"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Sunil Joshi",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Sameer Dighe",
+    "Anil Kumble",
+    "Ajit Agarkar",
+    "Thirunavukkarasu Kumaran"
+   ],
+   "South Africa": [
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Jacques Kallis",
+    "Lance Klusener",
+    "Hansie Cronje",
+    "Shaun Pollock",
+    "Mark Boucher",
+    "Henry Williams",
+    "Nantie Hayward",
+    "Derek Crookes",
+    "Nicky Boje"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Sunil Joshi": "29725",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Sameer Dighe": "28090",
+    "Anil Kumble": "30176",
+    "Ajit Agarkar": "26184",
+    "Thirunavukkarasu Kumaran": "30157",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Jacques Kallis": "45789",
+    "Lance Klusener": "45821",
+    "Hansie Cronje": "44485",
+    "Shaun Pollock": "46774",
+    "Mark Boucher": "44111",
+    "Henry Williams": "47900",
+    "Nantie Hayward": "45419",
+    "Derek Crookes": "44486",
+    "Nicky Boje": "44091"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Nehru Stadium, Kochi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 302,
+    "wickets": 7,
+    "balls": 298,
+    "description": "target reached"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 301,
+    "wickets": 3,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 298,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

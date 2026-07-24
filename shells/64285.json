@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64285",
+  "espn_league_id": "16784"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jaipur",
+  "dates": [
+   "1986-09-07"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Subrata Banerjee",
+    "Nagaraja Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sunil Gavaskar",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Kapil Dev",
+    "Mohammad Azharuddin",
+    "Roger Binny",
+    "Chandrakant Pandit",
+    "Ravi Shastri",
+    "Chetan Sharma",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "Geoff Marsh",
+    "David Boon",
+    "Dean Jones",
+    "Allan Border",
+    "Greg Ritchie",
+    "Steve Waugh",
+    "Greg Matthews",
+    "Tim Zoehrer",
+    "Craig McDermott",
+    "Bruce Reid",
+    "Simon Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sunil Gavaskar": "28794",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Kapil Dev": "30028",
+    "Mohammad Azharuddin": "26329",
+    "Roger Binny": "26948",
+    "Chandrakant Pandit": "32179",
+    "Ravi Shastri": "33975",
+    "Chetan Sharma": "33949",
+    "Maninder Singh": "30923",
+    "Geoff Marsh": "6499",
+    "David Boon": "4169",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Steve Waugh": "8192",
+    "Greg Matthews": "6525",
+    "Tim Zoehrer": "8468",
+    "Craig McDermott": "6551",
+    "Bruce Reid": "7319",
+    "Simon Davis": "4923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Sawai Mansingh Stadium, Jaipur",
+  "overs": 50
+ },
+ "innings": []
+}

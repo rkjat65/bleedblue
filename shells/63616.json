@@ -1,0 +1,168 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63616",
+  "espn_league_id": "16427",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1993-07-27"
+  ],
+  "event": {
+   "name": "India in Sri Lanka Test Series 1993",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ignatius Anandappa",
+    "Selliah Ponnadurai",
+    "Woorkeri Raman"
+   ],
+   "match_referees": [
+    "Peter Burge"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Chandika Hathurusinghe",
+    "Asanka Gurusinha",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Ashley de Silva",
+    "Ruwan Kalpage",
+    "Dulip Liyanage",
+    "Pramodya Wickramasinghe",
+    "Jayananda Warnaweera"
+   ],
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Pravin Amre",
+    "Kapil Dev",
+    "Kiran More",
+    "Anil Kumble",
+    "Rajesh Chauhan",
+    "Javagal Srinath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roshan Mahanama": "49626",
+    "Chandika Hathurusinghe": "49125",
+    "Asanka Gurusinha": "49005",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Ashley de Silva": "48450",
+    "Ruwan Kalpage": "49356",
+    "Dulip Liyanage": "49554",
+    "Pramodya Wickramasinghe": "50848",
+    "Jayananda Warnaweera": "50836",
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Pravin Amre": "26238",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Javagal Srinath": "34105"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Sinhalese Sports Club Ground, Colombo",
+  "scorecard_totals": [
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 643,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 254,
+    "wickets": 10,
+    "balls": 467,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 708,
+    "description": "declared"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 4,
+    "runs": 236,
+    "wickets": 10,
+    "balls": 727,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 366,
+    "wickets": 10,
+    "balls": 643,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 467,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 359,
+    "wickets": 4,
+    "balls": 708,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 727,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,98 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64417",
+  "espn_league_id": "16458"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Gwalior",
+  "dates": [
+   "1993-03-05"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1992/93",
+   "match_number": 7
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Shyam Bansal",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Kapil Dev",
+    "Ajay Sharma",
+    "Kiran More",
+    "Anil Kumble",
+    "Maninder Singh",
+    "Javagal Srinath"
+   ],
+   "England": [
+    "Robin Smith",
+    "Alec Stewart",
+    "Graeme Hick",
+    "Neil Fairbrother",
+    "Mike Gatting",
+    "Chris Lewis",
+    "Graham Gooch",
+    "Dermot Reeve",
+    "Phil DeFreitas",
+    "Paul Jarvis",
+    "Devon Malcolm"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Kapil Dev": "30028",
+    "Ajay Sharma": "33943",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Maninder Singh": "30923",
+    "Javagal Srinath": "34105",
+    "Robin Smith": "20263",
+    "Alec Stewart": "20372",
+    "Graeme Hick": "14187",
+    "Neil Fairbrother": "12803",
+    "Mike Gatting": "13340",
+    "Chris Lewis": "16274",
+    "Graham Gooch": "13399",
+    "Dermot Reeve": "19364",
+    "Phil DeFreitas": "11865",
+    "Paul Jarvis": "15485",
+    "Devon Malcolm": "16885"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Captain Roop Singh Stadium, Gwalior",
+  "overs": 50
+ },
+ "innings": []
+}

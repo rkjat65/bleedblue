@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63135",
+  "espn_league_id": "17212",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1975-01-23"
+  ],
+  "event": {
+   "name": "India in England Test Series 1974",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "Judah Reuben"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Farokh Engineer",
+    "Eknath Solkar",
+    "Erapalli Prasanna",
+    "Gundappa Viswanath",
+    "Aunshuman Gaekwad",
+    "Brijesh Patel",
+    "Bishan Bedi",
+    "Mansur Ali Khan Pataudi",
+    "Karsan Ghavri",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Roy Fredericks",
+    "Gordon Greenidge",
+    "Alvin Kallicharran",
+    "Clive Lloyd",
+    "Vanburn Holder",
+    "Viv Richards",
+    "Deryck Murray",
+    "Bernard Julien",
+    "Arthur Barrett",
+    "Lance Gibbs",
+    "Andy Roberts"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Farokh Engineer": "28624",
+    "Eknath Solkar": "34085",
+    "Erapalli Prasanna": "32357",
+    "Gundappa Viswanath": "35712",
+    "Aunshuman Gaekwad": "28754",
+    "Brijesh Patel": "32231",
+    "Bishan Bedi": "26875",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Karsan Ghavri": "28813",
+    "Bhagwath Chandrasekhar": "27591",
+    "Roy Fredericks": "51797",
+    "Gordon Greenidge": "51901",
+    "Alvin Kallicharran": "52285",
+    "Clive Lloyd": "52345",
+    "Vanburn Holder": "52061",
+    "Viv Richards": "52812",
+    "Deryck Murray": "52441",
+    "Bernard Julien": "52208",
+    "Arthur Barrett": "51213",
+    "Lance Gibbs": "51883",
+    "Andy Roberts": "52817"
+   }
+  },
+  "season": "1975",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 966,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 406,
+    "wickets": 10,
+    "balls": 1087,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 202,
+    "wickets": 10,
+    "balls": 463,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 604,
+    "wickets": 6,
+    "balls": 966,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1087,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 205,
+    "wickets": 3,
+    "balls": 240,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 463,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

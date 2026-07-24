@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62738",
+  "espn_league_id": "17467",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1952-06-19"
+  ],
+  "event": {
+   "name": "England in India Test Series 1951/52",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Frank Chester",
+    "Frank Lee"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Leonard Hutton",
+    "Reg Simpson",
+    "Peter May",
+    "Denis Compton",
+    "Tom Graveney",
+    "Allan Watkins",
+    "Godfrey Evans",
+    "Roly Jenkins",
+    "Jim Laker",
+    "Alec Bedser",
+    "Fred Trueman"
+   ],
+   "India": [
+    "Vinoo Mankad",
+    "Pankaj Roy",
+    "Polly Umrigar",
+    "Vijay Hazare",
+    "Vijay Manjrekar",
+    "Dattu Phadkar",
+    "Hemu Adhikari",
+    "Gulabrai Ramchand",
+    "M.K.Mantri",
+    "Sadu Shinde",
+    "Ghulam Ahmed"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Leonard Hutton": "14334",
+    "Reg Simpson": "20198",
+    "Peter May": "16956",
+    "Denis Compton": "10777",
+    "Tom Graveney": "13434",
+    "Allan Watkins": "22329",
+    "Godfrey Evans": "12543",
+    "Roly Jenkins": "15495",
+    "Jim Laker": "16172",
+    "Alec Bedser": "9057",
+    "Fred Trueman": "21600",
+    "Vinoo Mankad": "30939",
+    "Pankaj Roy": "33186",
+    "Polly Umrigar": "35577",
+    "Vijay Hazare": "29290",
+    "Vijay Manjrekar": "30936",
+    "Dattu Phadkar": "32309",
+    "Hemu Adhikari": "26179",
+    "Gulabrai Ramchand": "33062",
+    "M.K.Mantri": "30950",
+    "Sadu Shinde": "33999",
+    "Ghulam Ahmed": "28821"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 567,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 537,
+    "wickets": 10,
+    "balls": 1240,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 732,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 79,
+    "wickets": 2,
+    "balls": 296,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 235,
+    "wickets": 10,
+    "balls": 567,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1240,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 378,
+    "wickets": 10,
+    "balls": 732,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 296,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62848",
+  "espn_league_id": "17394",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1959-01-21"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1958/59",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bapu Joshi",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "AK Sengupta",
+    "Nana Joshi",
+    "Nari Contractor",
+    "Polly Umrigar",
+    "Gulabrai Ramchand",
+    "AG Kripal Singh",
+    "Vinoo Mankad",
+    "Chandu Borde",
+    "Surendra Nath",
+    "Subhash Gupte"
+   ],
+   "West Indies": [
+    "Conrad Hunte",
+    "John Holt",
+    "Rohan Kanhai",
+    "Garry Sobers",
+    "Collie Smith",
+    "Basil Butcher",
+    "Joe Solomon",
+    "Gerry Alexander",
+    "Eric Atkinson",
+    "Wes Hall",
+    "Roy Gilchrist"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "AK Sengupta": "33895",
+    "Nana Joshi": "29721",
+    "Nari Contractor": "27667",
+    "Polly Umrigar": "35577",
+    "Gulabrai Ramchand": "33062",
+    "AG Kripal Singh": "30132",
+    "Vinoo Mankad": "30939",
+    "Chandu Borde": "26962",
+    "Surendra Nath": "34814",
+    "Subhash Gupte": "28880",
+    "Conrad Hunte": "52070",
+    "John Holt": "52186",
+    "Rohan Kanhai": "52287",
+    "Garry Sobers": "52946",
+    "Collie Smith": "52941",
+    "Basil Butcher": "51239",
+    "Joe Solomon": "52944",
+    "Gerry Alexander": "51101",
+    "Eric Atkinson": "51112",
+    "Wes Hall": "52043",
+    "Roy Gilchrist": "51887"
+   }
+  },
+  "season": "1959",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Nehru Stadium, Madras",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1086,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 222,
+    "wickets": 10,
+    "balls": 469,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 456,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 151,
+    "wickets": 9,
+    "balls": 420,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 500,
+    "wickets": 10,
+    "balls": 1086,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 469,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 168,
+    "wickets": 5,
+    "balls": 456,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 420,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62941",
+  "espn_league_id": "17345",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1964-01-29"
+  ],
+  "event": {
+   "name": "England in India Test Series 1963/64",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "Samar Roy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Budhi Kunderan",
+    "Dilip Sardesai",
+    "Vijay Manjrekar",
+    "Rusi Surti",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "Ramakant Desai",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Brian Bolus",
+    "Jimmy Binks",
+    "Mike Smith",
+    "Colin Cowdrey",
+    "Jim Parks",
+    "Peter Parfitt",
+    "Don Wilson",
+    "Barry Knight",
+    "Fred Titmus",
+    "John Price",
+    "David Larter"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Budhi Kunderan": "30178",
+    "Dilip Sardesai": "33850",
+    "Vijay Manjrekar": "30936",
+    "Rusi Surti": "34174",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "Ramakant Desai": "28045",
+    "Bhagwath Chandrasekhar": "27591",
+    "Brian Bolus": "9142",
+    "Jimmy Binks": "9095",
+    "Mike Smith": "20255",
+    "Colin Cowdrey": "10846",
+    "Jim Parks": "18435",
+    "Peter Parfitt": "18411",
+    "Don Wilson": "22469",
+    "Barry Knight": "15910",
+    "Fred Titmus": "21548",
+    "John Price": "18616",
+    "David Larter": "16205"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 241,
+    "wickets": 10,
+    "balls": 512,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 893,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 300,
+    "wickets": 7,
+    "balls": 720,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 330,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 512,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 267,
+    "wickets": 10,
+    "balls": 893,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 720,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 145,
+    "wickets": 2,
+    "balls": 330,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

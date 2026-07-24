@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62862",
+  "espn_league_id": "17386",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Leeds",
+  "dates": [
+   "1959-07-02"
+  ],
+  "event": {
+   "name": "India in England Test Series 1959",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Frank Lee",
+    "Eddie Phillipson"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Gilbert Parkhouse",
+    "Geoff Pullar",
+    "Colin Cowdrey",
+    "Peter May",
+    "Ken Barrington",
+    "Brian Close",
+    "John Mortimore",
+    "Roy Swetman",
+    "Fred Trueman",
+    "Alan Moss",
+    "Harold Rhodes"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Arvind Apte",
+    "Jayasinghrao Ghorpade",
+    "Chandu Borde",
+    "Polly Umrigar",
+    "Datta Gaekwad",
+    "Bapu Nadkarni",
+    "Naren Tamhane",
+    "Surendra Nath",
+    "Subhash Gupte",
+    "Ramakant Desai"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gilbert Parkhouse": "18426",
+    "Geoff Pullar": "18640",
+    "Colin Cowdrey": "10846",
+    "Peter May": "16956",
+    "Ken Barrington": "9014",
+    "Brian Close": "10754",
+    "John Mortimore": "17111",
+    "Roy Swetman": "20436",
+    "Fred Trueman": "21600",
+    "Alan Moss": "17114",
+    "Harold Rhodes": "19372",
+    "Pankaj Roy": "33186",
+    "Arvind Apte": "26268",
+    "Jayasinghrao Ghorpade": "28814",
+    "Chandu Borde": "26962",
+    "Polly Umrigar": "35577",
+    "Datta Gaekwad": "28755",
+    "Bapu Nadkarni": "31760",
+    "Naren Tamhane": "35308",
+    "Surendra Nath": "34814",
+    "Subhash Gupte": "28880",
+    "Ramakant Desai": "28045"
+   }
+  },
+  "season": "1959",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Headingley, Leeds",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 413,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 483,
+    "wickets": 8,
+    "balls": 1047,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 334,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 161,
+    "wickets": 10,
+    "balls": 413,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1047,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 149,
+    "wickets": 10,
+    "balls": 334,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

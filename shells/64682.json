@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64682",
+  "espn_league_id": "15585",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jodhpur",
+  "dates": [
+   "2000-12-08"
+  ],
+  "event": {
+   "name": "Zimbabwe in India ODI Series 2000/01",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Shyam Bansal",
+    "CR Mohite"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Subrata Banerjee"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Yuvraj Singh",
+    "Hemang Badani",
+    "Reetinder Sodhi",
+    "Sunil Joshi",
+    "Vijay Dahiya",
+    "Ajit Agarkar",
+    "Zaheer Khan",
+    "Venkatesh Prasad"
+   ],
+   "Zimbabwe": [
+    "Alistair Campbell",
+    "Guy Whittall",
+    "Stuart Carlisle",
+    "Andy Flower",
+    "Grant Flower",
+    "Gavin Rennie",
+    "Heath Streak",
+    "Mluleki Nkala",
+    "Bryan Strang",
+    "Travis Friend",
+    "Henry Olonga"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Yuvraj Singh": "36084",
+    "Hemang Badani": "26802",
+    "Reetinder Sodhi": "34078",
+    "Sunil Joshi": "29725",
+    "Vijay Dahiya": "27978",
+    "Ajit Agarkar": "26184",
+    "Zaheer Khan": "30102",
+    "Venkatesh Prasad": "32345",
+    "Alistair Campbell": "55301",
+    "Guy Whittall": "55848",
+    "Stuart Carlisle": "55307",
+    "Andy Flower": "55427",
+    "Grant Flower": "55429",
+    "Gavin Rennie": "55713",
+    "Heath Streak": "55761",
+    "Mluleki Nkala": "55663",
+    "Bryan Strang": "55756",
+    "Travis Friend": "55438",
+    "Henry Olonga": "55675"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Barkatullah Khan Stadium, Pal Road, Jodhpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 283,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 299,
+    "description": "target reached"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 284,
+    "wickets": 9,
+    "balls": 299,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

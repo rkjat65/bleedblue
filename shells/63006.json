@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63006",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Birmingham",
+  "dates": [
+   "1967-07-13"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Arthur Fagg",
+    "Fred Price"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Geoff Boycott",
+    "Colin Milburn",
+    "Ken Barrington",
+    "Tom Graveney",
+    "Dennis Amiss",
+    "Brian Close",
+    "John Murray",
+    "Ray Illingworth",
+    "David Brown",
+    "John Snow",
+    "Robin Hobbs"
+   ],
+   "India": [
+    "Farokh Engineer",
+    "Budhi Kunderan",
+    "Ajit Wadekar",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Hanumant Singh",
+    "Venkataraman Subramanya",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Geoff Boycott": "9187",
+    "Colin Milburn": "17018",
+    "Ken Barrington": "9014",
+    "Tom Graveney": "13434",
+    "Dennis Amiss": "8535",
+    "Brian Close": "10754",
+    "John Murray": "17130",
+    "Ray Illingworth": "15385",
+    "David Brown": "9252",
+    "John Snow": "20282",
+    "Robin Hobbs": "14227",
+    "Farokh Engineer": "28624",
+    "Budhi Kunderan": "30178",
+    "Ajit Wadekar": "35933",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Hanumant Singh": "29260",
+    "Venkataraman Subramanya": "34215",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1967",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Edgbaston, Birmingham",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 298,
+    "wickets": 10,
+    "balls": 636,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 219,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 203,
+    "wickets": 10,
+    "balls": 461,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 676,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 636,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 92,
+    "wickets": 10,
+    "balls": 219,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 461,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 277,
+    "wickets": 10,
+    "balls": 676,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

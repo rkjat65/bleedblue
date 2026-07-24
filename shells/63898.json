@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63898",
+  "espn_league_id": "15598",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dhaka",
+  "dates": [
+   "2000-11-10"
+  ],
+  "event": {
+   "name": "India in Bangladesh Test Match 2000/01"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Bucknor",
+    "David Shepherd",
+    "Rajin Saleh"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Mahbubur Rahman"
+   ]
+  },
+  "outcome": {
+   "winner": "Bangladesh"
+  },
+  "players": {
+   "Bangladesh": [
+    "Shahriar Hossain",
+    "Mehrab Hossain",
+    "Habibul Bashar",
+    "Aminul Islam",
+    "Akram Khan",
+    "Al Sahariar",
+    "Naimur Rahman",
+    "Khaled Mashud",
+    "Mohammad Rafique",
+    "Hasibul Hossain",
+    "Ranjan Das"
+   ],
+   "India": [
+    "Shiv Sunder Das",
+    "Sadagoppan Ramesh",
+    "Murali Kartik",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Saba Karim",
+    "Sunil Joshi",
+    "Ajit Agarkar",
+    "Javagal Srinath",
+    "Zaheer Khan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Shahriar Hossain": "56104",
+    "Mehrab Hossain": "55970",
+    "Habibul Bashar": "55906",
+    "Aminul Islam": "56224",
+    "Akram Khan": "56221",
+    "Al Sahariar": "56219",
+    "Naimur Rahman": "56035",
+    "Khaled Mashud": "55954",
+    "Mohammad Rafique": "55973",
+    "Hasibul Hossain": "55909",
+    "Ranjan Das": "56068",
+    "Shiv Sunder Das": "28010",
+    "Sadagoppan Ramesh": "33066",
+    "Murali Kartik": "30049",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Saba Karim": "30042",
+    "Sunil Joshi": "29725",
+    "Ajit Agarkar": "26184",
+    "Javagal Srinath": "34105",
+    "Zaheer Khan": "30102"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "Bangladesh",
+   "India"
+  ],
+  "venue": "Bangabandhu National Stadium, Dhaka",
+  "scorecard_totals": [
+   {
+    "team": "Bangladesh",
+    "innings": 1,
+    "runs": 400,
+    "wickets": 10,
+    "balls": 921,
+    "description": "all out"
+   },
+   {
+    "team": "Bangladesh",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 849,
+    "description": "all out"
+   },
+   {
+    "team": "Bangladesh",
+    "innings": 3,
+    "runs": 91,
+    "wickets": 10,
+    "balls": 279,
+    "description": "all out"
+   },
+   {
+    "team": "Bangladesh",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 90,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 921,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 429,
+    "wickets": 10,
+    "balls": 849,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 279,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 64,
+    "wickets": 1,
+    "balls": 90,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

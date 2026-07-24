@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62784",
+  "espn_league_id": "17435",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lahore",
+  "dates": [
+   "1955-01-29"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1954/55",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Idrees Baig",
+    "Shujauddin"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Hanif Mohammad",
+    "Alimuddin",
+    "Waqar Hasan",
+    "Maqsood Ahmed",
+    "Abdul Kardar",
+    "Wazir Mohammad",
+    "Imtiaz Ahmed",
+    "Shujauddin",
+    "Fazal Mahmood",
+    "Mahmood Hussain",
+    "Miran Bakhsh"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Pananmal Punjabi",
+    "Chandrasekhar Gadkari",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Gulabrai Ramchand",
+    "Chingleput Gopinath",
+    "Vinoo Mankad",
+    "Naren Tamhane",
+    "Ghulam Ahmed",
+    "Subhash Gupte"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Hanif Mohammad": "40373",
+    "Alimuddin": "38992",
+    "Waqar Hasan": "43541",
+    "Maqsood Ahmed": "41270",
+    "Abdul Kardar": "41030",
+    "Wazir Mohammad": "43557",
+    "Imtiaz Ahmed": "40565",
+    "Shujauddin": "42660",
+    "Fazal Mahmood": "40092",
+    "Mahmood Hussain": "41267",
+    "Miran Bakhsh": "41280",
+    "Pankaj Roy": "33186",
+    "Pananmal Punjabi": "32371",
+    "Chandrasekhar Gadkari": "28751",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Gulabrai Ramchand": "33062",
+    "Chingleput Gopinath": "28855",
+    "Vinoo Mankad": "30939",
+    "Naren Tamhane": "35308",
+    "Ghulam Ahmed": "28821",
+    "Subhash Gupte": "28880"
+   }
+  },
+  "season": "1955",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Bagh-e-Jinnah, Lahore",
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 328,
+    "wickets": 10,
+    "balls": 1127,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 769,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 136,
+    "wickets": 5,
+    "balls": 507,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 192,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1127,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 251,
+    "wickets": 10,
+    "balls": 769,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 507,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 74,
+    "wickets": 2,
+    "balls": 192,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

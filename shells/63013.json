@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63013",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sydney",
+  "dates": [
+   "1968-01-26"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Col Egar",
+    "Lou Rowan"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Bill Lawry",
+    "Bob Cowper",
+    "Paul Sheahan",
+    "Doug Walters",
+    "Les Joslin",
+    "Bob Simpson",
+    "Ian Chappell",
+    "Barry Jarman",
+    "Eric Freeman",
+    "Neil Hawke",
+    "John Gleeson"
+   ],
+   "India": [
+    "Farokh Engineer",
+    "Syed Abid Ali",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Mansur Ali Khan Pataudi",
+    "Motganhalli Jaisimha",
+    "Bapu Nadkarni",
+    "Erapalli Prasanna",
+    "Chandu Borde",
+    "Bishan Bedi",
+    "Umesh Kulkarni"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bill Lawry": "6270",
+    "Bob Cowper": "4645",
+    "Paul Sheahan": "7597",
+    "Doug Walters": "8151",
+    "Les Joslin": "6054",
+    "Bob Simpson": "7619",
+    "Ian Chappell": "4560",
+    "Barry Jarman": "6013",
+    "Eric Freeman": "5258",
+    "Neil Hawke": "5611",
+    "John Gleeson": "5398",
+    "Farokh Engineer": "28624",
+    "Syed Abid Ali": "26169",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Motganhalli Jaisimha": "29663",
+    "Bapu Nadkarni": "31760",
+    "Erapalli Prasanna": "32357",
+    "Chandu Borde": "26962",
+    "Bishan Bedi": "26875",
+    "Umesh Kulkarni": "30154"
+   }
+  },
+  "season": "1968",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Sydney Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 317,
+    "wickets": 10,
+    "balls": 522,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 511,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 292,
+    "wickets": 10,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 444,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 522,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 268,
+    "wickets": 10,
+    "balls": 511,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 197,
+    "wickets": 10,
+    "balls": 444,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

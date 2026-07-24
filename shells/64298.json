@@ -1,0 +1,134 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64298",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1987-01-13"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Sunit Ghosh",
+    "RR Kadam",
+    "Roshan Mahanama"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sunil Gavaskar",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Raman Lamba",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Chandrakant Pandit",
+    "Madan Lal",
+    "Raju Kulkarni",
+    "Maninder Singh"
+   ],
+   "Sri Lanka": [
+    "Ravi Ratnayeke",
+    "Aravinda de Silva",
+    "Asanka Gurusinha",
+    "Arjuna Ranatunga",
+    "Rumesh Ratnayake",
+    "Ashantha de Mel",
+    "Duleep Mendis",
+    "Roy Dias",
+    "Ranjan Madugalle",
+    "Guy de Alwis",
+    "Graeme Labrooy"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sunil Gavaskar": "28794",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Raman Lamba": "30745",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Chandrakant Pandit": "32179",
+    "Madan Lal": "30873",
+    "Raju Kulkarni": "30151",
+    "Maninder Singh": "30923",
+    "Ravi Ratnayeke": "50250",
+    "Aravinda de Silva": "48462",
+    "Asanka Gurusinha": "49005",
+    "Arjuna Ranatunga": "50244",
+    "Rumesh Ratnayake": "50249",
+    "Ashantha de Mel": "48447",
+    "Duleep Mendis": "49629",
+    "Roy Dias": "48470",
+    "Ranjan Madugalle": "49623",
+    "Guy de Alwis": "48446",
+    "Graeme Labrooy": "49552"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 264,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 209,
+    "wickets": 4,
+    "balls": 249,
+    "description": "target reached"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 208,
+    "wickets": 6,
+    "balls": 264,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 249,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

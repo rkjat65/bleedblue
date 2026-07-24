@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65931",
+  "espn_league_id": "16614",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1989-10-30"
+  ],
+  "event": {
+   "name": "India tour of New Zealand 1989/90",
+   "stage": "Final"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "John Holder",
+    "Peter McConnell"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Ajay Sharma",
+    "Manoj Prabhakar",
+    "Chetan Sharma",
+    "Kiran More",
+    "Arshad Ayub"
+   ],
+   "West Indies": [
+    "Desmond Haynes",
+    "Phil Simmons",
+    "Richie Richardson",
+    "Jeff Dujon",
+    "Viv Richards",
+    "Keith Arthurton",
+    "Gus Logie",
+    "Malcolm Marshall",
+    "Winston Benjamin",
+    "Curtly Ambrose",
+    "Courtney Walsh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Ajay Sharma": "33943",
+    "Manoj Prabhakar": "32323",
+    "Chetan Sharma": "33949",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Desmond Haynes": "52047",
+    "Phil Simmons": "52934",
+    "Richie Richardson": "52810",
+    "Jeff Dujon": "51657",
+    "Viv Richards": "52812",
+    "Keith Arthurton": "51110",
+    "Gus Logie": "52347",
+    "Malcolm Marshall": "52419",
+    "Winston Benjamin": "51220",
+    "Curtly Ambrose": "51107",
+    "Courtney Walsh": "53216"
+   }
+  },
+  "season": "1989",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 165,
+    "wickets": 10,
+    "balls": 293,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 253,
+    "description": "target reached"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 293,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 166,
+    "wickets": 2,
+    "balls": 253,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

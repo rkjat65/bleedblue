@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62691",
+  "espn_league_id": "17494",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1948-12-09"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1948/49",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "TA Ramachandran",
+    "Prasad Sinha"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "KC Ibrahim",
+    "Rusi Modi",
+    "Vijay Hazare",
+    "Hemu Adhikari",
+    "Dattu Phadkar",
+    "Lala Amarnath",
+    "Polly Umrigar",
+    "Khokhan Sen",
+    "Sadu Shinde",
+    "Commandur Rangachari"
+   ],
+   "West Indies": [
+    "Allan Rae",
+    "Jeffrey Stollmeyer",
+    "Clyde Walcott",
+    "Everton Weekes",
+    "Gerry Gomez",
+    "Robert Christiani",
+    "Jimmy Cameron",
+    "Denis Atkinson",
+    "John Goddard",
+    "Prior Jones",
+    "Wilf Ferguson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "KC Ibrahim": "29529",
+    "Rusi Modi": "31021",
+    "Vijay Hazare": "29290",
+    "Hemu Adhikari": "26179",
+    "Dattu Phadkar": "32309",
+    "Lala Amarnath": "26223",
+    "Polly Umrigar": "35577",
+    "Khokhan Sen": "34741",
+    "Sadu Shinde": "33999",
+    "Commandur Rangachari": "33088",
+    "Allan Rae": "52801",
+    "Jeffrey Stollmeyer": "52953",
+    "Clyde Walcott": "53211",
+    "Everton Weekes": "53241",
+    "Gerry Gomez": "51893",
+    "Robert Christiani": "51473",
+    "Jimmy Cameron": "51458",
+    "Denis Atkinson": "51134",
+    "John Goddard": "51889",
+    "Prior Jones": "52220",
+    "Wilf Ferguson": "51788"
+   }
+  },
+  "season": "1948",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1236,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 273,
+    "wickets": 10,
+    "balls": 854,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 333,
+    "wickets": 3,
+    "balls": 792,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 629,
+    "wickets": 6,
+    "balls": 1236,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 854,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 792,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

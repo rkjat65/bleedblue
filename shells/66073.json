@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66073",
+  "espn_league_id": "16148",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Gqeberha",
+  "dates": [
+   "1997-02-02"
+  ],
+  "event": {
+   "name": "Australia tour of India 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Rudi Koertzen",
+    "David Orchard"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Wilf Diedricks"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Adam Bacher",
+    "Gary Kirsten",
+    "Jacques Kallis",
+    "Daryll Cullinan",
+    "Jonty Rhodes",
+    "Hansie Cronje",
+    "Shaun Pollock",
+    "Lance Klusener",
+    "David Richardson",
+    "Allan Donald",
+    "Paul Adams"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Rahul Dravid",
+    "Javagal Srinath",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Saba Karim",
+    "Robin Singh",
+    "Anil Kumble",
+    "Salil Ankola",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Adam Bacher": "44024",
+    "Gary Kirsten": "45813",
+    "Jacques Kallis": "45789",
+    "Daryll Cullinan": "44489",
+    "Jonty Rhodes": "46973",
+    "Hansie Cronje": "44485",
+    "Shaun Pollock": "46774",
+    "Lance Klusener": "45821",
+    "David Richardson": "46978",
+    "Allan Donald": "44716",
+    "Paul Adams": "43919",
+    "Sourav Ganguly": "28779",
+    "Rahul Dravid": "28114",
+    "Javagal Srinath": "34105",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Saba Karim": "30042",
+    "Robin Singh": "34059",
+    "Anil Kumble": "30176",
+    "Salil Ankola": "26257",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "St George's Park, Gqeberha",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 180,
+    "wickets": 4,
+    "balls": 271,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 179,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 271,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

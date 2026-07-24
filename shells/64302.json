@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64302",
+  "espn_league_id": "16761",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1987-02-18"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Dara Dotiwalla",
+    "RV Ramani"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Lalchand Rajput",
+    "Raman Lamba",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Chandrakant Pandit",
+    "Roger Binny",
+    "Madan Lal",
+    "Maninder Singh"
+   ],
+   "Pakistan": [
+    "Ramiz Raja",
+    "Younis Ahmed",
+    "Javed Miandad",
+    "Abdul Qadir",
+    "Manzoor Elahi",
+    "Imran Khan",
+    "Saleem Malik",
+    "Wasim Akram",
+    "Saleem Yousuf",
+    "Mudassar Nazar",
+    "Saleem Jaffar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Lalchand Rajput": "33034",
+    "Raman Lamba": "30745",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Chandrakant Pandit": "32179",
+    "Roger Binny": "26948",
+    "Madan Lal": "30873",
+    "Maninder Singh": "30923",
+    "Ramiz Raja": "42420",
+    "Younis Ahmed": "43648",
+    "Javed Miandad": "40879",
+    "Abdul Qadir": "38973",
+    "Manzoor Elahi": "41262",
+    "Imran Khan": "40560",
+    "Saleem Malik": "42623",
+    "Wasim Akram": "43547",
+    "Saleem Yousuf": "42626",
+    "Mudassar Nazar": "41308",
+    "Saleem Jaffar": "42879"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 238,
+    "wickets": 6,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 237,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 240,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 241,
+    "wickets": 8,
+    "balls": 237,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62966",
+  "espn_league_id": "17330",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1965-03-05"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1964/65",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Santosh Ganguli",
+    "Bapu Joshi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Budhi Kunderan",
+    "Farokh Engineer",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Mansur Ali Khan Pataudi",
+    "Hanumant Singh",
+    "Salim Durani",
+    "Ramakant Desai",
+    "Srinivas Venkataraghavan",
+    "Baloo Gupte"
+   ],
+   "New Zealand": [
+    "Graham Dowling",
+    "Bevan Congdon",
+    "Ross Morgan",
+    "John Reid",
+    "Bert Sutcliffe",
+    "Bryan Yuile",
+    "Vic Pollard",
+    "Bruce Taylor",
+    "Graham Vivian",
+    "Dick Motz",
+    "John Ward"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Budhi Kunderan": "30178",
+    "Farokh Engineer": "28624",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Hanumant Singh": "29260",
+    "Salim Durani": "28118",
+    "Ramakant Desai": "28045",
+    "Srinivas Venkataraghavan": "35656",
+    "Baloo Gupte": "28878",
+    "Graham Dowling": "36837",
+    "Bevan Congdon": "36611",
+    "Ross Morgan": "37727",
+    "John Reid": "38248",
+    "Bert Sutcliffe": "38413",
+    "Bryan Yuile": "38930",
+    "Vic Pollard": "38129",
+    "Bruce Taylor": "38609",
+    "Graham Vivian": "38711",
+    "Dick Motz": "37733",
+    "John Ward": "38741"
+   }
+  },
+  "season": "1965",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 960,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 380,
+    "wickets": 10,
+    "balls": 635,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 547,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 92,
+    "wickets": 3,
+    "balls": 102,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 462,
+    "wickets": 9,
+    "balls": 960,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 635,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 191,
+    "wickets": 9,
+    "balls": 547,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 102,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

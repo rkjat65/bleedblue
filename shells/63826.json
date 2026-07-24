@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63826",
+  "espn_league_id": "15872",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Wellington",
+  "dates": [
+   "1998-12-25"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1998/99",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Eddie Nicholls",
+    "Evan Watkin"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Steve Dunne"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Matthew Bell",
+    "Matt Horne",
+    "Stephen Fleming",
+    "Nathan Astle",
+    "Craig McMillan",
+    "Adam Parore",
+    "Chris Cairns",
+    "Dion Nash",
+    "Daniel Vettori",
+    "Paul Wiseman",
+    "Simon Doull"
+   ],
+   "India": [
+    "Navjot Sidhu",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad",
+    "Harbhajan Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Matthew Bell": "36294",
+    "Matt Horne": "37250",
+    "Stephen Fleming": "37000",
+    "Nathan Astle": "36185",
+    "Craig McMillan": "37712",
+    "Adam Parore": "38117",
+    "Chris Cairns": "36597",
+    "Dion Nash": "38008",
+    "Daniel Vettori": "38710",
+    "Paul Wiseman": "38753",
+    "Simon Doull": "36835",
+    "Navjot Sidhu": "34028",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Harbhajan Singh": "29264"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Basin Reserve, Wellington",
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 394,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 352,
+    "wickets": 10,
+    "balls": 892,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 690,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 215,
+    "wickets": 6,
+    "balls": 363,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 208,
+    "wickets": 10,
+    "balls": 394,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 892,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 356,
+    "wickets": 10,
+    "balls": 690,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 363,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

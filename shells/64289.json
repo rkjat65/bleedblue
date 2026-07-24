@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64289",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Ahmedabad",
+  "dates": [
+   "1986-10-05"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "BR Keshavamurthy",
+    "MG Mukherjee"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Mohammad Azharuddin",
+    "Kapil Dev",
+    "Chandrakant Pandit",
+    "Ravi Shastri",
+    "Madan Lal",
+    "Roger Binny",
+    "Gopal Sharma",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "Geoff Marsh",
+    "David Boon",
+    "Dean Jones",
+    "Allan Border",
+    "Greg Ritchie",
+    "Greg Matthews",
+    "Steve Waugh",
+    "Greg Dyer",
+    "Craig McDermott",
+    "Dave Gilbert",
+    "Simon Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Mohammad Azharuddin": "26329",
+    "Kapil Dev": "30028",
+    "Chandrakant Pandit": "32179",
+    "Ravi Shastri": "33975",
+    "Madan Lal": "30873",
+    "Roger Binny": "26948",
+    "Gopal Sharma": "33952",
+    "Maninder Singh": "30923",
+    "Geoff Marsh": "6499",
+    "David Boon": "4169",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Greg Matthews": "6525",
+    "Steve Waugh": "8192",
+    "Greg Dyer": "4996",
+    "Craig McDermott": "6551",
+    "Dave Gilbert": "5385",
+    "Simon Davis": "4923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Narendra Modi Stadium, Motera, Ahmedabad",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 193,
+    "wickets": 10,
+    "balls": 286,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 261,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 286,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 141,
+    "wickets": 10,
+    "balls": 261,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

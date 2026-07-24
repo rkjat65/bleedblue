@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63395",
+  "espn_league_id": "16884",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1985-01-31"
+  ],
+  "event": {
+   "name": "England in India Test Series 1984/85",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "V.K.Ramaswamy",
+    "Piloo Reporter"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohammad Azharuddin",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Ashok Malhotra",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Laxman Sivaramakrishnan",
+    "Gopal Sharma"
+   ],
+   "England": [
+    "Graeme Fowler",
+    "Tim Robinson",
+    "Mike Gatting",
+    "Allan Lamb",
+    "David Gower",
+    "Chris Cowdrey",
+    "Paul Downton",
+    "Phil Edmonds",
+    "Neil Foster",
+    "Pat Pocock",
+    "Norman Cowans"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohammad Azharuddin": "26329",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Malhotra": "30912",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Laxman Sivaramakrishnan": "34074",
+    "Gopal Sharma": "33952",
+    "Graeme Fowler": "12884",
+    "Tim Robinson": "19445",
+    "Mike Gatting": "13340",
+    "Allan Lamb": "16178",
+    "David Gower": "13418",
+    "Chris Cowdrey": "10843",
+    "Paul Downton": "11931",
+    "Phil Edmonds": "12486",
+    "Neil Foster": "12879",
+    "Pat Pocock": "18557",
+    "Norman Cowans": "10839"
+   }
+  },
+  "season": "1985",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 553,
+    "wickets": 8,
+    "balls": 990,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1133,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 97,
+    "wickets": 1,
+    "balls": 78,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 216,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 990,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 417,
+    "wickets": 10,
+    "balls": 1133,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 78,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 91,
+    "wickets": 0,
+    "balls": 216,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

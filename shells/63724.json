@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63724",
+  "espn_league_id": "16184",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Ahmedabad",
+  "dates": [
+   "1996-11-20"
+  ],
+  "event": {
+   "name": "India in England Test Series 1996",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Shyam Bansal",
+    "George Sharp",
+    "Derek Crookes"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "Amiesh Saheba"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sanjay Manjrekar",
+    "Nayan Mongia",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "VVS Laxman",
+    "Sunil Joshi",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Venkatesh Prasad",
+    "Narendra Hirwani"
+   ],
+   "South Africa": [
+    "Gary Kirsten",
+    "Andrew Hudson",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Jonty Rhodes",
+    "Brian McMillan",
+    "David Richardson",
+    "Pat Symcox",
+    "Fanie de Villiers",
+    "Allan Donald",
+    "Paul Adams"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sanjay Manjrekar": "30934",
+    "Nayan Mongia": "31036",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "VVS Laxman": "30750",
+    "Sunil Joshi": "29725",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Narendra Hirwani": "29299",
+    "Gary Kirsten": "45813",
+    "Andrew Hudson": "45458",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Jonty Rhodes": "46973",
+    "Brian McMillan": "46214",
+    "David Richardson": "46978",
+    "Pat Symcox": "47267",
+    "Fanie de Villiers": "44696",
+    "Allan Donald": "44716",
+    "Paul Adams": "43919"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Narendra Modi Stadium, Motera, Ahmedabad",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 223,
+    "wickets": 10,
+    "balls": 594,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 589,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 190,
+    "wickets": 10,
+    "balls": 476,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 233,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 594,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 244,
+    "wickets": 10,
+    "balls": 589,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 476,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 4,
+    "runs": 105,
+    "wickets": 10,
+    "balls": 233,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

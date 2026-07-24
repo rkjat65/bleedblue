@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62785",
+  "espn_league_id": "17435",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Peshawar",
+  "dates": [
+   "1955-02-12"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1954/55",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Idrees Baig",
+    "Shujauddin"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Hanif Mohammad",
+    "Alimuddin",
+    "Waqar Hasan",
+    "Maqsood Ahmed",
+    "Imtiaz Ahmed",
+    "Wazir Mohammad",
+    "Abdul Kardar",
+    "Shujauddin",
+    "Khan Mohammad",
+    "Mahmood Hussain",
+    "Miran Bakhsh"
+   ],
+   "India": [
+    "Pankaj Roy",
+    "Pananmal Punjabi",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "Chandrasekhar Gadkari",
+    "Gulabrai Ramchand",
+    "Vinoo Mankad",
+    "Naren Tamhane",
+    "Dattu Phadkar",
+    "Subhash Gupte",
+    "Ghulam Ahmed"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Hanif Mohammad": "40373",
+    "Alimuddin": "38992",
+    "Waqar Hasan": "43541",
+    "Maqsood Ahmed": "41270",
+    "Imtiaz Ahmed": "40565",
+    "Wazir Mohammad": "43557",
+    "Abdul Kardar": "41030",
+    "Shujauddin": "42660",
+    "Khan Mohammad": "41043",
+    "Mahmood Hussain": "41267",
+    "Miran Bakhsh": "41280",
+    "Pankaj Roy": "33186",
+    "Pananmal Punjabi": "32371",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "Chandrasekhar Gadkari": "28751",
+    "Gulabrai Ramchand": "33062",
+    "Vinoo Mankad": "30939",
+    "Naren Tamhane": "35308",
+    "Dattu Phadkar": "32309",
+    "Subhash Gupte": "28880",
+    "Ghulam Ahmed": "28821"
+   }
+  },
+  "season": "1955",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Peshawar Club Ground",
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 188,
+    "wickets": 10,
+    "balls": 879,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 648,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 182,
+    "wickets": 10,
+    "balls": 732,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 114,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 879,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 245,
+    "wickets": 10,
+    "balls": 648,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 732,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 23,
+    "wickets": 1,
+    "balls": 114,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

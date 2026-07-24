@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64216",
+  "espn_league_id": "16936",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jaipur",
+  "dates": [
+   "1983-10-02"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1983/84",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Sukha Bose",
+    "Rajan Mehra"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Kirti Azad",
+    "Yashpal Sharma",
+    "Roger Binny",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Balwinder Sandhu"
+   ],
+   "Pakistan": [
+    "Mudassar Nazar",
+    "Mohsin Khan",
+    "Zaheer Abbas",
+    "Javed Miandad",
+    "Wasim Raja",
+    "Saleem Malik",
+    "Wasim Bari",
+    "Tahir Naqqash",
+    "Jalal-ud-Din",
+    "Azeem Hafeez",
+    "Mohammad Nazir"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Kirti Azad": "26325",
+    "Yashpal Sharma": "36075",
+    "Roger Binny": "26948",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Balwinder Sandhu": "33816",
+    "Mudassar Nazar": "41308",
+    "Mohsin Khan": "41303",
+    "Zaheer Abbas": "43695",
+    "Javed Miandad": "40879",
+    "Wasim Raja": "43553",
+    "Saleem Malik": "42623",
+    "Wasim Bari": "43549",
+    "Tahir Naqqash": "43271",
+    "Jalal-ud-Din": "40872",
+    "Azeem Hafeez": "39021",
+    "Mohammad Nazir": "41294"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Sawai Mansingh Stadium, Jaipur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 169,
+    "wickets": 6,
+    "balls": 244,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 166,
+    "wickets": 9,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 244,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

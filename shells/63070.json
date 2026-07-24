@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63070",
+  "espn_league_id": "17254"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1971-04-13"
+  ],
+  "event": {
+   "name": "India in England Test Series 1971",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ralph Gosein",
+    "Douglas Sang Hue"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Joey Carew",
+    "Desmond Lewis",
+    "Rohan Kanhai",
+    "Charlie Davis",
+    "Clive Lloyd",
+    "Garry Sobers",
+    "Maurice Foster",
+    "David Holford",
+    "John Shepherd",
+    "Uton Dowe",
+    "Jack Noreiga"
+   ],
+   "India": [
+    "Syed Abid Ali",
+    "Sunil Gavaskar",
+    "Ajit Wadekar",
+    "Dilip Sardesai",
+    "Gundappa Viswanath",
+    "Motganhalli Jaisimha",
+    "Eknath Solkar",
+    "Srinivas Venkataraghavan",
+    "Pochiah Krishnamurthy",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Joey Carew": "51465",
+    "Desmond Lewis": "52342",
+    "Rohan Kanhai": "52287",
+    "Charlie Davis": "51641",
+    "Clive Lloyd": "52345",
+    "Garry Sobers": "52946",
+    "Maurice Foster": "51793",
+    "David Holford": "52064",
+    "John Shepherd": "52929",
+    "Uton Dowe": "51653",
+    "Jack Noreiga": "52634",
+    "Syed Abid Ali": "26169",
+    "Sunil Gavaskar": "28794",
+    "Ajit Wadekar": "35933",
+    "Dilip Sardesai": "33850",
+    "Gundappa Viswanath": "35712",
+    "Motganhalli Jaisimha": "29663",
+    "Eknath Solkar": "34085",
+    "Srinivas Venkataraghavan": "35656",
+    "Pochiah Krishnamurthy": "30135",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875"
+   }
+  },
+  "season": "1971",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad"
+ },
+ "innings": []
+}

@@ -1,0 +1,154 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63714",
+  "espn_league_id": "16184",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1996-06-20"
+  ],
+  "event": {
+   "name": "India in England Test Series 1996",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dickie Bird",
+    "Darrell Hair"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Alan Whitehead"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Mike Atherton",
+    "Alec Stewart",
+    "Nasser Hussain",
+    "Graham Thorpe",
+    "Graeme Hick",
+    "Ronnie Irani",
+    "Jack Russell",
+    "Chris Lewis",
+    "Dominic Cork",
+    "Peter Martin",
+    "Alan Mullally"
+   ],
+   "India": [
+    "Vikram Rathour",
+    "Nayan Mongia",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Paras Mhambrey",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mike Atherton": "8579",
+    "Alec Stewart": "20372",
+    "Nasser Hussain": "14325",
+    "Graham Thorpe": "21537",
+    "Graeme Hick": "14187",
+    "Ronnie Irani": "15403",
+    "Jack Russell": "19500",
+    "Chris Lewis": "16274",
+    "Dominic Cork": "10816",
+    "Peter Martin": "16925",
+    "Alan Mullally": "17121",
+    "Vikram Rathour": "33120",
+    "Nayan Mongia": "31036",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Paras Mhambrey": "30999",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 344,
+    "wickets": 10,
+    "balls": 783,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1017,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 278,
+    "wickets": 9,
+    "balls": 726,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 783,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 429,
+    "wickets": 10,
+    "balls": 1017,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 726,
+    "description": "declared"
+   }
+  ]
+ },
+ "innings": []
+}

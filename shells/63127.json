@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63127",
+  "espn_league_id": "17212",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Birmingham",
+  "dates": [
+   "1974-07-04"
+  ],
+  "event": {
+   "name": "India in England Test Series 1974",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bill Alley",
+    "Charlie Elliott"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Dennis Amiss",
+    "David Lloyd",
+    "Mike Denness",
+    "Keith Fletcher",
+    "John Edrich",
+    "Tony Greig",
+    "Alan Knott",
+    "Chris Old",
+    "Geoff Arnold",
+    "Derek Underwood",
+    "Mike Hendrick"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Sudhir Naik",
+    "Ajit Wadekar",
+    "Gundappa Viswanath",
+    "Ashok Mankad",
+    "Farokh Engineer",
+    "Eknath Solkar",
+    "Syed Abid Ali",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dennis Amiss": "8535",
+    "David Lloyd": "16318",
+    "Mike Denness": "11870",
+    "Keith Fletcher": "12854",
+    "John Edrich": "12490",
+    "Tony Greig": "13463",
+    "Alan Knott": "15917",
+    "Chris Old": "18256",
+    "Geoff Arnold": "8566",
+    "Derek Underwood": "22149",
+    "Mike Hendrick": "14159",
+    "Sunil Gavaskar": "28794",
+    "Sudhir Naik": "31778",
+    "Ajit Wadekar": "35933",
+    "Gundappa Viswanath": "35712",
+    "Ashok Mankad": "30938",
+    "Farokh Engineer": "28624",
+    "Eknath Solkar": "34085",
+    "Syed Abid Ali": "26169",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875"
+   }
+  },
+  "season": "1974",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Edgbaston, Birmingham",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 356,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 459,
+    "wickets": 2,
+    "balls": 840,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 406,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 165,
+    "wickets": 10,
+    "balls": 356,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 840,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 216,
+    "wickets": 10,
+    "balls": 406,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

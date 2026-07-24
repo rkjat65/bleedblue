@@ -1,0 +1,154 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63906",
+  "espn_league_id": "15598",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "2000-11-25"
+  ],
+  "event": {
+   "name": "India in Bangladesh Test Match 2000/01",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Dunne",
+    "Arani Jayaprakash"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "KS Giridharan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Shiv Sunder Das",
+    "Sadagoppan Ramesh",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Ajit Agarkar",
+    "Sunil Joshi",
+    "Vijay Dahiya",
+    "Javagal Srinath",
+    "Zaheer Khan",
+    "Sarandeep Singh"
+   ],
+   "Zimbabwe": [
+    "Guy Whittall",
+    "Gavin Rennie",
+    "Stuart Carlisle",
+    "Alistair Campbell",
+    "Andy Flower",
+    "Grant Flower",
+    "Dirk Viljoen",
+    "Heath Streak",
+    "Mluleki Nkala",
+    "Brian Murphy",
+    "Henry Olonga"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Shiv Sunder Das": "28010",
+    "Sadagoppan Ramesh": "33066",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Ajit Agarkar": "26184",
+    "Sunil Joshi": "29725",
+    "Vijay Dahiya": "27978",
+    "Javagal Srinath": "34105",
+    "Zaheer Khan": "30102",
+    "Sarandeep Singh": "34211",
+    "Guy Whittall": "55848",
+    "Gavin Rennie": "55713",
+    "Stuart Carlisle": "55307",
+    "Alistair Campbell": "55301",
+    "Andy Flower": "55427",
+    "Grant Flower": "55429",
+    "Dirk Viljoen": "55825",
+    "Heath Streak": "55761",
+    "Mluleki Nkala": "55663",
+    "Brian Murphy": "55610",
+    "Henry Olonga": "55675"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 609,
+    "wickets": 6,
+    "balls": 935,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 721,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 966,
+    "description": ""
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 935,
+    "description": "declared"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 382,
+    "wickets": 10,
+    "balls": 721,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 3,
+    "runs": 503,
+    "wickets": 6,
+    "balls": 966,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

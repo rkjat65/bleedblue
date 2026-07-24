@@ -1,0 +1,147 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63548",
+  "espn_league_id": "16567",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chandigarh",
+  "dates": [
+   "1990-11-23"
+  ],
+  "event": {
+   "name": "Sri Lanka in India Test Match 1990/91"
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "SB Kulkarni",
+    "RS Rathore"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ravi Shastri",
+    "Manoj Prabhakar",
+    "Sanjay Manjrekar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Kapil Dev",
+    "Kiran More",
+    "Venkatapathy Raju",
+    "Gopal Sharma",
+    "Narendra Hirwani"
+   ],
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Athula Samarasekera",
+    "Asanka Gurusinha",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Marvan Atapattu",
+    "Rumesh Ratnayake",
+    "Graeme Labrooy",
+    "Ranjith Madurasinghe",
+    "Jayananda Warnaweera"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ravi Shastri": "33975",
+    "Manoj Prabhakar": "32323",
+    "Sanjay Manjrekar": "30934",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Venkatapathy Raju": "33044",
+    "Gopal Sharma": "33952",
+    "Narendra Hirwani": "29299",
+    "Roshan Mahanama": "49626",
+    "Athula Samarasekera": "50421",
+    "Asanka Gurusinha": "49005",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Marvan Atapattu": "48124",
+    "Rumesh Ratnayake": "50249",
+    "Graeme Labrooy": "49552",
+    "Ranjith Madurasinghe": "49624",
+    "Jayananda Warnaweera": "50836"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Sector 16 Stadium, Chandigarh",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 288,
+    "wickets": 10,
+    "balls": 665,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 311,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 724,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 665,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 82,
+    "wickets": 10,
+    "balls": 311,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 198,
+    "wickets": 10,
+    "balls": 724,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62965",
+  "espn_league_id": "17330"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1965-02-27"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1964/65",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Mohammad Yunus",
+    "SK Raghunatha Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Dilip Sardesai",
+    "Motganhalli Jaisimha",
+    "Vijay Manjrekar",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Hanumant Singh",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "Farokh Engineer",
+    "Rusi Surti",
+    "Srinivas Venkataraghavan"
+   ],
+   "New Zealand": [
+    "Terry Jarvis",
+    "Graham Dowling",
+    "Barry Sinclair",
+    "John Reid",
+    "Ross Morgan",
+    "Bert Sutcliffe",
+    "Bryan Yuile",
+    "Vic Pollard",
+    "Dick Motz",
+    "John Ward",
+    "Richard Collinge"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dilip Sardesai": "33850",
+    "Motganhalli Jaisimha": "29663",
+    "Vijay Manjrekar": "30936",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Hanumant Singh": "29260",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "Farokh Engineer": "28624",
+    "Rusi Surti": "34174",
+    "Srinivas Venkataraghavan": "35656",
+    "Terry Jarvis": "37488",
+    "Graham Dowling": "36837",
+    "Barry Sinclair": "38390",
+    "John Reid": "38248",
+    "Ross Morgan": "37727",
+    "Bert Sutcliffe": "38413",
+    "Bryan Yuile": "38930",
+    "Vic Pollard": "38129",
+    "Dick Motz": "37733",
+    "John Ward": "38741",
+    "Richard Collinge": "36606"
+   }
+  },
+  "season": "1965",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Nehru Stadium, Madras"
+ },
+ "innings": []
+}

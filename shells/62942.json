@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62942",
+  "espn_league_id": "17345",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1964-02-08"
+  ],
+  "event": {
+   "name": "England in India Test Series 1963/64",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sambhu Pan",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Budhi Kunderan",
+    "Dilip Sardesai",
+    "Mansur Ali Khan Pataudi",
+    "Hanumant Singh",
+    "Chandu Borde",
+    "Salim Durani",
+    "AG Kripal Singh",
+    "Bapu Nadkarni",
+    "Ramakant Desai",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Brian Bolus",
+    "John Edrich",
+    "Mike Smith",
+    "Don Wilson",
+    "Peter Parfitt",
+    "Colin Cowdrey",
+    "Jim Parks",
+    "Barry Knight",
+    "John Mortimore",
+    "Fred Titmus",
+    "John Price"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Budhi Kunderan": "30178",
+    "Dilip Sardesai": "33850",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Hanumant Singh": "29260",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "AG Kripal Singh": "30132",
+    "Bapu Nadkarni": "31760",
+    "Ramakant Desai": "28045",
+    "Bhagwath Chandrasekhar": "27591",
+    "Brian Bolus": "9142",
+    "John Edrich": "12490",
+    "Mike Smith": "20255",
+    "Don Wilson": "22469",
+    "Peter Parfitt": "18411",
+    "Colin Cowdrey": "10846",
+    "Jim Parks": "18435",
+    "Barry Knight": "15910",
+    "John Mortimore": "17111",
+    "Fred Titmus": "21548",
+    "John Price": "18616"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 344,
+    "wickets": 10,
+    "balls": 888,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1113,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 463,
+    "wickets": 4,
+    "balls": 990,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 888,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 451,
+    "wickets": 10,
+    "balls": 1113,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 990,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

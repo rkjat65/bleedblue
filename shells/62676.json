@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62676",
+  "espn_league_id": "17507",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Brisbane",
+  "dates": [
+   "1947-11-28"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1947/48",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Andrew Barlow",
+    "George Borwick"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Bill Brown",
+    "Arthur Morris",
+    "Donald Bradman",
+    "Lindsay Hassett",
+    "Keith Miller",
+    "Colin McCool",
+    "Ray Lindwall",
+    "Don Tallon",
+    "Ian Johnson",
+    "Ernie Toshack",
+    "Bill Johnston"
+   ],
+   "India": [
+    "Vinoo Mankad",
+    "Chandu Sarwate",
+    "Gul Mohammad",
+    "Hemu Adhikari",
+    "Gogumal Kishenchand",
+    "Vijay Hazare",
+    "Lala Amarnath",
+    "Khandu Rangnekar",
+    "Ranga Sohoni",
+    "C.S. Nayudu",
+    "Jenni Irani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bill Brown": "4225",
+    "Arthur Morris": "6644",
+    "Donald Bradman": "4188",
+    "Lindsay Hassett": "5607",
+    "Keith Miller": "6612",
+    "Colin McCool": "6545",
+    "Ray Lindwall": "6299",
+    "Don Tallon": "7913",
+    "Ian Johnson": "6100",
+    "Ernie Toshack": "7960",
+    "Bill Johnston": "6041",
+    "Vinoo Mankad": "30939",
+    "Chandu Sarwate": "33859",
+    "Gul Mohammad": "40329",
+    "Hemu Adhikari": "26179",
+    "Gogumal Kishenchand": "30117",
+    "Vijay Hazare": "29290",
+    "Lala Amarnath": "26223",
+    "Khandu Rangnekar": "33091",
+    "Ranga Sohoni": "34081",
+    "C.S. Nayudu": "31813",
+    "Jenni Irani": "29543"
+   }
+  },
+  "season": "1947",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Brisbane Cricket Ground, Woolloongabba, Brisbane",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 382,
+    "wickets": 8,
+    "balls": 690,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 129,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 301,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 690,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 58,
+    "wickets": 10,
+    "balls": 129,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 98,
+    "wickets": 10,
+    "balls": 301,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

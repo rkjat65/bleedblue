@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62742",
+  "espn_league_id": "17458",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lucknow",
+  "dates": [
+   "1952-10-23"
+  ],
+  "event": {
+   "name": "India in England Test Series 1952",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Balkrishna Mohoni",
+    "Jamshed Patel"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Datta Gaekwad",
+    "Gul Mohammad",
+    "Vijay Manjrekar",
+    "Gogumal Kishenchand",
+    "Polly Umrigar",
+    "Lala Amarnath",
+    "Nana Joshi",
+    "Hiralal Gaekwad",
+    "Shah Nyalchand",
+    "Ghulam Ahmed"
+   ],
+   "Pakistan": [
+    "Nazar Mohammad",
+    "Hanif Mohammad",
+    "Waqar Hasan",
+    "Imtiaz Ahmed",
+    "Maqsood Ahmed",
+    "Abdul Kardar",
+    "Anwar Hussain",
+    "Fazal Mahmood",
+    "Zulfiqar Ahmed",
+    "Mahmood Hussain",
+    "Amir Elahi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Datta Gaekwad": "28755",
+    "Gul Mohammad": "40329",
+    "Vijay Manjrekar": "30936",
+    "Gogumal Kishenchand": "30117",
+    "Polly Umrigar": "35577",
+    "Lala Amarnath": "26223",
+    "Nana Joshi": "29721",
+    "Hiralal Gaekwad": "28756",
+    "Shah Nyalchand": "31830",
+    "Ghulam Ahmed": "28821",
+    "Nazar Mohammad": "42068",
+    "Hanif Mohammad": "40373",
+    "Waqar Hasan": "43541",
+    "Imtiaz Ahmed": "40565",
+    "Maqsood Ahmed": "41270",
+    "Abdul Kardar": "41030",
+    "Anwar Hussain": "39001",
+    "Fazal Mahmood": "40092",
+    "Zulfiqar Ahmed": "43706",
+    "Mahmood Hussain": "41267",
+    "Amir Elahi": "38997"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "University Ground, Lucknow",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 106,
+    "wickets": 10,
+    "balls": 331,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1167,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 182,
+    "wickets": 10,
+    "balls": 459,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 331,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 331,
+    "wickets": 10,
+    "balls": 1167,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 459,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

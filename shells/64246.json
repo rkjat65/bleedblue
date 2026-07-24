@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64246",
+  "espn_league_id": "16896",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Pune",
+  "dates": [
+   "1984-12-05"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1984/85",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Subrata Banerjee",
+    "Mohammad Ghouse"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sunil Gavaskar",
+    "Dilip Vengsarkar",
+    "Sandeep Patil",
+    "Yashpal Sharma",
+    "Ravi Shastri",
+    "Roger Binny",
+    "Kiran More",
+    "Manoj Prabhakar",
+    "Chetan Sharma",
+    "Rajinder Singh Ghai"
+   ],
+   "England": [
+    "Graeme Fowler",
+    "Tim Robinson",
+    "Mike Gatting",
+    "Allan Lamb",
+    "Vic Marks",
+    "David Gower",
+    "Richard Ellison",
+    "Paul Downton",
+    "Phil Edmonds",
+    "Neil Foster",
+    "Norman Cowans"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sunil Gavaskar": "28794",
+    "Dilip Vengsarkar": "35654",
+    "Sandeep Patil": "32283",
+    "Yashpal Sharma": "36075",
+    "Ravi Shastri": "33975",
+    "Roger Binny": "26948",
+    "Kiran More": "31038",
+    "Manoj Prabhakar": "32323",
+    "Chetan Sharma": "33949",
+    "Rajinder Singh Ghai": "28808",
+    "Graeme Fowler": "12884",
+    "Tim Robinson": "19445",
+    "Mike Gatting": "13340",
+    "Allan Lamb": "16178",
+    "Vic Marks": "16899",
+    "David Gower": "13418",
+    "Richard Ellison": "12507",
+    "Paul Downton": "11931",
+    "Phil Edmonds": "12486",
+    "Neil Foster": "12879",
+    "Norman Cowans": "10839"
+   }
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Nehru Stadium, Pune",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 214,
+    "wickets": 6,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 260,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 215,
+    "wickets": 6,
+    "balls": 260,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,156 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63715",
+  "espn_league_id": "16184",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nottingham",
+  "dates": [
+   "1996-07-04"
+  ],
+  "event": {
+   "name": "India in England Test Series 1996",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "K.T.Francis",
+    "George Sharp",
+    "Noel Gie",
+    "Ajay Jadeja"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "David Constant"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Mike Atherton",
+    "Alec Stewart",
+    "Nasser Hussain",
+    "Graham Thorpe",
+    "Graeme Hick",
+    "Mark Ealham",
+    "Jack Russell",
+    "Chris Lewis",
+    "Dominic Cork",
+    "Min Patel",
+    "Alan Mullally"
+   ],
+   "India": [
+    "Vikram Rathour",
+    "Nayan Mongia",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Rahul Dravid",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad",
+    "Venkatapathy Raju"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mike Atherton": "8579",
+    "Alec Stewart": "20372",
+    "Nasser Hussain": "14325",
+    "Graham Thorpe": "21537",
+    "Graeme Hick": "14187",
+    "Mark Ealham": "12466",
+    "Jack Russell": "19500",
+    "Chris Lewis": "16274",
+    "Dominic Cork": "10816",
+    "Min Patel": "18458",
+    "Alan Mullally": "17121",
+    "Vikram Rathour": "33120",
+    "Nayan Mongia": "31036",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Rahul Dravid": "28114",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Venkatapathy Raju": "33044"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Trent Bridge, Nottingham",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1002,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 564,
+    "wickets": 9,
+    "balls": 1193,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 414,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 521,
+    "wickets": 10,
+    "balls": 1002,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1193,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 211,
+    "wickets": 9,
+    "balls": 414,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

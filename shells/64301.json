@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64301",
+  "espn_league_id": "16761",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Indore",
+  "dates": [
+   "1987-01-27"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1986/87",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Subrata Banerjee",
+    "Ram Gupta"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Sunil Gavaskar",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Ravi Shastri",
+    "Raman Lamba",
+    "Chandrakant Pandit",
+    "Madan Lal",
+    "Chetan Sharma",
+    "Raju Kulkarni",
+    "Maninder Singh"
+   ],
+   "Pakistan": [
+    "Mudassar Nazar",
+    "Rizwan-uz-Zaman",
+    "Ijaz Ahmed",
+    "Javed Miandad",
+    "Abdul Qadir",
+    "Saleem Malik",
+    "Imran Khan",
+    "Manzoor Elahi",
+    "Saleem Yousuf",
+    "Wasim Akram",
+    "Saleem Jaffar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Sunil Gavaskar": "28794",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Ravi Shastri": "33975",
+    "Raman Lamba": "30745",
+    "Chandrakant Pandit": "32179",
+    "Madan Lal": "30873",
+    "Chetan Sharma": "33949",
+    "Raju Kulkarni": "30151",
+    "Maninder Singh": "30923",
+    "Mudassar Nazar": "41308",
+    "Rizwan-uz-Zaman": "42428",
+    "Ijaz Ahmed": "40551",
+    "Javed Miandad": "40879",
+    "Abdul Qadir": "38973",
+    "Saleem Malik": "42623",
+    "Imran Khan": "40560",
+    "Manzoor Elahi": "41262",
+    "Saleem Yousuf": "42626",
+    "Wasim Akram": "43547",
+    "Saleem Jaffar": "42879"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Nehru Stadium, Indore",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 196,
+    "wickets": 7,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 264,
+    "description": "target reached"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 200,
+    "wickets": 7,
+    "balls": 264,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

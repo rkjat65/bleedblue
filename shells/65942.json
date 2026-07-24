@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65942",
+  "espn_league_id": "16614"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Sharjah",
+  "dates": [
+   "1991-10-19"
+  ],
+  "event": {
+   "name": "India tour of New Zealand 1989/90"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "B.C. Cooray",
+    "Udaya Wickramasinghe"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ravi Shastri",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Vinod Kambli",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Venkatapathy Raju",
+    "Anil Kumble"
+   ],
+   "West Indies": [
+    "Phil Simmons",
+    "Clayton Lambert",
+    "Richie Richardson",
+    "Brian Lara",
+    "Gus Logie",
+    "Carl Hooper",
+    "Keith Arthurton",
+    "Jeff Dujon",
+    "Curtly Ambrose",
+    "Ian Bishop",
+    "Patrick Patterson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ravi Shastri": "33975",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Vinod Kambli": "30009",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Venkatapathy Raju": "33044",
+    "Anil Kumble": "30176",
+    "Phil Simmons": "52934",
+    "Clayton Lambert": "25635",
+    "Richie Richardson": "52810",
+    "Brian Lara": "52337",
+    "Gus Logie": "52347",
+    "Carl Hooper": "52066",
+    "Keith Arthurton": "51110",
+    "Jeff Dujon": "51657",
+    "Curtly Ambrose": "51107",
+    "Ian Bishop": "51226",
+    "Patrick Patterson": "52671"
+   }
+  },
+  "season": "1991",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Sharjah Cricket Stadium",
+  "overs": 50
+ },
+ "innings": []
+}

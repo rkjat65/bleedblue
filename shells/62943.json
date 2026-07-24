@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62943",
+  "espn_league_id": "17345",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1964-02-15"
+  ],
+  "event": {
+   "name": "England in India Test Series 1963/64",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sudhendu Bhattacharya",
+    "SK Raghunatha Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Motganhalli Jaisimha",
+    "Budhi Kunderan",
+    "Vijay Manjrekar",
+    "Dilip Sardesai",
+    "Hanumant Singh",
+    "Mansur Ali Khan Pataudi",
+    "Chandu Borde",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "Baloo Gupte",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Brian Bolus",
+    "John Edrich",
+    "Mike Smith",
+    "Barry Knight",
+    "Peter Parfitt",
+    "Colin Cowdrey",
+    "Jim Parks",
+    "John Mortimore",
+    "Fred Titmus",
+    "Don Wilson",
+    "John Price"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Motganhalli Jaisimha": "29663",
+    "Budhi Kunderan": "30178",
+    "Vijay Manjrekar": "30936",
+    "Dilip Sardesai": "33850",
+    "Hanumant Singh": "29260",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "Baloo Gupte": "28878",
+    "Bhagwath Chandrasekhar": "27591",
+    "Brian Bolus": "9142",
+    "John Edrich": "12490",
+    "Mike Smith": "20255",
+    "Barry Knight": "15910",
+    "Peter Parfitt": "18411",
+    "Colin Cowdrey": "10846",
+    "Jim Parks": "18435",
+    "John Mortimore": "17111",
+    "Fred Titmus": "21548",
+    "Don Wilson": "22469",
+    "John Price": "18616"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1218,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 266,
+    "wickets": 10,
+    "balls": 1093,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 347,
+    "wickets": 3,
+    "balls": 798,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 559,
+    "wickets": 8,
+    "balls": 1218,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1093,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 798,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

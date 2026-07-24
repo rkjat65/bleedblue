@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62901",
+  "espn_league_id": "17363",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1961-11-11"
+  ],
+  "event": {
+   "name": "England in India Test Series 1961/62",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Santosh Ganguli",
+    "Bapu Joshi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Nari Contractor",
+    "Motganhalli Jaisimha",
+    "Vijay Manjrekar",
+    "AG Milkha Singh",
+    "Chandu Borde",
+    "Salim Durani",
+    "AG Kripal Singh",
+    "Budhi Kunderan",
+    "Ramakant Desai",
+    "Vasant Ranjane",
+    "Vaman Kumar"
+   ],
+   "England": [
+    "Peter Richardson",
+    "Geoff Pullar",
+    "Ken Barrington",
+    "Mike Smith",
+    "Ted Dexter",
+    "Bob Barber",
+    "John Murray",
+    "David Allen",
+    "Tony Lock",
+    "David Smith",
+    "Alan Brown"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nari Contractor": "27667",
+    "Motganhalli Jaisimha": "29663",
+    "Vijay Manjrekar": "30936",
+    "AG Milkha Singh": "31004",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "AG Kripal Singh": "30132",
+    "Budhi Kunderan": "30178",
+    "Ramakant Desai": "28045",
+    "Vasant Ranjane": "33092",
+    "Vaman Kumar": "30173",
+    "Peter Richardson": "19386",
+    "Geoff Pullar": "18640",
+    "Ken Barrington": "9014",
+    "Mike Smith": "20255",
+    "Ted Dexter": "11886",
+    "Bob Barber": "8982",
+    "John Murray": "17130",
+    "David Allen": "8513",
+    "Tony Lock": "16331",
+    "David Smith": "20236",
+    "Alan Brown": "9249"
+   }
+  },
+  "season": "1961",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1038,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 390,
+    "wickets": 10,
+    "balls": 1008,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 348,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 180,
+    "wickets": 5,
+    "balls": 438,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 500,
+    "wickets": 8,
+    "balls": 1038,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1008,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 184,
+    "wickets": 5,
+    "balls": 348,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 438,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

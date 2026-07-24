@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62729",
+  "espn_league_id": "17467",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1952-02-06"
+  ],
+  "event": {
+   "name": "England in India Test Series 1951/52",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Balkrishna Mohoni",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Mushtaq Ali",
+    "Pankaj Roy",
+    "Vijay Hazare",
+    "Vinoo Mankad",
+    "Lala Amarnath",
+    "Dattu Phadkar",
+    "Polly Umrigar",
+    "Chingleput Gopinath",
+    "Ramesh Divecha",
+    "Khokhan Sen",
+    "Ghulam Ahmed"
+   ],
+   "England": [
+    "Frank Lowson",
+    "Dick Spooner",
+    "Tom Graveney",
+    "Jack Robertson",
+    "Allan Watkins",
+    "Cyril Poole",
+    "Donald Carr",
+    "Malcolm Hilton",
+    "Brian Statham",
+    "Fred Ridgway",
+    "Roy Tattersall"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mushtaq Ali": "31061",
+    "Pankaj Roy": "33186",
+    "Vijay Hazare": "29290",
+    "Vinoo Mankad": "30939",
+    "Lala Amarnath": "26223",
+    "Dattu Phadkar": "32309",
+    "Polly Umrigar": "35577",
+    "Chingleput Gopinath": "28855",
+    "Ramesh Divecha": "28095",
+    "Khokhan Sen": "34741",
+    "Ghulam Ahmed": "28821",
+    "Frank Lowson": "16360",
+    "Dick Spooner": "20317",
+    "Tom Graveney": "13434",
+    "Jack Robertson": "19423",
+    "Allan Watkins": "22329",
+    "Cyril Poole": "18569",
+    "Donald Carr": "10668",
+    "Malcolm Hilton": "14213",
+    "Brian Statham": "20341",
+    "Fred Ridgway": "19405",
+    "Roy Tattersall": "21464"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 731,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 457,
+    "wickets": 9,
+    "balls": 918,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 455,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 266,
+    "wickets": 10,
+    "balls": 731,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 918,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 183,
+    "wickets": 10,
+    "balls": 455,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

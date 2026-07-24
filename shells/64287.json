@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64287",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hyderabad",
+  "dates": [
+   "1986-09-24"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "RR Kadam",
+    "RV Ramani"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Chandrakant Pandit",
+    "Madan Lal",
+    "R.P.Singh",
+    "Gopal Sharma",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "David Boon",
+    "Geoff Marsh",
+    "Dean Jones",
+    "Allan Border",
+    "Greg Ritchie",
+    "Greg Matthews",
+    "Steve Waugh",
+    "Greg Dyer",
+    "Dave Gilbert",
+    "Bruce Reid",
+    "Simon Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Chandrakant Pandit": "32179",
+    "Madan Lal": "30873",
+    "R.P.Singh": "34057",
+    "Gopal Sharma": "33952",
+    "Maninder Singh": "30923",
+    "David Boon": "4169",
+    "Geoff Marsh": "6499",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Greg Matthews": "6525",
+    "Steve Waugh": "8192",
+    "Greg Dyer": "4996",
+    "Dave Gilbert": "5385",
+    "Bruce Reid": "7319",
+    "Simon Davis": "4923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Lal Bahadur Shastri Stadium, Hyderabad",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 41,
+    "wickets": 1,
+    "balls": 64,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 242,
+    "wickets": 6,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 64,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

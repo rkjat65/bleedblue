@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63126",
+  "espn_league_id": "17212",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1974-06-20"
+  ],
+  "event": {
+   "name": "India in England Test Series 1974",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Arthur Fagg",
+    "Tom Spencer"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Dennis Amiss",
+    "David Lloyd",
+    "John Edrich",
+    "Mike Denness",
+    "Keith Fletcher",
+    "Tony Greig",
+    "Alan Knott",
+    "Chris Old",
+    "Geoff Arnold",
+    "Derek Underwood",
+    "Mike Hendrick"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Farokh Engineer",
+    "Ajit Wadekar",
+    "Gundappa Viswanath",
+    "Brijesh Patel",
+    "Eknath Solkar",
+    "Syed Abid Ali",
+    "Madan Lal",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dennis Amiss": "8535",
+    "David Lloyd": "16318",
+    "John Edrich": "12490",
+    "Mike Denness": "11870",
+    "Keith Fletcher": "12854",
+    "Tony Greig": "13463",
+    "Alan Knott": "15917",
+    "Chris Old": "18256",
+    "Geoff Arnold": "8566",
+    "Derek Underwood": "22149",
+    "Mike Hendrick": "14159",
+    "Sunil Gavaskar": "28794",
+    "Farokh Engineer": "28624",
+    "Ajit Wadekar": "35933",
+    "Gundappa Viswanath": "35712",
+    "Brijesh Patel": "32231",
+    "Eknath Solkar": "34085",
+    "Syed Abid Ali": "26169",
+    "Madan Lal": "30873",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1974",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 629,
+    "wickets": 10,
+    "balls": 1097,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 611,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 102,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1097,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 302,
+    "wickets": 10,
+    "balls": 611,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 42,
+    "wickets": 9,
+    "balls": 102,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

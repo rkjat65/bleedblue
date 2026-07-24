@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63451",
+  "espn_league_id": "16757",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cuttack",
+  "dates": [
+   "1987-01-04"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1986/87",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ram Gupta",
+    "V.K.Ramaswamy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Mohinder Amarnath",
+    "Dilip Vengsarkar",
+    "Raman Lamba",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Bharat Arun",
+    "Kiran More",
+    "Shivlal Yadav",
+    "Maninder Singh"
+   ],
+   "Sri Lanka": [
+    "Sidath Wettimuny",
+    "Ravi Ratnayeke",
+    "Asanka Gurusinha",
+    "Asoka de Silva",
+    "Duleep Mendis",
+    "Arjuna Ranatunga",
+    "Roy Dias",
+    "Aravinda de Silva",
+    "Rumesh Ratnayake",
+    "Guy de Alwis",
+    "Don Anurasiri"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Mohinder Amarnath": "26225",
+    "Dilip Vengsarkar": "35654",
+    "Raman Lamba": "30745",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Bharat Arun": "26293",
+    "Kiran More": "31038",
+    "Shivlal Yadav": "36064",
+    "Maninder Singh": "30923",
+    "Sidath Wettimuny": "50844",
+    "Ravi Ratnayeke": "50250",
+    "Asanka Gurusinha": "49005",
+    "Asoka de Silva": "48456",
+    "Duleep Mendis": "49629",
+    "Arjuna Ranatunga": "50244",
+    "Roy Dias": "48470",
+    "Aravinda de Silva": "48462",
+    "Rumesh Ratnayake": "50249",
+    "Guy de Alwis": "48446",
+    "Don Anurasiri": "48120"
+   }
+  },
+  "season": "1987",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Barabati Stadium, Cuttack",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 400,
+    "wickets": 10,
+    "balls": 765,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 457,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 354,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 765,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 191,
+    "wickets": 10,
+    "balls": 457,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 142,
+    "wickets": 10,
+    "balls": 354,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

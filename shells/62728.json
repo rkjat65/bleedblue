@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62728",
+  "espn_league_id": "17467",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1952-01-12"
+  ],
+  "event": {
+   "name": "England in India Test Series 1951/52",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jamshed Patel",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Vinoo Mankad",
+    "Polly Umrigar",
+    "Vijay Hazare",
+    "Dattu Phadkar",
+    "Hemu Adhikari",
+    "Vijay Manjrekar",
+    "C.S. Nayudu",
+    "Nana Joshi",
+    "Sadu Shinde",
+    "Ghulam Ahmed"
+   ],
+   "England": [
+    "Frank Lowson",
+    "Dick Spooner",
+    "Tom Graveney",
+    "Jack Robertson",
+    "Allan Watkins",
+    "Malcolm Hilton",
+    "Cyril Poole",
+    "Nigel Howard",
+    "Brian Statham",
+    "Fred Ridgway",
+    "Roy Tattersall"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Vinoo Mankad": "30939",
+    "Polly Umrigar": "35577",
+    "Vijay Hazare": "29290",
+    "Dattu Phadkar": "32309",
+    "Hemu Adhikari": "26179",
+    "Vijay Manjrekar": "30936",
+    "C.S. Nayudu": "31813",
+    "Nana Joshi": "29721",
+    "Sadu Shinde": "33999",
+    "Ghulam Ahmed": "28821",
+    "Frank Lowson": "16360",
+    "Dick Spooner": "20317",
+    "Tom Graveney": "13434",
+    "Jack Robertson": "19423",
+    "Allan Watkins": "22329",
+    "Malcolm Hilton": "14213",
+    "Cyril Poole": "18569",
+    "Nigel Howard": "14282",
+    "Brian Statham": "20341",
+    "Fred Ridgway": "19405",
+    "Roy Tattersall": "21464"
+   }
+  },
+  "season": "1952",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 121,
+    "wickets": 10,
+    "balls": 371,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 571,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 157,
+    "wickets": 10,
+    "balls": 401,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 116,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 371,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 203,
+    "wickets": 10,
+    "balls": 571,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 401,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 76,
+    "wickets": 2,
+    "balls": 116,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

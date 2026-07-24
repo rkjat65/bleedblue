@@ -1,0 +1,54 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "256670",
+  "espn_league_id": "14561"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "2006-08-22"
+  ],
+  "event": {
+   "name": "India in Sri Lanka ODI Series 2006",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Billy Bowden",
+    "Asoka de Silva"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Peter Manuel"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [],
+   "India": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "2006",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Sinhalese Sports Club Ground, Colombo",
+  "overs": 50
+ },
+ "innings": []
+}

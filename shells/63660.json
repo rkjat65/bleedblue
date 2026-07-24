@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63660",
+  "espn_league_id": "16321",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1994-11-18"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1994/95",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Shyam Bansal",
+    "Dickie Bird"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Suresh Shastri"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sanjay Manjrekar",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Venkatapathy Raju",
+    "Rajesh Chauhan",
+    "Javagal Srinath"
+   ],
+   "West Indies": [
+    "Phil Simmons",
+    "Stuart Williams",
+    "Brian Lara",
+    "Carl Hooper",
+    "Keith Arthurton",
+    "Jimmy Adams",
+    "Junior Murray",
+    "Rajindra Dhanraj",
+    "Kenny Benjamin",
+    "Courtney Walsh",
+    "Cameron Cuffy"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sanjay Manjrekar": "30934",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Venkatapathy Raju": "33044",
+    "Rajesh Chauhan": "27622",
+    "Javagal Srinath": "34105",
+    "Phil Simmons": "52934",
+    "Stuart Williams": "53234",
+    "Brian Lara": "52337",
+    "Carl Hooper": "52066",
+    "Keith Arthurton": "51110",
+    "Jimmy Adams": "51100",
+    "Junior Murray": "52442",
+    "Rajindra Dhanraj": "51649",
+    "Kenny Benjamin": "51218",
+    "Courtney Walsh": "53216",
+    "Cameron Cuffy": "51487"
+   }
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 272,
+    "wickets": 10,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 497,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 333,
+    "wickets": 10,
+    "balls": 589,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 490,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 513,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 243,
+    "wickets": 10,
+    "balls": 497,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 589,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 266,
+    "wickets": 10,
+    "balls": 490,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

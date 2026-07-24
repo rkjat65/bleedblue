@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63089",
+  "espn_league_id": "17241",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1972-12-20"
+  ],
+  "event": {
+   "name": "England in India Test Series 1972/73",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Ramnath Parkar",
+    "Ajit Wadekar",
+    "Dilip Sardesai",
+    "Gundappa Viswanath",
+    "Eknath Solkar",
+    "Farokh Engineer",
+    "Syed Abid Ali",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Barry Wood",
+    "Dennis Amiss",
+    "Keith Fletcher",
+    "Mike Denness",
+    "Tony Lewis",
+    "Tony Greig",
+    "Alan Knott",
+    "Geoff Arnold",
+    "Pat Pocock",
+    "Derek Underwood",
+    "Bob Cottam"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Ramnath Parkar": "32202",
+    "Ajit Wadekar": "35933",
+    "Dilip Sardesai": "33850",
+    "Gundappa Viswanath": "35712",
+    "Eknath Solkar": "34085",
+    "Farokh Engineer": "28624",
+    "Syed Abid Ali": "26169",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Barry Wood": "22498",
+    "Dennis Amiss": "8535",
+    "Keith Fletcher": "12854",
+    "Mike Denness": "11870",
+    "Tony Lewis": "16271",
+    "Tony Greig": "13463",
+    "Alan Knott": "15917",
+    "Geoff Arnold": "8566",
+    "Pat Pocock": "18557",
+    "Derek Underwood": "22149",
+    "Bob Cottam": "10824"
+   }
+  },
+  "season": "1972",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 173,
+    "wickets": 10,
+    "balls": 508,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 653,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 233,
+    "wickets": 10,
+    "balls": 592,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 533,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 508,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 200,
+    "wickets": 10,
+    "balls": 653,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 592,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 208,
+    "wickets": 4,
+    "balls": 533,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

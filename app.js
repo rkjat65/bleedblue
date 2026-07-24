@@ -168,6 +168,7 @@ function qualityBadge(q) {
   const map = {
     full: ["quality-full", "Full"],
     partial: ["quality-partial", "Partial"],
+    "scorecard-only": ["quality-scorecard", "Scorecard"],
     empty: ["quality-empty", "Empty"],
   };
   const [cls, label] = map[q] || ["quality-empty", q || "—"];
@@ -1488,7 +1489,7 @@ function renderAbout() {
       <div class="card-head"><h2>Methodology</h2></div>
       <ul class="about-list">
         <li>Match results, XI, bat/bowl cards and quality flags are derived from Cricsheet JSON and recovered India internationals.</li>
-        <li><span class="quality-badge quality-full">Full</span> matches have ball-by-ball data; <span class="quality-badge quality-partial">Partial</span> have limited detail; <span class="quality-badge quality-empty">Empty</span> are shells without innings cards.</li>
+        <li><span class="quality-badge quality-full">Full</span> matches have ball-by-ball data and feed team W/L, player career tables, and records. <span class="quality-badge quality-scorecard">Scorecard</span> shells have official innings totals or cards without ball-by-ball. <span class="quality-badge quality-partial">Partial</span> and <span class="quality-badge quality-empty">Empty</span> entries are catalogued but excluded from aggregates.</li>
         <li>Afghanistan-related withholdings follow Cricsheet policy and are documented under Coverage.</li>
       </ul>
     </div>
@@ -2196,10 +2197,15 @@ function renderMissing() {
       <div class="value">${fmtNum(q.partial ?? sum.partial_matches)}</div>
       <div class="sub">limited innings data</div>
     </div>
+    <div class="stat-tile" style="--accent:#FF9933">
+      <div class="label">Scorecard-only</div>
+      <div class="value">${fmtNum(q["scorecard-only"] ?? sum.scorecard_only_matches)}</div>
+      <div class="sub">totals/cards, no BBB</div>
+    </div>
     <div class="stat-tile" style="--accent:#F43F5E">
       <div class="label">Empty shells</div>
       <div class="value">${fmtNum(q.empty ?? sum.empty_shells)}</div>
-      <div class="sub">no ball-by-ball cards</div>
+      <div class="sub">meta only</div>
     </div>
     <div class="stat-tile" style="--accent:#8B8B9E">
       <div class="label">Withheld (AFG)</div>
@@ -2223,7 +2229,7 @@ function renderMissing() {
     </div>
     <div class="missing-block">
       <h3>2. Data quality tiers</h3>
-      <p><strong>Full:</strong> ${fmtNum(q.full)} with bat/bowl cards · <strong>Partial:</strong> ${fmtNum(q.partial)} · <strong>Empty:</strong> ${fmtNum(q.empty)} shells without ball-by-ball. Player aggregates use deliveries from full (and partial where available) matches only.</p>
+      <p><strong>Full:</strong> ${fmtNum(q.full)} with bat/bowl cards · <strong>Scorecard-only:</strong> ${fmtNum(q["scorecard-only"])} with innings totals/cards · <strong>Partial:</strong> ${fmtNum(q.partial)} · <strong>Empty:</strong> ${fmtNum(q.empty)} meta shells. Team W/L, player career tables, and records use <strong>full ball-by-ball matches only</strong>.</p>
     </div>
     <div class="missing-block">
       <h3>3. Afghanistan policy withholdings</h3>
@@ -2231,7 +2237,7 @@ function renderMissing() {
     </div>
     <div class="missing-block">
       <h3>4. What this means for stats</h3>
-      <p>Player and team numbers on archive pages reflect only the ${fmtNum(sum.dataset_matches)} matches present (from ${sum.date_range?.[0]} to ${sum.date_range?.[1]}). Career greats who peaked earlier may be under-counted. Prefer <button type="button" class="inline-link" onclick="showView('official')">Official Records</button> for all-time totals.</p>
+      <p>Archive team and player numbers reflect <strong>${fmtNum(sum.analytics_matches ?? q.full)} full-ball matches</strong> (${sum.date_range?.[0]} → ${sum.date_range?.[1]}). The catalog lists ${fmtNum(sum.dataset_matches)} files including ${fmtNum(sum.empty_shells)} meta-only shells. Prefer <button type="button" class="inline-link" onclick="showView('official')">Official Records</button> for all-time career totals.</p>
     </div>
   `;
 

@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64191",
+  "espn_league_id": "17022",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Amritsar",
+  "dates": [
+   "1982-09-12"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1981/82",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Rajan Mehra",
+    "Ram Punjabi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Roger Binny",
+    "Kris Srikkanth",
+    "Dilip Vengsarkar",
+    "Ashok Malhotra",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Mohinder Amarnath",
+    "Syed Kirmani",
+    "Madan Lal",
+    "Dilip Doshi"
+   ],
+   "Sri Lanka": [
+    "Bandula Warnapura",
+    "Sidath Wettimuny",
+    "Roy Dias",
+    "Duleep Mendis",
+    "Ranjan Madugalle",
+    "Anura Ranasinghe",
+    "Ashantha de Mel",
+    "Somachandra De Silva",
+    "Mahes Goonatilleke",
+    "Ravi Ratnayeke",
+    "Vinothen John"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roger Binny": "26948",
+    "Kris Srikkanth": "34103",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Malhotra": "30912",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Mohinder Amarnath": "26225",
+    "Syed Kirmani": "30116",
+    "Madan Lal": "30873",
+    "Dilip Doshi": "28107",
+    "Bandula Warnapura": "50835",
+    "Sidath Wettimuny": "50844",
+    "Roy Dias": "48470",
+    "Duleep Mendis": "49629",
+    "Ranjan Madugalle": "49623",
+    "Anura Ranasinghe": "50241",
+    "Ashantha de Mel": "48447",
+    "Somachandra De Silva": "48454",
+    "Mahes Goonatilleke": "49097",
+    "Ravi Ratnayeke": "50250",
+    "Vinothen John": "49213"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Gandhi Sports Complex Ground, Amritsar",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 269,
+    "wickets": 7,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 276,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 191,
+    "wickets": 8,
+    "balls": 276,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

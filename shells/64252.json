@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64252",
+  "espn_league_id": "16883",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1985-01-23"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1984/85",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "R Mrithyunjayan",
+    "AL Narasimhan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Lalchand Rajput",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sunil Gavaskar",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Manoj Prabhakar",
+    "Sadanand Viswanath",
+    "Thirumalai Sekar",
+    "Ashok Patel"
+   ],
+   "England": [
+    "Graeme Fowler",
+    "Martyn Moxon",
+    "Mike Gatting",
+    "David Gower",
+    "Allan Lamb",
+    "Chris Cowdrey",
+    "Vic Marks",
+    "Paul Downton",
+    "Phil Edmonds",
+    "Jonathan Agnew",
+    "Norman Cowans"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Lalchand Rajput": "33034",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sunil Gavaskar": "28794",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Manoj Prabhakar": "32323",
+    "Sadanand Viswanath": "35713",
+    "Thirumalai Sekar": "33891",
+    "Ashok Patel": "32226",
+    "Graeme Fowler": "12884",
+    "Martyn Moxon": "17119",
+    "Mike Gatting": "13340",
+    "David Gower": "13418",
+    "Allan Lamb": "16178",
+    "Chris Cowdrey": "10843",
+    "Vic Marks": "16899",
+    "Paul Downton": "11931",
+    "Phil Edmonds": "12486",
+    "Jonathan Agnew": "8501",
+    "Norman Cowans": "10839"
+   }
+  },
+  "season": "1985",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 241,
+    "wickets": 7,
+    "balls": 286,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 240,
+    "wickets": 7,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 286,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

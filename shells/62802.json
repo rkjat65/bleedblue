@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62802",
+  "espn_league_id": "17422",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hyderabad",
+  "dates": [
+   "1955-11-19"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1955/56",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jamshed Patel",
+    "Mysore Vijayasarathi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vinoo Mankad",
+    "Pankaj Roy",
+    "Polly Umrigar",
+    "Vijay Manjrekar",
+    "AG Kripal Singh",
+    "Gulabrai Ramchand",
+    "Dattu Phadkar",
+    "Narain Swamy",
+    "Naren Tamhane",
+    "Subhash Gupte",
+    "Ghulam Ahmed"
+   ],
+   "New Zealand": [
+    "Bert Sutcliffe",
+    "Eric Petrie",
+    "John Guy",
+    "John Reid",
+    "Noel McGregor",
+    "Noel Harford",
+    "Tony MacGibbon",
+    "Matt Poore",
+    "Harry Cave",
+    "Jack Alabaster",
+    "Johnny Hayes"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vinoo Mankad": "30939",
+    "Pankaj Roy": "33186",
+    "Polly Umrigar": "35577",
+    "Vijay Manjrekar": "30936",
+    "AG Kripal Singh": "30132",
+    "Gulabrai Ramchand": "33062",
+    "Dattu Phadkar": "32309",
+    "Narain Swamy": "34189",
+    "Naren Tamhane": "35308",
+    "Subhash Gupte": "28880",
+    "Ghulam Ahmed": "28821",
+    "Bert Sutcliffe": "38413",
+    "Eric Petrie": "38123",
+    "John Guy": "37107",
+    "John Reid": "38248",
+    "Noel McGregor": "37705",
+    "Noel Harford": "37229",
+    "Tony MacGibbon": "37694",
+    "Matt Poore": "38130",
+    "Harry Cave": "36600",
+    "Jack Alabaster": "36175",
+    "Johnny Hayes": "37244"
+   }
+  },
+  "season": "1955",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Lal Bahadur Shastri Stadium, Hyderabad",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 498,
+    "wickets": 4,
+    "balls": 1051,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1258,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 552,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1051,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 326,
+    "wickets": 10,
+    "balls": 1258,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 212,
+    "wickets": 2,
+    "balls": 552,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

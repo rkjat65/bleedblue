@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64660",
+  "espn_league_id": "15707",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Vadodara",
+  "dates": [
+   "2000-03-17"
+  ],
+  "event": {
+   "name": "South Africa in India ODI Series 1999/00",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Krishna Hariharan",
+    "Ivaturi Shivram"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "Amiesh Saheba"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Sunil Joshi",
+    "Saba Karim",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Ajit Agarkar"
+   ],
+   "South Africa": [
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Jacques Kallis",
+    "Hansie Cronje",
+    "Nicky Boje",
+    "Dale Benkenstein",
+    "Lance Klusener",
+    "Mark Boucher",
+    "Pieter Strydom",
+    "Shaun Pollock",
+    "Steve Elworthy"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Sunil Joshi": "29725",
+    "Saba Karim": "30042",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Ajit Agarkar": "26184",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Jacques Kallis": "45789",
+    "Hansie Cronje": "44485",
+    "Nicky Boje": "44091",
+    "Dale Benkenstein": "44070",
+    "Lance Klusener": "45821",
+    "Mark Boucher": "44111",
+    "Pieter Strydom": "47255",
+    "Shaun Pollock": "46774",
+    "Steve Elworthy": "44960"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Reliance Stadium, Vadodara",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 283,
+    "wickets": 6,
+    "balls": 299,
+    "description": "target reached"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 282,
+    "wickets": 5,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 299,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

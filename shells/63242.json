@@ -1,0 +1,149 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63242",
+  "espn_league_id": "17070",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1979-09-19"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1979/80",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ram Punjabi",
+    "Kasturi Ramaswami",
+    "Arun Lal"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Syed Kirmani",
+    "Gundappa Viswanath",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Karsan Ghavri",
+    "Shivlal Yadav",
+    "Srinivas Venkataraghavan",
+    "Dilip Doshi"
+   ],
+   "Australia": [
+    "Andrew Hilditch",
+    "Rick Darling",
+    "Allan Border",
+    "Kim Hughes",
+    "Graham Yallop",
+    "Bruce Yardley",
+    "Graeme Wood",
+    "Kevin Wright",
+    "Rodney Hogg",
+    "Jim Higgs",
+    "Alan Hurst"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Syed Kirmani": "30116",
+    "Gundappa Viswanath": "35712",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Karsan Ghavri": "28813",
+    "Shivlal Yadav": "36064",
+    "Srinivas Venkataraghavan": "35656",
+    "Dilip Doshi": "28107",
+    "Andrew Hilditch": "5656",
+    "Rick Darling": "4900",
+    "Allan Border": "4174",
+    "Kim Hughes": "5724",
+    "Graham Yallop": "8448",
+    "Bruce Yardley": "8449",
+    "Graeme Wood": "8251",
+    "Kevin Wright": "8264",
+    "Rodney Hogg": "5685",
+    "Jim Higgs": "5652",
+    "Alan Hurst": "5732"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 689,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 457,
+    "wickets": 5,
+    "balls": 864,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 226,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 333,
+    "wickets": 10,
+    "balls": 689,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 864,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 77,
+    "wickets": 3,
+    "balls": 226,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

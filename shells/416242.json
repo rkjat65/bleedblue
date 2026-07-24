@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "416242",
+  "espn_league_id": "13454"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Navi Mumbai",
+  "dates": [
+   "2009-11-11"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 2009/10",
+   "match_number": 7
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Asoka de Silva",
+    "Amiesh Saheba"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Sanjay Hazare"
+   ],
+   "reserve_umpires": [
+    "Shashank Ranade"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "MS Dhoni",
+    "Gautam Gambhir",
+    "Harbhajan Singh",
+    "Ravindra Jadeja",
+    "Dinesh Karthik",
+    "Virat Kohli",
+    "Praveen Kumar",
+    "Amit Mishra",
+    "Ashish Nehra",
+    "Munaf Patel",
+    "Suresh Raina",
+    "Virender Sehwag",
+    "Ishant Sharma",
+    "Sachin Tendulkar",
+    "Sudeep Tyagi",
+    "Yuvraj Singh"
+   ],
+   "Australia": [
+    "Doug Bollinger",
+    "Burt Cockley",
+    "Nathan Hauritz",
+    "Ben Hilfenhaus",
+    "Jon Holland",
+    "Michael Hussey",
+    "Mitchell Johnson",
+    "Andrew McDonald",
+    "Clint McKay",
+    "Graham Manou",
+    "Shaun Marsh",
+    "Ricky Ponting",
+    "Adam Voges",
+    "Shane Watson",
+    "Cameron White"
+   ]
+  },
+  "registry": {
+   "people": {
+    "MS Dhoni": "28081",
+    "Gautam Gambhir": "28763",
+    "Harbhajan Singh": "29264",
+    "Ravindra Jadeja": "234675",
+    "Dinesh Karthik": "30045",
+    "Virat Kohli": "253802",
+    "Praveen Kumar": "30732",
+    "Amit Mishra": "31107",
+    "Ashish Nehra": "31820",
+    "Munaf Patel": "32965",
+    "Suresh Raina": "33335",
+    "Virender Sehwag": "35263",
+    "Ishant Sharma": "236779",
+    "Sachin Tendulkar": "35320",
+    "Sudeep Tyagi": "317784",
+    "Yuvraj Singh": "36084",
+    "Doug Bollinger": "4508",
+    "Burt Cockley": "275678",
+    "Nathan Hauritz": "5593",
+    "Ben Hilfenhaus": "5941",
+    "Jon Holland": "230368",
+    "Michael Hussey": "5939",
+    "Mitchell Johnson": "6033",
+    "Andrew McDonald": "6553",
+    "Clint McKay": "6903",
+    "Graham Manou": "6480",
+    "Shaun Marsh": "6683",
+    "Ricky Ponting": "7133",
+    "Adam Voges": "8119",
+    "Shane Watson": "8180",
+    "Cameron White": "8291"
+   }
+  },
+  "season": "2009",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Dr DY Patil Sports Academy, Navi Mumbai",
+  "overs": 50
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 9.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

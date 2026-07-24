@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63749",
+  "espn_league_id": "16104",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Georgetown",
+  "dates": [
+   "1997-04-17"
+  ],
+  "event": {
+   "name": "India in West Indies Test Series 1996/97",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Eddie Nicholls",
+    "George Sharp"
+   ],
+   "match_referees": [
+    "Peter van der Merwe"
+   ],
+   "tv_umpires": [
+    "Clyde Duncan"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Stuart Williams",
+    "Shivnarine Chanderpaul",
+    "Brian Lara",
+    "Carl Hooper",
+    "Courtney Browne",
+    "Sherwin Campbell",
+    "Roland Holder",
+    "Ian Bishop",
+    "Curtly Ambrose",
+    "Franklyn Rose",
+    "Courtney Walsh"
+   ],
+   "India": [
+    "Ajay Jadeja",
+    "Navjot Sidhu",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Sunil Joshi",
+    "Dodda Ganesh",
+    "Abey Kuruvilla",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Stuart Williams": "53234",
+    "Shivnarine Chanderpaul": "51469",
+    "Brian Lara": "52337",
+    "Carl Hooper": "52066",
+    "Courtney Browne": "51232",
+    "Sherwin Campbell": "51462",
+    "Roland Holder": "52059",
+    "Ian Bishop": "51226",
+    "Curtly Ambrose": "51107",
+    "Franklyn Rose": "52821",
+    "Courtney Walsh": "53216",
+    "Ajay Jadeja": "29632",
+    "Navjot Sidhu": "34028",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Sunil Joshi": "29725",
+    "Dodda Ganesh": "28774",
+    "Abey Kuruvilla": "30182",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Bourda, Georgetown, Guyana",
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1011,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 145,
+    "wickets": 3,
+    "balls": 180,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 355,
+    "wickets": 10,
+    "balls": 1011,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 180,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

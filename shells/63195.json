@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63195",
+  "espn_league_id": "17139",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Brisbane",
+  "dates": [
+   "1977-12-02"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1977/78",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Tom Brooks",
+    "Max O'Connell"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Paul Hibbert",
+    "Gary Cosier",
+    "David Ogilvie",
+    "Craig Serjeant",
+    "Bob Simpson",
+    "Peter Toohey",
+    "Tony Mann",
+    "Steve Rixon",
+    "Wayne Clark",
+    "Jeff Thomson",
+    "Alan Hurst"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Dilip Vengsarkar",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Brijesh Patel",
+    "Ashok Mankad",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Erapalli Prasanna",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Paul Hibbert": "5648",
+    "Gary Cosier": "4629",
+    "David Ogilvie": "6996",
+    "Craig Serjeant": "7594",
+    "Bob Simpson": "7619",
+    "Peter Toohey": "7959",
+    "Tony Mann": "6477",
+    "Steve Rixon": "7360",
+    "Wayne Clark": "4584",
+    "Jeff Thomson": "7946",
+    "Alan Hurst": "5732",
+    "Sunil Gavaskar": "28794",
+    "Dilip Vengsarkar": "35654",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Brijesh Patel": "32231",
+    "Ashok Mankad": "30938",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1977",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Brisbane Cricket Ground, Woolloongabba, Brisbane",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 166,
+    "wickets": 10,
+    "balls": 283,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 327,
+    "wickets": 10,
+    "balls": 551,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 511,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 283,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 153,
+    "wickets": 10,
+    "balls": 300,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 551,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 324,
+    "wickets": 10,
+    "balls": 511,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

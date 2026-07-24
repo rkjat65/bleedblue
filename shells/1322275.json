@@ -1,0 +1,146 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1322275",
+  "espn_league_id": "20878"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Wellington",
+  "dates": [
+   "2022-11-18"
+  ],
+  "event": {
+   "name": "India in New Zealand T20I Series 2022/23",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Chris Brown",
+    "Wayne Knights"
+   ],
+   "match_referees": [
+    "Jeff Crowe"
+   ],
+   "tv_umpires": [
+    "Kim Cotton"
+   ],
+   "reserve_umpires": [
+    "Cory Black"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Finn Allen",
+    "Michael Bracewell",
+    "Devon Conway",
+    "Lockie Ferguson",
+    "Adam Milne",
+    "Daryl Mitchell",
+    "James Neesham",
+    "Glenn Phillips",
+    "Mitchell Santner",
+    "Ish Sodhi",
+    "Tim Southee",
+    "Blair Tickner",
+    "Kane Williamson"
+   ],
+   "India": [
+    "Arshdeep Singh",
+    "Yuzvendra Chahal",
+    "Deepak Hooda",
+    "Ishan Kishan",
+    "Shreyas Iyer",
+    "Kuldeep Yadav",
+    "Bhuvneshwar Kumar",
+    "Mohammed Siraj",
+    "Hardik Pandya",
+    "Rishabh Pant",
+    "Harshal Patel",
+    "Sanju Samson",
+    "Shubman Gill",
+    "Umran Malik",
+    "Washington Sundar",
+    "Suryakumar Yadav"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Finn Allen": "959759",
+    "Michael Bracewell": "326968",
+    "Devon Conway": "379140",
+    "Lockie Ferguson": "493773",
+    "Adam Milne": "450860",
+    "Daryl Mitchell": "381743",
+    "James Neesham": "355269",
+    "Glenn Phillips": "823509",
+    "Mitchell Santner": "502714",
+    "Ish Sodhi": "559066",
+    "Tim Southee": "232364",
+    "Blair Tickner": "854909",
+    "Kane Williamson": "277906",
+    "Arshdeep Singh": "1125976",
+    "Yuzvendra Chahal": "430246",
+    "Deepak Hooda": "497121",
+    "Ishan Kishan": "720471",
+    "Shreyas Iyer": "642519",
+    "Kuldeep Yadav": "559235",
+    "Bhuvneshwar Kumar": "326016",
+    "Mohammed Siraj": "940973",
+    "Hardik Pandya": "625371",
+    "Rishabh Pant": "931581",
+    "Harshal Patel": "390481",
+    "Sanju Samson": "425943",
+    "Shubman Gill": "1070173",
+    "Umran Malik": "1246528",
+    "Washington Sundar": "719715",
+    "Suryakumar Yadav": "446507"
+   }
+  },
+  "season": "2022",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Hnry Stadium, Wellington",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "New Zealand",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

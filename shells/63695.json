@@ -1,0 +1,122 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63695",
+  "espn_league_id": "16253",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1995-10-25"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1995/96",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "K.T.Francis",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Peter Burge"
+   ],
+   "tv_umpires": [
+    "Bala Murali"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Ajay Jadeja",
+    "Navjot Sidhu",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Rajesh Chauhan",
+    "Venkatapathy Raju"
+   ],
+   "New Zealand": [
+    "Mark Greatbatch",
+    "Roger Twose",
+    "Adam Parore",
+    "Martin Crowe",
+    "Stephen Fleming",
+    "Shane Thomson",
+    "Chris Cairns",
+    "Lee Germon",
+    "Dion Nash",
+    "Mark Haslam",
+    "Danny Morrison"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Ajay Jadeja": "29632",
+    "Navjot Sidhu": "34028",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Rajesh Chauhan": "27622",
+    "Venkatapathy Raju": "33044",
+    "Mark Greatbatch": "37105",
+    "Roger Twose": "38624",
+    "Adam Parore": "38117",
+    "Martin Crowe": "36622",
+    "Stephen Fleming": "37000",
+    "Shane Thomson": "38613",
+    "Chris Cairns": "36597",
+    "Lee Germon": "37101",
+    "Dion Nash": "38008",
+    "Mark Haslam": "37241",
+    "Danny Morrison": "37730"
+   }
+  },
+  "season": "1995",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 144,
+    "wickets": 2,
+    "balls": 427,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 427,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

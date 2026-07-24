@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63174",
+  "espn_league_id": "17161",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1976-12-17"
+  ],
+  "event": {
+   "name": "England in India Test Series 1976/77",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "Judah Reuben"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Srinivas Venkataraghavan",
+    "Brijesh Patel",
+    "Parthasarthi Sharma",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Dennis Amiss",
+    "Mike Brearley",
+    "Graham Barlow",
+    "Bob Woolmer",
+    "Keith Fletcher",
+    "Tony Greig",
+    "Alan Knott",
+    "Chris Old",
+    "John Lever",
+    "Bob Willis",
+    "Derek Underwood"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Srinivas Venkataraghavan": "35656",
+    "Brijesh Patel": "32231",
+    "Parthasarthi Sharma": "33958",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Dennis Amiss": "8535",
+    "Mike Brearley": "9208",
+    "Graham Barlow": "8990",
+    "Bob Woolmer": "22520",
+    "Keith Fletcher": "12854",
+    "Tony Greig": "13463",
+    "Alan Knott": "15917",
+    "Chris Old": "18256",
+    "John Lever": "16260",
+    "Bob Willis": "22462",
+    "Derek Underwood": "22149"
+   }
+  },
+  "season": "1976",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 911,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 122,
+    "wickets": 10,
+    "balls": 311,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 234,
+    "wickets": 10,
+    "balls": 664,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 381,
+    "wickets": 10,
+    "balls": 911,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 311,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 664,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,46 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66400",
+  "espn_league_id": "16894"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1994-09-15"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1984/85"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "match_referees": [
+    "Cammie Smith"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [],
+   "Pakistan": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "R.Premadasa Stadium, Khettarama, Colombo",
+  "overs": 50
+ },
+ "innings": []
+}

@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62694",
+  "espn_league_id": "17494"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1949-02-04"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1948/49",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bapu Joshi",
+    "Balkrishna Mohoni"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Mushtaq Ali",
+    "KC Ibrahim",
+    "Rusi Modi",
+    "Vijay Hazare",
+    "Hemu Adhikari",
+    "Dattu Phadkar",
+    "Lala Amarnath",
+    "Vinoo Mankad",
+    "Shute Banerjee",
+    "Ghulam Ahmed",
+    "Khokhan Sen"
+   ],
+   "West Indies": [
+    "Allan Rae",
+    "Jeffrey Stollmeyer",
+    "Clyde Walcott",
+    "Everton Weekes",
+    "Gerry Gomez",
+    "Robert Christiani",
+    "John Goddard",
+    "Jimmy Cameron",
+    "Denis Atkinson",
+    "Prior Jones",
+    "John Trim"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mushtaq Ali": "31061",
+    "KC Ibrahim": "29529",
+    "Rusi Modi": "31021",
+    "Vijay Hazare": "29290",
+    "Hemu Adhikari": "26179",
+    "Dattu Phadkar": "32309",
+    "Lala Amarnath": "26223",
+    "Vinoo Mankad": "30939",
+    "Shute Banerjee": "26851",
+    "Ghulam Ahmed": "28821",
+    "Khokhan Sen": "34741",
+    "Allan Rae": "52801",
+    "Jeffrey Stollmeyer": "52953",
+    "Clyde Walcott": "53211",
+    "Everton Weekes": "53241",
+    "Gerry Gomez": "51893",
+    "Robert Christiani": "51473",
+    "John Goddard": "51889",
+    "Jimmy Cameron": "51458",
+    "Denis Atkinson": "51134",
+    "Prior Jones": "52220",
+    "John Trim": "53131"
+   }
+  },
+  "season": "1949",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Brabourne Stadium, Mumbai"
+ },
+ "innings": []
+}

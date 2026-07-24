@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66144",
+  "espn_league_id": "15960",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mohali",
+  "dates": [
+   "1998-05-14"
+  ],
+  "event": {
+   "name": "Australia tour of India 1997/98"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "KN Raghavan",
+    "Ivaturi Shivram"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "Jasbir Singh"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Gagan Khoda",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Robin Singh",
+    "Hrishikesh Kanitkar",
+    "MSK Prasad",
+    "Ajit Agarkar",
+    "Debasis Mohanty",
+    "Rahul Sanghvi"
+   ],
+   "Bangladesh": [
+    "Athar Ali Khan",
+    "Sanuar Hossain",
+    "Minhajul Abedin",
+    "Aminul Islam",
+    "Mehrab Hossain",
+    "Naimur Rahman",
+    "Khaled Mahmud",
+    "Mohammad Rafique",
+    "Hasibul Hossain",
+    "Khaled Mashud",
+    "Morshed Ali Khan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Gagan Khoda": "30107",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Robin Singh": "34059",
+    "Hrishikesh Kanitkar": "30018",
+    "MSK Prasad": "32346",
+    "Ajit Agarkar": "26184",
+    "Debasis Mohanty": "31025",
+    "Rahul Sanghvi": "34214",
+    "Athar Ali Khan": "56227",
+    "Sanuar Hossain": "56107",
+    "Minhajul Abedin": "55971",
+    "Aminul Islam": "56224",
+    "Mehrab Hossain": "55970",
+    "Naimur Rahman": "56035",
+    "Khaled Mahmud": "55952",
+    "Mohammad Rafique": "55973",
+    "Hasibul Hossain": "55909",
+    "Khaled Mashud": "55954",
+    "Morshed Ali Khan": "55974"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Bangladesh"
+  ],
+  "venue": "I.S. Bindra Punjab Cricket Association Stadium",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 185,
+    "wickets": 5,
+    "balls": 272,
+    "description": "target reached"
+   },
+   {
+    "team": "Bangladesh",
+    "innings": 1,
+    "runs": 184,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Bangladesh",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 272,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

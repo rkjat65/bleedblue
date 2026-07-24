@@ -1,0 +1,98 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64435",
+  "espn_league_id": "16418"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Moratuwa",
+  "dates": [
+   "1993-08-14"
+  ],
+  "event": {
+   "name": "India in Sri Lanka ODI Series 1993",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "B.C. Cooray",
+    "Peter Manuel"
+   ],
+   "match_referees": [
+    "Peter Burge"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Chandika Hathurusinghe",
+    "Asanka Gurusinha",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Sanath Jayasuriya",
+    "Romesh Kaluwitharana",
+    "Ruwan Kalpage",
+    "Champaka Ramanayake",
+    "Pramodya Wickramasinghe",
+    "Muthiah Muralidaran"
+   ],
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Ajay Sharma",
+    "Kapil Dev",
+    "Vijay Yadav",
+    "Anil Kumble",
+    "Rajesh Chauhan",
+    "Javagal Srinath"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roshan Mahanama": "49626",
+    "Chandika Hathurusinghe": "49125",
+    "Asanka Gurusinha": "49005",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Sanath Jayasuriya": "49209",
+    "Romesh Kaluwitharana": "49361",
+    "Ruwan Kalpage": "49356",
+    "Champaka Ramanayake": "50240",
+    "Pramodya Wickramasinghe": "50848",
+    "Muthiah Muralidaran": "49636",
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Ajay Sharma": "33943",
+    "Kapil Dev": "30028",
+    "Vijay Yadav": "36069",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Javagal Srinath": "34105"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Tyronne Fernando Stadium, Moratuwa",
+  "overs": 50
+ },
+ "innings": []
+}

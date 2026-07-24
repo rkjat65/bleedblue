@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64711",
+  "espn_league_id": "15556",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Margao",
+  "dates": [
+   "2001-04-06"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 2000/01",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Francis Gomes",
+    "Subroto Porel"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "K Murali"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Hemang Badani",
+    "Yuvraj Singh",
+    "Vijay Dahiya",
+    "Zaheer Khan",
+    "Ajit Agarkar",
+    "Harbhajan Singh",
+    "Javagal Srinath"
+   ],
+   "Australia": [
+    "Matthew Hayden",
+    "Adam Gilchrist",
+    "Ricky Ponting",
+    "Michael Bevan",
+    "Steve Waugh",
+    "Darren Lehmann",
+    "Andrew Symonds",
+    "Ian Harvey",
+    "Shane Warne",
+    "Glenn McGrath",
+    "Nathan Bracken"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Hemang Badani": "26802",
+    "Yuvraj Singh": "36084",
+    "Vijay Dahiya": "27978",
+    "Zaheer Khan": "30102",
+    "Ajit Agarkar": "26184",
+    "Harbhajan Singh": "29264",
+    "Javagal Srinath": "34105",
+    "Matthew Hayden": "5616",
+    "Adam Gilchrist": "5390",
+    "Ricky Ponting": "7133",
+    "Michael Bevan": "4144",
+    "Steve Waugh": "8192",
+    "Darren Lehmann": "6285",
+    "Andrew Symonds": "7702",
+    "Ian Harvey": "5597",
+    "Shane Warne": "8166",
+    "Glenn McGrath": "6565",
+    "Nathan Bracken": "4185"
+   }
+  },
+  "season": "2001",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Nehru Stadium, Fatorda, Margao",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 265,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 269,
+    "wickets": 6,
+    "balls": 288,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

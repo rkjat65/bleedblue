@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63737",
+  "espn_league_id": "16127",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cape Town",
+  "dates": [
+   "1997-01-02"
+  ],
+  "event": {
+   "name": "India in South Africa Test Series 1996/97",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Darrell Hair",
+    "Rudi Koertzen"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Cyril Mitchley"
+   ]
+  },
+  "outcome": {
+   "winner": "South Africa"
+  },
+  "players": {
+   "South Africa": [
+    "Andrew Hudson",
+    "Gary Kirsten",
+    "Adam Bacher",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Brian McMillan",
+    "Shaun Pollock",
+    "David Richardson",
+    "Lance Klusener",
+    "Allan Donald",
+    "Paul Adams"
+   ],
+   "India": [
+    "Woorkeri Raman",
+    "Rahul Dravid",
+    "Sourav Ganguly",
+    "Venkatesh Prasad",
+    "Sachin Tendulkar",
+    "VVS Laxman",
+    "Mohammad Azharuddin",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Dodda Ganesh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Andrew Hudson": "45458",
+    "Gary Kirsten": "45813",
+    "Adam Bacher": "44024",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Brian McMillan": "46214",
+    "Shaun Pollock": "46774",
+    "David Richardson": "46978",
+    "Lance Klusener": "45821",
+    "Allan Donald": "44716",
+    "Paul Adams": "43919",
+    "Woorkeri Raman": "33058",
+    "Rahul Dravid": "28114",
+    "Sourav Ganguly": "28779",
+    "Venkatesh Prasad": "32345",
+    "Sachin Tendulkar": "35320",
+    "VVS Laxman": "30750",
+    "Mohammad Azharuddin": "26329",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Dodda Ganesh": "28774"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "South Africa",
+   "India"
+  ],
+  "venue": "Newlands, Cape Town",
+  "scorecard_totals": [
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 529,
+    "wickets": 7,
+    "balls": 977,
+    "description": "declared"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 554,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 3,
+    "runs": 256,
+    "wickets": 6,
+    "balls": 432,
+    "description": "declared"
+   },
+   {
+    "team": "South Africa",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 398,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 977,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 359,
+    "wickets": 10,
+    "balls": 554,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 432,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 144,
+    "wickets": 9,
+    "balls": 398,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

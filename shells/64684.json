@@ -1,0 +1,140 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64684",
+  "espn_league_id": "15585",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Rajkot",
+  "dates": [
+   "2000-12-14"
+  ],
+  "event": {
+   "name": "Zimbabwe in India ODI Series 2000/01",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Vinayak Kulkarni",
+    "Amiesh Saheba",
+    "Sourav Ganguly"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Bala Murali"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sridharan Sriram",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Hemang Badani",
+    "Yuvraj Singh",
+    "Virender Sehwag",
+    "Reetinder Sodhi",
+    "Ajit Agarkar",
+    "Vijay Dahiya",
+    "Aashish Kapoor",
+    "Venkatesh Prasad"
+   ],
+   "Zimbabwe": [
+    "Alistair Campbell",
+    "Trevor Madondo",
+    "Gavin Rennie",
+    "Andy Flower",
+    "Grant Flower",
+    "Guy Whittall",
+    "Dougie Marillier",
+    "Heath Streak",
+    "Mluleki Nkala",
+    "Bryan Strang",
+    "Brian Murphy"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sridharan Sriram": "34118",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Hemang Badani": "26802",
+    "Yuvraj Singh": "36084",
+    "Virender Sehwag": "35263",
+    "Reetinder Sodhi": "34078",
+    "Ajit Agarkar": "26184",
+    "Vijay Dahiya": "27978",
+    "Aashish Kapoor": "30030",
+    "Venkatesh Prasad": "32345",
+    "Alistair Campbell": "55301",
+    "Trevor Madondo": "55571",
+    "Gavin Rennie": "55713",
+    "Andy Flower": "55427",
+    "Grant Flower": "55429",
+    "Guy Whittall": "55848",
+    "Dougie Marillier": "55578",
+    "Heath Streak": "55761",
+    "Mluleki Nkala": "55663",
+    "Bryan Strang": "55756",
+    "Brian Murphy": "55610"
+   }
+  },
+  "season": "2000",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Madhavrao Scindia Cricket Ground, Rajkot",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 301,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 286,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 262,
+    "wickets": 10,
+    "balls": 286,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

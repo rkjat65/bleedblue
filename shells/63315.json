@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63315",
+  "espn_league_id": "17002",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Manchester",
+  "dates": [
+   "1982-06-24"
+  ],
+  "event": {
+   "name": "India in England Test Series 1982",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dickie Bird",
+    "Barrie Meyer"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Geoff Cook",
+    "Chris Tavar\u00e9",
+    "Allan Lamb",
+    "David Gower",
+    "Ian Botham",
+    "Derek Randall",
+    "Geoff Miller",
+    "Derek Pringle",
+    "Phil Edmonds",
+    "Bob Taylor",
+    "Bob Willis"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Ravi Shastri",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Syed Kirmani",
+    "Yashpal Sharma",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Madan Lal",
+    "Suru Nayak",
+    "Dilip Doshi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Geoff Cook": "10793",
+    "Chris Tavar\u00e9": "21466",
+    "Allan Lamb": "16178",
+    "David Gower": "13418",
+    "Ian Botham": "9163",
+    "Derek Randall": "19327",
+    "Geoff Miller": "17025",
+    "Derek Pringle": "18627",
+    "Phil Edmonds": "12486",
+    "Bob Taylor": "21494",
+    "Bob Willis": "22462",
+    "Sunil Gavaskar": "28794",
+    "Ravi Shastri": "33975",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Syed Kirmani": "30116",
+    "Yashpal Sharma": "36075",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Madan Lal": "30873",
+    "Suru Nayak": "31808",
+    "Dilip Doshi": "28107"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Old Trafford, Manchester",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 425,
+    "wickets": 10,
+    "balls": 919,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 624,
+    "description": ""
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 919,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 379,
+    "wickets": 8,
+    "balls": 624,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,152 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63599",
+  "espn_league_id": "16454",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1993-02-11"
+  ],
+  "event": {
+   "name": "England in India Test Series 1992/93",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "V.K.Ramaswamy",
+    "RS Rathore",
+    "Woorkeri Raman"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Pravin Amre",
+    "Kapil Dev",
+    "Kiran More",
+    "Anil Kumble",
+    "Rajesh Chauhan",
+    "Venkatapathy Raju"
+   ],
+   "England": [
+    "Robin Smith",
+    "Alec Stewart",
+    "Graeme Hick",
+    "Mike Gatting",
+    "Neil Fairbrother",
+    "Richard Blakey",
+    "Chris Lewis",
+    "Ian Salisbury",
+    "Paul Jarvis",
+    "Phil Tufnell",
+    "Devon Malcolm"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Pravin Amre": "26238",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Venkatapathy Raju": "33044",
+    "Robin Smith": "20263",
+    "Alec Stewart": "20372",
+    "Graeme Hick": "14187",
+    "Mike Gatting": "13340",
+    "Neil Fairbrother": "12803",
+    "Richard Blakey": "9121",
+    "Chris Lewis": "16274",
+    "Ian Salisbury": "20051",
+    "Paul Jarvis": "15485",
+    "Phil Tufnell": "21611",
+    "Devon Malcolm": "16885"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 560,
+    "wickets": 6,
+    "balls": 990,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 765,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 487,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 990,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 286,
+    "wickets": 10,
+    "balls": 765,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 252,
+    "wickets": 10,
+    "balls": 487,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

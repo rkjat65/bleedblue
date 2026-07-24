@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63433",
+  "espn_league_id": "16782",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Leeds",
+  "dates": [
+   "1986-06-19"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1986/87",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jack Birkenshaw",
+    "David Constant"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Graham Gooch",
+    "Wilf Slack",
+    "Chris Smith",
+    "Allan Lamb",
+    "Mike Gatting",
+    "Bill Athey",
+    "Derek Pringle",
+    "John Emburey",
+    "Bruce French",
+    "Graham Dilley",
+    "John Lever"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Ravi Shastri",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Chandrakant Pandit",
+    "Kapil Dev",
+    "Roger Binny",
+    "Madan Lal",
+    "Kiran More",
+    "Maninder Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Graham Gooch": "13399",
+    "Wilf Slack": "20206",
+    "Chris Smith": "20233",
+    "Allan Lamb": "16178",
+    "Mike Gatting": "13340",
+    "Bill Athey": "8581",
+    "Derek Pringle": "18627",
+    "John Emburey": "12514",
+    "Bruce French": "12923",
+    "Graham Dilley": "11893",
+    "John Lever": "16260",
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Ravi Shastri": "33975",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Chandrakant Pandit": "32179",
+    "Kapil Dev": "30028",
+    "Roger Binny": "26948",
+    "Madan Lal": "30873",
+    "Kiran More": "31038",
+    "Maninder Singh": "30923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Headingley, Leeds",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 626,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 102,
+    "wickets": 10,
+    "balls": 271,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 459,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 128,
+    "wickets": 10,
+    "balls": 381,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 272,
+    "wickets": 10,
+    "balls": 626,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 271,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 237,
+    "wickets": 10,
+    "balls": 459,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 381,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

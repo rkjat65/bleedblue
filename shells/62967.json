@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62967",
+  "espn_league_id": "17330",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1965-03-12"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1964/65",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "Samar Roy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Dilip Sardesai",
+    "Motganhalli Jaisimha",
+    "Salim Durani",
+    "Chandu Borde",
+    "Hanumant Singh",
+    "Mansur Ali Khan Pataudi",
+    "Bapu Nadkarni",
+    "Farokh Engineer",
+    "Ramakant Desai",
+    "Srinivas Venkataraghavan",
+    "Bhagwath Chandrasekhar"
+   ],
+   "New Zealand": [
+    "Graham Dowling",
+    "Bevan Congdon",
+    "Barry Sinclair",
+    "Ross Morgan",
+    "Bert Sutcliffe",
+    "Vic Pollard",
+    "John Reid",
+    "Bruce Taylor",
+    "Bryan Yuile",
+    "Dick Motz",
+    "John Ward"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dilip Sardesai": "33850",
+    "Motganhalli Jaisimha": "29663",
+    "Salim Durani": "28118",
+    "Chandu Borde": "26962",
+    "Hanumant Singh": "29260",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Bapu Nadkarni": "31760",
+    "Farokh Engineer": "28624",
+    "Ramakant Desai": "28045",
+    "Srinivas Venkataraghavan": "35656",
+    "Bhagwath Chandrasekhar": "27591",
+    "Graham Dowling": "36837",
+    "Bevan Congdon": "36611",
+    "Barry Sinclair": "38390",
+    "Ross Morgan": "37727",
+    "Bert Sutcliffe": "38413",
+    "Vic Pollard": "38129",
+    "John Reid": "38248",
+    "Bruce Taylor": "38609",
+    "Bryan Yuile": "38930",
+    "Dick Motz": "37733",
+    "John Ward": "38741"
+   }
+  },
+  "season": "1965",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 776,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 88,
+    "wickets": 10,
+    "balls": 201,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 463,
+    "wickets": 5,
+    "balls": 928,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 258,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 297,
+    "wickets": 10,
+    "balls": 776,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 201,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 928,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 80,
+    "wickets": 8,
+    "balls": 258,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

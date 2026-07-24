@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63713",
+  "espn_league_id": "16184"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Birmingham",
+  "dates": [
+   "1996-06-06"
+  ],
+  "event": {
+   "name": "India in England Test Series 1996",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Darrell Hair",
+    "David Shepherd",
+    "Rahul Dravid"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Allan Jones"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Nick Knight",
+    "Mike Atherton",
+    "Nasser Hussain",
+    "Graham Thorpe",
+    "Graeme Hick",
+    "Ronnie Irani",
+    "Jack Russell",
+    "Chris Lewis",
+    "Dominic Cork",
+    "Min Patel",
+    "Alan Mullally"
+   ],
+   "India": [
+    "Vikram Rathour",
+    "Ajay Jadeja",
+    "Sanjay Manjrekar",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Nayan Mongia",
+    "Sunil Joshi",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Paras Mhambrey",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nick Knight": "15913",
+    "Mike Atherton": "8579",
+    "Nasser Hussain": "14325",
+    "Graham Thorpe": "21537",
+    "Graeme Hick": "14187",
+    "Ronnie Irani": "15403",
+    "Jack Russell": "19500",
+    "Chris Lewis": "16274",
+    "Dominic Cork": "10816",
+    "Min Patel": "18458",
+    "Alan Mullally": "17121",
+    "Vikram Rathour": "33120",
+    "Ajay Jadeja": "29632",
+    "Sanjay Manjrekar": "30934",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Nayan Mongia": "31036",
+    "Sunil Joshi": "29725",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Paras Mhambrey": "30999",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Edgbaston, Birmingham"
+ },
+ "innings": []
+}

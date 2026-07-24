@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64261",
+  "espn_league_id": "16883",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1985-08-25"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1984/85",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Herbi Felsinger",
+    "PW Vidanagamage"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Amal Silva",
+    "Ravi Ratnayeke",
+    "Ranjan Madugalle",
+    "Roy Dias",
+    "Arjuna Ranatunga",
+    "Duleep Mendis",
+    "Aravinda de Silva",
+    "Ashantha de Mel",
+    "Rumesh Ratnayake",
+    "Roger Wijesuriya",
+    "Vinothen John"
+   ],
+   "India": [
+    "Ravi Shastri",
+    "Kris Srikkanth",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Kapil Dev",
+    "Sunil Gavaskar",
+    "Mohinder Amarnath",
+    "Chetan Sharma",
+    "Sadanand Viswanath",
+    "Laxman Sivaramakrishnan",
+    "Gopal Sharma"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Amal Silva": "50432",
+    "Ravi Ratnayeke": "50250",
+    "Ranjan Madugalle": "49623",
+    "Roy Dias": "48470",
+    "Arjuna Ranatunga": "50244",
+    "Duleep Mendis": "49629",
+    "Aravinda de Silva": "48462",
+    "Ashantha de Mel": "48447",
+    "Rumesh Ratnayake": "50249",
+    "Roger Wijesuriya": "50855",
+    "Vinothen John": "49213",
+    "Ravi Shastri": "33975",
+    "Kris Srikkanth": "34103",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Kapil Dev": "30028",
+    "Sunil Gavaskar": "28794",
+    "Mohinder Amarnath": "26225",
+    "Chetan Sharma": "33949",
+    "Sadanand Viswanath": "35713",
+    "Laxman Sivaramakrishnan": "34074",
+    "Gopal Sharma": "33952"
+   }
+  },
+  "season": "1985",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Sinhalese Sports Club Ground, Colombo",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 241,
+    "wickets": 6,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 267,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 242,
+    "wickets": 8,
+    "balls": 267,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

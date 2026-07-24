@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64557",
+  "espn_league_id": "16032",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1997-08-17"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1997/98",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "K.T.Francis",
+    "Peter Manuel"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "Udaya Wickramasinghe"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Marvan Atapattu",
+    "Roshan Mahanama",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Hashan Tillakaratne",
+    "Lanka de Silva",
+    "Kumar Dharmasena",
+    "Chaminda Vaas",
+    "Muthiah Muralidaran",
+    "Sajeewa de Silva"
+   ],
+   "India": [
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Robin Singh",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Rajesh Chauhan",
+    "Anil Kumble",
+    "Abey Kuruvilla",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sanath Jayasuriya": "49209",
+    "Marvan Atapattu": "48124",
+    "Roshan Mahanama": "49626",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Hashan Tillakaratne": "50744",
+    "Lanka de Silva": "48465",
+    "Kumar Dharmasena": "48469",
+    "Chaminda Vaas": "50804",
+    "Muthiah Muralidaran": "49636",
+    "Sajeewa de Silva": "48460",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Robin Singh": "34059",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Rajesh Chauhan": "27622",
+    "Anil Kumble": "30176",
+    "Abey Kuruvilla": "30182",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "R.Premadasa Stadium, Khettarama, Colombo",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 302,
+    "wickets": 4,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 300,
+    "wickets": 7,
+    "balls": 300,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66217",
+  "espn_league_id": "15864",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1999-04-04"
+  ],
+  "event": {
+   "name": "Pakistan tour of India 1998/99",
+   "stage": "Final"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "K Parthasarathy",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "MR Singh"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sadagoppan Ramesh",
+    "Rahul Dravid",
+    "Amay Khurasiya",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Ajit Agarkar",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad"
+   ],
+   "Pakistan": [
+    "Saeed Anwar",
+    "Shahid Afridi",
+    "Ijaz Ahmed",
+    "Inzamam-ul-Haq",
+    "Mohammad Yousuf",
+    "Moin Khan",
+    "Azhar Mahmood",
+    "Wasim Akram",
+    "Saqlain Mushtaq",
+    "Arshad Khan",
+    "Shoaib Akhtar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sadagoppan Ramesh": "33066",
+    "Rahul Dravid": "28114",
+    "Amay Khurasiya": "30112",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Ajit Agarkar": "26184",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Saeed Anwar": "42605",
+    "Shahid Afridi": "42639",
+    "Ijaz Ahmed": "40551",
+    "Inzamam-ul-Haq": "40570",
+    "Mohammad Yousuf": "43650",
+    "Moin Khan": "41306",
+    "Azhar Mahmood": "39024",
+    "Wasim Akram": "43547",
+    "Saqlain Mushtaq": "42628",
+    "Arshad Khan": "39005",
+    "Shoaib Akhtar": "42655"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 168,
+    "wickets": 10,
+    "balls": 253,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 291,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 253,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

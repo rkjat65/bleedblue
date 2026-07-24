@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63161",
+  "espn_league_id": "17182"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Port of Spain",
+  "dates": [
+   "1976-04-07"
+  ],
+  "event": {
+   "name": "India in New Zealand Test Series 1975/76",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ralph Gosein",
+    "Compton Vyfhuis"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Roy Fredericks",
+    "Lawrence Rowe",
+    "Viv Richards",
+    "Alvin Kallicharran",
+    "Clive Lloyd",
+    "Deryck Murray",
+    "Bernard Julien",
+    "Michael Holding",
+    "Imtiaz Ali",
+    "Albert Padmore",
+    "Raphick Jumadeen"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Eknath Solkar",
+    "Brijesh Patel",
+    "Madan Lal",
+    "Srinivas Venkataraghavan",
+    "Syed Kirmani",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roy Fredericks": "51797",
+    "Lawrence Rowe": "52823",
+    "Viv Richards": "52812",
+    "Alvin Kallicharran": "52285",
+    "Clive Lloyd": "52345",
+    "Deryck Murray": "52441",
+    "Bernard Julien": "52208",
+    "Michael Holding": "52063",
+    "Imtiaz Ali": "51102",
+    "Albert Padmore": "52667",
+    "Raphick Jumadeen": "52209",
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Eknath Solkar": "34085",
+    "Brijesh Patel": "32231",
+    "Madan Lal": "30873",
+    "Srinivas Venkataraghavan": "35656",
+    "Syed Kirmani": "30116",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1976",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Queen's Park Oval, Port of Spain, Trinidad"
+ },
+ "innings": []
+}

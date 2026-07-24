@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63011",
+  "espn_league_id": "17299",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Melbourne",
+  "dates": [
+   "1967-12-30"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1967/68",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Col Egar",
+    "Lou Rowan"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Bob Simpson",
+    "Bill Lawry",
+    "Paul Sheahan",
+    "Bob Cowper",
+    "Ian Chappell",
+    "Ian Redpath",
+    "Barry Jarman",
+    "Graham McKenzie",
+    "John Gleeson",
+    "Alan Connolly",
+    "David Renneberg"
+   ],
+   "India": [
+    "Dilip Sardesai",
+    "Farokh Engineer",
+    "Syed Abid Ali",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Venkataraman Subramanya",
+    "Erapalli Prasanna",
+    "Ramakant Desai",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Bob Simpson": "7619",
+    "Bill Lawry": "6270",
+    "Paul Sheahan": "7597",
+    "Bob Cowper": "4645",
+    "Ian Chappell": "4560",
+    "Ian Redpath": "7314",
+    "Barry Jarman": "6013",
+    "Graham McKenzie": "6576",
+    "John Gleeson": "5398",
+    "Alan Connolly": "4613",
+    "David Renneberg": "7328",
+    "Dilip Sardesai": "33850",
+    "Farokh Engineer": "28624",
+    "Syed Abid Ali": "26169",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Venkataraman Subramanya": "34215",
+    "Erapalli Prasanna": "32357",
+    "Ramakant Desai": "28045",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1967",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Melbourne Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 346,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 529,
+    "wickets": 10,
+    "balls": 633,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 511,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 173,
+    "wickets": 10,
+    "balls": 346,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 633,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 352,
+    "wickets": 10,
+    "balls": 511,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

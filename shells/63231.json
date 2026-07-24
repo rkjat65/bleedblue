@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63231",
+  "espn_league_id": "17108",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1979-02-02"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1978/79",
+   "match_number": 6
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ram Punjabi",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Srinivas Venkataraghavan",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Alvin Greenidge",
+    "Faoud Bacchus",
+    "Larry Gomes",
+    "Raphick Jumadeen",
+    "Alvin Kallicharran",
+    "David Murray",
+    "Sew Shivnarine",
+    "Derick Parry",
+    "Norbert Phillip",
+    "Malcolm Marshall",
+    "Vanburn Holder"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Srinivas Venkataraghavan": "35656",
+    "Bhagwath Chandrasekhar": "27591",
+    "Alvin Greenidge": "51899",
+    "Faoud Bacchus": "51208",
+    "Larry Gomes": "51891",
+    "Raphick Jumadeen": "52209",
+    "Alvin Kallicharran": "52285",
+    "David Murray": "52439",
+    "Sew Shivnarine": "52932",
+    "Derick Parry": "52670",
+    "Norbert Phillip": "52678",
+    "Malcolm Marshall": "52419",
+    "Vanburn Holder": "52061"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 644,
+    "wickets": 7,
+    "balls": 1138,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 889,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1138,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 452,
+    "wickets": 8,
+    "balls": 889,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

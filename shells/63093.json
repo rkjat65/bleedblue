@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63093",
+  "espn_league_id": "17241",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1973-02-06"
+  ],
+  "event": {
+   "name": "England in India Test Series 1972/73",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Judah Reuben"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Farokh Engineer",
+    "Sunil Gavaskar",
+    "Ajit Wadekar",
+    "Salim Durani",
+    "Mansur Ali Khan Pataudi",
+    "Gundappa Viswanath",
+    "Eknath Solkar",
+    "Syed Abid Ali",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "England": [
+    "Tony Lewis",
+    "Graham Roope",
+    "Alan Knott",
+    "Derek Underwood",
+    "Keith Fletcher",
+    "Tony Greig",
+    "Mike Denness",
+    "Jack Birkenshaw",
+    "Chris Old",
+    "Geoff Arnold",
+    "Pat Pocock"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Farokh Engineer": "28624",
+    "Sunil Gavaskar": "28794",
+    "Ajit Wadekar": "35933",
+    "Salim Durani": "28118",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Gundappa Viswanath": "35712",
+    "Eknath Solkar": "34085",
+    "Syed Abid Ali": "26169",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Tony Lewis": "16271",
+    "Graham Roope": "19469",
+    "Alan Knott": "15917",
+    "Derek Underwood": "22149",
+    "Keith Fletcher": "12854",
+    "Tony Greig": "13463",
+    "Mike Denness": "11870",
+    "Jack Birkenshaw": "9103",
+    "Chris Old": "18256",
+    "Geoff Arnold": "8566",
+    "Pat Pocock": "18557"
+   }
+  },
+  "season": "1973",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 448,
+    "wickets": 10,
+    "balls": 830,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 979,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 244,
+    "wickets": 5,
+    "balls": 576,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 174,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 830,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 480,
+    "wickets": 10,
+    "balls": 979,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 576,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 67,
+    "wickets": 2,
+    "balls": 174,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64634",
+  "espn_league_id": "15754",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1999-11-17"
+  ],
+  "event": {
+   "name": "New Zealand in India ODI Series 1999/00",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "VM Gupte",
+    "SK Sharma"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "Umesh Kumar"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Devang Gandhi",
+    "Sourav Ganguly",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Vijay Bharadwaj",
+    "Robin Singh",
+    "MSK Prasad",
+    "Sunil Joshi",
+    "Javagal Srinath",
+    "Thirunavukkarasu Kumaran",
+    "Nikhil Chopra"
+   ],
+   "New Zealand": [
+    "Craig Spearman",
+    "Nathan Astle",
+    "Stephen Fleming",
+    "Roger Twose",
+    "Chris Cairns",
+    "Adam Parore",
+    "Chris Harris",
+    "Scott Styris",
+    "Alex Tait",
+    "Daniel Vettori",
+    "Chris Drum"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Devang Gandhi": "28770",
+    "Sourav Ganguly": "28779",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Vijay Bharadwaj": "35673",
+    "Robin Singh": "34059",
+    "MSK Prasad": "32346",
+    "Sunil Joshi": "29725",
+    "Javagal Srinath": "34105",
+    "Thirunavukkarasu Kumaran": "30157",
+    "Nikhil Chopra": "27641",
+    "Craig Spearman": "38401",
+    "Nathan Astle": "36185",
+    "Stephen Fleming": "37000",
+    "Roger Twose": "38624",
+    "Chris Cairns": "36597",
+    "Adam Parore": "38117",
+    "Chris Harris": "37232",
+    "Scott Styris": "38407",
+    "Alex Tait": "38608",
+    "Daniel Vettori": "38710",
+    "Chris Drum": "36839"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 181,
+    "wickets": 3,
+    "balls": 264,
+    "description": "target reached"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 179,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 264,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

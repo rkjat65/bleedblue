@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63534",
+  "espn_league_id": "16581",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "London",
+  "dates": [
+   "1990-07-26"
+  ],
+  "event": {
+   "name": "India in England Test Series 1990",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Dickie Bird",
+    "Nigel Plews"
+   ]
+  },
+  "outcome": {
+   "winner": "England"
+  },
+  "players": {
+   "England": [
+    "Graham Gooch",
+    "Mike Atherton",
+    "David Gower",
+    "Allan Lamb",
+    "Robin Smith",
+    "John Morris",
+    "Jack Russell",
+    "Chris Lewis",
+    "Eddie Hemmings",
+    "Angus Fraser",
+    "Devon Malcolm"
+   ],
+   "India": [
+    "Ravi Shastri",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Manoj Prabhakar",
+    "Kapil Dev",
+    "Kiran More",
+    "Sanjeev Sharma",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Graham Gooch": "13399",
+    "Mike Atherton": "8579",
+    "David Gower": "13418",
+    "Allan Lamb": "16178",
+    "Robin Smith": "20263",
+    "John Morris": "17102",
+    "Jack Russell": "19500",
+    "Chris Lewis": "16274",
+    "Eddie Hemmings": "14152",
+    "Angus Fraser": "12909",
+    "Devon Malcolm": "16885",
+    "Ravi Shastri": "33975",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Manoj Prabhakar": "32323",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Sanjeev Sharma": "33963",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "England",
+   "India"
+  ],
+  "venue": "Lord's, London",
+  "scorecard_totals": [
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 653,
+    "wickets": 4,
+    "balls": 972,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 685,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 272,
+    "wickets": 4,
+    "balls": 326,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 372,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 972,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 454,
+    "wickets": 10,
+    "balls": 685,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 326,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 224,
+    "wickets": 10,
+    "balls": 372,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

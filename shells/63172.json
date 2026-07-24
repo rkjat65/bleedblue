@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63172",
+  "espn_league_id": "17163",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1976-11-18"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1976/77",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "MS Sivasankariah"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Brijesh Patel",
+    "Ashok Mankad",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Srinivas Venkataraghavan",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ],
+   "New Zealand": [
+    "Glenn Turner",
+    "Geoff Howarth",
+    "John Parker",
+    "Mark Burgess",
+    "Andy Roberts",
+    "Murray Parker",
+    "Warren Lees",
+    "Richard Hadlee",
+    "David O'Sullivan",
+    "Gary Troup",
+    "Peter Petherick"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Brijesh Patel": "32231",
+    "Ashok Mankad": "30938",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Srinivas Venkataraghavan": "35656",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591",
+    "Glenn Turner": "38622",
+    "Geoff Howarth": "37254",
+    "John Parker": "38113",
+    "Mark Burgess": "36314",
+    "Andy Roberts": "38253",
+    "Murray Parker": "38114",
+    "Warren Lees": "37605",
+    "Richard Hadlee": "37224",
+    "David O'Sullivan": "38064",
+    "Gary Troup": "38617",
+    "Peter Petherick": "38122"
+   }
+  },
+  "season": "1976",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 524,
+    "wickets": 9,
+    "balls": 1008,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 857,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 208,
+    "wickets": 2,
+    "balls": 312,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 702,
+    "description": ""
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1008,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 350,
+    "wickets": 10,
+    "balls": 857,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 312,
+    "description": "declared"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 193,
+    "wickets": 7,
+    "balls": 702,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

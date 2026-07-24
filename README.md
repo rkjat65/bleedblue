@@ -61,10 +61,12 @@ robots.txt / sitemap.xml / favicon*
 If Cricsheet-style match JSON files live in the **parent** folder:
 
 ```bash
-python3 build_stats.py
+python3 refresh_cricsheet.py   # merge latest Cricsheet India zip
+python3 build_stats.py         # rebuild stats.json (full-ball analytics only)
+python3 quarantine_empty_shells.py  # move empty ESPN shells to dashboard/shells/
 ```
 
-Regenerates `stats.json` with match scorecards, series, quality flags (full / partial / empty).
+Regenerates `stats.json` with match scorecards, series, quality flags (full / partial / empty). Team W/L and player tables use **full ball-by-ball matches only**; empty ESPN shells are catalogued separately.
 
 ## Data notes
 

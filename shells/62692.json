@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62692",
+  "espn_league_id": "17494",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1948-12-31"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1948/49",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Bapu Joshi",
+    "Balkrishna Mohoni"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Mushtaq Ali",
+    "KC Ibrahim",
+    "Rusi Modi",
+    "Vijay Hazare",
+    "Lala Amarnath",
+    "Vinoo Mankad",
+    "Hemu Adhikari",
+    "Chandu Sarwate",
+    "Khokhan Sen",
+    "Ghulam Ahmed",
+    "Mantu Banerjee"
+   ],
+   "West Indies": [
+    "Allan Rae",
+    "Denis Atkinson",
+    "Clyde Walcott",
+    "Everton Weekes",
+    "Gerry Gomez",
+    "George Carew",
+    "John Goddard",
+    "Robert Christiani",
+    "Jimmy Cameron",
+    "Wilf Ferguson",
+    "Prior Jones"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mushtaq Ali": "31061",
+    "KC Ibrahim": "29529",
+    "Rusi Modi": "31021",
+    "Vijay Hazare": "29290",
+    "Lala Amarnath": "26223",
+    "Vinoo Mankad": "30939",
+    "Hemu Adhikari": "26179",
+    "Chandu Sarwate": "33859",
+    "Khokhan Sen": "34741",
+    "Ghulam Ahmed": "28821",
+    "Mantu Banerjee": "26849",
+    "Allan Rae": "52801",
+    "Denis Atkinson": "51134",
+    "Clyde Walcott": "53211",
+    "Everton Weekes": "53241",
+    "Gerry Gomez": "51893",
+    "George Carew": "51463",
+    "John Goddard": "51889",
+    "Robert Christiani": "51473",
+    "Jimmy Cameron": "51458",
+    "Wilf Ferguson": "51788",
+    "Prior Jones": "52220"
+   }
+  },
+  "season": "1948",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 692,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 272,
+    "wickets": 10,
+    "balls": 654,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 633,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 325,
+    "wickets": 3,
+    "balls": 816,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 366,
+    "wickets": 10,
+    "balls": 692,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 654,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 336,
+    "wickets": 9,
+    "balls": 633,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 816,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

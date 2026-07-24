@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62883",
+  "espn_league_id": "17374",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1960-12-02"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1960/61",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Santosh Ganguli",
+    "Bapu Joshi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Nari Contractor",
+    "Abbas Ali Baig",
+    "Vijay Manjrekar",
+    "Polly Umrigar",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Rusi Surti",
+    "Nana Joshi",
+    "Ramakant Desai",
+    "Subhash Gupte"
+   ],
+   "Pakistan": [
+    "Hanif Mohammad",
+    "Imtiaz Ahmed",
+    "Saeed Ahmed",
+    "Mushtaq Mohammad",
+    "Wallis Mathias",
+    "Javed Burki",
+    "Nasim-ul-Ghani",
+    "Fazal Mahmood",
+    "Mahmood Hussain",
+    "Mohammad Farooq",
+    "Haseeb Ahsan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Nari Contractor": "27667",
+    "Abbas Ali Baig": "26817",
+    "Vijay Manjrekar": "30936",
+    "Polly Umrigar": "35577",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Rusi Surti": "34174",
+    "Nana Joshi": "29721",
+    "Ramakant Desai": "28045",
+    "Subhash Gupte": "28880",
+    "Hanif Mohammad": "40373",
+    "Imtiaz Ahmed": "40565",
+    "Saeed Ahmed": "42603",
+    "Mushtaq Mohammad": "41318",
+    "Wallis Mathias": "41278",
+    "Javed Burki": "40877",
+    "Nasim-ul-Ghani": "42057",
+    "Fazal Mahmood": "40092",
+    "Mahmood Hussain": "41267",
+    "Mohammad Farooq": "41284",
+    "Haseeb Ahsan": "40380"
+   }
+  },
+  "season": "1960",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 826,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 449,
+    "wickets": 9,
+    "balls": 1060,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 480,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 350,
+    "wickets": 10,
+    "balls": 826,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1060,
+    "description": "declared"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 166,
+    "wickets": 4,
+    "balls": 480,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63241",
+  "espn_league_id": "17070",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1979-09-11"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1979/80",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Swaroop Kishen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Syed Kirmani",
+    "Gundappa Viswanath",
+    "Dilip Vengsarkar",
+    "Yashpal Sharma",
+    "Yajurvindra Singh",
+    "Kapil Dev",
+    "Karsan Ghavri",
+    "Srinivas Venkataraghavan",
+    "Dilip Doshi"
+   ],
+   "Australia": [
+    "Andrew Hilditch",
+    "Graeme Wood",
+    "Allan Border",
+    "Kim Hughes",
+    "Graham Yallop",
+    "Dav Whatmore",
+    "Kevin Wright",
+    "Geoff Dymock",
+    "Rodney Hogg",
+    "Alan Hurst",
+    "Jim Higgs"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Syed Kirmani": "30116",
+    "Gundappa Viswanath": "35712",
+    "Dilip Vengsarkar": "35654",
+    "Yashpal Sharma": "36075",
+    "Yajurvindra Singh": "36072",
+    "Kapil Dev": "30028",
+    "Karsan Ghavri": "28813",
+    "Srinivas Venkataraghavan": "35656",
+    "Dilip Doshi": "28107",
+    "Andrew Hilditch": "5656",
+    "Graeme Wood": "8251",
+    "Allan Border": "4174",
+    "Kim Hughes": "5724",
+    "Graham Yallop": "8448",
+    "Dav Whatmore": "8210",
+    "Kevin Wright": "8264",
+    "Geoff Dymock": "4999",
+    "Rodney Hogg": "5685",
+    "Alan Hurst": "5732",
+    "Jim Higgs": "5652"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 862,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 425,
+    "wickets": 10,
+    "balls": 783,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 682,
+    "description": ""
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 390,
+    "wickets": 10,
+    "balls": 862,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 783,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 212,
+    "wickets": 7,
+    "balls": 682,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

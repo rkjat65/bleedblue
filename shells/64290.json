@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64290",
+  "espn_league_id": "16784",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Rajkot",
+  "dates": [
+   "1986-10-07"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1986/87",
+   "match_number": 6
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "KR Karimanickam",
+    "S Ravindhron"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Raman Lamba",
+    "Mohammad Azharuddin",
+    "Dilip Vengsarkar",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Chandrakant Pandit",
+    "Madan Lal",
+    "Rajinder Singh Ghai",
+    "R.P.Singh",
+    "Maninder Singh"
+   ],
+   "Australia": [
+    "Geoff Marsh",
+    "David Boon",
+    "Dean Jones",
+    "Allan Border",
+    "Greg Ritchie",
+    "Greg Matthews",
+    "Steve Waugh",
+    "Greg Dyer",
+    "Craig McDermott",
+    "Bruce Reid",
+    "Simon Davis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Raman Lamba": "30745",
+    "Mohammad Azharuddin": "26329",
+    "Dilip Vengsarkar": "35654",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Chandrakant Pandit": "32179",
+    "Madan Lal": "30873",
+    "Rajinder Singh Ghai": "28808",
+    "R.P.Singh": "34057",
+    "Maninder Singh": "30923",
+    "Geoff Marsh": "6499",
+    "David Boon": "4169",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Greg Ritchie": "7358",
+    "Greg Matthews": "6525",
+    "Steve Waugh": "8192",
+    "Greg Dyer": "4996",
+    "Craig McDermott": "6551",
+    "Bruce Reid": "7319",
+    "Simon Davis": "4923"
+   }
+  },
+  "season": "1986",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Madhavrao Scindia Cricket Ground, Rajkot",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 260,
+    "wickets": 6,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 279,
+    "description": "target reached"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 263,
+    "wickets": 3,
+    "balls": 279,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

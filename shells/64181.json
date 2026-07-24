@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64181",
+  "espn_league_id": "17022",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Jalandhar",
+  "dates": [
+   "1981-12-20"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1981/82",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Jiban Ghosh",
+    "Swaroop Kishen"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Dilip Vengsarkar",
+    "Kirti Azad",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Sunil Gavaskar",
+    "Suru Nayak",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Ravi Shastri"
+   ],
+   "England": [
+    "Graham Gooch",
+    "Geoff Boycott",
+    "Ian Botham",
+    "Keith Fletcher",
+    "David Gower",
+    "Mike Gatting",
+    "Geoff Cook",
+    "Jack Richards",
+    "John Lever",
+    "Derek Underwood",
+    "Bob Willis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Dilip Vengsarkar": "35654",
+    "Kirti Azad": "26325",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Sunil Gavaskar": "28794",
+    "Suru Nayak": "31808",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Ravi Shastri": "33975",
+    "Graham Gooch": "13399",
+    "Geoff Boycott": "9187",
+    "Ian Botham": "9163",
+    "Keith Fletcher": "12854",
+    "David Gower": "13418",
+    "Mike Gatting": "13340",
+    "Geoff Cook": "10793",
+    "Jack Richards": "19394",
+    "John Lever": "16260",
+    "Derek Underwood": "22149",
+    "Bob Willis": "22462"
+   }
+  },
+  "season": "1981",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Gandhi Stadium, Jalandhar",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 216,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 164,
+    "wickets": 4,
+    "balls": 213,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 161,
+    "wickets": 7,
+    "balls": 216,
+    "description": "complete"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 213,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

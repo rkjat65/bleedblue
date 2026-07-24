@@ -1,0 +1,140 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64564",
+  "espn_league_id": "16032",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lahore",
+  "dates": [
+   "1997-10-02"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1997/98",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Javed Akhtar",
+    "Mohammad Nazir",
+    "Hasan Raza"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "Mohammad Aslam"
+   ]
+  },
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [
+    "Ijaz Ahmed",
+    "Shahid Afridi",
+    "Mohammad Wasim",
+    "Saeed Anwar",
+    "Inzamam-ul-Haq",
+    "Mohammad Hussain",
+    "Moin Khan",
+    "Azhar Mahmood",
+    "Saqlain Mushtaq",
+    "Waqar Younis",
+    "Aaqib Javed"
+   ],
+   "India": [
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "Robin Singh",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Ajay Jadeja",
+    "Saba Karim",
+    "Rajesh Chauhan",
+    "Abey Kuruvilla",
+    "Nilesh Kulkarni",
+    "Debasis Mohanty"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ijaz Ahmed": "40551",
+    "Shahid Afridi": "42639",
+    "Mohammad Wasim": "41297",
+    "Saeed Anwar": "42605",
+    "Inzamam-ul-Haq": "40570",
+    "Mohammad Hussain": "41285",
+    "Moin Khan": "41306",
+    "Azhar Mahmood": "39024",
+    "Saqlain Mushtaq": "42628",
+    "Waqar Younis": "43543",
+    "Aaqib Javed": "38970",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "Robin Singh": "34059",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Ajay Jadeja": "29632",
+    "Saba Karim": "30042",
+    "Rajesh Chauhan": "27622",
+    "Abey Kuruvilla": "30182",
+    "Nilesh Kulkarni": "30149",
+    "Debasis Mohanty": "31025"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Gaddafi Stadium, Lahore",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 296,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 219,
+    "wickets": 1,
+    "balls": 158,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 216,
+    "wickets": 10,
+    "balls": 296,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 158,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64476",
+  "espn_league_id": "16326",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1994-10-20"
+  ],
+  "event": {
+   "name": "West Indies in India ODI Series 1994/95",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Narendra Menon",
+    "RT Ramachandran"
+   ],
+   "match_referees": [
+    "Raman Subba Row"
+   ],
+   "tv_umpires": [
+    "SK Sharma"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Sachin Tendulkar",
+    "Navjot Sidhu",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Atul Bedade",
+    "Nayan Mongia",
+    "Venkatesh Prasad",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Rajesh Chauhan"
+   ],
+   "West Indies": [
+    "Phil Simmons",
+    "Stuart Williams",
+    "Brian Lara",
+    "Carl Hooper",
+    "Keith Arthurton",
+    "Jimmy Adams",
+    "Shivnarine Chanderpaul",
+    "Anderson Cummins",
+    "Courtney Walsh",
+    "Barrington Browne",
+    "Cameron Cuffy"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Sachin Tendulkar": "35320",
+    "Navjot Sidhu": "34028",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Atul Bedade": "26872",
+    "Nayan Mongia": "31036",
+    "Venkatesh Prasad": "32345",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Phil Simmons": "52934",
+    "Stuart Williams": "53234",
+    "Brian Lara": "52337",
+    "Carl Hooper": "52066",
+    "Keith Arthurton": "51110",
+    "Jimmy Adams": "51100",
+    "Shivnarine Chanderpaul": "51469",
+    "Anderson Cummins": "51488",
+    "Courtney Walsh": "53216",
+    "Barrington Browne": "51278",
+    "Cameron Cuffy": "51487"
+   }
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 135,
+    "wickets": 4,
+    "balls": 199,
+    "description": "target reached"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 192,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 199,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

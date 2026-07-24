@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66212",
+  "espn_league_id": "15864",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Nagpur",
+  "dates": [
+   "1999-03-22"
+  ],
+  "event": {
+   "name": "Pakistan tour of India 1998/99"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "KS Giridharan",
+    "VM Gupte"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ],
+   "tv_umpires": [
+    "Subrata Banerjee"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Ajit Agarkar",
+    "Laxmi Shukla",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Nikhil Chopra",
+    "Javagal Srinath"
+   ],
+   "Sri Lanka": [
+    "Avishka Gunawardene",
+    "Russel Arnold",
+    "Mahela Jayawardene",
+    "Aravinda de Silva",
+    "Hashan Tillakaratne",
+    "Arjuna Ranatunga",
+    "Upul Chandana",
+    "Ruwan Kalpage",
+    "Hemantha Boteju",
+    "Chaminda Vaas",
+    "Pramodya Wickramasinghe"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Ajit Agarkar": "26184",
+    "Laxmi Shukla": "34019",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Nikhil Chopra": "27641",
+    "Javagal Srinath": "34105",
+    "Avishka Gunawardene": "49010",
+    "Russel Arnold": "48122",
+    "Mahela Jayawardene": "49289",
+    "Aravinda de Silva": "48462",
+    "Hashan Tillakaratne": "50744",
+    "Arjuna Ranatunga": "50244",
+    "Upul Chandana": "48369",
+    "Ruwan Kalpage": "49356",
+    "Hemantha Boteju": "48290",
+    "Chaminda Vaas": "50804",
+    "Pramodya Wickramasinghe": "50848"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "Vidarbha C.A. Ground, Nagpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 287,
+    "wickets": 4,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 228,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 207,
+    "wickets": 10,
+    "balls": 228,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

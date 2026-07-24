@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62869",
+  "espn_league_id": "17382",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1959-12-19"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1959/60",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Santosh Ganguli",
+    "Bapu Joshi"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "Nari Contractor",
+    "Polly Umrigar",
+    "Abbas Ali Baig",
+    "Chandu Borde",
+    "Gulabrai Ramchand",
+    "Ramnath Kenny",
+    "Bapu Nadkarni",
+    "Naren Tamhane",
+    "Jasubhai Patel",
+    "Surendra Nath"
+   ],
+   "Australia": [
+    "Colin McDonald",
+    "Gavin Stevens",
+    "Neil Harvey",
+    "Norm O'Neill",
+    "Ken Mackay",
+    "Alan Davidson",
+    "Richie Benaud",
+    "Barry Jarman",
+    "Lindsay Kline",
+    "Ian Meckiff",
+    "Gordon Rorke"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "Nari Contractor": "27667",
+    "Polly Umrigar": "35577",
+    "Abbas Ali Baig": "26817",
+    "Chandu Borde": "26962",
+    "Gulabrai Ramchand": "33062",
+    "Ramnath Kenny": "30066",
+    "Bapu Nadkarni": "31760",
+    "Naren Tamhane": "35308",
+    "Jasubhai Patel": "32236",
+    "Surendra Nath": "34814",
+    "Colin McDonald": "6554",
+    "Gavin Stevens": "7674",
+    "Neil Harvey": "5603",
+    "Norm O'Neill": "7015",
+    "Ken Mackay": "6445",
+    "Alan Davidson": "4902",
+    "Richie Benaud": "4123",
+    "Barry Jarman": "6013",
+    "Lindsay Kline": "6159",
+    "Ian Meckiff": "6598",
+    "Gordon Rorke": "7395"
+   }
+  },
+  "season": "1959",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Green Park, Kanpur",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 152,
+    "wickets": 10,
+    "balls": 421,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 467,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 291,
+    "wickets": 10,
+    "balls": 867,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 346,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 421,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 219,
+    "wickets": 10,
+    "balls": 467,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 867,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 105,
+    "wickets": 9,
+    "balls": 346,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

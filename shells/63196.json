@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63196",
+  "espn_league_id": "17139",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Perth",
+  "dates": [
+   "1977-12-16"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1977/78",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Robin Bailhache",
+    "Dick French"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "John Dyson",
+    "Craig Serjeant",
+    "David Ogilvie",
+    "Peter Toohey",
+    "Bob Simpson",
+    "Steve Rixon",
+    "Kim Hughes",
+    "Tony Mann",
+    "Wayne Clark",
+    "Jeff Thomson",
+    "Sam Gannon"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Mohinder Amarnath",
+    "Gundappa Viswanath",
+    "Dilip Vengsarkar",
+    "Brijesh Patel",
+    "Syed Kirmani",
+    "Srinivas Venkataraghavan",
+    "Madan Lal",
+    "Bishan Bedi",
+    "Bhagwath Chandrasekhar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Dyson": "5001",
+    "Craig Serjeant": "7594",
+    "David Ogilvie": "6996",
+    "Peter Toohey": "7959",
+    "Bob Simpson": "7619",
+    "Steve Rixon": "7360",
+    "Kim Hughes": "5724",
+    "Tony Mann": "6477",
+    "Wayne Clark": "4584",
+    "Jeff Thomson": "7946",
+    "Sam Gannon": "5358",
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Mohinder Amarnath": "26225",
+    "Gundappa Viswanath": "35712",
+    "Dilip Vengsarkar": "35654",
+    "Brijesh Patel": "32231",
+    "Syed Kirmani": "30116",
+    "Srinivas Venkataraghavan": "35656",
+    "Madan Lal": "30873",
+    "Bishan Bedi": "26875",
+    "Bhagwath Chandrasekhar": "27591"
+   }
+  },
+  "season": "1977",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "W.A.C.A. Ground, Perth",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 480,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 394,
+    "wickets": 10,
+    "balls": 714,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 443,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 342,
+    "wickets": 8,
+    "balls": 524,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 402,
+    "wickets": 10,
+    "balls": 480,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 714,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 330,
+    "wickets": 9,
+    "balls": 443,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 524,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63865",
+  "espn_league_id": "15710",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Adelaide",
+  "dates": [
+   "1999-12-10"
+  ],
+  "event": {
+   "name": "South Africa in India Test Series 1999/00",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Dunne",
+    "Daryl Harper"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "Steve Davis"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Greg Blewett",
+    "Michael Slater",
+    "Justin Langer",
+    "Mark Waugh",
+    "Steve Waugh",
+    "Ricky Ponting",
+    "Adam Gilchrist",
+    "Shane Warne",
+    "Michael Kasprowicz",
+    "Damien Fleming",
+    "Glenn McGrath"
+   ],
+   "India": [
+    "Devang Gandhi",
+    "Sadagoppan Ramesh",
+    "VVS Laxman",
+    "Rahul Dravid",
+    "Sachin Tendulkar",
+    "Sourav Ganguly",
+    "MSK Prasad",
+    "Ajit Agarkar",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Greg Blewett": "4161",
+    "Michael Slater": "7629",
+    "Justin Langer": "6256",
+    "Mark Waugh": "8189",
+    "Steve Waugh": "8192",
+    "Ricky Ponting": "7133",
+    "Adam Gilchrist": "5390",
+    "Shane Warne": "8166",
+    "Michael Kasprowicz": "6126",
+    "Damien Fleming": "5239",
+    "Glenn McGrath": "6565",
+    "Devang Gandhi": "28770",
+    "Sadagoppan Ramesh": "33066",
+    "VVS Laxman": "30750",
+    "Rahul Dravid": "28114",
+    "Sachin Tendulkar": "35320",
+    "Sourav Ganguly": "28779",
+    "MSK Prasad": "32346",
+    "Ajit Agarkar": "26184",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Adelaide Oval",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 441,
+    "wickets": 10,
+    "balls": 753,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 682,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 239,
+    "wickets": 8,
+    "balls": 539,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 229,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 753,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 285,
+    "wickets": 10,
+    "balls": 682,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 539,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 110,
+    "wickets": 10,
+    "balls": 229,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

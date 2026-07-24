@@ -1,0 +1,122 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "361049",
+  "espn_league_id": "13814"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "2008-12-02"
+  ],
+  "event": {
+   "name": "England in India ODI Series 2008/09",
+   "match_number": 7
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Daryl Harper",
+    "Amiesh Saheba"
+   ],
+   "match_referees": [
+    "Roshan Mahanama"
+   ],
+   "tv_umpires": [
+    "Shavir Tarapore"
+   ],
+   "reserve_umpires": [
+    "Milind Pathak"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "MS Dhoni",
+    "Gautam Gambhir",
+    "Harbhajan Singh",
+    "Zaheer Khan",
+    "Virat Kohli",
+    "Pragyan Ojha",
+    "Munaf Patel",
+    "Yusuf Pathan",
+    "Suresh Raina",
+    "Virender Sehwag",
+    "Ishant Sharma",
+    "Rohit Sharma",
+    "RP Singh",
+    "Murali Vijay",
+    "Yuvraj Singh"
+   ],
+   "England": [
+    "Tim Ambrose",
+    "James Anderson",
+    "Ian Bell",
+    "Ravi Bopara",
+    "Stuart Broad",
+    "Paul Collingwood",
+    "Alastair Cook",
+    "Andrew Flintoff",
+    "Steve Harmison",
+    "Samit Patel",
+    "Kevin Pietersen",
+    "Matt Prior",
+    "Owais Shah",
+    "Ryan Sidebottom",
+    "Graeme Swann",
+    "Luke Wright"
+   ]
+  },
+  "registry": {
+   "people": {
+    "MS Dhoni": "28081",
+    "Gautam Gambhir": "28763",
+    "Harbhajan Singh": "29264",
+    "Zaheer Khan": "30102",
+    "Virat Kohli": "253802",
+    "Pragyan Ojha": "32130",
+    "Munaf Patel": "32965",
+    "Yusuf Pathan": "32498",
+    "Suresh Raina": "33335",
+    "Virender Sehwag": "35263",
+    "Ishant Sharma": "236779",
+    "Rohit Sharma": "34102",
+    "RP Singh": "35280",
+    "Murali Vijay": "237095",
+    "Yuvraj Singh": "36084",
+    "Tim Ambrose": "8845",
+    "James Anderson": "8608",
+    "Ian Bell": "9062",
+    "Ravi Bopara": "10582",
+    "Stuart Broad": "10617",
+    "Paul Collingwood": "10772",
+    "Alastair Cook": "11728",
+    "Andrew Flintoff": "12856",
+    "Steve Harmison": "14054",
+    "Samit Patel": "18632",
+    "Kevin Pietersen": "19296",
+    "Matt Prior": "18675",
+    "Owais Shah": "20123",
+    "Ryan Sidebottom": "20187",
+    "Graeme Swann": "20431",
+    "Luke Wright": "23460"
+   }
+  },
+  "season": "2008",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "overs": 50
+ },
+ "innings": []
+}

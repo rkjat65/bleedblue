@@ -1,0 +1,136 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64412",
+  "espn_league_id": "16458",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chandigarh",
+  "dates": [
+   "1993-01-21"
+  ],
+  "event": {
+   "name": "England in India ODI Series 1992/93",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "RV Ramani",
+    "V.K.Ramaswamy"
+   ],
+   "match_referees": [
+    "Cammie Smith"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Navjot Sidhu",
+    "Manoj Prabhakar",
+    "Vinod Kambli",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Pravin Amre",
+    "Kapil Dev",
+    "Vijay Yadav",
+    "Anil Kumble",
+    "Venkatapathy Raju",
+    "Javagal Srinath"
+   ],
+   "England": [
+    "Graham Gooch",
+    "Alec Stewart",
+    "Robin Smith",
+    "Mike Gatting",
+    "Neil Fairbrother",
+    "Graeme Hick",
+    "Dermot Reeve",
+    "Chris Lewis",
+    "Phil DeFreitas",
+    "Paul Jarvis",
+    "Ian Salisbury"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Navjot Sidhu": "34028",
+    "Manoj Prabhakar": "32323",
+    "Vinod Kambli": "30009",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Pravin Amre": "26238",
+    "Kapil Dev": "30028",
+    "Vijay Yadav": "36069",
+    "Anil Kumble": "30176",
+    "Venkatapathy Raju": "33044",
+    "Javagal Srinath": "34105",
+    "Graham Gooch": "13399",
+    "Alec Stewart": "20372",
+    "Robin Smith": "20263",
+    "Mike Gatting": "13340",
+    "Neil Fairbrother": "12803",
+    "Graeme Hick": "14187",
+    "Dermot Reeve": "19364",
+    "Chris Lewis": "16274",
+    "Phil DeFreitas": "11865",
+    "Paul Jarvis": "15485",
+    "Ian Salisbury": "20051"
+   }
+  },
+  "season": "1993",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Sector 16 Stadium, Chandigarh",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 201,
+    "wickets": 5,
+    "balls": 271,
+    "description": "target reached"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 198,
+    "wickets": 6,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 271,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

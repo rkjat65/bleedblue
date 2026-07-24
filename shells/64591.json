@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64591",
+  "espn_league_id": "15895",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Harare",
+  "dates": [
+   "1998-09-30"
+  ],
+  "event": {
+   "name": "India in Zimbabwe ODI Series 1998/99",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Kevan Barbour",
+    "Russell Tiffin"
+   ],
+   "match_referees": [
+    "Alan Smith"
+   ],
+   "tv_umpires": [
+    "Graeme Evans"
+   ]
+  },
+  "outcome": {
+   "winner": "Zimbabwe"
+  },
+  "players": {
+   "Zimbabwe": [
+    "Alistair Campbell",
+    "Craig Wishart",
+    "Murray Goodwin",
+    "Andy Flower",
+    "Craig Evans",
+    "Gavin Rennie",
+    "Heath Streak",
+    "Eddo Brandes",
+    "Andy Whittall",
+    "Adam Huckle",
+    "Pommie Mbangwa"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Rahul Dravid",
+    "Robin Singh",
+    "Nayan Mongia",
+    "Ajit Agarkar",
+    "Rahul Sanghvi",
+    "Debasis Mohanty",
+    "Harbhajan Singh"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Alistair Campbell": "55301",
+    "Craig Wishart": "55854",
+    "Murray Goodwin": "55456",
+    "Andy Flower": "55427",
+    "Craig Evans": "55408",
+    "Gavin Rennie": "55713",
+    "Heath Streak": "55761",
+    "Eddo Brandes": "55267",
+    "Andy Whittall": "55846",
+    "Adam Huckle": "55502",
+    "Pommie Mbangwa": "55584",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Rahul Dravid": "28114",
+    "Robin Singh": "34059",
+    "Nayan Mongia": "31036",
+    "Ajit Agarkar": "26184",
+    "Rahul Sanghvi": "34214",
+    "Debasis Mohanty": "31025",
+    "Harbhajan Singh": "29264"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "Zimbabwe",
+   "India"
+  ],
+  "venue": "Harare Sports Club",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 259,
+    "wickets": 5,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 284,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 222,
+    "wickets": 10,
+    "balls": 284,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

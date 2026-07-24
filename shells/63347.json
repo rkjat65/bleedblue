@@ -1,0 +1,149 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63347",
+  "espn_league_id": "16934",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1983-09-14"
+  ],
+  "event": {
+   "name": "Pakistan in India Test Series 1983/84",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Madhav Gothoskar",
+    "Swaroop Kishen",
+    "Kris Srikkanth"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Aunshuman Gaekwad",
+    "Mohinder Amarnath",
+    "Yashpal Sharma",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Roger Binny",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Srinivas Venkataraghavan",
+    "Dilip Doshi"
+   ],
+   "Pakistan": [
+    "Mohsin Khan",
+    "Mudassar Nazar",
+    "Saleem Malik",
+    "Javed Miandad",
+    "Zaheer Abbas",
+    "Wasim Raja",
+    "Wasim Bari",
+    "Tahir Naqqash",
+    "Iqbal Qasim",
+    "Azeem Hafeez",
+    "Mohammad Nazir"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Aunshuman Gaekwad": "28754",
+    "Mohinder Amarnath": "26225",
+    "Yashpal Sharma": "36075",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Roger Binny": "26948",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Srinivas Venkataraghavan": "35656",
+    "Dilip Doshi": "28107",
+    "Mohsin Khan": "41303",
+    "Mudassar Nazar": "41308",
+    "Saleem Malik": "42623",
+    "Javed Miandad": "40879",
+    "Zaheer Abbas": "43695",
+    "Wasim Raja": "43553",
+    "Wasim Bari": "43549",
+    "Tahir Naqqash": "43271",
+    "Iqbal Qasim": "40572",
+    "Azeem Hafeez": "39021",
+    "Mohammad Nazir": "41294"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Pakistan"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 275,
+    "wickets": 10,
+    "balls": 719,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 673,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 176,
+    "wickets": 0,
+    "balls": 367,
+    "description": ""
+   },
+   {
+    "team": "Pakistan",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 719,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 2,
+    "runs": 288,
+    "wickets": 10,
+    "balls": 673,
+    "description": "all out"
+   },
+   {
+    "team": "Pakistan",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 367,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

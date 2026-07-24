@@ -1,0 +1,144 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1119503",
+  "espn_league_id": "17972"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hyderabad",
+  "dates": [
+   "2017-10-13"
+  ],
+  "event": {
+   "name": "Australia in India T20I Series 2017/18",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Anil Chaudhary",
+    "Nandan"
+   ],
+   "match_referees": [
+    "Richie Richardson"
+   ],
+   "tv_umpires": [
+    "Chettithody Shamshuddin"
+   ],
+   "reserve_umpires": [
+    "Nitin Menon"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Jasprit Bumrah",
+    "Yuzvendra Chahal",
+    "Shikhar Dhawan",
+    "MS Dhoni",
+    "Kedar Jadhav",
+    "Dinesh Karthik",
+    "Virat Kohli",
+    "Kuldeep Yadav",
+    "Bhuvneshwar Kumar",
+    "Ashish Nehra",
+    "Manish Pandey",
+    "Hardik Pandya",
+    "Axar Patel",
+    "KL Rahul",
+    "Rohit Sharma"
+   ],
+   "Australia": [
+    "Jason Behrendorff",
+    "Dan Christian",
+    "Nathan Coulter-Nile",
+    "Aaron Finch",
+    "Travis Head",
+    "Moises Henriques",
+    "Glenn Maxwell",
+    "Tim Paine",
+    "Kane Richardson",
+    "Marcus Stoinis",
+    "Andrew Tye",
+    "David Warner",
+    "Adam Zampa"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Jasprit Bumrah": "625383",
+    "Yuzvendra Chahal": "430246",
+    "Shikhar Dhawan": "28235",
+    "MS Dhoni": "28081",
+    "Kedar Jadhav": "290716",
+    "Dinesh Karthik": "30045",
+    "Virat Kohli": "253802",
+    "Kuldeep Yadav": "559235",
+    "Bhuvneshwar Kumar": "326016",
+    "Ashish Nehra": "31820",
+    "Manish Pandey": "290630",
+    "Hardik Pandya": "625371",
+    "Axar Patel": "554691",
+    "KL Rahul": "422108",
+    "Rohit Sharma": "34102",
+    "Jason Behrendorff": "272477",
+    "Dan Christian": "4864",
+    "Nathan Coulter-Nile": "261354",
+    "Aaron Finch": "5334",
+    "Travis Head": "530011",
+    "Moises Henriques": "5961",
+    "Glenn Maxwell": "325026",
+    "Tim Paine": "7252",
+    "Kane Richardson": "272262",
+    "Marcus Stoinis": "325012",
+    "Andrew Tye": "459508",
+    "David Warner": "219889",
+    "Adam Zampa": "379504"
+   }
+  },
+  "season": "2017",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Rajiv Gandhi International Stadium, Uppal, Hyderabad",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

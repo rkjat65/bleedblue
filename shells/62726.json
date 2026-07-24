@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62726",
+  "espn_league_id": "17467",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1951-12-14"
+  ],
+  "event": {
+   "name": "England in India Test Series 1951/52",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MM Naidu",
+    "Jamshed Patel"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Pankaj Roy",
+    "M.K.Mantri",
+    "Polly Umrigar",
+    "Vijay Hazare",
+    "Lala Amarnath",
+    "Chandu Sarwate",
+    "Hemu Adhikari",
+    "Chingleput Gopinath",
+    "Ranga Sohoni",
+    "Vinoo Mankad",
+    "Sadu Shinde"
+   ],
+   "England": [
+    "Frank Lowson",
+    "Jack Robertson",
+    "Tom Graveney",
+    "Dick Spooner",
+    "Don Kenyon",
+    "Allan Watkins",
+    "Nigel Howard",
+    "Eddie Leadbeater",
+    "Brian Statham",
+    "Roy Tattersall",
+    "Fred Ridgway"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Pankaj Roy": "33186",
+    "M.K.Mantri": "30950",
+    "Polly Umrigar": "35577",
+    "Vijay Hazare": "29290",
+    "Lala Amarnath": "26223",
+    "Chandu Sarwate": "33859",
+    "Hemu Adhikari": "26179",
+    "Chingleput Gopinath": "28855",
+    "Ranga Sohoni": "34081",
+    "Vinoo Mankad": "30939",
+    "Sadu Shinde": "33999",
+    "Frank Lowson": "16360",
+    "Jack Robertson": "19423",
+    "Tom Graveney": "13434",
+    "Dick Spooner": "20317",
+    "Don Kenyon": "15866",
+    "Allan Watkins": "22329",
+    "Nigel Howard": "14282",
+    "Eddie Leadbeater": "16235",
+    "Brian Statham": "20341",
+    "Roy Tattersall": "21464",
+    "Fred Ridgway": "19405"
+   }
+  },
+  "season": "1951",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 485,
+    "wickets": 9,
+    "balls": 834,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1243,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 208,
+    "wickets": 10,
+    "balls": 499,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 216,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 834,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 456,
+    "wickets": 10,
+    "balls": 1243,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 499,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 55,
+    "wickets": 2,
+    "balls": 216,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

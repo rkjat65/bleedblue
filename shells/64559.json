@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64559",
+  "espn_league_id": "16032"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Colombo",
+  "dates": [
+   "1997-08-23"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1997/98",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "K.T.Francis",
+    "TM Samarasinghe"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "Peter Manuel"
+   ]
+  },
+  "outcome": {
+   "winner": "Sri Lanka"
+  },
+  "players": {
+   "Sri Lanka": [
+    "Sanath Jayasuriya",
+    "Marvan Atapattu",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Roshan Mahanama",
+    "Ruwan Kalpage",
+    "Lanka de Silva",
+    "Upul Chandana",
+    "Kumar Dharmasena",
+    "Dulip Liyanage",
+    "Ravindra Pushpakumara"
+   ],
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Robin Singh",
+    "Rahul Dravid",
+    "Mohammad Azharuddin",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Rajesh Chauhan",
+    "Abey Kuruvilla",
+    "Nilesh Kulkarni",
+    "Venkatesh Prasad"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sanath Jayasuriya": "49209",
+    "Marvan Atapattu": "48124",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Roshan Mahanama": "49626",
+    "Ruwan Kalpage": "49356",
+    "Lanka de Silva": "48465",
+    "Upul Chandana": "48369",
+    "Kumar Dharmasena": "48469",
+    "Dulip Liyanage": "49554",
+    "Ravindra Pushpakumara": "49863",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Robin Singh": "34059",
+    "Rahul Dravid": "28114",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Rajesh Chauhan": "27622",
+    "Abey Kuruvilla": "30182",
+    "Nilesh Kulkarni": "30149",
+    "Venkatesh Prasad": "32345"
+   }
+  },
+  "season": "1997",
+  "team_type": "international",
+  "teams": [
+   "Sri Lanka",
+   "India"
+  ],
+  "venue": "Sinhalese Sports Club Ground, Colombo",
+  "overs": 50
+ },
+ "innings": []
+}

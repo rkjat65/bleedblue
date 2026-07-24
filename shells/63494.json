@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63494",
+  "espn_league_id": "16676",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1988-11-24"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1988/89",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ram Gupta",
+    "V.K.Ramaswamy"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Kris Srikkanth",
+    "Arun Lal",
+    "Navjot Sidhu",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ravi Shastri",
+    "Kapil Dev",
+    "Kiran More",
+    "Arshad Ayub",
+    "Rashid Patel",
+    "Narendra Hirwani"
+   ],
+   "New Zealand": [
+    "Trevor Franklin",
+    "John Wright",
+    "Andrew Jones",
+    "Mark Greatbatch",
+    "Ken Rutherford",
+    "Tony Blain",
+    "Richard Hadlee",
+    "Ian Smith",
+    "John Bracewell",
+    "Danny Morrison",
+    "Ewen Chatfield"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Kris Srikkanth": "34103",
+    "Arun Lal": "26295",
+    "Navjot Sidhu": "34028",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ravi Shastri": "33975",
+    "Kapil Dev": "30028",
+    "Kiran More": "31038",
+    "Arshad Ayub": "26290",
+    "Rashid Patel": "32249",
+    "Narendra Hirwani": "29299",
+    "Trevor Franklin": "37002",
+    "John Wright": "38757",
+    "Andrew Jones": "37491",
+    "Mark Greatbatch": "37105",
+    "Ken Rutherford": "38258",
+    "Tony Blain": "36297",
+    "Richard Hadlee": "37224",
+    "Ian Smith": "38396",
+    "John Bracewell": "36306",
+    "Danny Morrison": "37730",
+    "Ewen Chatfield": "36603"
+   }
+  },
+  "season": "1988",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 561,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 234,
+    "wickets": 10,
+    "balls": 455,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 690,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 145,
+    "wickets": 10,
+    "balls": 298,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 236,
+    "wickets": 10,
+    "balls": 561,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 455,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 279,
+    "wickets": 10,
+    "balls": 690,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 298,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

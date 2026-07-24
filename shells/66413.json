@@ -1,0 +1,50 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66413",
+  "espn_league_id": "16112"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Cuttack",
+  "dates": [
+   "1996-10-27"
+  ],
+  "event": {
+   "name": "India in Zimbabwe ODI Series 1996/97"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "KS Giridharan",
+    "Chandra Sathe"
+   ],
+   "match_referees": [
+    "John Reid"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [],
+   "Australia": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Barabati Stadium, Cuttack",
+  "overs": 50
+ },
+ "innings": []
+}

@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64234",
+  "espn_league_id": "16896",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1984-09-28"
+  ],
+  "event": {
+   "name": "Australia in India ODI Series 1984/85",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Bhairab Ganguli",
+    "Piloo Reporter"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Surinder Khanna",
+    "Ghulam Parkar",
+    "Dilip Vengsarkar",
+    "Sandeep Patil",
+    "Sunil Gavaskar",
+    "Kirti Azad",
+    "Kapil Dev",
+    "Ravi Shastri",
+    "Madan Lal",
+    "Chetan Sharma",
+    "Ashok Patel"
+   ],
+   "Australia": [
+    "Kepler Wessels",
+    "Graeme Wood",
+    "Kim Hughes",
+    "Graham Yallop",
+    "Allan Border",
+    "Wayne Phillips",
+    "Tom Hogan",
+    "Geoff Lawson",
+    "Rodney Hogg",
+    "Carl Rackemann",
+    "John Maguire"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Surinder Khanna": "30077",
+    "Ghulam Parkar": "32201",
+    "Dilip Vengsarkar": "35654",
+    "Sandeep Patil": "32283",
+    "Sunil Gavaskar": "28794",
+    "Kirti Azad": "26325",
+    "Kapil Dev": "30028",
+    "Ravi Shastri": "33975",
+    "Madan Lal": "30873",
+    "Chetan Sharma": "33949",
+    "Ashok Patel": "32226",
+    "Kepler Wessels": "47884",
+    "Graeme Wood": "8251",
+    "Kim Hughes": "5724",
+    "Graham Yallop": "8448",
+    "Allan Border": "4174",
+    "Wayne Phillips": "7115",
+    "Tom Hogan": "5679",
+    "Geoff Lawson": "6272",
+    "Rodney Hogg": "5685",
+    "Carl Rackemann": "7302",
+    "John Maguire": "6460"
+   }
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Jawaharlal Nehru Stadium, New Delhi",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 172,
+    "wickets": 10,
+    "balls": 245,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 220,
+    "wickets": 9,
+    "balls": 288,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 245,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

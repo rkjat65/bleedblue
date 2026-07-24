@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65934",
+  "espn_league_id": "16614",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Christchurch",
+  "dates": [
+   "1990-03-02"
+  ],
+  "event": {
+   "name": "India tour of New Zealand 1989/90"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Brian Aldridge",
+    "Rodger McHarg"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Mark Taylor",
+    "David Boon",
+    "Dean Jones",
+    "Allan Border",
+    "Steve Waugh",
+    "Simon O'Donnell",
+    "Ian Healy",
+    "Peter Taylor",
+    "Greg Campbell",
+    "Carl Rackemann",
+    "Terry Alderman"
+   ],
+   "India": [
+    "V.B.Chandrasekhar",
+    "Woorkeri Raman",
+    "Sanjay Manjrekar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Ajay Sharma",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Atul Wassan",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Mark Taylor": "7924",
+    "David Boon": "4169",
+    "Dean Jones": "6044",
+    "Allan Border": "4174",
+    "Steve Waugh": "8192",
+    "Simon O'Donnell": "6995",
+    "Ian Healy": "5628",
+    "Peter Taylor": "7926",
+    "Greg Campbell": "4523",
+    "Carl Rackemann": "7302",
+    "Terry Alderman": "3943",
+    "V.B.Chandrasekhar": "27592",
+    "Woorkeri Raman": "33058",
+    "Sanjay Manjrekar": "30934",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Ajay Sharma": "33943",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Atul Wassan": "35939",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "AMI Stadium, Christchurch",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 187,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 270,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 169,
+    "wickets": 10,
+    "balls": 270,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

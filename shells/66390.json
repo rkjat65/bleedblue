@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "66390",
+  "espn_league_id": "16894"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Peshawar",
+  "dates": [
+   "1984-11-02"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1984/85",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "outcome": {
+   "winner": "Pakistan"
+  },
+  "players": {
+   "Pakistan": [],
+   "India": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "1984",
+  "team_type": "international",
+  "teams": [
+   "Pakistan",
+   "India"
+  ],
+  "venue": "Imran Khan Cricket Stadium, Peshawar",
+  "overs": 50
+ },
+ "innings": []
+}

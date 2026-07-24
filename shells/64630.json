@@ -1,0 +1,140 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64630",
+  "espn_league_id": "15754",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Rajkot",
+  "dates": [
+   "1999-11-05"
+  ],
+  "event": {
+   "name": "New Zealand in India ODI Series 1999/00",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Krishna Hariharan",
+    "Ivaturi Shivram",
+    "Matt Horne"
+   ],
+   "match_referees": [
+    "Ranjan Madugalle"
+   ],
+   "tv_umpires": [
+    "MR Singh"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Rahul Dravid",
+    "Ajay Jadeja",
+    "Robin Singh",
+    "Vijay Bharadwaj",
+    "Nikhil Chopra",
+    "MSK Prasad",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Venkatesh Prasad"
+   ],
+   "New Zealand": [
+    "Craig Spearman",
+    "Nathan Astle",
+    "Roger Twose",
+    "Stephen Fleming",
+    "Chris Cairns",
+    "Chris Harris",
+    "Adam Parore",
+    "Dion Nash",
+    "Scott Styris",
+    "Daniel Vettori",
+    "Shayne O'Connor"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Rahul Dravid": "28114",
+    "Ajay Jadeja": "29632",
+    "Robin Singh": "34059",
+    "Vijay Bharadwaj": "35673",
+    "Nikhil Chopra": "27641",
+    "MSK Prasad": "32346",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Craig Spearman": "38401",
+    "Nathan Astle": "36185",
+    "Roger Twose": "38624",
+    "Stephen Fleming": "37000",
+    "Chris Cairns": "36597",
+    "Chris Harris": "37232",
+    "Adam Parore": "38117",
+    "Dion Nash": "38008",
+    "Scott Styris": "38407",
+    "Daniel Vettori": "38710",
+    "Shayne O'Connor": "38060"
+   }
+  },
+  "season": "1999",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Madhavrao Scindia Cricket Ground, Rajkot",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 306,
+    "wickets": 10,
+    "balls": 282,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 349,
+    "wickets": 9,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

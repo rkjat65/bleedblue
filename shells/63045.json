@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63045",
+  "espn_league_id": "17279",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1969-09-25"
+  ],
+  "event": {
+   "name": "New Zealand in India Test Series 1969/70",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ahmed Mamsa",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Syed Abid Ali",
+    "Chetan Chauhan",
+    "Ajit Wadekar",
+    "Rusi Surti",
+    "Mansur Ali Khan Pataudi",
+    "Hanumant Singh",
+    "Ashok Mankad",
+    "Farokh Engineer",
+    "Ajit Pai",
+    "Erapalli Prasanna",
+    "Bishan Bedi"
+   ],
+   "New Zealand": [
+    "Glenn Turner",
+    "Bruce Murray",
+    "Graham Dowling",
+    "Bevan Congdon",
+    "Brian Hastings",
+    "Mark Burgess",
+    "Ken Wadsworth",
+    "Hedley Howarth",
+    "Bruce Taylor",
+    "Dayle Hadlee",
+    "Bob Cunis"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Syed Abid Ali": "26169",
+    "Chetan Chauhan": "27619",
+    "Ajit Wadekar": "35933",
+    "Rusi Surti": "34174",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Hanumant Singh": "29260",
+    "Ashok Mankad": "30938",
+    "Farokh Engineer": "28624",
+    "Ajit Pai": "32149",
+    "Erapalli Prasanna": "32357",
+    "Bishan Bedi": "26875",
+    "Glenn Turner": "38622",
+    "Bruce Murray": "37734",
+    "Graham Dowling": "36837",
+    "Bevan Congdon": "36611",
+    "Brian Hastings": "37243",
+    "Mark Burgess": "36314",
+    "Ken Wadsworth": "38735",
+    "Hedley Howarth": "37255",
+    "Bruce Taylor": "38609",
+    "Dayle Hadlee": "37222",
+    "Bob Cunis": "36628"
+   }
+  },
+  "season": "1969",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 156,
+    "wickets": 10,
+    "balls": 398,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 705,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 260,
+    "wickets": 10,
+    "balls": 818,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 419,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 398,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 229,
+    "wickets": 10,
+    "balls": 705,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 818,
+    "description": "all out"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 4,
+    "runs": 127,
+    "wickets": 10,
+    "balls": 419,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

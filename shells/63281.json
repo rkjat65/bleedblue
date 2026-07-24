@@ -1,0 +1,165 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63281",
+  "espn_league_id": "17041",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Melbourne",
+  "dates": [
+   "1981-02-07"
+  ],
+  "event": {
+   "name": "India in Australia Test Series 1980/81",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Mel Johnson",
+    "Rex Whitehead",
+    "Kirti Azad"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "John Dyson",
+    "Graeme Wood",
+    "Greg Chappell",
+    "Kim Hughes",
+    "Allan Border",
+    "Doug Walters",
+    "Rod Marsh",
+    "Bruce Yardley",
+    "Dennis Lillee",
+    "Len Pascoe",
+    "Jim Higgs"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Sandeep Patil",
+    "Yashpal Sharma",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Shivlal Yadav",
+    "Dilip Doshi"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Dyson": "5001",
+    "Graeme Wood": "8251",
+    "Greg Chappell": "4558",
+    "Kim Hughes": "5724",
+    "Allan Border": "4174",
+    "Doug Walters": "8151",
+    "Rod Marsh": "6502",
+    "Bruce Yardley": "8449",
+    "Dennis Lillee": "6295",
+    "Len Pascoe": "7083",
+    "Jim Higgs": "5652",
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Sandeep Patil": "32283",
+    "Yashpal Sharma": "36075",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Shivlal Yadav": "36064",
+    "Dilip Doshi": "28107"
+   }
+  },
+  "season": "1981",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Melbourne Cricket Ground",
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 504,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 419,
+    "wickets": 10,
+    "balls": 939,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 655,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 4,
+    "runs": 83,
+    "wickets": 10,
+    "balls": 292,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 237,
+    "wickets": 10,
+    "balls": 504,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 939,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 324,
+    "wickets": 9,
+    "balls": 655,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 292,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

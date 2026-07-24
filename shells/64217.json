@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64217",
+  "espn_league_id": "16936",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Srinagar",
+  "dates": [
+   "1983-10-13"
+  ],
+  "event": {
+   "name": "Pakistan in India ODI Series 1983/84",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Jiban Ghosh",
+    "Mohammad Ghouse"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Kris Srikkanth",
+    "Dilip Vengsarkar",
+    "Yashpal Sharma",
+    "Sandeep Patil",
+    "Kapil Dev",
+    "Kirti Azad",
+    "Roger Binny",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Balwinder Sandhu"
+   ],
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Viv Richards",
+    "Larry Gomes",
+    "Clive Lloyd",
+    "Jeff Dujon",
+    "Eldine Baptiste",
+    "Roger Harper",
+    "Malcolm Marshall",
+    "Andy Roberts",
+    "Michael Holding"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Kris Srikkanth": "34103",
+    "Dilip Vengsarkar": "35654",
+    "Yashpal Sharma": "36075",
+    "Sandeep Patil": "32283",
+    "Kapil Dev": "30028",
+    "Kirti Azad": "26325",
+    "Roger Binny": "26948",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Balwinder Sandhu": "33816",
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Viv Richards": "52812",
+    "Larry Gomes": "51891",
+    "Clive Lloyd": "52345",
+    "Jeff Dujon": "51657",
+    "Eldine Baptiste": "51211",
+    "Roger Harper": "52045",
+    "Malcolm Marshall": "52419",
+    "Andy Roberts": "52817",
+    "Michael Holding": "52063"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Sher-i-Kashmir Stadium, Srinagar",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 176,
+    "wickets": 10,
+    "balls": 248,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 136,
+    "description": "target reached"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 248,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 108,
+    "wickets": 0,
+    "balls": 136,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

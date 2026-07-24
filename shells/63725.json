@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63725",
+  "espn_league_id": "16184",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1996-11-27"
+  ],
+  "event": {
+   "name": "India in England Test Series 1996",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "B.C. Cooray",
+    "V.K.Ramaswamy"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "Subroto Porel"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Nayan Mongia",
+    "Rahul Dravid",
+    "Sourav Ganguly",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "VVS Laxman",
+    "Sunil Joshi",
+    "Javagal Srinath",
+    "Anil Kumble",
+    "Venkatesh Prasad",
+    "Narendra Hirwani"
+   ],
+   "South Africa": [
+    "Andrew Hudson",
+    "Gary Kirsten",
+    "Herschelle Gibbs",
+    "Daryll Cullinan",
+    "Hansie Cronje",
+    "Brian McMillan",
+    "David Richardson",
+    "Lance Klusener",
+    "Pat Symcox",
+    "Allan Donald",
+    "Paul Adams"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nayan Mongia": "31036",
+    "Rahul Dravid": "28114",
+    "Sourav Ganguly": "28779",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "VVS Laxman": "30750",
+    "Sunil Joshi": "29725",
+    "Javagal Srinath": "34105",
+    "Anil Kumble": "30176",
+    "Venkatesh Prasad": "32345",
+    "Narendra Hirwani": "29299",
+    "Andrew Hudson": "45458",
+    "Gary Kirsten": "45813",
+    "Herschelle Gibbs": "45224",
+    "Daryll Cullinan": "44489",
+    "Hansie Cronje": "44485",
+    "Brian McMillan": "46214",
+    "David Richardson": "46978",
+    "Lance Klusener": "45821",
+    "Pat Symcox": "47267",
+    "Allan Donald": "44716",
+    "Paul Adams": "43919"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 727,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 329,
+    "wickets": 10,
+    "balls": 488,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 560,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 137,
+    "wickets": 10,
+    "balls": 321,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 1,
+    "runs": 428,
+    "wickets": 10,
+    "balls": 727,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 488,
+    "description": "all out"
+   },
+   {
+    "team": "South Africa",
+    "innings": 3,
+    "runs": 367,
+    "wickets": 3,
+    "balls": 560,
+    "description": "declared"
+   },
+   {
+    "team": "South Africa",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 321,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

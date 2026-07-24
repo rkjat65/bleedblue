@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63246",
+  "espn_league_id": "17070",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1979-11-03"
+  ],
+  "event": {
+   "name": "Australia in India Test Series 1979/80",
+   "match_number": 6
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Jiban Ghosh",
+    "Mohammad Ghouse",
+    "Graeme Porter",
+    "Roger Binny"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Syed Kirmani",
+    "Yashpal Sharma",
+    "Mohinder Amarnath",
+    "Kapil Dev",
+    "Karsan Ghavri",
+    "Shivlal Yadav",
+    "Dilip Doshi"
+   ],
+   "Australia": [
+    "Andrew Hilditch",
+    "Graham Yallop",
+    "Allan Border",
+    "Kim Hughes",
+    "Dav Whatmore",
+    "Rick Darling",
+    "Peter Sleep",
+    "Kevin Wright",
+    "Geoff Dymock",
+    "Rodney Hogg",
+    "Jim Higgs"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Syed Kirmani": "30116",
+    "Yashpal Sharma": "36075",
+    "Mohinder Amarnath": "26225",
+    "Kapil Dev": "30028",
+    "Karsan Ghavri": "28813",
+    "Shivlal Yadav": "36064",
+    "Dilip Doshi": "28107",
+    "Andrew Hilditch": "5656",
+    "Graham Yallop": "8448",
+    "Allan Border": "4174",
+    "Kim Hughes": "5724",
+    "Dav Whatmore": "8210",
+    "Rick Darling": "4900",
+    "Peter Sleep": "7630",
+    "Kevin Wright": "8264",
+    "Geoff Dymock": "4999",
+    "Rodney Hogg": "5685",
+    "Jim Higgs": "5652"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Australia"
+  ],
+  "venue": "Wankhede Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 458,
+    "wickets": 8,
+    "balls": 894,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 371,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 439,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 894,
+    "description": "declared"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 160,
+    "wickets": 10,
+    "balls": 371,
+    "description": "all out"
+   },
+   {
+    "team": "Australia",
+    "innings": 3,
+    "runs": 198,
+    "wickets": 9,
+    "balls": 439,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

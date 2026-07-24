@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62904",
+  "espn_league_id": "17363",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kolkata",
+  "dates": [
+   "1961-12-30"
+  ],
+  "event": {
+   "name": "England in India Test Series 1961/62",
+   "match_number": 4
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Habib Choudhury",
+    "SK Raghunatha Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Nari Contractor",
+    "Vijay Mehra",
+    "Vijay Manjrekar",
+    "Mansur Ali Khan Pataudi",
+    "Polly Umrigar",
+    "Motganhalli Jaisimha",
+    "Chandu Borde",
+    "Salim Durani",
+    "Farokh Engineer",
+    "Ramakant Desai",
+    "Vasant Ranjane"
+   ],
+   "England": [
+    "Peter Richardson",
+    "Eric Russell",
+    "Ken Barrington",
+    "Peter Parfitt",
+    "Ted Dexter",
+    "Bob Barber",
+    "Barry Knight",
+    "David Allen",
+    "Geoff Millman",
+    "Tony Lock",
+    "David Smith"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Nari Contractor": "27667",
+    "Vijay Mehra": "30974",
+    "Vijay Manjrekar": "30936",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Polly Umrigar": "35577",
+    "Motganhalli Jaisimha": "29663",
+    "Chandu Borde": "26962",
+    "Salim Durani": "28118",
+    "Farokh Engineer": "28624",
+    "Ramakant Desai": "28045",
+    "Vasant Ranjane": "33092",
+    "Peter Richardson": "19386",
+    "Eric Russell": "19503",
+    "Ken Barrington": "9014",
+    "Peter Parfitt": "18411",
+    "Ted Dexter": "11886",
+    "Bob Barber": "8982",
+    "Barry Knight": "15910",
+    "David Allen": "8513",
+    "Geoff Millman": "17032",
+    "Tony Lock": "16331",
+    "David Smith": "20236"
+   }
+  },
+  "season": "1961",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Eden Gardens, Kolkata",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 380,
+    "wickets": 10,
+    "balls": 936,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 476,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 252,
+    "wickets": 10,
+    "balls": 608,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 698,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 936,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 212,
+    "wickets": 10,
+    "balls": 476,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 608,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 233,
+    "wickets": 10,
+    "balls": 698,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

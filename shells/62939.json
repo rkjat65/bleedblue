@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62939",
+  "espn_league_id": "17345",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Chennai",
+  "dates": [
+   "1964-01-10"
+  ],
+  "event": {
+   "name": "England in India Test Series 1963/64",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Sunil Banerjee",
+    "I Gopalakrishnan"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Vijay Mehra",
+    "Budhi Kunderan",
+    "Dilip Sardesai",
+    "Vijay Manjrekar",
+    "Mansur Ali Khan Pataudi",
+    "Salim Durani",
+    "Motganhalli Jaisimha",
+    "AG Kripal Singh",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Vasant Ranjane"
+   ],
+   "England": [
+    "Brian Bolus",
+    "Mike Smith",
+    "Phil Sharpe",
+    "Don Wilson",
+    "Ken Barrington",
+    "Barry Knight",
+    "Jim Parks",
+    "Fred Titmus",
+    "John Mortimore",
+    "Micky Stewart",
+    "David Larter"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Vijay Mehra": "30974",
+    "Budhi Kunderan": "30178",
+    "Dilip Sardesai": "33850",
+    "Vijay Manjrekar": "30936",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Salim Durani": "28118",
+    "Motganhalli Jaisimha": "29663",
+    "AG Kripal Singh": "30132",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Vasant Ranjane": "33092",
+    "Brian Bolus": "9142",
+    "Mike Smith": "20255",
+    "Phil Sharpe": "20126",
+    "Don Wilson": "22469",
+    "Ken Barrington": "9014",
+    "Barry Knight": "15910",
+    "Jim Parks": "18435",
+    "Fred Titmus": "21548",
+    "John Mortimore": "17111",
+    "Micky Stewart": "20376",
+    "David Larter": "16205"
+   }
+  },
+  "season": "1964",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "England"
+  ],
+  "venue": "Nehru Stadium, Madras",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 457,
+    "wickets": 7,
+    "balls": 972,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 1144,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 152,
+    "wickets": 9,
+    "balls": 353,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 522,
+    "description": ""
+   },
+   {
+    "team": "England",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 972,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 2,
+    "runs": 317,
+    "wickets": 10,
+    "balls": 1144,
+    "description": "all out"
+   },
+   {
+    "team": "England",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 353,
+    "description": "declared"
+   },
+   {
+    "team": "England",
+    "innings": 4,
+    "runs": 241,
+    "wickets": 5,
+    "balls": 522,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

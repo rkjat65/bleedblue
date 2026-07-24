@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64209",
+  "espn_league_id": "16968",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Albion",
+  "dates": [
+   "1983-03-29"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1982/83",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "David Archer",
+    "Mohamed Baksh"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Gordon Greenidge",
+    "Desmond Haynes",
+    "Viv Richards",
+    "Clive Lloyd",
+    "Faoud Bacchus",
+    "Larry Gomes",
+    "Jeff Dujon",
+    "Malcolm Marshall",
+    "Andy Roberts",
+    "Michael Holding",
+    "Winston Davis"
+   ],
+   "India": [
+    "Sunil Gavaskar",
+    "Ravi Shastri",
+    "Mohinder Amarnath",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Dilip Vengsarkar",
+    "Ashok Malhotra",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Balwinder Sandhu",
+    "Srinivas Venkataraghavan"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Gordon Greenidge": "51901",
+    "Desmond Haynes": "52047",
+    "Viv Richards": "52812",
+    "Clive Lloyd": "52345",
+    "Faoud Bacchus": "51208",
+    "Larry Gomes": "51891",
+    "Jeff Dujon": "51657",
+    "Malcolm Marshall": "52419",
+    "Andy Roberts": "52817",
+    "Michael Holding": "52063",
+    "Winston Davis": "51643",
+    "Sunil Gavaskar": "28794",
+    "Ravi Shastri": "33975",
+    "Mohinder Amarnath": "26225",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Malhotra": "30912",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Balwinder Sandhu": "33816",
+    "Srinivas Venkataraghavan": "35656"
+   }
+  },
+  "season": "1983",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Albion Sports Complex, Albion, Berbice, Guyana",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 255,
+    "wickets": 9,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 282,
+    "wickets": 5,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "complete"
+   }
+  ]
+ },
+ "innings": []
+}

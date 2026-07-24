@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65933",
+  "espn_league_id": "16614",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dunedin",
+  "dates": [
+   "1990-02-28"
+  ],
+  "event": {
+   "name": "India tour of New Zealand 1989/90"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Brian Aldridge",
+    "Steve Dunne"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "John Wright",
+    "Martin Crowe",
+    "Andrew Jones",
+    "Mark Greatbatch",
+    "Ken Rutherford",
+    "Ian Smith",
+    "Shane Thomson",
+    "Gavin Larsen",
+    "Martin Snedden",
+    "Danny Morrison",
+    "Stu Roberts"
+   ],
+   "India": [
+    "Woorkeri Raman",
+    "V.B.Chandrasekhar",
+    "Dilip Vengsarkar",
+    "Mohammad Azharuddin",
+    "Sachin Tendulkar",
+    "Ajay Sharma",
+    "Kapil Dev",
+    "Manoj Prabhakar",
+    "Kiran More",
+    "Atul Wassan",
+    "Venkatapathy Raju"
+   ]
+  },
+  "registry": {
+   "people": {
+    "John Wright": "38757",
+    "Martin Crowe": "36622",
+    "Andrew Jones": "37491",
+    "Mark Greatbatch": "37105",
+    "Ken Rutherford": "38258",
+    "Ian Smith": "38396",
+    "Shane Thomson": "38613",
+    "Gavin Larsen": "37601",
+    "Martin Snedden": "38398",
+    "Danny Morrison": "37730",
+    "Stu Roberts": "38255",
+    "Woorkeri Raman": "33058",
+    "V.B.Chandrasekhar": "27592",
+    "Dilip Vengsarkar": "35654",
+    "Mohammad Azharuddin": "26329",
+    "Sachin Tendulkar": "35320",
+    "Ajay Sharma": "33943",
+    "Kapil Dev": "30028",
+    "Manoj Prabhakar": "32323",
+    "Kiran More": "31038",
+    "Atul Wassan": "35939",
+    "Venkatapathy Raju": "33044"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Carisbrook, Dunedin",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "New Zealand",
+    "innings": 1,
+    "runs": 246,
+    "wickets": 6,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "New Zealand",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 193,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 282,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 138,
+    "wickets": 10,
+    "balls": 193,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

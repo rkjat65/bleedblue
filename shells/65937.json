@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65937",
+  "espn_league_id": "16614",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Hamilton",
+  "dates": [
+   "1990-03-07"
+  ],
+  "event": {
+   "name": "India tour of New Zealand 1989/90"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Graham Cowan",
+    "Rodger McHarg"
+   ]
+  },
+  "outcome": {
+   "winner": "Australia"
+  },
+  "players": {
+   "Australia": [
+    "Geoff Marsh",
+    "Mark Taylor",
+    "Steve Waugh",
+    "David Boon",
+    "Allan Border",
+    "Simon O'Donnell",
+    "Ian Healy",
+    "Peter Taylor",
+    "Merv Hughes",
+    "Greg Campbell",
+    "Terry Alderman"
+   ],
+   "India": [
+    "Woorkeri Raman",
+    "Manoj Prabhakar",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "V.B.Chandrasekhar",
+    "Gursharan Singh",
+    "Kapil Dev",
+    "Ajay Sharma",
+    "Kiran More",
+    "Atul Wassan",
+    "Narendra Hirwani"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Geoff Marsh": "6499",
+    "Mark Taylor": "7924",
+    "Steve Waugh": "8192",
+    "David Boon": "4169",
+    "Allan Border": "4174",
+    "Simon O'Donnell": "6995",
+    "Ian Healy": "5628",
+    "Peter Taylor": "7926",
+    "Merv Hughes": "5726",
+    "Greg Campbell": "4523",
+    "Terry Alderman": "3943",
+    "Woorkeri Raman": "33058",
+    "Manoj Prabhakar": "32323",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "V.B.Chandrasekhar": "27592",
+    "Gursharan Singh": "28884",
+    "Kapil Dev": "30028",
+    "Ajay Sharma": "33943",
+    "Kiran More": "31038",
+    "Atul Wassan": "35939",
+    "Narendra Hirwani": "29299"
+   }
+  },
+  "season": "1990",
+  "team_type": "international",
+  "teams": [
+   "Australia",
+   "India"
+  ],
+  "venue": "Seddon Park, Hamilton",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "Australia",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Australia",
+    "innings": 2,
+    "runs": 212,
+    "wickets": 3,
+    "balls": 288,
+    "description": "target reached"
+   },
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 211,
+    "wickets": 8,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 288,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

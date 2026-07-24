@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63131",
+  "espn_league_id": "17212",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1974-11-22"
+  ],
+  "event": {
+   "name": "India in England Test Series 1974",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "MV Nagendra",
+    "Judah Reuben"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Farokh Engineer",
+    "Hemant Kanitkar",
+    "Gundappa Viswanath",
+    "Mansur Ali Khan Pataudi",
+    "Brijesh Patel",
+    "Eknath Solkar",
+    "Syed Abid Ali",
+    "Srinivas Venkataraghavan",
+    "Erapalli Prasanna",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Roy Fredericks",
+    "Gordon Greenidge",
+    "Alvin Kallicharran",
+    "Viv Richards",
+    "Clive Lloyd",
+    "Deryck Murray",
+    "Keith Boyce",
+    "Arthur Barrett",
+    "Vanburn Holder",
+    "Lance Gibbs",
+    "Andy Roberts"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Farokh Engineer": "28624",
+    "Hemant Kanitkar": "30019",
+    "Gundappa Viswanath": "35712",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Brijesh Patel": "32231",
+    "Eknath Solkar": "34085",
+    "Syed Abid Ali": "26169",
+    "Srinivas Venkataraghavan": "35656",
+    "Erapalli Prasanna": "32357",
+    "Bhagwath Chandrasekhar": "27591",
+    "Roy Fredericks": "51797",
+    "Gordon Greenidge": "51901",
+    "Alvin Kallicharran": "52285",
+    "Viv Richards": "52812",
+    "Clive Lloyd": "52345",
+    "Deryck Murray": "52441",
+    "Keith Boyce": "51229",
+    "Arthur Barrett": "51213",
+    "Vanburn Holder": "52061",
+    "Lance Gibbs": "51883",
+    "Andy Roberts": "52817"
+   }
+  },
+  "season": "1974",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 572,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 260,
+    "wickets": 10,
+    "balls": 503,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 498,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 118,
+    "wickets": 8,
+    "balls": 257,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 289,
+    "wickets": 10,
+    "balls": 572,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 503,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 356,
+    "wickets": 6,
+    "balls": 498,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 257,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

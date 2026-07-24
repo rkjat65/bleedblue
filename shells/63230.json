@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63230",
+  "espn_league_id": "17108",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Delhi",
+  "dates": [
+   "1979-01-24"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1978/79",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Mohammad Ghouse",
+    "Kasturi Ramaswami"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sunil Gavaskar",
+    "Chetan Chauhan",
+    "Dilip Vengsarkar",
+    "Gundappa Viswanath",
+    "Aunshuman Gaekwad",
+    "Kapil Dev",
+    "Syed Kirmani",
+    "Karsan Ghavri",
+    "Dhiraj Parsana",
+    "Srinivas Venkataraghavan",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Basil Williams",
+    "Alvin Greenidge",
+    "Larry Gomes",
+    "Alvin Kallicharran",
+    "Faoud Bacchus",
+    "David Murray",
+    "Sew Shivnarine",
+    "Derick Parry",
+    "Norbert Phillip",
+    "Vanburn Holder",
+    "Sylvester Clarke"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sunil Gavaskar": "28794",
+    "Chetan Chauhan": "27619",
+    "Dilip Vengsarkar": "35654",
+    "Gundappa Viswanath": "35712",
+    "Aunshuman Gaekwad": "28754",
+    "Kapil Dev": "30028",
+    "Syed Kirmani": "30116",
+    "Karsan Ghavri": "28813",
+    "Dhiraj Parsana": "32207",
+    "Srinivas Venkataraghavan": "35656",
+    "Bhagwath Chandrasekhar": "27591",
+    "Basil Williams": "53228",
+    "Alvin Greenidge": "51899",
+    "Larry Gomes": "51891",
+    "Alvin Kallicharran": "52285",
+    "Faoud Bacchus": "51208",
+    "David Murray": "52439",
+    "Sew Shivnarine": "52932",
+    "Derick Parry": "52670",
+    "Norbert Phillip": "52678",
+    "Vanburn Holder": "52061",
+    "Sylvester Clarke": "51477"
+   }
+  },
+  "season": "1979",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Arun Jaitley Stadium, Delhi",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 566,
+    "wickets": 8,
+    "balls": 854,
+    "description": "declared"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 340,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 348,
+    "description": ""
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 854,
+    "description": "declared"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 172,
+    "wickets": 10,
+    "balls": 340,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 179,
+    "wickets": 3,
+    "balls": 348,
+    "description": ""
+   }
+  ]
+ },
+ "innings": []
+}

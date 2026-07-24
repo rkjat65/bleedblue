@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62996",
+  "espn_league_id": "17308",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Mumbai",
+  "dates": [
+   "1966-12-13"
+  ],
+  "event": {
+   "name": "West Indies in India Test Series 1966/67",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Ahmed Mamsa",
+    "B Satyaji Rao"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Dilip Sardesai",
+    "Motganhalli Jaisimha",
+    "Abbas Ali Baig",
+    "Chandu Borde",
+    "Mansur Ali Khan Pataudi",
+    "Ajit Wadekar",
+    "Salim Durani",
+    "Bapu Nadkarni",
+    "Budhi Kunderan",
+    "Srinivas Venkataraghavan",
+    "Bhagwath Chandrasekhar"
+   ],
+   "West Indies": [
+    "Conrad Hunte",
+    "Robin Bynoe",
+    "Rohan Kanhai",
+    "Basil Butcher",
+    "Clive Lloyd",
+    "Garry Sobers",
+    "David Holford",
+    "Jackie Hendriks",
+    "Charlie Griffith",
+    "Wes Hall",
+    "Lance Gibbs"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Dilip Sardesai": "33850",
+    "Motganhalli Jaisimha": "29663",
+    "Abbas Ali Baig": "26817",
+    "Chandu Borde": "26962",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Ajit Wadekar": "35933",
+    "Salim Durani": "28118",
+    "Bapu Nadkarni": "31760",
+    "Budhi Kunderan": "30178",
+    "Srinivas Venkataraghavan": "35656",
+    "Bhagwath Chandrasekhar": "27591",
+    "Conrad Hunte": "52070",
+    "Robin Bynoe": "51242",
+    "Rohan Kanhai": "52287",
+    "Basil Butcher": "51239",
+    "Clive Lloyd": "52345",
+    "Garry Sobers": "52946",
+    "David Holford": "52064",
+    "Jackie Hendriks": "52053",
+    "Charlie Griffith": "51907",
+    "Wes Hall": "52043",
+    "Lance Gibbs": "51883"
+   }
+  },
+  "season": "1966",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "West Indies"
+  ],
+  "venue": "Brabourne Stadium, Mumbai",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 296,
+    "wickets": 10,
+    "balls": 658,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 971,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 316,
+    "wickets": 10,
+    "balls": 671,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 4,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 385,
+    "description": "target reached"
+   },
+   {
+    "team": "West Indies",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 658,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 2,
+    "runs": 421,
+    "wickets": 10,
+    "balls": 971,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 671,
+    "description": "all out"
+   },
+   {
+    "team": "West Indies",
+    "innings": 4,
+    "runs": 192,
+    "wickets": 4,
+    "balls": 385,
+    "description": "target reached"
+   }
+  ]
+ },
+ "innings": []
+}

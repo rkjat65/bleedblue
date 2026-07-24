@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "65184",
+  "espn_league_id": "16252",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kanpur",
+  "dates": [
+   "1996-03-06"
+  ],
+  "event": {
+   "name": "New Zealand tour of India 1995/96"
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Steve Bucknor",
+    "Cyril Mitchley"
+   ],
+   "match_referees": [
+    "John Reid"
+   ],
+   "tv_umpires": [
+    "TM Samarasinghe"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Sachin Tendulkar",
+    "Navjot Sidhu",
+    "Sanjay Manjrekar",
+    "Mohammad Azharuddin",
+    "Vinod Kambli",
+    "Ajay Jadeja",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Javagal Srinath",
+    "Venkatesh Prasad",
+    "Venkatapathy Raju"
+   ],
+   "Zimbabwe": [
+    "Andy Waller",
+    "Grant Flower",
+    "Guy Whittall",
+    "Alistair Campbell",
+    "Andy Flower",
+    "Craig Evans",
+    "Heath Streak",
+    "Paul Strang",
+    "Bryan Strang",
+    "Stephen Peall",
+    "Charlie Lock"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Sachin Tendulkar": "35320",
+    "Navjot Sidhu": "34028",
+    "Sanjay Manjrekar": "30934",
+    "Mohammad Azharuddin": "26329",
+    "Vinod Kambli": "30009",
+    "Ajay Jadeja": "29632",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Javagal Srinath": "34105",
+    "Venkatesh Prasad": "32345",
+    "Venkatapathy Raju": "33044",
+    "Andy Waller": "55840",
+    "Grant Flower": "55429",
+    "Guy Whittall": "55848",
+    "Alistair Campbell": "55301",
+    "Andy Flower": "55427",
+    "Craig Evans": "55408",
+    "Heath Streak": "55761",
+    "Paul Strang": "55758",
+    "Bryan Strang": "55756",
+    "Stephen Peall": "55691",
+    "Charlie Lock": "55560"
+   }
+  },
+  "season": "1996",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Zimbabwe"
+  ],
+  "venue": "Green Park, Kanpur",
+  "overs": 50,
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 247,
+    "wickets": 5,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 298,
+    "description": "all out"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 300,
+    "description": "complete"
+   },
+   {
+    "team": "Zimbabwe",
+    "innings": 2,
+    "runs": 207,
+    "wickets": 10,
+    "balls": 298,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

@@ -1,0 +1,151 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "63631",
+  "espn_league_id": "16390",
+  "quality": "scorecard-only",
+  "scorecard_source": "espn-summary-api",
+  "analytics_excluded": true,
+  "note": "Match-level scorecard from ESPN public summary \u2014 no ball-by-ball; excluded from W/L and player aggregates"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lucknow",
+  "dates": [
+   "1994-01-18"
+  ],
+  "event": {
+   "name": "Sri Lanka in India Test Series 1993/94",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Raman Sharma",
+    "Srinivas Venkataraghavan"
+   ],
+   "match_referees": [
+    "Everton Weekes"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Manoj Prabhakar",
+    "Navjot Sidhu",
+    "Vinod Kambli",
+    "Sachin Tendulkar",
+    "Mohammad Azharuddin",
+    "Sanjay Manjrekar",
+    "Kapil Dev",
+    "Nayan Mongia",
+    "Anil Kumble",
+    "Rajesh Chauhan",
+    "Venkatapathy Raju"
+   ],
+   "Sri Lanka": [
+    "Roshan Mahanama",
+    "Dulip Samaraweera",
+    "Hashan Tillakaratne",
+    "Aravinda de Silva",
+    "Arjuna Ranatunga",
+    "Ruwan Kalpage",
+    "Pubudu Dassanayake",
+    "Dulip Liyanage",
+    "Don Anurasiri",
+    "Pramodya Wickramasinghe",
+    "Muthiah Muralidaran"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Manoj Prabhakar": "32323",
+    "Navjot Sidhu": "34028",
+    "Vinod Kambli": "30009",
+    "Sachin Tendulkar": "35320",
+    "Mohammad Azharuddin": "26329",
+    "Sanjay Manjrekar": "30934",
+    "Kapil Dev": "30028",
+    "Nayan Mongia": "31036",
+    "Anil Kumble": "30176",
+    "Rajesh Chauhan": "27622",
+    "Venkatapathy Raju": "33044",
+    "Roshan Mahanama": "49626",
+    "Dulip Samaraweera": "50422",
+    "Hashan Tillakaratne": "50744",
+    "Aravinda de Silva": "48462",
+    "Arjuna Ranatunga": "50244",
+    "Ruwan Kalpage": "49356",
+    "Pubudu Dassanayake": "48445",
+    "Dulip Liyanage": "49554",
+    "Don Anurasiri": "48120",
+    "Pramodya Wickramasinghe": "50848",
+    "Muthiah Muralidaran": "49636"
+   }
+  },
+  "season": "1994",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "K.D.Singh 'Babu' Stadium, Lucknow",
+  "scorecard_totals": [
+   {
+    "team": "India",
+    "innings": 1,
+    "runs": 511,
+    "wickets": 10,
+    "balls": 971,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 2,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 640,
+    "description": "all out"
+   },
+   {
+    "team": "India",
+    "innings": 3,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 441,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 1,
+    "runs": 0,
+    "wickets": 0,
+    "balls": 971,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 2,
+    "runs": 218,
+    "wickets": 10,
+    "balls": 640,
+    "description": "all out"
+   },
+   {
+    "team": "Sri Lanka",
+    "innings": 3,
+    "runs": 174,
+    "wickets": 10,
+    "balls": 441,
+    "description": "all out"
+   }
+  ]
+ },
+ "innings": []
+}

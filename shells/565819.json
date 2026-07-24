@@ -1,0 +1,146 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "565819",
+  "espn_league_id": "12247"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Visakhapatnam",
+  "dates": [
+   "2012-09-08"
+  ],
+  "event": {
+   "name": "England in India ODI Series 2012/13",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "T20",
+  "officials": {
+   "umpires": [
+    "Sudhir Asnani",
+    "Sundaram Ravi"
+   ],
+   "match_referees": [
+    "Chris Broad"
+   ],
+   "tv_umpires": [
+    "Vineet Kulkarni"
+   ],
+   "reserve_umpires": [
+    "Chettithody Shamshuddin"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Ravichandran Ashwin",
+    "Lakshmipathy Balaji",
+    "Piyush Chawla",
+    "MS Dhoni",
+    "Ashok Dinda",
+    "Gautam Gambhir",
+    "Harbhajan Singh",
+    "Zaheer Khan",
+    "Virat Kohli",
+    "Irfan Pathan",
+    "Suresh Raina",
+    "Virender Sehwag",
+    "Rohit Sharma",
+    "Manoj Tiwary",
+    "Yuvraj Singh"
+   ],
+   "New Zealand": [
+    "Doug Bracewell",
+    "James Franklin",
+    "Martin Guptill",
+    "Ronnie Hira",
+    "Brendon McCullum",
+    "Kyle Mills",
+    "Adam Milne",
+    "Rob Nicol",
+    "Jacob Oram",
+    "Tim Southee",
+    "Ross Taylor",
+    "Daniel Vettori",
+    "BJ Watling",
+    "Kane Williamson"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Ravichandran Ashwin": "26421",
+    "Lakshmipathy Balaji": "26829",
+    "Piyush Chawla": "32966",
+    "MS Dhoni": "28081",
+    "Ashok Dinda": "227712",
+    "Gautam Gambhir": "28763",
+    "Harbhajan Singh": "29264",
+    "Zaheer Khan": "30102",
+    "Virat Kohli": "253802",
+    "Irfan Pathan": "32685",
+    "Suresh Raina": "33335",
+    "Virender Sehwag": "35263",
+    "Rohit Sharma": "34102",
+    "Manoj Tiwary": "35565",
+    "Yuvraj Singh": "36084",
+    "Doug Bracewell": "362541",
+    "James Franklin": "37004",
+    "Martin Guptill": "226492",
+    "Ronnie Hira": "232356",
+    "Brendon McCullum": "37737",
+    "Kyle Mills": "37740",
+    "Adam Milne": "450860",
+    "Rob Nicol": "38058",
+    "Jacob Oram": "38062",
+    "Tim Southee": "232364",
+    "Ross Taylor": "38699",
+    "Daniel Vettori": "38710",
+    "BJ Watling": "38924",
+    "Kane Williamson": "277906"
+   }
+  },
+  "season": "2012",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "New Zealand"
+  ],
+  "venue": "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",
+  "overs": 20
+ },
+ "innings": [
+  {
+   "team": "India",
+   "overs": [
+    {
+     "over": 0,
+     "deliveries": [
+      {
+       "batter": "Unknown",
+       "bowler": "Unknown",
+       "non_striker": "",
+       "runs": {
+        "batter": 0,
+        "extras": 0,
+        "total": 0
+       }
+      }
+     ]
+    }
+   ],
+   "powerplays": [
+    {
+     "from": 0.1,
+     "to": 5.6,
+     "type": "mandatory"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64194",
+  "espn_league_id": "16968"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Bengaluru",
+  "dates": [
+   "1982-09-26"
+  ],
+  "event": {
+   "name": "India in Pakistan ODI Series 1982/83",
+   "match_number": 3
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Dara Dotiwalla",
+    "Kasturi Ramaswami"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [
+    "Roger Binny",
+    "Kris Srikkanth",
+    "Dilip Vengsarkar",
+    "Ashok Malhotra",
+    "Kapil Dev",
+    "Yashpal Sharma",
+    "Sandeep Patil",
+    "Mohinder Amarnath",
+    "Madan Lal",
+    "Syed Kirmani",
+    "Dilip Doshi"
+   ],
+   "Sri Lanka": [
+    "Bandula Warnapura",
+    "Sidath Wettimuny",
+    "Roy Dias",
+    "Duleep Mendis",
+    "Ranjan Madugalle",
+    "Ashantha de Mel",
+    "Ravi Ratnayeke",
+    "Somachandra De Silva",
+    "Mahes Goonatilleke",
+    "Rumesh Ratnayake",
+    "Vinothen John"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Roger Binny": "26948",
+    "Kris Srikkanth": "34103",
+    "Dilip Vengsarkar": "35654",
+    "Ashok Malhotra": "30912",
+    "Kapil Dev": "30028",
+    "Yashpal Sharma": "36075",
+    "Sandeep Patil": "32283",
+    "Mohinder Amarnath": "26225",
+    "Madan Lal": "30873",
+    "Syed Kirmani": "30116",
+    "Dilip Doshi": "28107",
+    "Bandula Warnapura": "50835",
+    "Sidath Wettimuny": "50844",
+    "Roy Dias": "48470",
+    "Duleep Mendis": "49629",
+    "Ranjan Madugalle": "49623",
+    "Ashantha de Mel": "48447",
+    "Ravi Ratnayeke": "50250",
+    "Somachandra De Silva": "48454",
+    "Mahes Goonatilleke": "49097",
+    "Rumesh Ratnayake": "50249",
+    "Vinothen John": "49213"
+   }
+  },
+  "season": "1982",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "Sri Lanka"
+  ],
+  "venue": "M.Chinnaswamy Stadium, Bengaluru",
+  "overs": 50
+ },
+ "innings": []
+}

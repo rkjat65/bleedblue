@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "62915",
+  "espn_league_id": "17363"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Kingston",
+  "dates": [
+   "1962-04-13"
+  ],
+  "event": {
+   "name": "England in India Test Series 1961/62",
+   "match_number": 5
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Owen Davies",
+    "Douglas Sang Hue"
+   ]
+  },
+  "outcome": {
+   "winner": "West Indies"
+  },
+  "players": {
+   "West Indies": [
+    "Conrad Hunte",
+    "Easton McMorris",
+    "Rohan Kanhai",
+    "Joe Solomon",
+    "Garry Sobers",
+    "Frank Worrell",
+    "Wes Hall",
+    "David Allan",
+    "Lance Gibbs",
+    "Lester King",
+    "Alf Valentine"
+   ],
+   "India": [
+    "Motganhalli Jaisimha",
+    "Vijay Mehra",
+    "Salim Durani",
+    "Vijay Manjrekar",
+    "Mansur Ali Khan Pataudi",
+    "Chandu Borde",
+    "Bapu Nadkarni",
+    "Rusi Surti",
+    "Polly Umrigar",
+    "Budhi Kunderan",
+    "Vasant Ranjane"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Conrad Hunte": "52070",
+    "Easton McMorris": "52512",
+    "Rohan Kanhai": "52287",
+    "Joe Solomon": "52944",
+    "Garry Sobers": "52946",
+    "Frank Worrell": "53238",
+    "Wes Hall": "52043",
+    "David Allan": "51104",
+    "Lance Gibbs": "51883",
+    "Lester King": "52293",
+    "Alf Valentine": "53196",
+    "Motganhalli Jaisimha": "29663",
+    "Vijay Mehra": "30974",
+    "Salim Durani": "28118",
+    "Vijay Manjrekar": "30936",
+    "Mansur Ali Khan Pataudi": "32222",
+    "Chandu Borde": "26962",
+    "Bapu Nadkarni": "31760",
+    "Rusi Surti": "34174",
+    "Polly Umrigar": "35577",
+    "Budhi Kunderan": "30178",
+    "Vasant Ranjane": "33092"
+   }
+  },
+  "season": "1962",
+  "team_type": "international",
+  "teams": [
+   "West Indies",
+   "India"
+  ],
+  "venue": "Sabina Park, Kingston, Jamaica"
+ },
+ "innings": []
+}

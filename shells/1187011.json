@@ -1,0 +1,57 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-09",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "1187011",
+  "espn_league_id": "19311"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Lucknow",
+  "dates": [
+   "2020-03-15"
+  ],
+  "event": {
+   "name": "Bangladesh in India T20I Series 2019/20",
+   "match_number": 2
+  },
+  "gender": "male",
+  "match_type": "ODI",
+  "officials": {
+   "umpires": [
+    "Anil Chaudhary",
+    "Richard Kettleborough"
+   ],
+   "match_referees": [
+    "Richie Richardson"
+   ],
+   "tv_umpires": [
+    "Joel Wilson"
+   ],
+   "reserve_umpires": [
+    "Virender Sharma"
+   ]
+  },
+  "outcome": {
+   "winner": "India"
+  },
+  "players": {
+   "India": [],
+   "South Africa": []
+  },
+  "registry": {
+   "people": {}
+  },
+  "season": "2020",
+  "team_type": "international",
+  "teams": [
+   "India",
+   "South Africa"
+  ],
+  "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+  "overs": 50
+ },
+ "innings": []
+}

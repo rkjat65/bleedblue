@@ -1,0 +1,104 @@
+{
+ "meta": {
+  "data_version": "1.2.0",
+  "created": "2026-07-10",
+  "revision": 1,
+  "source": "espn-api-reconstructed",
+  "espn_event_id": "64146",
+  "espn_league_id": "16892"
+ },
+ "info": {
+  "balls_per_over": 6,
+  "city": "Dunedin",
+  "dates": [
+   "1998-12-17"
+  ],
+  "event": {
+   "name": "India in Pakistan Test Series 1984/85",
+   "match_number": 1
+  },
+  "gender": "male",
+  "match_type": "Test",
+  "officials": {
+   "umpires": [
+    "Steve Dunne",
+    "Eddie Nicholls"
+   ],
+   "match_referees": [
+    "Barry Jarman"
+   ],
+   "tv_umpires": [
+    "Evan Watkin"
+   ]
+  },
+  "outcome": {
+   "winner": "New Zealand"
+  },
+  "players": {
+   "New Zealand": [
+    "Geoff Allott",
+    "Nathan Astle",
+    "Matthew Bell",
+    "Chris Cairns",
+    "Stephen Fleming",
+    "Matt Horne",
+    "Craig McMillan",
+    "Dion Nash",
+    "Shayne O'Connor",
+    "Adam Parore",
+    "Daniel Vettori",
+    "Paul Wiseman"
+   ],
+   "India": [
+    "Mohammad Azharuddin",
+    "Rahul Dravid",
+    "Sourav Ganguly",
+    "Harbhajan Singh",
+    "Ajay Jadeja",
+    "Anil Kumble",
+    "Debasis Mohanty",
+    "Nayan Mongia",
+    "Venkatesh Prasad",
+    "Navjot Sidhu",
+    "Javagal Srinath",
+    "Sachin Tendulkar"
+   ]
+  },
+  "registry": {
+   "people": {
+    "Geoff Allott": "36179",
+    "Nathan Astle": "36185",
+    "Matthew Bell": "36294",
+    "Chris Cairns": "36597",
+    "Stephen Fleming": "37000",
+    "Matt Horne": "37250",
+    "Craig McMillan": "37712",
+    "Dion Nash": "38008",
+    "Shayne O'Connor": "38060",
+    "Adam Parore": "38117",
+    "Daniel Vettori": "38710",
+    "Paul Wiseman": "38753",
+    "Mohammad Azharuddin": "26329",
+    "Rahul Dravid": "28114",
+    "Sourav Ganguly": "28779",
+    "Harbhajan Singh": "29264",
+    "Ajay Jadeja": "29632",
+    "Anil Kumble": "30176",
+    "Debasis Mohanty": "31025",
+    "Nayan Mongia": "31036",
+    "Venkatesh Prasad": "32345",
+    "Navjot Sidhu": "34028",
+    "Javagal Srinath": "34105",
+    "Sachin Tendulkar": "35320"
+   }
+  },
+  "season": "1998",
+  "team_type": "international",
+  "teams": [
+   "New Zealand",
+   "India"
+  ],
+  "venue": "Carisbrook, Dunedin"
+ },
+ "innings": []
+}
