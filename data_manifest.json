@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-09-05T10:43:12+00:00",
+  "generated_at": "2026-07-24T18:51:20",
+  "latest_match": "2026-07-11",
+  "earliest_match": "1932-06-25",
+  "catalog_matches": 1652,
+  "analytics_matches": 1095,
+  "quality": {
+    "full": 1095,
+    "partial": 19,
+    "empty": 81,
+    "scorecard-only": 457
+  },
+  "players": 254,
+  "source": "https://cricsheet.org/",
+  "live_scores": false,
+  "complete_historical_coverage": false,
+  "note": "Archive statistics cover available ball data, not complete career totals. Legacy recovered entries retain their original source labels."
+}

@@ -17,7 +17,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent / ".data-cache" / "india"
 ZIP_URL = "https://cricsheet.org/downloads/india_male_json.zip"
 MIN_FULL = 50
 
@@ -48,6 +48,7 @@ def merge_file(src: Path, dest: Path) -> str:
 
 
 def main():
+    ROOT.mkdir(parents=True, exist_ok=True)
     print(f"Downloading {ZIP_URL} ...", flush=True)
     with tempfile.TemporaryDirectory() as tmp:
         zpath = Path(tmp) / "india_male_json.zip"

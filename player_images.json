@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Wikipedia page images (Wikimedia Commons where available)",
-    "note": "Photos used for educational/local dashboard display. Credit Wikipedia/Wikimedia contributors.",
+    "note": "Photos used for educational/local dashboard display. Credit Wikipedia/Wikimedia contributors. Unverified Dhoni portrait omitted; initials are used instead.",
     "base": "/images/players/"
   },
   "players": {
@@ -9,9 +9,6 @@
     "Anil Kumble": "anil-kumble.jpg",
     "Virat Kohli": "virat-kohli.jpg",
     "Kapil Dev": "kapil-dev.jpg",
-    "MS Dhoni": "ms-dhoni.jpg",
-    "MSD": "ms-dhoni.jpg",
-    "Mahendra Singh Dhoni": "ms-dhoni.jpg",
     "Rohit Sharma": "rohit-sharma.jpg",
     "Rahul Dravid": "rahul-dravid.jpg",
     "Sunil Gavaskar": "sunil-gavaskar.jpg",

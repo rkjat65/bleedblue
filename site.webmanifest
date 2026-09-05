@@ -1,14 +1,16 @@
 {
-  "name": "Team India Cricket Records",
+  "name": "Bleed Blue \u2014 International Cricket",
   "short_name": "Bleed Blue",
-  "description": "Official and archive cricket records for Team India — Tests, ODIs & T20Is.",
+  "description": "International cricket scorecards, player profiles and archive statistics for men and women.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0A0A0F",
-  "theme_color": "#0A0A0F",
+  "background_color": "#f5f7fa",
+  "theme_color": "#10233f",
   "lang": "en",
-  "categories": ["sports", "news"],
+  "categories": [
+    "sports"
+  ],
   "icons": [
     {
       "src": "/apple-touch-icon.png",
@@ -26,6 +28,6 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
-    },
+    }
   ]
 }

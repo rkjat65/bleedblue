@@ -471,7 +471,16 @@ function parsePathname(pathname) {
 }
 
 function parseRoute() {
-  // Prefer path (SEO); then session redirect from 404.html; then hash
+  // A static-host fallback must restore the requested detail URL first.
+  try {
+    const redirect = sessionStorage.getItem("spa_redirect");
+    if (redirect) {
+      sessionStorage.removeItem("spa_redirect");
+      const url = new URL(redirect, location.origin);
+      if (url.origin === location.origin) history.replaceState(null, "", url.pathname + url.search + url.hash);
+    }
+  } catch (_) {}
+  if (location.hash) return parseHash() || parsePathname(location.pathname);
   const path = location.pathname || "/";
   if (path && path !== "/" && path !== "/index.html" && !path.endsWith("/index.html")) {
     return parsePathname(path + location.search);
@@ -493,7 +502,7 @@ function parseRoute() {
 
 function buildPath(view, params = {}) {
   let path = "/";
-  if (view === "official" || !view) path = "/";
+  if (view === "official" || !view) path = "/official";
   else if (view === "player" && params.name) path = `/player/${encodeURIComponent(params.name)}`;
   else if (view === "match" && params.id) path = `/match/${encodeURIComponent(params.id)}`;
   else if (view === "series-detail" && params.name) path = `/series/${encodeURIComponent(params.name)}`;
@@ -592,6 +601,7 @@ function showView(name, params = {}, opts = {}) {
 
   // Hide SEO bootstrap once app is interactive
   document.getElementById("seoBootstrap")?.classList.add("seo-hidden");
+  document.getElementById("seoBootstrap")?.setAttribute("aria-hidden", "true");
 
   if (section === "official") renderOfficial();
   if (section === "overview") renderOverview();
@@ -1043,7 +1053,7 @@ function renderSeriesDetail(name) {
             ${matches
               .map(
                 (m) => `<tr class="clickable-row" data-match="${escapeAttr(m.id)}">
-              <td class="mono match-link">${m.date}</td>
+              <td class="mono match-link"><a href="/match/${encodeURIComponent(m.id)}" data-match="${escapeAttr(m.id)}">${m.date}</a></td>
               <td><span class="badge badge-fmt">${m.format}</span></td>
               <td class="player match-link">${escapeHtml(m.opponent)}</td>
               <td><span class="badge ${RESULT_BADGE[m.result] || ""}">${resultLabel(m.result)}</span></td>
@@ -1115,13 +1125,13 @@ function renderMatchDetail(id) {
     .join("") || `<div class="total-pill muted">No opposition totals</div>`;
 
   const eventLink = m.event
-    ? `<button type="button" class="inline-link" onclick="showView('series-detail',{name:${JSON.stringify(m.event)}})">${escapeHtml(m.event)}</button>`
+    ? `<button type="button" class="inline-link" data-series="${escapeAttr(m.event)}">${escapeHtml(m.event)}</button>`
     : "—";
 
   root.innerHTML = `
     <div class="detail-back">
       <button type="button" class="link-btn" onclick="showView('matches')">← Match browser</button>
-      ${m.event ? `<button type="button" class="link-btn" onclick="showView('series-detail',{name:${JSON.stringify(m.event)}})">Series →</button>` : ""}
+      ${m.event ? `<button type="button" class="link-btn" data-series="${escapeAttr(m.event)}">Series →</button>` : ""}
     </div>
     <div class="match-header">
       <div class="match-header-main">
@@ -1217,7 +1227,7 @@ function renderPlayerProfile(name) {
     root.innerHTML = `
       <div class="detail-back"><button type="button" class="link-btn" onclick="history.back()">← Back</button></div>
       <div class="card"><p>No archive stats found for “${escapeHtml(name)}”.</p>
-      <p class="footnote">Official career leaders may pre-date ball-by-ball coverage. Try <button type="button" class="inline-link" onclick="showView('search',{q:${JSON.stringify(name)}})">Search</button>.</p></div>`;
+      <p class="footnote">Official career leaders may pre-date ball-by-ball coverage. Try <button type="button" class="inline-link" onclick="showView('search',{q:${escapeAttr(JSON.stringify(name))}})">Search</button>.</p></div>`;
     return;
   }
 
@@ -1336,7 +1346,7 @@ function renderPlayerProfile(name) {
                 ? matches
                     .map(
                       (m) => `<tr class="clickable-row" data-match="${escapeAttr(m.id)}">
-              <td class="mono match-link">${m.date}</td>
+              <td class="mono match-link"><a href="/match/${encodeURIComponent(m.id)}" data-match="${escapeAttr(m.id)}">${m.date}</a></td>
               <td><span class="badge badge-fmt">${m.format}</span></td>
               <td class="player match-link">${escapeHtml(m.opponent)}</td>
               <td><span class="badge ${RESULT_BADGE[m.result] || ""}">${resultLabel(m.result)}</span></td>
@@ -1596,7 +1606,7 @@ function renderOverview() {
     .map(
       (m) => `
     <tr class="clickable-row" data-match="${escapeAttr(m.id)}">
-      <td class="mono match-link">${m.date}</td>
+      <td class="mono match-link"><a href="/match/${encodeURIComponent(m.id)}" data-match="${escapeAttr(m.id)}">${m.date}</a></td>
       <td><span class="badge badge-fmt">${m.format}</span></td>
       <td class="player match-link">${escapeHtml(m.opponent)}</td>
       <td><span class="badge ${RESULT_BADGE[m.result] || ""}">${resultLabel(m.result)}</span></td>
@@ -2139,7 +2149,7 @@ function renderMatches() {
   $("#matchesTable tbody").innerHTML = slice
     .map(
       (m) => `<tr class="clickable-row" data-match="${escapeAttr(m.id)}">
-      <td class="mono match-link">${m.date}</td>
+      <td class="mono match-link"><a href="/match/${encodeURIComponent(m.id)}" data-match="${escapeAttr(m.id)}">${m.date}</a></td>
       <td><span class="badge badge-fmt">${m.format}</span></td>
       <td class="player match-link">${escapeHtml(m.opponent)}</td>
       <td><span class="badge ${RESULT_BADGE[m.result] || ""}">${resultLabel(m.result)}</span></td>
@@ -2313,7 +2323,7 @@ function renderMissing() {
 
 /* ── Events / delegation ── */
 function bindEvents() {
-  $$(".nav-item").forEach((btn) => {
+  $$(".nav-item[data-view]").forEach((btn) => {
     btn.addEventListener("click", () => showView(btn.dataset.view));
   });
 
@@ -2408,7 +2418,7 @@ function bindEvents() {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => {
       const q = $("#globalSearch").value || "";
-      setHash("search", q ? { q } : {});
+      setRoute("search", q ? { q } : {});
       renderSearch(q);
     }, 180);
   });

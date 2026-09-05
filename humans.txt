@@ -1,6 +1,6 @@
 /* TEAM */
 Site: cricket.rkjat.in
-Project: Bleed Blue — Team India cricket records
+Project: Bleed Blue — International cricket archive
 GitHub: https://github.com/rkjat65/bleedblue
 Related: https://crickrida.rkjat.in
 

@@ -14,11 +14,8 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent / ".data-cache" / "india"
 SHELLS_DIR = Path(__file__).resolve().parent / "shells"
-if not list(ROOT.glob("*.json")):
-    # maybe running from parent already
-    ROOT = Path(__file__).resolve().parent
 OUT = Path(__file__).resolve().parent / "stats.json"
 OFFICIAL_PATH = Path(__file__).resolve().parent / "official_records.json"
 MIN_FULL_DELIVERIES = 50
@@ -278,7 +275,10 @@ def main():
     files = sorted(ROOT.glob("*.json"))
     shell_files = sorted(SHELLS_DIR.glob("*.json")) if SHELLS_DIR.exists() else []
     files = [f for f in files if f.name != "stats.json" and f.stem.isdigit()]
-    files += [f for f in shell_files if f.stem.isdigit()]
+    if not files:
+        raise SystemExit("No raw India match files found. Run refresh_cricsheet.py first. Existing stats.json was not changed.")
+    raw_ids = {f.stem for f in files}
+    files += [f for f in shell_files if f.stem.isdigit() and f.stem not in raw_ids]
     if not files:
         print(f"No match JSON files found in {ROOT}", file=sys.stderr)
         sys.exit(1)

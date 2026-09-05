@@ -1,11 +1,50 @@
-# Bleed Blue
+# Bleed Blue — International Cricket
 
-**Full-fledged Team India cricket records** — official career totals, ICC trophies & tournaments, captaincy, series browser, match centre, player profiles, global search, and ball-by-ball archive analytics.
+A responsive international cricket portal with a separate India records hub. IPL remains on [Crickrida](https://crickrida.rkjat.in).
 
-**Live:** [https://cricket.rkjat.in](https://cricket.rkjat.in)  
-**Repo:** [github.com/rkjat65/bleedblue](https://github.com/rkjat65/bleedblue)
+## Run locally
 
-Static site — **no backend**. Host on GitHub Pages or any static host. Design inspired by [Crickrida](https://crickrida.rkjat.in).
+```powershell
+python serve.py
+```
+
+Open http://127.0.0.1:8765. The server binds to loopback and supports direct India player, match and series URLs. To use another port: `python serve.py --port 8766`.
+
+## International portal
+
+- `/`: editorial homepage, recent archive results and format summaries.
+- `/international/`: match centre with team, gender, format, year and text filters, pagination and CSV export. Filter URLs can be shared and refreshed.
+- `/international/?match=ID`: both teams' innings, batting and bowling cards, playing XIs, fall of wickets, runs by over and source link.
+- `/international/#series`, `#teams`, `#venues`, `#records`: browse the selected archive by competition, team, ground or innings record.
+- `/players/`: searchable player directory, format/gender filters, sorting and side-by-side comparison.
+- `/players/?id=ID`: player profile, format statistics and recent appearances.
+- `/international/#coverage`: source dates, scope and gaps.
+- `/overview/`: original India archive, now with consistent navigation and styling.
+
+## Dataset and refresh
+
+The import on 5 September 2026 contains **9,769 international matches, 8,287 player profiles and 112 team labels**, including representative XIs. It includes 6,995 men's and 2,774 women's matches: 918 Tests, 3,178 ODIs and 5,673 T20Is. Available dates run from 19 December 2001 to 1 September 2026.
+
+```powershell
+python tools/build_international.py --refresh
+python -m unittest discover -s tests -v
+```
+
+The importer downloads all six public Cricsheet international JSON archives, caches ZIPs in ignored `.data-cache/`, derives both teams' scorecards and player aggregates, and writes `data/`. Run without `--refresh` to rebuild from the cached downloads. No API key, Node install or database is required. Source match files are never executed. International data does not overwrite the legacy India dataset.
+
+`data/home.json` is a small homepage payload. `data/international.json` contains the searchable catalog and players. Scorecards are split into lazy-loaded shards under `data/scorecards/`. `data/manifest.json` records counts and source URLs.
+
+**Coverage:** this includes all available source files, not all cricket history. Cricsheet has historical gaps and withholds Afghanistan matches. The portal is an archive, not a live-score, fixture, rankings or news feed. Player statistics cover supplied deliveries and exclude super overs. The original India career snapshots remain separately dated and have not been independently reverified by the international import. No synthetic matches or commentary were added.
+
+## Verification
+
+The test suite validates source counts, unique IDs, scorecard and playing-XI references, innings totals, bowling balls, wickets, player aggregates and the small homepage summary. Browser checks cover match filters, innings switching, search, player comparison and responsive layouts.
+
+## Static hosting
+
+Serve the repository root on a static host. The new portal uses static paths and query-string details. The existing `404.html` hands legacy India detail routes to the archive router for GitHub Pages. The production site is published from the main branch to https://cricket.rkjat.in/.
+
+## Legacy India archive notes
 
 ## Features
 
@@ -25,7 +64,7 @@ Static site — **no backend**. Host on GitHub Pages or any static host. Design 
 ## Quick start (local)
 
 ```bash
-python3 -m http.server 8765
+python serve.py
 ```
 
 Open **http://127.0.0.1:8765** (or `#view=official`).
@@ -58,7 +97,7 @@ robots.txt / sitemap.xml / favicon*
 
 ## Rebuild archive stats (optional)
 
-If Cricsheet-style match JSON files live in the **parent** folder:
+The legacy India-only rebuild uses raw files under `.data-cache/india/`. It cannot restore recovered full-ball files that were not committed to this repository. Keep the existing `stats.json` unless deliberately rebuilding that older archive:
 
 ```bash
 python3 refresh_cricsheet.py   # merge latest Cricsheet India zip

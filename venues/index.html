@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="/vendor/chart.umd.min.js" defer></script>
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">
   {
@@ -151,7 +151,7 @@
     ]
   }
   </script>
-</head>
+<link rel="stylesheet" href="/professional.css" /></head>
 <body>
   <div class="bg-orb orb-1"></div>
   <div class="bg-orb orb-2"></div>
@@ -164,7 +164,7 @@
     </button>
     <a href="/" class="brand brand-sm" data-nav="official">
       <img src="/logo.svg" alt="" class="brand-logo" width="36" height="36" />
-      <strong>Team India</strong>
+      <strong>BLEED BLUE<span class="brand-dot">.</span></strong>
     </a>
     <span class="mobile-meta" id="mobileMeta"></span>
   </div>
@@ -173,10 +173,10 @@
     <!-- ═══ SIDE PANEL ═══ -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-top">
-        <a href="/" class="brand" data-nav="official">
+        <a href="/" class="brand">
           <img src="/logo.svg" alt="" class="brand-logo" width="36" height="36" />
           <div class="brand-text">
-            <strong>Team India</strong>
+            <strong>BLEED BLUE<span class="brand-dot">.</span></strong>
             <span>Cricket Records</span>
           </div>
         </a>
@@ -184,11 +184,11 @@
       </div>
 
       <nav class="side-nav" id="sideNav">
-        <div class="nav-group-label">Main</div>
+        <a class="nav-item" href="/">⌂ &nbsp; Home</a><a class="nav-item" href="/players/">♙ &nbsp; Players & comparison</a><div class="nav-group-label">Explore India</div>
         <button class="nav-item nav-item-official active" data-view="official">
           <span class="nav-icon">★</span>
           <span>Official Records</span>
-          <span class="nav-badge">Verified</span>
+          <span class="nav-badge">Snapshot</span>
         </button>
         <button class="nav-item" data-view="overview">
           <span class="nav-icon">◈</span>
@@ -255,7 +255,7 @@
       <div class="sidebar-foot">
         <div class="sidebar-meta" id="headerMeta">Loading…</div>
         <a class="sidebar-link" href="https://cricket.rkjat.in" target="_blank" rel="noopener">cricket.rkjat.in</a>
-        <a class="sidebar-link" href="https://crickrida.rkjat.in" target="_blank" rel="noopener">Inspired by Crickrida →</a>
+        <a class="sidebar-link" href="/coverage/">Data coverage & sources →</a>
       </div>
     </aside>
 
@@ -889,5 +889,6 @@
   </div>
 
   <script src="/app.js" defer></script>
+  <script src="/enhancements.js" defer></script>
 </body>
 </html>
