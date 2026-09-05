@@ -1,0 +1,149 @@
+{
+  "checked_at": "2026-09-05T16:51:42+00:00",
+  "scopes": [
+    {
+      "class_id": 1,
+      "discipline": "batting",
+      "pages": 66,
+      "expected": 3278,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 1,
+      "discipline": "bowling",
+      "pages": 66,
+      "expected": 3278,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 1,
+      "discipline": "fielding",
+      "pages": 66,
+      "expected": 3278,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 2,
+      "discipline": "batting",
+      "pages": 63,
+      "expected": 3149,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 2,
+      "discipline": "bowling",
+      "pages": 63,
+      "expected": 3149,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 2,
+      "discipline": "fielding",
+      "pages": 63,
+      "expected": 3149,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 3,
+      "discipline": "batting",
+      "pages": 102,
+      "expected": 5077,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 3,
+      "discipline": "bowling",
+      "pages": 102,
+      "expected": 5077,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 3,
+      "discipline": "fielding",
+      "pages": 102,
+      "expected": 5077,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 8,
+      "discipline": "batting",
+      "pages": 15,
+      "expected": 735,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 8,
+      "discipline": "bowling",
+      "pages": 15,
+      "expected": 735,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 8,
+      "discipline": "fielding",
+      "pages": 15,
+      "expected": 735,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 9,
+      "discipline": "batting",
+      "pages": 30,
+      "expected": 1477,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 9,
+      "discipline": "bowling",
+      "pages": 30,
+      "expected": 1477,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 9,
+      "discipline": "fielding",
+      "pages": 30,
+      "expected": 1477,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 10,
+      "discipline": "batting",
+      "pages": 66,
+      "expected": 3265,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 10,
+      "discipline": "bowling",
+      "pages": 66,
+      "expected": 3265,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 10,
+      "discipline": "fielding",
+      "pages": 66,
+      "expected": 3265,
+      "complete": true,
+      "error": null
+    }
+  ]
+}

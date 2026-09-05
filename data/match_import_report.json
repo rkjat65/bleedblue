@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-09-05T16:49:25+00:00",
+  "scopes": [
+    {
+      "class_id": 1,
+      "expected": 5308,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 2,
+      "expected": 10396,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 3,
+      "expected": 8478,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 8,
+      "expected": 310,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 9,
+      "expected": 3220,
+      "complete": true,
+      "error": null
+    },
+    {
+      "class_id": 10,
+      "expected": 6184,
+      "complete": true,
+      "error": null
+    }
+  ]
+}

@@ -23,18 +23,27 @@ Open http://127.0.0.1:8765. The server binds to loopback and supports direct Ind
 
 ## Dataset and refresh
 
-The import on 5 September 2026 contains **9,769 international matches, 8,287 player profiles and 112 team labels**, including representative XIs. It includes 6,995 men's and 2,774 women's matches: 918 Tests, 3,178 ODIs and 5,673 T20Is. Available dates run from 19 December 2001 to 1 September 2026.
+The 5 September 2026 snapshot includes **12,411 sourced career profiles** across all 18 batting, bowling and fielding tables, and **16,958 match records** dating back to 1877. It adds 4,167 historical players and 7,189 historical results to the original archive. Another 43 archive identities have no matched career table row; they remain searchable and are listed in `data/unmatched_players.json`.
+
+Three independent layers power the portal. Player profiles and comparisons default to ESPNcricinfo Statsguru career records, linked to Cricsheet IDs through the public player register. Historical match results extend the catalog beyond available delivery files. Cricsheet provides 9,769 local ball-data scorecards and their separately selectable player aggregates.
 
 ```powershell
+python -m pip install -r tools/requirements.txt
 python tools/build_international.py --refresh
+python tools/import_careers.py
+python tools/import_match_catalog.py
+python tools/build_record_layers.py
 python -m unittest discover -s tests -v
+node tests/test_record_layers.js
 ```
 
-The importer downloads all six public Cricsheet international JSON archives, caches ZIPs in ignored `.data-cache/`, derives both teams' scorecards and player aggregates, and writes `data/`. Run without `--refresh` to rebuild from the cached downloads. No API key, Node install or database is required. Source match files are never executed. International data does not overwrite the legacy India dataset.
+Career and historical importers cache parsed source pages in ignored `.data-cache/careers/` and follow source pagination. Rerunning resumes cached scopes, including failed requests. Use `import_careers.py --refresh` to replace career snapshots. For a historical refresh, move the existing `matches-*.json` cache files into a backup directory before rerunning. Do not mix pages from different refreshes. Review all scope-completion flags before publishing.
 
-`data/home.json` is a small homepage payload. `data/international.json` contains the searchable catalog and players. Scorecards are split into lazy-loaded shards under `data/scorecards/`. `data/manifest.json` records counts and source URLs.
+`data/career_manifest.json` and `data/historical_manifest.json` give current counts, scope status and provenance. `data/careers.json` stores batting, bowling and fielding career records; `data/historical_matches.json` contains additional result-only matches. The original `data/international.json` and lazy-loaded `data/scorecards/` remain the ball-data layer. Small home payloads avoid downloading the full catalogs on the homepage.
 
-**Coverage:** this includes all available source files, not all cricket history. Cricsheet has historical gaps and withholds Afghanistan matches. The portal is an archive, not a live-score, fixture, rankings or news feed. Player statistics cover supplied deliveries and exclude super overs. The original India career snapshots remain separately dated and have not been independently reverified by the international import. No synthetic matches or commentary were added.
+Missing source values remain null. Archive figures are never substituted for or added to career totals. All-format averages use summed numerators and denominators; missing denominators produce a dash. Stable source IDs prevent name-based accidental player merges. Source tables can change between requests; conflicting match counts are flagged. A source-complete career import does not imply a complete local match-by-match history.
+
+Historical result entries link to their source scorecard but do not invent innings totals, lineups or commentary. The site is not a live-score, future-fixture, rankings or news service. Legacy India data remains separately dated and is not combined with these career records.
 
 ## Verification
 
