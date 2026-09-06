@@ -22,7 +22,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix='cricket-wicket-refresh-') as work:
         stage = Path(work)
         shutil.copytree(ROOT / 'tools', stage / 'tools')
-        (stage / 'data').mkdir()
+        shutil.copytree(ROOT / 'data',stage / 'data')
         shutil.copytree(ROOT / 'web', stage / 'web')
         for script, flags in [('build_international.py', ['--refresh']),
                               ('import_careers.py', ['--refresh']),
@@ -32,6 +32,23 @@ def main():
             scopes = json.loads((stage / 'data' / report).read_text())['scopes']
             if len(scopes) != expected or not all(s.get('complete') for s in scopes):
                 raise RuntimeError(f'Incomplete source import: {report}. Current data retained.')
+        # Reuse verified historical data and refresh only absent/stale summaries.
+        sys.path.insert(0,str(stage/'tools'))
+        from backfill_free_data import write
+        from import_careers import CLASSES
+        people={p['id']:p for p in json.loads((stage/'data/careers.json').read_text(encoding='utf-8'))['players']}
+        for r in json.loads((stage/'data/career_enrichment.json').read_text(encoding='utf-8'))['records']:
+            if r['id'] not in people:continue
+            cls=next(k for k,v in CLASSES.items() if v==(r['format'],people[r['id']]['gender']))
+            write(stage/'.data-cache/free-backfill/careers'/f'{r["espn_id"]}-{cls}.json',r)
+        for r in json.loads((stage/'data/bowling_enrichment.json').read_text(encoding='utf-8'))['records']:
+            if r['id'] not in people:continue
+            cls=next(k for k,v in CLASSES.items() if v==(r['format'],people[r['id']]['gender']))
+            write(stage/'.data-cache/free-backfill/bowling'/f'{r["espn_id"]}-{cls}.json',r)
+        for file in (stage/'data/historical_scorecards').glob('*.json'):
+            for mid,c in json.loads(file.read_text(encoding='utf-8')).items():write(stage/'.data-cache/free-backfill/scorecards'/f'{mid}.json',c)
+        for script,args in [('backfill_free_data.py',['careers','--workers','3']),('backfill_free_data.py',['bowling','--workers','3']),('backfill_free_data.py',['scorecards','--workers','3']),('reconcile_careers.py',[]),('backfill_grounds.py',[])]:
+            subprocess.run([sys.executable,str(stage/'tools'/script),*args],cwd=stage,check=True)
         after = counts(stage)
         for key, value in before.items():
             if after[key] < value * .99:

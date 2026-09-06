@@ -4,6 +4,7 @@ import argparse, hashlib, html, json, math, re, shutil, unicodedata
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
+from cricket_scope import publication_data, FULL_MEMBERS, load_cards, complete_career_counts,career_scorecards
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '_site'
@@ -20,7 +21,7 @@ for country, cities in {'India':'Mumbai|Chennai|Delhi|New Delhi|Kolkata|Bengalur
 
 def read(path): return json.loads((ROOT / path).read_text(encoding='utf-8'))
 def esc(v): return html.escape(str(v if v is not None else ''), quote=True)
-def num(v): return '—' if v is None else f'{v:,}' if isinstance(v, int) else str(v)
+def num(v): return '—' if v is None else f'{v:,}' if isinstance(v, int) else f'{v:.2f}' if isinstance(v,float) else str(v)
 def slug(v): return re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD', str(v)).encode('ascii','ignore').decode().lower()).strip('-') or 'unknown'
 def fullname(p): return ALIASES.get(p['name'],p['name'])
 
@@ -38,14 +39,65 @@ def stable_routes(proposed, previous, kind):
 def dump(path, value):
     target=OUT/path.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(value,separators=(',',':'),ensure_ascii=False),encoding='utf-8')
+TEXT_COLUMNS={'Player','Batter','Bowler','Team','Teams','Country','Gender','Format','Match','Result','Coverage','Dismissal','Opponent','Ground','Venue','Metric','Date','Year','First player','Second player'}
+HEADER_NAMES={'Mat':'Matches','Inns':'Innings','NO':'Not outs','BF':'Balls faced','Avg':'Batting average','SR':'Strike rate','HS':'Highest score','Ct':'Catches','St':'Stumpings','Dis':'Dismissals','BBI':'Best bowling in an innings','BBM':'Best bowling in a match','Econ':'Runs conceded per over','M':'Maidens','R':'Runs','B':'Balls faced','O':'Overs','W':'Wickets','Min':'Minutes at the crease'}
+
 def table(headings, rows, ident='', caption=''):
-    return f'<div class="table-wrap"><table {f"id={esc(ident)}" if ident else ""}><caption>{esc(caption)}</caption><thead><tr>'+''.join(f'<th scope="col">{esc(h)}</th>' for h in headings)+'</tr></thead><tbody>'+''.join('<tr>'+''.join(f'<{ "th scope=\"row\"" if i==0 else "td"}>{v}</{"th" if i==0 else "td"}>' for i,v in enumerate(row))+'</tr>' for row in rows)+'</tbody></table></div>'
+    kinds=['text' if h in TEXT_COLUMNS or (i==0 and h!='Rank') else 'number' for i,h in enumerate(headings)]
+    css='score-table'+(' scorecard-table '+('batting-table' if headings[0]=='Batter' else 'bowling-table') if headings[0] in ('Batter','Bowler') else '')+(' has-rank' if headings[0]=='Rank' else '')
+    labels={**HEADER_NAMES,**({'Avg':'Bowling average','SR':'Balls per wicket'} if caption.startswith('Bowling career') else {})}
+    head=''.join('<th scope="col" class="cell-'+k+'" title="'+esc(labels.get(h,h))+'">'+esc(h)+'</th>' for h,k in zip(headings,kinds))
+    body=''.join('<tr>'+''.join('<'+('th scope="row"' if i==0 else 'td')+' class="cell-'+kinds[i]+'">'+str(v)+'</'+('th' if i==0 else 'td')+'>' for i,v in enumerate(row))+'</tr>' for row in rows)
+    return '<div class="table-wrap" tabindex="0" role="region" aria-label="'+esc(caption or 'Cricket statistics')+'"><table class="'+css+'"'+(' id="'+esc(ident)+'"' if ident else '')+'><caption>'+esc(caption)+'</caption><thead><tr>'+head+'</tr></thead><tbody>'+body+'</tbody></table></div>'
+
+def rate(top,bottom,factor=1):
+    if top is None or bottom is None or bottom<=0:return None
+    from decimal import Decimal,ROUND_DOWN
+    return float((Decimal(top)*factor/Decimal(bottom)).quantize(Decimal('.01'),rounding=ROUND_DOWN))
+
+def decimal_stat(value):return '—' if value is None else f'{value:.2f}'
+
+def stat_value(s,key):
+    v=s.get(key)
+    if v is None:
+        denominator={'avg':'outs','sr':'balls','bowlAvg':'wickets','bowlSr':'wickets','econ':'legal'}.get(key)
+        if denominator and (s.get(denominator)==0 or (key in ('avg','sr') and 'innings' in s and not s['innings'] and s.get('runs') is None) or (key in ('bowlAvg','bowlSr','econ') and 'bowling_innings' in s and not s['bowling_innings'] and s.get('wickets') is None)):return '<span class="not-applicable" title="No applicable denominator">N/A</span>'
+        return '<span class="missing" title="Not recorded in the verified source">—</span>'
+    if key=='dismissals_per_innings':return f'{v:.3f}'
+    return esc(decimal_stat(v) if key in ('avg','sr','bowlAvg','bowlSr','econ','dismissals_per_innings') else num(v))
+
+def dismissal_text(b,people):
+    kind=b.get('dismissal_kind')
+    if not kind:return b['dismissal']
+    bowler=people.get(b.get('dismissal_bowler'),{}).get('name','')
+    fielders=', '.join(people.get(pid,{}).get('name','substitute') for pid in b.get('fielders',[]))
+    if kind=='caught and bowled':return 'c & b '+bowler
+    if kind=='caught':return 'c '+(fielders or 'fielder not recorded')+' b '+bowler
+    if kind=='stumped':return 'st '+(fielders or 'keeper')+' b '+bowler
+    if kind=='bowled':return 'b '+bowler
+    if kind in ('lbw','hit wicket'):return kind+' b '+bowler
+    if kind=='run out':return 'run out'+(' ('+fielders+')' if fielders else '')
+    return kind
+
+def render_innings(inn,index,people,pp):
+    bpo=inn.get('balls_per_over',6)
+    def overs(b):return esc(str(b['overs_display'])) if b.get('overs_display') not in (None,'None') else esc(str(b['overs'])) if isinstance(b.get('overs'),(int,float,str)) else ('—' if b.get('balls') is None else str(b['balls']//bpo)+'.'+str(b['balls']%bpo))
+    total=str(inn['runs'])+('/'+str(inn['wickets']) if inn['wickets'] is not None and inn['wickets']<10 else '')+('d' if inn.get('declared') else '')
+    body='<section id="innings-'+str(index)+'" class="panel innings-panel"><div class="innings-heading"><div><span class="eyebrow">INNINGS '+str(index)+(' · SUPER OVER' if inn.get('super_over') else '')+'</span><h2>'+esc(inn['team'])+'</h2></div><strong class="innings-total">'+esc(total)+'</strong></div>'
+    body+=table(['Batter','Dismissal','R','B','4s','6s','SR'],[[a(pp[b['id']],people[b['id']]['name']),esc(dismissal_text(b,people)),esc(num(b['runs']))+('' if b['out'] else '<span class="notout">*</span>'),num(b['balls']),num(b['fours']),num(b['sixes']),decimal_stat(b.get('sr') if b.get('sr') is not None else rate(b['runs'],b['balls'],100))] for b in inn['batting']],caption='Batting scorecard')
+    body+='<div class="innings-summary"><span>Extras <strong>'+num(inn['extras'])+'</strong></span><span>Overs <strong>'+overs(inn)+'</strong></span></div>'
+    body+=table(['Bowler','O','M','R','W','Econ','WD','NB'],[[a(pp[b['id']],people[b['id']]['name']),overs(b),num(b.get('maidens')),num(b['runs']),num(b['wickets']),decimal_stat(b.get('econ') if b.get('econ') is not None else rate(b['runs'],b['balls'],bpo)),num(b.get('wides')),num(b.get('noballs'))] for b in inn['bowling']],caption='Bowling scorecard')
+    if inn['fall']:body+='<details class="innings-details"><summary>Fall of wickets</summary><p>'+esc(' · '.join(f'{w["runs"]}/{w["wicket"]} ({w["player"]})' for w in inn['fall']))+'</p></details>'
+    if inn['overs']:
+        peak=max([o['runs'] for o in inn['overs']]+[1]);body+='<details class="innings-details"><summary>Over-by-over progression</summary><div class="spark" role="img" aria-label="Runs by over">'+''.join(f'<i class="{"wicket" if o["wickets"] else ""}" style="height:{max(2,o["runs"] / peak*100)}%" title="Over {o["over"]}: {o["runs"]} runs; {o["wickets"]} wickets"></i>' for o in inn['overs'])+'</div>'+table(['Over','Runs','Wickets','Total'],[[str(o[k]) for k in ['over','runs','wickets','total']] for o in inn['overs']])+'</details>'
+    return body+'</section>'
+
 def a(path,label): return f'<a href="{esc(path)}">{esc(label)}</a>'
 def pill(s): return f'<span class="pill">{esc(s)}</span>'
 def ratios(s):
     s=dict(s)
     for key,top,bottom,factor in [('avg','runs','outs',1),('sr','runs','balls',100),('bowlAvg','conceded','wickets',1),('econ','conceded','legal',6)]:
-        s[key]=round(s[top]/s[bottom]*factor,2) if s.get(top) is not None and s.get(bottom,0) and s[bottom]>0 else None
+        s[key]=rate(s.get(top),s.get(bottom),factor)
     return s
 def aggregate(formats):
     values=list(formats.values())
@@ -69,7 +121,7 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     if extra:schema.update(extra)
     ld=json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')
     nav=[('/matches/','Matches'),('/players/','Players'),('/teams/','Teams'),('/records/','Records'),('/compare/','Compare'),('/series/','Series')]
-    document=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#10233f"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{BASE}/apple-touch-icon.png"><meta name="twitter:card" content="summary"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}</nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button><a class="search-link" href="/search/">Search</a></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>International cricket careers, match records and analysis.</p><div class="footer-links">{a('/methodology/','Coverage & methodology')}{a('/insights/','Statistical insights')}{a('/saved/','Saved research')}{a('/corrections/','Report a correction')}{a('/overview/','India archive')}{a('https://crickrida.rkjat.in','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Independent publication. Historical snapshots; not a live-score service.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
+    document=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#10233f"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{BASE}/apple-touch-icon.png"><meta name="twitter:card" content="summary"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}</nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button><a class="search-link" href="/search/">Search</a></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/methodology/','Coverage & methodology')}{a('/insights/','Statistical insights')}{a('/saved/','Saved research')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Independent publication. Historical snapshots; not a live-score service.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
     target=OUT/path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(document,encoding='utf-8')
     if not noindex:PAGES[path]={'title':title,'bytes':len(document.encode()),'sha256':hashlib.sha256(document.encode()).hexdigest(),'lastmod':TODAY}
     if path in PAGES and PREVIOUS.get(path,{}).get('sha256')==PAGES[path]['sha256']:PAGES[path]['lastmod']=PREVIOUS[path].get('lastmod',TODAY)
@@ -77,13 +129,13 @@ def heading(title,subtitle='',eyebrow='INTERNATIONAL CRICKET'):
     return f'<section class="page-head"><div class="eyebrow">{esc(eyebrow)}</div><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></section>'
 def actions():return '<div class="actions"><button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>'
 def match_table(matches,paths,limit=40):
-    return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),a(paths[m['id']],' v '.join(m['teams'])),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
+    return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),a(paths[m['id']],' v '.join(m['teams'])),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
 def stats_table(p):
     career=p.get('career',{})
-    groups=[('Batting career',['matches','innings','runs','avg','sr','highest_display','notouts','hundreds','fifties','ducks','fours','sixes','balls'],['Matches','Innings','Runs','Average','SR','Highest','Not outs','100s','50s','Ducks','4s','6s','Balls faced']),('Bowling career',['matches','bowling_innings','legal','maidens','conceded','wickets','bowlAvg','econ','bowlSr','best_bowling','best_match','four_w','five_w','ten_w'],['Matches','Innings','Legal balls','Maidens','Runs conceded','Wickets','Average','Economy','Strike rate','Best innings','Best match','4 wickets','5 wickets','10 wickets']),('Fielding career',['matches','fielding_innings','catches','stumpings','dismissals','keeper_catches','fielder_catches','dismissals_per_innings','most_dismissals'],['Matches','Innings','Catches','Stumpings','Dismissals','Keeper catches','Fielder catches','Dismissals / innings','Most dismissals'])]
+    groups=[('Batting career',['matches','innings','runs','avg','sr','highest_display','notouts','hundreds','fifties','ducks','fours','sixes','balls'],['Mat','Inns','Runs','Avg','SR','HS','NO','100s','50s','Ducks','4s','6s','BF']),('Bowling career',['matches','bowling_innings','legal','maidens','conceded','wickets','bowlAvg','econ','bowlSr','best_bowling','best_match','four_w','five_w','ten_w'],['Mat','Inns','Balls','M','Runs','W','Avg','Econ','SR','BBI','BBM','4w','5w','10w']),('Fielding career',['matches','fielding_innings','catches','stumpings','dismissals','keeper_catches','fielder_catches','dismissals_per_innings','most_dismissals'],['Mat','Inns','Ct','St','Dis','Keeper Ct','Fielder Ct','Dis/Inns','Best'])]
     output=''
     for title,keys,labels in groups:
-        output+='<h3>'+title+'</h3>'+table(['Format']+labels,[[esc(fmt)]+[esc(num(stats.get(k))) for k in keys] for fmt,stats in career.items()],caption=title+' records by format')
+        output+='<h3>'+title+'</h3>'+table(['Format']+labels,[[esc(fmt)]+[stat_value(stats,k) for k in keys] for fmt,stats in career.items()],caption=title+' records by format')
     return output
 
 def options(name,values,label=None):return f'<label>{esc(label or name.title())}<select name="{name}"><option value="">All</option>'+''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)+'</select></label>'
@@ -93,12 +145,15 @@ def main():
     OUT.mkdir(exist_ok=True)
     if (OUT/'build-manifest.json').exists():
         PREVIOUS=json.loads((OUT/'build-manifest.json').read_text(encoding='utf-8')).get('indexable',{})
-    arc=read('data/international.json');careers=read('data/careers.json');hist=read('data/historical_matches.json')
+    arc,careers,hist=publication_data(ROOT)
     people={p['id']:{**p,'career':{}} for p in arc['players']}
     for p in careers['players']:
-        prior=people.setdefault(p['id'],{**p,'formats':{}});prior['career']=p['formats'];prior['name']=fullname(prior);prior['first']=p['first'];prior['last']=p['last']
+        prior=people.setdefault(p['id'],{**p,'formats':{}});prior['espn_id']=p['espn_id'];prior['gender']=p['gender'];prior['teams']=p['teams'];prior['career']=p['formats'];prior['name']=fullname(prior);prior['first']=p['first'];prior['last']=p['last']
     for p in people.values():p['name']=fullname(p)
     matches=sorted(arc['matches']+hist['matches'],key=lambda m:(m['date'],m['id']),reverse=True)
+    all_cards=load_cards(ROOT,matches,people)
+    for key,n in complete_career_counts(career_scorecards(ROOT,all_cards,people),people).items():careers['meta']['enriched_fields'][key]=careers['meta']['enriched_fields'].get(key,0)+n
+    for p in people.values():p['name']=p.get('full_name',p['name'])
     names=Counter(slug(p['name']) for p in people.values())
     match_labels={m['id']:' v '.join(m['teams'])+' '+m['date']+' '+m['gender']+' '+m['format'] for m in matches}
     duplicate_labels=Counter(match_labels.values())
@@ -116,69 +171,89 @@ def main():
         if m['event']:groups['series'][m['event']].append(m)
         for pid in m.get('player_ids',[]):appearances[pid].append({'match':m['id'],'date':m['date'],'format':m['format'],'teams':m['teams'],'venue':m['venue'],'result':result(m),'url':mp[m['id']]})
     gp={kind:{name:f'/{kind}/{slug(name)}-{hashlib.sha1(name.encode()).hexdigest()[:6]}/' for name in g} for kind,g in groups.items()}
-    # Keep the old India hub and its dependencies; the new publication uses none of its global payloads.
-    for folder in ['overview','official','about','coverage','batting','bowling','fielding','h2h','formats','tournaments','vendor','images']:
-        shutil.copytree(ROOT/folder,OUT/folder,dirs_exist_ok=True)
-    for file in ['app.js','styles.css','professional.css','enhancements.js','stats.json','official_records.json','player_images.json','logo.svg','favicon.svg','favicon-16.png','favicon-32.png','apple-touch-icon.png','site.webmanifest','404.html','CNAME']:
+    # Retire the legacy publication and its unscoped global data payloads.
+    for name in ['overview','official','about','coverage','batting','bowling','fielding','h2h','formats','tournaments','vendor','images','app.js','styles.css','professional.css','enhancements.js','stats.json','official_records.json','player_images.json']:
+        target=(OUT/name).resolve()
+        assert target.is_relative_to(OUT.resolve()) and target!=OUT.resolve()
+        if target.is_dir():shutil.rmtree(target)
+        elif target.exists():target.unlink()
+    for file in ['logo.svg','favicon.svg','favicon-16.png','favicon-32.png','apple-touch-icon.png','site.webmanifest','404.html','CNAME']:
         shutil.copy2(ROOT/file,OUT/file)
     (OUT/'.nojekyll').touch()
     shutil.copytree(ROOT/'web',OUT/'assets',dirs_exist_ok=True)
     print('Building scorecards and player analysis...',flush=True)
-    for file in sorted((ROOT/'data/scorecards').glob('*.json')):
-        cards=json.loads(file.read_text(encoding='utf-8'))
-        for mid,card in cards.items():
-            m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+f'<div class="result-banner">{esc(result(m))}</div>'+actions()
-            body+='<p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+' · '+a(gp['grounds'][m['venue']],m['venue'])+'</p>'
-            if m['event']:body+='<p>'+a(gp['series'][m['event']],m['event'])+'</p>'
-            for index,inn in enumerate(card['innings'],1):
-                body+=f'<section class="panel"><h2>{esc(inn["team"])} · {inn["runs"]}/{inn["wickets"]}{"d" if inn.get("declared") else ""} <small>Innings {index}{" · Super over" if inn.get("super_over") else ""}</small></h2>'
-                body+=table(['Batter','Dismissal','R','B','4s','6s','SR'],[[a(pp[b['id']],people[b['id']]['name']),esc(b['dismissal']),str(b['runs'])+('' if b['out'] else '*'),str(b['balls']),str(b['fours']),str(b['sixes']),str(round(b['runs']/b['balls']*100,2)) if b['balls'] else '—'] for b in inn['batting']],caption='Batting scorecard')
-                body+=f'<p>Extras {inn["extras"]} · {inn["balls"]//6}.{inn["balls"]%6} overs</p>'
-                body+=table(['Bowler','Overs','Runs','Wickets','Economy'],[[a(pp[b['id']],people[b['id']]['name']),f'{b["balls"]//6}.{b["balls"]%6}',str(b['runs']),str(b['wickets']),str(round(b['runs']/b['balls']*6,2)) if b['balls'] else '—'] for b in inn['bowling']],caption='Bowling scorecard')
-                peak=max([o['runs'] for o in inn['overs']]+[1]);body+='<details><summary>Runs by over and fall of wickets</summary><div class="spark" role="img" aria-label="Runs by over">'+''.join(f'<i class="{"wicket" if o["wickets"] else ""}" style="height:{max(2,o["runs"] / peak*100)}%" title="Over {o["over"]}: {o["runs"]} runs; {o["wickets"]} wickets"></i>' for o in inn['overs'])+'</div>'+table(['Over','Runs','Wickets','Total'],[[str(o[k]) for k in ['over','runs','wickets','total']] for o in inn['overs']])+ '<p>'+esc(' · '.join(f'{w["runs"]}/{w["wicket"]} ({w["player"]})' for w in inn['fall']))+'</p></details></section>'
-                if inn.get('super_over'):continue
-                bowl={b['id']:b for b in inn['bowling']};bat={b['id']:(pos,b) for pos,b in enumerate(inn['batting'],1)}
-                for pid in set(bowl)|set(bat):
-                    pos,b=bat.get(pid,(None,{}));w=bowl.get(pid,{});team=inn['team'] if b else next(t for t in m['teams'] if t!=inn['team']);opp=next(t for t in m['teams'] if t!=team);host=HOST_CITIES.get(m.get('city',''))
-                    setting='Unknown' if not host else 'Home' if team==host else 'Away' if opp==host else 'Neutral'
-                    outcome='Won' if m['outcome'].get('winner')==team else 'Lost' if m['outcome'].get('winner') else 'Draw / tie / no result'
-                    innings[pid].append({'date':m['date'],'match':mid,'url':mp[mid],'format':m['format'],'opponent':opp,'venue':m['venue'],'setting':setting,'result':outcome,'innings':index,'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'out':b.get('out'),'fours':b.get('fours'),'sixes':b.get('sixes'),'dismissal':b.get('dismissal'),'wickets':w.get('wickets'),'legal':w.get('balls'),'conceded':w.get('runs')})
-            body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+esc(team)+'</h3>'+''.join('<p>'+a(pp[p['id']],people[p['id']]['name'])+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section><p class="note">Scorecard derived from Cricsheet deliveries. Super overs are shown separately and excluded from player analysis.</p>'
-            page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']}})
+    for mid,card in all_cards.items():
+        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+f'<div class="result-banner">{esc(result(m))}</div>'+actions()
+        body+='<p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+' · '+a(gp['grounds'][m['venue']],m['venue'])+'</p>'
+        if m['event']:body+='<p>'+a(gp['series'][m['event']],m['event'])+'</p>'
+        if card['innings']:body+='<nav class="innings-nav" aria-label="Jump to innings">'+''.join(a('#innings-'+str(i),inn['team']+' · '+str(inn['runs'])+'/'+str(inn['wickets'])+' · Inn '+str(i)) for i,inn in enumerate(card['innings'],1))+'</nav>'
+        for index,inn in enumerate(card['innings'],1):
+            body+=render_innings(inn,index,people,pp)
+            if inn.get('super_over'):continue
+            bowl={b['id']:b for b in inn['bowling']};bat={b['id']:(pos,b) for pos,b in enumerate(inn['batting'],1)}
+            for pid in set(bowl)|set(bat):
+                pos,b=bat.get(pid,(None,{}));w=bowl.get(pid,{});team=inn['team'] if b else next(t for t in m['teams'] if t!=inn['team']);opp=next(t for t in m['teams'] if t!=team);host=HOST_CITIES.get(m.get('city','')) or m.get('host_country');host={'United Kingdom':'England','Wales':'England','Barbados':'West Indies','Jamaica':'West Indies','Trinidad and Tobago':'West Indies','Guyana':'West Indies','Saint Lucia':'West Indies','Antigua and Barbuda':'West Indies','St Kitts and Nevis':'West Indies','Dominica':'West Indies','Grenada':'West Indies'}.get(host,host)
+                setting='Unknown' if not host else 'Home' if team==host else 'Away' if opp==host else 'Neutral'
+                outcome='Won' if m['outcome'].get('winner')==team else 'Lost' if m['outcome'].get('winner') else 'Draw / tie / no result'
+                innings[pid].append({'date':m['date'],'match':mid,'url':mp[mid],'format':m['format'],'opponent':opp,'venue':m['venue'],'setting':setting,'result':outcome,'innings':index,'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'out':b.get('out'),'fours':b.get('fours'),'sixes':b.get('sixes'),'dismissal':b.get('dismissal'),'wickets':w.get('wickets'),'legal':w.get('balls'),'conceded':w.get('runs')})
+        body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+esc(team)+'</h3>'+''.join('<p>'+(a(pp[p['id']],people[p['id']]['name']) if p['id'] in pp else esc(p['name']))+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section><p class="note">Verified match scorecard. Super overs are excluded from player analysis. A dash means the historical scorecard did not record that field.</p>'
+        if not card['innings']:body+='<section class="panel"><h2>No play</h2><p>This match has no recorded innings. Batting and bowling figures do not apply.</p></section>'
+        page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']}})
     for m in hist['matches']:
+        if m['id'] in all_cards:continue
         body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
         page(mp[m['id']],match_labels[m['id']]+' result',f'{result(m)}. Historical {m["format"]} result at {m["venue"]}.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket'})
     print('Building career profiles...',flush=True)
     for pid,p in people.items():
         career=p['career'];tot=aggregate(career);path=pp[pid]; rows=sorted(innings[pid],key=lambda r:r['date']);apps=appearances[pid]
         summary={'id':pid,'name':p['name'],'teams':p['teams'],'gender':p['gender'],'career':career,'url':path}
-        summary['career']={fmt:{k:v for k,v in s.items() if k not in ('source','sources')} for fmt,s in career.items()}
-        dump(path+'summary.json',summary);dump(path+'analytics.json',{'innings':rows,'appearances':apps,'note':'Available ball-data archive only. Super overs excluded. Unknown venue setting is not inferred.'})
+        summary['career']={fmt:{k:v for k,v in s.items() if k not in ('source','sources','enrichment_source')} for fmt,s in career.items()}
+        dump(path+'summary.json',summary);dump(path+'analytics.json',{'innings':rows,'appearances':apps,'note':'Available official match scorecards within site coverage. Super overs excluded. Unknown venue setting is not inferred.'})
         body=heading(p['name'],p['gender']+' · '+' / '.join(p['teams'])+' · '+p.get('first','')+'–'+p.get('last',''),'PLAYER CAREER')+actions()+'<div class="stats">'+''.join(f'<div><strong>{num(tot.get(k))}</strong><span>{label}</span></div>' for k,label in [('matches','Internationals'),('runs','Career runs'),('hundreds','Centuries'),('wickets','Wickets')])+'</div>'
-        body+='<section class="panel"><h2>Career records by format</h2>'+stats_table(p)+f'<p class="note">Career snapshot: {careers["meta"]["checked_at"][:10]}. A dash means unavailable. Career totals are independent of the scorecard archive.</p></section>'
+        checked_dates=sorted({careers['meta']['checked_at'][:10]}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')});snapshot_label='–'.join(dict.fromkeys([checked_dates[0],checked_dates[-1]]))
+        body+='<section class="panel"><h2>Career records by format</h2>'+stats_table(p)+f'<p class="note">Career records checked: {snapshot_label}. — means not recorded; N/A means the statistic does not apply. Career totals are independent of the scorecard archive.</p></section>'
         if not career:body+='<p class="note">This archive identity has no matched career record. Do not treat its archive totals as a complete career.</p>'
-        body+='<section class="panel" id="analysis" data-analytics="'+path+'analytics.json"><h2>Explore this player’s available match data</h2><p>'+str(len(apps))+' match appearances with local ball data. Filters below apply to this archive only.</p><button id="load-analysis" class="primary">Open statistical explorer</button><div id="analysis-controls" hidden></div><div id="analysis-results" aria-live="polite"></div></section>'
+        body+='<section class="panel" id="analysis" data-analytics="'+path+'analytics.json"><h2>Explore this player’s available match data</h2><p>'+str(len(apps))+' match appearances in available scorecards. Filters below apply to this archive only.</p><button id="load-analysis" class="primary">Open statistical explorer</button><div id="analysis-controls" hidden></div><div id="analysis-results" aria-live="polite"></div></section>'
         yearly=defaultdict(Counter)
         for row in rows:
             y=yearly[row['date'][:4]]
-            if row['runs'] is not None:y['runs']+=row['runs'];y['innings']+=1;y['outs']+=int(row['out']);y['balls']+=row['balls']
+            if row['runs'] is not None:y['runs']+=row['runs'];y['innings']+=1;y['outs']+=int(row['out']);y['balls']+=row['balls'] or 0
             if row['wickets'] is not None:y['wickets']+=row['wickets']
         if yearly:
-            body+='<section class="panel"><h2>Year-by-year archive trend</h2><p class="note">Available deliveries, not complete career season totals.</p>'+table(['Year','Batting innings','Runs','Average','Wickets'],[[y,str(s['innings']),str(s['runs']),num(round(s['runs']/s['outs'],2) if s['outs'] else None),str(s['wickets'])] for y,s in sorted(yearly.items(),reverse=True)])+'</section>'
+            body+='<section class="panel"><h2>Year-by-year archive trend</h2><p class="note">Available match records, not complete career season totals.</p>'+table(['Year','Batting innings','Runs','Average','Wickets'],[[y,str(s['innings']),str(s['runs']),decimal_stat(rate(s['runs'],s['outs'])),str(s['wickets'])] for y,s in sorted(yearly.items(),reverse=True)])+'</section>'
         body+='<section class="panel"><h2>Recent available appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]])+'</section><p>'+ ' · '.join(a(gp['teams'][t],t) for t in p['teams'] if t in gp['teams'])+'</p>'
         page(path,p['name']+(' · '+pid if names[slug(p['name'])]>1 else '')+' career stats & records',f'{p["name"]} international cricket statistics: Test, ODI and T20I runs, wickets, averages, career records and available match analysis.',body,'ProfilePage',{'mainEntity':{'@type':'Person','name':p['name'],'identifier':pid}})
     print('Building directories, records and research pages...',flush=True)
     build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist)
     dump('/data/routes.json',{'players':pp,'matches':mp})
     dump('/data/player-index.json',[{'id':pid,'name':p['name'],'url':pp[pid],'teams':p['teams'],'gender':p['gender'],'formats':list(p['career'] or p['formats']),'byFormat':{fmt:{'runs':stats.get('runs'),'wickets':stats.get('wickets')} for fmt,stats in p['career'].items()},'runs':aggregate(p['career']).get('runs'),'wickets':aggregate(p['career']).get('wickets')} for pid,p in people.items()])
-    dump('/data/match-index.json',[{'id':m['id'],'date':m['date'],'url':mp[m['id']],'teams':m['teams'],'format':m['format'],'gender':m['gender'],'venue':m['venue'],'event':m['event'],'result':result(m),'coverage':'Result only' if m.get('coverage') else 'Scorecard'} for m in matches])
+    dump('/data/match-index.json',[{'id':m['id'],'date':m['date'],'url':mp[m['id']],'teams':m['teams'],'format':m['format'],'gender':m['gender'],'venue':m['venue'],'event':m['event'],'result':result(m),'coverage':'Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard'} for m in matches])
     sitemap_files=[]
+    for xml in OUT.glob('sitemap-*.xml'):xml.unlink()
     for index,start in enumerate(range(0,len(PAGES),10000),1):
         paths=list(PAGES)[start:start+10000];name=f'sitemap-{index}.xml';sitemap_files.append(name)
         xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE}{esc(path)}</loc><lastmod>{PAGES[path]["lastmod"]}</lastmod></url>' for path in paths)+'</urlset>'
         (OUT/name).write_text(xml,encoding='utf-8')
     (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<sitemap><loc>{BASE}/{x}</loc></sitemap>' for x in sitemap_files)+'</sitemapindex>',encoding='utf-8')
     (OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /saved/\nDisallow: /data/\nSitemap: {BASE}/sitemap.xml\n',encoding='utf-8')
+    # Only prune destinations previously owned by the generator, inside this output.
+    for path in set(PREVIOUS)-set(PAGES):
+        target=(OUT/path.lstrip('/')).resolve()
+        assert target.is_relative_to(OUT.resolve()) and target!=OUT.resolve()
+        for name in ['index.html','summary.json','analytics.json','records.json']:
+            (target/name).unlink(missing_ok=True)
+    for index in OUT.rglob('index.html'):
+        path='/'+index.parent.relative_to(OUT).as_posix().strip('./')+'/'
+        if path=='//':path='/'
+        if path in PAGES or path in ('/embed/','/search/','/saved/','/international/'):continue
+        for name in ['index.html','summary.json','analytics.json','records.json']:(index.parent/name).unlink(missing_ok=True)
+    missing=Counter();not_applicable=Counter()
+    for p in people.values():
+        for fmt,s in p['career'].items():
+            for metric,denominator in [('avg','outs'),('sr','balls'),('bowlAvg','wickets'),('econ','legal'),('bowlSr','wickets')]:
+                if s.get(metric) is None:
+                    (not_applicable if 'N/A' in stat_value(s,metric) else missing)[fmt+' '+metric]+=1
+    dump('/coverage-report.json',{'teams':sorted(FULL_MEMBERS),'matches':len(matches),'scorecards':sum(bool(c['innings']) for c in all_cards.values()),'no_play':sum(not c['innings'] for c in all_cards.values()),'result_only':len(matches)-len(all_cards),'players':len(people),'enriched_fields':careers['meta']['enriched_fields'],'unmatched_careers':sum(not p['career'] for p in people.values()),'unrecorded_rates':dict(missing),'not_applicable_rates':dict(not_applicable)})
     dump('/build-manifest.json',{'built_at':TODAY,'pages':len(PAGES),'players':len(people),'matches':len(matches),'largest_html_bytes':max(x['bytes'] for x in PAGES.values()),'indexable':PAGES})
     print(f'Built {len(PAGES)} indexable pages in {OUT}',flush=True)
 
@@ -187,9 +262,13 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist):
     latest=matches[:8]
     body=heading('Cricket. In perspective.','Explore careers, compare players and follow the records that shape the game.','CRICKET WICKET · THE GAME IN NUMBERS')
     body+='<form class="hero-search" action="/search/"><label for="home-search">Find a player, team or ground</label><div><input id="home-search" name="q" placeholder="Try Virat Kohli, India or Lord’s" required><button class="primary">Explore →</button></div></form>'
-    body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'Teams & representative XIs'),('1877','History starts')])+'</div>'
+    body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'National teams'),('1877','History starts')])+'</div>'
     body+='<div class="section-heading"><h2>Start with a question</h2></div><div class="grid three">'+''.join(f'<a class="feature-card" href="{path}"><span>{category}</span><h3>{question}</h3><p>{desc}</p></a>' for path,category,question,desc in [('/records/men/odi/most-runs/','CAREER RECORDS','Who leads the run charts?','Explore qualified records across all three formats.'),('/compare/','PLAYER COMPARISON','How do their careers compare?','Choose a format and compare like-for-like figures.'),('/teams/','TEAMS & GROUNDS','Where does a team win?','Discover results, venues and international rivalries.')])+'</div><div class="section-heading"><h2>Recent recorded results</h2>'+a('/matches/','All matches →')+'</div>'+match_table(latest,mp)
-    body+='<div class="section-heading"><h2>The run makers</h2>'+a('/players/','Player directory →')+'</div>'+table(['Player','Team','Career runs'],[[a(pp[p['id']],p['name']),esc(' / '.join(p['teams'])),num(aggregate(p['career']).get('runs'))] for p in ranked[:8]])
+    body+='<div class="section-heading"><h2>Career leaders</h2>'+a('/players/','Player directory →')+'</div><div class="grid two leader-grid">'
+    for metric,title in [('runs','The run makers'),('wickets','The wicket takers')]:
+        leaders=sorted(ranked,key=lambda p:aggregate(p['career']).get(metric) or 0,reverse=True)[:8]
+        body+='<section class="leader-panel"><h3>'+title+'</h3>'+table(['Player','Team',metric.title()],[[a(pp[p['id']],p['name']),esc(' / '.join(p['teams'])),num(aggregate(p['career']).get(metric))] for p in leaders])+ '</section>'
+    body+='</div>'
     body+='<p class="note">Career data updated '+careers['meta']['checked_at'][:10]+'. Historical result-only matches are labeled. '+a('/methodology/','Understand coverage →')+'</p>'
     page('/','Cricket stats, player records & scorecards','Cricket Wicket: international cricket career statistics, player comparisons, match scorecards, team records and analysis.',body,'WebSite')
     # Crawlable pagination supplies all directory entries without requiring JavaScript.
@@ -270,7 +349,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist):
     page('/search/','Search cricket statistics','Find cricket players, teams, series and grounds.',heading('Find your next cricket answer','Search players, teams, series and grounds.')+'<form id="search-form" class="hero-search"><label>Search<input name="q" required></label><button class="primary">Search</button></form><div id="search-results" aria-live="polite"></div>',noindex=True)
     page('/saved/','Saved cricket research','Your saved cricket pages and filtered searches on this device.',heading('Your cricket notebook','Saved pages and searches stay in this browser on this device.')+'<button id="clear-saved">Clear saved pages</button><div id="saved-results"></div>',noindex=True)
     page('/corrections/','Report a cricket data correction','Prepare a precise correction with the player, match, metric and supporting evidence.',heading('Help improve the record','Create a correction report to share with the site owner. This form does not send your information automatically.')+'<form id="correction-form" class="panel"><label>Page URL<input name="url" type="url" required></label><label>What needs correcting?<textarea name="issue" required></textarea></label><label>Correct value and supporting evidence<textarea name="evidence" required></textarea></label><button class="primary">Download correction report</button></form><p class="note">Review the downloaded report before sharing it. No account or personal details are required.</p>')
-    methods=heading('Data coverage & methodology','Clear definitions, dates and limits for every layer of the archive.')+'<div class="stats">'+''.join(f'<div><strong>{num(v)}</strong><span>{label}</span></div>' for v,label in [(careers['meta']['players'],'Career records'),(arc['meta']['matches'],'Ball-data scorecards'),(hist['meta']['added_matches'],'Additional results'),(careers['meta']['archive_players_without_career'],'Unmatched identities')])+'</div><section class="panel"><h2>Career records</h2><p>Complete imported tables across men’s and women’s Tests, ODIs and T20Is. Snapshot '+careers['meta']['checked_at'][:10]+'. A missing field is displayed as a dash, never inferred from a partial archive. Career and delivery-derived figures are never added together.</p><h2>Match and player analysis</h2><p>Ball-by-ball data is provided by <a href="https://cricsheet.org/">Cricsheet</a>. The explorer uses only available deliveries and excludes super overs. Matches without ball data do not contribute to batting, bowling, dismissal or yearly analysis.</p><h2>Venue setting</h2><p>Home, away and neutral are assigned only for recognized host cities using the cricket team’s host territory. Other locations remain Unknown. These categories describe the venue, not which team is named first.</p><h2>Statistical definitions</h2><p>Batting average = runs / dismissals. Strike rate = 100 × runs / balls faced. Bowling average = conceded runs / wickets. Economy = 6 × conceded runs / legal balls. Combined averages are recomputed from totals, not averaged across formats. No dismissals or no wickets produces a dash.</p><h2>Record qualifications</h2><p>Average leaderboards default to 20 batting innings or 20 bowling wickets. Ties share a rank. Results by team include men and women unless filtered. Historical results may lack innings totals, lineups and deliveries.</p><h2>Corrections and freshness</h2><p>Changes pass identity, count and scorecard checks before publication. '+a('/corrections/','Prepare a correction report')+'. This publication does not supply live scores, future fixtures or official rankings.</p></section>'
+    methods=heading('Data coverage & methodology','Clear definitions, dates and limits for every layer of the archive.')+'<div class="stats">'+''.join(f'<div><strong>{num(v)}</strong><span>{label}</span></div>' for v,label in [(careers['meta']['players'],'Career records'),(arc['meta']['matches'],'Ball-data scorecards'),(hist['meta']['added_matches'],'Historical matches'),(careers['meta']['archive_players_without_career'],'Unmatched identities')])+'</div><section class="panel"><h2>Career records</h2><p>The publication focuses on the twelve full-member national teams, for men and women. Only recognized senior Tests, ODIs and T20Is appear in match browsing. Official player careers retain all recognized internationals, including matches against associates and recognized representative teams. Snapshot '+careers['meta']['checked_at'][:10]+'. A missing field is displayed as a dash, never inferred from a partial archive. Career and delivery-derived figures are never added together.</p><h2>Match and player analysis</h2><p>Ball-by-ball data is provided by <a href="https://cricsheet.org/">Cricsheet</a>. The explorer combines verified historical scorecards with delivery-derived scorecards and excludes super overs. Historical scorecards contribute innings statistics even where ball-by-ball data is unavailable. Result-only matches have no inferred individual figures. Unknown balls faced remain unknown; rates require a complete denominator for the selected innings.</p><h2>Venue setting</h2><p>Home, away and neutral are assigned only for recognized host cities using the cricket team’s host territory. Other locations remain Unknown. These categories describe the venue, not which team is named first.</p><h2>Statistical definitions</h2><p>Batting average = runs / dismissals. Strike rate = 100 × runs / balls faced. Bowling average = conceded runs / wickets. Economy = 6 × conceded runs / legal balls. Combined averages are recomputed from totals, not averaged across formats. No dismissals or no wickets makes the corresponding average N/A. A dash means an unrecorded source field. Rates are displayed to two decimal places; computed rates are truncated consistently. Historical scorecards retain their original over lengths.</p><h2>Record qualifications</h2><p>Average leaderboards default to 20 batting innings or 20 bowling wickets. Ties share a rank. Results by team include men and women unless filtered. Historical results may lack innings totals, lineups and deliveries.</p><h2>Corrections and freshness</h2><p>Changes pass identity, count and scorecard checks before publication. '+a('/corrections/','Prepare a correction report')+'. This publication does not supply live scores, future fixtures or official rankings.</p></section>'
     page('/methodology/','Cricket data coverage & methodology','Understand career data, scorecard coverage, archive filters, record qualification and update dates.',methods)
     insights=heading('The numbers, explained','Reproducible observations from the published data. Every claim links to its supporting table.')+'<div class="grid three">'
     for gender,fmt in [('Men','Test'),('Women','ODI'),('Men','T20I')]:

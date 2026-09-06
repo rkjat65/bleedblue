@@ -57,8 +57,8 @@ def parse_page(body, url):
             continue
         espn_id = re.search(r'/player/(\d+)\.html', link['href']).group(1)
         values = {h: c.get_text(' ', strip=True) for h, c in zip(headers, cells) if h}
-        team = re.search(r'\(([^)]+)\)', cells[0].get_text(' ', strip=True))
-        rows.append({'espn_id': espn_id, 'name': link.get_text(' ', strip=True), 'team_codes': team.group(1).split('/') if team else [], 'values': values})
+        teams = re.findall(r'\(([^)]+)\)', cells[0].get_text(' ', strip=True))
+        rows.append({'espn_id': espn_id, 'name': link.get_text(' ', strip=True), 'team_codes': teams[-1].split('/') if teams else [], 'values': values})
     pagination = re.search(r'Page\s+(\d+)\s+of\s+(\d+)\s+Showing\s+\d+\s*-\s*\d+\s+of\s+(\d+)', soup.get_text(' ', strip=True))
     next_link = next((a for a in soup.find_all('a', href=True) if a.get_text(strip=True) == 'Next'), None)
     return {'rows': rows, 'url': url, 'next': urljoin(BASE, next_link['href']) if next_link else None, 'expected': int(pagination[3]) if pagination else None, 'checked_at': datetime.now(timezone.utc).isoformat(timespec='seconds')}

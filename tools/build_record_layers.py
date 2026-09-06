@@ -30,6 +30,9 @@ def load_rows(prefix):
     result = CACHE / f'{prefix}-result.json'
     if result.exists():
         data = json.loads(result.read_text(encoding='utf-8'))
+        for row in data['rows']:
+            teams=re.findall(r'\(([^)]+)\)',row.get('values',{}).get('Player',''))
+            if teams:row['team_codes']=teams[-1].split('/')
         return data['rows'], data.get('complete', False)
     rows = []
     for path in sorted(CACHE.glob(prefix + '-*.json'), key=lambda p: int(p.stem.rsplit('-', 1)[-1])):
@@ -96,6 +99,14 @@ def main():
         for key in ('key_cricinfo', 'key_cricinfo_2', 'key_cricinfo_3'):
             if row.get(key):
                 espn_to_id[row[key]] = row['identifier']
+    source_ids={r['espn_id'] for cls in CLASSES for r in load_rows(f'{cls}-batting')[0]}
+    # A register alias is not sufficient to merge two separately listed careers.
+    # Keep the primary identity URL and split independently present source IDs.
+    for row in registry:
+        ids=[row[k] for k in ('key_cricinfo','key_cricinfo_2','key_cricinfo_3') if row.get(k) in source_ids]
+        if len(ids)>1:
+            for eid in ids[1:]:espn_to_id[eid]='espn-'+eid
+    write(ROOT / 'data/identity_registry.json', {'espn_to_id': espn_to_id, 'source': 'Cricsheet register'})
     # Resolve source country abbreviations only through exact player-ID links
     # with one country on each side; ambiguous mappings remain unexpanded.
     country_candidates = {}
@@ -120,10 +131,11 @@ def main():
                 eid = row['espn_id']
                 pid = espn_to_id.get(eid, 'espn-' + eid)
                 prior = archived.get(pid)
+                if prior and prior['gender']!=gender:prior=None
                 p = records.setdefault(pid, {'id': pid, 'espn_id': eid, 'name': prior['name'] if prior else row['name'], 'source_name': row['name'], 'teams': prior['teams'][:] if prior else [], 'gender': gender, 'layers': {}, 'formats': {}})
                 for team in row['team_codes']:
                     team = team_names.get(team, team_names.get(team.removesuffix('-W'), team))
-                    if not prior and team not in p['teams']:
+                    if team not in p['teams']:
                         p['teams'].append(team)
                 p['layers'].setdefault(fmt, {})[discipline] = row
     for p in records.values():
@@ -154,12 +166,13 @@ def main():
     write(ROOT / 'data/home_careers.json', {'meta': meta, 'players': list(home_players.values())})
 
     existing_ids = {m['id'] for m in archive['matches']}
-    catalog, match_scopes = {}, []
+    catalog, match_scopes, official = {}, [], {}
     for cls, (fmt, gender) in CLASSES.items():
         rows, complete = load_rows(f'matches-{cls}')
         match_scopes.append({'format': fmt, 'gender': gender, 'rows': len(rows), 'complete': complete})
         for row in rows:
             mid, v = row['id'], row['values']
+            official[mid] = cls
             if mid in existing_ids:
                 continue
             team = match_team(v['Team'])
@@ -177,6 +190,7 @@ def main():
     match_meta['format_summary'] = {fmt: {'matches': sum(m['format'] == fmt for m in archive['matches']) + sum(m['format'] == fmt for m in catalog.values()), 'women': sum(m['format'] == fmt and m['gender'] == 'Women' for m in archive['matches']) + sum(m['format'] == fmt and m['gender'] == 'Women' for m in catalog.values()), 'teams': len({t for m in archive['matches'] + list(catalog.values()) if m['format'] == fmt for t in m['teams']})} for fmt in ('Test', 'ODI', 'T20I')}
     write(ROOT / 'data/historical_matches.json', {'meta': match_meta, 'matches': sorted(catalog.values(), key=lambda m: m['date'], reverse=True)})
     write(ROOT / 'data/historical_manifest.json', match_meta)
+    write(ROOT / 'data/official_match_registry.json', {'matches': official, 'source': 'Statsguru international class tables', 'checked_at': match_meta['checked_at']})
     print(json.dumps({k: v for k, v in meta.items() if k != 'scopes'}, indent=2))
     print('Historical matches added:', len(catalog))
 

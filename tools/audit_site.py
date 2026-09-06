@@ -7,6 +7,7 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 from html import unescape
+from cricket_scope import publication_data, load_cards, FULL_MEMBERS
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / '_site'
@@ -59,22 +60,40 @@ def main():
         tree = ET.parse(xml)
         sitemap_paths.update(e.text.replace('https://cricket.rkjat.in', '') for e in tree.findall('.//{*}loc'))
     assert sitemap_paths == paths, 'Sitemap and publication disagree'
-    archive = read(ROOT / 'data/international.json')
+    archive,careers,history=publication_data(ROOT)
+    people={p['id']:{**p,'career':{}} for p in archive['players']}
+    for p in careers['players']:people.setdefault(p['id'],{}).update(espn_id=p['espn_id'])
+    matches=archive['matches']+history['matches']
+    cards=load_cards(ROOT,matches,people)
+    assert set(routes['matches'])=={m['id'] for m in matches}
+    assert all(set(m['teams'])<=FULL_MEMBERS for m in read(SITE/'data/match-index.json'))
+    assert all(set(p['teams'])<=FULL_MEMBERS for p in read(SITE/'data/player-index.json'))
+    expected=Counter();appearances=Counter()
+    for m in matches:
+        for pid in m['player_ids']:appearances[pid,m['format']]+=1
+    for card in cards.values():
+        fmt=card['match']['format']
+        for inn in card['innings']:
+            if inn.get('super_over'):continue
+            for b in inn['batting']:expected[b['id'],fmt,'runs']+=b['runs'] or 0
+            for b in inn['bowling']:expected[b['id'],fmt,'wickets']+=b['wickets'] or 0
     print('Reconciling player analysis...', flush=True)
-    def analysis(p):
-        return p,read(SITE / routes['players'][p['id']].lstrip('/') / 'analytics.json')
-    for p,payload in pool.map(analysis,archive['players']):
-        for fmt, stats in p['formats'].items():
+    def analysis(pid):
+        return pid,read(SITE / routes['players'][pid].lstrip('/') / 'analytics.json')
+    for pid,payload in pool.map(analysis,routes['players']):
+        for fmt in ('Test','ODI','T20I'):
             rows = [r for r in payload['innings'] if r['format'] == fmt]
-            assert sum(r.get('runs') or 0 for r in rows) == stats['runs'], (p['name'], fmt, 'runs')
-            assert sum(r.get('wickets') or 0 for r in rows) == stats['wickets'], (p['name'], fmt, 'wickets')
-            assert sum(x['format'] == fmt for x in payload['appearances']) == stats['matches'], (p['name'], fmt, 'appearances')
+            assert sum(r.get('runs') or 0 for r in rows) == expected[pid,fmt,'runs'], (pid, fmt, 'runs')
+            assert sum(r.get('wickets') or 0 for r in rows) == expected[pid,fmt,'wickets'], (pid, fmt, 'wickets')
+            assert sum(x['format'] == fmt for x in payload['appearances']) == appearances[pid,fmt], (pid, fmt, 'appearances')
+        assert all(r['match'] in routes['matches'] for r in payload['innings'])
+    assert not (SITE/'stats.json').exists(), 'Legacy unscoped data was published'
     pool.shutdown()
     print('Measuring publication weight...',flush=True)
     total_bytes = sum(p.stat().st_size for p in SITE.rglob('*') if p.is_file())
     assert total_bytes < 950_000_000, 'Publication exceeds hosting budget'
     assert max(weights) < 100_000, 'Player HTML exceeds 100 KB budget'
-    report = {'pages': len(paths), 'internal_targets': len(links), 'archive_players_reconciled': len(archive['players']),
+    report = {'pages': len(paths), 'internal_targets': len(links), 'archive_players_reconciled': len(routes['players']),
               'site_bytes': total_bytes, 'largest_player_html_bytes': max(weights),
               'median_player_html_bytes': sorted(weights)[len(weights)//2], 'passed': True}
     (SITE / 'audit-report.json').write_text(json.dumps(report, indent=2))

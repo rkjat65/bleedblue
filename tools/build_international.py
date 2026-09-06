@@ -86,11 +86,12 @@ def main(refresh=False):
                     fall, timeline = [], []
                     for over in inning.get('overs', []):
                         over_runs, over_wkts = 0, 0
+                        maiden_tracker = defaultdict(lambda: [0, 0])
                         for delivery in over['deliveries']:
                             batter, bowler = delivery['batter'], delivery['bowler']
                             b = batting.setdefault(batter, {'name': batter, 'id': key_for(batter), 'runs': 0, 'balls': 0, 'fours': 0, 'sixes': 0, 'out': False, 'dismissal': 'not out'})
                             batting.setdefault(delivery['non_striker'], {'name': delivery['non_striker'], 'id': key_for(delivery['non_striker']), 'runs': 0, 'balls': 0, 'fours': 0, 'sixes': 0, 'out': False, 'dismissal': 'not out'})
-                            w = bowling.setdefault(bowler, {'name': bowler, 'id': key_for(bowler), 'balls': 0, 'runs': 0, 'wickets': 0})
+                            w = bowling.setdefault(bowler, {'name': bowler, 'id': key_for(bowler), 'balls': 0, 'runs': 0, 'wickets': 0, 'maidens': 0, 'wides': 0, 'noballs': 0})
                             r, e = delivery['runs'], delivery.get('extras', {})
                             is_legal = not (e.get('wides') or e.get('noballs'))
                             runs += r['total']; over_runs += r['total']; legal += is_legal
@@ -100,10 +101,16 @@ def main(refresh=False):
                             b['sixes'] += r['batter'] == 6 and not r.get('non_boundary', False)
                             w['balls'] += is_legal
                             w['runs'] += r['total'] - e.get('byes', 0) - e.get('legbyes', 0) - e.get('penalty', 0)
+                            w['wides'] += e.get('wides', 0); w['noballs'] += e.get('noballs', 0)
+                            maiden_tracker[bowler][0] += is_legal
+                            maiden_tracker[bowler][1] += r['total'] - e.get('byes', 0) - e.get('legbyes', 0) - e.get('penalty', 0)
                             for wicket in delivery.get('wickets', []):
                                 kind, name = wicket['kind'], wicket['player_out']
                                 out = kind not in {'retired hurt'}
                                 if name in batting:
+                                    batting[name]['dismissal_kind'] = kind
+                                    batting[name]['dismissal_bowler'] = key_for(bowler)
+                                    batting[name]['fielders'] = [key_for(f['name']) for f in wicket.get('fielders', []) if f.get('name')]
                                     batting[name]['out'] = out
                                     batting[name]['dismissal'] = kind + (' b ' + bowler if kind not in NON_BOWLER else '')
                                 wickets += out; over_wkts += out
@@ -118,6 +125,8 @@ def main(refresh=False):
                                         if fp and fmt in fp['formats']:
                                             fp['formats'][fmt]['catches'] += kind == 'caught'
                                             fp['formats'][fmt]['stumpings'] += kind == 'stumped'
+                        for over_bowler, (count, cost) in maiden_tracker.items():
+                            bowling[over_bowler]['maidens'] += count == 6 and cost == 0
                         timeline.append({'over': over['over'] + 1, 'runs': over_runs, 'wickets': over_wkts, 'total': runs})
                     penalties = inning.get('penalty_runs', {})
                     runs += penalties.get('pre', 0) + penalties.get('post', 0)
