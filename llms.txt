@@ -1,4 +1,4 @@
-# Bleed Blue — International Cricket
+# Cricket Wicket — International Cricket
 
 An independent international cricket archive at https://cricket.rkjat.in/.
 IPL has a separate site: https://crickrida.rkjat.in/.
@@ -10,7 +10,7 @@ IPL has a separate site: https://crickrida.rkjat.in/.
 - /international/#coverage: provenance, source dates and missing coverage.
 - /data/manifest.json: current source list and archive counts.
 
-All available public Cricsheet Test, ODI and T20I files for men and women were imported. This is NOT complete cricket history, live scoring, fixtures, current rankings or news. Use the manifest for the date range. Player profiles and comparisons default to independent ESPNcricinfo Statsguru career records. The ball-data switch shows archive aggregates. Never add these layers together. Missing fields remain null. Super overs are excluded from player aggregates. Source coverage has historical gaps and withheld Afghanistan matches.
+All available public Cricsheet Test, ODI and T20I files for men and women were imported. This is NOT complete cricket history, live scoring, fixtures, current rankings or news. Use the manifest for the date range. Player profiles and comparisons default to independent career-record snapshots. The ball-data switch shows archive aggregates. Never add these layers together. Missing fields remain null. Super overs are excluded from player aggregates. Source coverage has historical gaps and withheld Afghanistan matches.
 
 Career provenance and scope completion: /data/career_manifest.json. Historical results: /data/historical_manifest.json. Result-only matches have no local innings scorecard and are labeled.
 
@@ -18,8 +18,6 @@ Career provenance and scope completion: /data/career_manifest.json. Historical r
 /overview/ preserves the original India archive. /official/ contains separately dated, curated career snapshots. These have not been independently reverified by the international import and must not be described as current official totals.
 
 ## Sources
-https://stats.espncricinfo.com/ci/engine/stats/index.html — international career records and historical results.
 https://cricsheet.org/register/ — stable player identity links.
 https://cricsheet.org/downloads/ — international source data.
-Existing player portraits are from the project's Wikimedia-sourced collection.
 Independent site, not affiliated with ICC or BCCI.

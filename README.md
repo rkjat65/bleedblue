@@ -1,4 +1,4 @@
-# Bleed Blue — International Cricket
+# Cricket Wicket — International Cricket
 
 A responsive international cricket portal with a separate India records hub. IPL remains on [Crickrida](https://crickrida.rkjat.in).
 

@@ -803,7 +803,7 @@ function renderOfficial() {
       )
       .join("");
 
-    $("#sourceList").innerHTML = (OFFICIAL.meta.sources || [])
+    $("#sourceList").innerHTML = [{name: "Cricsheet — ball-by-ball data", url: "https://cricsheet.org/"}]
       .map(
         (s) => `<li>
         <a href="${escapeAttr(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name)}</a>
@@ -930,7 +930,7 @@ function renderOfficialFormatPanel() {
             <tbody>${bowlRows}</tbody>
           </table>
         </div>
-        <p class="footnote">*T20I table shows economy where five-fors are rare. Cross-check ESPNcricinfo for live updates.</p>
+        <p class="footnote">*T20I table shows economy where five-fors are rare. Career figures reflect the displayed snapshot date.</p>
       </div>
     </div>
   `;
@@ -1479,7 +1479,7 @@ function renderAbout() {
   const matches = DATA?.meta?.matches ?? "—";
   const range = DATA?.meta?.date_range || ["—", "—"];
   const asOf = OFFICIAL?.meta?.as_of || "—";
-  const sources = (OFFICIAL?.meta?.sources || [])
+  const sources = [{name: "Cricsheet — ball-by-ball data", url: "https://cricsheet.org/"}]
     .map((s) => `<li><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name)}</a></li>`)
     .join("");
 
@@ -1491,7 +1491,7 @@ function renderAbout() {
     <div class="card">
       <div class="card-head"><h2>Official vs archive</h2></div>
       <ul class="about-list">
-        <li><strong>Official Records</strong> — career team/player landmarks compiled from Wikipedia / ESPNcricinfo / ICC public figures (as of ${escapeHtml(asOf)}). Use this for “all-time” truth.</li>
+        <li><strong>Official Records</strong> — career team/player landmarks compiled as dated career snapshots (as of ${escapeHtml(asOf)}). Use this for “all-time” truth.</li>
         <li><strong>Archive analytics</strong> — computed from ${fmtNum(matches)} match files in this dataset (${escapeHtml(range[0])} → ${escapeHtml(range[1])}). Player tables, match centre, series and coverage all use this source and can under-count pre-coverage careers.</li>
       </ul>
     </div>
@@ -1505,8 +1505,8 @@ function renderAbout() {
     </div>
     <div class="card">
       <div class="card-head"><h2>Sources</h2></div>
-      <ul class="source-list">${sources || "<li>Cricsheet · Wikipedia · ESPNcricinfo</li>"}</ul>
-      <p class="footnote mt-3">${escapeHtml(OFFICIAL?.meta?.note || "")}</p>
+      <ul class="source-list">${sources || "<li>Cricsheet — ball-by-ball data</li>"}</ul>
+      <p class="footnote mt-3">Career snapshots and archive aggregates have different coverage. Check the displayed update dates.</p>
     </div>
     <div class="card">
       <div class="card-head"><h2>Site &amp; updates</h2></div>
@@ -1514,7 +1514,7 @@ function renderAbout() {
         <div class="mini-row"><span class="k">Last generated</span><span class="v mono">${escapeHtml(gen)}</span></div>
         <div class="mini-row"><span class="k">Archive matches</span><span class="v mono">${fmtNum(matches)}</span></div>
         <div class="mini-row"><span class="k">Domain</span><span class="v"><a href="https://cricket.rkjat.in">cricket.rkjat.in</a></span></div>
-        <div class="mini-row"><span class="k">Design</span><span class="v"><a href="https://crickrida.rkjat.in" target="_blank" rel="noopener">Crickrida-inspired</a></span></div>
+        <div class="mini-row"><span class="k">Publisher</span><span class="v">Cricket Wicket</span></div>
       </div>
       <p class="about-p mt-3">Built as a static SPA for GitHub Pages. Feedback and corrections welcome via the site owner.</p>
     </div>

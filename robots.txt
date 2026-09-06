@@ -1,4 +1,4 @@
-# cricket.rkjat.in — Team India cricket records
+# cricket.rkjat.in — Cricket Wicket — international cricket records
 User-agent: *
 Allow: /
 Allow: /official

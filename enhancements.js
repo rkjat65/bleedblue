@@ -10,7 +10,7 @@
   function downloadTable(table) {
     const csv = [...table.rows].map(row => [...row.cells].map(cell => '"' + cell.innerText.replace(/^[=+@-]/, "'$&").replace(/"/g, '""') + '"').join(',')).join('\r\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF' + csv], {type: 'text/csv;charset=utf-8'}));
-    const link = document.createElement('a'); link.href = url; link.download = 'bleed-blue-' + (table.id || 'table') + '.csv'; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const link = document.createElement('a'); link.href = url; link.download = 'cricket-wicket-' + (table.id || 'table') + '.csv'; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   document.querySelectorAll('table[id]').forEach(table => {
     const button = document.createElement('button'); button.type = 'button'; button.className = 'export-btn'; button.textContent = 'Download visible rows CSV ↓'; button.addEventListener('click', () => downloadTable(table)); table.closest('.table-scroll')?.before(button);
