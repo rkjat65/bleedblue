@@ -2,11 +2,15 @@
 
 The positioning: **The game in numbers.** A fast, dependable international cricket reference for fans, researchers, writers and analysts. Men's and women's cricket belong in the same product structure. IPL remains on the owner's Crickrida site.
 
-## Current foundation and immediate gaps
+## Implemented in the generated publication
 
-The current snapshot has 12,411 career profiles and 16,958 match records. Career and delivery-derived figures remain separate. The rebrand introduces a wicket symbol, navy and green identity, updated metadata and Cricsheet as the visible data credit.
+The September 2026 release implements the first three engineering stages below: generated entity pages, career and archive analysis, qualified records, comparisons, shared filters, CSV/SVG export, saved research, embed cards, statistical explainers, a navy/green responsive theme and dark mode. The GitHub Pages workflow builds and audits the complete publication before deployment. The weekly refresh validates source completeness, count changes, scorecard totals and identity joins before replacing data.
 
-The next engineering priority is page delivery. The career JSON is approximately 20.4 MB uncompressed, and profiles also request the approximately 10 MB international archive. Player detail URLs currently share the directory's initial HTML and canonical tag. Important sections use fragment routes. The sitemap lists only a small set of section pages. This limits search discovery and mobile usefulness; the number of stored records alone does not solve those problems.
+Every available career field is exposed in batting, bowling and fielding tables. Player analysis is fetched per player; the large global career and delivery datasets are no longer profile dependencies. Career snapshots and archive splits remain separate. The original roadmap below documents the product direction.
+
+## Remaining external and data work
+
+Search Console verification and search/engagement reporting require the owner's account or a configured analytics property. Field Core Web Vitals are still measurement targets, not achieved claims. Corrections currently download a report; receiving reports needs an owner-selected inbox or backend. The three generated explainers are published snapshots, not a promise of human-reviewed weekly editorial coverage. Forty-three unmatched identities and missing historical delivery/scorecard records remain explicit gaps. Broader historical scorecards, localization and dependable live feeds require additional verified data access; no invented figures or third-party credentials are embedded.
 
 ## 1. Build a searchable cricket reference
 

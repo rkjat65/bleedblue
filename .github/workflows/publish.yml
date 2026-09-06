@@ -1,0 +1,70 @@
+name: Validate and publish Cricket Wicket
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: Refresh all source data before validation
+        type: boolean
+        default: false
+  schedule:
+    - cron: '15 2 * * 1'
+
+concurrency:
+  group: cricket-publication
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: pip install -r tools/requirements.txt
+      - name: Refresh complete source snapshots
+        if: github.event_name == 'schedule' || inputs.refresh == true
+        run: python tools/refresh_data.py
+      - name: Validate records
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          node tests/test_record_layers.js
+          node --check web/wicket.js
+      - name: Build crawlable publication
+        run: |
+          mkdir -p _site
+          curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/build-manifest.json -o _site/previous-manifest.json && mv _site/previous-manifest.json _site/build-manifest.json || rm -f _site/previous-manifest.json
+          python tools/build_site.py
+          python tools/audit_site.py
+      - name: Preserve validated refreshed data
+        if: github.event_name == 'schedule' || inputs.refresh == true
+        run: |
+          git config user.name 'Cricket Wicket publisher'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh validated international cricket records'
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publish validated artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

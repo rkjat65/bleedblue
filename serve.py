@@ -14,7 +14,7 @@ class Handler(SimpleHTTPRequestHandler):
     def send_head(self):
         path = unquote(urlsplit(self.path).path).strip('/')
         parts = path.split('/')
-        if (parts[0] in {'player', 'match', 'series'} and len(parts) > 1) or path == 'official':
+        if not (ROOT / path / 'index.html').exists() and ((parts[0] in {'player', 'match', 'series'} and len(parts) > 1) or path == 'official'):
             self.path = '/overview/index.html'
         return super().send_head()
 
@@ -27,6 +27,11 @@ class Handler(SimpleHTTPRequestHandler):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
+    parser.add_argument('--built', action='store_true', help='Serve the generated _site publication')
     args = parser.parse_args()
-    print(f'Bleed Blue: http://127.0.0.1:{args.port}', flush=True)
+    if args.built:
+        ROOT = ROOT / '_site'
+        if not (ROOT / 'index.html').exists():
+            parser.error('Run python tools/build_site.py first')
+    print(f'Cricket Wicket: http://127.0.0.1:{args.port}', flush=True)
     ThreadingHTTPServer(('127.0.0.1', args.port), Handler).serve_forever()

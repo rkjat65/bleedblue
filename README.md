@@ -2,24 +2,36 @@
 
 A responsive international cricket portal with a separate India records hub. IPL remains on [Crickrida](https://crickrida.rkjat.in).
 
-## Run locally
+## Build and run locally
 
 ```powershell
-python serve.py
+python -m pip install -r tools/requirements.txt
+python tools/build_site.py
+python tools/audit_site.py
+python serve.py --built
 ```
 
-Open http://127.0.0.1:8765. The server binds to loopback and supports direct India player, match and series URLs. To use another port: `python serve.py --port 8766`.
+Open http://127.0.0.1:8765. The source-only legacy preview is still available with `python serve.py`.
 
-## International portal
+## Publication
 
-- `/`: editorial homepage, recent archive results and format summaries.
-- `/international/`: match centre with team, gender, format, year and text filters, pagination and CSV export. Filter URLs can be shared and refreshed.
-- `/international/?match=ID`: both teams' innings, batting and bowling cards, playing XIs, fall of wickets, runs by over and source link.
-- `/international/#series`, `#teams`, `#venues`, `#records`: browse the selected archive by competition, team, ground or innings record.
-- `/players/`: searchable player directory, format/gender filters, sorting and side-by-side comparison.
-- `/players/?id=ID`: player profile, format statistics and recent appearances.
-- `/international/#coverage`: source dates, scope and gaps.
-- `/overview/`: original India archive, now with consistent navigation and styling.
+The generated `_site/` is ignored by Git. GitHub Actions validates the data, builds the site and publishes the artifact through GitHub Pages. Pushes to `main` publish the current snapshot. Monday's scheduled run (02:15 UTC) and a manual workflow run with **refresh** enabled import fresh data in an isolated temporary directory. Incomplete scopes, suspicious count decreases, regression failures or a failed publication audit prevent deployment. The existing live artifact stays available. A successful refresh commits validated data back to `main` before deployment.
+
+Generated player, scorecard, historical-result, team, ground, series, record and curated-comparison pages contain their main statistics in HTML. Each has its own canonical URL, metadata and sitemap entry. Content hashes preserve sitemap modification dates for unchanged pages. Old player IDs and international match/hash URLs resolve to the new routes through the compatibility entry pages.
+
+- `/players/`: paginated directory, career totals, full available batting/bowling/fielding records and player-specific archive analysis.
+- `/matches/`: searchable results and scorecards, with historical result-only coverage labeled.
+- `/teams/`, `/grounds/`, `/series/`: linked international entities and matching results.
+- `/records/`: 36 men's/women's format-specific career leaderboards with qualifications and ties.
+- `/compare/`: career or archive comparisons with format, year, opponent and minimum-innings filters.
+- `/insights/`: reproducible statistical explainers linked to the record tables.
+- `/saved/`: browser-local saved pages and filtered research.
+- `/embed/?player=/players/virat-kohli/`: lightweight player career card; use **Embed career card** on any profile.
+- `/corrections/`: download a structured correction report. No submission backend is configured.
+- `/methodology/`: coverage, definitions and freshness.
+- `/overview/`: original India archive.
+
+Tables support sorting of displayed rows and CSV export. Filtered exports include all matching rows. Player charts also export to SVG. Dark mode, mobile navigation, sticky table columns and keyboard controls use the same shared shell.
 
 ## Dataset and refresh
 
@@ -37,7 +49,7 @@ python -m unittest discover -s tests -v
 node tests/test_record_layers.js
 ```
 
-Career and historical importers cache parsed source pages in ignored `.data-cache/careers/` and follow source pagination. Rerunning resumes cached scopes, including failed requests. Use `import_careers.py --refresh` to replace career snapshots. For a historical refresh, move the existing `matches-*.json` cache files into a backup directory before rerunning. Do not mix pages from different refreshes. Review all scope-completion flags before publishing.
+Career and historical importers cache parsed source pages in ignored `.data-cache/careers/` and follow source pagination. Rerunning resumes cached scopes, including failed requests. Use `import_careers.py --refresh` to replace career snapshots. For a complete fresh import use `python tools/refresh_data.py`; it isolates the source cache and validates all scopes before copying data into the working tree. Review changes before committing outside CI.
 
 `data/career_manifest.json` and `data/historical_manifest.json` give current counts, scope status and provenance. `data/careers.json` stores batting, bowling and fielding career records; `data/historical_matches.json` contains additional result-only matches. The original `data/international.json` and lazy-loaded `data/scorecards/` remain the ball-data layer. Small home payloads avoid downloading the full catalogs on the homepage.
 
