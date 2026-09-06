@@ -23,6 +23,18 @@ def esc(v): return html.escape(str(v if v is not None else ''), quote=True)
 def num(v): return '—' if v is None else f'{v:,}' if isinstance(v, int) else str(v)
 def slug(v): return re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD', str(v)).encode('ascii','ignore').decode().lower()).strip('-') or 'unknown'
 def fullname(p): return ALIASES.get(p['name'],p['name'])
+
+def stable_routes(proposed, previous, kind):
+    """Keep published identity URLs when names or scorecard coverage change."""
+    counts=Counter(previous.values())
+    result={key:previous[key] for key in proposed if key in previous and counts[previous[key]]==1 and re.fullmatch('/'+kind+r'/[a-z0-9-]+/',previous[key])}
+    used=set(result.values())
+    for key,path in proposed.items():
+        if key in result:continue
+        if path in used:path=path.rstrip('/')+'-'+key+'/'
+        if path in used:raise ValueError('Conflicting identity URL: '+path)
+        result[key]=path;used.add(path)
+    return result
 def dump(path, value):
     target=OUT/path.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(value,separators=(',',':'),ensure_ascii=False),encoding='utf-8')
@@ -93,6 +105,9 @@ def main():
     match_labels={mid:title+(' · '+mid if duplicate_labels[title]>1 else '') for mid,title in match_labels.items()}
     pp={pid:'/players/'+slug(p['name'])+('-'+pid if names[slug(p['name'])]>1 else '')+'/' for pid,p in people.items()}
     mp={m['id']:'/matches/'+slug('-'.join(m['teams']))+'-'+m['date']+'-'+m['id']+'/' for m in matches}
+    previous_routes=json.loads((OUT/'data/routes.json').read_text(encoding='utf-8')) if (OUT/'data/routes.json').exists() else {}
+    pp=stable_routes(pp,previous_routes.get('players',{}),'players')
+    mp=stable_routes(mp,previous_routes.get('matches',{}),'matches')
     groups={kind:defaultdict(list) for kind in ['teams','grounds','series']}
     appearances=defaultdict(list);innings=defaultdict(list)
     for m in matches:

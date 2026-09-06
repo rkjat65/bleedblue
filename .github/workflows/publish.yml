@@ -37,8 +37,9 @@ jobs:
           node --check web/wicket.js
       - name: Build crawlable publication
         run: |
-          mkdir -p _site
+          mkdir -p _site/data
           curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/build-manifest.json -o _site/previous-manifest.json && mv _site/previous-manifest.json _site/build-manifest.json || rm -f _site/previous-manifest.json
+          curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/data/routes.json -o _site/data/previous-routes.json && mv _site/data/previous-routes.json _site/data/routes.json || rm -f _site/data/previous-routes.json
           python tools/build_site.py
           python tools/audit_site.py
       - name: Preserve validated refreshed data

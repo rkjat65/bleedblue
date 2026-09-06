@@ -3,7 +3,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'tools'))
-from build_site import aggregate, slug
+from build_site import aggregate, slug, stable_routes
 
 
 class SiteMathTests(unittest.TestCase):
@@ -24,6 +24,16 @@ class SiteMathTests(unittest.TestCase):
     def test_url_names_are_ascii_and_safe(self):
         self.assertEqual(slug("Lord’s Cricket Ground"), 'lords-cricket-ground')
         self.assertEqual(slug('Québec / ../'), 'quebec')
+
+    def test_published_identity_urls_survive_renaming(self):
+        self.assertEqual(stable_routes({'a':'/players/full-name/'},{'a':'/players/old-name/'},'players'), {'a':'/players/old-name/'})
+        self.assertEqual(stable_routes({'42':'/matches/india-england-42/'},{'42':'/matches/england-india-42/'},'matches'), {'42':'/matches/england-india-42/'})
+
+    def test_new_identity_cannot_take_published_url(self):
+        self.assertEqual(stable_routes({'a':'/players/new-name/','b':'/players/old-name/'},{'a':'/players/old-name/'},'players'), {'a':'/players/old-name/','b':'/players/old-name-b/'})
+
+    def test_invalid_previous_routes_are_not_reused(self):
+        self.assertEqual(stable_routes({'a':'/players/alice/'},{'a':'//other.example/'},'players'), {'a':'/players/alice/'})
 
 
 if __name__ == '__main__':
