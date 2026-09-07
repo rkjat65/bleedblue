@@ -2,3 +2,4 @@ beautifulsoup4>=4.12,<5
 Pillow>=11,<13
 duckdb>=1.4,<2
 pyarrow>=20,<24
+boto3>=1.40,<2

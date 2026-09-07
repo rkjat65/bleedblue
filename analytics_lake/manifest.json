@@ -1,7 +1,7 @@
 {
   "name": "Cricket Wicket Analytics Lake",
-  "version": "20260907123224",
-  "generated_at": "2026-09-07T12:32:24.120564+00:00",
+  "version": "20260907131056",
+  "generated_at": "2026-09-07T13:10:56.804253+00:00",
   "scope": "Official international cricket",
   "license_note": "Cricsheet attribution applies to ball-derived records.",
   "tables": {
