@@ -1,0 +1,301 @@
+{
+  "name": "Cricket Wicket Analytics Lake",
+  "version": "20260907123224",
+  "generated_at": "2026-09-07T12:32:24.120564+00:00",
+  "scope": "Official international cricket",
+  "license_note": "Cricsheet attribution applies to ball-derived records.",
+  "tables": {
+    "matches": {
+      "file": "matches.parquet",
+      "rows": 10786,
+      "bytes": 122345,
+      "sha256": "e158ba882e93d08ac2682d0082db9f943a0534bbdf32130f5fd2811e65363503",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "name": "year",
+          "type": "int64"
+        },
+        {
+          "name": "format",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "team_1",
+          "type": "string"
+        },
+        {
+          "name": "team_2",
+          "type": "string"
+        },
+        {
+          "name": "winner",
+          "type": "string"
+        },
+        {
+          "name": "result",
+          "type": "string"
+        },
+        {
+          "name": "margin_runs",
+          "type": "int64"
+        },
+        {
+          "name": "margin_wickets",
+          "type": "int64"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        },
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "series",
+          "type": "string"
+        },
+        {
+          "name": "coverage",
+          "type": "string"
+        }
+      ]
+    },
+    "careers": {
+      "file": "careers.parquet",
+      "rows": 9474,
+      "bytes": 377750,
+      "sha256": "ff4361956880e92154de7b05291cf263d4d7946d9dba52e9b0f11e0f8a5eed89",
+      "columns": [
+        {
+          "name": "player_id",
+          "type": "string"
+        },
+        {
+          "name": "player",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "teams",
+          "type": "string"
+        },
+        {
+          "name": "format",
+          "type": "string"
+        },
+        {
+          "name": "first_year",
+          "type": "string"
+        },
+        {
+          "name": "last_year",
+          "type": "string"
+        },
+        {
+          "name": "matches",
+          "type": "int64"
+        },
+        {
+          "name": "innings",
+          "type": "int64"
+        },
+        {
+          "name": "notouts",
+          "type": "int64"
+        },
+        {
+          "name": "runs",
+          "type": "int64"
+        },
+        {
+          "name": "balls",
+          "type": "int64"
+        },
+        {
+          "name": "highest",
+          "type": "int64"
+        },
+        {
+          "name": "avg",
+          "type": "double"
+        },
+        {
+          "name": "sr",
+          "type": "double"
+        },
+        {
+          "name": "hundreds",
+          "type": "int64"
+        },
+        {
+          "name": "fifties",
+          "type": "int64"
+        },
+        {
+          "name": "ducks",
+          "type": "int64"
+        },
+        {
+          "name": "fours",
+          "type": "int64"
+        },
+        {
+          "name": "sixes",
+          "type": "int64"
+        },
+        {
+          "name": "bowling_innings",
+          "type": "int64"
+        },
+        {
+          "name": "legal",
+          "type": "int64"
+        },
+        {
+          "name": "maidens",
+          "type": "int64"
+        },
+        {
+          "name": "conceded",
+          "type": "int64"
+        },
+        {
+          "name": "wickets",
+          "type": "int64"
+        },
+        {
+          "name": "bowlAvg",
+          "type": "double"
+        },
+        {
+          "name": "econ",
+          "type": "double"
+        },
+        {
+          "name": "bowlSr",
+          "type": "double"
+        },
+        {
+          "name": "four_w",
+          "type": "int64"
+        },
+        {
+          "name": "five_w",
+          "type": "int64"
+        },
+        {
+          "name": "ten_w",
+          "type": "int64"
+        },
+        {
+          "name": "catches",
+          "type": "int64"
+        },
+        {
+          "name": "stumpings",
+          "type": "int64"
+        },
+        {
+          "name": "dismissals",
+          "type": "int64"
+        }
+      ]
+    },
+    "batting_innings": {
+      "file": "batting_innings.parquet",
+      "rows": 229815,
+      "bytes": 2000765,
+      "sha256": "ca93aa67337dc77a30c191dacffa20b756f7aa4758413539efd113e8b010da49",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "name": "year",
+          "type": "int64"
+        },
+        {
+          "name": "format",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "innings_number",
+          "type": "int64"
+        },
+        {
+          "name": "player_id",
+          "type": "string"
+        },
+        {
+          "name": "player",
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "type": "string"
+        },
+        {
+          "name": "opponent",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        },
+        {
+          "name": "position",
+          "type": "int64"
+        },
+        {
+          "name": "runs",
+          "type": "int64"
+        },
+        {
+          "name": "balls",
+          "type": "int64"
+        },
+        {
+          "name": "fours",
+          "type": "int64"
+        },
+        {
+          "name": "sixes",
+          "type": "int64"
+        },
+        {
+          "name": "out",
+          "type": "bool"
+        },
+        {
+          "name": "dismissal",
+          "type": "string"
+        }
+      ]
+    }
+  }
+}
