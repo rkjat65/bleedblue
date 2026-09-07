@@ -47,10 +47,11 @@ def portrait_figure(player_id, name, portraits, *, compact=False):
     return ('<figure class="' + css + '"><img src="' + e(p['path']) + '" width="'
             + str(p['width']) + '" height="' + str(p['height']) + '" alt="' + e(name)
             + '" decoding="async" fetchpriority="high">'
-            '<figcaption><span>Photo: ' + e(p['author']) + '</span> '
+            '<figcaption class="portrait-credit"><details><summary aria-label="Photo attribution" title="Photo attribution">ⓘ</summary>'
+            '<div><span>Photo: ' + e(p['author']) + '</span> '
             '<a href="' + e(p['source_url']) + '" rel="license noopener">Wikimedia Commons</a>'
             ' · <a href="' + e(p['license_url']) + '" rel="license noopener">' + e(p['license'])
-            + '</a><span class="portrait-changes">' + e(p['changes']) + '</span></figcaption></figure>')
+            + '</a><span class="portrait-changes">' + e(p['changes']) + '</span></div></details></figcaption></figure>')
 
 
 def portrait_schema(player_id, portraits, base='https://cricket.rkjat.in'):
