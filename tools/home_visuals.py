@@ -6,7 +6,7 @@ from collections import Counter
 
 def homepage_hero(players, matches):
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
-      <div class="hero-art" aria-hidden="true"><img src="/assets/art/cricket-hero-v1.png" width="1536" height="1024" alt="" fetchpriority="high"></div>
+      <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" fetchpriority="high"></picture></div>
       <div class="hero-copy"><p class="hero-kicker"><span></span> THE INTERNATIONAL GAME. EXPLORED.</p>
         <h1 id="hero-title">Every record.<br>Every rivalry.<br><em>A deeper game.</em></h1>
         <p class="hero-description">From the first Test to the next great innings. Discover the players, numbers and moments that make cricket extraordinary.</p>

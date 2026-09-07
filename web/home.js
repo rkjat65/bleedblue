@@ -1,33 +1,6 @@
 /* Homepage motion is optional; archive values remain available without JavaScript. */
 (() => {
   'use strict';
-  const hero = document.querySelector('[data-cricket-hero]');
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  if (hero && hero.querySelector('.hero-motion')) {
-    const button = hero.querySelector('.hero-motion');
-    let paused = reduced.matches;
-    const sync = () => {
-      hero.classList.toggle('motion-paused', paused || document.hidden);
-      hero.classList.toggle('motion-enabled', !paused && !document.hidden);
-      button.setAttribute('aria-pressed', String(paused));
-      button.textContent = paused ? 'Play animation' : 'Pause animation';
-      button.hidden = false;
-    };
-    button.addEventListener('click', () => { paused = !paused; sync(); });
-    reduced.addEventListener('change', () => { paused = reduced.matches; sync(); });
-    document.addEventListener('visibilitychange', sync);
-    hero.addEventListener('pointermove', event => {
-      if (paused || event.pointerType !== 'mouse') return;
-      const rect = hero.getBoundingClientRect();
-      hero.style.setProperty('--art-x', `${(event.clientX - rect.left - rect.width / 2) / 65}px`);
-      hero.style.setProperty('--art-y', `${(event.clientY - rect.top - rect.height / 2) / 65}px`);
-    });
-    hero.addEventListener('pointerleave', () => {
-      hero.style.setProperty('--art-x', '0px');
-      hero.style.setProperty('--art-y', '0px');
-    });
-    sync();
-  }
   const story = document.querySelector('[data-archive-story]');
   if (!story) return;
   const rows = JSON.parse(document.querySelector('#archive-chart-data').textContent);
