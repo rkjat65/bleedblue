@@ -6,16 +6,14 @@ from collections import Counter
 
 def homepage_hero(players, matches):
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
-      <div class="hero-art" aria-hidden="true"><img src="/assets/art/cricket-hero-v1.png" width="1536" height="1024" alt="" fetchpriority="high"><span class="hero-orbit"></span></div>
+      <div class="hero-art" aria-hidden="true"><img src="/assets/art/cricket-hero-v1.png" width="1536" height="1024" alt="" fetchpriority="high"></div>
       <div class="hero-copy"><p class="hero-kicker"><span></span> THE INTERNATIONAL GAME. EXPLORED.</p>
         <h1 id="hero-title">Every record.<br>Every rivalry.<br><em>A deeper game.</em></h1>
         <p class="hero-description">From the first Test to the next great innings. Discover the players, numbers and moments that make cricket extraordinary.</p>
         <div class="hero-actions"><a class="button hero-primary" href="/players/">Explore the players <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/records/">Discover records <span aria-hidden="true">→</span></a></div>
         <form class="hero-find" action="/search/"><label for="home-search">YOUR NEXT CRICKET DISCOVERY</label><div><input id="home-search" name="q" placeholder="Search a player, team or ground" required><button aria-label="Search cricket records">→</button></div></form>
       </div>
-      <div class="hero-float hero-float-top"><span>THE PEOPLE BEHIND THE NUMBERS</span><strong>{players:,}<small>player profiles</small></strong><div class="hero-mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <a class="hero-float hero-float-bottom" href="/matches/"><span>AN ARCHIVE TO GET LOST IN</span><strong>{matches:,}<small>international matches ↗</small></strong></a>
-      <div class="hero-bottom"><span>TEST <b>·</b> ODI <b>·</b> T20I <i>MEN &amp; WOMEN</i></span><button class="hero-motion" aria-pressed="false" hidden>Pause animation</button></div>
+      <div class="hero-bottom"><span>TEST <b>·</b> ODI <b>·</b> T20I <i>MEN &amp; WOMEN</i></span></div>
     </section>'''
 
 

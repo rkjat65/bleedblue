@@ -3,7 +3,7 @@
   'use strict';
   const hero = document.querySelector('[data-cricket-hero]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  if (hero) {
+  if (hero && hero.querySelector('.hero-motion')) {
     const button = hero.querySelector('.hero-motion');
     let paused = reduced.matches;
     const sync = () => {
