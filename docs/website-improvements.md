@@ -17,7 +17,6 @@ The user authorised implementation and publication of the identified improvement
 
 ## Dependent on external account choices or evidence
 - Analytics/ad tags and consent configuration need the actual account identifiers and suitable account configuration. No tracking or ad placeholder is enabled.
-- Analytics/ad tags and consent configuration need the actual account identifiers and suitable account configuration. Do not invent a publisher ID or add placeholder ads.txt records.
 - Actual ad-network approval, ad income and organic ranking cannot be guaranteed.
 - Recurring editorial distribution and outreach require a chosen destination and explicit sending/scheduling authority.
 

@@ -267,7 +267,9 @@ def main():
         xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE}{esc(path)}</loc><lastmod>{PAGES[path]["lastmod"]}</lastmod></url>' for path in paths)+'</urlset>'
         (OUT/name).write_text(xml,encoding='utf-8')
     (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<sitemap><loc>{BASE}/{x}</loc></sitemap>' for x in sitemap_files)+'</sitemapindex>',encoding='utf-8')
-    (OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /saved/\nDisallow: /data/\nSitemap: {BASE}/sitemap.xml\n',encoding='utf-8')
+    # Public JSON indexes power the crawlable search and explorer experience;
+    # only the private notebook is excluded from search.
+    (OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /saved/\nSitemap: {BASE}/sitemap.xml\n',encoding='utf-8')
     # Only prune destinations previously owned by the generator, inside this output.
     for path in set(PREVIOUS)-set(PAGES):
         target=(OUT/path.lstrip('/')).resolve()
