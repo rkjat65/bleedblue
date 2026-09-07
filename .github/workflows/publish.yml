@@ -35,6 +35,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_*.py'
           node tests/test_record_layers.js
           node --check web/wicket.js
+          node --check web/home.js
       - name: Build crawlable publication
         run: |
           mkdir -p _site/data

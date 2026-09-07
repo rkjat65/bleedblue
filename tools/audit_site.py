@@ -35,7 +35,7 @@ def main():
     pool=ThreadPoolExecutor(max_workers=12)
     for index,(path,text) in enumerate(pool.map(rendered,paths)):
         if index and index % 5000 == 0: print(f'Checked {index} pages', flush=True)
-        assert text.count('<h1>') == 1, path
+        assert len(re.findall(r'<h1(?:\s[^>]*)?>', text)) == 1, path
         assert f'rel="canonical" href="https://cricket.rkjat.in{path}"' in text, path
         assert '<meta name="description" content="' in text, path
         assert 'noindex' not in text, path
@@ -66,6 +66,11 @@ def main():
     matches=archive['matches']+history['matches']
     cards=load_cards(ROOT,matches,people)
     assert set(routes['matches'])=={m['id'] for m in matches}
+    homepage = (SITE/'index.html').read_text(encoding='utf-8')
+    chart = json.loads(re.search(r'<script type="application/json" id="archive-chart-data">(.*?)</script>', homepage).group(1))
+    expected_decades = Counter((m['date'][:3]+'0',m['format'],m['gender']) for m in matches)
+    assert len(chart) == len(expected_decades), 'Duplicate or missing chart groups'
+    assert {(d,f,g):n for d,f,g,n in chart} == dict(expected_decades), 'Archive chart and match records disagree'
     assert all(set(m['teams'])<=FULL_MEMBERS for m in read(SITE/'data/match-index.json'))
     assert all(set(p['teams'])<=FULL_MEMBERS for p in read(SITE/'data/player-index.json'))
     expected=Counter();appearances=Counter()
