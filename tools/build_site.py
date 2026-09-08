@@ -144,14 +144,16 @@ def team_badge(team, path=None):
     return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
 def stats_table(p):
     career=p.get('career',{})
-    groups=[('Batting career',['matches','innings','runs','avg','sr','highest_display','notouts','hundreds','fifties','ducks','fours','sixes','balls'],['Mat','Inns','Runs','Avg','SR','HS','NO','100s','50s','Ducks','4s','6s','BF']),('Bowling career',['matches','bowling_innings','legal','maidens','conceded','wickets','bowlAvg','econ','bowlSr','best_bowling','best_match','four_w','five_w','ten_w'],['Mat','Inns','Balls','M','Runs','W','Avg','Econ','SR','BBI','BBM','4w','5w','10w']),('Fielding career',['matches','fielding_innings','catches','stumpings','dismissals','keeper_catches','fielder_catches','dismissals_per_innings','most_dismissals'],['Mat','Inns','Ct','St','Dis','Keeper Ct','Fielder Ct','Dis/Inns','Best'])]
-    output='<div class="format-switch" data-format-switch role="group" aria-label="Filter career records"><button class="active" data-format="">All formats</button>'+''.join(f'<button data-format="{fmt}">{fmt}</button>' for fmt in ('Test','ODI','T20I') if fmt in career)+'</div><div class="career-format-grid">'
-    by_format={fmt:[] for fmt in career}
-    for title,keys,labels in groups:
-        for fmt,stats in career.items():
-            by_format[fmt].append('<div class="career-discipline"><h4>'+title.replace(' career','')+'</h4>'+table(labels,[[stat_value(stats,k) for k in keys]],caption=fmt+' '+title.lower())+'</div>')
+    groups=[('Batting',[('matches','Matches'),('innings','Innings'),('runs','Runs'),('avg','Average'),('sr','Strike rate'),('highest_display','Highest score'),('notouts','Not outs'),('hundreds','100s'),('fifties','50s'),('ducks','Ducks'),('fours','4s'),('sixes','6s'),('balls','Balls faced')]),('Bowling',[('matches','Matches'),('bowling_innings','Innings'),('legal','Balls'),('maidens','Maidens'),('conceded','Runs conceded'),('wickets','Wickets'),('bowlAvg','Average'),('econ','Economy'),('bowlSr','Strike rate'),('best_bowling','Best innings'),('best_match','Best match'),('four_w','4 wickets'),('five_w','5 wickets'),('ten_w','10 wickets')]),('Fielding',[('matches','Matches'),('fielding_innings','Innings'),('catches','Catches'),('stumpings','Stumpings'),('dismissals','Dismissals'),('keeper_catches','Keeper catches'),('fielder_catches','Fielder catches'),('dismissals_per_innings','Dismissals / inns'),('most_dismissals','Best innings')])]
+    output='<div class="format-switch" data-format-switch role="group" aria-label="Filter career records"><button class="active" data-format="" aria-pressed="true">All formats</button>'+''.join(f'<button data-format="{fmt}" aria-pressed="false">{fmt}</button>' for fmt in ('Test','ODI','T20I') if fmt in career)+'</div><div class="career-format-list">'
     for fmt in ('Test','ODI','T20I'):
-        if fmt in by_format: output+='<section class="career-format" data-career-format="'+fmt+'"><div class="career-format-head"><h3>'+fmt+'</h3><span>Official international career</span></div>'+''.join(by_format[fmt])+'</section>'
+        if fmt not in career: continue
+        stats=career[fmt]
+        disciplines=''
+        for title,fields in groups:
+            figures=''.join('<div class="career-stat"><dt>'+label+'</dt><dd>'+stat_value(stats,key)+'</dd></div>' for key,label in fields)
+            disciplines+='<section class="career-discipline"><h4>'+title+'</h4><dl class="career-stat-grid">'+figures+'</dl></section>'
+        output+='<section class="career-format" data-career-format="'+fmt+'"><div class="career-format-head"><h3>'+fmt+'</h3><span>Official international career</span></div>'+disciplines+'</section>'
     return output+'</div>'
 
 def options(name,values,label=None):return f'<label>{esc(label or name.title())}<select name="{name}"><option value="">All</option>'+''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)+'</select></label>'

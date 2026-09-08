@@ -107,6 +107,7 @@ def yearly_chart(rows, fmt, metric, context):
         if number is not None:
             bar_height = number / peak * plot_height
             markup += f'<rect class="pr-bar pr-{metric}" x="{x:.1f}" y="{baseline-bar_height:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" rx="2"><title>{year}: {number:,} {metric}</title></rect>'
+            markup += f'<text class="pr-value" x="{x+bar_width/2:.1f}" y="{max(20,baseline-bar_height-4):.1f}" text-anchor="middle">{number:,}</text>'
         else:
             markup += f'<text class="pr-unknown" x="{x+bar_width/2:.1f}" y="151" text-anchor="middle"><title>{year}: {metric} incompletely recorded</title>?</text>'
         if i == 0 or i == len(years)-1 or (len(years) > 1 and i % max(1, (len(years)+6)//7) == 0 and i < len(years)-2):
