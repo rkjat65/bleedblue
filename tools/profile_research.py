@@ -49,6 +49,7 @@ def aggregate_rows(rows):
         totals[key] = complete_sum(bowling, key)
     totals['hundreds'] = sum(r['runs'] >= 100 for r in batting) if all(r.get('runs') is not None for r in batting) else None
     totals['fifties'] = sum(50 <= r['runs'] < 100 for r in batting) if all(r.get('runs') is not None for r in batting) else None
+    totals['highest'] = max((r['runs'] for r in batting if r.get('runs') is not None), default=None)
     totals['avg'] = rate(totals['runs'], totals['outs'])
     totals['sr'] = rate(totals['runs'], totals['balls'], 100)
     totals['bowlAvg'] = rate(totals['conceded'], totals['wickets'])
@@ -90,22 +91,28 @@ def yearly_chart(rows, fmt, metric, context):
     if not recorded:
         return ''
     peak = max(recorded + [1])
-    width, height, left, baseline = 650, 170, 42, 136
-    step = 588 / len(years)
+    width, height, left, baseline = 650, 208, 62, 160
+    plot_width, plot_height = 566, 132
+    step = plot_width / len(years)
     bar_width = min(34, step * .66)
     markup = f'<svg class="pr-chart" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(context)}: {esc(fmt)} {metric} by year. Exact figures are in the accompanying table.">'
-    markup += f'<line class="pr-grid" x1="{left}" y1="16" x2="634" y2="16"/><line class="pr-grid" x1="{left}" y1="{baseline}" x2="634" y2="{baseline}"/><text x="34" y="20" text-anchor="end">{peak:,}</text><text x="34" y="140" text-anchor="end">0</text>'
+    for tick in range(5):
+        number = round(peak * (4-tick) / 4)
+        y = 28 + tick * (plot_height/4)
+        markup += f'<line class="pr-grid" x1="{left}" y1="{y:.1f}" x2="628" y2="{y:.1f}"/><text x="54" y="{y+4:.1f}" text-anchor="end">{number:,}</text>'
+    markup += f'<text class="pr-axis-title" x="14" y="94" text-anchor="middle" transform="rotate(-90 14 94)">{"Runs" if metric=="runs" else "Wickets"}</text>'
     for i, (year, total) in enumerate(years):
         x = left + i * step + (step - bar_width) / 2
         number = total[metric]
         if number is not None:
-            bar_height = number / peak * 120
+            bar_height = number / peak * plot_height
             markup += f'<rect class="pr-bar pr-{metric}" x="{x:.1f}" y="{baseline-bar_height:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" rx="2"><title>{year}: {number:,} {metric}</title></rect>'
         else:
-            markup += f'<text class="pr-unknown" x="{x+bar_width/2:.1f}" y="127" text-anchor="middle"><title>{year}: {metric} incompletely recorded</title>?</text>'
+            markup += f'<text class="pr-unknown" x="{x+bar_width/2:.1f}" y="151" text-anchor="middle"><title>{year}: {metric} incompletely recorded</title>?</text>'
         if i == 0 or i == len(years)-1 or (len(years) > 1 and i % max(1, (len(years)+6)//7) == 0 and i < len(years)-2):
-            markup += f'<text x="{x+bar_width/2:.1f}" y="158" text-anchor="middle">{year}</text>'
-    return f'<figure class="pr-chart-box"><figcaption>{esc(fmt)} · {metric.title()} by year</figcaption>{markup}</svg></figure>'
+            markup += f'<text x="{x+bar_width/2:.1f}" y="181" text-anchor="middle">{year}</text>'
+    markup += '<text class="pr-axis-title" x="345" y="202" text-anchor="middle">Season</text>'
+    return f'<figure class="pr-chart-box"><figcaption><strong>{esc(metric.title())} by season</strong><span>{esc(fmt)} · annual total</span></figcaption>{markup}</svg></figure>'
 
 
 def trends(rows, context, heading='Performance by year'):
@@ -120,7 +127,7 @@ def trends(rows, context, heading='Performance by year'):
         result += yearly_chart(subset, fmt, 'runs', context) + yearly_chart(subset, fmt, 'wickets', context) + '</div>'
         yearly = group_years(subset)
         result += '<details class="pr-data"><summary>Exact yearly figures · '+str(len(yearly))+' seasons</summary>'
-        result += table(['Year', 'Bat inns', 'Runs', 'Bat avg', 'Bat SR', 'Bowl inns', 'Wickets', 'Bowl avg'], [[esc(y)]+[value(s,k) for k in ('innings','runs','avg','sr','bowling_innings','wickets','bowlAvg')] for y,s in reversed(yearly)], fmt+' archive totals by year')+'</details></div>'
+        result += table(['Year','Mat','Bat inns','Runs','HS','Avg','SR','100s','50s','4s','6s','BF','Bowl inns','Wkts','Bowl avg','Econ','Bowl SR'], [[esc(y)]+[value(s,k) for k in ('matches','innings','runs','highest','avg','sr','hundreds','fifties','fours','sixes','balls','bowling_innings','wickets','bowlAvg','econ','bowlSr')] for y,s in reversed(yearly)], fmt+' archive totals by year')+'</details></div>'
     return result+'</section>' if has_data else ''
 
 

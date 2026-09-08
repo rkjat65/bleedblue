@@ -139,13 +139,20 @@ def heading(title,subtitle='',eyebrow='INTERNATIONAL CRICKET'):
 def actions():return '<div class="actions"><button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>'
 def match_table(matches,paths,limit=40):
     return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),a(paths[m['id']],' v '.join(m['teams'])),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
+def team_badge(team, path=None):
+    mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
+    return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
 def stats_table(p):
     career=p.get('career',{})
     groups=[('Batting career',['matches','innings','runs','avg','sr','highest_display','notouts','hundreds','fifties','ducks','fours','sixes','balls'],['Mat','Inns','Runs','Avg','SR','HS','NO','100s','50s','Ducks','4s','6s','BF']),('Bowling career',['matches','bowling_innings','legal','maidens','conceded','wickets','bowlAvg','econ','bowlSr','best_bowling','best_match','four_w','five_w','ten_w'],['Mat','Inns','Balls','M','Runs','W','Avg','Econ','SR','BBI','BBM','4w','5w','10w']),('Fielding career',['matches','fielding_innings','catches','stumpings','dismissals','keeper_catches','fielder_catches','dismissals_per_innings','most_dismissals'],['Mat','Inns','Ct','St','Dis','Keeper Ct','Fielder Ct','Dis/Inns','Best'])]
-    output=''
+    output='<div class="format-switch" data-format-switch role="group" aria-label="Filter career records"><button class="active" data-format="">All formats</button>'+''.join(f'<button data-format="{fmt}">{fmt}</button>' for fmt in ('Test','ODI','T20I') if fmt in career)+'</div><div class="career-format-grid">'
+    by_format={fmt:[] for fmt in career}
     for title,keys,labels in groups:
-        output+='<h3>'+title+'</h3>'+table(['Format']+labels,[[esc(fmt)]+[stat_value(stats,k) for k in keys] for fmt,stats in career.items()],caption=title+' records by format')
-    return output
+        for fmt,stats in career.items():
+            by_format[fmt].append('<div class="career-discipline"><h4>'+title.replace(' career','')+'</h4>'+table(labels,[[stat_value(stats,k) for k in keys]],caption=fmt+' '+title.lower())+'</div>')
+    for fmt in ('Test','ODI','T20I'):
+        if fmt in by_format: output+='<section class="career-format" data-career-format="'+fmt+'"><div class="career-format-head"><h3>'+fmt+'</h3><span>Official international career</span></div>'+''.join(by_format[fmt])+'</section>'
+    return output+'</div>'
 
 def options(name,values,label=None):return f'<label>{esc(label or name.title())}<select name="{name}"><option value="">All</option>'+''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)+'</select></label>'
 
@@ -229,21 +236,15 @@ def main():
         summary={'id':pid,'name':p['name'],'teams':p['teams'],'gender':p['gender'],'career':career,'url':path}
         summary['career']={fmt:{k:v for k,v in s.items() if k not in ('source','sources','enrichment_source')} for fmt,s in career.items()}
         dump(path+'summary.json',summary);dump(path+'analytics.json',{'innings':rows,'appearances':apps,'note':'Available official match scorecards within site coverage. Super overs excluded. Unknown venue setting is not inferred.'})
-        profile_title='<div class="player-profile-heading">'+heading(p['name'],p['gender']+' · '+' / '.join(p['teams'])+' · '+p.get('first','')+'–'+p.get('last',''),'PLAYER CAREER')+portrait_figure(pid,p['name'],portraits)+'</div>'
+        identity='<div class="player-identity"><span class="gender-mark">'+esc(p['gender'])+'</span>'+''.join(team_badge(t,gp['teams'].get(t)) for t in p['teams'] if t in gp['teams'])+'<span class="career-years">'+esc(p.get('first',''))+'–'+esc(p.get('last',''))+'</span></div>'
+        profile_title='<div class="player-profile-heading">'+heading(p['name'],'International career statistics, records and scorecard analysis','PLAYER CAREER')+portrait_figure(pid,p['name'],portraits)+'</div>'+identity
         body=profile_title+actions()+'<div class="stats">'+''.join(f'<div><strong>{num(tot.get(k))}</strong><span>{label}</span></div>' for k,label in [('matches','Internationals'),('runs','Career runs'),('hundreds','Centuries'),('wickets','Wickets')])+'</div>'
         checked_dates=sorted({careers['meta']['checked_at'][:10]}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')});snapshot_label='–'.join(dict.fromkeys([checked_dates[0],checked_dates[-1]]))
         body+='<section class="panel"><h2>Career records by format</h2>'+stats_table(p)+f'<p class="note">Career records checked: {snapshot_label}. — means not recorded; N/A means the statistic does not apply. Career totals are independent of the scorecard archive.</p></section>'
         if not career:body+='<p class="note">This archive identity has no matched career record. Do not treat its archive totals as a complete career.</p>'
         body+='<section class="panel" id="analysis" data-analytics="'+path+'analytics.json"><h2>Explore this player’s available match data</h2><p>'+str(len(apps))+' match appearances in available scorecards. Filters below apply to this archive only.</p><button id="load-analysis" class="primary">Open statistical explorer</button><div id="analysis-controls" hidden></div><div id="analysis-results" aria-live="polite"></div></section>'
-        yearly=defaultdict(Counter)
-        for row in rows:
-            y=yearly[row['date'][:4]]
-            if row['runs'] is not None:y['runs']+=row['runs'];y['innings']+=1;y['outs']+=int(row['out']);y['balls']+=row['balls'] or 0
-            if row['wickets'] is not None:y['wickets']+=row['wickets']
-        if yearly:
-            body+='<section class="panel"><h2>Year-by-year archive trend</h2><p class="note">Available match records, not complete career season totals.</p>'+table(['Year','Batting innings','Runs','Average','Wickets'],[[y,str(s['innings']),str(s['runs']),decimal_stat(rate(s['runs'],s['outs'])),str(s['wickets'])] for y,s in sorted(yearly.items(),reverse=True)])+'</section>'
         body+='<section class="panel"><h2>Recent available appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]])+'</section><p>'+ ' · '.join(a(gp['teams'][t],t) for t in p['teams'] if t in gp['teams'])+'</p>'
-        if pid in research_ids: body += profile_research_section(p, rows, path, curated=True)
+        body += profile_research_section(p, rows, path, curated=pid in research_ids)
         page(path,p['name']+(' · '+pid if names[slug(p['name'])]>1 else '')+' career stats & records',f'{p["name"]} international cricket statistics: Test, ODI and T20I runs, wickets, averages, career records and available match analysis.',body,'ProfilePage',{'mainEntity':{'@type':'Person','name':p['name'],'identifier':pid, **(portrait_schema(pid,portraits) or {})}})
     for spec in editorial['pages']:
         if isinstance(spec, tuple):
@@ -317,7 +318,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
             body+=f'<form class="filters" data-directory="{kind}"><label>Search<input name="q" placeholder="Search {kind}"></label>'+options('gender',['Men','Women'])+options('format',['Test','ODI','T20I'])
             if kind=='matches':body+=options('team',sorted(groups['teams']))+options('year',sorted({m['date'][:4] for m in matches},reverse=True))
             body+='<button class="primary">Apply filters</button><button type="reset">Reset</button></form>'+actions()+'<div id="directory-results" aria-live="polite">'
-            if kind=='players':body+=table(['Player','Team','Gender','Career runs','Career wickets'],[[a(pp[p['id']],p['name']),esc(' / '.join(p['teams'])),p['gender'],num(aggregate(p['career']).get('runs')),num(aggregate(p['career']).get('wickets'))] for p in items[i:i+size]])
+            if kind=='players':body+=table(['Player','Team','Gender','Career runs','Career wickets'],[[a(pp[p['id']],p['name']),' '.join(team_badge(t,gp['teams'].get(t)) for t in p['teams'] if t in gp['teams']),p['gender'],num(aggregate(p['career']).get('runs')),num(aggregate(p['career']).get('wickets'))] for p in items[i:i+size]])
             else:body+=match_table(items[i:i+size],mp,size)
             body+='</div><nav class="pagination" aria-label="Directory pages">'+(a(f'/{kind}/' if number==2 else f'/{kind}/page/{number-1}/','← Previous') if number>1 else '')+f'<span>Page {number} / {math.ceil(len(items)/size)}</span>'+(a(f'/{kind}/page/{number+1}/','Next →') if i+size<len(items) else '')+'</nav>'
             page(path,title+(' · Page '+str(number) if number>1 else ''),f'Browse {title.lower()}, page {number}. Search by name, format and gender.',body,'CollectionPage')
