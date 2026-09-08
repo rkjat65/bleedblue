@@ -52,3 +52,7 @@ The site is a dated statistical publication, not a live-score service. Search Co
 ## Data credit
 
 [Cricsheet](https://cricsheet.org/).
+
+## Platform release and creator Studio
+
+See [the release notes](docs/platform-release.md) for the analysis features, Studio query and export contracts, SEO checks and remaining Search Console/advertising setup.

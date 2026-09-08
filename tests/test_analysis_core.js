@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const A=require('../web/analysis-core.js');
+const b=(match,runs,balls,out,date='2020-01-01')=>({match,runs,balls,out,date,format:'ODI',innings:1,position:1,fours:2,sixes:1});
+assert.equal(A.aggregate([b('a',100,80,true),b('b',20,null,null)]).sr,null);
+assert.equal(A.aggregate([b('a',100,80,true),b('b',20,10,null)]).avg,null);
+assert.equal(A.aggregate([b('a',100,80,false)]).avg,null);
+assert.equal(A.aggregate([b('a',100,80,true),b('b',50,40,true)]).sr,125);
+assert.equal(A.aggregate([{match:'a',legal:60,conceded:0,wickets:0}]).econ,0);
+assert.equal(A.aggregate([{match:'a',legal:60,conceded:0,wickets:0}]).bowlAvg,null);
+const history=Array.from({length:21},(_,i)=>b('m'+i,i,10,true,`2020-01-${String(i+1).padStart(2,'0')}`));
+assert.equal(A.select(history,{recent:'10'}).length,10);
+assert.equal(A.aggregate(A.select(history,{recent:'10'})).runs,155);
+assert.equal(A.select(history,{format:'Test',recent:'10'}).length,0);
+assert.equal(A.select(history,{from:'2021'}).length,0);
+console.log('Analysis null, rate and recent-innings regressions passed');

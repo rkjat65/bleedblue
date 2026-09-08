@@ -1,12 +1,15 @@
 {
   "name": "Cricket Wicket Analytics Lake",
-  "version": "20260907131056",
-  "generated_at": "2026-09-07T13:10:56.804253+00:00",
-  "scope": "Official international cricket",
+  "version": "20260908074946",
+  "generated_at": "2026-09-08T07:49:46.631928+00:00",
+  "career_checked_at": "2026-09-07T07:41:03+00:00",
+  "match_date_from": "1877-03-15",
+  "match_date_to": "2026-09-06",
+  "scope": "Official international careers; twelve-team match archive",
   "license_note": "Cricsheet attribution applies to ball-derived records.",
   "tables": {
     "matches": {
-      "file": "matches.parquet",
+      "file": "matches-e158ba882e93d08a.parquet",
       "rows": 10786,
       "bytes": 122345,
       "sha256": "e158ba882e93d08ac2682d0082db9f943a0534bbdf32130f5fd2811e65363503",
@@ -74,10 +77,10 @@
       ]
     },
     "careers": {
-      "file": "careers.parquet",
+      "file": "careers-7e0ebdd6998adff3.parquet",
       "rows": 9474,
-      "bytes": 377750,
-      "sha256": "ff4361956880e92154de7b05291cf263d4d7946d9dba52e9b0f11e0f8a5eed89",
+      "bytes": 385899,
+      "sha256": "7e0ebdd6998adff3c2952688ded2064fdc18c521118e682c1a7d3bf33cca344e",
       "columns": [
         {
           "name": "player_id",
@@ -113,6 +116,10 @@
         },
         {
           "name": "innings",
+          "type": "int64"
+        },
+        {
+          "name": "outs",
           "type": "int64"
         },
         {
@@ -218,10 +225,10 @@
       ]
     },
     "batting_innings": {
-      "file": "batting_innings.parquet",
+      "file": "batting_innings-345cd610f9f0aeff.parquet",
       "rows": 229815,
-      "bytes": 2000765,
-      "sha256": "ca93aa67337dc77a30c191dacffa20b756f7aa4758413539efd113e8b010da49",
+      "bytes": 2001018,
+      "sha256": "345cd610f9f0aeffda454d908d15ae2470d3638f1debecdef627619adbe963f8",
       "columns": [
         {
           "name": "match_id",
@@ -294,6 +301,74 @@
         {
           "name": "dismissal",
           "type": "string"
+        }
+      ]
+    },
+    "bowling_innings": {
+      "file": "bowling_innings-54496ea44af74f62.parquet",
+      "rows": 146285,
+      "bytes": 1025824,
+      "sha256": "54496ea44af74f621d6526603acf5c3eb3923e423a1605584b8e8d0b74a4b705",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "name": "year",
+          "type": "int64"
+        },
+        {
+          "name": "format",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "innings_number",
+          "type": "int64"
+        },
+        {
+          "name": "player_id",
+          "type": "string"
+        },
+        {
+          "name": "player",
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "type": "string"
+        },
+        {
+          "name": "opponent",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        },
+        {
+          "name": "wickets",
+          "type": "int64"
+        },
+        {
+          "name": "legal",
+          "type": "int64"
+        },
+        {
+          "name": "conceded",
+          "type": "int64"
+        },
+        {
+          "name": "maidens",
+          "type": "int64"
         }
       ]
     }

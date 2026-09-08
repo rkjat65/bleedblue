@@ -90,30 +90,14 @@ def yearly_chart(rows, fmt, metric, context):
     recorded = [s[metric] for _, s in years if s[metric] is not None]
     if not recorded:
         return ''
-    peak = max(recorded + [1])
-    width, height, left, baseline = 650, 208, 62, 160
-    plot_width, plot_height = 566, 132
-    step = plot_width / len(years)
-    bar_width = min(34, step * .66)
-    markup = f'<svg class="pr-chart" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(context)}: {esc(fmt)} {metric} by year. Exact figures are in the accompanying table.">'
-    for tick in range(5):
-        number = round(peak * (4-tick) / 4)
-        y = 28 + tick * (plot_height/4)
-        markup += f'<line class="pr-grid" x1="{left}" y1="{y:.1f}" x2="628" y2="{y:.1f}"/><text x="54" y="{y+4:.1f}" text-anchor="end">{number:,}</text>'
-    markup += f'<text class="pr-axis-title" x="14" y="94" text-anchor="middle" transform="rotate(-90 14 94)">{"Runs" if metric=="runs" else "Wickets"}</text>'
-    for i, (year, total) in enumerate(years):
-        x = left + i * step + (step - bar_width) / 2
-        number = total[metric]
-        if number is not None:
-            bar_height = number / peak * plot_height
-            markup += f'<rect class="pr-bar pr-{metric}" x="{x:.1f}" y="{baseline-bar_height:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" rx="2"><title>{year}: {number:,} {metric}</title></rect>'
-            markup += f'<text class="pr-value" x="{x+bar_width/2:.1f}" y="{max(20,baseline-bar_height-4):.1f}" text-anchor="middle">{number:,}</text>'
-        else:
-            markup += f'<text class="pr-unknown" x="{x+bar_width/2:.1f}" y="151" text-anchor="middle"><title>{year}: {metric} incompletely recorded</title>?</text>'
-        if i == 0 or i == len(years)-1 or (len(years) > 1 and i % max(1, (len(years)+6)//7) == 0 and i < len(years)-2):
-            markup += f'<text x="{x+bar_width/2:.1f}" y="181" text-anchor="middle">{year}</text>'
-    markup += '<text class="pr-axis-title" x="345" y="202" text-anchor="middle">Season</text>'
-    return f'<figure class="pr-chart-box"><figcaption><strong>{esc(metric.title())} by season</strong><span>{esc(fmt)} · annual total</span></figcaption>{markup}</svg></figure>'
+    peak=max(recorded+[1])
+    bars=''
+    for year,total in years:
+        number=total[metric]
+        width=0 if number is None else number/peak*100
+        label='Not recorded' if number is None else f'{number:,}'
+        bars+=f'<li title="{year}: {label} {metric}"><span class="annual-year">{year}</span><span class="annual-track"><i class="annual-fill {metric}" style="width:{width:.3f}%"></i></span><strong>{label}</strong><span class="sr-only"> {metric}</span></li>'
+    return f'<figure class="annual-chart" aria-label="{esc(context)}: {esc(fmt)} {metric} by year"><figcaption><strong>{esc(fmt)} · {metric.title()} by year</strong><span>Each bar is one calendar year · exact {metric} at right</span></figcaption><ol>{bars}</ol></figure>'
 
 
 def trends(rows, context, heading='Performance by year'):
