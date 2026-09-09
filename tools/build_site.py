@@ -152,6 +152,19 @@ def entity_filter_form(kind,name,matches):
         opponents=sorted({t for m in matches for t in m['teams'] if t!=name})
         controls+=options('opponent',opponents,'Opponent')
     return f'<form class="filters entity-filter" data-entity-filter="{kind}" data-entity-value="{esc(name)}"><div class="filter-intro"><strong>Filter this archive</strong><span id="entity-count">{len(matches):,} matches</span></div>{controls}<button class="primary">Apply filters</button><button type="reset">Reset</button></form>'
+def entity_visuals(kind,name,matches):
+    formats=Counter(m['format'] for m in matches)
+    maximum=max(formats.values(),default=1)
+    format_bars=''.join(f'<div class="entity-format-row"><span>{fmt}</span><div class="entity-track"><i style="width:{formats.get(fmt,0)/maximum*100:.1f}%"></i></div><strong>{formats.get(fmt,0):,}</strong></div>' for fmt in ('Test','ODI','T20I'))
+    years=Counter(m['date'][:4] for m in matches); ordered=sorted(years.items())
+    year_max=max(years.values(),default=1)
+    year_step=max(1,len(ordered)//12)
+    year_bars=''.join(f'<div class="entity-year-bar"><i style="height:{count/year_max*100:.1f}%" title="{year}: {count:,} matches"></i>{f"<span>{year}</span>" if i % year_step == 0 or i == len(ordered)-1 else ""}</div>' for i,(year,count) in enumerate(ordered))
+    outcome=''
+    if kind=='teams':
+        won=sum(m.get('outcome',{}).get('winner')==name for m in matches);lost=sum(name in m.get('teams',[]) and m.get('outcome',{}).get('winner') not in (None,name) for m in matches);other=len(matches)-won-lost;om=max(won,lost,other,1)
+        outcome=f'<figure class="entity-chart"><figcaption>Team results · wins, losses and other outcomes</figcaption><div class="entity-outcome-bars"><div><i class="win" style="height:{won/om*100:.1f}%"></i><span>Wins</span><strong>{won:,}</strong></div><div><i class="loss" style="height:{lost/om*100:.1f}%"></i><span>Losses</span><strong>{lost:,}</strong></div><div><i class="other" style="height:{other/om*100:.1f}%"></i><span>Other</span><strong>{other:,}</strong></div></div></figure>'
+    return f'<section class="entity-visuals" aria-label="{esc(name)} archive visuals"><div class="entity-chart"><div class="entity-chart-heading"><div><p class="eyebrow">ARCHIVE AT A GLANCE</p><h2>How this archive is shaped</h2></div><span>{len(matches):,} total matches</span></div><figure><figcaption>Matches by international format</figcaption>{format_bars}</figure></div><figure class="entity-chart entity-year-chart"><figcaption>Matches by year · each bar is an exact annual count</figcaption><div class="entity-year-scroll" tabindex="0" role="img" aria-label="{esc(name)} matches by year">{year_bars}</div></figure>{outcome}</section>'
 def team_badge(team, path=None):
     mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
     return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
@@ -347,7 +360,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
         for name,ms in sorted(g.items(),key=lambda item:len(item[1]),reverse=True):
             listing+=f'<a class="feature-card entity-index-card" data-entity-card="{esc(name)}" href="{gp[kind][name]}"><h2>{esc(name)}</h2><p>{len(ms):,} recorded matches</p><small>{esc(ms[-1]["date"])} – {esc(ms[0]["date"])}</small></a>'
             title1=name+(' cricket results & records' if kind=='teams' else ' match records')
-            body=heading(name,f'{len(ms):,} recorded matches · {ms[-1]["date"]} – {ms[0]["date"]}',kind.upper())+actions()
+            body=heading(name,f'{len(ms):,} recorded matches · {ms[-1]["date"]} – {ms[0]["date"]}',kind.upper())+actions()+entity_visuals(kind,name,ms)
             if kind=='teams':
                 counts=Counter('Won' if m['outcome'].get('winner')==name else 'Lost' if m['outcome'].get('winner') else 'Draw / tie / no result' for m in ms)
                 body+='<div class="stats">'+''.join(f'<div><strong>{n:,}</strong><span>{esc(label)}</span></div>' for label,n in counts.items())+'</div><p class="note">Men’s and women’s results are combined in this overview. Use the linked match explorer to select a gender and format.</p>'
