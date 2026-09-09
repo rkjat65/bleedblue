@@ -30,7 +30,7 @@ def icon(size):
 
 def prepare_assets(out):
     dest=out/'assets/art';dest.mkdir(parents=True,exist_ok=True)
-    source=ROOT/'web/art/cricket-hero-v1.png'
+    source=ROOT/'web/art/cricket-hero-v2.png'
     with Image.open(source) as original:
         for width in (640,960,1536):
             target=dest/f'cricket-hero-{width}.webp'
