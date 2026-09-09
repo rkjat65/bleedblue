@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 from cricket_scope import publication_data, FULL_MEMBERS, load_cards, complete_career_counts,career_scorecards
-from home_visuals import homepage_hero, archive_visuals
+from home_visuals import homepage_hero, homepage_insights, archive_visuals
 from publication_assets import prepare_assets, social_image
 from publication_pages import trust_pages
 from portraits import load_portraits, portrait_figure, portrait_schema
@@ -308,8 +308,8 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
     ranked=sorted(people.values(),key=lambda p:aggregate(p['career']).get('runs') or 0,reverse=True)
     latest=matches[:8]
     body=homepage_hero(len(people),len(matches))
-    body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'National teams'),('1877','History starts')])+'</div>'
-    body+=archive_visuals(matches,mp)
+    body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'National teams'),('3','Formats covered')])+'</div>'
+    body+=homepage_insights(matches,mp,people,gp)
     body+='<div class="section-heading"><h2>Start with a question</h2></div><div class="grid three">'+''.join(f'<a class="feature-card" href="{path}"><span>{category}</span><h3>{question}</h3><p>{desc}</p></a>' for path,category,question,desc in [('/records/men/odi/most-runs/','CAREER RECORDS','Who leads the run charts?','Explore qualified records across all three formats.'),('/compare/','PLAYER COMPARISON','How do their careers compare?','Choose a format and compare like-for-like figures.'),('/teams/','TEAMS & GROUNDS','Where does a team win?','Discover results, venues and international rivalries.')])+'</div><div class="section-heading"><h2>Recent recorded results</h2>'+a('/matches/','All matches →')+'</div>'+match_table(latest,mp)
     body+='<div class="section-heading"><h2>Career leaders</h2>'+a('/players/','Player directory →')+'</div><div class="grid two leader-grid">'
     for metric,title in [('runs','The run makers'),('wickets','The wicket takers')]:

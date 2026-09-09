@@ -4,6 +4,74 @@ import json
 from collections import Counter
 
 
+def _metric(value):
+    return '—' if value is None else f'{value:,}' if isinstance(value, int) else f'{value:.2f}' if isinstance(value, float) else str(value)
+
+
+def _team_record(matches, left, right):
+    selected=[m for m in matches if left in m.get('teams',[]) and right in m.get('teams',[])]
+    rows=[]
+    for fmt in ('Test','ODI','T20I'):
+        sample=[m for m in selected if m.get('format')==fmt]
+        if not sample: continue
+        wins_left=sum(m.get('outcome',{}).get('winner')==left for m in sample)
+        wins_right=sum(m.get('outcome',{}).get('winner')==right for m in sample)
+        undecided=len(sample)-wins_left-wins_right
+        rows.append((fmt,len(sample),wins_left,wins_right,undecided))
+    return selected,rows
+
+
+def _world_cup_groups(matches):
+    """Return completed World Cup tournament groups, excluding qualifiers."""
+    counts=Counter()
+    for m in matches:
+        event=str(m.get('event') or '')
+        low=event.lower()
+        if 'world cup' not in low and 'world twenty20' not in low and 'world t20' not in low:
+            continue
+        if any(word in low for word in ('qualifier','league','sub regional','region final','division')):
+            continue
+        women=m.get('gender')=='Women' or 'women' in low
+        if 'twenty20' in low or 't20' in low:
+            label="Women's T20 World Cup" if women else "Men's T20 World Cup"
+        else:
+            label="Women's ODI World Cup" if women else "Men's ODI World Cup"
+        counts[label]+=1
+    return counts
+
+
+def homepage_insights(matches, match_routes, people, team_routes):
+    """Homepage modules built from the same published international records."""
+    selected,h2h=_team_record(matches,'India','Australia')
+    india_route=team_routes.get('teams',{}).get('India','/teams/')
+    australia_route=team_routes.get('teams',{}).get('Australia','/teams/')
+    h2h_rows=''.join('<tr><th scope="row">'+fmt+'</th><td>'+str(total)+'</td><td>'+str(india)+' </td><td>'+str(australia)+'</td><td>'+str(other)+'</td></tr>' for fmt,total,india,australia,other in h2h)
+    h2h_total=''.join('<span><strong>'+str(sum(row[i] for row in h2h))+'</strong> '+label+'</span>' for i,label in [(1,'matches'),(2,'India wins'),(3,'Australia wins')]) if h2h else '<span><strong>0</strong> recorded meetings</span>'
+    world=_world_cup_groups(matches)
+    world_rows=''.join('<tr><th scope="row">'+html.escape(name)+'</th><td>'+str(count)+'</td></tr>' for name,count in world.most_common(5))
+    world_total=sum(world.values())
+    def person(name): return next((p for p in people.values() if p.get('name')==name),None)
+    comparisons=[]
+    for left,right in [('Sachin Tendulkar','Virat Kohli'),('Mithali Raj','Meg Lanning')]:
+        p1,p2=person(left),person(right)
+        if not p1 or not p2: continue
+        c1=p1.get('career',{});c2=p2.get('career',{})
+        fmt='ODI' if 'ODI' in c1 and 'ODI' in c2 else 'Test'
+        s1,s2=c1.get(fmt,{}),c2.get(fmt,{})
+        comparisons.append((left,right,fmt,s1,s2))
+    compare_cards=''
+    for left,right,fmt,s1,s2 in comparisons:
+        compare_path={'Sachin Tendulkar vs Virat Kohli':'/compare/virat-kohli-vs-sachin-tendulkar/','Mithali Raj vs Meg Lanning':'/compare/mithali-raj-vs-meg-lanning/'}.get(left+' vs '+right,'/compare/')
+        compare_cards+='<article class="home-compare-card"><div class="home-compare-head"><span class="eyebrow">'+fmt+' CAREER</span><span class="home-vs">VS</span></div><h3>'+html.escape(left)+' <span>vs</span> '+html.escape(right)+'</h3><table><tbody>'
+        for key,label in [('runs','Runs'),('avg','Average'),('hundreds','100s'),('fifties','50s')]:
+            compare_cards+='<tr><th>'+label+'</th><td>'+_metric(s1.get(key))+'</td><td>'+_metric(s2.get(key))+'</td></tr>'
+        compare_cards+='</tbody></table><a href="'+compare_path+'">Open comparison →</a></article>'
+    return f'''<section class="home-insights" aria-labelledby="home-insights-title"><div class="section-heading"><div><p class="eyebrow">THE CRICKET WICKET VIEW</p><h2 id="home-insights-title">Start with the questions that define cricket.</h2><p class="muted">Use the numbers to compare teams, players and the tournaments that shaped the international game.</p></div><a href="/studio/">Build your own chart →</a></div>
+      <div class="home-insight-grid"><article class="home-insight-card home-h2h"><div class="home-card-label"><span>TEAM HEAD-TO-HEAD · MEN &amp; WOMEN</span><a href="{html.escape(india_route)}">India</a><b>vs</b><a href="{html.escape(australia_route)}">Australia</a></div><div class="home-h2h-total">{h2h_total}</div><div class="table-wrap"><table><caption>India v Australia results by format</caption><thead><tr><th>Format</th><th>Matches</th><th>India wins</th><th>Australia wins</th><th>Other</th></tr></thead><tbody>{h2h_rows}</tbody></table></div><a class="home-card-link" href="/teams/">Explore every international rivalry →</a></article>
+      <article class="home-insight-card home-world"><div class="home-card-label"><span>WORLD CUP ARCHIVE · MEN &amp; WOMEN</span><strong>{world_total:,}</strong><small>recorded matches</small></div><h3>Every World Cup era in one place.</h3><p>Open tournament records, follow scorecards and see how the men’s and women’s global game changed across formats.</p><div class="table-wrap"><table><caption>World Cup matches in the published archive</caption><thead><tr><th>Tournament</th><th>Matches</th></tr></thead><tbody>{world_rows or '<tr><td colspan="2">No tournament label recorded</td></tr>'}</tbody></table></div><a class="home-card-link" href="/series/">Browse World Cup tournaments →</a></article></div>
+      <div class="home-comparisons"><div class="section-heading"><div><p class="eyebrow">PLAYER COMPARISONS</p><h3>Great careers, measured clearly.</h3></div><a href="/compare/">Compare any two players →</a></div><div class="grid two">{compare_cards}</div></div></section>'''
+
+
 def homepage_hero(players, matches):
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
       <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" fetchpriority="high"></picture></div>

@@ -67,10 +67,13 @@ def main():
     cards=load_cards(ROOT,matches,people)
     assert set(routes['matches'])=={m['id'] for m in matches}
     homepage = (SITE/'index.html').read_text(encoding='utf-8')
-    chart = json.loads(re.search(r'<script type="application/json" id="archive-chart-data">(.*?)</script>', homepage).group(1))
-    expected_decades = Counter((m['date'][:3]+'0',m['format'],m['gender']) for m in matches)
-    assert len(chart) == len(expected_decades), 'Duplicate or missing chart groups'
-    assert {(d,f,g):n for d,f,g,n in chart} == dict(expected_decades), 'Archive chart and match records disagree'
+    # The homepage is intentionally insight-led: users should see cricket
+    # questions and useful records before archive-volume charts.
+    assert 'Start with the questions that define cricket.' in homepage
+    assert 'TEAM HEAD-TO-HEAD' in homepage
+    assert 'WORLD CUP ARCHIVE' in homepage
+    assert 'Great careers, measured clearly.' in homepage
+    assert 'archive-chart-data' not in homepage, 'Legacy matches-per-year chart is still on the homepage'
     assert all(set(m['teams'])<=FULL_MEMBERS for m in read(SITE/'data/match-index.json'))
     assert all(set(p['teams'])<=FULL_MEMBERS for p in read(SITE/'data/player-index.json'))
     expected=Counter();appearances=Counter()
