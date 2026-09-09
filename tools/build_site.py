@@ -291,6 +291,7 @@ def main():
         page('/research/','International player research','Format-specific player versus opposition records, trends, timelines and evidence from the international archive.',research_spec,'CollectionPage')
     print('Building directories, records and research pages...',flush=True)
     build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial,all_cards)
+    build_question_hubs(people,matches,pp,mp,gp,careers,all_cards)
     coverage_page(matches,all_cards,careers,page)
     dump('/data/routes.json',{'players':pp,'matches':mp})
     dump('/data/player-index.json',[{'id':pid,'name':p['name'],'url':pp[pid],'teams':p['teams'],'gender':p['gender'],'formats':list(p['career'] or p['formats']),'byFormat':{fmt:{'runs':stats.get('runs'),'wickets':stats.get('wickets')} for fmt,stats in p['career'].items()},'runs':aggregate(p['career']).get('runs'),'wickets':aggregate(p['career']).get('wickets')} for pid,p in people.items()])
@@ -454,6 +455,69 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     venue_body+='<section class="panel"><h2>Most-used international grounds</h2>'+table(['Ground','Matches','Formats','Recorded span','Highest team total','Team'],venue_rows[:150],caption='International cricket venue records')+'</section>'
     venue_body+='<p class="note">A highest team total is the largest recorded innings total at that venue in the published archive. It is not a venue rating and does not infer pitch conditions.</p>'
     page('/venue-records/','International cricket venue records','International cricket grounds ranked by match volume, format coverage and highest recorded team totals.',venue_body,'CollectionPage')
+
+def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards):
+    """Publish useful answers for recurring cricket-statistics searches."""
+    cards=all_cards or {}
+    questions=[]
+    def leader(fmt,metric,gender=None,lower=False):
+        candidates=[p for p in people.values() if (gender is None or p.get('gender')==gender) and p.get('career',{}).get(fmt,{}).get(metric) is not None]
+        if not candidates:return None
+        return sorted(candidates,key=lambda p:((p['career'][fmt][metric] if lower else -p['career'][fmt][metric]),p['name']))[0]
+    def record_answer(fmt,metric,label,record_path):
+        p=leader(fmt,metric,'Men')
+        if not p:return f'The archive has no recorded men’s {fmt} {label.lower()} leader for this snapshot.',record_path
+        value=p['career'][fmt][metric]
+        return f'{p["name"]} leads the published men’s {fmt} career snapshot for {label.lower()} with {num(value)}. Open the full leaderboard to see the qualification and the other players in the record set.',record_path
+    for fmt,metric,label,path in [('Test','runs','career runs','/records/men/test/most-runs/'),('ODI','runs','career runs','/records/men/odi/most-runs/'),('T20I','runs','career runs','/records/men/t20i/most-runs/'),('Test','wickets','career wickets','/records/men/test/most-wickets/'),('ODI','wickets','career wickets','/records/men/odi/most-wickets/'),('T20I','wickets','career wickets','/records/men/t20i/most-wickets/')]:
+        answer,link_path=record_answer(fmt,metric,label,path)
+        questions.append({'slug':f'most-{fmt.lower()}-{metric}','title':f'Who has the most {fmt} international {label}?','description':f'Find the leading {fmt} international players by {label}, with qualification rules and linked career records.','category':'CAREER RECORDS','answer':answer,'links':[(link_path,f'Open {fmt} {label} leaderboard'),('/records/', 'Browse all records')]})
+
+    batting=[];bowling=[]
+    for card in cards.values():
+        m=card['match']
+        for inn in card.get('innings',[]):
+            if inn.get('super_over'):continue
+            team=inn.get('team');opp=next((t for t in m['teams'] if t!=team),'')
+            for b in inn.get('batting',[]):
+                if b.get('id') in pp and b.get('runs') is not None:batting.append((b['runs'],b.get('balls'),m,team,opp,b))
+            for b in inn.get('bowling',[]):
+                if b.get('id') in pp and b.get('wickets') is not None and b.get('runs') is not None:bowling.append((b['wickets'],b.get('runs'),m,team,opp,b))
+    batting.sort(key=lambda x:(-x[0],-(x[1] or 0),x[2]['date'],x[2]['id']))
+    bowling.sort(key=lambda x:(-x[0],x[1],x[2]['date'],x[2]['id']))
+    for fmt in ('Test','ODI','T20I'):
+        scores=[x for x in batting if x[2]['format']==fmt]
+        if scores:
+            runs,balls,m,team,opp,b=scores[0]
+            questions.append({'slug':f'highest-{fmt.lower()}-individual-score','title':f'What is the highest individual score in {fmt} cricket?','description':f'Highest recorded individual {fmt} international score in the Cricket Wicket scorecard archive.','category':'SCORECARD RECORDS','answer':f'{people[b["id"]]["name"]} has the highest recorded {fmt} score in this archive: {num(runs)} for {team} against {opp} on {m["date"]}. {"Balls faced: "+num(balls)+"." if balls is not None else "Balls faced are not recorded for this innings."} Open the scorecard to inspect the complete innings.', 'links':[('/records/best-innings/','Browse best innings'),(mp[m['id']],'Open the scorecard')]})
+        spells=[x for x in bowling if x[2]['format']==fmt]
+        if spells:
+            wickets,conceded,m,team,opp,b=spells[0]
+            questions.append({'slug':f'best-{fmt.lower()}-bowling-figures','title':f'What are the best bowling figures in {fmt} cricket?','description':f'Best recorded individual {fmt} international bowling figures, ordered by wickets and runs conceded.','category':'SCORECARD RECORDS','answer':f'{people[b["id"]]["name"]} recorded the best {fmt} figures in this archive: {num(wickets)} wickets for {num(conceded)} runs for {team} against {opp} on {m["date"]}. Open the scorecard for the full spell and match result.', 'links':[('/records/best-innings/','Browse best bowling figures'),(mp[m['id']],'Open the scorecard')]})
+
+    questions.extend([
+        {'slug':'difference-between-test-odi-t20i','title':'What is the difference between Test, ODI and T20I cricket?','description':'A clear comparison of the three international formats, innings structure, time and scoring context.','category':'FORMAT GUIDE','answer':'Tests give each side two innings and can run for up to five days. ODIs give each side one innings of up to 50 overs. T20Is give each side one innings of up to 20 overs. The shorter formats make each delivery more scarce; comparing a rate or total without its format and workload can mislead.', 'links':[('/records/','Explore format records'),('/methodology/','Read the statistical definitions')]},
+        {'slug':'how-is-batting-average-calculated','title':'How is a cricket batting average calculated?','description':'Learn the batting-average formula and see how not-outs and missing dismissals affect a career record.','category':'STATISTICS EXPLAINED','answer':'Batting average is runs divided by dismissals. A not-out innings adds runs and innings but does not add a dismissal. Cricket Wicket recomputes combined averages from the published runs and dismissals; if the denominator is missing or zero, the page shows an unavailable or inapplicable value rather than inventing one.', 'links':[('/methodology/','Read the full definitions'),('/records/','Browse batting-average records')]},
+        {'slug':'what-is-cricket-strike-rate','title':'What is strike rate in cricket?','description':'Understand batting strike rate, bowling strike rate and the denominators required for each.','category':'STATISTICS EXPLAINED','answer':'Batting strike rate is 100 multiplied by runs divided by balls faced. Bowling strike rate is legal balls divided by wickets. Both require a recorded denominator. A dash means the source did not record the required balls or wickets; it is not a zero.', 'links':[('/methodology/','Read the rate definitions'),('/compare/','Compare two players')]},
+        {'slug':'how-do-head-to-head-records-work','title':'How do international cricket head-to-head records work?','description':'See how Cricket Wicket counts matches, wins and other results for every full-member rivalry.','category':'RIVALRIES','answer':'A head-to-head page selects matches involving the same two national teams, then separates them by format and gender. Wins use the winner recorded in the match source. Draws, ties, no-results and matches without a winner remain visible in the Other column.', 'links':[('/head-to-head/','Browse every rivalry'),('/teams/','Explore team records')]},
+        {'slug':'what-is-a-century-and-five-wicket-haul','title':'What is a century or a five-wicket haul in cricket?','description':'A scorecard guide to centuries, fifties and five-wicket bowling milestones.','category':'SCORECARD TERMS','answer':'A century is an innings of at least 100 runs. A fifty is an innings of at least 50 runs but below 100. A five-wicket haul is an innings with at least five wickets; ten-wicket match hauls are separately labelled when the scorecards support them.', 'links':[('/milestones/','Browse player milestones'),('/records/best-innings/','Browse performance records')]},
+        {'slug':'are-international-career-records-complete','title':'Are Cricket Wicket international career records complete?','description':'Understand the difference between official career snapshots and the available scorecard archive.','category':'DATA COVERAGE','answer':'Career tables are independent official international snapshots and may include recognized matches that are outside the ball-by-ball scorecard archive. Match explorers use the published international scorecards and label result-only records. Missing fields remain unavailable; they are never inferred from a partial match.', 'links':[('/methodology/','Read coverage and definitions'),('/data-coverage/','Inspect current coverage')]},
+        {'slug':'how-to-compare-cricket-players','title':'How should two cricket players be compared?','description':'A practical, format-aware way to compare international careers without hiding workload or era.','category':'PLAYER COMPARISON','answer':'Choose the same format, gender and data scope first. Read runs or wickets alongside innings, dismissals, balls, average and strike rate, then inspect the playing span and opposition context. Cricket Wicket keeps career snapshots separate from narrower available-scorecard samples so a partial archive is not presented as a full career.', 'links':[('/compare/','Open player comparison'),('/players/','Browse player profiles')]},
+        {'slug':'what-is-a-result-only-match','title':'What does result-only mean on a cricket scorecard?','description':'Why some historical international matches have a result but no innings or player figures.','category':'DATA COVERAGE','answer':'A result-only record confirms the match result, teams, date and venue, but the source does not provide a usable innings or lineup. It remains searchable as an international match while batting and bowling figures stay unavailable.', 'links':[('/matches/','Browse match records'),('/methodology/','Read the archive policy')]},
+        {'slug':'which-team-has-most-international-wins','title':'Which international team has the most recorded wins?','description':'Compare national teams by recorded international match wins in the Cricket Wicket archive.','category':'TEAM RECORDS','answer':'The team leaderboard below is calculated from every published international match result. It counts only matches where a winner is recorded, while draws, ties and no-results remain separate. Use the team page to inspect the format and gender mix behind the total.', 'links':[('/teams/','Browse team records'),('/head-to-head/','Compare rivalries')]},
+    ])
+    team_wins=Counter(m.get('outcome',{}).get('winner') for m in matches if m.get('outcome',{}).get('winner'))
+    if team_wins:
+        winner,n=team_wins.most_common(1)[0]
+        for q in questions:
+            if q['slug']=='which-team-has-most-international-wins':q['answer']=f'{winner} has the most recorded wins in this published international match archive: {num(n)}. This is a volume count, not a win percentage; use the team and head-to-head pages to inspect formats, genders and opponents.'
+
+    index_body=heading('Cricket questions, answered with data','Clear answers to the cricket questions people ask most: records, formats, player statistics, rivalries and scorecard terms.','CRICKET QUESTIONS')+actions()
+    index_body+='<p class="lede">Each answer links directly to a table, profile or scorecard. Record-holder answers use the current published snapshot and show their data date on the linked page.</p><div class="grid three">'+''.join(f'<a class="feature-card" href="/questions/{q["slug"]}/"><span>{q["category"]}</span><h2>{q["title"]}</h2><p>{q["description"]}</p><small>Read the answer →</small></a>' for q in questions)+'</div><section class="panel"><h2>Use the data after the answer</h2><p>'+a('/records/','Browse qualified records')+' · '+a('/compare/','Compare two careers')+' · '+a('/head-to-head/','Explore rivalries')+' · '+a('/world-cup/','Open the World Cup archive')+'</p></section>'
+    page('/questions/','Cricket questions answered with international data','Answers to common cricket questions about international records, formats, players, scorecards and statistics.',index_body,'CollectionPage')
+    for q in questions:
+        body=heading(q['title'],q['description'],q['category'])+actions()+'<article class="research-article"><p>'+q['answer']+'</p><h2>Explore the underlying records</h2><p>'+' · '.join(a(path,label) for path,label in q['links'])+'</p><p class="note">This answer is generated from Cricket Wicket’s validated international dataset. Career figures and available scorecard figures are kept as separate layers; see the methodology page for definitions and coverage dates.</p></article>'
+        page('/questions/'+q['slug']+'/',q['title'],q['description'],body,'Article',{'headline':q['title'],'author':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/about/'}})
 
 def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=None,all_cards=None):
     ranked=sorted(people.values(),key=lambda p:aggregate(p['career']).get('runs') or 0,reverse=True)
