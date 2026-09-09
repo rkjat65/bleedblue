@@ -1,0 +1,28 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const element=()=>({hidden:false,value:'',files:[],textContent:'',append(){},replaceChildren(){},setAttribute(){},removeAttribute(){}});
+const selectors=['[data-photo-status]','[data-photo-credit]','[data-photo-name]','[data-photo-remove]','img','input[type=file]','select'];
+const boxes=[0,1].map(()=>{const elements=Object.fromEntries(selectors.map(k=>[k,element()]));return {...element(),elements,querySelector:k=>elements[k==='input'?'input[type=file]':k]};});
+let requests=[],changes=0;
+const context={window:{},Set,Promise,Error,Math,URL:{createObjectURL:()=> 'blob:local-image',revokeObjectURL(){}},Image:class{naturalWidth=800;naturalHeight=1000;set src(value){queueMicrotask(()=>this.onload());}},document:{querySelector:s=>boxes[Number(s.slice(-1))],createElement:tag=>tag==='canvas'?{getContext:()=>({drawImage(){}}),toDataURL:()=> 'data:image/png;base64,LOCAL_ONLY'}:element()},fetch:async url=>{requests.push(url);return {ok:true,json:async()=>({p1:{path:'/assets/portraits/p1.webp',author:'Photographer',license:'CC BY',source_url:'https://commons.wikimedia.org/wiki/File:Photo',license_url:'https://creativecommons.org/licenses/by/4.0/'}}),blob:async()=>({type:'image/webp',size:1000})};}};
+Object.defineProperty(context,'localStorage',{get(){throw new Error('Images must never use persistent storage');}});
+vm.runInNewContext(fs.readFileSync('web/studio-images.js','utf8'),context);
+(async()=>{
+ const editor=context.window.CWStudioImages.create({change(){changes++;}});
+ await editor.setPlayers([{id:'p1',name:'Player One'}]);
+ assert.equal(editor.visible().length,1);assert.equal(editor.visible()[0].credit.author,'Photographer');
+ const before=requests.length,input=boxes[0].querySelector('input');
+ input.files=[{type:'image/jpeg',size:1200}];await input.onchange();
+ assert.equal(requests.length,before,'Local uploads must not make network requests');
+ assert.equal(editor.visible()[0].credit,undefined,'Uploaded photos must not inherit another photographer credit');
+ assert.equal(editor.visible()[0].uri,'data:image/png;base64,LOCAL_ONLY');
+ assert.match(boxes[0].querySelector('[data-photo-status]').textContent,/Not uploaded or saved/);
+ await editor.setPlayers([{id:'p1',name:'Player One'}]);assert.equal(editor.visible()[0].credit,undefined,'Same-player analysis keeps the local photo');
+ boxes[0].querySelector('[data-photo-remove]').onclick();assert.equal(editor.visible().length,0);
+ input.files=[{type:'image/svg+xml',size:100}];await input.onchange();assert.match(boxes[0].querySelector('[data-photo-status]').textContent,/JPEG, PNG or WebP/);assert.equal(editor.visible().length,0);
+ input.files=[{type:'image/png',size:13*1024*1024}];await input.onchange();assert.match(boxes[0].querySelector('[data-photo-status]').textContent,/12 MB/);
+ input.files=[{type:'image/png',size:100}];await input.onchange();await editor.setPlayers([{id:'missing',name:'Different Player'}]);assert.equal(editor.visible().length,0);assert.match(boxes[0].querySelector('[data-photo-status]').textContent,/No verified photo/);
+ assert.equal(editor.busy(),false);assert.ok(changes>0);
+ console.log('Card photo upload privacy, validation, removal and identity-switch tests passed.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

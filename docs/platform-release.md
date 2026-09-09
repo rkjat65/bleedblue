@@ -13,6 +13,7 @@
 - Editable titles/subtitles, blue brand palettes, accent colour, five visual types, three output sizes, exact labels, data table and explicit result pagination.
 - PNG, SVG and CSV exports; reproducible setup links and local saved designs.
 - Content-addressed R2 objects with the manifest published last.
+- Card photos use available verified portraits, or JPEG/PNG/WebP files processed in the browser. User images are held in tab memory only and embedded into PNG/SVG exports; they are excluded from saved settings, links and the database. Changing player identity clears a local photo. Exported cards carry Cricket Wicket branding without the Cricsheet wordmark; existing site data attribution stays in place. Automatic Commons photos retain their individual photo credit.
 
 ## Verification
 

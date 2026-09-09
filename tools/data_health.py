@@ -21,10 +21,11 @@ def coverage_page(matches, cards, careers, page):
     rows=[]
     for (gender,fmt),ms in sorted(groups.items()):
         n=sum(bool(cards.get(m['id'],{}).get('innings')) for m in ms)
-        rows.append([gender+' · '+fmt,str(len(ms)),str(n),str(sum(m['id'] not in cards for m in ms)),min(m['date'] for m in ms),max(m['date'] for m in ms)])
+        rows.append([gender+' · '+fmt,str(len(ms)),str(n),str(len(ms)-n),min(m['date'] for m in ms),max(m['date'] for m in ms)])
     body='<section class="page-head"><span class="eyebrow">THE RECORD BEHIND THE NUMBERS</span><h1>International cricket data coverage</h1><p>See which records are available, when they were checked and where gaps remain.</p></section>'
     body+='<p>Baseline career snapshot checked: <strong>'+esc(careers['meta'].get('checked_at','')[:10])+'</strong>. Newer checks appear on individual profiles. The latest archived match is not a guarantee that all earlier matches are complete.</p>'
-    body+=table(['Scope','Match records','With innings','Result only','First match','Latest match'],rows,'Coverage by gender and international format')
+    body+=table(['Scope','Match records','With innings','Without innings','First match','Latest match'],rows,'Coverage by gender and international format')
+    body+='<p class="note">Records without innings include abandoned matches and unavailable scorecards. An innings record may still have missing individual fields; its presence does not establish complete coverage.</p>'
     fields=('runs','balls','avg','sr','fours','sixes','wickets','bowlAvg','econ','bowlSr')
     entries=[]
     for gender in ('Men','Women'):

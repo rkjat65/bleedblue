@@ -35,7 +35,9 @@ jobs:
           python -m unittest discover -s tests -p 'test_*.py'
           node tests/test_record_layers.js
           node tests/test_analysis_core.js
+          node tests/test_studio_images.js
           node --check web/studio.js
+          node --check web/studio-images.js
           node --check web/studio-core.js
           node --check web/wicket.js
           node --check web/home.js
