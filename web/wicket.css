@@ -5,6 +5,9 @@
 
 @media(max-width:360px){.header{gap:7px}.brand{font-size:14px;gap:5px}.brand img{width:24px;height:24px}.header button{padding:7px 9px}.search-link{font-size:11px}}
 
+.entity-filter{align-items:end;gap:10px;padding:14px 16px;margin:14px 0}.entity-filter .filter-intro{display:flex;flex-direction:column;gap:2px;margin-right:auto;min-width:155px}.entity-filter .filter-intro strong{font-size:12px;color:var(--ink)}.entity-filter .filter-intro span{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}.entity-filter label{font-size:10px}.entity-filter input,.entity-filter select{min-height:38px;padding:8px 10px;font-size:12px}.entity-filter button{min-height:38px;padding:8px 12px}
+@media(max-width:550px){.entity-filter .filter-intro{width:100%;min-width:0}.entity-filter label{width:calc(50% - 5px)}.entity-filter button{flex:1}}
+
 /* Tables follow the meaning of each column: labels left, figures right. */
 .table-wrap{border-radius:10px;border-color:var(--border);margin:12px 0 18px;scrollbar-width:thin;scrollbar-color:#68858a var(--panel)}
 .score-table{font-size:13px;line-height:1.4;font-variant-numeric:tabular-nums;table-layout:auto}

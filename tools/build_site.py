@@ -143,6 +143,15 @@ def heading(title,subtitle='',eyebrow='INTERNATIONAL CRICKET'):
 def actions():return '<div class="actions"><button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>'
 def match_table(matches,paths,limit=40):
     return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),a(paths[m['id']],' v '.join(m['teams'])),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
+def entity_filter_form(kind,name,matches):
+    years=sorted({m['date'][:4] for m in matches},reverse=True)
+    controls=options('gender',['Men','Women'])+options('format',['Test','ODI','T20I'])+options('year',years,'Year')
+    if years:
+        controls+=f'<label>From year<input name="from" type="number" min="{years[-1]}" max="{years[0]}" inputmode="numeric"></label><label>To year<input name="to" type="number" min="{years[-1]}" max="{years[0]}" inputmode="numeric"></label>'
+    if kind=='teams':
+        opponents=sorted({t for m in matches for t in m['teams'] if t!=name})
+        controls+=options('opponent',opponents,'Opponent')
+    return f'<form class="filters entity-filter" data-entity-filter="{kind}" data-entity-value="{esc(name)}"><div class="filter-intro"><strong>Filter this archive</strong><span id="entity-count">{len(matches):,} matches</span></div>{controls}<button class="primary">Apply filters</button><button type="reset">Reset</button></form>'
 def team_badge(team, path=None):
     mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
     return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
@@ -333,9 +342,10 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
             page(path,title+(' · Page '+str(number) if number>1 else ''),f'Browse {title.lower()}, page {number}. Search by name, format and gender.',body,'CollectionPage')
     for kind,g in groups.items():
         title={'teams':'International teams','grounds':'Cricket grounds','series':'International series'}[kind]
-        listing=heading(title,'Browse international results and follow the links to individual matches.')+'<div class="grid three">'
+        all_years=sorted({m['date'][:4] for ms in g.values() for m in ms},reverse=True)
+        listing=heading(title,'Browse international results and follow the links to individual matches.')+f'<form class="filters entity-index-filter" data-entity-index-filter="{kind}"><div class="filter-intro"><strong>Filter the directory</strong><span id="entity-index-count">{len(g):,} entries</span></div>'+options('gender',['Men','Women'])+options('format',['Test','ODI','T20I'])+options('year',all_years,'Year')+f'<label>From year<input name="from" type="number" min="{all_years[-1]}" max="{all_years[0]}" inputmode="numeric"></label><label>To year<input name="to" type="number" min="{all_years[-1]}" max="{all_years[0]}" inputmode="numeric"></label><button class="primary">Apply filters</button><button type="reset">Reset</button></form><div class="grid three" id="entity-directory-results">'
         for name,ms in sorted(g.items(),key=lambda item:len(item[1]),reverse=True):
-            listing+=f'<a class="feature-card" href="{gp[kind][name]}"><h2>{esc(name)}</h2><p>{len(ms):,} recorded matches</p><small>{esc(ms[-1]["date"])} – {esc(ms[0]["date"])}</small></a>'
+            listing+=f'<a class="feature-card entity-index-card" data-entity-card="{esc(name)}" href="{gp[kind][name]}"><h2>{esc(name)}</h2><p>{len(ms):,} recorded matches</p><small>{esc(ms[-1]["date"])} – {esc(ms[0]["date"])}</small></a>'
             title1=name+(' cricket results & records' if kind=='teams' else ' match records')
             body=heading(name,f'{len(ms):,} recorded matches · {ms[-1]["date"]} – {ms[0]["date"]}',kind.upper())+actions()
             if kind=='teams':
@@ -347,7 +357,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
                 body+='<section class="panel"><h2>Head-to-head results</h2>'+table(['Opponent','Matches','Wins'],[[a(gp['teams'][opp],opp),str(s['played']),str(s['wins'])] for opp,s in sorted(rivals.items(),key=lambda x:x[1]['played'],reverse=True)])+'</section>'
                 squad=[p for p in ranked if name in p['teams']]
                 body+='<section class="panel"><h2>Explore players</h2><p class="note">Players linked to this team; career totals can include other representative teams.</p>'+table(['Player','Gender','Career runs','Career wickets'],[[a(pp[p['id']],p['name']),p['gender'],num(aggregate(p['career']).get('runs')),num(aggregate(p['career']).get('wickets'))] for p in squad[:30]])+'</section>'
-            body+='<section class="panel"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']])+'</section><h2>Recent recorded matches</h2>'+match_table(ms,mp,50)
+            body+='<section class="panel"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']])+'</section><h2>Recent recorded matches</h2>'+entity_filter_form(kind,name,ms)+'<div id="entity-results" aria-live="polite">'+match_table(ms,mp,50)+'</div>'
             from urllib.parse import urlencode
             query={'team':name} if kind=='teams' else {'q':name}
             body+='<p>'+a('/matches/?'+urlencode(query),'Search all matching matches →')+'</p>'
