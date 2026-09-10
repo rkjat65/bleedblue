@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ODI batting average: Virat Kohli 58.59 and Rohit Sharma 48.95</title>
+  <desc id="desc">A data infographic comparing ODI runs, dismissals and batting averages.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071b36"/><stop offset="1" stop-color="#123c78"/></linearGradient><linearGradient id="blue" x2="1"><stop stop-color="#55a9ff"/><stop offset="1" stop-color="#2d63d8"/></linearGradient><linearGradient id="gold" x2="1"><stop stop-color="#ffe2a1"/><stop offset="1" stop-color="#d8932b"/></linearGradient></defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <circle cx="1090" cy="90" r="180" fill="#2a69c9" opacity=".18"/><circle cx="80" cy="700" r="220" fill="#e8a63c" opacity=".08"/>
+  <text x="70" y="78" fill="#9fcaff" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">CRICKET WICKET · DATA NOTE</text>
+  <text x="70" y="140" fill="#fff" font-family="Georgia,serif" font-size="48" font-weight="700">Average needs dismissals</text>
+  <text x="70" y="177" fill="#c7d8f0" font-family="Arial,sans-serif" font-size="21">ODI career snapshot · runs ÷ dismissals · data checked 2026-09-07</text>
+  <line x1="70" y1="210" x2="1130" y2="210" stroke="#7da9df" stroke-opacity=".4"/>
+  <g font-family="Arial,sans-serif"><rect x="70" y="250" width="500" height="340" rx="20" fill="#0c2a52" stroke="#4e88d0" stroke-opacity=".55"/><rect x="630" y="250" width="500" height="340" rx="20" fill="#2a2116" stroke="#e5aa48" stroke-opacity=".7"/>
+    <text x="105" y="305" fill="#fff" font-size="30" font-weight="700">Virat Kohli</text><text x="105" y="337" fill="#9fcaff" font-size="17">INDIA · MEN’S ODI</text>
+    <text x="665" y="305" fill="#fff" font-size="30" font-weight="700">Rohit Sharma</text><text x="665" y="337" fill="#f5cb7d" font-size="17">INDIA · MEN’S ODI</text>
+    <text x="105" y="392" fill="#a9c4e5" font-size="16">RUNS</text><text x="105" y="435" fill="#fff" font-size="38" font-weight="700">14,941</text><text x="105" y="478" fill="#a9c4e5" font-size="16">DISMISSALS</text><text x="105" y="518" fill="#fff" font-size="32" font-weight="700">255</text>
+    <text x="665" y="392" fill="#e8c17d" font-size="16">RUNS</text><text x="665" y="435" fill="#fff" font-size="38" font-weight="700">11,895</text><text x="665" y="478" fill="#e8c17d" font-size="16">DISMISSALS</text><text x="665" y="518" fill="#fff" font-size="32" font-weight="700">243</text>
+    <text x="350" y="392" fill="#a9c4e5" font-size="16">BATTING AVERAGE</text><text x="350" y="450" fill="#72c0ff" font-size="52" font-weight="700">58.59</text>
+    <text x="910" y="392" fill="#e8c17d" font-size="16">BATTING AVERAGE</text><text x="910" y="450" fill="#ffd886" font-size="52" font-weight="700">48.95</text>
+    <rect x="105" y="550" width="390" height="12" rx="6" fill="#163e70"/><rect x="105" y="550" width="390" height="12" rx="6" fill="url(#blue)"/>
+    <rect x="665" y="550" width="390" height="12" rx="6" fill="#59401f"/><rect x="665" y="550" width="326" height="12" rx="6" fill="url(#gold)"/>
+  </g>
+  <rect x="70" y="635" width="1060" height="72" rx="16" fill="#07172d" stroke="#4e88d0" stroke-opacity=".45"/>
+  <text x="100" y="679" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">FORMULA</text><text x="265" y="679" fill="#c7d8f0" font-family="Arial,sans-serif" font-size="22">Batting average = total runs ÷ times dismissed</text><text x="1010" y="679" fill="#f5cb7d" font-family="Arial,sans-serif" font-size="20" text-anchor="end">58.59 &gt; 48.95</text>
+</svg>
