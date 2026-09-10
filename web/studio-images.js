@@ -28,7 +28,7 @@
    try{if(!slot.id){status(slot,'Choose a player, or add your own card image.');return;}
     const records=await catalog(),credit=records[slot.id];if(token!==slot.token)return;
     if(!credit){status(slot,'No verified photo for this player. Add your own image.');return;}
-    if(!/^\/assets\/portraits\/[a-z0-9-]+\.webp$/.test(credit.path))throw new Error();
+    if(!/^\/assets\/(?:portraits|art\/players)\/[a-z0-9-]+\.webp$/.test(credit.path))throw new Error();
     const response=await fetch(credit.path);if(!response.ok)throw new Error();const asset=await prepare(await response.blob());if(token!==slot.token)return;
     slot.asset={...asset,credit};status(slot,'Player photo ready.');
    }catch{if(token===slot.token)status(slot,'Player photo unavailable. You can add your own image.');}

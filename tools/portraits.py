@@ -31,7 +31,7 @@ def initials(name):
     return ''.join(w[0] for w in (words[:1] + words[-1:] if len(words) > 1 else words)).upper()
 
 
-def portrait_figure(player_id, name, portraits, *, compact=False):
+def portrait_figure(player_id, name, portraits, *, compact=False, illustration=None):
     """A figure including credit, or a deterministic initials fallback.
 
     Keep the complete returned figure next to the player's profile heading;
@@ -40,6 +40,10 @@ def portrait_figure(player_id, name, portraits, *, compact=False):
     e = lambda value: html.escape(str(value), quote=True)
     p = portraits.get(player_id)
     css = 'player-portrait' + (' player-portrait--compact' if compact else '')
+    if illustration:
+        return ('<figure class="' + css + ' player-portrait--illustration">'
+                '<img src="' + e(illustration) + '" width="420" height="480" alt="' + e(name)
+                + '" decoding="async" fetchpriority="high"></figure>')
     if not p:
         return ('<figure class="' + css + ' player-portrait--fallback">'
                 '<div class="portrait-initials" role="img" aria-label="' + e(name) + ' initials">'
