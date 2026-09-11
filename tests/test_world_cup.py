@@ -1,10 +1,20 @@
-"""World Cup editions use recorded finals, not invented all-time history."""
+"""World Cup pages use official history for titles, archive only for scorecards."""
+import json
 import sys
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'tools'))
-from world_cup import classify, editions, family_key, is_world_cup_match, player_leaders
+from world_cup import (
+    classify,
+    editions,
+    family_key,
+    is_world_cup_match,
+    load_history,
+    merge_official,
+    player_leaders,
+    timeline_table,
+)
 
 
 def m(date, event, winner=None, fmt='ODI', gender='Men', mid=None, teams=None):
@@ -56,6 +66,67 @@ class WorldCupTests(unittest.TestCase):
         self.assertEqual(leaders['runs'][0]['runs'], 54)
         self.assertEqual(leaders['wickets'][0]['wickets'], 3)
         self.assertEqual(leaders['scores'][0][0], 54)
+
+    def test_official_mens_odi_history_is_complete(self):
+        history = load_history()
+        mens = history['families']['mens-odi']
+        years = [cup['year'] for cup in mens['editions']]
+        self.assertEqual(years[0], 1975)
+        self.assertEqual(years[-1], 2023)
+        self.assertEqual(len(years), 13)
+        self.assertEqual(mens['titles']['Australia'], 6)
+        self.assertEqual(mens['titles']['India'], 2)
+        self.assertEqual(mens['titles']['West Indies'], 2)
+        self.assertEqual(mens['editions'][0]['winner'], 'West Indies')
+        self.assertEqual(mens['editions'][0]['runner_up'], 'Australia')
+        self.assertEqual(set(mens['editions'][0]['losing_semi_finalists']), {'England', 'New Zealand'})
+        self.assertEqual(mens['editions'][-1]['winner'], 'Australia')
+        self.assertEqual(mens['editions'][-1]['runner_up'], 'India')
+        self.assertEqual(set(mens['editions'][-1]['losing_semi_finalists']), {'New Zealand', 'South Africa'})
+        self.assertEqual(sum(mens['titles'].values()), 13)
+
+    def test_official_titles_ignore_incomplete_archive(self):
+        matches = [
+            m('2003-03-23', 'ICC Cricket World Cup', 'Australia', mid='a', teams=['Australia', 'India']),
+            m('2011-04-02', 'ICC Cricket World Cup', 'India', mid='b', teams=['India', 'Sri Lanka']),
+            m('2023-11-19', 'ICC Cricket World Cup', 'Australia', mid='c', teams=['Australia', 'India']),
+        ]
+        bundled = merge_official(matches, {}, {})
+        mens = bundled['families']['mens-odi']
+        self.assertEqual(mens['titles']['Australia'], 6)
+        self.assertEqual(len(mens['editions']), 13)
+        self.assertEqual(mens['editions'][0]['year'], '1975')
+        self.assertEqual(mens['editions'][0]['archive_matches'], 0)
+        self.assertEqual(mens['editions'][-1]['archive_matches'], 1)
+        archive_titles = classify(matches)['mens-odi']['titles']
+        self.assertEqual(archive_titles['Australia'], 2)
+        self.assertNotEqual(dict(mens['titles']), dict(archive_titles))
+
+    def test_timeline_lists_semi_finalists_and_skips_knockout_gaps(self):
+        bundled = merge_official([], {}, {})
+        rows = timeline_table(bundled['families']['mens-odi'], {'West Indies': '/teams/west-indies/'})
+        latest = rows[0]
+        self.assertEqual(latest[0], '2023')
+        self.assertIn('Australia', latest[2])
+        self.assertIn('India', latest[3])
+        self.assertIn('New Zealand', latest[4])
+        self.assertIn('South Africa', latest[4])
+        first = rows[-1]
+        self.assertEqual(first[0], '1975')
+        self.assertIn('West Indies', first[2])
+        womens_2009 = next(cup for cup in bundled['families']['womens-odi']['editions'] if cup['year'] == '2009')
+        self.assertEqual(womens_2009['losing_semi_finalists'], [])
+        self.assertFalse(womens_2009.get('knockout', True))
+
+    def test_other_families_have_complete_title_counts(self):
+        history = load_history()
+        self.assertEqual(history['families']['womens-odi']['titles']['Australia'], 7)
+        self.assertEqual(history['families']['womens-odi']['editions'][-1]['winner'], 'India')
+        self.assertEqual(history['families']['womens-odi']['editions'][-1]['year'], 2025)
+        self.assertEqual(history['families']['mens-t20']['titles']['India'], 3)
+        self.assertEqual(history['families']['mens-t20']['editions'][-1]['year'], 2026)
+        self.assertEqual(history['families']['womens-t20']['titles']['Australia'], 7)
+        json.loads(Path(__file__).resolve().parent.parent.joinpath('data/world_cup_history.json').read_text(encoding='utf-8'))
 
 
 if __name__ == '__main__':

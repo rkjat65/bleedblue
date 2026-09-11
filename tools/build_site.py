@@ -21,7 +21,7 @@ from entity_pages import (
     team_glance, ground_glance, results_table_rows, team_faq, ground_faq,
     team_schema, ground_schema, h2h_path,
 )
-from world_cup import FAMILIES, classify, player_leaders, title_table, titles_leaderboard
+from world_cup import FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '_site'
@@ -87,7 +87,7 @@ def stable_routes(proposed, previous, kind):
 def dump(path, value):
     target=OUT/path.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(value,separators=(',',':'),ensure_ascii=False),encoding='utf-8')
-TEXT_COLUMNS={'Player','Batter','Bowler','Team','Teams','Country','Gender','Format','Match','Result','Coverage','Dismissal','Opponent','Ground','Venue','Metric','Date','Year','First player','Second player'}
+TEXT_COLUMNS={'Player','Batter','Bowler','Team','Teams','Country','Gender','Format','Match','Result','Coverage','Dismissal','Opponent','Ground','Venue','Metric','Date','Year','First player','Second player','Champion','Runner-up','Semi-finalists','Host','Hosts','Final','Record','Holder','Detail'}
 HEADER_NAMES={'Mat':'Matches','Inns':'Innings','NO':'Not outs','BF':'Balls faced','Avg':'Batting average','SR':'Strike rate','HS':'Highest score','Ct':'Catches','St':'Stumpings','Dis':'Dismissals','BBI':'Best bowling in an innings','BBM':'Best bowling in a match','Econ':'Runs conceded per over','M':'Maidens','R':'Runs','B':'Balls faced','O':'Overs','W':'Wickets','Min':'Minutes at the crease'}
 
 def table(headings, rows, ident='', caption=''):
@@ -448,56 +448,60 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     """
     cards=all_cards or {}
 
-    families=classify(matches)
+    bundled=merge_official(matches,cards,people)
+    families=bundled['families']
     glance=''
     for key,label,fmt,gender in FAMILIES:
-        rec=families.get(key)
-        if not rec: continue
+        rec=families[key]
         top=rec['titles'].most_common(1)
         champ,count=(top[0] if top else ('Not recorded',0))
         last=rec['editions'][-1]['winner'] if rec['editions'] else 'Not recorded'
-        glance+=f'<a class="format-card" href="/world-cup/{key}/"><h3>{esc(label)}</h3><div class="format-card-hero"><strong>{esc(str(count))}</strong><span>titles · {esc(champ)}</span></div><p class="format-card-note">{len(rec["editions"])} recorded editions. Last champion: {esc(last or "not recorded")}.</p></a>'
-    world_body=heading('World Cup cricket records','Winners, leading run scorers and wicket takers from recorded World Cup matches in this archive. Qualifiers are excluded.','WORLD CUP DATA')+actions()
-    world_body+='<p class="player-intro">These tables use recorded World Cup matches between the twelve national teams. Men\'s ODI World Cups in this archive start in 2003. Earlier tournaments appear only when the source labelled them as a World Cup. The champion is the winner of the last recorded match in each edition.</p>'
-    if glance: world_body+='<section class="career-glance-wrap" id="by-format"><p class="eyebrow">THE GLOBAL EVENTS</p><h2>Who has won, and who has scored</h2><div class="career-glance">'+glance+'</div></section>'
-    all_wc=[m for rec in families.values() for m in rec['matches']]
-    world_body+='<div class="stats">'+''.join(f'<div><strong>{num(value)}</strong><span>{label}</span></div>' for value,label in [(len(all_wc),'Recorded World Cup matches'),(sum(len(rec["editions"]) for rec in families.values()),'Recorded editions'),(sum(m.get("gender")=="Men" for m in all_wc),'Men'),(sum(m.get("gender")=="Women" for m in all_wc),'Women')])+'</div>'
+        first=rec['official']['first_year']
+        latest=rec['official']['latest_year']
+        glance+=f'<a class="format-card" href="/world-cup/{key}/"><h3>{esc(label)}</h3><div class="format-card-hero"><strong>{esc(str(count))}</strong><span>titles · {esc(champ)}</span></div><p class="format-card-note">{len(rec["editions"])} official editions, {first} to {latest}. Last champion: {esc(last or "not recorded")}.</p></a>'
+    world_body=heading('World Cup cricket records','Official winners, finals, semi-finalists and landmark records for men and women. Available scorecards sit underneath that complete history.','WORLD CUP DATA')+actions()
+    world_body+='<p class="player-intro">The men\'s ODI World Cup began in 1975. The latest completed edition is 2023, won by Australia, their sixth title. Women\'s ODI World Cups began in 1973. T20 World Cups began in 2007 for men and 2009 for women. Title counts and the timeline on these pages are the official tournament record. They are not inferred from the ball-by-ball archive. Cricsheet scorecards remain available where this site has them, and are labelled as coverage, not as the champion list.</p>'
+    if glance: world_body+='<section class="career-glance-wrap" id="by-format"><p class="eyebrow">THE GLOBAL EVENTS</p><h2>Who has won, from the first World Cup to now</h2><div class="career-glance">'+glance+'</div></section>'
+    official_editions=sum(len(rec['editions']) for rec in families.values())
+    archive_matches=sum(rec['archive_match_count'] for rec in families.values())
+    world_body+='<div class="stats"><div><strong>'+num(official_editions)+'</strong><span>Official editions</span></div><div><strong>'+num(families['mens-odi']['titles']['Australia'])+'</strong><span>Australia men\'s ODI titles</span></div><div><strong>'+num(archive_matches)+'</strong><span>Scorecards in this archive</span></div><div><strong>'+str(families['mens-odi']['official']['first_year'])+'</strong><span>Men\'s ODI start year</span></div></div>'
     for key,label,fmt,gender in FAMILIES:
-        rec=families.get(key)
-        if not rec: continue
+        rec=families[key]
         path='/world-cup/'+key+'/'
-        leaders=player_leaders([mid for cup in rec['editions'] for mid in cup['ids']],cards,people,25)
+        leaders=rec['leaders']
         titles=titles_leaderboard(rec,gp['teams'])
-        body=heading(label,f'{len(rec["editions"])} recorded editions · {len(rec["matches"]):,} matches','WORLD CUP')+actions()
-        body+=f'<p class="player-intro">{esc(label)} in this archive. Champion of an edition is the winner of its last recorded match. Player figures use available scorecards only; a missing innings does not become a zero.</p>'
+        first=rec['official']['first_year']
+        latest=rec['official']['latest_year']
+        body=heading(label,f'{len(rec["editions"])} official editions · {first} to {latest}','WORLD CUP')+actions()
+        body+=f'<p class="player-intro">{esc(label)} from the first tournament to the latest completed edition. The timeline lists the champion, runner-up and losing semi-finalists. Landmark records are the official World Cup record, sourced independently of this site\'s scorecard archive. {esc(coverage_note(rec))}</p>'
         if titles:
-            body+='<section class="panel" id="winners"><h2>Most titles</h2>'+table(['Team','Titles'],titles,caption=label+' titles in this archive')
+            body+='<section class="panel" id="winners"><h2>Most titles</h2>'+table(['Team','Titles'],titles,caption=label+' official titles')
             body+=cw.leader_bars([(team,count) for team,count in rec['titles'].most_common(8)],label+' titles',minimum=1)+'</section>'
-        body+='<section class="panel"><h2>Edition winners</h2>'+table(['Year','Matches','Champion','Last recorded match','Date'],title_table(rec,gp['teams'],mp),caption=label+' edition winners')+'</section>'
+        body+='<section class="panel" id="timeline"><h2>Official timeline</h2>'+table(['Year','Host','Champion','Runner-up','Semi-finalists','Result'],timeline_table(rec,gp['teams']),caption=label+' winners, finals and semi-finalists')+'</section>'
+        record_rows=official_record_rows(rec)
+        if record_rows:
+            body+='<section class="panel" id="records"><h2>Official records</h2>'+table(['Record','Holder','Value','Detail'],record_rows,caption=label+' landmark records')+'</section>'
         if leaders['runs']:
-            body+='<section class="panel" id="runs"><h2>Leading run scorers</h2>'+table(['Player','Runs','Inns','HS','100s'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['runs']),num(r['innings']),num(r['highest']),num(r['hundreds'])] for r in leaders['runs']],caption=label+' run scorers from recorded innings')+'</section>'
+            body+='<section class="panel" id="runs"><h2>Leading run scorers in available scorecards</h2>'+table(['Player','Runs','Inns','HS','100s'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['runs']),num(r['innings']),num(r['highest']),num(r['hundreds'])] for r in leaders['runs']],caption=label+' run scorers from recorded innings')+'</section>'
         if leaders['wickets']:
-            body+='<section class="panel" id="wickets"><h2>Leading wicket takers</h2>'+table(['Player','Wickets','Inns','Best'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['wickets']),num(r['innings']),esc(r['best'] or '')] for r in leaders['wickets']],caption=label+' wicket takers from recorded innings')+'</section>'
+            body+='<section class="panel" id="wickets"><h2>Leading wicket takers in available scorecards</h2>'+table(['Player','Wickets','Inns','Best'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['wickets']),num(r['innings']),esc(r['best'] or '')] for r in leaders['wickets']],caption=label+' wicket takers from recorded innings')+'</section>'
         if leaders['scores']:
-            body+='<section class="panel"><h2>Highest recorded scores</h2>'+table(['Runs','Player','Balls','Date','Team'],[[num(runs),esc(name),num(balls),esc(day),esc(team or '')] for runs,balls,name,day,mid,team in leaders['scores']],caption=label+' highest individual scores')+'</section>'
+            body+='<section class="panel"><h2>Highest recorded scores in this archive</h2>'+table(['Runs','Player','Balls','Date','Team'],[[num(runs),esc(name),num(balls),esc(day),esc(team or '')] for runs,balls,name,day,mid,team in leaders['scores']],caption=label+' highest individual scores in available scorecards')+'</section>'
         if leaders['spells']:
-            body+='<section class="panel"><h2>Best recorded bowling</h2>'+table(['Figures','Player','Date'],[[f'{wkts}/{conceded}',esc(name),esc(day)] for wkts,conceded,name,day,mid in leaders['spells']],caption=label+' best bowling figures')+'</section>'
-        body+='<p class="note">Scorecard coverage is incomplete for some editions. Career World Cup totals on other sites can differ when a match is missing here. '+a('/world-cup/','All World Cup records')+' · '+a('/records/','Career records')+'</p>'
+            body+='<section class="panel"><h2>Best recorded bowling in this archive</h2>'+table(['Figures','Player','Date'],[[f'{wkts}/{conceded}',esc(name),esc(day)] for wkts,conceded,name,day,mid in leaders['spells']],caption=label+' best bowling figures in available scorecards')+'</section>'
+        body+='<p class="note">Official titles and finals are complete even when a scorecard is missing here. Archive batting and bowling tables count only innings this site holds. A missing innings is not a zero. '+a('/world-cup/','All World Cup records')+' · '+a('/records/','Career records')+'</p>'
         top_team,top_count=(rec['titles'].most_common(1)[0] if rec['titles'] else ('Not recorded',0))
-        top_runs=leaders['runs'][0]['name']+' '+num(leaders['runs'][0]['runs']) if leaders['runs'] else 'not recorded'
-        description=f'{label}: {top_team} has {top_count} recorded titles. Leading run scorer {top_runs}. Winners, runs and wickets from this archive.'
-        page(path,label+' winners, runs and wickets',description,body,'CollectionPage',{'breadcrumb_name':label})
+        description=f'{label}: {top_team} has {top_count} official titles. Timeline of winners, runners-up and semi-finalists from {first} to {latest}, plus landmark records and available scorecards.'
+        page(path,label+' winners, finals and records',description,body,'CollectionPage',{'breadcrumb_name':label})
         world_body+='<section class="panel"><h2>'+esc(label)+'</h2>'
-        if titles: world_body+=table(['Team','Titles'],titles[:8],caption=label+' titles')
-        if leaders['runs']:
-            world_body+='<h3>Top run scorers</h3>'+table(['Player','Runs','HS'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['runs']),num(r['highest'])] for r in leaders['runs'][:8]],caption=label+' runs')
-        if leaders['wickets']:
-            world_body+='<h3>Top wicket takers</h3>'+table(['Player','Wickets','Best'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['wickets']),esc(r['best'] or '')] for r in leaders['wickets'][:8]],caption=label+' wickets')
+        if titles: world_body+=table(['Team','Titles'],titles[:8],caption=label+' official titles')
+        world_body+=table(['Year','Host','Champion','Runner-up','Semi-finalists','Result'],timeline_table(rec,gp['teams']),caption=label+' official timeline')
         world_body+='<p>'+a(path,'Full '+label+' records')+'</p></section>'
+    all_wc=[m for rec in families.values() for m in rec['archive']['matches']]
     recent=sorted(all_wc,key=lambda m:(m['date'],m['id']),reverse=True)[:20]
-    if recent: world_body+='<section class="panel"><h2>Recent World Cup matches</h2>'+match_table(recent,mp,20)+'</section>'
-    world_body+='<p class="note">Champions Trophy and qualifying events are not mixed into these World Cup title counts. '+a('/records/','Career records')+' · '+a('/questions/','Questions')+'</p>'
-    page('/world-cup/','World Cup winners, run scorers and wicket takers','World Cup winners, leading run scorers and wicket takers for men and women in ODIs and T20s, from recorded matches in this archive.',world_body,'CollectionPage')
+    if recent: world_body+='<section class="panel"><h2>Recent World Cup scorecards in this archive</h2>'+match_table(recent,mp,20)+'</section>'
+    world_body+='<p class="note">Champions Trophy and qualifying events are not mixed into these World Cup title counts. Player career tables on other pages use official international snapshots, not World Cup-only innings. '+a('/records/','Career records')+' · '+a('/questions/','Questions')+'</p>'
+    page('/world-cup/','World Cup winners, finals and records','Official World Cup winners, runners-up, semi-finalists and landmark records for men and women in ODIs and T20s. The men\'s ODI World Cup runs from 1975 to 2023. Available scorecards are labelled separately.',world_body,'CollectionPage')
 
     # Team-pair pages answer a common search intent while retaining a single
     # canonical overview page for the full rivalry directory.

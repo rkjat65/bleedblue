@@ -1,14 +1,20 @@
-"""World Cup winners and player leaders from recorded matches in this archive.
+"""Official World Cup history plus available scorecards.
 
-Editions are split by gaps in the calendar. The champion is the winner of the
-last recorded match in that edition. Qualifiers and Super League matches are
-excluded. Early World Cups with no event label in the source are absent.
+Title counts, winners, runners-up and semi-finalists come from
+data/world_cup_history.json, the complete official record. Cricsheet and
+backfill scorecards are attached as available coverage only. They must never
+be used as the public champion list.
 """
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from datetime import date
-from player_profile import clip_meta, esc
+from pathlib import Path
+from player_profile import esc
+
+ROOT = Path(__file__).resolve().parent.parent
+HISTORY_PATH = ROOT / 'data' / 'world_cup_history.json'
 
 FAMILIES = (
     ('mens-odi', "Men's ODI World Cup", 'ODI', 'Men'),
@@ -16,6 +22,10 @@ FAMILIES = (
     ('mens-t20', "Men's T20 World Cup", 'T20I', 'Men'),
     ('womens-t20', "Women's T20 World Cup", 'T20I', 'Women'),
 )
+
+
+def load_history():
+    return json.loads(HISTORY_PATH.read_text(encoding='utf-8'))
 
 
 def _event(match):
@@ -179,23 +189,97 @@ def player_leaders(match_ids, cards, people, limit=20):
     }
 
 
-def title_table(record, team_paths, match_paths):
+def _team_html(name, team_paths):
+    if not name:
+        return esc('Not recorded')
+    path = team_paths.get(name)
+    return f'<a href="{esc(path)}">{esc(name)}</a>' if path else esc(name)
+
+
+def _teams_html(names, team_paths):
+    return ', '.join(_team_html(name, team_paths) for name in names if name) or esc('No knockout stage')
+
+
+def merge_official(matches, cards, people):
+    history = load_history()
+    archive = classify(matches)
+    families = {}
+    for key, label, fmt, gender in FAMILIES:
+        official = history['families'][key]
+        rec = archive.get(key) or {'editions': [], 'titles': Counter(), 'matches': []}
+        by_year = {str(cup['year']): cup for cup in rec['editions']}
+        editions_out = []
+        for cup in official['editions']:
+            year = str(cup['year'])
+            found = by_year.get(year) or {}
+            editions_out.append({
+                **cup,
+                'year': year,
+                'archive_matches': found.get('matches', 0),
+                'archive_ids': found.get('ids') or [],
+                'archive_final': found.get('final'),
+            })
+        match_ids = [mid for cup in rec['editions'] for mid in cup['ids']]
+        families[key] = {
+            'key': key,
+            'label': label,
+            'format': fmt,
+            'gender': gender,
+            'official': official,
+            'editions': editions_out,
+            'titles': Counter(official['titles']),
+            'records': official.get('records') or [],
+            'archive': rec,
+            'leaders': player_leaders(match_ids, cards, people, 25) if match_ids else {'runs': [], 'wickets': [], 'scores': [], 'spells': []},
+            'archive_match_count': len(rec['matches']),
+        }
+    return {'meta': {k: history[k] for k in ('source', 'checked_at', 'note') if k in history}, 'families': families}
+
+
+def timeline_table(family, team_paths):
     rows = []
-    for cup in reversed(record['editions']):
-        final = cup['final'] or {}
-        winner = cup['winner'] or 'Not recorded'
-        winner_html = f'<a href="{esc(team_paths.get(cup["winner"], "/teams/"))}">{esc(winner)}</a>' if cup['winner'] else esc(winner)
-        final_html = ''
-        if final:
-            url = match_paths.get(final.get('id'), '')
-            label = ' v '.join(final.get('teams') or [])
-            final_html = f'<a href="{esc(url)}">{esc(label)}</a>' if url else esc(label)
-        rows.append([cup['year'], str(cup['matches']), winner_html, final_html, cup['end'][:10]])
+    for cup in reversed(family['editions']):
+        hosts = ', '.join(cup.get('hosts') or []) or 'Not recorded'
+        semis = cup.get('losing_semi_finalists') or []
+        if cup.get('knockout') is False:
+            semi_html = esc('No knockout stage')
+        elif semis:
+            semi_html = _teams_html(semis, team_paths)
+        else:
+            semi_html = esc('Not listed')
+        result = cup.get('final_result') or ''
+        if cup.get('winner_score') and cup.get('runner_up_score'):
+            result = f'{result} ({cup["winner_score"]} v {cup["runner_up_score"]})' if result else f'{cup["winner_score"]} v {cup["runner_up_score"]}'
+        rows.append([
+            cup['year'],
+            esc(hosts),
+            _team_html(cup.get('winner'), team_paths),
+            _team_html(cup.get('runner_up'), team_paths),
+            semi_html,
+            esc(result or 'Not recorded'),
+        ])
     return rows
 
 
-def titles_leaderboard(record, team_paths):
+def titles_leaderboard(family, team_paths):
     return [
-        [f'<a href="{esc(team_paths.get(team, "/teams/"))}">{esc(team)}</a>', str(count)]
-        for team, count in record['titles'].most_common()
+        [_team_html(team, team_paths), str(count)]
+        for team, count in family['titles'].most_common()
     ]
+
+
+def official_record_rows(family):
+    return [
+        [esc(row['metric']), esc(row['holder']), esc(str(row['value'])), esc(row.get('detail') or '')]
+        for row in family.get('records') or []
+    ]
+
+
+def coverage_note(family):
+    official_n = len(family['editions'])
+    archive_n = family['archive_match_count']
+    covered = sum(1 for cup in family['editions'] if cup['archive_matches'])
+    return (
+        f'{official_n} official editions. {covered} of those years have at least one scorecard in this archive '
+        f'({archive_n:,} recorded matches). Player tables below use available innings only.'
+    )
