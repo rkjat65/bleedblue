@@ -19,6 +19,10 @@ class CricketChartTests(unittest.TestCase):
         self.assertIn('cw-wicket', chart)
         self.assertNotIn('em-dash', chart)
 
+    def test_manhattan_skips_long_test_innings(self):
+        inn = {'team': 'England', 'overs': [over(n, 2) for n in range(1, 90)]}
+        self.assertEqual(cw.manhattan(inn), '')
+
     def test_manhattan_marks_wicket_overs(self):
         inn = {'team': 'Australia', 'overs': [over(1, 4), over(2, 16, 2), over(3, 1)]}
         chart = cw.manhattan(inn)
