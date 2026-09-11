@@ -522,7 +522,59 @@ def player_lab(rows, name):
     charts = [c for c in charts if c]
     if not charts:
         return ''
-    return '<section class="cw-lab" id="career-pictures"><div class="cw-lab-head"><p class="eyebrow">CAREER IN PICTURES</p><h2>Form, trajectory and how innings end</h2><p class="muted">Built from available scorecards against the twelve national teams. Official career tables above remain the complete record.</p></div><div class="cw-lab-grid">' + ''.join(charts) + '</div></section>'
+    return (
+        '<section class="cw-lab" id="career-pictures"><div class="cw-lab-head">'
+        '<p class="eyebrow">CAREER IN PICTURES</p>'
+        f'<h2>{_esc(name)}: form, trajectory and how innings end</h2>'
+        '<p class="muted">Built from available scorecards against the twelve national teams. '
+        'Official career tables on this page remain the complete record.</p></div>'
+        '<div class="cw-lab-grid">' + ''.join(charts) + '</div></section>'
+    )
+
+
+def career_lab(career, name):
+    """Official career snapshot pictures: format splits, not archive innings."""
+    career = career or {}
+    formats = [fmt for fmt in ('Test', 'ODI', 'T20I') if fmt in career]
+    if not formats:
+        return ''
+    charts = []
+    run_items = [(fmt, career[fmt].get('runs')) for fmt in formats]
+    if any(value for _, value in run_items):
+        charts.append(hbars(run_items, f'{name}: official career runs by format', 'Official career runs by international format. A missing bar means that format has no recorded runs.'))
+    avg_items = [(fmt, career[fmt].get('avg')) for fmt in formats]
+    if sum(value is not None for _, value in avg_items) >= 2:
+        charts.append(hbars(avg_items, f'{name}: batting average by format', 'Each bar is the official batting average in that format. Formats without an average stay blank.'))
+    sr_items = [(fmt, career[fmt].get('sr')) for fmt in formats]
+    if sum(value is not None for _, value in sr_items) >= 2:
+        charts.append(hbars(sr_items, f'{name}: batting strike rate by format', 'Strike rate is official runs per 100 balls in that format.'))
+    hundred_items = [(fmt, career[fmt].get('hundreds')) for fmt in formats]
+    if any(value for _, value in hundred_items):
+        charts.append(hbars(hundred_items, f'{name}: hundreds by format', 'Official centuries. Zero is a recorded zero, not a missing value.'))
+    wicket_items = [(fmt, career[fmt].get('wickets')) for fmt in formats]
+    if any((value or 0) >= 15 for _, value in wicket_items):
+        charts.append(hbars(wicket_items, f'{name}: official career wickets by format', 'Official wickets by international format.'))
+        bowl_avg = [(fmt, career[fmt].get('bowlAvg')) for fmt in formats]
+        if sum(value is not None for _, value in bowl_avg) >= 2:
+            charts.append(hbars(bowl_avg, f'{name}: bowling average by format', 'Official bowling average. Formats with no wickets have no average.'))
+    palette = {'Test': 'cw-c0', 'ODI': 'cw-c1', 'T20I': 'cw-c2'}
+    run_parts = [(fmt, career[fmt].get('runs') or 0, palette[fmt]) for fmt in formats]
+    if sum(value > 0 for _, value, _ in run_parts) >= 2:
+        charts.append(donut(run_parts, f'{name}: share of career runs by format', 'Slice size is official career runs in that format. Archive innings are not used here.'))
+    wicket_parts = [(fmt, career[fmt].get('wickets') or 0, palette[fmt]) for fmt in formats]
+    if sum(value > 0 for _, value, _ in wicket_parts) >= 2 and any((career[fmt].get('wickets') or 0) >= 15 for fmt in formats):
+        charts.append(donut(wicket_parts, f'{name}: share of career wickets by format', 'Slice size is official career wickets in that format.'))
+    charts = [chart for chart in charts if chart]
+    if not charts:
+        return ''
+    return (
+        '<section class="cw-lab" id="official-pictures"><div class="cw-lab-head">'
+        '<p class="eyebrow">THE OFFICIAL PICTURE</p>'
+        f'<h2>{_esc(name)}: how the career splits by format</h2>'
+        '<p class="muted">These bars use the official international snapshot. '
+        'They are the complete career, not the twelve-team scorecard archive.</p></div>'
+        '<div class="cw-lab-grid">' + ''.join(charts) + '</div></section>'
+    )
 
 
 def pair_lab(left, right, s1, s2, focus='batting'):

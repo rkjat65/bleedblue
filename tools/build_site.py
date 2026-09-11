@@ -9,11 +9,12 @@ from home_visuals import homepage_hero, homepage_insights, archive_visuals
 import cricket_charts as cw
 from publication_assets import prepare_assets, social_image
 from publication_pages import trust_pages
-from portraits import load_portraits, portrait_figure, portrait_schema
+from portraits import load_portraits, portrait_figure
 from profile_research import select_research_players, profile_research_section, opponent_pages, research_index
 from editorial_research import build_editorial, entity_context
 from studio_page import studio_markup
 from data_health import profile_coverage, coverage_page
+from player_profile import player_seo, player_intro, profile_nav, career_glance, career_tables, player_faq, player_person, primary_role
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '_site'
@@ -140,20 +141,34 @@ def result(m):
         return o['winner']+' won'+(' by '+margin if margin else '')
     return {'draw':'Match drawn','tie':'Match tied','no result':'No result'}.get(o.get('result'),'Result not recorded')
 def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
+    extra=dict(extra or {})
+    faq=extra.pop('faq',None)
+    crumb_name=extra.pop('breadcrumb_name',title)
     canonical=BASE+path; section=path.strip('/').split('/')[0]
+    crumbs=[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'}]
     if len(path.strip('/').split('/'))>1:
-        body='<nav class="breadcrumbs" aria-label="Breadcrumb">'+a('/','Home')+' / '+a('/'+section+'/',section.title())+' / <span>'+esc(title)+'</span></nav>'+body
+        body='<nav class="breadcrumbs" aria-label="Breadcrumb">'+a('/','Home')+' / '+a('/'+section+'/',section.title())+' / <span>'+esc(crumb_name)+'</span></nav>'+body
+        crumbs.append({'@type':'ListItem','position':2,'name':section.replace('-',' ').title(),'item':BASE+'/'+section+'/'})
+        crumbs.append({'@type':'ListItem','position':3,'name':crumb_name,'item':canonical})
+    elif path!='/':
+        crumbs.append({'@type':'ListItem','position':2,'name':title,'item':canonical})
     schema={'@context':'https://schema.org','@type':kind,'name':title,'description':description,'url':canonical,'isPartOf':{'@type':'WebSite','name':'Cricket Wicket','url':BASE+'/'}}
+    social=extra.get('image') or f'{BASE}/assets/social/site-default.png'
+    if not isinstance(social,str):
+        extra.pop('image',None)
+        social=f'{BASE}/assets/social/site-default.png'
     if extra:schema.update(extra)
-    if path!='/':schema['breadcrumb']={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':title,'item':canonical}]}
+    if path!='/':schema['breadcrumb']={'@type':'BreadcrumbList','itemListElement':crumbs}
     ld=json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')
+    ld_scripts=f'<script type="application/ld+json">{ld}</script>'
+    if faq:
+        ld_scripts+=f'<script type="application/ld+json">{json.dumps(faq,ensure_ascii=False).replace("<","\\u003c")}</script>'
     nav=[('/matches/','Matches'),('/players/','Players'),('/teams/','Teams'),('/records/','Records'),('/compare/','Compare'),('/studio/','Studio'),('/series/','Series')]
     home_assets=(f'<link rel="stylesheet" href="/assets/home.css?v={ASSET_VERSION}"><script src="/assets/home.js?v={ASSET_VERSION}" defer></script>' if path=='/' else '')
     studio_assets=(f'<link rel="stylesheet" href="/assets/studio.css?v={ASSET_VERSION}"><script src="/assets/studio-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/studio-images.js?v={ASSET_VERSION}" defer></script><script src="/assets/studio.js?v={ASSET_VERSION}" defer></script>' if path=='/studio/' else '')
-    social=(extra or {}).get('image') or f'{BASE}/assets/social/site-default.png'
-    if not isinstance(social,str):social=f'{BASE}/assets/social/site-default.png'
+    og_type='profile' if kind=='ProfilePage' else 'website'
     verification=('<meta name="google-site-verification" content="'+esc(SETTINGS['google_site_verification'])+'">') if SETTINGS.get('google_site_verification') else ''
-    document=f'''<!doctype html><html lang="en"><head><meta charset="utf-8">{verification}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#10233f"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{social}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{social}"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/publication.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/portraits.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/profile-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/editorial-research.css?v={ASSET_VERSION}"><script src="/assets/analysis-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script>{home_assets}{studio_assets}<script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}<a class="search-link" href="/search/">Search</a><a class="ipl-link" href="https://crickrida.rkjat.in/">IPL Analytics</a></nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/about/','About')}{a('/contact/','Contact')}{a('/data-coverage/','Data coverage')}{a('/datasets/','Datasets')}{a('/methodology/','Methodology')}{a('/insights/','Statistical insights')}{a('/questions/','Cricket questions')}{a('/blog/','Daily notes')}{a('/world-cup/','World Cup archive')}{a('/head-to-head/','Head-to-head records')}{a('/records/best-innings/','Best performances')}{a('/milestones/','Player milestones')}{a('/venue-records/','Venue records')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in/','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Corrections: <a href="mailto:rkideas65@gmail.com">rkideas65@gmail.com</a>.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
+    document=f'''<!doctype html><html lang="en"><head><meta charset="utf-8">{verification}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#10233f"><meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{social}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{social}"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/publication.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/portraits.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/profile-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/editorial-research.css?v={ASSET_VERSION}"><script src="/assets/analysis-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script>{home_assets}{studio_assets}{ld_scripts}</head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}<a class="search-link" href="/search/">Search</a><a class="ipl-link" href="https://crickrida.rkjat.in/">IPL Analytics</a></nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/about/','About')}{a('/contact/','Contact')}{a('/data-coverage/','Data coverage')}{a('/datasets/','Datasets')}{a('/methodology/','Methodology')}{a('/insights/','Statistical insights')}{a('/questions/','Cricket questions')}{a('/blog/','Daily notes')}{a('/world-cup/','World Cup archive')}{a('/head-to-head/','Head-to-head records')}{a('/records/best-innings/','Best performances')}{a('/milestones/','Player milestones')}{a('/venue-records/','Venue records')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in/','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Corrections: <a href="mailto:rkideas65@gmail.com">rkideas65@gmail.com</a>.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
     target=OUT/path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(document,encoding='utf-8')
     if not noindex:PAGES[path]={'title':title,'bytes':len(document.encode()),'sha256':hashlib.sha256(document.encode()).hexdigest(),'lastmod':TODAY}
     if path in PAGES and PREVIOUS.get(path,{}).get('sha256')==PAGES[path]['sha256']:PAGES[path]['lastmod']=PREVIOUS[path].get('lastmod',TODAY)
@@ -213,18 +228,7 @@ def team_badge(team, path=None):
     mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
     return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
 def stats_table(p):
-    career=p.get('career',{})
-    groups=[('Batting',[('matches','Matches'),('innings','Innings'),('runs','Runs'),('avg','Average'),('sr','Strike rate'),('highest_display','Highest score'),('notouts','Not outs'),('hundreds','100s'),('fifties','50s'),('ducks','Ducks'),('fours','4s'),('sixes','6s'),('balls','Balls faced')]),('Bowling',[('matches','Matches'),('bowling_innings','Innings'),('legal','Balls'),('maidens','Maidens'),('conceded','Runs conceded'),('wickets','Wickets'),('bowlAvg','Average'),('econ','Economy'),('bowlSr','Strike rate'),('best_bowling','Best innings'),('best_match','Best match'),('four_w','4 wickets'),('five_w','5 wickets'),('ten_w','10 wickets')]),('Fielding',[('matches','Matches'),('fielding_innings','Innings'),('catches','Catches'),('stumpings','Stumpings'),('dismissals','Dismissals'),('keeper_catches','Keeper catches'),('fielder_catches','Fielder catches'),('dismissals_per_innings','Dismissals / inns'),('most_dismissals','Best innings')])]
-    output='<div class="format-switch" data-format-switch role="group" aria-label="Filter career records"><button class="active" data-format="" aria-pressed="true">All formats</button>'+''.join(f'<button data-format="{fmt}" aria-pressed="false">{fmt}</button>' for fmt in ('Test','ODI','T20I') if fmt in career)+'</div><div class="career-format-list">'
-    for fmt in ('Test','ODI','T20I'):
-        if fmt not in career: continue
-        stats=career[fmt]
-        disciplines=''
-        for title,fields in groups:
-            figures=''.join('<div class="career-stat"><dt>'+label+'</dt><dd>'+stat_value(stats,key)+'</dd></div>' for key,label in fields)
-            disciplines+='<section class="career-discipline"><h4>'+title+'</h4><dl class="career-stat-grid">'+figures+'</dl></section>'
-        output+='<section class="career-format" data-career-format="'+fmt+'"><div class="career-format-head"><h3>'+fmt+'</h3><span>Official international career</span></div>'+disciplines+'</section>'
-    return output+'</div>'
+    return career_tables(p, table, stat_value)
 
 def options(name,values,label=None):return f'<label>{esc(label or name.title())}<select name="{name}"><option value="">All</option>'+''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)+'</select></label>'
 
@@ -313,17 +317,45 @@ def main():
         summary={'id':pid,'name':p['name'],'teams':p['teams'],'gender':p['gender'],'career':career,'url':path}
         summary['career']={fmt:{k:v for k,v in s.items() if k not in ('source','sources','enrichment_source')} for fmt,s in career.items()}
         dump(path+'summary.json',summary);dump(path+'analytics.json',{'innings':rows,'appearances':apps,'note':'Available official match scorecards within site coverage. Super overs excluded. Unknown venue setting is not inferred.'})
-        identity='<div class="player-identity"><span class="gender-mark">'+esc(p['gender'])+'</span>'+''.join(team_badge(t,gp['teams'].get(t)) for t in p['teams'] if t in gp['teams'])+'<span class="career-years">'+esc(p.get('first',''))+'–'+esc(p.get('last',''))+'</span></div>'
-        profile_title='<div class="player-profile-heading">'+heading(p['name'],'International career statistics, records and scorecard analysis','PLAYER CAREER')+portrait_figure(pid,p['name'],portraits,illustration=ILLUSTRATIONS.get(p['name']))+'</div>'+identity
-        body=profile_title+profile_coverage(p,rows)+actions()+'<div class="stats">'+''.join(f'<div><strong>{num(tot.get(k))}</strong><span>{label}</span></div>' for k,label in [('matches','Internationals'),('runs','Career runs'),('hundreds','Centuries'),('wickets','Wickets')])+'</div>'
-        checked_dates=sorted({careers['meta']['checked_at'][:10]}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')});snapshot_label='–'.join(dict.fromkeys([checked_dates[0],checked_dates[-1]]))
-        body+='<section class="panel"><h2>Career records by format</h2>'+stats_table(p)+f'<p class="note">Career records checked: {snapshot_label}. — means not recorded; N/A means the statistic does not apply. Career totals are independent of the scorecard archive.</p></section>'
-        if not career:body+='<p class="note">This archive identity has no matched career record. Do not treat its archive totals as a complete career.</p>'
-        body+=cw.player_lab(rows,p['name'])
+        suffix=' · '+pid if names[slug(p['name'])]>1 else ''
+        title,description=player_seo(p,suffix)
+        intro=player_intro(p)
+        illustration=ILLUSTRATIONS.get(p['name'])
+        person,og_image=player_person(p,pid,path,description,portraits,illustration=illustration,base=BASE)
+        years=' to '.join(part for part in (p.get('first'),p.get('last')) if part)
+        identity='<div class="player-identity"><span class="gender-mark">'+esc(p['gender'])+'</span>'+''.join(team_badge(t,gp['teams'].get(t)) for t in p['teams'] if t in gp['teams'])+(f'<span class="career-years">{esc(years)}</span>' if years else '')+'</div>'
+        subtitle=' · '.join(part for part in [' / '.join(p.get('teams') or []), p.get('gender') or '', years] if part) or 'International career statistics, records and scorecard analysis'
+        profile_title='<div class="player-profile-heading">'+heading(p['name'],subtitle,'PLAYER CAREER')+portrait_figure(pid,p['name'],portraits,illustration=illustration)+'</div>'+identity+f'<p class="player-intro">{esc(intro)}</p>'
+        glance=career_glance(p,stat_value)
+        official_charts=cw.career_lab(career,p['name'])
+        archive_charts=cw.player_lab(rows,p['name'])
+        tables=stats_table(p)
+        faq_html,faq_schema=player_faq(p)
+        picture_id='official-pictures' if official_charts else ('career-pictures' if archive_charts else '')
+        nav_html=profile_nav(bool(glance),picture_id,True,bool(faq_html),bool(rows))
+        body=profile_title+profile_coverage(p,rows)+nav_html+actions()
+        if tot:
+            role=primary_role(career) if career else 'batter'
+            keys=[('matches','Internationals'),('wickets','Wickets'),('runs','Career runs')] if role=='bowler' else [('matches','Internationals'),('runs','Career runs'),('hundreds','Centuries'),('wickets','Wickets')]
+            body+='<div class="stats">'+''.join(f'<div><strong>{num(tot.get(k))}</strong><span>{label}</span></div>' for k,label in keys)+'</div>'
+        body+=glance+official_charts+archive_charts
+        checked_dates=sorted({careers['meta']['checked_at'][:10]}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')})
+        snapshot_label=' to '.join(dict.fromkeys([checked_dates[0],checked_dates[-1]])) if checked_dates else ''
+        body+='<section class="panel career-tables" id="career-records"><h2>Career records by format</h2>'
+        if tables:
+            body+='<p class="muted">Official Test, ODI and T20I figures. Every cell is in the HTML so search engines and downloads see the same numbers as the page.</p>'+tables
+            if snapshot_label:body+=f'<p class="note">Career records checked: {esc(snapshot_label)}. A dash means not recorded; N/A means the statistic does not apply. Career totals are independent of the scorecard archive.</p>'
+        else:
+            body+='<p class="note">This archive identity has no matched career record. Do not treat its archive totals as a complete career.</p>'
+        body+='</section>'
+        body+=faq_html
         body+='<section class="panel" id="analysis" data-analytics="'+path+'analytics.json"><h2>Explore this player’s available match data</h2><p>'+str(len(apps))+' match appearances in available scorecards. Filters below apply to this archive only.</p><button id="load-analysis" class="primary">Open statistical explorer</button><div id="analysis-controls" hidden></div><div id="analysis-results" aria-live="polite"></div></section>'
-        body+='<section class="panel"><h2>Recent available appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]])+'</section><p>'+ ' · '.join(a(gp['teams'][t],t) for t in p['teams'] if t in gp['teams'])+'</p>'
+        body+='<section class="panel"><h2>Recent available appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]],caption='Recent available appearances')+'</section><p>'+ ' · '.join(a(gp['teams'][t],t) for t in p['teams'] if t in gp['teams'])+' · '+a('/compare/','Compare with another player')+'</p>'
         body += profile_research_section(p, rows, path, curated=pid in research_ids)
-        page(path,p['name']+(' · '+pid if names[slug(p['name'])]>1 else '')+' career stats & records',f'{p["name"]} international cricket statistics: Test, ODI and T20I runs, wickets, averages, career records and available match analysis.',body,'ProfilePage',{'mainEntity':{'@type':'Person','name':p['name'],'identifier':pid, **(portrait_schema(pid,portraits) or {})}})
+        extra={'mainEntity':person,'breadcrumb_name':p['name']}
+        if og_image:extra['image']=og_image
+        if faq_schema:extra['faq']=faq_schema
+        page(path,title,description,body,'ProfilePage',extra)
     for spec in editorial['pages']:
         if isinstance(spec, tuple):
             spec=dict(zip(('path','title','description','body'),spec))

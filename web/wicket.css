@@ -51,9 +51,35 @@
 .player-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:-18px 0 24px;padding:12px 0;border-bottom:1px solid var(--border)}.team-badge,.team-badge-link{display:inline-flex;align-items:center;gap:8px}.team-badge-link{color:var(--ink);font-weight:700}.team-badge-link:hover{text-decoration:none;color:var(--accent)}.team-badge img{width:28px;height:19px;object-fit:cover;border:1px solid #0002;border-radius:3px;box-shadow:0 1px 2px #0002}.gender-mark,.career-years{font-size:12px;color:var(--muted)}.gender-mark{padding:3px 8px;border:1px solid var(--border);border-radius:4px;font-weight:700}.career-years{margin-left:auto;font-variant-numeric:tabular-nums}.format-switch{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}.format-switch button{padding:7px 13px;font-size:12px}.format-switch button.active{background:var(--ink);color:var(--panel);border-color:var(--ink)}.career-format-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px}.career-format{min-width:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--panel)}.career-format-head{display:flex;align-items:baseline;justify-content:space-between;padding:14px 16px;background:var(--soft);border-bottom:1px solid var(--border)}.career-format-head h3{margin:0;font-size:18px}.career-format-head span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.career-discipline{padding:11px 12px}.career-discipline+.career-discipline{border-top:1px solid var(--border)}.career-discipline h4{font-size:12px;margin:0 0 5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.career-discipline .table-wrap{border:0;margin:0;border-radius:0}.career-discipline .score-table{font-size:12px}.career-discipline .score-table th,.career-discipline .score-table td{padding:7px 8px}.career-discipline .score-table th:first-child,.career-discipline .score-table td:first-child{position:static;box-shadow:none}.career-discipline .score-table thead th:first-child{position:sticky;left:0}.career-discipline .score-table tbody td:first-child{position:sticky;left:0;background:var(--panel)}
 @media(max-width:550px){.career-years{margin-left:0;width:100%}.career-format-grid{grid-template-columns:1fr}.format-switch{position:sticky;top:0;z-index:4;background:var(--panel);padding:7px 0}.career-discipline{padding:9px 8px}}
 
-/* Player career figures remain fully crawlable and readable without horizontal table scrolling. */
-.career-format-list{display:grid;gap:18px}.career-format{width:100%;min-width:0}.career-format-head{padding:15px 18px}.career-format-head h3{font-size:20px}.career-discipline{padding:16px 18px}.career-stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:0;margin:0;border:1px solid var(--border);border-radius:8px;overflow:hidden}.career-stat{min-width:0;padding:11px 12px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--panel)}.career-stat dt{font-size:10px;line-height:1.3;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.035em}.career-stat dd{margin:4px 0 0;font-size:16px;line-height:1.3;font-weight:750;font-variant-numeric:tabular-nums;color:var(--ink)}
-@media(max-width:550px){.career-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.career-stat{padding:10px 8px}.career-stat dd{font-size:15px}.career-format-head,.career-discipline{padding-left:12px;padding-right:12px}}
+/* Player career figures stay in full HTML tables; headline cards carry the first look. */
+.player-profile-heading .page-head{padding-top:12px;padding-bottom:8px;max-width:none}
+.player-intro{font-size:17px;line-height:1.65;max-width:72ch;margin:0 0 18px;color:var(--ink)}
+.profile-jump{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
+.profile-jump a{padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:var(--panel);font-size:12px;font-weight:650;color:var(--ink)}
+.profile-jump a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.career-glance-wrap{margin:8px 0 28px}
+.career-glance-wrap h2{margin:6px 0 8px}
+.career-glance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.format-card{margin:0;padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--panel);box-shadow:var(--shadow);min-width:0}
+.format-card h3{margin:0 0 4px;font-size:20px}
+.format-card-meta{font-size:12px;color:var(--muted);margin:0 0 12px}
+.format-card-hero{display:flex;align-items:baseline;gap:8px;margin:0 0 14px}
+.format-card-hero strong{font-size:34px;letter-spacing:-1.2px;font-variant-numeric:tabular-nums;line-height:1}
+.format-card-hero span{font-size:13px;color:var(--muted);font-weight:700}
+.format-card dl{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;margin:0}
+.format-card dt{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.format-card dd{margin:2px 0 0;font-size:16px;font-weight:750;font-variant-numeric:tabular-nums}
+.format-card-note{font-size:12px;color:var(--muted);margin:12px 0 0}
+.format-card-share{margin-top:14px;height:6px;border-radius:4px;background:var(--soft);overflow:hidden}
+.format-card-share i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#76aaff)}
+.career-tables h2{margin-bottom:8px}
+.player-faq dl{margin:0}
+.player-faq>dl>div{padding:16px 0;border-bottom:1px solid var(--border)}
+.player-faq>dl>div:last-child{border-bottom:0}
+.player-faq dt{font-size:16px;font-weight:750;margin:0 0 6px}
+.player-faq dd{margin:0;max-width:72ch;line-height:1.6}
+@media(max-width:900px){.career-glance{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.career-glance{grid-template-columns:1fr}.format-card-hero strong{font-size:30px}.player-intro{font-size:15px}}
 .entity-year-scroll{overflow-y:hidden}.entity-year-bar span{writing-mode:initial;transform:translateX(-50%);line-height:1;white-space:nowrap}
 
 /* Daily notes use an editorial reading width and a single shareable visual. */

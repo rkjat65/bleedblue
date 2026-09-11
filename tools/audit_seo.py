@@ -18,6 +18,16 @@ def main():
         assert 'name="viewport"' in text,path
         schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',text).group(1))
         if path!='/':assert schema['breadcrumb']['@type']=='BreadcrumbList',path
+        if path.startswith('/players/') and path.count('/')>=3:
+            assert schema['breadcrumb']['itemListElement'][1]['name']=='Players',path
+            assert 'career-stat-grid' not in text,path
+            assert 'id="career-records"' in text,path
+            desc=re.search(r'<meta name="description" content="([^"]*)"',text).group(1)
+            if 'no matched career record' in text:
+                assert 'Batting career records by format' not in text,path
+            else:
+                assert re.search(r'\d', desc),path
+                assert 'Batting career records by format' in text,path
         if path=='/datasets/':assert schema['@type']=='Dataset' and len(schema['distribution'])==4
     report={'passed':True,'representative_pages_checked':len(set(examples)),'sitemap_indexable_pages':len(paths),'titles_unique':len(set(p['title'] for p in paths.values()))==len(paths),'indexing_status':'Unknown: Google Search Console access required','field_core_web_vitals':'Not measured: requires real visitor data','advertising':'No ad network enabled; no audience claims'}
     (SITE/'seo-report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

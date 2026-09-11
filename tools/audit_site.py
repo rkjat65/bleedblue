@@ -47,6 +47,7 @@ def main():
         if path.startswith('/players/') and '/page/' not in path and path != '/players/':
             weights.append(len(text.encode()))
             assert 'Career records by format' in text
+            assert 'career-stat-grid' not in text
             assert 'international.json' not in text and 'careers.json' not in text
     print('Checking internal destinations...', flush=True)
     for link in links:
