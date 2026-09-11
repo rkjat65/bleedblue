@@ -22,6 +22,7 @@ from entity_pages import (
     team_schema, ground_schema, h2h_path,
 )
 from world_cup import FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note
+from official_public import load_team_records, load_innings_records, official_team_panel, official_innings_table, official_h2h
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '_site'
@@ -87,7 +88,7 @@ def stable_routes(proposed, previous, kind):
 def dump(path, value):
     target=OUT/path.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(value,separators=(',',':'),ensure_ascii=False),encoding='utf-8')
-TEXT_COLUMNS={'Player','Batter','Bowler','Team','Teams','Country','Gender','Format','Match','Result','Coverage','Dismissal','Opponent','Ground','Venue','Metric','Date','Year','First player','Second player','Champion','Runner-up','Semi-finalists','Host','Hosts','Final','Record','Holder','Detail'}
+TEXT_COLUMNS={'Player','Batter','Bowler','Team','Teams','Country','Gender','Format','Match','Result','Coverage','Dismissal','Opponent','Ground','Venue','Metric','Date','Year','First player','Second player','Champion','Runner-up','Semi-finalists','Host','Hosts','Final','Record','Holder','Detail','Span','Played','Won','Lost','Draw / tied','No result'}
 HEADER_NAMES={'Mat':'Matches','Inns':'Innings','NO':'Not outs','BF':'Balls faced','Avg':'Batting average','SR':'Strike rate','HS':'Highest score','Ct':'Catches','St':'Stumpings','Dis':'Dismissals','BBI':'Best bowling in an innings','BBM':'Best bowling in a match','Econ':'Runs conceded per over','M':'Maidens','R':'Runs','B':'Balls faced','O':'Overs','W':'Wickets','Min':'Minutes at the crease'}
 
 def table(headings, rows, ident='', caption=''):
@@ -447,6 +448,7 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     and easy for crawlers to discover without manufacturing thin keyword pages.
     """
     cards=all_cards or {}
+    official_innings=load_innings_records()
 
     bundled=merge_official(matches,cards,people)
     families=bundled['families']
@@ -556,8 +558,9 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     for wickets,conceded,m,team,opp,b in bowling[:100]:
         overs_display=b.get('overs_display') or ('—' if b.get('balls') is None else str((b.get('balls') or 0)//6)+'.'+str((b.get('balls') or 0)%6))
         bowl_rows.append([a(pp[b['id']],people[b['id']]['name']),m['date'],esc(team),esc(opp),m['format'],num(wickets),num(conceded),esc(overs_display),a(mp[m['id']],'Scorecard')])
-    performance_body=heading('Best international cricket performances','The biggest recorded batting innings and bowling spells in the published international scorecard archive.','PERFORMANCE RECORDS')+actions()
-    performance_body+='<p class="lede">These tables rank individual scorecard innings. They do not replace official career records, and historical coverage varies by era. Every row links to the underlying scorecard.</p>'
+    performance_body=heading('Best international cricket performances','Official landmark innings first, then the biggest batting and bowling spells in available scorecards.','PERFORMANCE RECORDS')+actions()
+    performance_body+='<section class="panel" id="official-records"><h2>Official landmark records</h2><p class="muted">Complete international records, independent of whether this site holds the scorecard.</p>'+official_innings_table(official_innings,table)+'</section>'
+    performance_body+='<p class="lede">The tables below rank individual innings in available scorecards. They do not replace the official landmarks above. Historical coverage varies by era. Every row links to the underlying scorecard.</p>'
     performance_body+=cw.leader_bars([(people[b['id']]['name'],runs) for runs,balls,m,team,opp,b in batting[:10]],'Highest individual scores in this archive')
     performance_body+=cw.leader_bars([(people[b['id']]['name'],wickets) for wickets,conceded,m,team,opp,b in bowling[:10]],'Most wickets in an innings in this archive')
     performance_body+='<section class="panel"><h2>Highest individual scores</h2>'+table(['Player','Date','Team','Opponent','Format','Runs','Balls','Strike rate','Match'],bat_rows,caption='Highest individual international batting scores')+'</section>'
@@ -634,15 +637,24 @@ def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards,player_q=None,
                 if b.get('id') in pp and b.get('wickets') is not None and b.get('runs') is not None:bowling.append((b['wickets'],b.get('runs'),m,team,opp,b))
     batting.sort(key=lambda x:(-x[0],-(x[1] or 0),x[2]['date'],x[2]['id']))
     bowling.sort(key=lambda x:(-x[0],x[1],x[2]['date'],x[2]['id']))
+    innings_official=load_innings_records()
     for fmt in ('Test','ODI','T20I'):
-        scores=[x for x in batting if x[2]['format']==fmt]
-        if scores:
-            runs,balls,m,team,opp,b=scores[0]
-            questions.append({'slug':f'highest-{fmt.lower()}-individual-score','title':f'What is the highest individual score in {fmt} cricket?','description':f'Highest recorded individual {fmt} international score in the Cricket Wicket scorecard archive.','category':'SCORECARD RECORDS','answer':f'{people[b["id"]]["name"]} has the highest recorded {fmt} score in this archive: {num(runs)} for {team} against {opp} on {m["date"]}. {"Balls faced: "+num(balls)+"." if balls is not None else "Balls faced are not recorded for this innings."} Open the scorecard to inspect the complete innings.', 'links':[('/records/best-innings/','Browse best innings'),(mp[m['id']],'Open the scorecard')]})
-        spells=[x for x in bowling if x[2]['format']==fmt]
-        if spells:
-            wickets,conceded,m,team,opp,b=spells[0]
-            questions.append({'slug':f'best-{fmt.lower()}-bowling-figures','title':f'What are the best bowling figures in {fmt} cricket?','description':f'Best recorded individual {fmt} international bowling figures, ordered by wickets and runs conceded.','category':'SCORECARD RECORDS','answer':f'{people[b["id"]]["name"]} recorded the best {fmt} figures in this archive: {num(wickets)} wickets for {num(conceded)} runs for {team} against {opp} on {m["date"]}. Open the scorecard for the full spell and match result.', 'links':[('/records/best-innings/','Browse best bowling figures'),(mp[m['id']],'Open the scorecard')]})
+        rec=next((row for row in innings_official.get('records') or [] if row['format']==fmt and row['gender']=='Men' and 'score' in row['metric'].lower()),None)
+        if rec:
+            questions.append({'slug':f'highest-{fmt.lower()}-individual-score','title':f'What is the highest individual score in {fmt} cricket?','description':f'The official highest individual {fmt} international score, independent of scorecard coverage.','category':'OFFICIAL RECORDS','answer':f'{rec["holder"]} holds the official {fmt} record: {rec["value"]} for {rec["team"]}. {rec.get("detail") or ""} This is the complete international record, not a total from available scorecards.', 'links':[('/records/best-innings/','Browse official and archive innings'),('/records/', 'Career records')]})
+        else:
+            scores=[x for x in batting if x[2]['format']==fmt]
+            if scores:
+                runs,balls,m,team,opp,b=scores[0]
+                questions.append({'slug':f'highest-{fmt.lower()}-individual-score','title':f'What is the highest individual score in {fmt} cricket?','description':f'Highest recorded individual {fmt} international score in the Cricket Wicket scorecard archive.','category':'SCORECARD RECORDS','answer':f'{people[b["id"]]["name"]} has the highest recorded {fmt} score in this archive: {num(runs)} for {team} against {opp} on {m["date"]}.', 'links':[('/records/best-innings/','Browse best innings'),(mp[m['id']],'Open the scorecard')]})
+        rec=next((row for row in innings_official.get('records') or [] if row['format']==fmt and row['gender']=='Men' and 'bowling' in row['metric'].lower()),None)
+        if rec:
+            questions.append({'slug':f'best-{fmt.lower()}-bowling-figures','title':f'What are the best bowling figures in {fmt} cricket?','description':f'The official best {fmt} bowling innings, independent of scorecard coverage.','category':'OFFICIAL RECORDS','answer':f'{rec["holder"]} holds the official {fmt} bowling record: {rec["value"]} for {rec["team"]}. {rec.get("detail") or ""}', 'links':[('/records/best-innings/','Browse official and archive innings'),('/records/', 'Career records')]})
+        else:
+            spells=[x for x in bowling if x[2]['format']==fmt]
+            if spells:
+                wickets,conceded,m,team,opp,b=spells[0]
+                questions.append({'slug':f'best-{fmt.lower()}-bowling-figures','title':f'What are the best bowling figures in {fmt} cricket?','description':f'Best recorded individual {fmt} international bowling figures, ordered by wickets and runs conceded.','category':'SCORECARD RECORDS','answer':f'{people[b["id"]]["name"]} recorded the best {fmt} figures in this archive: {num(wickets)} wickets for {num(conceded)} runs for {team} against {opp} on {m["date"]}.', 'links':[('/records/best-innings/','Browse best bowling figures'),(mp[m['id']],'Open the scorecard')]})
 
     questions.extend([
         {'slug':'difference-between-test-odi-t20i','title':'What is the difference between Test, ODI and T20I cricket?','description':'A clear comparison of the three international formats, innings structure, time and scoring context.','category':'FORMAT GUIDE','answer':'Tests give each side two innings and can run for up to five days. ODIs give each side one innings of up to 50 overs. T20Is give each side one innings of up to 20 overs. The shorter formats make each delivery more scarce; comparing a rate or total without its format and workload can mislead.', 'links':[('/records/','Explore format records'),('/methodology/','Read the statistical definitions')]},
@@ -656,7 +668,7 @@ def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards,player_q=None,
         {'slug':'who-has-the-most-odi-sixes','title':'Who has hit the most ODI sixes?','description':'Find the men’s ODI sixes leader in the published career snapshot, with fours and boundary context.','category':'CAREER RECORDS','answer':'Sixes are a career counting statistic. Read them with fours, runs and balls so a sixes lead is not mistaken for a faster innings.','links':[('/records/men/odi/most-sixes/','Men’s ODI most sixes'),('/blog/2026-09-11/','Rohit vs Kohli boundary note')]},
         {'slug':'how-to-read-a-cricket-worm-chart','title':'How do you read a cricket worm chart?','description':'A short guide to worms, Manhattans and partnerships on Cricket Wicket scorecards.','category':'MATCH PICTURES','answer':'A worm plots the innings total at the end of each over. Dots mark wickets. A Manhattan shows runs scored in each over. Partnerships are the runs added between recorded falls of wicket. Cricket Wicket draws these only from recorded overs; historical result-only matches have no worm.','links':[('/matches/','Browse scorecards'),('/studio/','Export a match card')]},
         {'slug':'what-is-a-result-only-match','title':'What does result-only mean on a cricket scorecard?','description':'Why some historical international matches have a result but no innings or player figures.','category':'DATA COVERAGE','answer':'A result-only record confirms the match result, teams, date and venue, but the source does not provide a usable innings or lineup. It remains searchable as an international match while batting and bowling figures stay unavailable.', 'links':[('/matches/','Browse match records'),('/methodology/','Read the archive policy')]},
-        {'slug':'which-team-has-most-international-wins','title':'Which international team has the most recorded wins?','description':'Compare national teams by recorded international match wins in the Cricket Wicket archive.','category':'TEAM RECORDS','answer':'The team leaderboard below is calculated from every published international match result. It counts only matches where a winner is recorded, while draws, ties and no-results remain separate. Use the team page to inspect the format and gender mix behind the total.', 'links':[('/teams/','Browse team records'),('/head-to-head/','Compare rivalries')]},
+        {'slug':'which-team-has-most-international-wins','title':'Which international team has the most recorded wins?','description':'Official men\'s Test and ODI win counts, independent of the ball-by-ball archive.','category':'TEAM RECORDS','answer':'Australia hold the most official men\'s Test wins (426) and the most official men\'s ODI wins (619) in the ESPNcricinfo team summaries used on Cricket Wicket. Open a team page for the complete played, won and lost table, then use the archive list for available scorecards.', 'links':[('/teams/','Browse team records'),('/head-to-head/','Compare rivalries')]},
     ])
     women_odi=leader('ODI','runs','Women')
     sixes_odi=leader('ODI','sixes','Men')
@@ -762,7 +774,14 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
         if src and player:faces.append((name,src,pp[player['id']]))
     body=homepage_hero(len(people),len(matches),faces)
     body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'National teams'),('3','Formats covered')])+'</div>'
-    body+=homepage_insights(matches,mp,people,gp)
+    official_teams=load_team_records();official_innings=load_innings_records()
+    h2h_official=official_h2h(official_teams,'India','Australia')
+    h2h_rows=[]
+    if h2h_official:
+        for fmt in ('Test','ODI','T20I'):
+            row=h2h_official.get(fmt)
+            if row:h2h_rows.append((fmt,row['played'],row['left_wins'],row['right_wins'],row['other']))
+    body+=homepage_insights(matches,mp,people,gp,h2h_rows or None)
     featured=cw.showcase_card(all_cards or {})
     if featured:body+=cw.homepage_lab(featured,mp.get(featured['match']['id'],'/matches/'))
     body+='<div class="section-heading"><h2>Start with a question</h2></div><div class="grid three">'+''.join(f'<a class="feature-card" href="{path}"><span>{category}</span><h3>{question}</h3><p>{desc}</p></a>' for path,category,question,desc in [('/records/men/odi/most-runs/','CAREER RECORDS','Who leads the run charts?','Explore qualified records across all three formats.'),('/compare/','PLAYER COMPARISON','How do their careers compare?','Choose a format and compare like-for-like figures.'),('/teams/','TEAMS & GROUNDS','Where does a team win?','Discover results, venues and international rivalries.')])+'</div><div class="section-heading"><h2>Recent recorded results</h2>'+a('/matches/','All matches →')+'</div>'+match_table(latest,mp)
@@ -800,9 +819,10 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
                 title1,description=team_seo(name,totals)
                 body=heading(name,f'{totals["matches"]:,} recorded matches · {totals["first"][:4]} to {totals["last"][:4]}','TEAMS')+actions()
                 body+=f'<p class="player-intro">{esc(team_intro(name,totals))}</p>'
+                body+=official_team_panel(name,official_teams,table)
                 body+=team_glance(name,totals)+entity_visuals(kind,name,ms)+cw.result_decades(ms,name)
                 body+='<div class="stats">'+''.join(f'<div><strong>{n:,}</strong><span>{esc(label)}</span></div>' for label,n in [('Won',totals['won']),('Lost',totals['lost']),('Draw / tie / no result',totals['other']),('Matches',totals['matches'])])+'</div>'
-                body+='<section class="panel" id="career-records"><h2>Results by format and gender</h2><p class="muted">Official match winners in this archive. Other is draws, ties and no results.</p>'
+                body+='<section class="panel" id="career-records"><h2>Results by format and gender</h2><p class="muted">Winners in available scorecards. Other is draws, ties and no results. Complete men\'s career results are in the official table above.</p>'
                 body+=table(['Format','Gender','Matches','Wins','Losses','Other','Win rate'],results_table_rows(totals),caption=name+' results by format and gender')+'</section>'
                 rivals=defaultdict(Counter)
                 for m in ms:

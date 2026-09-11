@@ -40,9 +40,11 @@ def _world_cup_groups(matches):
     return counts
 
 
-def homepage_insights(matches, match_routes, people, team_routes):
-    """Homepage modules built from the same published international records."""
+def homepage_insights(matches, match_routes, people, team_routes, official_h2h=None):
+    """Homepage modules built from official records first, archive coverage second."""
     selected,h2h=_team_record(matches,'India','Australia')
+    if official_h2h:
+        h2h=official_h2h
     india_route=team_routes.get('teams',{}).get('India','/teams/')
     australia_route=team_routes.get('teams',{}).get('Australia','/teams/')
     h2h_rows=''.join('<tr><th scope="row">'+fmt+'</th><td>'+str(total)+'</td><td>'+str(india)+' </td><td>'+str(australia)+'</td><td>'+str(other)+'</td></tr>' for fmt,total,india,australia,other in h2h)
@@ -71,7 +73,7 @@ def homepage_insights(matches, match_routes, people, team_routes):
             compare_cards+='<tr><th>'+label+'</th><td>'+_metric(s1.get(key))+'</td><td>'+_metric(s2.get(key))+'</td></tr>'
         compare_cards+='</tbody></table><a href="'+compare_path+'">Open comparison →</a></article>'
     return f'''<section class="home-insights" aria-labelledby="home-insights-title"><div class="section-heading"><div><p class="eyebrow">THE CRICKET WICKET VIEW</p><h2 id="home-insights-title">Start with the questions that define cricket.</h2><p class="muted">Use the numbers to compare teams, players and the tournaments that shaped the international game.</p></div><a href="/studio/">Build your own chart →</a></div>
-      <div class="home-insight-grid"><article class="home-insight-card home-h2h"><div class="home-card-label"><span>TEAM HEAD-TO-HEAD · MEN &amp; WOMEN</span><a href="{html.escape(india_route)}">India</a><b>vs</b><a href="{html.escape(australia_route)}">Australia</a></div><div class="home-h2h-total">{h2h_total}</div><figure class="home-chart" aria-label="India and Australia wins by format"><figcaption>Wins by format · bar lengths use the largest result in each format</figcaption>{h2h_chart}</figure><div class="table-wrap"><table><caption>India v Australia results by format</caption><thead><tr><th>Format</th><th>Matches</th><th>India wins</th><th>Australia wins</th><th>Other</th></tr></thead><tbody>{h2h_rows}</tbody></table></div><a class="home-card-link" href="/teams/">Explore every international rivalry →</a></article>
+      <div class="home-insight-grid"><article class="home-insight-card home-h2h"><div class="home-card-label"><span>TEAM HEAD-TO-HEAD · OFFICIAL</span><a href="{html.escape(india_route)}">India</a><b>vs</b><a href="{html.escape(australia_route)}">Australia</a></div><div class="home-h2h-total">{h2h_total}</div><figure class="home-chart" aria-label="India and Australia wins by format"><figcaption>Official wins by format · bar lengths use the largest result in each format</figcaption>{h2h_chart}</figure><div class="table-wrap"><table><caption>Official India v Australia results by format</caption><thead><tr><th>Format</th><th>Matches</th><th>India wins</th><th>Australia wins</th><th>Other</th></tr></thead><tbody>{h2h_rows}</tbody></table></div><a class="home-card-link" href="/teams/">Explore every international rivalry →</a></article>
       <article class="home-insight-card home-world"><div class="home-card-label"><span>WORLD CUP · OFFICIAL WINNERS</span><strong>{world_total:,}</strong><small>scorecards in this archive</small></div><h3>Every World Cup era in one place.</h3><p>The men’s ODI World Cup runs from 1975 to 2023. Open official winners, finals and semi-finalists first. These bars count available scorecards only.</p><figure class="home-chart home-world-chart" aria-label="World Cup scorecards by tournament category"><figcaption>Available scorecards by tournament category</figcaption>{world_chart}</figure><div class="table-wrap"><table><caption>World Cup scorecards in the published archive</caption><thead><tr><th>Tournament</th><th>Matches</th></tr></thead><tbody>{world_rows or '<tr><td colspan="2">No tournament label recorded</td></tr>'}</tbody></table></div><a class="home-card-link" href="/world-cup/">Official World Cup winners and records →</a></article></div>
       <div class="home-comparisons"><div class="section-heading"><div><p class="eyebrow">PLAYER COMPARISONS</p><h3>Great careers, measured clearly.</h3></div><a href="/compare/">Compare any two players →</a></div><div class="grid two">{compare_cards}</div></div></section>'''
 
@@ -92,7 +94,7 @@ def homepage_hero(player_count, match_count, faces=None):
       <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" fetchpriority="high"></picture></div>
       <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET, IN NUMBERS</p>
         <h1 id="hero-title">Careers. Scorecards.<br><em>The pictures that explain a match.</em></h1>
-        <p class="hero-description">Official international records for Tests, ODIs and T20Is, men and women. Compare careers, read worms and Manhattans, and follow qualified leaderboards built from Cricsheet.</p>
+        <p class="hero-description">Official international records for Tests, ODIs and T20Is, men and women. Compare careers, read worms and Manhattans, and follow qualified leaderboards. Ball-by-ball scorecards are available where published.</p>
         <ul class="hero-offer"><li><a href="/compare/">Compare two careers</a></li><li><a href="/records/">Qualified records</a></li><li><a href="/studio/">Build a chart</a></li><li><a href="/records/women/odi/most-runs/">Women’s cricket</a></li></ul>
         <div class="hero-actions"><a class="button hero-primary" href="/players/">Explore the players <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/matches/">Open a scorecard <span aria-hidden="true">→</span></a></div>
         <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Player, team or match" required autocomplete="off"><button type="submit">Search</button></div></form>

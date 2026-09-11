@@ -72,7 +72,8 @@ def main():
     # questions and useful records before archive-volume charts.
     assert 'Start with the questions that define cricket.' in homepage
     assert 'TEAM HEAD-TO-HEAD' in homepage
-    assert 'WORLD CUP ARCHIVE' in homepage
+    assert 'WORLD CUP' in homepage
+    assert 'OFFICIAL WINNERS' in homepage or 'WORLD CUP ARCHIVE' in homepage
     assert 'Great careers, measured clearly.' in homepage
     assert 'HOW A MATCH UNFOLDS' in homepage
     assert 'Worm · cumulative runs by over' in homepage or 'MATCH PICTURE' in homepage

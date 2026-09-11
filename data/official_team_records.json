@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-09-11",
+  "source": "ESPNcricinfo team results summaries (Tests, ODIs, T20Is) and the curated India snapshot in official_records.json. Independent of Cricsheet coverage.",
+  "note": "Men's career team results. Women's team results remain on archive scorecards until a matching official snapshot is published. A missing format is omitted, never zero-filled.",
+  "h2h": {
+    "India|Australia": {
+      "Test": {"played": 112, "left_wins": 33, "right_wins": 48, "other": 31, "as_of": "2025"},
+      "ODI": {"played": 155, "left_wins": 59, "right_wins": 86, "other": 10, "as_of": "2025"},
+      "T20I": {"played": 37, "left_wins": 22, "right_wins": 12, "other": 3, "as_of": "2025-11-08"}
+    }
+  },
+  "teams": {
+    "Afghanistan": {
+      "Men": {
+        "Test": {"played": 13, "won": 4, "lost": 8, "draw": 1, "tied": 0, "nr": 0, "span": "2018-2026"},
+        "ODI": {"played": 182, "won": 89, "lost": 86, "tied": 1, "nr": 6, "span": "2009-2026"},
+        "T20I": {"played": 163, "won": 98, "lost": 61, "tied": 3, "nr": 1, "span": "2010-2026"}
+      }
+    },
+    "Australia": {
+      "Men": {
+        "Test": {"played": 882, "won": 426, "lost": 235, "draw": 219, "tied": 2, "nr": 0, "span": "1877-2026"},
+        "ODI": {"played": 1025, "won": 619, "lost": 362, "tied": 9, "nr": 35, "span": "1971-2026"},
+        "T20I": {"played": 226, "won": 124, "lost": 92, "tied": 3, "nr": 7, "span": "2005-2026"}
+      }
+    },
+    "Bangladesh": {
+      "Men": {
+        "Test": {"played": 158, "won": 27, "lost": 112, "draw": 19, "tied": 0, "nr": 0, "span": "2000-2026"},
+        "ODI": {"played": 464, "won": 169, "lost": 284, "tied": 1, "nr": 10, "span": "1986-2026"},
+        "T20I": {"played": 214, "won": 87, "lost": 122, "tied": 0, "nr": 5, "span": "2006-2026"}
+      }
+    },
+    "England": {
+      "Men": {
+        "Test": {"played": 1095, "won": 405, "lost": 334, "draw": 356, "tied": 0, "nr": 0, "span": "1877-2026"},
+        "ODI": {"played": 823, "won": 409, "lost": 374, "tied": 9, "nr": 31, "span": "1971-2026"},
+        "T20I": {"played": 225, "won": 121, "lost": 92, "tied": 2, "nr": 10, "span": "2005-2026"}
+      }
+    },
+    "India": {
+      "Men": {
+        "Test": {"played": 599, "won": 186, "lost": 188, "draw": 224, "tied": 1, "nr": 0, "span": "1932-2026", "as_of": "2026-06-08"},
+        "ODI": {"played": 1078, "won": 574, "lost": 450, "tied": 10, "nr": 44, "span": "1974-2026", "as_of": "2026-06-20"},
+        "T20I": {"played": 283, "won": 187, "lost": 80, "tied": 7, "nr": 9, "span": "2006-2026", "as_of": "2026-07-09"}
+      }
+    },
+    "Ireland": {
+      "Men": {
+        "Test": {"played": 13, "won": 3, "lost": 10, "draw": 0, "tied": 0, "nr": 0, "span": "2018-2026"},
+        "ODI": {"played": 210, "won": 83, "lost": 108, "tied": 3, "nr": 16, "span": "2006-2025"},
+        "T20I": {"played": 188, "won": 78, "lost": 99, "tied": 2, "nr": 9, "span": "2008-2026"}
+      }
+    },
+    "New Zealand": {
+      "Men": {
+        "Test": {"played": 485, "won": 124, "lost": 190, "draw": 171, "tied": 0, "nr": 0, "span": "1930-2026"},
+        "ODI": {"played": 853, "won": 399, "lost": 403, "tied": 7, "nr": 44, "span": "1973-2026"},
+        "T20I": {"played": 267, "won": 135, "lost": 110, "tied": 10, "nr": 12, "span": "2005-2026"}
+      }
+    },
+    "Pakistan": {
+      "Men": {
+        "Test": {"played": 469, "won": 152, "lost": 151, "draw": 166, "tied": 0, "nr": 0, "span": "1952-2026"},
+        "ODI": {"played": 1002, "won": 529, "lost": 443, "tied": 9, "nr": 21, "span": "1973-2026"},
+        "T20I": {"played": 299, "won": 173, "lost": 114, "tied": 4, "nr": 8, "span": "2006-2026"}
+      }
+    },
+    "South Africa": {
+      "Men": {
+        "Test": {"played": 479, "won": 191, "lost": 162, "draw": 126, "tied": 0, "nr": 0, "span": "1889-2025"},
+        "ODI": {"played": 698, "won": 421, "lost": 250, "tied": 6, "nr": 21, "span": "1991-2025"},
+        "T20I": {"played": 230, "won": 125, "lost": 100, "tied": 2, "nr": 3, "span": "2005-2026"}
+      }
+    },
+    "Sri Lanka": {
+      "Men": {
+        "Test": {"played": 327, "won": 107, "lost": 127, "draw": 93, "tied": 0, "nr": 0, "span": "1982-2025"},
+        "ODI": {"played": 945, "won": 436, "lost": 461, "tied": 6, "nr": 42, "span": "1975-2026"},
+        "T20I": {"played": 233, "won": 102, "lost": 123, "tied": 6, "nr": 2, "span": "2006-2026"}
+      }
+    },
+    "West Indies": {
+      "Men": {
+        "Test": {"played": 592, "won": 185, "lost": 223, "draw": 183, "tied": 1, "nr": 0, "span": "1928-2025"},
+        "ODI": {"played": 899, "won": 429, "lost": 426, "tied": 12, "nr": 32, "span": "1973-2026"},
+        "T20I": {"played": 253, "won": 108, "lost": 130, "tied": 3, "nr": 12, "span": "2006-2026"}
+      }
+    },
+    "Zimbabwe": {
+      "Men": {
+        "Test": {"played": 129, "won": 15, "lost": 84, "draw": 30, "tied": 0, "nr": 0, "span": "1992-2025"},
+        "ODI": {"played": 583, "won": 154, "lost": 405, "tied": 8, "nr": 16, "span": "1983-2025"},
+        "T20I": {"played": 192, "won": 68, "lost": 119, "tied": 2, "nr": 3, "span": "2006-2026"}
+      }
+    }
+  }
+}

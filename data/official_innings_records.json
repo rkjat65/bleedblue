@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-11",
+  "source": "Wikipedia featured cricket record lists, cross-checked with ESPNcricinfo. Independent of Cricsheet coverage.",
+  "records": [
+    {"metric": "Highest Test score", "format": "Test", "gender": "Men", "holder": "Brian Lara", "team": "West Indies", "value": "400 not out", "detail": "v England, Antigua, 2004"},
+    {"metric": "Highest ODI score", "format": "ODI", "gender": "Men", "holder": "Rohit Sharma", "team": "India", "value": "264", "detail": "v Sri Lanka, Kolkata, 2014"},
+    {"metric": "Highest T20I score", "format": "T20I", "gender": "Men", "holder": "Aaron Finch", "team": "Australia", "value": "172", "detail": "v Zimbabwe, 2018"},
+    {"metric": "Highest women's ODI score", "format": "ODI", "gender": "Women", "holder": "Amelia Kerr", "team": "New Zealand", "value": "232 not out", "detail": "v Ireland, 2018"},
+    {"metric": "Best Test bowling innings", "format": "Test", "gender": "Men", "holder": "Jim Laker", "team": "England", "value": "10/53", "detail": "v Australia, Old Trafford, 1956"},
+    {"metric": "Best ODI bowling innings", "format": "ODI", "gender": "Men", "holder": "Chaminda Vaas", "team": "Sri Lanka", "value": "8/19", "detail": "v Zimbabwe, Colombo, 2001"},
+    {"metric": "Most Test runs", "format": "Test", "gender": "Men", "holder": "Sachin Tendulkar", "team": "India", "value": "15,921", "detail": "1989 to 2013"},
+    {"metric": "Most ODI runs", "format": "ODI", "gender": "Men", "holder": "Sachin Tendulkar", "team": "India", "value": "18,426", "detail": "1989 to 2012"},
+    {"metric": "Most Test wickets", "format": "Test", "gender": "Men", "holder": "Muttiah Muralitharan", "team": "Sri Lanka", "value": "800", "detail": "1992 to 2010"},
+    {"metric": "Most ODI wickets", "format": "ODI", "gender": "Men", "holder": "Muttiah Muralitharan", "team": "Sri Lanka", "value": "534", "detail": "1993 to 2011"}
+  ]
+}
