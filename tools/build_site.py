@@ -15,6 +15,7 @@ from editorial_research import build_editorial, entity_context
 from studio_page import studio_markup
 from data_health import profile_coverage, coverage_page
 from player_profile import player_seo, player_intro, profile_nav, career_glance, career_tables, player_faq, player_person, primary_role
+from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '_site'
@@ -311,6 +312,7 @@ def main():
         if m['id'] in all_cards:continue
         body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
         page(mp[m['id']],match_labels[m['id']]+' result',f'{result(m)}. Historical {m["format"]} result at {m["venue"]}.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket'})
+    player_q=prepare_player_questions(people,pp,featured_names=set(ILLUSTRATIONS)|set(HERO_CAST),extra_ids=research_ids)
     print('Building career profiles...',flush=True)
     for pid,p in people.items():
         career=p['career'];tot=aggregate(career);path=pp[pid]; rows=sorted(innings[pid],key=lambda r:r['date']);apps=appearances[pid]
@@ -330,7 +332,8 @@ def main():
         official_charts=cw.career_lab(career,p['name'])
         archive_charts=cw.player_lab(rows,p['name'])
         tables=stats_table(p)
-        faq_html,faq_schema=player_faq(p)
+        pack=player_q.get(pid)
+        faq_html,faq_schema=player_faq(p, urls=pack['urls'] if pack else None, name_slug=pack['name_slug'] if pack else slug(p['name']))
         picture_id='official-pictures' if official_charts else ('career-pictures' if archive_charts else '')
         nav_html=profile_nav(bool(glance),picture_id,True,bool(faq_html),bool(rows))
         body=profile_title+profile_coverage(p,rows)+nav_html+actions()
@@ -372,7 +375,7 @@ def main():
         page('/research/','International player research','Format-specific player versus opposition records, trends, timelines and evidence from the international archive.',research_spec,'CollectionPage')
     print('Building directories, records and research pages...',flush=True)
     build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial,all_cards)
-    build_question_hubs(people,matches,pp,mp,gp,careers,all_cards)
+    build_question_hubs(people,matches,pp,mp,gp,careers,all_cards,player_q,HERO_CAST)
     build_daily_blog(people,pp,careers,all_cards,mp)
     coverage_page(matches,all_cards,careers,page)
     dump('/data/routes.json',{'players':pp,'matches':mp})
@@ -544,7 +547,7 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     venue_body+='<p class="note">A highest team total is the largest recorded innings total at that venue in the published archive. It is not a venue rating and does not infer pitch conditions.</p>'
     page('/venue-records/','International cricket venue records','International cricket grounds ranked by match volume, format coverage and highest recorded team totals.',venue_body,'CollectionPage')
 
-def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards):
+def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards,player_q=None,featured_names=()):
     """Publish useful answers for recurring cricket-statistics searches."""
     cards=all_cards or {}
     questions=[]
@@ -611,11 +614,27 @@ def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards):
             if q['slug']=='which-team-has-most-international-wins':q['answer']=f'{winner} has the most recorded wins in this published international match archive: {num(n)}. This is a volume count, not a win percentage; use the team and head-to-head pages to inspect formats, genders and opponents.'
 
     index_body=heading('Cricket questions, answered with data','Clear answers to the cricket questions people ask most: records, formats, player statistics, rivalries and scorecard terms.','CRICKET QUESTIONS')+actions()
-    index_body+='<p class="lede">Each answer links directly to a table, profile or scorecard. Record-holder answers use the current published snapshot and show their data date on the linked page.</p><div class="grid three">'+''.join(f'<a class="feature-card" href="/questions/{q["slug"]}/"><span>{q["category"]}</span><h2>{q["title"]}</h2><p>{q["description"]}</p><small>Read the answer →</small></a>' for q in questions)+'</div><section class="panel"><h2>Use the data after the answer</h2><p>'+a('/records/','Browse qualified records')+' · '+a('/compare/','Compare two careers')+' · '+a('/head-to-head/','Explore rivalries')+' · '+a('/world-cup/','Open the World Cup archive')+'</p></section>'
+    index_body+='<p class="lede">Each answer links directly to a table, profile or scorecard. Record-holder answers use the current published snapshot and show their data date on the linked page.</p><div class="grid three">'+''.join(f'<a class="feature-card" href="/questions/{q["slug"]}/"><span>{q["category"]}</span><h2>{q["title"]}</h2><p>{q["description"]}</p><small>Read the answer →</small></a>' for q in questions)+'</div>'
+    featured=featured_question_cards(player_q or {},people,featured_names)
+    if featured:
+        index_body+='<section class="section-heading"><h2>Stats questions fans search</h2>'+a('/questions/players/','Browse player questions')+'</section>'
+        index_body+='<p>Named-player pages use official career figures. The heading, the paragraph and the search snippet all contain the same number.</p><div class="grid three">'+''.join(f'<a class="feature-card" href="{esc(q["url"])}"><span>PLAYER STATS</span><h2>{esc(q["title"])}</h2><p>{esc(q["answer"])}</p><small>Read the answer →</small></a>' for q in featured)+'</div>'
+    index_body+='<section class="panel"><h2>Use the data after the answer</h2><p>'+a('/records/','Browse qualified records')+' · '+a('/compare/','Compare two careers')+' · '+a('/players/','Open player profiles')+' · '+a('/questions/players/','Player stats questions')+' · '+a('/head-to-head/','Explore rivalries')+' · '+a('/world-cup/','Open the World Cup archive')+'</p></section>'
     page('/questions/','Cricket questions answered with international data','Answers to common cricket questions about international records, formats, players, scorecards and statistics.',index_body,'CollectionPage')
     for q in questions:
         body=heading(q['title'],q['description'],q['category'])+actions()+'<article class="research-article"><p>'+q['answer']+'</p><h2>Explore the underlying records</h2><p>'+' · '.join(a(path,label) for path,label in q['links'])+'</p><p class="note">This answer is generated from Cricket Wicket’s validated international dataset. Career figures and available scorecard figures are kept as separate layers; see the methodology page for definitions and coverage dates.</p></article>'
         page('/questions/'+q['slug']+'/',q['title'],q['description'],body,'Article',{'headline':q['title'],'author':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/about/'}})
+    if player_q:
+        assert_clean_bundle(player_q)
+        snapshot=careers['meta'].get('checked_at','')[:10]
+        page('/questions/players/','International player stats questions','Dedicated pages for how many runs, wickets, centuries and sixes named international players have scored, from official career snapshots.',player_question_directory(player_q,people,pp,table),'CollectionPage')
+        for pid,pack in player_q.items():
+            player=people[pid]
+            for spec in pack['specs']:
+                related=[item for item in pack['specs'] if item['url']!=spec['url']]
+                body=heading(spec['title'],spec['description'],'PLAYER STATS')+actions()+question_page(spec,player,related,snapshot)
+                extra={'headline':spec['title'],'author':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/about/'},'faq':{'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':spec['title'],'acceptedAnswer':{'@type':'Answer','text':spec['answer']}}]},'breadcrumb_name':spec['title']}
+                page(spec['url'],spec['title'],spec['description'],body,'Article',extra)
 
 def build_daily_blog(people,pp,careers,all_cards=None,mp=None):
     """Publish a compact series of data-backed daily notes with editorial visuals."""

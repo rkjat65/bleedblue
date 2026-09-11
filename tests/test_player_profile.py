@@ -96,7 +96,9 @@ class PlayerProfileTests(unittest.TestCase):
         player = {'name': 'Unknown Player', 'gender': 'Men', 'teams': ['India'], 'career': {}}
         title, description = player_seo(player)
         self.assertNotRegex(description, r'\d{3,}')
-        self.assertEqual(player_faq(player), ('', None))
+        html, _schema = player_faq(player)
+        if html:
+            self.assertNotRegex(html, r'\d{3,}')
         self.assertEqual(career_glance(player, stat_value), '')
 
     def test_tables_are_html_not_cramped_grids(self):

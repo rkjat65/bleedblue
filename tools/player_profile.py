@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import html
 import re
+import unicodedata
 
 FORMATS = ('Test', 'ODI', 'T20I')
 DASHES = ('\u2014', '\u2013')
@@ -14,6 +15,11 @@ DASHES = ('\u2014', '\u2013')
 
 def esc(value):
     return html.escape(str(value if value is not None else ''), quote=True)
+
+
+def slug(value):
+    ascii_value = unicodedata.normalize('NFKD', str(value)).encode('ascii', 'ignore').decode()
+    return re.sub(r'[^a-z0-9]+', '-', ascii_value.lower()).strip('-') or 'unknown'
 
 
 def clip_meta(text, limit=158):
@@ -300,81 +306,195 @@ def career_tables(player, table, stat_value):
     return body
 
 
-def player_faq(player):
+def _runs_answer(name, fmt, stats, gender=''):
+    runs = plain(stats, 'runs')
+    inns = plain(stats, 'innings')
+    matches = plain(stats, 'matches')
+    avg = plain(stats, 'avg')
+    sr = plain(stats, 'sr')
+    hs = stats.get('highest_display')
+    women = "women's " if gender == 'Women' else ''
+    answer = f'{name} has {runs} runs in {inns} {women}{fmt} innings'
+    if matches:
+        answer += f' from {matches} matches'
+    if avg:
+        answer += f' at an average of {avg}'
+    if sr:
+        answer += f' and a strike rate of {sr}'
+    if hs and hs not in ('-', '—'):
+        answer += f'. Highest score: {hs}'
+    return _assert_clean(answer + '.')
+
+
+def _wickets_answer(name, fmt, stats, gender=''):
+    wickets = plain(stats, 'wickets')
+    matches = plain(stats, 'matches')
+    women = "women's " if gender == 'Women' else ''
+    answer = f'{name} has taken {wickets} wickets in {women}{fmt}'
+    if matches:
+        answer += f' from {matches} matches'
+    if plain(stats, 'bowlAvg'):
+        answer += f' at a bowling average of {plain(stats, "bowlAvg")}'
+    if stats.get('best_bowling') and stats['best_bowling'] not in ('-', '—'):
+        answer += f'. Best innings: {stats["best_bowling"]}'
+    return _assert_clean(answer + '.')
+
+
+def question_slug(kind, name_slug, fmt=None):
+    fmt = (fmt or '').lower()
+    if kind == 'runs':
+        return f'how-many-{fmt}-runs-has-{name_slug}-scored'
+    if kind == 'avg':
+        return f'what-is-{name_slug}-{fmt}-batting-average'
+    if kind == 'wickets':
+        return f'how-many-{fmt}-wickets-has-{name_slug}-taken'
+    if kind == 'hundreds':
+        return f'how-many-international-centuries-does-{name_slug}-have'
+    if kind == 'sixes':
+        return f'how-many-{fmt}-sixes-has-{name_slug}-hit'
+    if kind == 'team':
+        return f'which-teams-has-{name_slug}-played-for'
+    if kind == 'span':
+        return f'when-did-{name_slug}-play-international-cricket'
+    return f'{name_slug}-{kind}'
+
+
+def question_specs(player, name_slug=None):
+    """Official-career questions fans type into search. Identity questions stay on the profile."""
     name = player['name']
     career = player.get('career') or {}
     formats = formats_present(career)
-    items = []
+    gender = player.get('gender') or ''
+    name_slug = name_slug or slug(name)
+    specs = []
 
-    def add(question, answer):
-        question, answer = _assert_clean(question), _assert_clean(answer)
-        items.append((question, answer))
+    def add(kind, title, description, answer, *, fmt=None, hero=None, unit='', publishable=False):
+        specs.append({
+            'kind': kind,
+            'format': fmt,
+            'title': _assert_clean(title),
+            'description': _assert_clean(clip_meta(description)),
+            'answer': _assert_clean(answer),
+            'hero': hero,
+            'unit': unit,
+            'slug': question_slug(kind, name_slug, fmt),
+            'publishable': publishable,
+        })
 
     for fmt in formats:
         stats = career[fmt]
-        runs = plain(stats, 'runs')
-        inns = plain(stats, 'innings')
-        matches = plain(stats, 'matches')
-        avg = plain(stats, 'avg')
-        sr = plain(stats, 'sr')
-        hs = stats.get('highest_display')
-        if runs is not None and inns:
-            answer = f'{name} has {runs} runs in {inns} {fmt} innings'
-            if matches:
-                answer += f' from {matches} matches'
-            if avg:
-                answer += f' at an average of {avg}'
-            if sr:
-                answer += f' and a strike rate of {sr}'
-            if hs and hs not in ('-', '—'):
-                answer += f'. Highest score: {hs}'
-            add(f'How many {fmt} runs has {name} scored?', answer + '.')
-        wickets = plain(stats, 'wickets')
+        runs_n = stats.get('runs')
+        inns_n = stats.get('innings') or 0
+        if runs_n is not None and inns_n:
+            answer = _runs_answer(name, fmt, stats, gender)
+            add(
+                'runs',
+                f'How many {fmt} runs has {name} scored?',
+                answer,
+                answer,
+                fmt=fmt,
+                hero=plain(stats, 'runs'),
+                unit=f'{fmt} runs',
+                publishable=runs_n >= 200 and inns_n >= 8,
+            )
+            if stats.get('avg') is not None and inns_n >= 10:
+                avg = plain(stats, 'avg')
+                scope = " in women's internationals" if gender == 'Women' else ''
+                avg_answer = (
+                    f"{name}'s {fmt} batting average{scope} is {avg}, from {plain(stats, 'runs')} runs "
+                    f"and {plain(stats, 'innings')} innings."
+                )
+                add(
+                    'avg',
+                    f"What is {name}'s {fmt} batting average?",
+                    avg_answer,
+                    avg_answer,
+                    fmt=fmt,
+                    hero=avg,
+                    unit=f'{fmt} batting average',
+                    publishable=runs_n >= 200,
+                )
         if stats.get('wickets') and stats['wickets'] >= 5:
-            answer = f'{name} has taken {wickets} wickets in {fmt}'
-            if matches:
-                answer += f' from {matches} matches'
-            if plain(stats, 'bowlAvg'):
-                answer += f' at a bowling average of {plain(stats, "bowlAvg")}'
-            if stats.get('best_bowling') and stats['best_bowling'] not in ('-', '—'):
-                answer += f'. Best innings: {stats["best_bowling"]}'
-            add(f'How many {fmt} wickets has {name} taken?', answer + '.')
-    if not items:
-        return '', None
+            answer = _wickets_answer(name, fmt, stats, gender)
+            add(
+                'wickets',
+                f'How many {fmt} wickets has {name} taken?',
+                answer,
+                answer,
+                fmt=fmt,
+                hero=plain(stats, 'wickets'),
+                unit=f'{fmt} wickets',
+                publishable=stats['wickets'] >= 20,
+            )
+        if (stats.get('sixes') or 0) >= 80:
+            sixes = plain(stats, 'sixes')
+            women = "women's " if gender == 'Women' else ''
+            six_answer = f'{name} has hit {sixes} sixes in {women}{fmt} cricket.'
+            add(
+                'sixes',
+                f'How many {fmt} sixes has {name} hit?',
+                six_answer,
+                six_answer,
+                fmt=fmt,
+                hero=sixes,
+                unit=f'{fmt} sixes',
+                publishable=True,
+            )
     hundreds = sum(career[fmt].get('hundreds') or 0 for fmt in formats)
     if hundreds:
         parts = [f'{plain(career[fmt], "hundreds")} in {fmt}' for fmt in formats if career[fmt].get('hundreds')]
+        answer = f'{name} has {hundreds:,} international hundreds: ' + '; '.join(parts) + '.'
         add(
+            'hundreds',
             f'How many international centuries does {name} have?',
-            f'{name} has {hundreds:,} international hundreds: ' + '; '.join(parts) + '.',
+            answer,
+            answer,
+            hero=f'{hundreds:,}',
+            unit='international hundreds',
+            publishable=hundreds >= 3,
         )
     teams = player.get('teams') or []
     if teams:
         add(
+            'team',
             f'Which teams has {name} played international cricket for?',
+            f'{name} is recorded for {" and ".join(teams)} in this publication.',
             f'{name} is recorded for {" and ".join(teams)} in this publication.',
         )
     if player.get('first') and player.get('last'):
         add(
+            'span',
             f'When did {name} play international cricket?',
             f'This career snapshot covers {player["first"]} to {player["last"]}. Dates follow the official record, not only the scorecard archive.',
+            f'This career snapshot covers {player["first"]} to {player["last"]}. Dates follow the official record, not only the scorecard archive.',
         )
-    items = items[:6]
-    if not items:
+    return specs
+
+
+def player_faq(player, urls=None, name_slug=None):
+    specs = question_specs(player, name_slug=name_slug)
+    if not specs:
         return '', None
-    html_items = ''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in items)
+    shown = specs[:6]
+    rows = []
+    for spec in shown:
+        question = esc(spec['title'])
+        path = (urls or {}).get(spec['slug'])
+        if path:
+            question = f'<a href="{esc(path)}">{question}</a>'
+        rows.append(f'<div><dt>{question}</dt><dd>{esc(spec["answer"])}</dd></div>')
     markup = (
         f'<section class="panel player-faq" id="player-questions">'
-        f'<h2>Questions fans ask about {esc(name)}</h2>'
-        f'<p class="muted">Answers use official career figures on this page. Archive pictures can differ when a scorecard is missing.</p>'
-        f'<dl>{html_items}</dl></section>'
+        f'<h2>Questions fans ask about {esc(player["name"])}</h2>'
+        f'<p class="muted">Answers use official career figures. Linked questions open a dedicated, crawlable page for that search.</p>'
+        f'<dl>{"".join(rows)}</dl></section>'
     )
     schema = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}}
-            for q, a in items
+            {'@type': 'Question', 'name': spec['title'], 'acceptedAnswer': {'@type': 'Answer', 'text': spec['answer']}}
+            for spec in shown
         ],
     }
     return markup, schema

@@ -78,6 +78,13 @@
 .player-faq>dl>div:last-child{border-bottom:0}
 .player-faq dt{font-size:16px;font-weight:750;margin:0 0 6px}
 .player-faq dd{margin:0;max-width:72ch;line-height:1.6}
+.question-hero{display:flex;align-items:baseline;gap:12px;margin:8px 0 22px;padding:22px 24px;border:1px solid var(--border);border-radius:14px;background:var(--panel);box-shadow:var(--shadow)}
+.question-hero strong{font-size:clamp(36px,6vw,56px);letter-spacing:-1.6px;line-height:1;font-variant-numeric:tabular-nums}
+.question-hero span{font-size:16px;color:var(--muted);font-weight:700}
+.question-answer{font-size:19px;line-height:1.7;max-width:72ch}
+.question-article .cw-figure{margin:22px 0}
+.question-related{margin-top:16px}
+@media(max-width:640px){.question-hero{padding:16px}.question-hero strong{font-size:34px}.question-answer{font-size:17px}}
 @media(max-width:900px){.career-glance{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.career-glance{grid-template-columns:1fr}.format-card-hero strong{font-size:30px}.player-intro{font-size:15px}}
 .entity-year-scroll{overflow-y:hidden}.entity-year-bar span{writing-mode:initial;transform:translateX(-50%);line-height:1;white-space:nowrap}
