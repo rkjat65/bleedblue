@@ -119,7 +119,7 @@ def worm(innings, target=None):
 def manhattan(inn, title=None):
     """Runs scored in each over, with wickets as ticks on the bar."""
     overs = [o for o in inn.get('overs') or [] if o.get('runs') is not None]
-    if len(overs) < 2 or len(overs) > 55:
+    if len(overs) < 2:
         return ''
     peak = max(max(o['runs'] for o in overs), 1)
     width = max(720, len(overs) * 10)
@@ -487,21 +487,21 @@ def match_lab(card):
     target = None
     if len(with_overs) == 2 and fmt in ('ODI', 'T20I') and with_overs[0].get('runs') is not None:
         target = with_overs[0]['runs'] + 1
-    limited = fmt in ('ODI', 'T20I')
-    title = 'Worm, Manhattan and the stands that built the innings' if limited else 'How the innings unfolded'
-    body = '<section class="cw-lab" id="match-charts"><div class="cw-lab-head"><p class="eyebrow">MATCH PICTURE</p><h2>'+title+'</h2><p class="muted">These are the pictures used to read a cricket match: how the total grew, where the overs leaked or exploded, and which wickets hurt.</p></div>'
+    body = '<section class="cw-lab" id="match-charts"><div class="cw-lab-head"><p class="eyebrow">MATCH PICTURE</p><h2>Worm, Manhattan and the stands that built the innings</h2><p class="muted">These are the pictures used to read a cricket match: how the total grew, where the overs leaked or exploded, and which wickets hurt.</p></div>'
     body += worm(with_overs, target)
-    if limited and with_overs:
-        mans = ''.join(manhattan(inn) for inn in with_overs)
-        if mans:
-            body += '<div class="cw-lab-grid">' + mans + '</div>'
+    if with_overs:
+        body += '<div class="cw-lab-grid">' + ''.join(manhattan(inn) for inn in with_overs) + '</div>'
         phase_html = ''.join(phases(inn, fmt) for inn in with_overs)
         if phase_html:
             body += '<div class="cw-lab-grid">' + phase_html + '</div>'
-        extras = ''.join(scoring_mix(inn.get('batting') or [], f'Scoring mix · {inn.get("team") or "innings"}') for inn in innings)
-        extras += ''.join(bowling_spells(inn.get('bowling') or []) for inn in innings)
-        if extras:
-            body += '<div class="cw-lab-grid">' + extras + '</div>'
+    stands = ''.join(partnerships(inn) for inn in innings)
+    if stands:
+        body += '<div class="cw-lab-grid">' + stands + '</div>'
+    mixes = ''.join(scoring_mix(inn.get('batting') or [], f'Scoring mix · {inn.get("team") or "innings"}') for inn in innings)
+    spells = ''.join(bowling_spells(inn.get('bowling') or []) for inn in innings)
+    extras = mixes + spells
+    if extras:
+        body += '<div class="cw-lab-grid">' + extras + '</div>'
     return body + '</section>'
 
 
