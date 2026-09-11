@@ -24,7 +24,21 @@ PREVIOUS = {}
 SETTINGS=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8')) if (ROOT/'data/site-settings.json').exists() else {}
 ASSET_VERSION = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'web').glob('*')) if p.is_file())).hexdigest()[:10]
 ALIASES = {'SR Tendulkar':'Sachin Tendulkar','V Kohli':'Virat Kohli','RG Sharma':'Rohit Sharma','JJ Bumrah':'Jasprit Bumrah','DG Bradman':'Don Bradman','M Muralitharan':'Muttiah Muralitharan','M Muralidaran':'Muttiah Muralitharan','SK Warne':'Shane Warne','RT Ponting':'Ricky Ponting','KC Sangakkara':'Kumar Sangakkara','DPMD Jayawardene':'Mahela Jayawardene','JH Kallis':'Jacques Kallis','BC Lara':'Brian Lara','SM Gavaskar':'Sunil Gavaskar','R Dravid':'Rahul Dravid','A Kumble':'Anil Kumble','R Ashwin':'Ravichandran Ashwin','RA Jadeja':'Ravindra Jadeja','SC Ganguly':'Sourav Ganguly','V Sehwag':'Virender Sehwag','SS Mandhana':'Smriti Mandhana','H Kaur':'Harmanpreet Kaur','M Raj':'Mithali Raj','J Goswami':'Jhulan Goswami','EA Perry':'Ellyse Perry','MM Lanning':'Meg Lanning','JE Root':'Joe Root','SPD Smith':'Steve Smith','KS Williamson':'Kane Williamson','JM Anderson':'James Anderson','DA Warner':'David Warner','AC Gilchrist':'Adam Gilchrist','ST Jayasuriya':'Sanath Jayasuriya','KL Rahul':'KL Rahul','RR Pant':'Rishabh Pant','HH Pandya':'Hardik Pandya','AC Kerr':'Amelia Kerr','SCJ Broad':'Stuart Broad'}
-ILLUSTRATIONS = {'Virat Kohli':'/assets/art/players/virat-kohli-illustration.webp','Rohit Sharma':'/assets/art/players/rohit-sharma-illustration.webp'}
+ILLUSTRATIONS = {
+    'Virat Kohli':'/assets/art/players/virat-kohli-illustration.webp',
+    'Rohit Sharma':'/assets/art/players/rohit-sharma-illustration.webp',
+    'MS Dhoni':'/assets/art/players/ms-dhoni-illustration.webp',
+    'Sachin Tendulkar':'/assets/art/players/sachin-tendulkar-illustration.webp',
+    'Joe Root':'/assets/art/players/joe-root-illustration.webp',
+    'Ellyse Perry':'/assets/art/players/ellyse-perry-illustration.webp',
+    'Pat Cummins':'/assets/art/players/pat-cummins-illustration.webp',
+    'Kane Williamson':'/assets/art/players/kane-williamson-illustration.webp',
+    'Steven Smith':'/assets/art/players/steven-smith-illustration.webp',
+    'Steve Smith':'/assets/art/players/steven-smith-illustration.webp',
+    'Smriti Mandhana':'/assets/art/players/smriti-mandhana-illustration.webp',
+    'Harmanpreet Kaur':'/assets/art/players/harmanpreet-kaur-illustration.webp',
+}
+HERO_CAST = ('Virat Kohli','Rohit Sharma','Smriti Mandhana','Harmanpreet Kaur','MS Dhoni','Ellyse Perry','Sachin Tendulkar','Pat Cummins')
 # Cricket host territories, used only for these unambiguous city labels.
 HOST_CITIES = {}
 for country, cities in {'India':'Mumbai|Chennai|Delhi|New Delhi|Kolkata|Bengaluru|Bangalore|Hyderabad|Ahmedabad|Pune|Nagpur|Mohali|Dharamsala|Ranchi|Rajkot|Indore|Lucknow|Kanpur|Visakhapatnam|Cuttack|Guwahati|Thiruvananthapuram|Raipur', 'Australia':'Sydney|Melbourne|Adelaide|Perth|Brisbane|Hobart|Canberra|Cairns|Darwin', 'England':'London|Manchester|Birmingham|Nottingham|Leeds|Southampton|Chester-le-Street|Cardiff|Bristol|Taunton|Worcester|Leicester|Derby|Hove|Chelmsford', 'New Zealand':'Auckland|Wellington|Christchurch|Hamilton|Dunedin|Napier|Mount Maunganui|Nelson|Queenstown', 'South Africa':'Cape Town|Johannesburg|Durban|Centurion|Pretoria|Gqeberha|Port Elizabeth|Paarl|Bloemfontein|Potchefstroom|East London|Kimberley', 'Pakistan':'Lahore|Karachi|Rawalpindi|Multan|Faisalabad', 'Sri Lanka':'Colombo|Galle|Kandy|Dambulla|Pallekele|Hambantota', 'Bangladesh':'Dhaka|Mirpur|Chattogram|Chittagong|Sylhet', 'Zimbabwe':'Harare|Bulawayo', 'United Arab Emirates':'Dubai|Sharjah|Abu Dhabi', 'Ireland':'Dublin|Belfast|Bready|Malahide', 'West Indies':'Bridgetown|Kingston|Gros Islet|Port of Spain|Providence|Basseterre|St George\'s|North Sound|Roseau', 'Namibia':'Windhoek', 'Netherlands':'Amstelveen|Rotterdam|The Hague', 'Scotland':'Edinburgh|Aberdeen|Glasgow', 'Nepal':'Kirtipur|Kathmandu', 'Oman':'Al Amerat|Muscat'}.items():
@@ -169,7 +183,32 @@ def entity_visuals(kind,name,matches):
     if kind=='teams':
         won=sum(m.get('outcome',{}).get('winner')==name for m in matches);lost=sum(name in m.get('teams',[]) and m.get('outcome',{}).get('winner') not in (None,name) for m in matches);other=len(matches)-won-lost;om=max(won,lost,other,1)
         outcome=f'<figure class="entity-chart"><figcaption>Team results · wins, losses and other outcomes</figcaption><div class="entity-outcome-bars"><div><i class="win" style="height:{won/om*100:.1f}%"></i><span>Wins</span><strong>{won:,}</strong></div><div><i class="loss" style="height:{lost/om*100:.1f}%"></i><span>Losses</span><strong>{lost:,}</strong></div><div><i class="other" style="height:{other/om*100:.1f}%"></i><span>Other</span><strong>{other:,}</strong></div></div></figure>'
-    return f'<section class="entity-visuals" aria-label="{esc(name)} archive visuals"><div class="entity-chart"><div class="entity-chart-heading"><div><p class="eyebrow">ARCHIVE AT A GLANCE</p><h2>How this archive is shaped</h2></div><span>{len(matches):,} total matches</span></div><figure><figcaption>Matches by international format</figcaption>{format_bars}</figure></div><figure class="entity-chart entity-year-chart"><figcaption>Matches by year · each bar is an exact annual count</figcaption><div class="entity-year-scroll" tabindex="0" role="img" aria-label="{esc(name)} matches by year">{year_bars}</div></figure>{outcome}</section>'
+    conditions=''
+    if kind=='grounds':
+        tests=[m for m in matches if m.get('format')=='Test']
+        odis=[m for m in matches if m.get('format')=='ODI']
+        t20s=[m for m in matches if m.get('format')=='T20I']
+        def innings_runs(sample):
+            values=[t.get('runs') for m in sample for t in (m.get('totals') or []) if t.get('runs') is not None]
+            return (sum(values)/len(values)) if values else None
+        test_draws=sum(1 for m in tests if not m.get('outcome',{}).get('winner'))
+        odi_avg=innings_runs(odis); t20_avg=innings_runs(t20s)
+        firsts=[(m.get('totals') or [{}])[0].get('runs') for m in matches if m.get('totals')]
+        firsts=[n for n in firsts if n is not None]
+        first_avg=(sum(firsts)/len(firsts)) if firsts else None
+        def fig(label,value,note):
+            if value is None: shown='not recorded'
+            elif isinstance(value,str): shown=value
+            elif isinstance(value,float): shown=f'{value:.1f}'
+            else: shown=f'{value:,}'
+            return f'<div><span>{esc(label)}</span><strong>{shown}</strong><small>{esc(note)}</small></div>'
+        conditions='<section class="venue-conditions"><p class="eyebrow">HOW THIS GROUND PLAYS</p><h2>Recorded innings, not a pitch rating</h2><div class="venue-condition-grid">'
+        conditions+=fig('First-innings average', first_avg, f'{len(firsts)} recorded first innings')
+        conditions+=fig('Test draws', (f'{100*test_draws/len(tests):.1f}%' if tests else None), f'{len(tests)} Tests · {test_draws} without a winner')
+        conditions+=fig('ODI innings average', odi_avg, f'{len(odis)} ODIs')
+        conditions+=fig('T20I innings average', t20_avg, f'{len(t20s)} T20Is')
+        conditions+='</div><p class="note">Averages use recorded team innings totals at this venue. Missing historical innings are omitted. This is not a pitch report.</p></section>'
+    return f'<section class="entity-visuals" aria-label="{esc(name)} archive visuals"><div class="entity-chart"><div class="entity-chart-heading"><div><p class="eyebrow">ARCHIVE AT A GLANCE</p><h2>How this archive is shaped</h2></div><span>{len(matches):,} total matches</span></div><figure><figcaption>Matches by international format</figcaption>{format_bars}</figure></div><figure class="entity-chart entity-year-chart"><figcaption>Matches by year · each bar is an exact annual count</figcaption><div class="entity-year-scroll" tabindex="0" role="img" aria-label="{esc(name)} matches by year">{year_bars}</div></figure>{outcome}</section>'+conditions
 def team_badge(team, path=None):
     mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
     return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
@@ -302,7 +341,7 @@ def main():
     print('Building directories, records and research pages...',flush=True)
     build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial,all_cards)
     build_question_hubs(people,matches,pp,mp,gp,careers,all_cards)
-    build_daily_blog(people,pp,careers)
+    build_daily_blog(people,pp,careers,all_cards,mp)
     coverage_page(matches,all_cards,careers,page)
     dump('/data/routes.json',{'players':pp,'matches':mp})
     dump('/data/player-index.json',[{'id':pid,'name':p['name'],'url':pp[pid],'teams':p['teams'],'gender':p['gender'],'formats':list(p['career'] or p['formats']),'byFormat':{fmt:{'runs':stats.get('runs'),'wickets':stats.get('wickets')} for fmt,stats in p['career'].items()},'runs':aggregate(p['career']).get('runs'),'wickets':aggregate(p['career']).get('wickets')} for pid,p in people.items()])
@@ -361,6 +400,9 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     world_body=heading('World Cup cricket archive','World Cup, World T20 and Champions Trophy match records, scorecards and player pathways across men’s and women’s international cricket.','WORLD CUP DATA')+actions()
     world_body+='<p class="lede">Use the tournament links to move from an event overview into every recorded match. Results are limited to the international scope published by Cricket Wicket; result-only historical matches are labelled.</p>'
     world_body+='<div class="stats">'+''.join(f'<div><strong>{num(value)}</strong><span>{label}</span></div>' for value,label in [(len(world_events),'Tournament labels'),(sum(len(v) for v in world_events.values()),'Recorded matches'),(len({m["gender"] for ms in world_events.values() for m in ms}),'Genders'),(len({m["format"] for ms in world_events.values() for m in ms}),'Formats')])+'</div>'
+    cup_matches=[m for ms in world_events.values() for m in ms]
+    world_body+=cw.leader_bars([(fmt,sum(m['format']==fmt for m in cup_matches)) for fmt in ('Test','ODI','T20I') if any(m['format']==fmt for m in cup_matches)],'World tournament matches by format',minimum=1)
+    world_body+=cw.leader_bars([(g,sum(m['gender']==g for m in cup_matches)) for g in ('Men','Women') if any(m['gender']==g for m in cup_matches)],'World tournament matches by gender',minimum=1)
     if world_rows:
         world_body+='<section class="panel"><h2>Tournament archive</h2>'+table(['Tournament','Matches','Gender','Formats','Recorded span'],world_rows,caption='World Cup and Champions Trophy tournament archive')+'</section>'
         recent=sorted([m for ms in world_events.values() for m in ms],key=lambda m:(m['date'],m['id']),reverse=True)[:20]
@@ -517,9 +559,19 @@ def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards):
         {'slug':'what-is-a-century-and-five-wicket-haul','title':'What is a century or a five-wicket haul in cricket?','description':'A scorecard guide to centuries, fifties and five-wicket bowling milestones.','category':'SCORECARD TERMS','answer':'A century is an innings of at least 100 runs. A fifty is an innings of at least 50 runs but below 100. A five-wicket haul is an innings with at least five wickets; ten-wicket match hauls are separately labelled when the scorecards support them.', 'links':[('/milestones/','Browse player milestones'),('/records/best-innings/','Browse performance records')]},
         {'slug':'are-international-career-records-complete','title':'Are Cricket Wicket international career records complete?','description':'Understand the difference between official career snapshots and the available scorecard archive.','category':'DATA COVERAGE','answer':'Career tables are independent official international snapshots and may include recognized matches that are outside the ball-by-ball scorecard archive. Match explorers use the published international scorecards and label result-only records. Missing fields remain unavailable; they are never inferred from a partial match.', 'links':[('/methodology/','Read coverage and definitions'),('/data-coverage/','Inspect current coverage')]},
         {'slug':'how-to-compare-cricket-players','title':'How should two cricket players be compared?','description':'A practical, format-aware way to compare international careers without hiding workload or era.','category':'PLAYER COMPARISON','answer':'Choose the same format, gender and data scope first. Read runs or wickets alongside innings, dismissals, balls, average and strike rate, then inspect the playing span and opposition context. Cricket Wicket keeps career snapshots separate from narrower available-scorecard samples so a partial archive is not presented as a full career.', 'links':[('/compare/','Open player comparison'),('/players/','Browse player profiles')]},
+        {'slug':'who-has-the-most-womens-odi-runs','title':'Who has the most women’s ODI runs?','description':'The leading women’s ODI run scorer in the published official career snapshot, with a link to the qualified leaderboard.','category':'WOMEN’S RECORDS','answer':'Open the women’s ODI most-runs leaderboard for the current snapshot, qualification and the rest of the table.','links':[('/records/women/odi/most-runs/','Women’s ODI most runs'),('/records/women/t20i/most-runs/','Women’s T20I most runs')]},
+        {'slug':'who-has-the-most-odi-sixes','title':'Who has hit the most ODI sixes?','description':'Find the men’s ODI sixes leader in the published career snapshot, with fours and boundary context.','category':'CAREER RECORDS','answer':'Sixes are a career counting statistic. Read them with fours, runs and balls so a sixes lead is not mistaken for a faster innings.','links':[('/records/men/odi/most-sixes/','Men’s ODI most sixes'),('/blog/2026-09-11/','Rohit vs Kohli boundary note')]},
+        {'slug':'how-to-read-a-cricket-worm-chart','title':'How do you read a cricket worm chart?','description':'A short guide to worms, Manhattans and partnerships on Cricket Wicket scorecards.','category':'MATCH PICTURES','answer':'A worm plots the innings total at the end of each over. Dots mark wickets. A Manhattan shows runs scored in each over. Partnerships are the runs added between recorded falls of wicket. Cricket Wicket draws these only from recorded overs; historical result-only matches have no worm.','links':[('/matches/','Browse scorecards'),('/studio/','Export a match card')]},
         {'slug':'what-is-a-result-only-match','title':'What does result-only mean on a cricket scorecard?','description':'Why some historical international matches have a result but no innings or player figures.','category':'DATA COVERAGE','answer':'A result-only record confirms the match result, teams, date and venue, but the source does not provide a usable innings or lineup. It remains searchable as an international match while batting and bowling figures stay unavailable.', 'links':[('/matches/','Browse match records'),('/methodology/','Read the archive policy')]},
         {'slug':'which-team-has-most-international-wins','title':'Which international team has the most recorded wins?','description':'Compare national teams by recorded international match wins in the Cricket Wicket archive.','category':'TEAM RECORDS','answer':'The team leaderboard below is calculated from every published international match result. It counts only matches where a winner is recorded, while draws, ties and no-results remain separate. Use the team page to inspect the format and gender mix behind the total.', 'links':[('/teams/','Browse team records'),('/head-to-head/','Compare rivalries')]},
     ])
+    women_odi=leader('ODI','runs','Women')
+    sixes_odi=leader('ODI','sixes','Men')
+    for q in questions:
+        if q['slug']=='who-has-the-most-womens-odi-runs' and women_odi:
+            q['answer']=f'{women_odi["name"]} leads the published women’s ODI career snapshot with {num(women_odi["career"]["ODI"]["runs"])} runs. Open the leaderboard for qualification, other names and the data date.'
+        if q['slug']=='who-has-the-most-odi-sixes' and sixes_odi:
+            q['answer']=f'{sixes_odi["name"]} leads the published men’s ODI career snapshot for sixes with {num(sixes_odi["career"]["ODI"]["sixes"])}. Read sixes with fours, runs and balls; a sixes lead is not the same as a faster innings.'
     team_wins=Counter(m.get('outcome',{}).get('winner') for m in matches if m.get('outcome',{}).get('winner'))
     if team_wins:
         winner,n=team_wins.most_common(1)[0]
@@ -533,7 +585,7 @@ def build_question_hubs(people,matches,pp,mp,gp,careers,all_cards):
         body=heading(q['title'],q['description'],q['category'])+actions()+'<article class="research-article"><p>'+q['answer']+'</p><h2>Explore the underlying records</h2><p>'+' · '.join(a(path,label) for path,label in q['links'])+'</p><p class="note">This answer is generated from Cricket Wicket’s validated international dataset. Career figures and available scorecard figures are kept as separate layers; see the methodology page for definitions and coverage dates.</p></article>'
         page('/questions/'+q['slug']+'/',q['title'],q['description'],body,'Article',{'headline':q['title'],'author':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/about/'}})
 
-def build_daily_blog(people,pp,careers):
+def build_daily_blog(people,pp,careers,all_cards=None,mp=None):
     """Publish a compact series of data-backed daily notes with editorial visuals."""
     left=next((p for p in people.values() if p.get('name')=='Virat Kohli'),None)
     right=next((p for p in people.values() if p.get('name')=='Rohit Sharma'),None)
@@ -568,14 +620,38 @@ def build_daily_blog(people,pp,careers):
         callout=''.join('<div><strong>'+row['boundary_share']+'%</strong><span>'+esc(row['name'])+' · boundary share</span></div>' for row in figures)
         callout+='<div><strong>'+num(abs(figures[0]['boundary_runs']-figures[1]['boundary_runs']))+'</strong><span>Gap in boundary runs</span></div>'
         publish(note['slug'],note['title'],note['description'],note['visual'],note['alt'],note['lead'],content,callout,note['width'],note['height'],date=note['date'],data_date=note['data_date'],methodology=note['methodology'])
+    featured=cw.showcase_card(all_cards or {})
+    if featured and mp:
+        match=featured['match']
+        url=mp.get(match['id'],'/matches/')
+        title='How a World Cup chase looks as a worm'
+        description='Read the India v Australia 2023 ODI World Cup final as a worm, Manhattan and partnership picture, drawn from recorded overs.'
+        path='/blog/2026-09-12/how-a-chase-looks/'
+        article='<div class="daily-note">'+heading(title,'A daily lesson in reading an international scorecard as a picture.','DAILY NOTE')
+        article+=f'<p class="daily-byline"><span>Cricket Wicket</span><span>·</span><time datetime="2026-09-12">2026-09-12</time></p>'+actions()
+        article+='<article><p>'+esc(" v ".join(match.get("teams") or []))+' · '+esc(match.get("date"))+' · '+esc(match.get("format"))+'. A worm is the innings total at the end of each over. Dots are wickets. The dashed line is the chase target when both innings are recorded.</p>'
+        article+=cw.match_lab(featured)
+        article+='<p>'+a(url,'Open the full scorecard')+' · '+a('/studio/','Export a match card in Studio')+'</p><p class="note">Drawn from recorded overs only. Historical result-only matches have no worm.</p></article></div>'
+        extra={'headline':title,'datePublished':'2026-09-12','dateModified':'2026-09-12','author':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/about/'},'publisher':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/'}}
+        page(path,title,description,article,'Article',extra)
+        posts.append(('2026-09-12',path,title,description,'','',1200,760))
     posts.sort(key=lambda item:item[0],reverse=True)
-    index=heading('Cricket Wicket daily notes','Small, useful lessons from international cricket records, written with the data in view.','DAILY NOTES')+actions()+'<div class="grid two daily-index-grid">'+''.join('<a class="feature-card daily-index-card" href="'+path+'"><img src="/assets/art/blog/'+visual+'" width="'+str(width)+'" height="'+str(height)+'" loading="lazy" alt="'+esc(alt)+'"><span>'+esc(date)+'</span><h2>'+esc(title)+'</h2><p>'+esc(description)+'</p><small>Read this note →</small></a>' for date,path,title,description,visual,alt,width,height in posts)+'</div><section class="panel"><h2>Keep exploring</h2><p>'+a('/questions/','Cricket questions answered with data')+' · '+a('/records/','International records')+' · '+a('/insights/','Statistical insights')+'</p></section>'
+    cards=''
+    for date,path,title,description,visual,alt,width,height in posts:
+        img=f'<img src="/assets/art/blog/{visual}" width="{width}" height="{height}" loading="lazy" alt="{esc(alt)}">' if visual else ''
+        cards+='<a class="feature-card daily-index-card" href="'+path+'">'+img+'<span>'+esc(date)+'</span><h2>'+esc(title)+'</h2><p>'+esc(description)+'</p><small>Read this note →</small></a>'
+    index=heading('Cricket Wicket daily notes','Small, useful lessons from international cricket records, written with the data in view.','DAILY NOTES')+actions()+'<div class="grid two daily-index-grid">'+cards+'</div><section class="panel"><h2>Keep exploring</h2><p>'+a('/questions/','Cricket questions answered with data')+' · '+a('/records/','International records')+' · '+a('/insights/','Statistical insights')+'</p></section>'
     page('/blog/','Cricket Wicket daily cricket notes','Short, data-backed cricket lessons about international records, player statistics and scorecards.',index,'CollectionPage')
 
 def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=None,all_cards=None):
     ranked=sorted(people.values(),key=lambda p:aggregate(p['career']).get('runs') or 0,reverse=True)
     latest=matches[:8]
-    body=homepage_hero(len(people),len(matches))
+    faces=[]
+    for name in HERO_CAST:
+        src=ILLUSTRATIONS.get(name)
+        player=next((p for p in people.values() if p.get('name')==name),None)
+        if src and player:faces.append((name,src,pp[player['id']]))
+    body=homepage_hero(len(people),len(matches),faces)
     body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'National teams'),('3','Formats covered')])+'</div>'
     body+=homepage_insights(matches,mp,people,gp)
     featured=cw.showcase_card(all_cards or {})

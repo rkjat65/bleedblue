@@ -441,9 +441,9 @@ def win_share(left, right, wins_left, wins_right, other, caption=None):
     return figure(caption, caption, f'<div class="cw-stack" role="img" aria-label="{_esc(caption)}">{bars}</div><div class="cw-legend">{legend}</div>', 'Other groups draws, ties and matches with no winner recorded.')
 
 
-def leader_bars(items, caption, unit=''):
+def leader_bars(items, caption, unit='', minimum=3):
     items = [(name, value) for name, value in items if value is not None][:12]
-    if len(items) < 3:
+    if len(items) < minimum:
         return ''
     peak = max(v for _, v in items)
     if peak <= 0:

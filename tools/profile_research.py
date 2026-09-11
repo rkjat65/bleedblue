@@ -150,7 +150,7 @@ def timeline(rows):
     return body+'</ol></section>'
 
 
-def select_research_players(people, limit_per_gender=30):
+def select_research_players(people, limit_per_gender=48):
     """Balance genders and batting/bowling leaders, with broad team coverage."""
     players = list(people.values()) if isinstance(people, dict) else list(people)
     selected = set()

@@ -67,8 +67,16 @@
   svg+=text(48,55,'CRICKET WICKET',21,accent)+text(W-48,55,'INTERNATIONAL CRICKET',15,muted,'end');
   const photoWidth=cardPhotos.length?cardPhotos.length*168:0;let top=116;for(const l of wrap(title,Math.min(48,Math.floor((W-124-photoWidth)/19))).slice(0,3)){svg+=text(48,top,l,34);top+=40;}if(design.subtitle){for(const l of wrap(design.subtitle,Math.min(78,Math.floor((W-124-photoWidth)/11))).slice(0,3)){svg+=text(48,top,l,19,muted);top+=25;}}
   cardPhotos.forEach((photo,i)=>{const x=W-48-(cardPhotos.length-i)*168+18;svg+=`<defs><clipPath id="photo-${i}"><rect x="${x}" y="88" width="150" height="172" rx="10"/></clipPath></defs><image href="${esc(photo.uri)}" x="${x}" y="88" width="150" height="172" preserveAspectRatio="xMidYMin slice" clip-path="url(#photo-${i})"><title>${esc(photo.name||'Card photo')}</title></image>`;if(current.template==='compare')wrap(photo.name,21).slice(0,2).forEach((line,j)=>{svg+=text(x+75,276+j*15,line,12,muted,'middle');});});if(cardPhotos.length)top=Math.max(top,current.template==='compare'?305:280);
-  const measure=current.template==='match'?'Match result':current.template==='team'?'Recent team results':metric+({sr:' · runs per 100 balls',econ:' · runs per 6 legal balls',bowlSr:' · legal balls per wicket',avg:' · runs per dismissal',bowlAvg:' · runs conceded per wicket'}[current.metric]||'')+' · by '+current.group;svg+=text(48,top+5,measure,18,muted);top+=35;const bottom=H-130,space=bottom-top,numeric=subset.every(r=>r.value==null||typeof r.value==='number'),mode=numeric?design.type:'table',max=Math.max(1,...subset.map(r=>Number(r.value)||0));
-  if(mode==='number'){
+  const measure=current.template==='match'?'Match picture card':current.template==='team'?'Recent team results':metric+({sr:' · runs per 100 balls',econ:' · runs per 6 legal balls',bowlSr:' · legal balls per wicket',avg:' · runs per dismissal',bowlAvg:' · runs conceded per wicket'}[current.metric]||'')+' · by '+current.group;svg+=text(48,top+5,measure,18,muted);top+=35;const bottom=H-130,space=bottom-top,numeric=subset.every(r=>r.value==null||typeof r.value==='number'),mode=current.template==='match'||design.type==='card'?'card':numeric?design.type:'table',max=Math.max(1,...subset.map(r=>Number(r.value)||0));
+  if(mode==='card'){
+    const r=rows[0]||{};
+    svg+=`<rect x="48" y="${top}" width="${W-96}" height="${Math.min(space-10,320)}" rx="18" fill="${line}" fill-opacity=".28"/>`;
+    svg+=text(W/2,top+70,(r.format||'International')+' · '+(r.gender||''),22,muted,'middle');
+    svg+=text(W/2,top+130,(r.team_1||'')+' v '+(r.team_2||''),40,ink,'middle');
+    svg+=text(W/2,top+180,r.date||'',22,muted,'middle');
+    svg+=text(W/2,top+230,r.winner?r.winner+' won':(r.result||'Result unrecorded'),28,accent,'middle');
+    svg+=text(W/2,top+270,r.venue||'',18,muted,'middle');
+  }else if(mode==='number'){
    svg+=text(W/2,top+space*.45,num(subset[0].value),90,accent,'middle')+text(W/2,top+space*.45+48,subset[0].label,25,ink,'middle')+text(W/2,top+space*.45+80,metric+' · '+num(subset[0].sample)+' matches',18,muted,'middle');
   }else if(mode==='column'||mode==='line'){
    const left=85,base=bottom-45,plotH=base-top-35,step=(W-150)/subset.length;

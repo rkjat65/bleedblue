@@ -1,6 +1,6 @@
 """Crawlable introduction and progressive data/visual controls for Studio."""
 def studio_markup(link):
-    templates=[('player','Player record','Career figures by format'),('compare','Player comparison','Compare two international careers'),('record','Career leaderboard','Find qualified record holders'),('timeline','Player timeline','Every recorded year'),('batting','Batting explorer','Opponents, venues and positions'),('bowling','Bowling explorer','Wickets and bowling rates'),('team','Team form','Recent results and winners'),('venue','Venue record','Explore a ground across formats'),('year','Year recap','Rank a selected year'),('match','Match summary','Choose a real archived match'),('custom','Custom analysis','Choose dataset, metric and grouping')]
+    templates=[('player','Player record','Career figures by format'),('compare','Player comparison','Compare two international careers'),('record','Career leaderboard','Find qualified record holders'),('timeline','Player timeline','Every recorded year'),('batting','Batting explorer','Opponents, venues and positions'),('bowling','Bowling explorer','Wickets and bowling rates'),('team','Team form','Recent results and winners'),('venue','Venue record','Explore a ground across formats'),('year','Year recap','Rank a selected year'),('match','Match picture','Export a scorecard share card'),('custom','Custom analysis','Choose dataset, metric and grouping')]
     cards=''.join(f'<button class="template-card" data-template="{key}"><strong>{name}</strong><small>{desc}</small></button>' for key,name,desc in templates)
     def select(ident,label,items):
         return f'<label>{label}<select id="{ident}">'+''.join(f'<option value="{value}">{text}</option>' for value,text in items)+'</select></label>'
@@ -21,7 +21,7 @@ def studio_markup(link):
     <button type="submit" id="build-visual" class="primary wide">Run analysis</button></form>
     <details><summary>Query and dataset version</summary><p id="lake-version" class="note"></p><pre id="sql" class="studio-query"></pre></details>
     </aside><div class="studio-preview-column"><section class="studio-design panel"><h2>Make it yours</h2><div class="design-controls">
-    {select('design-type','Visual',[('bar','Horizontal bars'),('column','Columns'),('line','Line chart'),('table','Data table'),('number','Headline number')])}
+    {select('design-type','Visual',[('bar','Horizontal bars'),('column','Columns'),('line','Line chart'),('table','Data table'),('number','Headline number'),('card','Match picture card')])}
     {select('design-size','Canvas',[('landscape','Landscape · 1200 × 675'),('square','Square · 1080 × 1080'),('portrait','Portrait · 1080 × 1920')])}
     {select('design-theme','Theme',[('light','Cricket Wicket light'),('navy','Cricket Wicket navy'),('paper','Editorial paper')])}
     <label>Accent<input type="color" id="design-accent" value="#1d4ed8"></label><label>Title<input id="design-title" maxlength="100" placeholder="Automatic title"></label><label>Your subtitle<input id="design-subtitle" maxlength="160" placeholder="Add your commentary"></label>
