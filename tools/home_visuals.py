@@ -80,9 +80,14 @@ def homepage_hero(player_count, match_count, faces=None):
     cast = ''
     if faces:
         items = ''
-        for name, src, href in faces[:8]:
-            items += f'<a class="hero-face" href="{html.escape(href, quote=True)}"><img src="{html.escape(src, quote=True)}" width="280" height="340" alt="{html.escape(name)}" loading="eager"><span>{html.escape(name)}</span></a>'
-        cast = f'<div class="hero-cast" aria-label="Featured international players">{items}</div>'
+        for index, (name, src, href) in enumerate(faces[:8]):
+            load = 'eager' if index < 4 else 'lazy'
+            items += (
+                f'<a class="hero-face" href="{html.escape(href, quote=True)}" style="--i:{index}">'
+                f'<img src="{html.escape(src, quote=True)}" width="420" height="480" alt="{html.escape(name)}" loading="{load}" decoding="async">'
+                f'<span>{html.escape(name)}</span></a>'
+            )
+        cast = f'<div class="hero-stage" aria-hidden="true"></div><div class="hero-cast" aria-label="Featured international players">{items}</div>'
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
       <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" fetchpriority="high"></picture></div>
       <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET, IN NUMBERS</p>
@@ -90,9 +95,10 @@ def homepage_hero(player_count, match_count, faces=None):
         <p class="hero-description">Official international records for Tests, ODIs and T20Is, men and women. Compare careers, read worms and Manhattans, and follow qualified leaderboards built from Cricsheet.</p>
         <ul class="hero-offer"><li><a href="/compare/">Compare two careers</a></li><li><a href="/records/">Qualified records</a></li><li><a href="/studio/">Build a chart</a></li><li><a href="/records/women/odi/most-runs/">Women’s cricket</a></li></ul>
         <div class="hero-actions"><a class="button hero-primary" href="/players/">Explore the players <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/matches/">Open a scorecard <span aria-hidden="true">→</span></a></div>
-        <form class="hero-find" action="/search/"><label for="home-search">SEARCH THE ARCHIVE</label><div><input id="home-search" name="q" placeholder="Player, team, ground or rivalry" required><button aria-label="Search cricket records">→</button></div></form>
+        <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Player, team or match" required autocomplete="off"><button type="submit">Search</button></div></form>
       </div>
       {cast}
+      <button type="button" class="hero-motion" data-hero-motion aria-pressed="false">Pause motion</button>
       <div class="hero-bottom"><span>{player_count:,} PLAYERS <b>·</b> {match_count:,} MATCHES <b>·</b> TEST · ODI · T20I <i>MEN &amp; WOMEN</i></span></div>
     </section>'''
 
