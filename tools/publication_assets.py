@@ -38,6 +38,11 @@ def prepare_assets(out):
                 original.convert('RGB').resize((width,round(original.height*width/original.width)),Image.Resampling.LANCZOS).save(target,'WEBP',quality=82,method=6)
     # The source artwork stays in the repository; published pages use responsive encodings.
     (dest/'cricket-hero-v1.png').unlink(missing_ok=True)
+    players=out/'assets/art/players'
+    if players.exists():
+        for path in list(players.iterdir()):
+            if path.suffix.lower() in {'.png','.jpg','.jpeg'} and path.stem.endswith('-illustration'):
+                Image.open(path).convert('RGBA').save(players/(path.stem+'.webp'),'WEBP',quality=88,method=6)
     for size,name in ((16,'favicon-16.png'),(32,'favicon-32.png'),(180,'apple-touch-icon.png'),(192,'icon-192.png'),(512,'icon-512.png')):
         icon(size).save(out/name)
     icon(64).save(out/'favicon.ico',sizes=[(16,16),(32,32),(48,48),(64,64)])
