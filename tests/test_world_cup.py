@@ -6,14 +6,21 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'tools'))
 from world_cup import (
+    analysis_heading,
+    analysis_lede,
+    analysis_window,
+    attach_unlabelled,
     classify,
+    coverage_note,
     editions,
     family_key,
     is_world_cup_match,
     load_history,
     merge_official,
     player_leaders,
+    pretty_date,
     timeline_table,
+    world_cup_family,
 )
 
 
@@ -35,6 +42,102 @@ class WorldCupTests(unittest.TestCase):
         self.assertTrue(is_world_cup_match(m('2023-11-19', 'ICC Cricket World Cup')))
         self.assertEqual(family_key(m('2024-06-29', "ICC Men's T20 World Cup", fmt='T20I')), 'mens-t20')
         self.assertEqual(family_key(m('2022-04-03', "ICC Women's World Cup", gender='Women')), 'womens-odi')
+
+    def test_pathway_events_are_not_the_world_cup(self):
+        self.assertFalse(is_world_cup_match(m('2024-02-15', "ICC Men's Cricket World Cup League 2")))
+        self.assertFalse(is_world_cup_match(m('2008-02-21', "ICC Women's World Cup Qualifying Series", gender='Women')))
+        self.assertFalse(is_world_cup_match(m('2019-03-22', "ICC Men's T20 World Cup Europe Region Final", fmt='T20I')))
+        self.assertFalse(is_world_cup_match(m('2025-06-15', "ICC Men's T20 World Cup Americas Region Final", fmt='T20I')))
+        self.assertIsNone(family_key(m('2024-02-15', "ICC Men's Cricket World Cup League 2")))
+        self.assertIsNone(family_key(m('2008-02-22', "ICC Women's World Cup Qualifying Series", gender='Women')))
+
+    def test_unlabelled_afghanistan_t20_world_cup_is_attached(self):
+        labelled = [
+            m('2024-06-01', "ICC Men's T20 World Cup", fmt='T20I', mid='open'),
+            m('2024-06-29', "ICC Men's T20 World Cup", fmt='T20I', mid='final', winner='India', teams=['India', 'South Africa']),
+        ]
+        afg = m('2024-06-07', '', fmt='T20I', mid='1415714', teams=['Afghanistan', 'New Zealand'])
+        opener = m('2014-03-16', '', fmt='T20I', mid='682897', teams=['Afghanistan', 'Bangladesh'])
+        bilateral = m('2026-01-19', '', fmt='T20I', mid='1517823', teams=['Afghanistan', 'West Indies'])
+        self.assertEqual(attach_unlabelled(afg), 'mens-t20')
+        self.assertEqual(attach_unlabelled(opener), 'mens-t20')
+        self.assertIsNone(attach_unlabelled(bilateral))
+        self.assertEqual(world_cup_family(afg), 'mens-t20')
+        ids = {row['id'] for row in classify(labelled + [afg, bilateral])['mens-t20']['matches']}
+        self.assertIn('1415714', ids)
+        self.assertNotIn('1517823', ids)
+        self.assertNotIn('2008-02-21', {row['id'] for row in classify([
+            m('2008-02-21', "ICC Women's World Cup Qualifying Series", gender='Women', mid='2008-02-21'),
+            m('2009-03-22', "ICC Women's World Cup", gender='Women', mid='final09', teams=['England', 'New Zealand']),
+        ]).get('womens-odi', {'matches': []})['matches']})
+
+    def test_analysis_window_starts_at_first_overs(self):
+        matches = [
+            m('2003-02-09', 'ICC Cricket World Cup', mid='open03'),
+            m('2023-11-19', 'ICC Cricket World Cup', mid='final23', teams=['Australia', 'India']),
+        ]
+        cards = {
+            'open03': {'innings': [{'overs': [{'over': 1, 'runs': 4}], 'batting': [{'id': 'a', 'runs': 10}]}]},
+            'final23': {'innings': [{'overs': [{'over': 1, 'runs': 6}], 'batting': [{'id': 'b', 'runs': 20}]}]},
+        }
+        window = analysis_window(matches, cards)
+        self.assertEqual(window['from_year'], '2003')
+        self.assertEqual(window['from_date'], '2003-02-09')
+        self.assertEqual(window['ball_by_ball'], 2)
+        self.assertEqual(pretty_date('2003-02-09'), '9 February 2003')
+        bundled = merge_official(matches, cards, {})
+        mens = bundled['families']['mens-odi']
+        self.assertEqual(mens['analysis']['from_year'], '2003')
+        self.assertEqual(analysis_heading(mens), 'Ball-by-ball analysis from 2003')
+        self.assertIn('Ball-by-ball data is available from 9 February 2003', analysis_lede(mens))
+        self.assertIn('Ball-by-ball analysis starts in 2003', coverage_note(mens))
+        self.assertNotIn('available scorecards', analysis_heading(mens).lower())
+        self.assertNotIn('available scorecards', analysis_lede(mens).lower())
+
+    def test_leaders_start_at_ball_by_ball_year(self):
+        matches = [
+            m('1999-06-20', 'ICC Cricket World Cup', mid='old', winner='Australia', teams=['Australia', 'Pakistan']),
+            m('2003-02-09', 'ICC Cricket World Cup', mid='new'),
+        ]
+        people = {'a': {'name': 'Old Batter'}, 'b': {'name': 'New Batter'}}
+        cards = {
+            'old': {'match': {'date': '1999-06-20', 'id': 'old'}, 'innings': [{'overs': [], 'batting': [{'id': 'a', 'runs': 200, 'balls': 120}], 'bowling': []}]},
+            'new': {'match': {'date': '2003-02-09', 'id': 'new'}, 'innings': [{'overs': [{'over': 1, 'runs': 4}], 'batting': [{'id': 'b', 'runs': 50, 'balls': 40}], 'bowling': []}]},
+        }
+        mens = merge_official(matches, cards, people)['families']['mens-odi']
+        self.assertEqual(mens['analysis']['from_year'], '2003')
+        self.assertEqual(mens['leaders']['runs'][0]['name'], 'New Batter')
+        self.assertEqual(mens['leaders']['runs'][0]['runs'], 50)
+        self.assertTrue(all(row['name'] != 'Old Batter' for row in mens['leaders']['runs']))
+
+    def test_warmups_before_labelled_start_are_not_attached(self):
+        labelled = [
+            m('2019-05-30', 'ICC Cricket World Cup', mid='open19'),
+            m('2019-07-14', 'ICC Cricket World Cup', mid='final19', winner='England', teams=['England', 'New Zealand']),
+        ]
+        warmup = m('2019-05-19', '', mid='1168515', teams=['Afghanistan', 'Ireland'])
+        wc_game = m('2019-06-22', '', mid='1144510', teams=['Afghanistan', 'India'])
+        ids = {row['id'] for row in classify(labelled + [warmup, wc_game])['mens-odi']['matches']}
+        self.assertNotIn('1168515', ids)
+        self.assertIn('1144510', ids)
+        self.assertIn('open19', ids)
+
+    def test_afghanistan_scorecard_without_overs_is_described(self):
+        matches = [
+            m('2024-06-01', "ICC Men's T20 World Cup", fmt='T20I', mid='labelled', teams=['India', 'Ireland']),
+            m('2024-06-07', '', fmt='T20I', mid='1415714', teams=['Afghanistan', 'New Zealand']),
+        ]
+        cards = {
+            'labelled': {'innings': [{'overs': [{'over': 1, 'runs': 8}], 'batting': []}]},
+            '1415714': {'innings': [{'overs': [], 'batting': [{'id': 'gurbaz', 'runs': 80}]}]},
+        }
+        window = analysis_window(classify(matches)['mens-t20']['matches'], cards)
+        self.assertEqual(window['from_year'], '2024')
+        self.assertEqual(window['scorecard_only'], 1)
+        self.assertEqual(window['afghanistan_without_balls'], 1)
+        lede = analysis_lede({'analysis': window})
+        self.assertIn('Afghanistan World Cup matches', lede)
+        self.assertIn('Cricsheet does not publish Afghanistan', lede)
 
     def test_editions_split_on_calendar_gaps(self):
         matches = [
@@ -74,6 +177,8 @@ class WorldCupTests(unittest.TestCase):
         self.assertEqual(years[0], 1975)
         self.assertEqual(years[-1], 2023)
         self.assertEqual(len(years), 13)
+        self.assertEqual(mens['editions'][0]['start_date'], '1975-06-07')
+        self.assertEqual(mens['editions'][-1]['start_date'], '2023-10-05')
         self.assertEqual(mens['titles']['Australia'], 6)
         self.assertEqual(mens['titles']['India'], 2)
         self.assertEqual(mens['titles']['West Indies'], 2)

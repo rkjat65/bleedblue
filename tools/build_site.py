@@ -21,7 +21,7 @@ from entity_pages import (
     team_glance, ground_glance, results_table_rows, team_faq, ground_faq,
     team_schema, ground_schema, h2h_path,
 )
-from world_cup import FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note
+from world_cup import FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note, analysis_heading, analysis_lede
 from official_public import load_team_records, load_innings_records, official_team_panel, official_innings_table, official_h2h
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -460,13 +460,16 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
         last=rec['editions'][-1]['winner'] if rec['editions'] else 'Not recorded'
         first=rec['official']['first_year']
         latest=rec['official']['latest_year']
-        glance+=f'<a class="format-card" href="/world-cup/{key}/"><h3>{esc(label)}</h3><div class="format-card-hero"><strong>{esc(str(count))}</strong><span>titles · {esc(champ)}</span></div><p class="format-card-note">{len(rec["editions"])} official editions, {first} to {latest}. Last champion: {esc(last or "not recorded")}.</p></a>'
-    world_body=heading('World Cup cricket records','Official winners, finals, semi-finalists and landmark records for men and women. Available scorecards sit underneath that complete history.','WORLD CUP DATA')+actions()
-    world_body+='<p class="player-intro">The men\'s ODI World Cup began in 1975. The latest completed edition is 2023, won by Australia, their sixth title. Women\'s ODI World Cups began in 1973. T20 World Cups began in 2007 for men and 2009 for women. Title counts and the timeline on these pages are the official tournament record. They are not inferred from the ball-by-ball archive. Cricsheet scorecards remain available where this site has them, and are labelled as coverage, not as the champion list.</p>'
+        from_year=(rec.get('analysis') or {}).get('from_year')
+        analysis_bit=f' Ball-by-ball analysis from {from_year}.' if from_year else ''
+        glance+=f'<a class="format-card" href="/world-cup/{key}/"><h3>{esc(label)}</h3><div class="format-card-hero"><strong>{esc(str(count))}</strong><span>titles · {esc(champ)}</span></div><p class="format-card-note">{len(rec["editions"])} official editions, {first} to {latest}.{analysis_bit} Last champion: {esc(last or "not recorded")}.</p></a>'
+    world_body=heading('World Cup cricket records','Official winners, finals, semi-finalists and landmark records for men and women. Ball-by-ball analysis starts from the first year deliveries exist.','WORLD CUP DATA')+actions()
+    world_body+='<p class="player-intro">The men\'s ODI World Cup began in 1975. The latest completed edition is 2023, won by Australia, their sixth title. Women\'s ODI World Cups began in 1973. T20 World Cups began in 2007 for men and 2009 for women. Title counts and the timeline on these pages are the official tournament record. They are not inferred from the ball-by-ball archive. Player tables start at the first year with over-by-over deliveries, so granular analysis is possible from that date. Afghanistan World Cup games Cricsheet withholds are attached when the date sits inside an official edition.</p>'
     if glance: world_body+='<section class="career-glance-wrap" id="by-format"><p class="eyebrow">THE GLOBAL EVENTS</p><h2>Who has won, from the first World Cup to now</h2><div class="career-glance">'+glance+'</div></section>'
     official_editions=sum(len(rec['editions']) for rec in families.values())
     archive_matches=sum(rec['archive_match_count'] for rec in families.values())
-    world_body+='<div class="stats"><div><strong>'+num(official_editions)+'</strong><span>Official editions</span></div><div><strong>'+num(families['mens-odi']['titles']['Australia'])+'</strong><span>Australia men\'s ODI titles</span></div><div><strong>'+num(archive_matches)+'</strong><span>Scorecards in this archive</span></div><div><strong>'+str(families['mens-odi']['official']['first_year'])+'</strong><span>Men\'s ODI start year</span></div></div>'
+    mens_from=(families['mens-odi'].get('analysis') or {}).get('from_year') or families['mens-odi']['official']['first_year']
+    world_body+='<div class="stats"><div><strong>'+num(official_editions)+'</strong><span>Official editions</span></div><div><strong>'+num(families['mens-odi']['titles']['Australia'])+'</strong><span>Australia men\'s ODI titles</span></div><div><strong>'+num(archive_matches)+'</strong><span>Tournament matches in this archive</span></div><div><strong>'+esc(str(mens_from))+'</strong><span>Men\'s ODI ball-by-ball from</span></div></div>'
     for key,label,fmt,gender in FAMILIES:
         rec=families[key]
         path='/world-cup/'+key+'/'
@@ -483,17 +486,28 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
         record_rows=official_record_rows(rec)
         if record_rows:
             body+='<section class="panel" id="records"><h2>Official records</h2>'+table(['Record','Holder','Value','Detail'],record_rows,caption=label+' landmark records')+'</section>'
-        if leaders['runs']:
-            body+='<section class="panel" id="runs"><h2>Leading run scorers in available scorecards</h2>'+table(['Player','Runs','Inns','HS','100s'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['runs']),num(r['innings']),num(r['highest']),num(r['hundreds'])] for r in leaders['runs']],caption=label+' run scorers from recorded innings')+'</section>'
-        if leaders['wickets']:
-            body+='<section class="panel" id="wickets"><h2>Leading wicket takers in available scorecards</h2>'+table(['Player','Wickets','Inns','Best'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['wickets']),num(r['innings']),esc(r['best'] or '')] for r in leaders['wickets']],caption=label+' wicket takers from recorded innings')+'</section>'
-        if leaders['scores']:
-            body+='<section class="panel"><h2>Highest recorded scores in this archive</h2>'+table(['Runs','Player','Balls','Date','Team'],[[num(runs),esc(name),num(balls),esc(day),esc(team or '')] for runs,balls,name,day,mid,team in leaders['scores']],caption=label+' highest individual scores in available scorecards')+'</section>'
-        if leaders['spells']:
-            body+='<section class="panel"><h2>Best recorded bowling in this archive</h2>'+table(['Figures','Player','Date'],[[f'{wkts}/{conceded}',esc(name),esc(day)] for wkts,conceded,name,day,mid in leaders['spells']],caption=label+' best bowling figures in available scorecards')+'</section>'
-        body+='<p class="note">Official titles and finals are complete even when a scorecard is missing here. Archive batting and bowling tables count only innings this site holds. A missing innings is not a zero. '+a('/world-cup/','All World Cup records')+' · '+a('/records/','Career records')+'</p>'
+        analysis=rec.get('analysis') or {}
+        if leaders['runs'] or leaders['wickets'] or analysis.get('from_year'):
+            body+='<section class="panel" id="analysis"><h2>'+esc(analysis_heading(rec))+'</h2><p class="muted">'+esc(analysis_lede(rec))+'</p>'
+            if analysis.get('from_year'):
+                body+='<div class="stats"><div><strong>'+esc(str(analysis['from_year']))+'</strong><span>Ball-by-ball from</span></div><div><strong>'+num(analysis.get('ball_by_ball'))+'</strong><span>Over-by-over matches</span></div><div><strong>'+num(analysis.get('scorecard_only'))+'</strong><span>Tables only</span></div>'
+                if analysis.get('afghanistan_without_balls'):
+                    body+='<div><strong>'+num(analysis['afghanistan_without_balls'])+'</strong><span>Afghanistan without deliveries</span></div>'
+                body+='</div>'
+            if leaders['runs']:
+                body+='<h3 id="runs">Leading run scorers</h3>'+table(['Player','Runs','Inns','HS','100s'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['runs']),num(r['innings']),num(r['highest']),num(r['hundreds'])] for r in leaders['runs']],caption=label+' run scorers from recorded innings from '+str(analysis.get('from_year') or 'this window'))
+            if leaders['wickets']:
+                body+='<h3 id="wickets">Leading wicket takers</h3>'+table(['Player','Wickets','Inns','Best'],[[a(pp.get(r['id'],'/players/'),r['name']),num(r['wickets']),num(r['innings']),esc(r['best'] or '')] for r in leaders['wickets']],caption=label+' wicket takers from recorded innings from '+str(analysis.get('from_year') or 'this window'))
+            if leaders['scores']:
+                body+='<h3>Highest recorded scores</h3>'+table(['Runs','Player','Balls','Date','Team'],[[num(runs),esc(name),num(balls),esc(day),esc(team or '')] for runs,balls,name,day,mid,team in leaders['scores']],caption=label+' highest individual scores from the ball-by-ball window')
+            if leaders['spells']:
+                body+='<h3>Best recorded bowling</h3>'+table(['Figures','Player','Date'],[[f'{wkts}/{conceded}',esc(name),esc(day)] for wkts,conceded,name,day,mid in leaders['spells']],caption=label+' best bowling figures from the ball-by-ball window')
+            body+='</section>'
+        body+='<p class="note">Official titles and finals are complete even when a scorecard is missing here. Ball-by-ball tables count only innings this site holds from the analysis year onward. A missing innings is not a zero. '+a('/world-cup/','All World Cup records')+' · '+a('/records/','Career records')+'</p>'
         top_team,top_count=(rec['titles'].most_common(1)[0] if rec['titles'] else ('Not recorded',0))
-        description=f'{label}: {top_team} has {top_count} official titles. Timeline of winners, runners-up and semi-finalists from {first} to {latest}, plus landmark records and available scorecards.'
+        from_year=analysis.get('from_year')
+        analysis_desc=f' Ball-by-ball analysis from {from_year}.' if from_year else ''
+        description=f'{label}: {top_team} has {top_count} official titles. Timeline of winners, runners-up and semi-finalists from {first} to {latest}.{analysis_desc}'
         page(path,label+' winners, finals and records',description,body,'CollectionPage',{'breadcrumb_name':label})
         world_body+='<section class="panel"><h2>'+esc(label)+'</h2>'
         if titles: world_body+=table(['Team','Titles'],titles[:8],caption=label+' official titles')
@@ -503,7 +517,7 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
     recent=sorted(all_wc,key=lambda m:(m['date'],m['id']),reverse=True)[:20]
     if recent: world_body+='<section class="panel"><h2>Recent World Cup scorecards in this archive</h2>'+match_table(recent,mp,20)+'</section>'
     world_body+='<p class="note">Champions Trophy and qualifying events are not mixed into these World Cup title counts. Player career tables on other pages use official international snapshots, not World Cup-only innings. '+a('/records/','Career records')+' · '+a('/questions/','Questions')+'</p>'
-    page('/world-cup/','World Cup winners, finals and records','Official World Cup winners, runners-up, semi-finalists and landmark records for men and women in ODIs and T20s. The men\'s ODI World Cup runs from 1975 to 2023. Available scorecards are labelled separately.',world_body,'CollectionPage')
+    page('/world-cup/','World Cup winners, finals and records','Official World Cup winners, runners-up, semi-finalists and landmark records for men and women in ODIs and T20s. The men\'s ODI World Cup runs from 1975 to 2023. Ball-by-ball analysis starts from the first year deliveries exist.',world_body,'CollectionPage')
 
     # Team-pair pages answer a common search intent while retaining a single
     # canonical overview page for the full rivalry directory.

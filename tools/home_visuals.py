@@ -22,22 +22,11 @@ def _team_record(matches, left, right):
 
 
 def _world_cup_groups(matches):
-    """Return completed World Cup tournament groups, excluding qualifiers."""
-    counts=Counter()
-    for m in matches:
-        event=str(m.get('event') or '')
-        low=event.lower()
-        if 'world cup' not in low and 'world twenty20' not in low and 'world t20' not in low:
-            continue
-        if any(word in low for word in ('qualifier','league','sub regional','region final','division')):
-            continue
-        women=m.get('gender')=='Women' or 'women' in low
-        if 'twenty20' in low or 't20' in low:
-            label="Women's T20 World Cup" if women else "Men's T20 World Cup"
-        else:
-            label="Women's ODI World Cup" if women else "Men's ODI World Cup"
-        counts[label]+=1
-    return counts
+    """Count classified World Cup matches, including attached Afghanistan games."""
+    from world_cup import FAMILIES, classify
+    labels={key:label for key,label,*_ in FAMILIES}
+    data=classify(matches)
+    return Counter({labels[key]:len(rec['matches']) for key,rec in data.items()})
 
 
 def homepage_insights(matches, match_routes, people, team_routes, official_h2h=None):
@@ -74,7 +63,7 @@ def homepage_insights(matches, match_routes, people, team_routes, official_h2h=N
         compare_cards+='</tbody></table><a href="'+compare_path+'">Open comparison →</a></article>'
     return f'''<section class="home-insights" aria-labelledby="home-insights-title"><div class="section-heading"><div><p class="eyebrow">THE CRICKET WICKET VIEW</p><h2 id="home-insights-title">Start with the questions that define cricket.</h2><p class="muted">Use the numbers to compare teams, players and the tournaments that shaped the international game.</p></div><a href="/studio/">Build your own chart →</a></div>
       <div class="home-insight-grid"><article class="home-insight-card home-h2h"><div class="home-card-label"><span>TEAM HEAD-TO-HEAD · OFFICIAL</span><a href="{html.escape(india_route)}">India</a><b>vs</b><a href="{html.escape(australia_route)}">Australia</a></div><div class="home-h2h-total">{h2h_total}</div><figure class="home-chart" aria-label="India and Australia wins by format"><figcaption>Official wins by format · bar lengths use the largest result in each format</figcaption>{h2h_chart}</figure><div class="table-wrap"><table><caption>Official India v Australia results by format</caption><thead><tr><th>Format</th><th>Matches</th><th>India wins</th><th>Australia wins</th><th>Other</th></tr></thead><tbody>{h2h_rows}</tbody></table></div><a class="home-card-link" href="/teams/">Explore every international rivalry →</a></article>
-      <article class="home-insight-card home-world"><div class="home-card-label"><span>WORLD CUP · OFFICIAL WINNERS</span><strong>{world_total:,}</strong><small>scorecards in this archive</small></div><h3>Every World Cup era in one place.</h3><p>The men’s ODI World Cup runs from 1975 to 2023. Open official winners, finals and semi-finalists first. These bars count available scorecards only.</p><figure class="home-chart home-world-chart" aria-label="World Cup scorecards by tournament category"><figcaption>Available scorecards by tournament category</figcaption>{world_chart}</figure><div class="table-wrap"><table><caption>World Cup scorecards in the published archive</caption><thead><tr><th>Tournament</th><th>Matches</th></tr></thead><tbody>{world_rows or '<tr><td colspan="2">No tournament label recorded</td></tr>'}</tbody></table></div><a class="home-card-link" href="/world-cup/">Official World Cup winners and records →</a></article></div>
+      <article class="home-insight-card home-world"><div class="home-card-label"><span>WORLD CUP · OFFICIAL WINNERS</span><strong>{world_total:,}</strong><small>tournament matches in this archive</small></div><h3>Every World Cup era in one place.</h3><p>The men’s ODI World Cup runs from 1975 to 2023. Open official winners, finals and semi-finalists first. Ball-by-ball analysis starts in 2003 for men and 2009 for women, from the first year deliveries exist.</p><figure class="home-chart home-world-chart" aria-label="World Cup matches by tournament category"><figcaption>Recorded World Cup matches by tournament</figcaption>{world_chart}</figure><div class="table-wrap"><table><caption>World Cup matches in the published archive</caption><thead><tr><th>Tournament</th><th>Matches</th></tr></thead><tbody>{world_rows or '<tr><td colspan="2">No tournament label recorded</td></tr>'}</tbody></table></div><a class="home-card-link" href="/world-cup/">Official World Cup winners and records →</a></article></div>
       <div class="home-comparisons"><div class="section-heading"><div><p class="eyebrow">PLAYER COMPARISONS</p><h3>Great careers, measured clearly.</h3></div><a href="/compare/">Compare any two players →</a></div><div class="grid two">{compare_cards}</div></div></section>'''
 
 
