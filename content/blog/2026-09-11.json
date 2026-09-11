@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-11",
+  "slug": "",
+  "title": "Rohit vs Kohli: what ODI boundary numbers reveal",
+  "description": "Rohit Sharma has more ODI sixes, but how much of each batter’s run total comes from boundaries? Compare their fours, sixes and boundary-run shares.",
+  "visual": "2026-09-11-odi-boundary-share.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Virat Kohli and Rohit Sharma ODI infographic: Kohli has 1,389 fours, 171 sixes and 44.05% of runs from boundaries; Rohit has 1,126 fours, 369 sixes and 56.48%. Snapshot checked 6–7 September 2026.",
+  "data_date": "6–7 September 2026",
+  "scope": "Men’s official ODI career snapshot",
+  "lead": "Rohit Sharma’s six count is the eye-catcher: 369 to Virat Kohli’s 171 in this ODI snapshot. But a sixes comparison leaves out the fours—and the size of each player’s run total. Put those together and a clearer picture of their scoring mix emerges.",
+  "sections": [
+    {
+      "heading": "More sixes, but almost the same boundary-run total",
+      "html": "Kohli’s 1,389 fours contribute 5,556 runs; his 171 sixes add 1,026. That makes <strong>6,582 runs from boundaries</strong>. Rohit’s 1,126 fours contribute 4,504 runs, while 369 sixes add 2,214: <strong>6,718 boundary runs</strong>. Rohit leads the six count by 198, yet the gap in runs from all boundaries is only 136. Kohli’s higher four count closes most of it."
+    },
+    {
+      "heading": "Why the percentage changes the comparison",
+      "html": "Boundary share divides those boundary runs by the batter’s total runs. For Kohli, 6,582 out of 14,941 is <strong>44.05%</strong>. For Rohit, 6,718 out of 11,895 is <strong>56.48%</strong>. So boundaries account for a larger share of Rohit’s ODI runs in this snapshot. The remaining runs are 8,359 for Kohli and 5,177 for Rohit. Those remainders do not tell us the exact split of singles, doubles or threes; that requires delivery-level data."
+    },
+    {
+      "heading": "Boundary share is not strike rate",
+      "html": "Boundary share describes where a batter’s runs came from. Strike rate describes runs per 100 balls. A high boundary share alone cannot establish a faster scoring rate, better strike rotation or greater match impact. These are career aggregates with different playing spans and opportunities, not a controlled comparison of batting positions, conditions or phases."
+    },
+    {
+      "heading": "Use the numbers together",
+      "html": "Start with the sixes, add the fours, then check boundary share alongside total runs and balls faced. Open the player profiles for the full format-specific records, or use the Studio to build a comparison. Keeping the format and snapshot consistent makes the result much more useful than a sixes leaderboard on its own."
+    }
+  ],
+  "players": [
+    {"id": "ba607b88", "name": "Virat Kohli", "runs": 14941, "fours": 1389, "sixes": 171, "boundary_runs": 6582, "boundary_share": "44.05"},
+    {"id": "740742ef", "name": "Rohit Sharma", "runs": 11895, "fours": 1126, "sixes": 369, "boundary_runs": 6718, "boundary_share": "56.48"}
+  ],
+  "methodology": "Boundary runs = 4 × fours + 6 × sixes. Boundary share = boundary runs ÷ total runs × 100, rounded to two decimal places. Figures are frozen for this article from Cricket Wicket’s career snapshot checked 6–7 September 2026; this is not a live tally.",
+  "provenance": {
+    "totals": "data/careers.json",
+    "totals_checked_at": "2026-09-07T07:41:03+00:00",
+    "boundary_counts": "data/career_enrichment.json",
+    "boundary_counts_checked_at": "2026-09-06",
+    "format": "ODI"
+  }
+}

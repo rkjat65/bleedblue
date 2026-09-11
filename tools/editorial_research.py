@@ -10,6 +10,7 @@ from decimal import Decimal, ROUND_DOWN
 import html
 import re
 from urllib.parse import urlencode
+from cricket_charts import pair_lab
 
 PUBLISHED = '2026-09-07'
 FORMATS = ('Test', 'ODI', 'T20I')
@@ -135,6 +136,7 @@ def build_comparisons(people, pp, checked):
                 metrics = [('wickets', 'Career wickets'), ('bowlAvg', 'Bowling average · lower is fewer runs per wicket'), ('bowlSr', 'Bowling strike rate · balls per wicket')]
             elif focus == 'all-round':
                 metrics = [('runs', 'Career runs'), ('wickets', 'Career wickets'), ('avg', 'Batting average')]
+            body += pair_lab(left, right, s1, s2, focus)
             body += '<div class="comparison-charts">' + ''.join(horizontal_chart([(left, s1.get(key)), (right, s2.get(key))], label, dual=True) for key, label in metrics) + '</div>'
             keys = [('matches', 'Matches'), ('innings', 'Batting innings'), ('runs', 'Runs'), ('outs', 'Dismissals'), ('avg', 'Batting average'), ('balls', 'Balls faced'), ('sr', 'Batting strike rate'), ('hundreds', 'Centuries'), ('fifties', 'Fifties'), ('highest_display', 'Highest score'), ('bowling_innings', 'Bowling innings'), ('wickets', 'Wickets'), ('conceded', 'Runs conceded'), ('legal', 'Legal balls bowled'), ('bowlAvg', 'Bowling average'), ('bowlSr', 'Balls per wicket'), ('econ', 'Economy'), ('five_w', 'Five-wicket innings'), ('catches', 'Catches'), ('stumpings', 'Stumpings')]
             body += table(['Metric', left, right], [[esc(label), num(s1.get(key)), num(s2.get(key))] for key, label in keys], fmt + ' full career records') + '</section>'

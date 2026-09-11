@@ -73,6 +73,8 @@ def main():
     assert 'TEAM HEAD-TO-HEAD' in homepage
     assert 'WORLD CUP ARCHIVE' in homepage
     assert 'Great careers, measured clearly.' in homepage
+    assert 'HOW A MATCH UNFOLDS' in homepage
+    assert 'Worm · cumulative runs by over' in homepage or 'MATCH PICTURE' in homepage
     assert 'archive-chart-data' not in homepage, 'Legacy matches-per-year chart is still on the homepage'
     assert all(set(m['teams'])<=FULL_MEMBERS for m in read(SITE/'data/match-index.json'))
     assert all(set(p['teams'])<=FULL_MEMBERS for p in read(SITE/'data/player-index.json'))
