@@ -1,0 +1,30 @@
+{
+  "kind": "career-comparison",
+  "date": "2026-09-13",
+  "slug": "joe-root-vs-sachin-tendulkar-tests",
+  "title": "Joe Root vs Sachin Tendulkar in Tests: the 1,643-run gap",
+  "description": "Compare Joe Root and Sachin Tendulkar in Test runs, average, centuries and innings after Edgbaston, with a numbered infographic and the exact record gap.",
+  "visual": "2026-09-13-root-tendulkar-final.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Joe Root and Sachin Tendulkar Test comparison: 14,278 versus 15,921 runs, 169 versus 200 Tests, averages 50.45 versus 53.78 and 41 versus 51 centuries. Root needs 1,644 runs to go ahead. Snapshot 13 September 2026.",
+  "data_date": "13 September 2026",
+  "scope": "Men’s official Test careers",
+  "lead": "Joe Root’s pursuit of Sachin Tendulkar is easy to follow in runs. Understanding the comparison takes a little more care. After the Edgbaston Test against Pakistan, our 13 September snapshot puts Root on 14,278 Test runs, against Tendulkar’s 15,921. The gap is 1,643; Root needs 1,644 more runs to move ahead.",
+  "sections": [
+    {"heading": "What changed at Edgbaston?", "html": "Root added 8 in England’s first innings and an unbeaten 62 in the chase: 70 runs across the Test. His total moved from 14,208 to 14,278. The second innings also added a fifty and a not-out. <a href=\"/matches/england-pakistan-2026-09-09-1496584/\">Read the England–Pakistan third Test scorecard</a>."},
+    {"heading": "Runs need an opportunity count", "html": "Tendulkar’s 15,921 runs came from 329 innings in 200 Tests. Root’s 14,278 came from 309 innings in 169 Tests. That leaves a difference of 31 matches but only 20 batting innings. Tests do not guarantee two innings for every batter, so the match gap alone is a poor measure of batting opportunity. These are each player’s career totals at the snapshot, not a comparison at the same career stage."},
+    {"heading": "Average: Tendulkar retains the advantage", "html": "Tendulkar’s batting average is 53.78, against Root’s 50.45. Average divides runs by dismissals: Tendulkar has 296 dismissals and Root 283. Root’s unbeaten 62 at Edgbaston increased his runs without increasing his dismissals. Average is a useful companion to volume, but neither number adjusts for opposition, pitches, batting position or era."},
+    {"heading": "Centuries and fifties tell different parts of the story", "html": "Tendulkar leads the century count 51 to 41. Root has 69 scores from 50 to 99, one more than Tendulkar’s 68. Adding hundreds and fifties gives 119 scores of at least 50 for Tendulkar and 110 for Root. Those counts reward sustained output; they cannot by themselves establish who played the more valuable innings in its match situation."},
+    {"heading": "How many runs does Root need to break the record?", "html": "Exactly <strong>1,644</strong> from this snapshot. Another 1,643 would put him level on 15,921. A forecast of when he might pass the record would need assumptions about future appearances, innings and form. The gap is arithmetic; a completion date would be a prediction."},
+    {"heading": "Read another comparison", "html": "For a different way of comparing scoring styles, explore <a href=\"/blog/2026-09-11/\">Rohit Sharma vs Virat Kohli: the ODI boundary story</a>. Their fours, sixes and boundary-run shares show why a single leaderboard rarely tells the whole story."}
+  ],
+  "players": [
+    {"id":"a343262c","name":"Joe Root","matches":169,"innings":309,"runs":14278,"outs":283,"notouts":26,"avg":"50.45","hundreds":41,"fifties":69,"highest":"262"},
+    {"id":"d2c2b2d5","name":"Sachin Tendulkar","matches":200,"innings":329,"runs":15921,"outs":296,"notouts":33,"avg":"53.78","hundreds":51,"fifties":68,"highest":"248*"}
+  ],
+  "columns": [["matches","Tests"],["innings","Batting innings"],["runs","Runs"],["outs","Dismissals"],["notouts","Not-outs"],["avg","Batting average"],["hundreds","100s"],["fifties","50s (50–99)"],["highest","Highest score"]],
+  "callouts": [{"value":"1,643","label":"Runs to draw level"},{"value":"1,644","label":"Runs to go ahead"},{"value":"51 / 41","label":"Test hundreds · Tendulkar / Root"}],
+  "methodology": "Figures frozen from Cricket Wicket’s official career snapshot checked 13 September 2026, including the Edgbaston Test. Batting average is runs divided by dismissals, displayed to two decimal places using the source’s truncation convention. Fifties count scores from 50 to 99; centuries are separate. An asterisk denotes not out. Caricatures are original illustrations. Career totals are independent of ball-by-ball archive coverage.",
+  "provenance": {"totals":"data/careers.json","checked_at":"2026-09-13T04:00:59+00:00","format":"Test","match_id":"1496584"}
+}

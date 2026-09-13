@@ -728,12 +728,13 @@ def build_daily_blog(people,pp,careers,all_cards=None,mp=None):
     a1,a2=left['career']['ODI'],right['career']['ODI']
     post_date='2026-09-10'; checked=esc(careers['meta'].get('checked_at',TODAY)[:10])
     posts=[]
-    def publish(slug_name,title,description,visual,alt,lead,content,callout,width=1432,height=1076,*,date=post_date,data_date=checked,methodology=None):
+    def publish(slug_name,title,description,visual,alt,lead,content,callout,width=1432,height=1076,*,date=post_date,data_date=checked,methodology=None,subjects=None):
         path='/blog/'+date+'/'+((slug_name.strip('/')+'/') if slug_name else '')
         article='<div class="daily-note">'+heading(title,'A small daily lesson in reading international cricket numbers.','DAILY NOTE')
         article+=f'<p class="daily-byline"><span>Cricket Wicket</span><span>·</span><time datetime="{date}">{date}</time><span>·</span><span>Data checked {esc(data_date)}</span></p>'+actions()
         article+='<article><p>'+lead+'</p><figure class="daily-infographic"><a href="/assets/art/blog/'+visual+'" aria-label="Open full-size infographic"><img src="/assets/art/blog/'+visual+'" width="'+str(width)+'" height="'+str(height)+'" loading="eager" alt="'+esc(alt)+'"></a><figcaption>'+esc(title)+' · Cricket Wicket · data checked '+esc(data_date)+'</figcaption></figure>'+content
-        article+='<div class="data-callout">'+callout+'</div><p>'+a('/compare/','Compare two international careers')+' · '+a(pp[left['id']],left['name']+' profile')+' · '+a(pp[right['id']],right['name']+' profile')+' · '+a('/studio/','Create your own visual')+'</p><p class="note">'+esc(methodology or 'Career figures are independent official snapshots. Batting average is runs ÷ dismissals; strike rate is 100 × runs ÷ balls faced. A missing denominator stays unavailable.')+'</p></article></div>'
+        links=' · '.join(a(pp[p['id']],p['name']+' profile') for p in (subjects or [left,right]))
+        article+='<div class="data-callout">'+callout+'</div><p>'+a('/compare/','Compare two international careers')+' · '+links+' · '+a('/studio/','Create your own visual')+'</p><p class="note">'+esc(methodology or 'Career figures are independent official snapshots. Batting average is runs ÷ dismissals; strike rate is 100 × runs ÷ balls faced. A missing denominator stays unavailable.')+'</p></article></div>'
         extra={'headline':title,'datePublished':date,'dateModified':date,'author':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/about/'},'publisher':{'@type':'Organization','name':'Cricket Wicket','url':BASE+'/'}}
         if visual.endswith(('.png','.webp','.jpg')):extra.update(image=BASE+'/assets/art/blog/'+visual,mainEntityOfPage=BASE+path)
         page(path,title,description,article,'Article',extra)
@@ -746,6 +747,13 @@ def build_daily_blog(people,pp,careers,all_cards=None,mp=None):
         note=json.loads(file.read_text(encoding='utf-8'))
         if note['date']>TODAY:continue
         figures=note['players']
+        if note.get('kind')=='career-comparison':
+            fields=note['columns']
+            content=''.join('<h2>'+esc(s['heading'])+'</h2><p>'+s['html']+'</p>' for s in note['sections'])
+            content+='<h2>The figures behind the infographic</h2>'+table(['Statistic']+[esc(p['name']) for p in figures],[[esc(label)]+[esc(str(p[key])) for p in figures] for key,label in fields],caption=note['scope']+' · checked '+note['data_date'])
+            callout=''.join('<div><strong>'+esc(c['value'])+'</strong><span>'+esc(c['label'])+'</span></div>' for c in note['callouts'])
+            publish(note['slug'],note['title'],note['description'],note['visual'],note['alt'],note['lead'],content,callout,note['width'],note['height'],date=note['date'],data_date=note['data_date'],methodology=note['methodology'],subjects=figures)
+            continue
         for row in figures:
             boundary=4*row['fours']+6*row['sixes']
             if boundary!=row['boundary_runs'] or f"{100*boundary/row['runs']:.2f}"!=row['boundary_share']:
