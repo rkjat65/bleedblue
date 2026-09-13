@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-07T07:41:04+00:00",
+  "checked_at": "2026-09-13T04:00:59+00:00",
   "scopes": [
     {
       "class_id": 1,
       "discipline": "batting",
       "pages": 66,
-      "expected": 3278,
+      "expected": 3281,
       "complete": true,
       "error": null
     },
@@ -13,7 +13,7 @@
       "class_id": 1,
       "discipline": "bowling",
       "pages": 66,
-      "expected": 3278,
+      "expected": 3281,
       "complete": true,
       "error": null
     },
@@ -21,31 +21,31 @@
       "class_id": 1,
       "discipline": "fielding",
       "pages": 66,
-      "expected": 3278,
+      "expected": 3281,
       "complete": true,
       "error": null
     },
     {
       "class_id": 2,
       "discipline": "batting",
-      "pages": 63,
-      "expected": 3149,
+      "pages": 64,
+      "expected": 3158,
       "complete": true,
       "error": null
     },
     {
       "class_id": 2,
       "discipline": "bowling",
-      "pages": 63,
-      "expected": 3149,
+      "pages": 64,
+      "expected": 3158,
       "complete": true,
       "error": null
     },
     {
       "class_id": 2,
       "discipline": "fielding",
-      "pages": 63,
-      "expected": 3149,
+      "pages": 64,
+      "expected": 3158,
       "complete": true,
       "error": null
     },
@@ -53,7 +53,7 @@
       "class_id": 3,
       "discipline": "batting",
       "pages": 102,
-      "expected": 5077,
+      "expected": 5085,
       "complete": true,
       "error": null
     },
@@ -61,7 +61,7 @@
       "class_id": 3,
       "discipline": "bowling",
       "pages": 102,
-      "expected": 5077,
+      "expected": 5085,
       "complete": true,
       "error": null
     },
@@ -69,7 +69,7 @@
       "class_id": 3,
       "discipline": "fielding",
       "pages": 102,
-      "expected": 5077,
+      "expected": 5085,
       "complete": true,
       "error": null
     },
@@ -125,7 +125,7 @@
       "class_id": 10,
       "discipline": "batting",
       "pages": 66,
-      "expected": 3268,
+      "expected": 3270,
       "complete": true,
       "error": null
     },
@@ -133,7 +133,7 @@
       "class_id": 10,
       "discipline": "bowling",
       "pages": 66,
-      "expected": 3268,
+      "expected": 3270,
       "complete": true,
       "error": null
     },
@@ -141,7 +141,7 @@
       "class_id": 10,
       "discipline": "fielding",
       "pages": 66,
-      "expected": 3268,
+      "expected": 3270,
       "complete": true,
       "error": null
     }
