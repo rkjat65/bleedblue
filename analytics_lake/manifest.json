@@ -1,18 +1,18 @@
 {
   "name": "Cricket Wicket Analytics Lake",
-  "version": "20260913042519",
-  "generated_at": "2026-09-13T04:25:19.347688+00:00",
+  "version": "20260915040444",
+  "generated_at": "2026-09-15T04:04:44.195504+00:00",
   "career_checked_at": "2026-09-13T04:00:59+00:00",
   "match_date_from": "1877-03-15",
-  "match_date_to": "2026-09-11",
+  "match_date_to": "2026-09-13",
   "scope": "Official international careers; twelve-team match archive",
   "license_note": "Cricsheet attribution applies to ball-derived records.",
   "tables": {
     "matches": {
-      "file": "matches-c7c868704214e35d.parquet",
-      "rows": 10790,
-      "bytes": 122502,
-      "sha256": "c7c868704214e35df8823b22d10396851fdd3f6eea0de6a19e8f2f086d1027d6",
+      "file": "matches-18ebc71c017cfb79.parquet",
+      "rows": 10791,
+      "bytes": 122520,
+      "sha256": "18ebc71c017cfb79797c21a1efa27bd03dfaf6723e1d4567a50bee350e613c30",
       "columns": [
         {
           "name": "match_id",
@@ -225,10 +225,10 @@
       ]
     },
     "batting_innings": {
-      "file": "batting_innings-cd9dbab9ed7089ff.parquet",
-      "rows": 229899,
-      "bytes": 2001349,
-      "sha256": "cd9dbab9ed7089ff77ebc1dc9ba7738a8700e3947409a48492d6abcf3cdfceaa",
+      "file": "batting_innings-14b05e8b007575ce.parquet",
+      "rows": 229917,
+      "bytes": 2002838,
+      "sha256": "14b05e8b007575cec145e4d99abc91b37d17aa5985f65ec6606c1aef84864067",
       "columns": [
         {
           "name": "match_id",
@@ -305,10 +305,10 @@
       ]
     },
     "bowling_innings": {
-      "file": "bowling_innings-f0f8f6484a1ffe38.parquet",
-      "rows": 146343,
-      "bytes": 1026104,
-      "sha256": "f0f8f6484a1ffe3812c9bd5363d7eb8691411d4ada075c63ea42a1fbe791a1b0",
+      "file": "bowling_innings-9814e44833f6ca03.parquet",
+      "rows": 146355,
+      "bytes": 1029945,
+      "sha256": "9814e44833f6ca034539da6d2244f75777c845eb706258798e1770223ad273a6",
       "columns": [
         {
           "name": "match_id",

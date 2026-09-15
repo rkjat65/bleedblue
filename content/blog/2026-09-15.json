@@ -1,0 +1,27 @@
+{
+  "kind":"career-comparison",
+  "date":"2026-09-15",
+  "slug":"womens-asia-cup-2026-final-india-sri-lanka",
+  "title":"Women's Asia Cup 2026 final: the numbers behind India's title",
+  "description":"India beat Sri Lanka by 72 runs in the Women's Asia Cup 2026 final. Explore the 130-run opening stand, Shafali and Smriti's scores, and the bowling figures.",
+  "visual":"2026-09-15-womens-asia-cup.png",
+  "width":1536,"height":1024,
+  "alt":"Women's Asia Cup 2026 final infographic: India 183/5 beat Sri Lanka 111 by 72 runs. Shafali Verma scored 68, Smriti Mandhana 59; their opening stand was 130. India's eighth title, Dubai, 13 September 2026.",
+  "data_date":"15 September 2026",
+  "scope":"Women's Asia Cup final · 13 September 2026 · T20I",
+  "lead":"India regained the Women's Asia Cup with a 72-run win over Sri Lanka in Dubai on 13 September. A total of 183/5 proved comfortably beyond Sri Lanka, who were bowled out for 111. It was India's eighth title across the competition's ODI and T20 editions.",
+  "sections":[
+    {"heading":"A 130-run foundation", "html":"Shafali Verma and Smriti Mandhana put on 130 for the first wicket. Their individual scores—68 and 59—totalled 127; partnership totals also include extras. Both faced 39 balls, making this a useful comparison of output across the same workload."},
+    {"heading":"Where the opening pair found their runs", "html":"Shafali hit nine fours and two sixes: 48 boundary runs. Mandhana's five fours and three sixes contributed 38. Together they scored 86 from boundaries and 41 through other scoring shots. Those are batting contributions, not the team's full boundary total."},
+    {"heading":"Seven wickets in eight overs", "html":"Shree Charani took 4/20 and Deepti Sharma 3/19. Together they delivered eight overs for 39 runs and seven wickets—an economy rate of 4.88 when rounded to two decimals. That combination supplied most of the wickets needed to close the final."},
+    {"heading":"Read the knockout scorecards", "html":"Explore the <a href=\"/matches/india-sri-lanka-2026-09-13-1548905/\">final scorecard</a> and the <a href=\"/matches/?gender=Women\">women's match archive</a> for both semi-finals. The infographic captures this completed final; the table below keeps its batting figures available as text and CSV."}
+  ],
+  "players":[
+    {"id":"d8f59089","name":"Shafali Verma","runs":68,"balls":39,"fours":9,"sixes":2,"sr":"174.35"},
+    {"id":"5d2eda89","name":"Smriti Mandhana","runs":59,"balls":39,"fours":5,"sixes":3,"sr":"151.28"}
+  ],
+  "columns":[["runs","Runs"],["balls","Balls faced"],["fours","4s"],["sixes","6s"],["sr","Strike rate"]],
+  "callouts":[{"value":"72","label":"Winning margin · runs"},{"value":"130","label":"Opening partnership · runs"},{"value":"7/39","label":"Charani + Deepti · combined wickets/runs"}],
+  "methodology":"Final scorecard checked 15 September 2026. Boundary runs = 4 × fours + 6 × sixes. Combined bowling economy = runs conceded ÷ overs. Match scorecards are distinct from complete career totals and delivery-level coverage.",
+  "provenance":{"match_id":"1548905","scorecard":"data/historical_scorecards/154.json","title_and_partnership":"https://www.icc-cricket.com/news/india-cruise-to-record-extending-eighth-women-s-asia-cup-title","checked_at":"2026-09-15"}
+}
