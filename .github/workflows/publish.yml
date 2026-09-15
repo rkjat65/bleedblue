@@ -36,6 +36,7 @@ jobs:
           node tests/test_record_layers.js
           node tests/test_analysis_core.js
           node tests/test_studio_images.js
+          node tests/test_theme.js
           node --check web/studio.js
           node --check web/studio-images.js
           node --check web/studio-core.js

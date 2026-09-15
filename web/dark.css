@@ -1,0 +1,142 @@
+/* Crickrida dashboard palette, measured from its published stylesheet (2026-09-15).
+   Scoped to dark mode; publication layout and exported artwork remain independent. */
+@font-face{font-family:'CW Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url('fonts/inter-latin.woff2') format('woff2')}
+@font-face{font-family:'CW Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/space-grotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'CW JetBrains Mono';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/jetbrains-mono-latin.woff2') format('woff2')}
+
+html[data-theme=dark]{
+  color-scheme:dark;
+  --bg:#0a0a0f;
+  --panel:#111118;
+  --soft:#16161f;
+  --hover:#1a1a24;
+  --ink:#e8e8ed;
+  --muted:#8888a0;
+  --quiet:#555566;
+  --border:#1e1e2a;
+  --line:var(--border);
+  --accent:#00e5ff;
+  --blue:var(--accent);
+  --blue-2:#00e5ff;
+  --lime:#b8ff00;
+  --gold:#ffb800;
+  --magenta:#ff2d78;
+  --purple:#8b5cf6;
+  --shadow:none;
+  --font-body:'CW Inter',Inter,Segoe UI,Arial,sans-serif;
+  --font-heading:'CW Space Grotesk',sans-serif;
+  --font-mono:'CW JetBrains Mono',ui-monospace,Consolas,monospace;
+  font-family:var(--font-body);
+  scrollbar-color:var(--border) var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+html[data-theme=dark] :is(h1,h2,h3,.brand,.stats strong,.format-card-hero strong,.question-hero strong,.innings-total,.data-callout strong){font-family:var(--font-heading);font-weight:700}
+html[data-theme=dark] :is(code,pre,.cell-number,.career-years,.innings-summary strong,.format-card dd,.research-bar-row strong,.cw-value,.pr-value){font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+html[data-theme=dark] :is(.eyebrow,.stats span,.format-card dt,.gender-mark){font-family:var(--font-mono)}
+html[data-theme=dark] ::selection{background:#00e5ff33;color:var(--ink)}
+html[data-theme=dark] :focus-visible{outline-color:var(--accent)}
+
+/* The reference's elevated navigation, cyan selection and restrained controls. */
+html[data-theme=dark] body>header{background:var(--soft)}
+html[data-theme=dark] :is(.topline,body>footer){background:var(--bg);color:var(--muted);border-color:var(--border)}
+html[data-theme=dark] body>footer{border-top:1px solid var(--border)}
+html[data-theme=dark] body>footer strong{color:var(--ink);font-family:var(--font-heading)}
+html[data-theme=dark] body>footer :is(a,.footer-links a){color:var(--accent)}
+html[data-theme=dark] body>footer .muted{color:var(--muted)}
+html[data-theme=dark] nav#nav a:hover{color:var(--ink);text-decoration:none}
+html[data-theme=dark] nav#nav a[aria-current]{color:var(--accent);box-shadow:inset 0 -2px var(--accent)}
+html[data-theme=dark] nav#nav .ipl-link{background:#ffb8001a;color:var(--gold)!important;border:1px solid #ffb80033;box-shadow:none}
+html[data-theme=dark] nav#nav .ipl-link:hover{background:#ffb80033;transform:none}
+html[data-theme=dark] :is(button,.button,input,select,textarea){border-radius:8px}
+html[data-theme=dark] :is(input,select,textarea){background:var(--panel);border-color:var(--border);color:var(--ink);accent-color:var(--accent)}
+html[data-theme=dark] input::placeholder,html[data-theme=dark] textarea::placeholder{color:var(--muted);opacity:1}
+html[data-theme=dark] :is(button,.button):hover{background-color:var(--hover);border-color:#00e5ff33}
+html[data-theme=dark] :is(.primary,.hero-primary){background:var(--accent);border-color:var(--accent);color:var(--bg);box-shadow:none}
+html[data-theme=dark] :is(.primary,.hero-primary):hover{background:#33eaff;border-color:#33eaff;color:var(--bg)}
+html[data-theme=dark] :is(.format-switch button.active,.segmented button.active,.template-card.active,#theme[aria-pressed=true]){background:#00e5ff1a;border-color:#00e5ff33;color:var(--accent);box-shadow:none}
+html[data-theme=dark] .template-card.active :is(span,small){color:var(--accent)}
+html[data-theme=dark] .studio-section-title span{background:#00e5ff1a;color:var(--accent)}
+
+/* Cards and data tables share the same neutral surfaces, including sticky cells. */
+html[data-theme=dark] :is(.panel,.feature-card,.format-card,.leader-panel,.entity-chart,.cw-lab,.cw-figure,.pr-chart-box,.research-bars,.research-method,.research-takeaway,.comparison-identity>a,.studio-config,.studio-design,.daily-infographic){background:var(--panel);border-color:var(--border);box-shadow:none;border-radius:12px}
+html[data-theme=dark] :is(.feature-card:hover,.format-card:hover,.template-card:hover){background:var(--hover);border-color:#00e5ff33;transform:none}
+html[data-theme=dark] :is(.hero-search,.result-banner,.trust-card,.studio-mast){background:var(--panel);color:var(--ink);border:1px solid var(--border);box-shadow:none}
+html[data-theme=dark] .result-banner{border-left:3px solid var(--lime)}
+html[data-theme=dark] .trust-card{border-left:3px solid var(--accent)}
+html[data-theme=dark] .table-wrap{scrollbar-color:var(--border) var(--panel);border-radius:8px}
+html[data-theme=dark] :is(thead th,thead th:first-child,.score-table thead th,.score-table.has-rank thead tr>:nth-child(2)){background:var(--panel);color:var(--muted)}
+html[data-theme=dark] :is(tbody th,tbody td,.score-table tbody tr:nth-child(even)>*,.score-table.has-rank tbody tr>:nth-child(2)){background:var(--panel)}
+html[data-theme=dark] tbody tr:hover>*{background:var(--hover)}
+html[data-theme=dark] .score-table tbody tr:hover>*{background:var(--hover)}
+html[data-theme=dark] .score-table.has-rank tbody tr:hover>:nth-child(2){background:var(--hover)}
+html[data-theme=dark] .score-table :is(th,td){padding:12px 16px}
+html[data-theme=dark] .score-table thead th{text-transform:none;letter-spacing:0;font-weight:500;font-family:var(--font-body)}
+html[data-theme=dark] .score-table a{color:var(--accent)}
+html[data-theme=dark] .batting-table tbody tr>:nth-child(3){color:var(--lime)}
+html[data-theme=dark] .bowling-table tbody tr>:nth-child(5){color:var(--magenta)}
+html[data-theme=dark] #batting-career tbody tr>:nth-child(5){color:var(--lime);font-weight:600}
+html[data-theme=dark] #bowling-career tbody tr>:nth-child(7){color:var(--magenta);font-weight:600}
+html[data-theme=dark] :is(.stats>div:nth-child(4n+1) strong,.format-card-hero strong,.question-hero strong){color:var(--accent)}
+html[data-theme=dark] .stats>div:nth-child(4n+2) strong{color:var(--lime)}
+html[data-theme=dark] .stats>div:nth-child(4n+3) strong{color:var(--magenta)}
+html[data-theme=dark] .stats>div:nth-child(4n+4) strong{color:var(--gold)}
+html[data-theme=dark] :is(.daily-note .data-callout div:nth-child(3n+2) strong,.format-card dd){color:var(--lime)}
+html[data-theme=dark] .daily-note .data-callout div:nth-child(3n+3) strong{color:var(--gold)}
+html[data-theme=dark] .player-portrait--illustration img{background:var(--soft)}
+html[data-theme=dark] .portrait{background:var(--panel);border-color:var(--border)}
+
+/* Chart series keep matching bars/lines/legends and readable value labels. */
+html[data-theme=dark] :is(.cw-svg text,.pr-chart text){font-family:var(--font-mono)}
+html[data-theme=dark] :is(.pr-wickets){fill:var(--magenta)}
+html[data-theme=dark] .annual-fill.wickets{background:var(--magenta)}
+html[data-theme=dark] .annual-chart li strong{font-family:var(--font-mono)}
+html[data-theme=dark] :is(.research-bar-track i.second,.home-bar-australia,.entity-outcome-bars i.loss,.spark i.wicket){background:var(--gold)}
+html[data-theme=dark] .comparison-identity>a:last-child{border-top-color:var(--gold)}
+html[data-theme=dark] :is(.entity-track i,.format-card-share i,.home-bar-india,.entity-outcome-bars i.win,.archive-column i){background:var(--accent)}
+html[data-theme=dark] :is(.home-bar-other,.entity-outcome-bars i.other){background:var(--muted)}
+html[data-theme=dark] .cw-c1{stroke:var(--gold);fill:var(--gold);background:var(--gold)}
+html[data-theme=dark] .cw-c2{stroke:var(--lime);fill:var(--lime);background:var(--lime)}
+html[data-theme=dark] .cw-c3{stroke:var(--purple);fill:var(--purple);background:var(--purple)}
+html[data-theme=dark] .cw-c4{stroke:var(--magenta);fill:var(--magenta);background:var(--magenta)}
+html[data-theme=dark] .cw-c5{stroke:var(--muted);fill:var(--muted);background:var(--muted)}
+html[data-theme=dark] .cw-c6{stroke:#fb7185;fill:#fb7185;background:#fb7185}
+html[data-theme=dark] .cw-c7{stroke:#2dd4bf;fill:#2dd4bf;background:#2dd4bf}
+html[data-theme=dark] .cw-c8{stroke:#a5b4fc;fill:#a5b4fc;background:#a5b4fc}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend,.cw-htrack) i.cw-c1,html[data-theme=dark] .cw-htrack i.cw-bowl{background:var(--gold)}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c2{background:var(--lime)}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c3{background:var(--purple)}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c4{background:var(--magenta)}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c5{background:var(--muted)}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c6{background:#fb7185}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c7{background:#2dd4bf}
+html[data-theme=dark] :is(.cw-key,.cw-donut-legend) i.cw-c8{background:#a5b4fc}
+html[data-theme=dark] .cw-wicket{fill:var(--magenta);stroke:var(--panel)}
+html[data-theme=dark] .cw-key i.cw-wicket{background:var(--magenta)}
+html[data-theme=dark] .cw-target{stroke:var(--gold)}
+html[data-theme=dark] .cw-man-w{fill:var(--magenta)}
+html[data-theme=dark] .cw-ground{fill:color-mix(in srgb,var(--lime) 6%,var(--panel))}
+html[data-theme=dark] .cw-plot{fill:var(--panel)}
+html[data-theme=dark] .cw-form i.notout{box-shadow:inset 0 0 0 2px var(--ink)}
+html[data-theme=dark] :is(.cw-form i.hundred,.cw-form i.five,.cw-form-key span.hundred:before){background:var(--lime)}
+html[data-theme=dark] :is(.cw-form i.duck,.cw-form-key span.duck:before){background:var(--magenta)}
+html[data-theme=dark] .cw-form i.wicket{background:var(--gold)}
+
+/* Home imagery keeps its detail; surrounding UI uses the same dashboard theme. */
+html[data-theme=dark] .cricket-hero{background:var(--bg);color:var(--ink);border:1px solid var(--border);box-shadow:none}
+html[data-theme=dark] .cricket-hero:after{background:linear-gradient(90deg,#0a0a0f 0%,#0a0a0ff2 26%,#0a0a0fa8 42%,#0a0a0f40 58%,transparent 72%),linear-gradient(0deg,#0a0a0f 0%,#0a0a0fd8 10%,transparent 28%)}
+html[data-theme=dark] .hero-copy h1 em{background:none;color:var(--accent)}
+html[data-theme=dark] :is(.hero-kicker,.studio-mast .eyebrow){color:var(--accent)}
+html[data-theme=dark] .hero-kicker>span{background:var(--accent);box-shadow:none}
+html[data-theme=dark] :is(.hero-description,.studio-mast p,.studio-mast-stat span,.hero-bottom>span){color:var(--muted)}
+html[data-theme=dark] :is(.hero-secondary,.hero-find label){color:var(--ink)}
+html[data-theme=dark] .hero-offer a{background:#00e5ff0d;border-color:#00e5ff33;color:var(--accent)}
+html[data-theme=dark] .hero-offer a:hover{background:#00e5ff1a}
+html[data-theme=dark] .hero-find>div{background:var(--panel);border:1px solid var(--border);box-shadow:none;animation:none}
+html[data-theme=dark] .hero-find>div:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px #00e5ff33}
+html[data-theme=dark] .hero-find input{color:var(--ink);background:transparent}
+html[data-theme=dark] .hero-find button{background:var(--accent);color:var(--bg)}
+html[data-theme=dark] .hero-find button:hover{background:#33eaff}
+html[data-theme=dark] .studio-query{background:var(--bg);color:var(--ink);border:1px solid var(--border)}
+html[data-theme=dark] .export-frame{background:var(--bg)}
+html[data-theme=dark] #toast:not(:empty){background:var(--soft);color:var(--ink);border-color:#00e5ff33;box-shadow:none}
+@media(max-width:750px){html[data-theme=dark] .score-table :is(th,td){padding:10px 12px}}
