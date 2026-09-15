@@ -3,7 +3,7 @@
   'use strict';
   const root = document.documentElement;
   function apply(mode) {
-    const dark = mode === 'dark';
+    const dark = mode !== 'light';
     root.dataset.theme = dark ? 'dark' : 'light';
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#0a0a0f' : '#10233f');
     const button = document.getElementById('theme');
@@ -13,7 +13,7 @@
       button.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
     }
   }
-  let saved = 'light';
+  let saved = 'dark';
   try { saved = JSON.parse(localStorage.getItem('cw-theme')); } catch { /* Storage may be disabled. */ }
   apply(saved);
   document.addEventListener('DOMContentLoaded', () => {

@@ -10,6 +10,8 @@ on:
         default: false
   schedule:
     - cron: '15 2 * * 1'
+    # Rebuild dated HTML shortly after midnight IST; the browser rolls over at midnight.
+    - cron: '35 18 * * *'
 
 concurrency:
   group: cricket-publication
@@ -28,7 +30,7 @@ jobs:
           python-version: '3.13'
       - run: pip install -r tools/requirements.txt
       - name: Refresh complete source snapshots
-        if: github.event_name == 'schedule' || inputs.refresh == true
+        if: github.event.schedule == '15 2 * * 1' || inputs.refresh == true
         run: python tools/refresh_data.py
       - name: Validate records
         run: |
@@ -37,6 +39,7 @@ jobs:
           node tests/test_analysis_core.js
           node tests/test_studio_images.js
           node tests/test_theme.js
+          node tests/test_on_this_day.js
           node --check web/studio.js
           node --check web/studio-images.js
           node --check web/studio-core.js
@@ -57,7 +60,7 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
       - name: Preserve validated refreshed data
-        if: github.event_name == 'schedule' || inputs.refresh == true
+        if: github.event.schedule == '15 2 * * 1' || inputs.refresh == true
         run: |
           git config user.name 'Cricket Wicket publisher'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

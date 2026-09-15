@@ -49,3 +49,4 @@
 nav#nav a[href*="crickrida"]{color:#10233f;background:#e9b95f;border-radius:999px;padding:9px 13px;box-shadow:0 5px 16px #e9b95f33}
 nav#nav a[href*="crickrida"]:hover{text-decoration:none;background:#f4ca75;transform:translateY(-1px)}
 html[data-theme=dark] nav#nav a[href*="crickrida"]{color:#10233f}
+@media(max-width:850px){.home-insight-grid{grid-template-columns:1fr}.home-world-bar{grid-template-columns:minmax(0,1fr) minmax(40px,1fr) 36px}}
