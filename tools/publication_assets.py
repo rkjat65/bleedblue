@@ -36,8 +36,9 @@ def prepare_assets(out):
             target=dest/f'cricket-hero-{width}.webp'
             if not target.exists() or target.stat().st_mtime<source.stat().st_mtime:
                 original.convert('RGB').resize((width,round(original.height*width/original.width)),Image.Resampling.LANCZOS).save(target,'WEBP',quality=82,method=6)
-    # The source artwork stays in the repository; published pages use responsive encodings.
+    # Keep source artwork in Git; publish only the responsive encodings.
     (dest/'cricket-hero-v1.png').unlink(missing_ok=True)
+    (dest/'cricket-hero-v2.png').unlink(missing_ok=True)
     players=out/'assets/art/players'
     if players.exists():
         for path in list(players.iterdir()):

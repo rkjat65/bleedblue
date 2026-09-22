@@ -45,6 +45,7 @@
     else {
       if (loaded && window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' });
       eraseAnalyticsCookies();
+      if (loaded) { window.location.reload(); return; }
     }
     const panel = document.getElementById('analytics-choice');
     if (panel) panel.hidden = true;

@@ -19,7 +19,7 @@ function mount(initialChoice) {
     getElementById(id) { return id === 'analytics-choice' ? panel : null; },
     querySelector(selector) { return selector === 'footer .muted' ? footer : null; }
   };
-  const window = {};
+  const window = { location: { reload() { window.reloaded = true; } } };
   const context = { document, window, localStorage: { getItem: key => store.get(key), setItem: (key, value) => store.set(key, value) } };
   vm.runInNewContext(source, context);
   function choose(value) { panel.click({ target: { closest: () => ({ dataset: { analytics: value } }) } }); }
@@ -39,6 +39,8 @@ assert.equal(fresh.appended.length, 1);
 assert.match(fresh.appended[0].src, /G-DXRDX6R7YY/);
 fresh.choose('accepted');
 assert.equal(fresh.appended.length, 1, 'one tag per page');
+fresh.choose('declined');
+assert.equal(fresh.window.reloaded, true, 'revoking consent reloads without the tag');
 const returning = mount('accepted');
 assert.equal(returning.appended.length, 1, 'saved permission loads the tag');
 assert.equal(returning.panel.hidden, true);
