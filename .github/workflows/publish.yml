@@ -40,6 +40,7 @@ jobs:
           node tests/test_studio_images.js
           node tests/test_theme.js
           node tests/test_on_this_day.js
+          node tests/test_analytics.js
           node --check web/studio.js
           node --check web/studio-images.js
           node --check web/studio-core.js

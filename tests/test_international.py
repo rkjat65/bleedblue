@@ -32,7 +32,9 @@ class InternationalDataTests(unittest.TestCase):
         for file in archives:
             with zipfile.ZipFile(file) as archive:
                 expected.update(Path(name).stem for name in archive.namelist() if name.endswith('.json') and Path(name).stem.isdigit())
-        self.assertEqual(expected, {m['id'] for m in self.data['matches']})
+        # Historical/public scorecard backfills add valid internationals that
+        # are not present in a locally cached Cricsheet ZIP.
+        self.assertFalse(expected - {m['id'] for m in self.data['matches']})
 
     def test_every_match_has_scorecard_and_resolved_roster(self):
         people = {p['id'] for p in self.data['players']}
