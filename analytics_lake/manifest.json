@@ -1,18 +1,18 @@
 {
   "name": "Cricket Wicket Analytics Lake",
-  "version": "20260915040820",
-  "generated_at": "2026-09-15T04:08:20.207158+00:00",
-  "career_checked_at": "2026-09-14T08:17:51+00:00",
+  "version": "20260923060058",
+  "generated_at": "2026-09-23T06:00:58.308592+00:00",
+  "career_checked_at": "2026-09-21T08:19:53+00:00",
   "match_date_from": "1877-03-15",
-  "match_date_to": "2026-09-13",
+  "match_date_to": "2026-09-20",
   "scope": "Official international careers; twelve-team match archive",
   "license_note": "Cricsheet attribution applies to ball-derived records.",
   "tables": {
     "matches": {
-      "file": "matches-c80c06e4bb2ba6a3.parquet",
-      "rows": 10793,
-      "bytes": 122538,
-      "sha256": "c80c06e4bb2ba6a3cc4ebca9f108fc1fd4254c54210a12025afc261930e9981f",
+      "file": "matches-3def7c42750a1859.parquet",
+      "rows": 10806,
+      "bytes": 122668,
+      "sha256": "3def7c42750a18596f49a88667054ec4066571236a7f8ca3712f27b347faaee6",
       "columns": [
         {
           "name": "match_id",
@@ -77,10 +77,10 @@
       ]
     },
     "careers": {
-      "file": "careers-a0e1300645014f27.parquet",
-      "rows": 9483,
-      "bytes": 385863,
-      "sha256": "a0e1300645014f2784906418dd269c56d7dba9e6c997af132dabb30be25dacf1",
+      "file": "careers-e6a8707ca1c094ae.parquet",
+      "rows": 9488,
+      "bytes": 386252,
+      "sha256": "e6a8707ca1c094ae37fe8abe91bf1a19b6bd64ee3a53747b2ffda5c12d7655d3",
       "columns": [
         {
           "name": "player_id",
@@ -225,10 +225,10 @@
       ]
     },
     "batting_innings": {
-      "file": "batting_innings-8f71c1a63a42ec93.parquet",
-      "rows": 229946,
-      "bytes": 2003390,
-      "sha256": "8f71c1a63a42ec93f1790a84ac944d6c66e6f3e34c68ab182f60feef1f87fd81",
+      "file": "batting_innings-585ef599fe932840.parquet",
+      "rows": 230161,
+      "bytes": 2006742,
+      "sha256": "585ef599fe93284034ca7a2e22c39a07376e6597ebaeb714f1775572fcfb8584",
       "columns": [
         {
           "name": "match_id",
@@ -305,10 +305,10 @@
       ]
     },
     "bowling_innings": {
-      "file": "bowling_innings-e4d3c5501ed3a900.parquet",
-      "rows": 146383,
-      "bytes": 1031217,
-      "sha256": "e4d3c5501ed3a9006939186ea1c64efd78f9ef58bb24b8d3944bc6023883ec92",
+      "file": "bowling_innings-6f7e4ffec7a58ecf.parquet",
+      "rows": 146546,
+      "bytes": 1030546,
+      "sha256": "6f7e4ffec7a58ecf7fe65cfa58480236956377ad72eca3c7109702b06d366375",
       "columns": [
         {
           "name": "match_id",

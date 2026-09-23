@@ -308,7 +308,19 @@ def main():
     shutil.copytree(ROOT/'web',OUT/'assets',dirs_exist_ok=True)
     (OUT/'vendor').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'vendor/chart.umd.min.js',OUT/'vendor/chart.umd.min.js')
-    if (ROOT/'analytics_lake').exists():shutil.copytree(ROOT/'analytics_lake',OUT/'data/lake',dirs_exist_ok=True)
+    lake=ROOT/'analytics_lake'
+    if lake.exists():
+        lake_manifest=json.loads((lake/'manifest.json').read_text(encoding='utf-8'))
+        lake_output=OUT/'data/lake';lake_output.mkdir(parents=True,exist_ok=True)
+        current_tables={table_info['file'] for table_info in lake_manifest.get('tables',{}).values()}
+        for stale in lake_output.iterdir():
+            if stale.is_file() and stale.name!='manifest.json' and stale.name not in current_tables:
+                stale.unlink()
+        shutil.copy2(lake/'manifest.json',lake_output/'manifest.json')
+        for table_info in lake_manifest.get('tables',{}).values():
+            source=lake/table_info['file']
+            if not source.is_file():raise FileNotFoundError(f'Analytics table missing: {source}')
+            shutil.copy2(source,lake_output/source.name)
     prepare_assets(OUT)
     social_url=social_image(OUT, 'International cricket records, profiles & analysis')
     social_source=OUT/'assets'/social_url.split('/assets/',1)[-1]
