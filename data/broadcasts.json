@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-09-24T15:10:00+05:30",
+  "territory": "India",
+  "note": "Channel assignments can change close to the toss. Provider links are the final authority.",
+  "series": [
+    {
+      "name": "Sri Lanka tour of England",
+      "format": "ODI",
+      "gender": "Men",
+      "tv": "Sony Sports 1",
+      "ott": "Sony LIV",
+      "watch_url": "https://www.sonyliv.com/live-sport/sri-lanka-tour-of-england-2026-1700001484/cricket-1st-odi-22-sep-2026-1090543392",
+      "source_url": "https://www.rajasthanroyals.com/latest-news/england-vs-sri-lanka-odi-cricket-2026-schedule-live-streaming-telecast-india",
+      "fixtures": [
+        {"date": "2026-09-24", "time_ist": "5:00 PM", "match": "England v Sri Lanka", "detail": "2nd ODI · Leeds", "teams": ["England", "Sri Lanka"]},
+        {"date": "2026-09-27", "time_ist": "3:00 PM", "match": "England v Sri Lanka", "detail": "3rd ODI · London", "teams": ["England", "Sri Lanka"]}
+      ]
+    },
+    {
+      "name": "Australia tour of South Africa",
+      "format": "ODI",
+      "gender": "Men",
+      "tv": "Eurosport",
+      "ott": "FanCode",
+      "watch_url": "https://www.fancode.com/cricket/tour/tour-0/video-highlights/australia-tour-of-south-africa-2026-3-odis-live-on-fancode-223609",
+      "source_url": "https://www.wisden.com/series/south-africa-vs-australia-m-2026/cricket-news/south-africa-vs-australia-odis-live-streaming-and-tv-channels-where-to-watch-and-match-timings-for-australia-tour-of-south-africa",
+      "fixtures": [
+        {"date": "2026-09-24", "time_ist": "1:30 PM", "match": "South Africa v Australia", "detail": "1st ODI · Durban", "teams": ["South Africa", "Australia"]},
+        {"date": "2026-09-27", "time_ist": "1:30 PM", "match": "South Africa v Australia", "detail": "2nd ODI · Johannesburg", "teams": ["South Africa", "Australia"]},
+        {"date": "2026-09-30", "time_ist": "5:00 PM", "match": "South Africa v Australia", "detail": "3rd ODI · Potchefstroom", "teams": ["South Africa", "Australia"]}
+      ]
+    },
+    {
+      "name": "West Indies Women tour of Zimbabwe",
+      "format": "ODI & T20I",
+      "gender": "Women",
+      "tv": "No Indian TV listing",
+      "ott": "Zimbabwe Cricket YouTube",
+      "watch_url": "https://www.youtube.com/@zimbabwecricket431",
+      "source_url": "https://femalecricket.com/west-indies-women-tour-of-zimbabwe-2026/97488-where-to-watch-1st-odi-zimbabwe-women-vs-west-indies-women-live-streaming-details.html",
+      "fixtures": [
+        {"date": "2026-09-24", "time_ist": "1:00 PM", "match": "Zimbabwe Women v West Indies Women", "detail": "1st ODI · Harare", "teams": ["Zimbabwe", "West Indies"]},
+        {"date": "2026-09-27", "time_ist": "1:00 PM", "match": "Zimbabwe Women v West Indies Women", "detail": "2nd ODI · Harare", "teams": ["Zimbabwe", "West Indies"]},
+        {"date": "2026-09-30", "time_ist": "1:00 PM", "match": "Zimbabwe Women v West Indies Women", "detail": "3rd ODI · Harare", "teams": ["Zimbabwe", "West Indies"]},
+        {"date": "2026-10-03", "time_ist": "4:30 PM", "match": "Zimbabwe Women v West Indies Women", "detail": "1st T20I · Harare", "teams": ["Zimbabwe", "West Indies"]},
+        {"date": "2026-10-05", "time_ist": "3:30 PM", "match": "Zimbabwe Women v West Indies Women", "detail": "2nd T20I · Harare", "teams": ["Zimbabwe", "West Indies"]},
+        {"date": "2026-10-07", "time_ist": "3:30 PM", "match": "Zimbabwe Women v West Indies Women", "detail": "3rd T20I · Harare", "teams": ["Zimbabwe", "West Indies"]}
+      ]
+    },
+    {
+      "name": "Asian Games men’s cricket",
+      "format": "T20I",
+      "gender": "Men",
+      "tv": "Sony Sports Network",
+      "ott": "Sony LIV",
+      "watch_url": "https://www.sonyliv.com/custompage/sports-16269",
+      "source_url": "https://www.tataplay.com/events/asian-games-2026",
+      "fixtures": [
+        {"date": "2026-09-24", "time_ist": "5:30 AM", "match": "Japan v Afghanistan", "detail": "Group A · Nisshin", "teams": ["Japan", "Afghanistan"]},
+        {"date": "2026-09-24", "time_ist": "10:30 AM", "match": "Hong Kong v Malaysia", "detail": "Group B · Nisshin", "teams": ["Hong Kong", "Malaysia"]},
+        {"date": "2026-09-25", "time_ist": "10:30 AM", "match": "Afghanistan v Nepal", "detail": "Preliminary round · Nisshin", "teams": ["Afghanistan", "Nepal"]},
+        {"date": "2026-09-28", "time_ist": "10:30 AM", "match": "India v qualifier", "detail": "Quarter-final · Nisshin", "teams": ["India"]}
+      ]
+    }
+  ]
+}
