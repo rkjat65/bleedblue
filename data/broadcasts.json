@@ -4,6 +4,44 @@
   "note": "Channel assignments can change close to the toss. Provider links are the final authority.",
   "series": [
     {
+      "name": "West Indies tour of India",
+      "format": "ODI & T20I",
+      "gender": "Men",
+      "india_team": "Men",
+      "tv": "Star Sports Network",
+      "ott": "JioHotstar",
+      "watch_url": "https://www.jiohotstar.com/sports/cricket",
+      "source_url": "https://www.bcci.tv/news/article/fixtures-unveiled-for-team-india-s-international-home-season-2026-27",
+      "fixtures": [
+        {"date": "2026-09-27", "time_ist": "2:00 PM", "match": "India v West Indies", "detail": "1st ODI · Thiruvananthapuram", "teams": ["India", "West Indies"]},
+        {"date": "2026-09-30", "time_ist": "2:00 PM", "match": "India v West Indies", "detail": "2nd ODI · Guwahati", "teams": ["India", "West Indies"]},
+        {"date": "2026-10-03", "time_ist": "2:00 PM", "match": "India v West Indies", "detail": "3rd ODI · New Chandigarh", "teams": ["India", "West Indies"]},
+        {"date": "2026-10-06", "time_ist": "7:00 PM", "match": "India v West Indies", "detail": "1st T20I · Lucknow", "teams": ["India", "West Indies"]},
+        {"date": "2026-10-09", "time_ist": "7:00 PM", "match": "India v West Indies", "detail": "2nd T20I · Ranchi", "teams": ["India", "West Indies"]},
+        {"date": "2026-10-11", "time_ist": "7:00 PM", "match": "India v West Indies", "detail": "3rd T20I · Indore", "teams": ["India", "West Indies"]},
+        {"date": "2026-10-14", "time_ist": "7:00 PM", "match": "India v West Indies", "detail": "4th T20I · Hyderabad", "teams": ["India", "West Indies"]},
+        {"date": "2026-10-17", "time_ist": "7:00 PM", "match": "India v West Indies", "detail": "5th T20I · Bengaluru", "teams": ["India", "West Indies"]}
+      ]
+    },
+    {
+      "name": "Zimbabwe Women tour of India",
+      "format": "ODI & T20I",
+      "gender": "Women",
+      "india_team": "Women",
+      "tv": "To be announced",
+      "ott": "To be announced",
+      "watch_url": "https://www.bcci.tv/matches",
+      "source_url": "https://www.bcci.tv/news/article/bcci-announces-venues-and-fixtures-for-team-india-senior-women-india-a-and-india-u19-bilateral-series",
+      "fixtures": [
+        {"date": "2026-10-16", "time_ist": "7:00 PM", "match": "India Women v Zimbabwe Women", "detail": "1st T20I · Raipur", "teams": ["India", "Zimbabwe"]},
+        {"date": "2026-10-18", "time_ist": "7:00 PM", "match": "India Women v Zimbabwe Women", "detail": "2nd T20I · Raipur", "teams": ["India", "Zimbabwe"]},
+        {"date": "2026-10-20", "time_ist": "7:00 PM", "match": "India Women v Zimbabwe Women", "detail": "3rd T20I · Raipur", "teams": ["India", "Zimbabwe"]},
+        {"date": "2026-10-23", "time_ist": "2:00 PM", "match": "India Women v Zimbabwe Women", "detail": "1st ODI · Vadodara", "teams": ["India", "Zimbabwe"]},
+        {"date": "2026-10-25", "time_ist": "2:00 PM", "match": "India Women v Zimbabwe Women", "detail": "2nd ODI · Vadodara", "teams": ["India", "Zimbabwe"]},
+        {"date": "2026-10-28", "time_ist": "2:00 PM", "match": "India Women v Zimbabwe Women", "detail": "3rd ODI · Vadodara", "teams": ["India", "Zimbabwe"]}
+      ]
+    },
+    {
       "name": "Sri Lanka tour of England",
       "format": "ODI",
       "gender": "Men",
@@ -51,6 +89,7 @@
       "name": "Asian Games men’s cricket",
       "format": "T20I",
       "gender": "Men",
+      "india_team": "Men",
       "tv": "Sony Sports Network",
       "ott": "Sony LIV",
       "watch_url": "https://www.sonyliv.com/custompage/sports-16269",

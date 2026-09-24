@@ -822,7 +822,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
     body=homepage_hero(len(people),len(matches),faces)
     body+=history_home
     broadcast_data,broadcast_fixtures=load_broadcasts(ROOT,TODAY)
-    body+=homepage_watch(broadcast_fixtures,TODAY)
+    body+=homepage_watch(broadcast_data,TODAY)
     body+='<div class="stats">'+''.join(f'<div><strong>{num(n)}</strong><span>{label}</span></div>' for n,label in [(len(people),'Player profiles'),(len(matches),'Match records'),(len(groups['teams']),'National teams'),('3','Formats covered')])+'</div>'
     official_teams=load_team_records();official_innings=load_innings_records()
     h2h_official=official_h2h(official_teams,'India','Australia')
