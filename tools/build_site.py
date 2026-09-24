@@ -200,8 +200,14 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
 def heading(title,subtitle='',eyebrow='INTERNATIONAL CRICKET'):
     return f'<section class="page-head"><div class="eyebrow">{esc(eyebrow)}</div><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></section>'
 def actions():return '<div class="actions"><button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>'
+def team_badge(team, path=None):
+    mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
+    return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
+def matchup(match,path=None):
+    label='<span class="matchup">'+team_badge(match['teams'][0])+f'<span class="match-v">v</span>'+team_badge(match['teams'][1])+'</span>'
+    return f'<a class="matchup-link" href="{esc(path)}">{label}</a>' if path else label
 def match_table(matches,paths,limit=40):
-    return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),a(paths[m['id']],' v '.join(m['teams'])),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
+    return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),matchup(m,paths[m['id']]),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
 def entity_filter_form(kind,name,matches):
     years=sorted({m['date'][:4] for m in matches},reverse=True)
     controls=options('gender',['Men','Women'])+options('format',['Test','ODI','T20I'])+options('year',years,'Year')
@@ -249,9 +255,6 @@ def entity_visuals(kind,name,matches):
         conditions+=fig('T20I innings average', t20_avg, f'{len(t20s)} T20Is')
         conditions+='</div><p class="note">Averages use recorded team innings totals at this venue. Missing historical innings are omitted. This is not a pitch report.</p></section>'
     return f'<section class="entity-visuals" aria-label="{esc(name)} archive visuals"><div class="entity-chart"><div class="entity-chart-heading"><div><p class="eyebrow">ARCHIVE AT A GLANCE</p><h2>How this archive is shaped</h2></div><span>{len(matches):,} total matches</span></div><figure><figcaption>Matches by international format</figcaption>{format_bars}</figure></div><figure class="entity-chart entity-year-chart"><figcaption>Matches by year · each bar is an exact annual count</figcaption><div class="entity-year-scroll" tabindex="0" role="img" aria-label="{esc(name)} matches by year">{year_bars}</div></figure>{outcome}</section>'+conditions
-def team_badge(team, path=None):
-    mark=f'<span class="team-badge"><img src="/assets/flags/{slug(team)}.svg" width="28" height="20" alt="" loading="lazy"><span>{esc(team)}</span></span>'
-    return f'<a class="team-badge-link" href="{esc(path)}">{mark}</a>' if path else mark
 def stats_table(p):
     return career_tables(p, table, stat_value)
 
@@ -328,7 +331,7 @@ def main():
     trust_pages(page, heading, a, careers['meta'].get('checked_at',''))
     print('Building scorecards and player analysis...',flush=True)
     for mid,card in all_cards.items():
-        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+f'<div class="result-banner">{esc(result(m))}</div>'+actions()
+        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+matchup(m)+f'<div class="result-banner">{esc(result(m))}</div>'+actions()
         body+='<p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+' · '+a(gp['grounds'][m['venue']],m['venue'])+'</p>'
         if m['event']:body+='<p>'+a(gp['series'][m['event']],m['event'])+'</p>'
         if card['innings']:body+='<nav class="innings-nav" aria-label="Jump to innings">'+''.join(a('#innings-'+str(i),inn['team']+' · '+str(inn['runs'])+'/'+str(inn['wickets'])+' · Inn '+str(i)) for i,inn in enumerate(card['innings'],1))+'</nav>'
@@ -342,12 +345,12 @@ def main():
                 setting='Unknown' if not host else 'Home' if team==host else 'Away' if opp==host else 'Neutral'
                 outcome='Won' if m['outcome'].get('winner')==team else 'Lost' if m['outcome'].get('winner') else 'Draw / tie / no result'
                 innings[pid].append({'date':m['date'],'match':mid,'url':mp[mid],'format':m['format'],'opponent':opp,'venue':m['venue'],'setting':setting,'result':outcome,'innings':index,'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'out':b.get('out'),'fours':b.get('fours'),'sixes':b.get('sixes'),'dismissal':b.get('dismissal'),'wickets':w.get('wickets'),'legal':w.get('balls'),'conceded':w.get('runs')})
-        body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+esc(team)+'</h3>'+''.join('<p>'+(a(pp[p['id']],people[p['id']]['name']) if p['id'] in pp else esc(p['name']))+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section><p class="note">Verified match scorecard. Super overs are excluded from player analysis. A dash means the historical scorecard did not record that field.</p>'
+        body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+team_badge(team,gp['teams'].get(team))+'</h3>'+''.join('<p>'+(a(pp[p['id']],people[p['id']]['name']) if p['id'] in pp else esc(p['name']))+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section><p class="note">Verified match scorecard. Super overs are excluded from player analysis. A dash means the historical scorecard did not record that field.</p>'
         if not card['innings']:body+='<section class="panel"><h2>No play</h2><p>This match has no recorded innings. Batting and bowling figures do not apply.</p></section>'
         page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']}})
     for m in hist['matches']:
         if m['id'] in all_cards:continue
-        body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
+        body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+matchup(m)+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
         page(mp[m['id']],match_labels[m['id']]+' result',f'{result(m)}. Historical {m["format"]} result at {m["venue"]}.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket'})
     player_q=prepare_player_questions(people,pp,featured_names=set(ILLUSTRATIONS)|set(HERO_CAST),extra_ids=research_ids)
     print('Building career profiles...',flush=True)

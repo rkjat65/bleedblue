@@ -26,7 +26,7 @@ def main():
         shutil.copytree(ROOT / 'web', stage / 'web')
         for script, flags in [('build_international.py', ['--refresh']),
                               ('import_careers.py', ['--refresh']),
-                              ('import_match_catalog.py', []), ('build_record_layers.py', [])]:
+                              ('import_match_catalog.py', ['--refresh']), ('build_record_layers.py', [])]:
             subprocess.run([sys.executable, str(stage / 'tools' / script), *flags], check=True, cwd=stage)
         for report, expected in [('career_import_report.json', 18), ('match_import_report.json', 6)]:
             scopes = json.loads((stage / 'data' / report).read_text())['scopes']

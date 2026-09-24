@@ -22,28 +22,22 @@ function mount(initialChoice) {
   const window = { location: { reload() { window.reloaded = true; } } };
   const context = { document, window, localStorage: { getItem: key => store.get(key), setItem: (key, value) => store.set(key, value) } };
   vm.runInNewContext(source, context);
-  function choose(value) { panel.click({ target: { closest: () => ({ dataset: { analytics: value } }) } }); }
-  return { appended, store, panel, settings, choose, window };
+  return { appended, store, settings, window };
 }
 
 const fresh = mount();
-assert.equal(fresh.appended.length, 0, 'new visitors must not load Google');
-assert.equal(fresh.panel.hidden, false);
-fresh.choose('declined');
-assert.equal(fresh.appended.length, 0, 'declining must not load Google');
-assert.equal(fresh.store.get('cw-analytics-consent'), 'declined');
+assert.equal(fresh.appended.length, 1, 'new visitors load audience measurement without an interrupting prompt');
+assert.equal(fresh.settings.textContent, 'Disable analytics');
 fresh.settings.click();
-assert.equal(fresh.panel.hidden, false, 'readers can reopen settings');
-fresh.choose('accepted');
-assert.equal(fresh.appended.length, 1);
-assert.match(fresh.appended[0].src, /G-DXRDX6R7YY/);
-fresh.choose('accepted');
-assert.equal(fresh.appended.length, 1, 'one tag per page');
-fresh.choose('declined');
+assert.equal(fresh.store.get('cw-analytics-consent'), 'declined');
 assert.equal(fresh.window.reloaded, true, 'revoking consent reloads without the tag');
+assert.match(fresh.appended[0].src, /G-DXRDX6R7YY/);
 const returning = mount('accepted');
 assert.equal(returning.appended.length, 1, 'saved permission loads the tag');
-assert.equal(returning.panel.hidden, true);
 const rejected = mount('declined');
 assert.equal(rejected.appended.length, 0, 'saved refusal remains respected');
-console.log('Analytics opt-in, refusal, persistence and tag deduplication passed.');
+assert.equal(rejected.settings.textContent, 'Enable analytics');
+rejected.settings.click();
+assert.equal(rejected.store.get('cw-analytics-consent'), 'accepted');
+assert.equal(rejected.appended.length, 1, 'reader can enable analytics from the footer');
+console.log('Quiet analytics default, opt-out persistence and footer control passed.');
