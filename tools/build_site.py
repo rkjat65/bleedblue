@@ -327,6 +327,7 @@ def main():
     shutil.copytree(ROOT/'web',OUT/'assets',dirs_exist_ok=True)
     (OUT/'data').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'data/t20wc_deliveries.json',OUT/'data/t20wc-deliveries.json')
+    shutil.copytree(ROOT/'data/t20wc_matches',OUT/'data/t20wc-matches',dirs_exist_ok=True)
     (OUT/'vendor').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'vendor/chart.umd.min.js',OUT/'vendor/chart.umd.min.js')
     lake=ROOT/'analytics_lake'

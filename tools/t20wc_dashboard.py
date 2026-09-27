@@ -49,6 +49,11 @@ def dashboard_markup():
     <div id="wc-phases" class="wc-phase-grid"></div>
   </section>
 
+  <section class="wc-card" id="wc-super-over-card">
+    <div class="wc-card-head"><div><span>TIEBREAKERS</span><h2>Super Overs</h2></div><small>shown separately from regulation innings</small></div>
+    <div id="wc-super-overs" class="wc-super-grid"></div>
+  </section>
+
   <section class="wc-dashboard-grid wc-leader-grid">
     <article class="wc-card">
       <div class="wc-card-head"><div><span>BATTERS</span><h2>Run leaders</h2></div><small>click a heading to sort</small></div>
@@ -68,6 +73,7 @@ def dashboard_markup():
   <section class="wc-data-note">
     <strong>Data you can audit</strong>
     <p>Cricsheet supplies the primary delivery archive. Afghanistan matches absent there are reconstructed from public ESPN play-by-play facts and accepted only when innings totals, wickets and balls reconcile with an independent scorecard. Commentary text is not stored.</p>
+    <p>ICC Appendix F is applied to tied matches: the Super Over determines the winner, while its one-over innings remain separately labelled and do not inflate regulation-innings analysis. <a href="https://images.icc-cricket.com/image/upload/prd/rz8dfczzfiwa0pwzmcs3.pdf">Read the ICC Men’s T20I playing conditions</a>.</p>
     <p id="wc-coverage-note"></p>
   </section>
 </div>

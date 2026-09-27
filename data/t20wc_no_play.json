@@ -1,0 +1,16 @@
+{
+  "source": "ESPNcricinfo ICC Men's T20 World Cup match-results record",
+  "note": "Scheduled tournament fixtures with no ball bowled. Empty delivery files are intentional.",
+  "matches": [
+    {"id":"287859","date":"2007-09-13","teams":["India","Scotland"],"venue":"Durban","reason":"no play","status":"no result","source":"https://www.espncricinfo.com/matches/287859"},
+    {"id":"951317","date":"2016-03-11","teams":["Netherlands","Oman"],"venue":"Dharamsala","reason":"no play","status":"no result","source":"https://www.espncricinfo.com/matches/951317"},
+    {"id":"1298155","date":"2022-10-26","teams":["Afghanistan","New Zealand"],"venue":"Melbourne","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1298155"},
+    {"id":"1298159","date":"2022-10-28","teams":["Afghanistan","Ireland"],"venue":"Melbourne","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1298159"},
+    {"id":"1298160","date":"2022-10-28","teams":["Australia","England"],"venue":"Melbourne","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1298160"},
+    {"id":"1415723","date":"2024-06-11","teams":["Nepal","Sri Lanka"],"venue":"Lauderhill","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1415723"},
+    {"id":"1415730","date":"2024-06-14","teams":["United States of America","Ireland"],"venue":"Lauderhill","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1415730"},
+    {"id":"1415733","date":"2024-06-15","teams":["Canada","India"],"venue":"Lauderhill","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1415733"},
+    {"id":"1512750","date":"2026-02-17","teams":["Ireland","Zimbabwe"],"venue":"Pallekele","reason":"no play","status":"abandoned","source":"https://www.espncricinfo.com/matches/1512750"},
+    {"id":"1512759","date":"2026-02-21","teams":["New Zealand","Pakistan"],"venue":"Colombo (RPS)","reason":"no play","status":"no result","source":"https://www.espncricinfo.com/matches/1512759"}
+  ]
+}

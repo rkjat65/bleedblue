@@ -21,9 +21,11 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / ".data-cache"
 ESPN_CACHE = CACHE / "t20wc-espn"
 MANUAL_DIR = ROOT / "data" / "t20wc_manual"
+MATCH_DIR = ROOT / "data" / "t20wc_matches"
 DEST = ROOT / "data" / "t20wc_deliveries.json"
+NO_PLAY_PATH = ROOT / "data" / "t20wc_no_play.json"
 FIELDS = [
-    "match_id", "edition", "innings", "over", "ball", "batting_team",
+    "match_id", "edition", "innings", "super_over", "over", "ball", "batting_team",
     "bowling_team", "batter", "non_striker", "bowler", "batter_runs",
     "extras", "total_runs", "bowler_runs", "legal", "batter_ball",
     "wicket", "bowler_wicket", "wicket_kind", "player_out", "source",
@@ -53,8 +55,6 @@ def cricsheet_rows(raw, match_id):
     edition = edition_for(day)
     rows = []
     for innings_no, innings in enumerate(raw.get("innings", []), 1):
-        if innings.get("super_over"):
-            continue
         batting = innings["team"]
         bowling = next((team for team in info["teams"] if team != batting), "")
         for over in innings.get("overs", []):
@@ -67,6 +67,7 @@ def cricsheet_rows(raw, match_id):
                     "match_id": match_id,
                     "edition": edition,
                     "innings": innings_no,
+                    "super_over": bool(innings.get("super_over")),
                     "over": int(over["over"]),
                     "ball": ball_index,
                     "batting_team": batting,
@@ -164,6 +165,7 @@ def espn_rows(items, match):
             "match_id": match["id"],
             "edition": edition_for(match["date"]),
             "innings": int(innings.get("number") or item.get("period") or 0),
+            "super_over": False,
             "over": max(0, int(over.get("number") or 1) - 1),
             "ball": int(over.get("ball") or 0),
             "batting_team": batting_team,
@@ -236,6 +238,8 @@ def validate_match(match, rows, expected_override=None):
         return {"match_id": match["id"], "passed": False, "reason": "scorecard missing"}
     by_innings = defaultdict(list)
     for row in rows:
+        if row[FIELDS.index("super_over")]:
+            continue
         by_innings[int(row[FIELDS.index("innings")])].append(row)
     expected = expected_override or [inn for inn in card.get("innings", []) if not inn.get("super_over")]
     checks = []
@@ -266,12 +270,12 @@ def validate_match(match, rows, expected_override=None):
     }
 
 
-def load_manual(match_id):
+def load_manual(match_id, allow_schema_mismatch=False):
     path = MANUAL_DIR / f"{match_id}.json"
     if not path.exists():
         return None
     payload = load_json(path)
-    if payload.get("fields") != FIELDS:
+    if payload.get("fields") != FIELDS and not allow_schema_mismatch:
         raise RuntimeError(f"Manual delivery schema mismatch: {path}")
     return payload
 
@@ -322,7 +326,8 @@ def main(fetch_afghanistan=False):
                 "edition": edition_for(match["date"]),
                 "teams": match["teams"],
                 "venue": match.get("venue", ""),
-                "winner": (match.get("outcome") or {}).get("winner"),
+                "winner": (match.get("outcome") or {}).get("winner") or (match.get("outcome") or {}).get("eliminator"),
+                "decided_by": "Super Over" if (match.get("outcome") or {}).get("eliminator") else "",
                 "result": match.get("outcome") or {},
                 "source": "Cricsheet",
                 "source_url": "https://cricsheet.org/",
@@ -339,7 +344,7 @@ def main(fetch_afghanistan=False):
         if "Afghanistan" not in match.get("teams", []) or no_result:
             gaps.append({"id": match_id, "date": match["date"], "teams": match["teams"], "reason": "no play" if no_result else "deliveries unavailable"})
             continue
-        manual = load_manual(match_id)
+        manual = load_manual(match_id, allow_schema_mismatch=fetch_afghanistan)
         match_rows = manual.get("deliveries") if manual else None
         expected = manual.get("expected") if manual else None
         if fetch_afghanistan:
@@ -366,7 +371,8 @@ def main(fetch_afghanistan=False):
             "edition": edition_for(match["date"]),
             "teams": match["teams"],
             "venue": match.get("venue", ""),
-            "winner": (match.get("outcome") or {}).get("winner"),
+            "winner": (match.get("outcome") or {}).get("winner") or (match.get("outcome") or {}).get("eliminator"),
+            "decided_by": "Super Over" if (match.get("outcome") or {}).get("eliminator") else "",
             "result": match.get("outcome") or {},
             "source": "ESPN play-by-play (facts reconstructed)",
             "source_url": match.get("source") or f"https://www.espncricinfo.com/matches/{match_id}",
@@ -375,6 +381,24 @@ def main(fetch_afghanistan=False):
 
     rows.sort(key=lambda row: (row[1], row[0], row[2], row[3], row[4]))
     ordered_matches = sorted(matches.values(), key=lambda m: (m["date"], m["id"]))
+    canonical_no_play = load_json(NO_PLAY_PATH)["matches"]
+    no_play_ids = {match["id"] for match in canonical_no_play}
+    unexpected_gaps = [gap for gap in gaps if gap["id"] not in no_play_ids]
+    gaps = canonical_no_play + unexpected_gaps
+    no_play_matches = [{
+        "id": match["id"],
+        "date": match["date"],
+        "edition": edition_for(match["date"]),
+        "teams": match["teams"],
+        "venue": match.get("venue", ""),
+        "winner": None,
+        "decided_by": "",
+        "result": {"result": match.get("status", "no result")},
+        "source": "ESPNcricinfo tournament match-results record",
+        "source_url": match["source"],
+        "verified": True,
+        "no_play": True,
+    } for match in canonical_no_play]
     tournament = load_json(ROOT / "data" / "world_cup_history.json")["families"]["mens-t20"]
     payload = {
         "meta": {
@@ -383,7 +407,12 @@ def main(fetch_afghanistan=False):
             "first_delivery_date": ordered_matches[0]["date"] if ordered_matches else None,
             "last_delivery_date": ordered_matches[-1]["date"] if ordered_matches else None,
             "matches": len(ordered_matches),
+            "fixtures": len(ordered_matches) + len(no_play_matches),
+            "no_play": len(no_play_matches),
             "deliveries": len(rows),
+            "regulation_deliveries": sum(not bool(row[FIELDS.index("super_over")]) for row in rows),
+            "super_over_deliveries": sum(bool(row[FIELDS.index("super_over")]) for row in rows),
+            "super_over_matches": sum(match.get("decided_by") == "Super Over" for match in ordered_matches),
             "editions": sorted({m["edition"] for m in ordered_matches}),
             "sources": ["Cricsheet", "ESPN play-by-play factual reconstruction"],
             "note": "Commentary prose is not retained. Reconstructed innings must match independent scorecards exactly.",
@@ -396,6 +425,30 @@ def main(fetch_afghanistan=False):
         "gaps": gaps,
         "reconciliation": audits,
     }
+    MATCH_DIR.mkdir(parents=True, exist_ok=True)
+    rows_by_match = defaultdict(list)
+    for row in rows:
+        rows_by_match[row[FIELDS.index("match_id")]].append(row)
+    current_files = set()
+    for match in ordered_matches + no_play_matches:
+        match_id = match["id"]
+        match_rows = rows_by_match[match_id]
+        target = MATCH_DIR / f"{match_id}.json"
+        current_files.add(target.name)
+        match_payload = {
+            "match": match,
+            "fields": FIELDS,
+            "deliveries": match_rows,
+            "counts": {
+                "deliveries": len(match_rows),
+                "regulation": sum(not bool(row[FIELDS.index("super_over")]) for row in match_rows),
+                "super_over": sum(bool(row[FIELDS.index("super_over")]) for row in match_rows),
+            },
+        }
+        target.write_text(json.dumps(match_payload, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+    for stale in MATCH_DIR.glob("*.json"):
+        if stale.name not in current_files:
+            stale.unlink()
     DEST.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
     print(json.dumps({**payload["meta"], "gaps": len(gaps), "reconciled": len(audits)}, indent=2))
 

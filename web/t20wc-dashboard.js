@@ -125,11 +125,34 @@
     document.querySelector(`${id} tbody`).innerHTML = sorted.map(row => `<tr>${columns.map(([field, format]) => `<td>${format ? format(row[field]) : row[field]}</td>`).join('')}</tr>`).join('');
   }
 
+  function renderSuperOvers(deliveries, matches) {
+    const matchMap = new Map(matches.map(match => [match.id, match]));
+    const innings = new Map();
+    deliveries.filter(row => value(row, 'super_over')).forEach(row => {
+      const key = inningsKey(row);
+      const item = innings.get(key) || { matchId: value(row, 'match_id'), team: value(row, 'batting_team'), runs: 0, wickets: 0, balls: 0 };
+      item.runs += value(row, 'total_runs');
+      item.wickets += value(row, 'wicket') ? 1 : 0;
+      item.balls += value(row, 'legal') ? 1 : 0;
+      innings.set(key, item);
+    });
+    const grouped = new Map();
+    innings.forEach(item => {
+      const list = grouped.get(item.matchId) || [];
+      list.push(item);
+      grouped.set(item.matchId, list);
+    });
+    const cards = [...grouped.entries()].map(([matchId, scores]) => ({ match: matchMap.get(matchId), scores })).filter(item => item.match).sort((a, b) => b.match.date.localeCompare(a.match.date));
+    const target = document.querySelector('#wc-super-overs');
+    target.innerHTML = cards.length ? cards.map(({ match, scores }) => `<article class="wc-super"><span>${match.date} · ${match.edition}</span><h3>${match.teams.join(' v ')}</h3><div>${scores.map(score => `<p><strong>${score.team}</strong><b>${score.runs}/${score.wickets}</b><small>${score.balls} legal balls</small></p>`).join('')}</div><em>${match.winner} won the Super Over</em></article>`).join('') : '<p class="muted">No Super Over was played in this edition.</p>';
+  }
+
   function render() {
     const edition = editionSelect.value;
     const matches = payload.matches.filter(match => edition === 'all' || String(match.edition) === edition);
     const matchIds = new Set(matches.map(match => match.id));
-    const deliveries = payload.deliveries.filter(row => matchIds.has(value(row, 'match_id')));
+    const allDeliveries = payload.deliveries.filter(row => matchIds.has(value(row, 'match_id')));
+    const deliveries = allDeliveries.filter(row => !value(row, 'super_over'));
     const stats = aggregate(deliveries, matches);
     const runs = deliveries.reduce((sum, row) => sum + value(row, 'total_runs'), 0);
     const wickets = deliveries.filter(row => value(row, 'wicket')).length;
@@ -153,16 +176,17 @@
 
     renderBars('#wc-team-wins', [...stats.wins.entries()]);
     renderBars('#wc-titles', Object.entries(payload.titles), 8);
+    renderSuperOvers(allDeliveries, matches);
     document.querySelector('#wc-phases').innerHTML = stats.phases.map(phase => `<article class="wc-phase"><span>${phase.label}</span><h3>${phase.name}</h3><dl><dt>Run rate</dt><dd>${decimal(safeRate(phase.runs, phase.balls, 6))}</dd><dt>Dot-ball rate</dt><dd>${decimal(safeRate(phase.dots, phase.balls, 100))}%</dd><dt>Boundary rate</dt><dd>${decimal(safeRate(phase.boundaries, phase.balls, 100))}%</dd><dt>Wickets</dt><dd>${number(phase.wickets)}</dd></dl></article>`).join('');
 
     renderTable('#wc-batting', stats.batting, [['name'], ['runs', number], ['average', decimal], ['strikeRate', decimal], ['fifties', number], ['hundreds', number], ['sixes', number]], 'batting');
     renderTable('#wc-bowling', stats.bowling, [['name'], ['wickets', number], ['average', decimal], ['economy', decimal], ['strikeRate', decimal], ['fourW', number], ['fiveW', number]], 'bowling');
 
     const recent = [...matches].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 12);
-    document.querySelector('#wc-matches').innerHTML = recent.map(match => `<article class="wc-match"><span>${match.date} · ${match.edition}</span><h3>${match.teams.join(' v ')}</h3><p>${match.venue || 'Venue not recorded'}</p><strong>${match.winner ? `${match.winner} won` : 'No result'}</strong></article>`).join('');
+    document.querySelector('#wc-matches').innerHTML = recent.map(match => `<article class="wc-match"><span>${match.date} · ${match.edition}</span><h3>${match.teams.join(' v ')}</h3><p>${match.venue || 'Venue not recorded'}</p><strong>${match.winner ? `${match.winner} won${match.decided_by ? ` · ${match.decided_by}` : ''}` : 'No result'}</strong></article>`).join('');
     setText('#wc-match-count', `${matches.length} matches`);
-    const washedOut = payload.gaps.filter(gap => gap.reason === 'no play').length;
-    setText('#wc-coverage-note', `${payload.meta.matches} played matches and ${number(payload.meta.deliveries)} deliveries are available. ${payload.reconciliation.length} Afghanistan matches were independently reconciled; ${washedOut} washed-out fixtures correctly contain no deliveries.`);
+    const noPlay = payload.gaps.filter(gap => gap.reason === 'no play').length;
+    setText('#wc-coverage-note', `${payload.meta.fixtures} scheduled tournament fixtures are recorded: ${payload.meta.matches} played matches contain ${number(payload.meta.regulation_deliveries)} regulation deliveries plus ${number(payload.meta.super_over_deliveries)} Super Over deliveries across ${payload.meta.super_over_matches} tied matches; ${noPlay} no-play fixtures correctly contain no deliveries. ${payload.reconciliation.length} Afghanistan matches were independently reconciled.`);
     status.textContent = `${edition === 'all' ? 'All editions' : edition} · ${matches.length} matches`;
   }
 
