@@ -95,7 +95,7 @@ def _hero_facts(facts):
     return f'<div class="hero-facts" aria-label="Record holders">{chips}</div>'
 
 
-def homepage_hero(player_count, match_count, faces=None, facts=None):
+def homepage_hero(player_count, match_count, faces=None, facts=None, quick=None):
     cast = ''
     if faces:
         items = ''
@@ -112,7 +112,7 @@ def homepage_hero(player_count, match_count, faces=None, facts=None):
       <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET</p>
         <h1 id="hero-title">Every run. Every wicket.<br><em>Every match.</em></h1>
         <p class="hero-description">Men’s and women’s Tests, ODIs and T20Is. Career records, head-to-heads and ball-by-ball scorecards with match charts.</p>
-        <ul class="hero-quick" aria-label="Popular"><li><a href="/players/virat-kohli/">Virat Kohli</a></li><li><a href="/players/smriti-mandhana/">Smriti Mandhana</a></li><li><a href="/head-to-head/">India v Australia</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
+        <ul class="hero-quick" aria-label="Popular">{''.join(f'<li><a href="{html.escape(url, quote=True)}">{html.escape(label)}</a></li>' for label, url in (quick or []))}<li><a href="/head-to-head/">India v Australia</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
         <div class="hero-actions"><a class="button hero-primary" href="/players/">Explore the players <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/matches/">Open a scorecard <span aria-hidden="true">→</span></a></div>
         <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Search a player, team or match…" required autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="submit">Search</button></div></form>
       </div>

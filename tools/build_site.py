@@ -826,7 +826,9 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
         best=max(pool,key=lambda p:p['career'][fmt][metric],default=None)
         return (best['career'][fmt][metric],f'{fmt} {metric}',best['name'],pp[best['id']]) if best else None
     facts=[f for f in (career_leader('ODI','runs','Men'),career_leader('Test','wickets','Men'),career_leader('ODI','runs','Women')) if f]
-    body=homepage_hero(len(people),len(matches),faces,facts)
+    # Player URLs come from the stable route map; published slugs can differ from display names.
+    quick=[(p['name'],pp[p['id']]) for name in ('Virat Kohli','Smriti Mandhana') for p in people.values() if p.get('name')==name and p['id'] in pp][:2]
+    body=homepage_hero(len(people),len(matches),faces,facts,quick)
     body+=section_jump([('match-centre','Fixtures','calendar'),('on-this-day','On this day','star'),('home-insights-title','Rivalries','versus'),('featured-scorecard','Scorecard','chart'),('leaders','Leaders','trophy'),('results','Results','stumps'),('explore','Explore','book')])
     broadcast_data,broadcast_fixtures=load_broadcasts(ROOT,TODAY)
     body+=match_centre(broadcast_fixtures,TODAY)
