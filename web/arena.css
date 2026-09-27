@@ -249,3 +249,129 @@ main table tbody tr:hover{background:color-mix(in srgb,var(--accent) 7%,transpar
   main .section-heading>a{display:inline-block;margin-top:6px;font-size:14px}
   .mc-controls{margin-top:6px}
 }
+
+/* ---------- Section guide: numbered headings ---------- */
+.sec-num{display:inline-grid;place-items:center;min-width:34px;height:24px;margin-right:12px;padding:0 7px;border-radius:8px;vertical-align:.18em;font:700 12px/1 var(--font-mono,monospace);letter-spacing:.5px;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);-webkit-text-fill-color:var(--accent)}
+.page-head h1 .sec-num{display:none}
+.sec-head{position:relative}
+/* When a section takes over, a line sweeps under its heading with a ball at the front. */
+.arena-js .sec-head:after{content:"";position:absolute;left:0;bottom:-8px;height:2px;width:min(220px,60%);border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--lime));transform:scaleX(0);transform-origin:left;opacity:.9}
+.arena-js .sec-head:before{content:"";position:absolute;left:0;bottom:-11px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffb4a8,var(--arena-red) 55%,#7a0f12);opacity:0;box-shadow:0 0 10px #e5322d88}
+.arena-js .sec-head.sec-live:after{animation:sec-sweep .9s var(--arena-ease) forwards}
+.arena-js .sec-head.sec-live:before{animation:sec-roll .9s var(--arena-ease) forwards}
+@keyframes sec-sweep{to{transform:scaleX(1)}}
+@keyframes sec-roll{0%{opacity:1;transform:translateX(0) rotate(0)}90%{opacity:1}100%{opacity:0;transform:translateX(min(212px,calc(60vw - 8px))) rotate(540deg)}}
+
+/* ---------- Desktop rail ---------- */
+.sec-rail{position:fixed;right:18px;top:50%;z-index:35;transform:translate(24px,-50%);opacity:0;pointer-events:none;transition:opacity .35s,transform .45s var(--arena-ease)}
+.sec-rail.is-on{opacity:1;transform:translate(0,-50%);pointer-events:auto}
+.sec-rail ol{position:relative;list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sec-rail-track{position:absolute;right:15px;top:10px;bottom:46px;width:2px;border-radius:2px;background:var(--border)}
+.sec-rail-fill{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(var(--accent),var(--lime));transform-origin:top;transform:scaleY(var(--fill,0));transition:transform .2s linear}
+.sec-rail a{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none}
+.sec-rail-num{position:relative;z-index:1;display:grid;place-items:center;width:32px;height:22px;border-radius:7px;font:700 10.5px/1 var(--font-mono,monospace);background:var(--panel);border:1px solid var(--border);transition:background .25s,color .25s,border-color .25s,transform .35s var(--arena-ease)}
+.sec-rail-label{order:-1;max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:700;padding:5px 0;border-radius:8px;opacity:0;transition:max-width .4s var(--arena-ease),opacity .25s,padding .3s}
+.sec-rail a.is-done .sec-rail-num{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.sec-rail a.is-active .sec-rail-num{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:scale(1.12);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 20%,transparent)}
+.sec-rail a.is-active .sec-rail-label,.sec-rail:hover .sec-rail-label{max-width:240px;opacity:1;padding:5px 10px;background:var(--panel);border:1px solid var(--border);box-shadow:0 10px 24px -14px #000}
+.sec-rail a.is-active .sec-rail-label{color:var(--ink)}
+.sec-rail:hover a:not(.is-active) .sec-rail-label{color:var(--muted)}
+.sec-rail a:hover .sec-rail-num{border-color:var(--accent);color:var(--ink)}
+.sec-top{display:block;margin:10px 0 0 auto;width:32px;height:32px;padding:0;border-radius:50%;font-size:14px}
+@media (max-width:1439px){.sec-rail .sec-rail-label{display:none}}
+@media (max-width:1100px){.sec-rail{display:none}}
+
+/* ---------- Mobile / tablet section pill ---------- */
+.sec-pill{position:fixed;left:0;right:0;margin-inline:auto;width:max-content;bottom:22px;z-index:45;display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;border:1px solid var(--border);background:color-mix(in srgb,var(--panel) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 16px 36px -14px #000c;transform:translateY(140%);opacity:0;transition:transform .45s var(--arena-ease),opacity .3s;max-width:calc(100vw - 32px)}
+.sec-pill.is-on{transform:none;opacity:1}
+.sec-pill[hidden]{display:none}
+@media (min-width:1101px){.sec-pill{display:none}}
+@media (max-width:760px){.sec-pill{bottom:calc(92px + env(safe-area-inset-bottom))}}
+.sec-pill button{border:0;background:transparent;color:var(--ink);border-radius:999px}
+.sec-pill-main{display:flex;align-items:center;gap:9px;min-width:0;padding:7px 12px 7px 8px;font-size:13px}
+.sec-pill-ball{flex:none;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffb4a8,var(--arena-red) 55%,#7a0f12);box-shadow:0 0 8px #e5322d88}
+.sec-pill.flip .sec-pill-ball{animation:pill-spin .6s var(--arena-ease)}
+.sec-pill.flip .sec-pill-label{animation:pill-in .45s var(--arena-ease)}
+@keyframes pill-spin{from{transform:rotate(-360deg) scale(.6)}}
+@keyframes pill-in{from{opacity:0;transform:translateY(8px)}}
+.sec-pill-count{font:600 11px/1 var(--font-mono,monospace);color:var(--muted)}
+.sec-pill-count b{color:var(--accent)}
+.sec-pill-label{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw}
+.sec-pill-next{flex:none;width:36px;height:36px;padding:0;background:var(--accent)!important;color:var(--bg)!important;font-weight:800}
+.sec-sheet{position:absolute;left:0;right:0;bottom:calc(100% + 10px);max-height:56vh;overflow:auto;padding:10px;border-radius:18px;border:1px solid var(--border);background:var(--panel);box-shadow:0 24px 50px -16px #000;animation:pal-pop .25s var(--arena-ease);min-width:260px}
+.sec-sheet p{margin:4px 8px 6px;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.sec-sheet ol{list-style:none;margin:0;padding:0}
+.sec-sheet a{display:flex;gap:10px;padding:9px 10px;border-radius:10px;color:var(--ink);font-size:14px;font-weight:600}
+.sec-sheet a span{font:700 11px/1.6 var(--font-mono,monospace);color:var(--muted)}
+.sec-sheet a.is-active{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.sec-sheet a:hover{text-decoration:none;background:var(--hover,var(--soft))}
+
+/* ---------- Section-change cue ---------- */
+.sec-cue{position:fixed;left:0;right:0;margin-inline:auto;width:max-content;top:84px;z-index:55;display:flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border));background:color-mix(in srgb,var(--panel) 94%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 44px -18px #000,0 0 0 1px #00e5ff14;pointer-events:none;opacity:0;transform:translateY(-12px) scale(.96);transition:opacity .3s,transform .45s var(--arena-ease);overflow:hidden;max-width:calc(100vw - 32px)}
+.sec-cue.is-on{opacity:1;transform:none}
+.sec-cue.from-above.is-on{animation:cue-drop .45s var(--arena-ease)}
+@keyframes cue-drop{from{transform:translateY(-26px)}}
+.sec-cue:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:linear-gradient(90deg,var(--accent),var(--lime));transform-origin:left;transform:scaleX(0)}
+.sec-cue.is-on:after{animation:cue-timer 1.9s linear forwards}
+@keyframes cue-timer{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+.sec-cue-ball{flex:none;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffb4a8,var(--arena-red) 55%,#7a0f12)}
+.sec-cue.is-on .sec-cue-ball{animation:cue-bowl .7s var(--arena-ease)}
+@keyframes cue-bowl{0%{transform:translate(-40px,-18px)}55%{transform:translate(-6px,6px)}100%{transform:none}}
+.sec-cue-num{font:800 22px/1 var(--font-heading,inherit);color:var(--accent);letter-spacing:-.5px}
+.sec-cue-num small{font-size:12px;color:var(--muted);font-weight:600}
+.sec-cue-text{display:grid;min-width:0}
+.sec-cue-text b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sec-cue-text small{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:760px){.sec-cue{top:74px}}
+
+/* ---------- Page-to-page transitions (cross-document View Transitions) ---------- */
+@view-transition{navigation:auto}
+body>header{view-transition-name:site-header}
+.tabbar{view-transition-name:tabbar}
+::view-transition-old(root){animation:vt-out .22s ease-in both}
+::view-transition-new(root){animation:vt-in .42s var(--arena-ease) both}
+@keyframes vt-out{to{opacity:0;transform:translateY(-10px) scale(.99)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(18px)}}
+/* Link-click loader for browsers without view transitions or on slow pages. */
+.arena-progress.is-loading{transform:none;background:linear-gradient(90deg,transparent,var(--accent),var(--lime),transparent) 0 0/40% 100% no-repeat;animation:nav-load 1s linear infinite}
+@keyframes nav-load{from{background-position:-40% 0}to{background-position:140% 0}}
+
+@media (prefers-reduced-motion:reduce){
+  @view-transition{navigation:none}
+  .sec-cue{display:none}
+}
+
+/* Totals above each decade column. */
+.cw-stack-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.cw-stack-total{font:700 11px/1 var(--font-mono,monospace);color:var(--ink);margin-bottom:5px;font-variant-numeric:tabular-nums}
+
+/* Recent-innings strip: every bar prints its score. */
+.cw-form{height:118px;padding-top:18px;gap:4px}
+.cw-form i{position:relative}
+.cw-form i:after{content:attr(data-v);position:absolute;bottom:calc(100% + 3px);left:50%;transform:translateX(-50%);font:600 9.5px/1 var(--font-mono,monospace);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cw-form i.fifty:after,.cw-form i.hundred:after{color:var(--ink);font-weight:800}
+.cw-form-key span.notout:before{content:"";background:transparent;box-shadow:inset 0 0 0 2px var(--ink)}
+@media (max-width:520px){.cw-form i:after{font-size:8px}}
+
+/* ---------- Match scoreboard ---------- */
+.scoreboard{position:relative;display:grid;gap:10px;margin:18px 0 16px;padding:20px 22px;border-radius:var(--arena-radius);border:1px solid var(--border);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 8%,var(--panel)),var(--panel) 60%);overflow:hidden}
+.scoreboard:before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--lime) 14%,transparent),transparent 70%);pointer-events:none}
+.sb-team{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0;color:var(--muted)}
+.sb-team+.sb-team{border-top:1px dashed var(--border)}
+.sb-team .team-badge{font-size:clamp(17px,2vw,22px);font-weight:700}
+.sb-team .team-badge img{width:36px;height:auto;border-radius:4px}
+.sb-team .team-badge-link{color:inherit}
+.sb-scores{font:800 clamp(22px,3vw,34px)/1 var(--font-heading,inherit);letter-spacing:-.5px;font-variant-numeric:tabular-nums;text-align:right}
+.sb-scores a{color:inherit}
+.sb-scores a:hover{color:var(--accent);text-decoration:none}
+.sb-and{font-size:.55em;color:var(--muted);font-weight:600;margin:0 4px}
+.sb-team.is-winner{color:var(--ink)}
+.sb-team.is-winner .sb-scores{color:var(--lime)}
+.sb-team.is-winner .team-badge>span:after{content:"WON";margin-left:10px;padding:2px 8px;border-radius:999px;border:1px solid var(--lime);color:var(--lime);font:800 10px/1.4 var(--font-mono,monospace);letter-spacing:1px;vertical-align:middle}
+.sb-result{margin:4px 0 0;font-size:15px;font-weight:700;color:var(--ink)}
+.sb-meta{display:flex;flex-wrap:wrap;gap:8px}
+.sb-meta a{padding:5px 12px;border-radius:999px;border:1px solid var(--border);background:var(--panel);font-size:12px;font-weight:700}
+.sb-meta a:hover{text-decoration:none;border-color:var(--accent)}
+.arena-js .scoreboard .sb-team{animation:sb-in .6s var(--arena-ease) both}
+.arena-js .scoreboard .sb-team+.sb-team{animation-delay:.12s}
+@keyframes sb-in{from{opacity:0;transform:translateX(-14px)}}

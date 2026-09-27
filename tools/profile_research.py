@@ -90,6 +90,9 @@ def yearly_chart(rows, fmt, metric, context):
     recorded = [s[metric] for _, s in years if s[metric] is not None]
     if not recorded:
         return ''
+    # A chart of near-zero bars says nothing; the exact table below still lists every year.
+    if sum(recorded) < (100 if metric == 'runs' else 10):
+        return ''
     peak=max(recorded+[1])
     bars=''
     for year,total in years:
@@ -97,7 +100,7 @@ def yearly_chart(rows, fmt, metric, context):
         width=0 if number is None else number/peak*100
         label='Not recorded' if number is None else f'{number:,}'
         bars+=f'<li title="{year}: {label} {metric}"><span class="annual-year">{year}</span><span class="annual-track"><i class="annual-fill {metric}" style="width:{width:.3f}%"></i></span><strong>{label}</strong><span class="sr-only"> {metric}</span></li>'
-    return f'<figure class="annual-chart" aria-label="{esc(context)}: {esc(fmt)} {metric} by year"><figcaption><strong>{esc(fmt)} · {metric.title()} by year</strong><span>Each bar is one calendar year · exact {metric} at right</span></figcaption><ol>{bars}</ol></figure>'
+    return f'<figure class="annual-chart" aria-label="{esc(context)}: {esc(fmt)} {metric} by year"><figcaption><strong>{esc(fmt)} · {metric.title()} by year</strong></figcaption><ol>{bars}</ol></figure>'
 
 
 def trends(rows, context, heading='Performance by year'):

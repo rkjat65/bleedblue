@@ -266,9 +266,9 @@ def form_strip(rows, key='runs', caption='Recent recorded innings'):
         height = max(6, value / peak * 100)
         mark = f'{value}{"*" if notout else ""}'
         title = f"{row.get('date','')} · {row.get('opponent') or row.get('format') or ''} · {mark}"
-        bars += f'<i class="{kind}{notout}" style="height:{height:.1f}%" title="{_esc(title)}"></i>'
+        bars += f'<i class="{kind}{notout}" style="height:{height:.1f}%" title="{_esc(title)}" data-v="{_esc(mark)}"></i>'
     unit = 'runs' if key == 'runs' else 'wickets'
-    return figure(caption, caption, f'<div class="cw-form" role="img" aria-label="{_esc(caption)}">{bars}</div><div class="cw-form-key"><span class="duck">0</span><span>1-49</span><span class="fifty">50-99</span><span class="hundred">100+</span></div>' if key == 'runs' else f'<div class="cw-form" role="img" aria-label="{_esc(caption)}">{bars}</div>', f'Each bar is one innings, oldest on the left. Height is {unit}. A hollow bar is a not-out.' if key == 'runs' else f'Each bar is one bowling innings. Height is {unit}.')
+    return figure(caption, caption, f'<div class="cw-form" role="img" aria-label="{_esc(caption)}">{bars}</div><div class="cw-form-key"><span class="duck">0</span><span>1-49</span><span class="fifty">50-99</span><span class="hundred">100+</span><span class="notout">* not out</span></div>' if key == 'runs' else f'<div class="cw-form" role="img" aria-label="{_esc(caption)}">{bars}</div>', f'Each bar is one innings, oldest on the left. Height is {unit}. A hollow bar is a not-out.' if key == 'runs' else f'Each bar is one bowling innings. Height is {unit}.')
 
 
 def trajectory(rows, key='runs', caption='Career trajectory in this archive'):
@@ -474,7 +474,7 @@ def result_decades(matches, team):
         won, lost, other = buckets[decade]
         total = won + lost + other
         h = max(6, total / peak * 128)
-        cols += f'<div class="cw-stack-col" title="{decade}s: {won} wins, {lost} losses, {other} other"><div class="cw-stack-v" style="height:{h:.0f}px"><i class="cw-c0" style="flex:{max(won,0)}"></i><i class="cw-c1" style="flex:{max(lost,0)}"></i><i class="cw-c5" style="flex:{max(other,0)}"></i></div><span>{decade}s</span></div>'
+        cols += f'<div class="cw-stack-col" title="{decade}s: {won} wins, {lost} losses, {other} other"><b class="cw-stack-total">{total:,}</b><div class="cw-stack-v" style="height:{h:.0f}px"><i class="cw-c0" style="flex:{max(won,0)}"></i><i class="cw-c1" style="flex:{max(lost,0)}"></i><i class="cw-c5" style="flex:{max(other,0)}"></i></div><span>{decade}s</span></div>'
     return figure(f'{team} results by decade', f'{team} wins, losses and other results by decade', f'<div class="cw-stack-chart" role="img">{cols}</div><div class="cw-legend"><span class="cw-key"><i class="cw-c0"></i>Wins</span><span class="cw-key"><i class="cw-c1"></i>Losses</span><span class="cw-key"><i class="cw-c5"></i>Other</span></div>', 'Column height is matches in that decade. Segments are wins, losses and other outcomes. The current decade is incomplete.')
 
 
