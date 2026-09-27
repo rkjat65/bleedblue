@@ -49,6 +49,7 @@ def main():
             for mid,c in json.loads(file.read_text(encoding='utf-8')).items():write(stage/'.data-cache/free-backfill/scorecards'/f'{mid}.json',c)
         for script,args in [('backfill_free_data.py',['careers','--workers','3']),('backfill_free_data.py',['bowling','--workers','3']),('backfill_free_data.py',['scorecards','--workers','3']),('reconcile_careers.py',[]),('backfill_grounds.py',[])]:
             subprocess.run([sys.executable,str(stage/'tools'/script),*args],cwd=stage,check=True)
+        subprocess.run([sys.executable, str(stage/'tools/build_t20wc_dashboard.py')], cwd=stage, check=True)
         after = counts(stage)
         for key, value in before.items():
             if after[key] < value * .99:
