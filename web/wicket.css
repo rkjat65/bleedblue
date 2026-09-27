@@ -220,3 +220,39 @@ html[data-theme=dark] .cw-key i.cw-c1,html[data-theme=dark] .cw-donut-legend i.c
 @media(max-width:520px){.watch-card{padding:15px;gap:12px}.watch-matchup{flex-wrap:wrap}.watch-platforms{gap:8px}.watch-summary{padding:15px}.watch-team span{white-space:normal}}
 .watch-section{margin:42px 0 54px}.watch-section>.section-heading{margin-bottom:18px}.watch-series{padding:22px;border:1px solid var(--border);border-radius:15px;background:var(--panel);box-shadow:0 12px 34px color-mix(in srgb,var(--ink) 5%,transparent)}.watch-india .watch-series{border-color:color-mix(in srgb,var(--accent) 48%,var(--border));box-shadow:inset 3px 0 0 var(--accent),0 12px 34px color-mix(in srgb,var(--ink) 5%,transparent)}.watch-series-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.watch-series-head .eyebrow{margin:0 0 7px}.watch-series-head h3{font-size:21px;line-height:1.2;margin:0}.watch-official{display:inline-flex;margin-top:9px;padding:4px 8px;border-radius:999px;background:color-mix(in srgb,var(--accent) 12%,var(--soft));color:var(--accent);font-size:9px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.watch-series>.watch-platforms{margin:18px 0 0;padding:13px 15px;border-radius:10px;background:var(--soft)}.watch-fixtures{list-style:none;margin:10px 0 0;padding:0}.watch-fixtures li{display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-top:1px solid var(--border)}.watch-fixture-date{display:grid;gap:3px}.watch-fixture-date time{font-size:10px;color:var(--muted)}.watch-fixture-date strong{font-size:12px;font-variant-numeric:tabular-nums}.watch-live{font-size:8px;color:var(--accent);font-weight:900;letter-spacing:.12em}.watch-fixtures p{margin:6px 0 0;color:var(--muted);font-size:11px}.watch-more{margin:8px 0 0;color:var(--muted);font-size:11px;font-weight:700}.home-watch .watch-series{padding:18px}.home-watch .watch-series-head h3{font-size:18px}.home-watch .watch-series-head{gap:12px}.home-watch .watch-button{padding:8px 10px}.home-watch .watch-fixtures li{grid-template-columns:90px minmax(0,1fr);gap:10px;padding:11px 0}.home-watch .watch-platforms{grid-column:auto;padding:11px 13px;margin-top:14px}.home-watch .watch-matchup{font-size:12px}.home-watch .watch-team img{width:24px;height:17px}.home-watch .watch-team{gap:5px}
 @media(max-width:700px){.watch-section{margin:34px 0 42px}.watch-series{padding:17px}.watch-series-head{display:grid;gap:14px}.watch-series-head .watch-button{justify-self:start}.watch-fixtures li{grid-template-columns:88px minmax(0,1fr);gap:10px}.watch-matchup{gap:6px;font-size:12px}.watch-team{gap:5px}.watch-team img{width:24px;height:17px}.watch-series>.watch-platforms{grid-column:auto}.watch-summary{margin-bottom:30px}}
+
+/* Compact editorial rhythm: put cricket data ahead of decorative spacing. */
+.header{min-height:72px}
+nav#nav a{padding:21px 0}
+.page-head{padding:30px 0 16px;max-width:860px}
+.page-head h1{font-size:clamp(27px,3vw,40px);margin:8px 0 8px;max-width:24ch}
+.page-head p{font-size:15px;line-height:1.5;max-width:68ch;margin:0}
+.section-heading{margin:30px 0 12px}
+.section-heading h2{font-size:21px}
+.stats{margin:18px 0 24px}
+.stats>div{padding:16px 20px}
+.stats strong{font-size:27px}
+.panel{padding:20px;margin:18px 0}
+.feature-card{padding:19px}
+.feature-card h2{margin:7px 0}
+.feature-card h3{margin:8px 0}
+.feature-card p{margin:6px 0 0;line-height:1.5}
+.grid{gap:14px}
+.cw-lab{margin:20px 0;padding:18px 20px}
+.cw-lab-head{margin-bottom:14px}
+.cw-lab-head h2{margin:4px 0 5px;font-size:20px}
+.cw-lab-head .muted{margin:0}
+footer{margin-top:44px;padding:30px 0}
+
+@media(max-width:550px){
+  .header{min-height:66px}
+  nav#nav{top:97px}
+  .page-head{padding:22px 0 12px}
+  .page-head h1{font-size:clamp(25px,8vw,34px)}
+  .page-head p{font-size:14px}
+  .section-heading{margin:24px 0 10px}
+  .panel,.feature-card{padding:15px}
+  .stats{margin:14px 0 20px}
+  .stats>div{padding:13px}
+  .cw-lab{padding:14px}
+}

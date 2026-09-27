@@ -133,7 +133,7 @@ def player_seo(player, suffix=''):
     if clauses:
         joined = clauses[0] if len(clauses) == 1 else ', '.join(clauses[:-1]) + ' and ' + clauses[-1]
         scope = " in women's internationals" if gender == 'Women' else ''
-        description = f'{name} has {joined}{scope}. Official {label} tables and career pictures.'
+        description = f'{name} has {joined}{scope}. Official {label} tables and career charts.'
     else:
         teams = ' / '.join(player.get('teams') or [])
         team_bit = f' for {teams}' if teams else ''
@@ -166,7 +166,7 @@ def player_intro(player):
     if clauses:
         joined = clauses[0] if len(clauses) == 1 else ', '.join(clauses[:-1]) + ' and ' + clauses[-1]
         who += f' Official career: {joined}.'
-        who += ' Headline figures and pictures come first; full batting, bowling and fielding tables stay on this page for search and download.'
+        who += ' Key figures and charts come first; full batting, bowling and fielding tables stay on this page for search and download.'
     return _assert_clean(who)
 
 
@@ -175,7 +175,7 @@ def profile_nav(has_glance, picture_id, has_tables, has_faq, has_archive):
     if has_glance:
         links.append('<a href="#career-glance">By format</a>')
     if picture_id:
-        links.append(f'<a href="#{esc(picture_id)}">Pictures</a>')
+        links.append(f'<a href="#{esc(picture_id)}">Charts</a>')
     if has_tables:
         links.append('<a href="#career-records">Full tables</a>')
     if has_faq:
@@ -250,7 +250,7 @@ def career_glance(player, stat_value):
     return (
         f'<section class="career-glance-wrap" id="career-glance">'
         f'<p class="eyebrow">BY FORMAT</p><h2>{esc(heading)}</h2>'
-        f'<p class="muted">Headline official figures. Full batting, bowling and fielding tables follow the pictures.</p>'
+        f'<p class="muted">Key career figures. Full batting, bowling and fielding tables follow the charts.</p>'
         f'<div class="career-glance">{cards}</div></section>'
     )
 

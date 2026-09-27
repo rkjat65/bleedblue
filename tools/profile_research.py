@@ -101,7 +101,7 @@ def yearly_chart(rows, fmt, metric, context):
 
 
 def trends(rows, context, heading='Performance by year'):
-    result = '<section class="panel pr-section"><div class="pr-heading"><div><span class="eyebrow">THE SHAPE OF A CAREER</span><h2>'+esc(heading)+'</h2></div><span class="pill">Available scorecards</span></div><p class="note">Formats are shown separately. These totals cover published scorecards against the twelve national teams; they can differ from complete official career records.</p>'
+    result = '<section class="panel pr-section"><div class="pr-heading"><div><span class="eyebrow">CAREER BY FORMAT</span><h2>'+esc(heading)+'</h2></div><span class="pill">Available scorecards</span></div><p class="note">Formats are shown separately. These totals cover published scorecards against the twelve national teams; they can differ from complete official career records.</p>'
     has_data = False
     for fmt in FORMATS:
         subset = [r for r in rows if r['format'] == fmt]
@@ -143,7 +143,7 @@ def timeline(rows):
     events = milestone_events(rows)
     if not events:
         return ''
-    body = '<section class="panel pr-section"><span class="eyebrow">MOMENTS IN THE RECORD</span><h2>Career timeline</h2><p class="note">Milestones found in available scorecards. The first recorded appearance here is not necessarily the international debut.</p><ol class="pr-timeline">'
+    body = '<section class="panel pr-section"><span class="eyebrow">SCORECARD MILESTONES</span><h2>Career timeline</h2><p class="note">Milestones found in available scorecards. The first recorded appearance here is not necessarily the international debut.</p><ol class="pr-timeline">'
     for row, label in events:
         detail = row['format']+' v '+row['opponent']+' · '+row.get('venue','')
         body += f'<li><time datetime="{esc(row["date"])}">{esc(row["date"])}</time><div><strong>{link(row["url"],label)}</strong><p>{esc(detail)}</p></div></li>'

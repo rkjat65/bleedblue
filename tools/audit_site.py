@@ -70,13 +70,13 @@ def main():
     homepage = (SITE/'index.html').read_text(encoding='utf-8')
     # The homepage is intentionally insight-led: users should see cricket
     # questions and useful records before archive-volume charts.
-    assert 'Start with the questions that define cricket.' in homepage
+    assert 'Compare teams, players and tournaments' in homepage
     assert 'TEAM HEAD-TO-HEAD' in homepage
     assert 'WORLD CUP' in homepage
-    assert 'OFFICIAL WINNERS' in homepage or 'WORLD CUP ARCHIVE' in homepage
-    assert 'Great careers, measured clearly.' in homepage
-    assert 'HOW A MATCH UNFOLDS' in homepage
-    assert 'Worm · cumulative runs by over' in homepage or 'MATCH PICTURE' in homepage
+    assert 'WORLD CUP RECORDS' in homepage
+    assert 'Career records by format' in homepage
+    assert 'FEATURED SCORECARD' in homepage
+    assert 'Worm · cumulative runs by over' in homepage or 'MATCH CHARTS' in homepage
     assert 'archive-chart-data' not in homepage, 'Legacy matches-per-year chart is still on the homepage'
     assert all(set(m['teams'])<=FULL_MEMBERS for m in read(SITE/'data/match-index.json'))
     assert all(set(p['teams'])<=FULL_MEMBERS for p in read(SITE/'data/player-index.json'))

@@ -70,7 +70,7 @@ def homepage_watch(data,today):
     cards=''.join(series_card(series,today,True) for series in data.get('active_series',[])[:4])
     if not cards:
         cards='<p class="panel">No verified India broadcast listing is currently published.</p>'
-    return f'''<section class="home-watch" aria-labelledby="home-watch-title"><div class="section-heading"><div><p class="eyebrow">WATCH IN INDIA</p><h2 id="home-watch-title">Today and next on cricket.</h2><p class="muted">Series-wise television and official streaming details, with India Men and India Women first.</p></div><a href="/where-to-watch/">All broadcast listings →</a></div><div class="watch-grid">{cards}</div></section>'''
+    return f'''<section class="home-watch" aria-labelledby="home-watch-title"><div class="section-heading"><div><p class="eyebrow">WATCH IN INDIA</p><h2 id="home-watch-title">Upcoming international matches</h2><p class="muted">Television and official streaming details, with India’s men’s and women’s matches first.</p></div><a href="/where-to-watch/">All broadcast listings →</a></div><div class="watch-grid">{cards}</div></section>'''
 
 
 def _section(title,lede,series,today,section_class=''):

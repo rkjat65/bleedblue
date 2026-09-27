@@ -115,7 +115,7 @@ def question_page(spec, player, related, snapshot=''):
         f'{_metric_chart(player, spec)}'
         f'<h2>See the full {esc(name)} record</h2>'
         f'<p>This is the official international snapshot, not a scorecard sample. '
-        f'<a href="{esc(profile)}">{esc(name)} career profile</a> has format cards, pictures and the complete batting, bowling and fielding tables. '
+        f'<a href="{esc(profile)}">{esc(name)} career profile</a> has format cards, charts and the complete batting, bowling and fielding tables. '
         f'<a href="{esc(records)}">Open the related leaderboard</a> to see this figure in rank order.</p>'
     )
     if related:

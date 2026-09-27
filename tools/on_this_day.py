@@ -195,7 +195,7 @@ def content(key, events, image, view='page'):
     description = lead['title'] if lead else 'Explore international cricket history'
     alt = f'On this day, {label}: {description}' + (f". {lead['year']}; {lead['metric']}, {lead['metric_label']}." if lead else '')
     title = f'<p class="eyebrow">ON THIS DAY</p><h2>{label} in cricket history</h2>' if view == 'home' else f'<p class="eyebrow">THE CRICKET CALENDAR</p><h1>On this day: {label}</h1>'
-    out = f'<div class="otd-heading"><div>{title}<p>India’s moments. Today’s players. The scorecards behind the memories.</p></div>'
+    out = f'<div class="otd-heading"><div>{title}<p>India and international matches played on this date, with available scorecards.</p></div>'
     out += f'<a class="button" href="/on-this-day/">Explore today’s history →</a></div>' if view == 'home' else '</div>'
     out += f'<div class="otd-feature"><a class="otd-art" href="{day_path(key) if view == "home" else e(lead["url"]) if lead else "/matches/"}"><img src="{e(image)}" alt="{e(alt)}" width="1200" height="675" loading="lazy"></a><div class="otd-feature-copy">'
     if lead:

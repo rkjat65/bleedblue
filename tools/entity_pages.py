@@ -311,7 +311,7 @@ def ground_faq(name, totals):
     markup = (
         f'<section class="panel player-faq" id="ground-questions">'
         f'<h2>Questions fans ask about {esc(name)}</h2>'
-        f'<p class="muted">Answers use recorded matches at this venue. Innings averages sit in the ground picture above.</p>'
+        f'<p class="muted">Answers use recorded matches at this venue. Innings averages appear in the venue charts above.</p>'
         f'<dl>{html_items}</dl></section>'
     )
     schema = {

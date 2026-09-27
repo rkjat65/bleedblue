@@ -113,7 +113,7 @@ def worm(innings, target=None):
         x2, y2 = xy(max_over, target)
         target_line = f'<line class="cw-target" x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}"/><text class="cw-axis" x="{right}" y="{y1-5:.1f}" text-anchor="end">Target {_n(target)}</text>'
     svg = _svg(720, 228, f'<rect class="cw-plot" x="{left}" y="{top}" width="{plot_w}" height="{plot_h}"/>{grid}{target_line}{paths}{dots}<text class="cw-axis" x="360" y="222" text-anchor="middle">Overs</text>', 'Worm chart of cumulative runs by over')
-    return figure('Worm · cumulative runs by over', 'Worm chart of cumulative innings totals', svg + f'<div class="cw-legend">{legend}<span class="cw-key"><i class="cw-wicket"></i>Wicket</span></div>', 'Each point is the innings total at the end of that over. Dots mark wickets in the over. The picture uses recorded over totals only.')
+    return figure('Worm · cumulative runs by over', 'Worm chart of cumulative innings totals', svg + f'<div class="cw-legend">{legend}<span class="cw-key"><i class="cw-wicket"></i>Wicket</span></div>', 'Each point is the innings total at the end of that over. Dots mark wickets in the over. The chart uses recorded over totals only.')
 
 
 def manhattan(inn, title=None):
@@ -487,7 +487,7 @@ def match_lab(card):
     target = None
     if len(with_overs) == 2 and fmt in ('ODI', 'T20I') and with_overs[0].get('runs') is not None:
         target = with_overs[0]['runs'] + 1
-    body = '<section class="cw-lab" id="match-charts"><div class="cw-lab-head"><p class="eyebrow">MATCH PICTURE</p><h2>Worm, Manhattan and the stands that built the innings</h2><p class="muted">These are the pictures used to read a cricket match: how the total grew, where the overs leaked or exploded, and which wickets hurt.</p></div>'
+    body = '<section class="cw-lab" id="match-charts"><div class="cw-lab-head"><p class="eyebrow">MATCH CHARTS</p><h2>Runs by over, wickets and partnerships</h2><p class="muted">The worm tracks the total by over; the Manhattan shows each over’s runs; partnership charts show runs between wickets.</p></div>'
     body += worm(with_overs, target)
     if with_overs:
         body += '<div class="cw-lab-grid">' + ''.join(manhattan(inn) for inn in with_overs) + '</div>'
@@ -524,8 +524,8 @@ def player_lab(rows, name):
         return ''
     return (
         '<section class="cw-lab" id="career-pictures"><div class="cw-lab-head">'
-        '<p class="eyebrow">CAREER IN PICTURES</p>'
-        f'<h2>{_esc(name)}: form, trajectory and how innings end</h2>'
+        '<p class="eyebrow">AVAILABLE SCORECARD CHARTS</p>'
+        f'<h2>{_esc(name)}: recent innings and archive trends</h2>'
         '<p class="muted">Built from available scorecards against the twelve national teams. '
         'Official career tables on this page remain the complete record.</p></div>'
         '<div class="cw-lab-grid">' + ''.join(charts) + '</div></section>'
@@ -569,8 +569,8 @@ def career_lab(career, name):
         return ''
     return (
         '<section class="cw-lab" id="official-pictures"><div class="cw-lab-head">'
-        '<p class="eyebrow">THE OFFICIAL PICTURE</p>'
-        f'<h2>{_esc(name)}: how the career splits by format</h2>'
+        '<p class="eyebrow">CAREER CHARTS</p>'
+        f'<h2>{_esc(name)}: career totals by format</h2>'
         '<p class="muted">These bars use the official international snapshot. '
         'They are the complete career, not the twelve-team scorecard archive.</p></div>'
         '<div class="cw-lab-grid">' + ''.join(charts) + '</div></section>'
@@ -620,4 +620,4 @@ def homepage_lab(card, url):
     charts = match_lab(card)
     if not charts:
         return ''
-    return f'''<section class="home-match-lab" aria-labelledby="match-lab-title"><div class="section-heading"><div><p class="eyebrow">HOW A MATCH UNFOLDS</p><h2 id="match-lab-title">The pictures that make a scorecard readable.</h2><p class="muted">{_esc(title)} · {_esc(match.get("date"))} · {_esc(match.get("format"))} · {_esc(match.get("gender"))}. Worms, Manhattans and partnerships, drawn from recorded overs.</p></div><a href="{_esc(url)}">Open the scorecard →</a></div>{charts}</section>'''
+    return f'''<section class="home-match-lab" aria-labelledby="match-lab-title"><div class="section-heading"><div><p class="eyebrow">FEATURED SCORECARD</p><h2 id="match-lab-title">Scorecard and match charts</h2><p class="muted">{_esc(title)} · {_esc(match.get("date"))} · {_esc(match.get("format"))} · {_esc(match.get("gender"))}</p></div><a href="{_esc(url)}">Open the scorecard →</a></div>{charts}</section>'''
