@@ -19,12 +19,13 @@ from player_profile import player_seo, player_intro, profile_nav, career_glance,
 from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 from entity_pages import (
     team_totals, ground_totals, team_seo, ground_seo, team_intro, ground_intro,
-    team_glance, ground_glance, results_table_rows, team_faq, ground_faq,
+    team_glance, ground_glance, team_faq, ground_faq,
     team_schema, ground_schema, h2h_path,
 )
 from world_cup import FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note, analysis_heading, analysis_lede
 from official_public import load_team_records, load_innings_records, official_team_panel, official_innings_table, official_h2h
 from broadcasts import load_broadcasts, watch_page
+from tidy import tidy_copy
 from arena import section_jump, match_centre, stats_band, leaders_race, result_cards, explore_bento
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -167,6 +168,7 @@ def result(m):
         return o['winner']+' won'+(' by '+margin if margin else '')
     return {'draw':'Match drawn','tie':'Match tied','no result':'No result'}.get(o.get('result'),'Result not recorded')
 def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
+    body=tidy_copy(path,body)
     extra=dict(extra or {})
     faq=extra.pop('faq',None)
     crumb_name=extra.pop('breadcrumb_name',title)
@@ -211,6 +213,15 @@ def matchup(match,path=None):
     return f'<a class="matchup-link" href="{esc(path)}">{label}</a>' if path else label
 def match_table(matches,paths,limit=40):
     return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),matchup(m,paths[m['id']]),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
+def scoreboard(m,innings,gp):
+    """Result header: each side's innings as linked scores, the winner lit, then ground and series."""
+    winner=(m.get('outcome') or {}).get('winner')
+    rows=''
+    for team in m['teams']:
+        scores=' <span class="sb-and">&amp;</span> '.join(f'<a href="#innings-{i}">{inn["runs"]}/{inn["wickets"]}{"d" if inn.get("declared") else ""}</a>' for i,inn in enumerate(innings,1) if inn['team']==team and not inn.get('super_over'))
+        rows+=f'<div class="sb-team{" is-winner" if team==winner else ""}">'+team_badge(team,gp['teams'].get(team))+f'<span class="sb-scores">{scores or "—"}</span></div>'
+    meta=a(gp['grounds'][m['venue']],m['venue'])+(a(gp['series'][m['event']],m['event']) if m.get('event') else '')
+    return f'<section class="scoreboard" aria-label="Result">{rows}<p class="sb-result">{esc(result(m))}</p><div class="sb-meta">{meta}</div></section>'
 def entity_filter_form(kind,name,matches):
     years=sorted({m['date'][:4] for m in matches},reverse=True)
     controls=options('gender',['Men','Women'])+options('format',['Test','ODI','T20I'])+options('year',years,'Year')
@@ -334,10 +345,7 @@ def main():
     trust_pages(page, heading, a, careers['meta'].get('checked_at',''))
     print('Building scorecards and player analysis...',flush=True)
     for mid,card in all_cards.items():
-        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+matchup(m)+f'<div class="result-banner">{esc(result(m))}</div>'+actions()
-        body+='<p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+' · '+a(gp['grounds'][m['venue']],m['venue'])+'</p>'
-        if m['event']:body+='<p>'+a(gp['series'][m['event']],m['event'])+'</p>'
-        if card['innings']:body+='<nav class="innings-nav" aria-label="Jump to innings">'+''.join(a('#innings-'+str(i),inn['team']+' · '+str(inn['runs'])+'/'+str(inn['wickets'])+' · Inn '+str(i)) for i,inn in enumerate(card['innings'],1))+'</nav>'
+        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+scoreboard(m,card['innings'],gp)+actions()
         body+=cw.match_lab(card)
         for index,inn in enumerate(card['innings'],1):
             body+=render_innings(inn,index,people,pp)
@@ -372,19 +380,18 @@ def main():
         subtitle=' · '.join(part for part in [' / '.join(p.get('teams') or []), p.get('gender') or '', years] if part) or 'International career statistics, records and scorecard analysis'
         profile_title='<div class="player-profile-heading">'+heading(p['name'],subtitle,'PLAYER CAREER')+portrait_figure(pid,p['name'],portraits,illustration=illustration)+'</div>'+identity+f'<p class="player-intro">{esc(intro)}</p>'
         glance=career_glance(p,stat_value)
-        official_charts=cw.career_lab(career,p['name'])
         archive_charts=cw.player_lab(rows,p['name'])
         tables=stats_table(p)
         pack=player_q.get(pid)
         faq_html,faq_schema=player_faq(p, urls=pack['urls'] if pack else None, name_slug=pack['name_slug'] if pack else slug(p['name']))
-        picture_id='official-pictures' if official_charts else ('career-pictures' if archive_charts else '')
+        picture_id='career-pictures' if archive_charts else ''
         nav_html=profile_nav(bool(glance),picture_id,True,bool(faq_html),bool(rows))
         body=profile_title+profile_coverage(p,rows)+nav_html+actions()
         if tot:
             role=primary_role(career) if career else 'batter'
             keys=[('matches','Internationals'),('wickets','Wickets'),('runs','Career runs')] if role=='bowler' else [('matches','Internationals'),('runs','Career runs'),('hundreds','Centuries'),('wickets','Wickets')]
             body+='<div class="stats">'+''.join(f'<div><strong>{num(tot.get(k))}</strong><span>{label}</span></div>' for k,label in keys)+'</div>'
-        body+=glance+official_charts+archive_charts
+        body+=glance+archive_charts
         checked_dates=sorted({careers['meta']['checked_at'][:10]}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')})
         snapshot_label=' to '.join(dict.fromkeys([checked_dates[0],checked_dates[-1]])) if checked_dates else ''
         body+='<section class="panel career-tables" id="career-records"><h2>Career records by format</h2>'
@@ -881,10 +888,8 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
                 body=heading(name,f'{totals["matches"]:,} recorded matches · {totals["first"][:4]} to {totals["last"][:4]}','TEAMS')+actions()
                 body+=f'<p class="player-intro">{esc(team_intro(name,totals))}</p>'
                 body+=official_team_panel(name,official_teams,table)
-                body+=team_glance(name,totals)+entity_visuals(kind,name,ms)+cw.result_decades(ms,name)
+                body+=team_glance(name,totals)+cw.result_decades(ms,name)
                 body+='<div class="stats">'+''.join(f'<div><strong>{n:,}</strong><span>{esc(label)}</span></div>' for label,n in [('Won',totals['won']),('Lost',totals['lost']),('Draw / tie / no result',totals['other']),('Matches',totals['matches'])])+'</div>'
-                body+='<section class="panel" id="career-records"><h2>Results by format and gender</h2><p class="muted">Winners in available scorecards. Other is draws, ties and no results. Complete men\'s career results are in the official table above.</p>'
-                body+=table(['Format','Gender','Matches','Wins','Losses','Other','Win rate'],results_table_rows(totals),caption=name+' results by format and gender')+'</section>'
                 rivals=defaultdict(Counter)
                 for m in ms:
                     opp=next(t for t in m['teams'] if t!=name);rivals[opp]['played']+=1;rivals[opp]['wins']+=int(m['outcome'].get('winner')==name)

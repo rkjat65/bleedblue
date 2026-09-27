@@ -231,21 +231,6 @@ def ground_glance(name, totals):
     )
 
 
-def results_table_rows(totals):
-    return [
-        [
-            row['format'],
-            row['gender'],
-            f'{row["matches"]:,}',
-            f'{row["won"]:,}',
-            f'{row["lost"]:,}',
-            f'{row["other"]:,}',
-            f'{row["win_rate"]:.1f}%' if row.get('win_rate') is not None else 'N/A',
-        ]
-        for row in totals['rows']
-    ]
-
-
 def team_faq(name, totals, team_url):
     items = []
 
