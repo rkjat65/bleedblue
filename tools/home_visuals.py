@@ -67,7 +67,35 @@ def homepage_insights(matches, match_routes, people, team_routes, official_h2h=N
       <div class="home-comparisons"><div class="section-heading"><div><p class="eyebrow">PLAYER COMPARISONS</p><h3>Career records by format</h3></div><a href="/compare/">Compare any two players →</a></div><div class="grid two">{compare_cards}</div></div></section>'''
 
 
-def homepage_hero(player_count, match_count, faces=None):
+HERO_DELIVERY = '''<svg class="hero-delivery" viewBox="0 0 1280 470" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
+        <defs><radialGradient id="hd-ball" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#ffb4a8"/><stop offset=".45" stop-color="#e5322d"/><stop offset="1" stop-color="#7a0f12"/></radialGradient>
+        <linearGradient id="hd-trail" x1="0" x2="1"><stop offset="0" stop-color="#7cc4ff" stop-opacity="0"/><stop offset="1" stop-color="#fff2c7" stop-opacity=".95"/></linearGradient>
+        <filter id="hd-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+        <g class="hd-lights"><circle cx="820" cy="96" r="3"/><circle cx="846" cy="92" r="2.4"/><circle cx="872" cy="99" r="2.8"/><circle cx="905" cy="140" r="2.2"/><circle cx="932" cy="137" r="2.6"/><circle cx="1090" cy="118" r="2.4"/></g>
+        <path id="hd-path" class="hd-path" d="M560 150 Q 820 60 1010 402 Q 1080 300 1210 318" pathLength="100"/>
+        <path class="hd-trail" d="M560 150 Q 820 60 1010 402 Q 1080 300 1210 318" pathLength="100"><animate attributeName="stroke-dashoffset" values="100;0;0;-100" keyTimes="0;.62;.7;1" dur="4.2s" repeatCount="indefinite"/></path>
+        <ellipse class="hd-bounce" cx="1010" cy="406" rx="4" ry="1.5"><animate attributeName="rx" values="0;0;38;52" keyTimes="0;.42;.5;1" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;.9;0" keyTimes="0;.42;.46;.8" dur="4.2s" repeatCount="indefinite"/></ellipse>
+        <g class="hd-ball"><circle r="16" fill="#ff6a4d" opacity=".45" filter="url(#hd-glow)"/><circle r="9" fill="url(#hd-ball)"/><path d="M-6 -6 Q 0 0 -6 6 M6 -6 Q 0 0 6 6" stroke="#fff6" stroke-width="1.2" fill="none"><animateTransform attributeName="transform" type="rotate" from="0" to="720" dur="4.2s" repeatCount="indefinite"/></path>
+          <animateMotion dur="4.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.62;1" calcMode="linear"><mpath href="#hd-path"/></animateMotion>
+          <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.04;.6;.66;1" dur="4.2s" repeatCount="indefinite"/></g>
+        <g class="hd-impact" transform="translate(1212 318)"><circle r="10" class="hd-ring"><animate attributeName="r" values="0;0;70" keyTimes="0;.62;.9" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.61;.63;.9" dur="4.2s" repeatCount="indefinite"/></circle>
+          <g class="hd-sparks">''' + ''.join(f'<line x1="0" y1="0" x2="{x}" y2="{y}"><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.62;.64;.85" dur="4.2s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1.5" keyTimes="0;.62;.7;1" dur="4.2s" repeatCount="indefinite"/></line>' for x,y in [(-40,-34),(-52,4),(-30,38),(36,-44),(50,-8),(26,40),(0,-56)]) + '''</g>
+          <rect class="hd-bail" x="-22" y="-62" width="22" height="6" rx="3"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-60 -90;-110 -40" keyTimes="0;.62;.8;1" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.61;.63;.9;1" dur="4.2s" repeatCount="indefinite"/></rect>
+          <rect class="hd-bail" x="2" y="-62" width="22" height="6" rx="3"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;50 -110;90 -60" keyTimes="0;.62;.8;1" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.61;.63;.9;1" dur="4.2s" repeatCount="indefinite"/></rect></g>
+      </svg>'''
+
+
+def _hero_facts(facts):
+    if not facts:
+        return ''
+    chips = ''.join(
+        f'<a class="hero-fact" href="{html.escape(url, quote=True)}" style="--i:{i}"><strong data-count="{value}">{value:,}</strong>'
+        f'<span>{html.escape(label)}</span><em>{html.escape(name)}</em></a>'
+        for i, (value, label, name, url) in enumerate(facts[:3]))
+    return f'<div class="hero-facts" aria-label="Record holders">{chips}</div>'
+
+
+def homepage_hero(player_count, match_count, faces=None, facts=None):
     cast = ''
     if faces:
         items = ''
@@ -82,14 +110,17 @@ def homepage_hero(player_count, match_count, faces=None):
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
       <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" fetchpriority="high"></picture></div>
       <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET</p>
-        <h1 id="hero-title">Records, scorecards<br><em>and match charts.</em></h1>
-        <p class="hero-description">Men’s and women’s Tests, ODIs and T20Is. Compare career records and open ball-by-ball scorecards where available.</p>
+        <h1 id="hero-title">Every run. Every wicket.<br><em>Every match.</em></h1>
+        <p class="hero-description">Men’s and women’s Tests, ODIs and T20Is. Career records, head-to-heads and ball-by-ball scorecards with match charts.</p>
+        <ul class="hero-quick" aria-label="Popular"><li><a href="/players/virat-kohli/">Virat Kohli</a></li><li><a href="/players/smriti-mandhana/">Smriti Mandhana</a></li><li><a href="/head-to-head/">India v Australia</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
         <div class="hero-actions"><a class="button hero-primary" href="/players/">Explore the players <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/matches/">Open a scorecard <span aria-hidden="true">→</span></a></div>
-        <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Player, team or match" required autocomplete="off"><button type="submit">Search</button></div></form>
+        <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Search a player, team or match…" required autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="submit">Search</button></div></form>
       </div>
       {cast}
+      {HERO_DELIVERY}
+      {_hero_facts(facts)}
       <button type="button" class="hero-motion" data-hero-motion aria-pressed="false">Pause motion</button>
-      <div class="hero-bottom"><span>{player_count:,} PLAYERS <b>·</b> {match_count:,} MATCHES <b>·</b> TEST · ODI · T20I <i>MEN &amp; WOMEN</i></span></div>
+      <div class="hero-bottom"><span><strong data-count="{player_count}">{player_count:,}</strong> PLAYERS <b>·</b> <strong data-count="{match_count}">{match_count:,}</strong> MATCHES <b>·</b> TEST · ODI · T20I <i>MEN &amp; WOMEN</i></span></div>
     </section>'''
 
 
