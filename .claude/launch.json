@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cricket-wicket-built",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["serve.py", "--built", "--port", "8766"],
+      "port": 8766
+    }
+  ]
+}

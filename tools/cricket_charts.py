@@ -312,7 +312,7 @@ def trajectory(rows, key='runs', caption='Career trajectory in this archive'):
     return figure(caption, caption, svg, f'Running total of recorded {key} by calendar year in available scorecards. Years without a recorded {key} do not add to the line.')
 
 
-def dismissals(rows):
+def dismissals(rows, caption='How innings ended'):
     kinds = Counter()
     known = 0
     for row in rows:
@@ -341,10 +341,10 @@ def dismissals(rows):
         'Other dismissal': 'cw-c5', 'Not out': 'cw-c8', 'Not recorded': 'cw-c5',
     }
     parts = [(labels[k], kinds[k], palette[k]) for k in labels if kinds.get(k)]
-    return donut(parts, 'How innings ended', 'Dismissals use the wording on the scorecard. Not recorded stays a separate slice; it is never treated as not out.')
+    return donut(parts, caption, 'Dismissals use the wording on the scorecard. Not recorded stays a separate slice; it is never treated as not out.')
 
 
-def batting_order(rows):
+def batting_order(rows, caption='Batting order in this archive'):
     groups = defaultdict(list)
     for row in rows:
         pos = row.get('position')
@@ -361,7 +361,7 @@ def batting_order(rows):
         avg = _rate(runs, sum(1 for r in sample if r.get('out')) if sample and all(r.get('out') is not None for r in sample) else None)
         fill = runs / peak * 100 if sample else 0
         cells += f'<div class="cw-order-cell" title="Position {pos}: {inns} innings, {runs} runs"><span>{pos}</span><strong>{_n(avg) if avg is not None else (inns or "-")}</strong><i style="height:{fill:.1f}%"></i><small>{inns} inns</small></div>'
-    return figure('Batting order in this archive', 'Runs and average by batting position', f'<div class="cw-order">{cells}</div>', 'Average is runs divided by recorded dismissals at that position. A dash in the average means dismissals were not fully recorded.')
+    return figure(caption, 'Runs and average by batting position', f'<div class="cw-order">{cells}</div>', 'Average is runs divided by recorded dismissals at that position. A dash in the average means dismissals were not fully recorded.')
 
 
 def result_split(rows):
@@ -487,16 +487,13 @@ def match_lab(card):
     target = None
     if len(with_overs) == 2 and fmt in ('ODI', 'T20I') and with_overs[0].get('runs') is not None:
         target = with_overs[0]['runs'] + 1
-    body = '<section class="cw-lab" id="match-charts"><div class="cw-lab-head"><p class="eyebrow">MATCH CHARTS</p><h2>Runs by over, wickets and partnerships</h2><p class="muted">The worm tracks the total by over; the Manhattan shows each over’s runs; partnership charts show runs between wickets.</p></div>'
+    body = '<section class="cw-lab" id="match-charts"><div class="cw-lab-head"><p class="eyebrow">MATCH CHARTS</p><h2>Runs by over, wickets and phases</h2></div>'
     body += worm(with_overs, target)
     if with_overs:
         body += '<div class="cw-lab-grid">' + ''.join(manhattan(inn) for inn in with_overs) + '</div>'
         phase_html = ''.join(phases(inn, fmt) for inn in with_overs)
         if phase_html:
             body += '<div class="cw-lab-grid">' + phase_html + '</div>'
-    stands = ''.join(partnerships(inn) for inn in innings)
-    if stands:
-        body += '<div class="cw-lab-grid">' + stands + '</div>'
     mixes = ''.join(scoring_mix(inn.get('batting') or [], f'Scoring mix · {inn.get("team") or "innings"}') for inn in innings)
     spells = ''.join(bowling_spells(inn.get('bowling') or []) for inn in innings)
     extras = mixes + spells
@@ -621,3 +618,170 @@ def homepage_lab(card, url):
     if not charts:
         return ''
     return f'''<section class="home-match-lab" aria-labelledby="match-lab-title"><div class="section-heading"><div><p class="eyebrow">FEATURED SCORECARD</p><h2 id="match-lab-title">Scorecard and match charts</h2><p class="muted">{_esc(title)} · {_esc(match.get("date"))} · {_esc(match.get("format"))} · {_esc(match.get("gender"))}</p></div><a href="{_esc(url)}">Open the scorecard →</a></div>{charts}</section>'''
+
+
+# ---------------------------------------------------------------------------
+# Format-first profile pictures: one format, one discipline per figure.
+
+def _milestone_step(peak, key):
+    if key == 'runs':
+        for step in (5000, 2000, 1000, 500, 250, 100, 50):
+            if peak / step <= 12 and peak >= step:
+                return step
+        return None
+    for step in (200, 100, 50, 25, 10, 5):
+        if peak / step <= 12 and peak >= step:
+            return step
+    return None
+
+
+def career_arc(rows, key='runs', caption='Career arc'):
+    """Cumulative runs or wickets innings by innings, with round-number milestones."""
+    sample = [r for r in sorted(rows, key=lambda r: (r.get('date') or '', r.get('match') or '', r.get('innings') or 0)) if r.get(key) is not None]
+    if len(sample) < 4:
+        return ''
+    running, points = 0, []
+    for row in sample:
+        running += row[key]
+        points.append((row['date'], running))
+    peak = points[-1][1]
+    if peak <= 0:
+        return ''
+    left, right, top, bottom = 40, 470, 14, 150
+    plot_w, plot_h = right - left, bottom - top
+    n = max(len(points) - 1, 1)
+
+    def xy(i, value):
+        return left + i / n * plot_w, bottom - value / peak * plot_h
+
+    coords = [xy(i, value) for i, (_, value) in enumerate(points)]
+    keep = set(range(0, len(points), max(1, math.ceil(len(points) / 200)))) | {len(points) - 1}
+    grid = ''
+    for value in _ticks(peak):
+        if value > peak:
+            continue
+        y = bottom - value / peak * plot_h
+        grid += f'<line class="cw-grid" x1="{left}" y1="{y:.1f}" x2="{right}" y2="{y:.1f}"/><text class="cw-axis" x="{left - 6}" y="{y + 3:.1f}" text-anchor="end">{_n(value)}</text>'
+    years = []
+    for i, (date, _) in enumerate(points):
+        year = date[:4]
+        if not years or years[-1][1] != year:
+            years.append((i, year))
+    step = max(1, math.ceil(len(years) / 6))
+    labels = ''.join(f'<text class="cw-axis" x="{xy(i, 0)[0]:.1f}" y="{bottom + 14}" text-anchor="middle">{year}</text>' for k, (i, year) in enumerate(years) if k % step == 0)
+    marks = ''
+    m_step = _milestone_step(peak, key)
+    if m_step:
+        target = m_step
+        for i, (_, value) in enumerate(points):
+            if value >= target:
+                x, y = coords[i]
+                label = f'{target // 1000}k' if target >= 1000 and target % 1000 == 0 else f'{target:,}'
+                marks += f'<circle class="cw-mark" cx="{x:.1f}" cy="{y:.1f}" r="3.4"><title>{label} {key}: {_esc(points[i][0])}</title></circle><text class="cw-mark-text" x="{x:.1f}" y="{y - 8:.1f}" text-anchor="middle">{label}</text>'
+                keep.add(i)
+                target += m_step
+    end_x, end_y = coords[-1]
+    end = f'<text class="cw-end" x="{min(end_x, right - 2):.1f}" y="{max(end_y - 10, top + 10):.1f}" text-anchor="end">{_n(peak)}</text>'
+    thinned = [c for i, c in enumerate(coords) if i in keep]
+    area = _polyline([(left, bottom)] + thinned + [(thinned[-1][0], bottom)])
+    line = _polyline(thinned)
+    svg = _svg(480, 168, f'{grid}<polygon class="cw-area" points="{area}"/><polyline class="cw-line cw-fmt" fill="none" points="{line}"/>{marks}{end}{labels}', caption)
+    unit = 'runs' if key == 'runs' else 'wickets'
+    return figure(caption, caption, svg, f'Running total of {unit} after each recorded innings; dots mark round-number milestones.')
+
+
+def year_bars(rows, key='runs', caption='By year'):
+    """Vertical bars per calendar year; empty years stay empty."""
+    sample = [r for r in rows if r.get(key) is not None and r.get('date')]
+    if len(sample) < 3:
+        return ''
+    totals = defaultdict(int)
+    for row in sample:
+        totals[row['date'][:4]] += row[key]
+    years = [str(y) for y in range(int(min(totals)), int(max(totals)) + 1)]
+    if len(years) < 2:
+        return ''
+    peak = max(totals.values())
+    if peak <= 0:
+        return ''
+    left, right, top, bottom = 40, 470, 16, 140
+    plot_w, plot_h = right - left, bottom - top
+    slot = plot_w / len(years)
+    bar_w = max(3, min(26, slot * 0.68))
+    grid = ''
+    for value in _ticks(peak):
+        if value > peak:
+            continue
+        y = bottom - value / peak * plot_h
+        grid += f'<line class="cw-grid" x1="{left}" y1="{y:.1f}" x2="{right}" y2="{y:.1f}"/><text class="cw-axis" x="{left - 6}" y="{y + 3:.1f}" text-anchor="end">{_n(value)}</text>'
+    bars = ''
+    step = max(1, math.ceil(len(years) / 7))
+    best = max(totals, key=lambda y: totals[y])
+    for i, year in enumerate(years):
+        value = totals.get(year, 0)
+        h = value / peak * plot_h
+        x = left + i * slot + (slot - bar_w) / 2
+        cls = 'cw-bar cw-fmt' + (' is-best' if year == best else '')
+        bars += f'<rect class="{cls}" x="{x:.1f}" y="{bottom - h:.1f}" width="{bar_w:.1f}" height="{max(h, 0.8 if value else 0):.1f}" rx="2"><title>{year}: {_n(value)} {key}</title></rect>'
+        if len(years) <= 16 and value:
+            bars += f'<text class="cw-bar-value" x="{x + bar_w / 2:.1f}" y="{bottom - h - 4:.1f}" text-anchor="middle">{_n(value)}</text>'
+        if i % step == 0 or i == len(years) - 1:
+            bars += f'<text class="cw-axis" x="{x + bar_w / 2:.1f}" y="{bottom + 14}" text-anchor="middle">{year}</text>'
+    svg = _svg(480, 160, grid + bars, caption)
+    return figure(caption, caption, svg, f'Calendar-year totals of recorded {key}. The brightest bar is the best year.')
+
+
+def _bucket_chart(buckets, caption, note, aria):
+    total = sum(count for _, count in buckets)
+    if total < 5:
+        return ''
+    peak = max(count for _, count in buckets) or 1
+    cells = ''
+    for label, count in buckets:
+        cells += (f'<div class="cw-bucket" title="{_esc(label)}: {count} innings"><strong>{count}</strong>'
+                  f'<div class="cw-bucket-track"><i class="cw-fmt" style="height:{count / peak * 100:.1f}%"></i></div><span>{_esc(label)}</span></div>')
+    return figure(caption, aria, f'<div class="cw-buckets" role="img" aria-label="{_esc(aria)}">{cells}</div>', note)
+
+
+def innings_histogram(rows, caption='Innings by score'):
+    batting = [r for r in rows if r.get('runs') is not None]
+    buckets = [('0', lambda v: v == 0), ('1-9', lambda v: 1 <= v <= 9), ('10-24', lambda v: 10 <= v <= 24), ('25-49', lambda v: 25 <= v <= 49), ('50-99', lambda v: 50 <= v <= 99), ('100+', lambda v: v >= 100)]
+    counts = [(label, sum(1 for r in batting if test(r['runs']))) for label, test in buckets]
+    fifties_plus = sum(1 for r in batting if r['runs'] >= 50)
+    hundreds = sum(1 for r in batting if r['runs'] >= 100)
+    note = f'Scores of fifty or more: {fifties_plus}; {hundreds} became hundreds' + (f' ({100 * hundreds / fifties_plus:.0f}% conversion).' if fifties_plus else '.')
+    return _bucket_chart(counts, caption, note, 'Innings grouped by runs scored')
+
+
+def bowling_histogram(rows, caption='Innings by wickets'):
+    bowling = [r for r in rows if r.get('wickets') is not None]
+    counts = [(label, sum(1 for r in bowling if r['wickets'] == k)) for label, k in (('0', 0), ('1', 1), ('2', 2), ('3', 3), ('4', 4))]
+    counts.append(('5+', sum(1 for r in bowling if r['wickets'] >= 5)))
+    if sum(c for _, c in counts[1:]) < 3:
+        return ''
+    return _bucket_chart(counts, caption, 'Bowling innings grouped by wickets taken.', 'Bowling innings grouped by wickets')
+
+
+def format_lab(rows, fmt, name, want_bowling, role='batter'):
+    """Figures for one format panel; returns the figures only, no wrapper."""
+    batting = [r for r in rows if r.get('position') is not None or r.get('runs') is not None or r.get('balls') is not None]
+    bowling = [r for r in rows if any(r.get(k) is not None for k in ('wickets', 'legal', 'conceded'))]
+    bat_charts = [
+        career_arc(batting, 'runs', f'{fmt} runs, innings by innings'),
+        year_bars(batting, 'runs', f'{fmt} runs by year'),
+        form_strip(batting, 'runs', f'Last 20 {fmt} innings'),
+        innings_histogram(batting, f'{fmt} innings by score'),
+        dismissals(batting, f'How {fmt} innings ended'),
+        batting_order(batting, f'{fmt} batting position: average and innings'),
+        scoring_mix(batting, f'{fmt} runs from boundaries'),
+    ]
+    bowl_charts = []
+    if want_bowling:
+        bowl_charts = [
+            career_arc(bowling, 'wickets', f'{fmt} wickets, innings by innings'),
+            year_bars(bowling, 'wickets', f'{fmt} wickets by year'),
+            form_strip(bowling, 'wickets', f'Last 20 {fmt} bowling innings'),
+            bowling_histogram(bowling, f'{fmt} innings by wickets'),
+        ]
+    ordered = bowl_charts + bat_charts if role == 'bowler' else bat_charts + bowl_charts
+    return ''.join(c for c in ordered if c)

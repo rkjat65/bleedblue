@@ -5,7 +5,7 @@ from collections import Counter
 
 
 def _metric(value):
-    return '—' if value is None else f'{value:,}' if isinstance(value, int) else f'{value:.2f}' if isinstance(value, float) else str(value)
+    return '-' if value is None else f'{value:,}' if isinstance(value, int) else f'{value:.2f}' if isinstance(value, float) else str(value)
 
 
 def _team_record(matches, left, right):

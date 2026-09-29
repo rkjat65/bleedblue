@@ -14,8 +14,10 @@ from portraits import load_portraits, portrait_figure
 from profile_research import select_research_players, profile_research_section, opponent_pages, research_index
 from editorial_research import build_editorial, entity_context
 from studio_page import studio_markup
-from data_health import profile_coverage, coverage_page
-from player_profile import player_seo, player_intro, profile_nav, career_glance, career_tables, player_faq, player_person, primary_role
+from data_health import coverage_page
+from player_profile import player_seo, career_glance, career_tables, player_faq, player_person, primary_role
+from profile_research import opposition_links
+from profile_formats import profile_body
 from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 from entity_pages import (
     team_totals, ground_totals, team_seo, ground_seo, team_intro, ground_intro,
@@ -70,12 +72,34 @@ ILLUSTRATIONS = {}
 HERO_CAST = ('Virat Kohli','Rohit Sharma','Smriti Mandhana','Harmanpreet Kaur','MS Dhoni','Ellyse Perry','Sachin Tendulkar','Pat Cummins')
 # Cricket host territories, used only for these unambiguous city labels.
 HOST_CITIES = {}
-for country, cities in {'India':'Mumbai|Chennai|Delhi|New Delhi|Kolkata|Bengaluru|Bangalore|Hyderabad|Ahmedabad|Pune|Nagpur|Mohali|Dharamsala|Ranchi|Rajkot|Indore|Lucknow|Kanpur|Visakhapatnam|Cuttack|Guwahati|Thiruvananthapuram|Raipur', 'Australia':'Sydney|Melbourne|Adelaide|Perth|Brisbane|Hobart|Canberra|Cairns|Darwin', 'England':'London|Manchester|Birmingham|Nottingham|Leeds|Southampton|Chester-le-Street|Cardiff|Bristol|Taunton|Worcester|Leicester|Derby|Hove|Chelmsford', 'New Zealand':'Auckland|Wellington|Christchurch|Hamilton|Dunedin|Napier|Mount Maunganui|Nelson|Queenstown', 'South Africa':'Cape Town|Johannesburg|Durban|Centurion|Pretoria|Gqeberha|Port Elizabeth|Paarl|Bloemfontein|Potchefstroom|East London|Kimberley', 'Pakistan':'Lahore|Karachi|Rawalpindi|Multan|Faisalabad', 'Sri Lanka':'Colombo|Galle|Kandy|Dambulla|Pallekele|Hambantota', 'Bangladesh':'Dhaka|Mirpur|Chattogram|Chittagong|Sylhet', 'Zimbabwe':'Harare|Bulawayo', 'United Arab Emirates':'Dubai|Sharjah|Abu Dhabi', 'Ireland':'Dublin|Belfast|Bready|Malahide', 'West Indies':'Bridgetown|Kingston|Gros Islet|Port of Spain|Providence|Basseterre|St George\'s|North Sound|Roseau', 'Namibia':'Windhoek', 'Netherlands':'Amstelveen|Rotterdam|The Hague', 'Scotland':'Edinburgh|Aberdeen|Glasgow', 'Nepal':'Kirtipur|Kathmandu', 'Oman':'Al Amerat|Muscat'}.items():
-    HOST_CITIES.update({city:country for city in cities.split('|')})
+for country, cities in {"India": "Mumbai|Chennai|Delhi|New Delhi|Kolkata|Bengaluru|Bangalore|Hyderabad|Ahmedabad|Pune|Nagpur|Mohali|Chandigarh|New Chandigarh|Dharamsala|Dharamshala|Ranchi|Rajkot|Indore|Lucknow|Kanpur|Visakhapatnam|Cuttack|Guwahati|Thiruvananthapuram|Raipur|Vadodara|Jaipur|Kochi|Gwalior|Jamshedpur|Margao|Faridabad|Kottayam|Vijayawada|Dehradun|Greater Noida|Mulapadu|Navi Mumbai|Surat|Tirunelveli|Bhubaneswar|Noida", "Australia": "Carrara|Kerrydale|Bowral|Bradman Oval|Sydney|Melbourne|Adelaide|Perth|Brisbane|Hobart|Canberra|Cairns|Darwin|Geelong|Townsville|Mackay|Coffs Harbour|Launceston|Alice Springs", "England": "County Ground, Hove|London|Manchester|Birmingham|Nottingham|Leeds|Southampton|Chester-le-Street|Cardiff|Bristol|Taunton|Worcester|Leicester|Derby|Hove|Chelmsford|Canterbury|Northampton|Scarborough|Cheltenham|Arundel|Beckenham|Loughborough|Wormsley|Durham", "New Zealand": "Auckland|Wellington|Christchurch|Hamilton|Dunedin|Napier|Mount Maunganui|Nelson|Queenstown|Whangarei|New Plymouth|Lincoln|Palmerston North|Tauranga|Invercargill|Rangiora", "South Africa": "Cape Town|Johannesburg|Durban|Centurion|Pretoria|Gqeberha|Port Elizabeth|Paarl|Bloemfontein|Potchefstroom|East London|Kimberley|Benoni|Pietermaritzburg|Stellenbosch|Oudtshoorn", "Pakistan": "Lahore|Karachi|Rawalpindi|Multan|Faisalabad|Peshawar|Gujranwala|Sheikhupura|Quetta|Sialkot|Sargodha|Abbottabad|Islamabad", "Sri Lanka": "Chilaw|Colombo|Galle|Kandy|Dambulla|Pallekele|Hambantota|Moratuwa|Khettarama|Katunayake|Kurunegala|Matara", "Bangladesh": "Rajshahi|Sheikh Kamal|Dhaka|Mirpur|Chattogram|Chittagong|Sylhet|Khulna|Fatullah|Bogra|Savar|Narayanganj", "Zimbabwe": "Harare|Bulawayo|Kwekwe|Mutare", "Afghanistan": "Kabul", "United Arab Emirates": "Dubai|Sharjah|Abu Dhabi|Ajman", "Ireland": "Louth|Dublin|Belfast|Bready|Malahide|Stormont|Clontarf|Comber|Waringstown|Londonderry", "West Indies": "Bridgetown|Kingston|Kingstown|Gros Islet|Port of Spain|Providence|Basseterre|North Sound|Roseau|Tarouba|Barbados|Guyana|Trinidad|Antigua|Jamaica|St Lucia|St Kitts|Grenada|Dominica|St Vincent|Arnos Vale|Georgetown|Castries|Coolidge|Cave Hill|St George's", "Namibia": "Windhoek", "Netherlands": "Amstelveen|Rotterdam|The Hague|Utrecht|Deventer|Voorburg|Schiedam", "Scotland": "Edinburgh|Aberdeen|Glasgow|Ayr|Dundee|Forfar", "Nepal": "Kirtipur|Kathmandu", "Oman": "Al Amerat|Al Amarat|Muscat", "United States of America": "Lauderhill|New York|Dallas|Grand Prairie|Morrisville|Houston|Pearland", "Canada": "Toronto|King City|Brampton", "Malaysia": "Kuala Lumpur|Bangi|Johor", "Kenya": "Nairobi|Mombasa", "Singapore": "Singapore", "Qatar": "Doha", "Hong Kong": "Hong Kong|Mong Kok", "Thailand": "Bangkok|Chiang Mai", "Papua New Guinea": "Port Moresby", "Uganda": "Entebbe|Kampala", "Rwanda": "Kigali|Kigali City", "Botswana": "Gaborone", "Nigeria": "Lagos|Abuja", "Ghana": "Accra", "Japan": "Sano", "Spain": "Almeria|Murcia|La Manga", "Italy": "Rome|Bologna", "Germany": "Krefeld", "Finland": "Kerava|Vantaa", "Czech Republic": "Prague", "Romania": "Ilfov County", "Bulgaria": "Sofia", "Malta": "Marsa", "Cyprus": "Episkopi", "Argentina": "Buenos Aires", "Indonesia": "Bali", "Vanuatu": "Port Vila", "Bhutan": "Gelephu", "Belgium": "Waterloo|Gent", "Denmark": "Brondby", "Portugal": "Albergaria", "Austria": "Seebarn|Vienna", "Jersey": "St Saviour|St Clement", "Guernsey": "St Peter Port|Castel", "Isle of Man": "Castletown", "Mexico": "Naucalpan", "Sweden": "Stockholm|Malmo", "Estonia": "Tallinn", "Serbia": "Belgrade", "Croatia": "Zagreb", "Hungary": "Budapest", "Greece": "Corfu", "Luxembourg": "Walferdange", "Slovenia": "Ljubljana", "Gibraltar": "Gibraltar", "Cayman Islands": "George Town", "Peru": "Lima", "Chile": "Santiago", "Brazil": "Sao Paulo|Brasilia", "Costa Rica": "San Jose", "Panama": "Panama City", "Belize": "Belize City", "Tanzania": "Dar es Salaam", "Mozambique": "Maputo", "Eswatini": "Mbabane", "Lesotho": "Maseru", "Malawi": "Blantyre|Lilongwe", "Zambia": "Lusaka", "Cameroon": "Yaounde", "Sierra Leone": "Freetown", "Gambia": "Banjul", "Mali": "Bamako", "Ivory Coast": "Abidjan", "Saudi Arabia": "Riyadh|Jeddah", "Bahrain": "Manama|Riffa", "Iran": "Tehran|Chabahar", "Uzbekistan": "Tashkent", "Mongolia": "Ulaanbaatar", "South Korea": "Incheon|Seoul", "China": "Guanggong|Guangzhou|Hangzhou", "Cambodia": "Phnom Penh", "Myanmar": "Yangon", "Philippines": "Manila", "Maldives": "Male", "Fiji": "Suva|Nadi", "Samoa": "Apia", "Cook Islands": "Rarotonga", "Timor-Leste": "Dili", "Suriname": "Paramaribo"}.items():
+    for city in cities.split('|'):HOST_CITIES.setdefault(city,country)
+
+REGION_HOSTS={'United Kingdom':'England','Wales':'England','Barbados':'West Indies','Jamaica':'West Indies','Trinidad and Tobago':'West Indies','Guyana':'West Indies','Saint Lucia':'West Indies','Antigua and Barbuda':'West Indies','St Kitts and Nevis':'West Indies','Dominica':'West Indies','Grenada':'West Indies','Saint Vincent and the Grenadines':'West Indies','UAE':'United Arab Emirates','USA':'United States of America'}
+
+def host_country(m,venue_hosts=None):
+    """Host country from the recorded city, the metadata, the same venue elsewhere, or the venue name."""
+    host=HOST_CITIES.get(m.get('city') or '') or m.get('host_country')
+    if not host and venue_hosts:host=venue_hosts.get(m.get('venue'))
+    if not host:
+        venue=m.get('venue') or ''
+        for city,country in VENUE_KEYS:
+            if city in venue:host=country;break
+    return REGION_HOSTS.get(host,host)
+
+VENUE_KEYS=sorted(((city,country) for city,country in HOST_CITIES.items() if len(city)>=5),key=lambda kv:-len(kv[0]))
+
+def venue_host_map(matches):
+    """Venue to host country when any match at that venue names its city."""
+    votes=defaultdict(Counter)
+    for m in matches:
+        host=HOST_CITIES.get(m.get('city') or '') or m.get('host_country')
+        if host and m.get('venue'):votes[m['venue']][host]+=1
+    return {venue:counter.most_common(1)[0][0] for venue,counter in votes.items()}
 
 def read(path): return json.loads((ROOT / path).read_text(encoding='utf-8'))
 def esc(v): return html.escape(str(v if v is not None else ''), quote=True)
-def num(v): return '—' if v is None else f'{v:,}' if isinstance(v, int) else f'{v:.2f}' if isinstance(v,float) else str(v)
+def num(v): return '-' if v is None else f'{v:,}' if isinstance(v, int) else f'{v:.2f}' if isinstance(v,float) else str(v)
 def slug(v): return re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD', str(v)).encode('ascii','ignore').decode().lower()).strip('-') or 'unknown'
 def fullname(p): return ALIASES.get(p['name'],p['name'])
 
@@ -109,14 +133,14 @@ def rate(top,bottom,factor=1):
     from decimal import Decimal,ROUND_DOWN
     return float((Decimal(top)*factor/Decimal(bottom)).quantize(Decimal('.01'),rounding=ROUND_DOWN))
 
-def decimal_stat(value):return '—' if value is None else f'{value:.2f}'
+def decimal_stat(value):return '-' if value is None else f'{value:.2f}'
 
 def stat_value(s,key):
     v=s.get(key)
     if v is None:
         denominator={'avg':'outs','sr':'balls','bowlAvg':'wickets','bowlSr':'wickets','econ':'legal'}.get(key)
         if denominator and (s.get(denominator)==0 or (key in ('avg','sr') and 'innings' in s and not s['innings'] and s.get('runs') is None) or (key in ('bowlAvg','bowlSr','econ') and 'bowling_innings' in s and not s['bowling_innings'] and s.get('wickets') is None)):return '<span class="not-applicable" title="No applicable denominator">N/A</span>'
-        return '<span class="missing" title="Not recorded in the verified source">—</span>'
+        return '<span class="missing" title="Not recorded in the verified source">-</span>'
     if key=='dismissals_per_innings':return f'{v:.3f}'
     return esc(decimal_stat(v) if key in ('avg','sr','bowlAvg','bowlSr','econ','dismissals_per_innings') else num(v))
 
@@ -133,17 +157,25 @@ def dismissal_text(b,people):
     if kind=='run out':return 'run out'+(' ('+fielders+')' if fielders else '')
     return kind
 
-def render_innings(inn,index,people,pp):
+def render_innings(inn,index,people,pp,squad=None):
     bpo=inn.get('balls_per_over',6)
-    def overs(b):return esc(str(b['overs_display'])) if b.get('overs_display') not in (None,'None') else esc(str(b['overs'])) if isinstance(b.get('overs'),(int,float,str)) else ('—' if b.get('balls') is None else str(b['balls']//bpo)+'.'+str(b['balls']%bpo))
-    total=str(inn['runs'])+('/'+str(inn['wickets']) if inn['wickets'] is not None and inn['wickets']<10 else '')+('d' if inn.get('declared') else '')
-    body='<section id="innings-'+str(index)+'" class="panel innings-panel"><div class="innings-heading"><div><span class="eyebrow">INNINGS '+str(index)+(' · SUPER OVER' if inn.get('super_over') else '')+'</span><h2>'+esc(inn['team'])+'</h2></div><strong class="innings-total">'+esc(total)+'</strong></div>'
+    def overs(b):return esc(str(b['overs_display'])) if b.get('overs_display') not in (None,'None') else esc(str(b['overs'])) if isinstance(b.get('overs'),(int,float,str)) else ('-' if b.get('balls') is None else str(b['balls']//bpo)+'.'+str(b['balls']%bpo))
+    total=score_text(inn);ov=overs_text(inn);rr=run_rate(inn)
+    sub=' · '.join(part for part in [(ov+' overs') if ov else '', ('run rate '+f'{rr:.2f}') if rr is not None else '', 'all out' if inn.get('wickets')==10 else '', 'declared' if inn.get('declared') else ''] if part)
+    body='<section id="innings-'+str(index)+'" class="panel innings-panel"><div class="innings-heading"><div><span class="eyebrow">INNINGS '+str(index)+(' · SUPER OVER' if inn.get('super_over') else '')+'</span><h2>'+esc(inn['team'])+'</h2>'+(f'<small>{esc(sub)}</small>' if sub else '')+'</div><strong class="innings-total">'+esc(total)+'</strong></div>'
     body+=table(['Batter','Dismissal','R','B','4s','6s','SR'],[[a(pp[b['id']],people[b['id']]['name']),esc(dismissal_text(b,people)),esc(num(b['runs']))+('' if b['out'] else '<span class="notout">*</span>'),num(b['balls']),num(b['fours']),num(b['sixes']),decimal_stat(b.get('sr') if b.get('sr') is not None else rate(b['runs'],b['balls'],100))] for b in inn['batting']],caption='Batting scorecard')
-    body+='<div class="innings-summary"><span>Extras <strong>'+num(inn['extras'])+'</strong></span><span>Overs <strong>'+overs(inn)+'</strong></span></div>'
+    wides=[b.get('wides') for b in inn['bowling']];noballs=[b.get('noballs') for b in inn['bowling']]
+    detail=''
+    if inn.get('extras') is not None and inn['bowling'] and all(v is not None for v in wides+noballs):
+        w=sum(wides);nb=sum(noballs);other=inn['extras']-w-nb
+        if other>=0:detail=f' <small>(w {w}, nb {nb}, b/lb {other})</small>'
+    batted={b['id'] for b in inn['batting']}
+    dnb=[p for p in (squad or []) if p.get('id') not in batted]
+    body+='<div class="innings-summary"><span>Extras <strong>'+num(inn['extras'])+'</strong>'+detail+'</span><span>Total <strong>'+esc(total)+'</strong>'+(f' <small>({esc(ov)} ov)</small>' if ov else '')+'</span>'+(f'<span>Run rate <strong>{rr:.2f}</strong></span>' if rr is not None else '')+'</div>'
+    if dnb and not inn.get('super_over'):body+='<p class="dnb">Did not bat: '+', '.join(a(pp[p['id']],people[p['id']]['name']) if p.get('id') in pp else esc(p.get('name','')) for p in dnb)+'</p>'
+    if inn['fall']:body+='<p class="fow"><span class="fow-label">Fall of wickets</span>'+fall_text(inn)+'</p>'
     body+=table(['Bowler','O','M','R','W','Econ','WD','NB'],[[a(pp[b['id']],people[b['id']]['name']),overs(b),num(b.get('maidens')),num(b['runs']),num(b['wickets']),decimal_stat(b.get('econ') if b.get('econ') is not None else rate(b['runs'],b['balls'],bpo)),num(b.get('wides')),num(b.get('noballs'))] for b in inn['bowling']],caption='Bowling scorecard')
-    if inn['fall']:
-        body+=cw.partnerships(inn)
-        body+='<details class="innings-details"><summary>Fall of wickets</summary><p>'+esc(' · '.join(f'{w["runs"]}/{w["wicket"]} ({w["player"]})' for w in inn['fall']))+'</p></details>'
+    if inn['fall']:body+=cw.partnerships(inn)
     if inn['overs']:
         body+='<details class="innings-details"><summary>Over-by-over totals</summary>'+table(['Over','Runs','Wickets','Total'],[[str(o[k]) for k in ['over','runs','wickets','total']] for o in inn['overs']],caption='Runs and wickets in each over')+'</details>'
     return body+'</section>'
@@ -166,8 +198,44 @@ def result(m):
     o=m['outcome']
     if o.get('winner'):
         margin=m.get('margin_text') or ' and '.join('an innings' if k=='innings' and v==1 else f'{v} {k}' for k,v in o.get('by',{}).items())
-        return o['winner']+' won'+(' by '+margin if margin else '')
+        text=o['winner']+' won'+(' by '+margin if margin else '')
+        if o.get('method'):text+=' ('+str(o['method'])+' method)'
+        return text
+    if o.get('result')=='tie' and o.get('eliminator'):return 'Match tied · '+str(o['eliminator'])+' won the Super Over'
     return {'draw':'Match drawn','tie':'Match tied','no result':'No result'}.get(o.get('result'),'Result not recorded')
+def overs_text(inn):
+    """Overs bowled in an innings from recorded balls, or the historical display value."""
+    if inn.get('overs_display') not in (None,'None',''):return str(inn['overs_display'])
+    balls=inn.get('balls');bpo=inn.get('balls_per_over') or 6
+    if not isinstance(balls,int) or balls<=0:return ''
+    return str(balls//bpo)+('.'+str(balls%bpo) if balls%bpo else '')
+def run_rate(inn):
+    balls=inn.get('balls');bpo=inn.get('balls_per_over') or 6
+    return rate(inn.get('runs'),balls,bpo) if isinstance(balls,int) and balls>0 else None
+def score_text(inn):
+    """240 for an all-out innings, 241/4 otherwise, with a declaration mark."""
+    wk=inn.get('wickets')
+    return str(inn['runs'])+('/'+str(wk) if wk is not None and wk<10 else '')+('d' if inn.get('declared') else '')
+def fall_text(inn):
+    """Standard fall-of-wickets notation: 1-30 (Batter, 4.2 ov)."""
+    bpo=inn.get('balls_per_over') or 6
+    parts=[]
+    for w in sorted((w for w in inn.get('fall') or [] if w.get('runs') is not None and w.get('wicket') is not None),key=lambda w:(w['wicket'],w['runs'])):
+        balls=w.get('balls');over=(str(balls//bpo)+'.'+str(balls%bpo)) if isinstance(balls,int) else (str(w['overs']) if w.get('overs') not in (None,'') else '')
+        parts.append(f'<span><b>{w["wicket"]}-{w["runs"]}</b> ({esc(w.get("player") or "batter not recorded")}{(", "+over+" ov") if over else ""})</span>')
+    return ''.join(parts)
+def award_links(card,people,pp):
+    names=[n for n in (card.get('awards') or []) if n]
+    if not names:return ''
+    by_name={}
+    for squad in (card.get('players') or {}).values():
+        for p in squad:
+            if p.get('id') in pp:by_name.setdefault(p.get('name'),p['id'])
+    out=[]
+    for name in names:
+        pid=by_name.get(name)
+        out.append(a(pp[pid],people[pid]['name']) if pid else esc(name))
+    return ', '.join(out)
 def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     body=tidy_copy(path,body)
     extra=dict(extra or {})
@@ -198,8 +266,9 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     history_assets=(f'<link rel="stylesheet" href="/assets/on-this-day.css?v={ASSET_VERSION}"><script src="/assets/on-this-day.js?v={ASSET_VERSION}" defer></script>' if path=='/' or path.startswith('/on-this-day/') else '')
     t20wc_assets=(f'<link rel="stylesheet" href="/assets/t20wc-dashboard.css?v={ASSET_VERSION}"><script src="/assets/t20wc-dashboard.js?v={ASSET_VERSION}" defer></script>' if path=='/world-cup/mens-t20/dashboard/' else '')
     og_type='profile' if kind=='ProfilePage' else 'website'
+    profile_assets=(f'<link rel="stylesheet" href="/assets/profile.css?v={ASSET_VERSION}">' if kind=='ProfilePage' else '')
     verification=('<meta name="google-site-verification" content="'+esc(SETTINGS['google_site_verification'])+'">') if SETTINGS.get('google_site_verification') else ''
-    document=f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">{verification}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0a0a0f"><script src="/assets/theme.js?v={ASSET_VERSION}"></script><meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{social}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{social}"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/publication.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/portraits.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/profile-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/editorial-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/analytics.css?v={ASSET_VERSION}"><script src="/assets/analysis-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script><script src="/assets/analytics.js?v={ASSET_VERSION}" defer></script>{home_assets}{studio_assets}{history_assets}{t20wc_assets}<link rel="stylesheet" href="/assets/dark.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/arena.css?v={ASSET_VERSION}"><script src="/assets/arena.js?v={ASSET_VERSION}" defer></script>{ld_scripts}</head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}<a class="search-link" href="/search/">Search</a><a class="ipl-link" href="https://crickrida.rkjat.in/">IPL Analytics</a></nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/about/','About')}{a('/contact/','Contact')}{a('/data-coverage/','Data coverage')}{a('/datasets/','Datasets')}{a('/methodology/','Methodology')}{a('/insights/','Statistical insights')}{a('/questions/','Cricket questions')}{a('/blog/','Daily notes')}{a('/on-this-day/','On this day')}{a('/where-to-watch/','Where to watch')}{a('/world-cup/','World Cup archive')}{a('/head-to-head/','Head-to-head records')}{a('/records/best-innings/','Best performances')}{a('/milestones/','Player milestones')}{a('/venue-records/','Venue records')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in/','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Corrections: <a href="mailto:rkideas65@gmail.com">rkideas65@gmail.com</a>.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
+    document=f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">{verification}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0a0a0f"><script src="/assets/theme.js?v={ASSET_VERSION}"></script><meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{social}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{social}"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/publication.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/portraits.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/profile-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/editorial-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/analytics.css?v={ASSET_VERSION}"><script src="/assets/analysis-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script><script src="/assets/analytics.js?v={ASSET_VERSION}" defer></script>{home_assets}{studio_assets}{history_assets}{t20wc_assets}<link rel="stylesheet" href="/assets/dark.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/arena.css?v={ASSET_VERSION}"><script src="/assets/arena.js?v={ASSET_VERSION}" defer></script>{profile_assets}{ld_scripts}</head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}<a class="search-link" href="/search/">Search</a><a class="ipl-link" href="https://crickrida.rkjat.in/">IPL Analytics</a></nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/about/','About')}{a('/contact/','Contact')}{a('/data-coverage/','Data coverage')}{a('/datasets/','Datasets')}{a('/methodology/','Methodology')}{a('/insights/','Statistical insights')}{a('/questions/','Cricket questions')}{a('/blog/','Daily notes')}{a('/on-this-day/','On this day')}{a('/where-to-watch/','Where to watch')}{a('/world-cup/','World Cup archive')}{a('/head-to-head/','Head-to-head records')}{a('/records/best-innings/','Best performances')}{a('/milestones/','Player milestones')}{a('/venue-records/','Venue records')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in/','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Corrections: <a href="mailto:rkideas65@gmail.com">rkideas65@gmail.com</a>.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
     target=OUT/path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(document,encoding='utf-8')
     if not noindex:PAGES[path]={'title':title,'bytes':len(document.encode()),'sha256':hashlib.sha256(document.encode()).hexdigest(),'lastmod':TODAY}
     if path in PAGES and PREVIOUS.get(path,{}).get('sha256')==PAGES[path]['sha256']:PAGES[path]['lastmod']=PREVIOUS[path].get('lastmod',TODAY)
@@ -215,15 +284,23 @@ def matchup(match,path=None):
     return f'<a class="matchup-link" href="{esc(path)}">{label}</a>' if path else label
 def match_table(matches,paths,limit=40):
     return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),matchup(m,paths[m['id']]),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
-def scoreboard(m,innings,gp):
-    """Result header: each side's innings as linked scores, the winner lit, then ground and series."""
+def scoreboard(m,innings,gp,card=None,people=None,pp=None):
+    """Result header: each side's innings as linked scores with overs, the winner lit, toss, award, ground and series."""
     winner=(m.get('outcome') or {}).get('winner')
     rows=''
     for team in m['teams']:
-        scores=' <span class="sb-and">&amp;</span> '.join(f'<a href="#innings-{i}">{inn["runs"]}/{inn["wickets"]}{"d" if inn.get("declared") else ""}</a>' for i,inn in enumerate(innings,1) if inn['team']==team and not inn.get('super_over'))
-        rows+=f'<div class="sb-team{" is-winner" if team==winner else ""}">'+team_badge(team,gp['teams'].get(team))+f'<span class="sb-scores">{scores or "—"}</span></div>'
+        scores=' <span class="sb-and">&amp;</span> '.join(f'<a href="#innings-{i}">{score_text(inn)}'+(f'<small>{esc(overs_text(inn))} ov</small>' if overs_text(inn) else '')+'</a>' for i,inn in enumerate(innings,1) if inn['team']==team and not inn.get('super_over'))
+        rows+=f'<div class="sb-team{" is-winner" if team==winner else ""}">'+team_badge(team,gp['teams'].get(team))+f'<span class="sb-scores">{scores or "-"}</span></div>'
+    facts=''
+    toss=(card or {}).get('toss') or {}
+    if toss.get('winner'):
+        decision={'bat':'chose to bat','field':'chose to field'}.get(toss.get('decision'),'')
+        facts+=f'<span>Toss <b>{esc(toss["winner"])}</b>{(", "+decision) if decision else ""}</span>'
+    award=award_links(card,people,pp) if card and people and pp else ''
+    if award:facts+=f'<span>Player of the match <b>{award}</b></span>'
+    if m.get('event'):facts+=f'<span>{esc(m["event"])}</span>'
     meta=a(gp['grounds'][m['venue']],m['venue'])+(a(gp['series'][m['event']],m['event']) if m.get('event') else '')
-    return f'<section class="scoreboard" aria-label="Result">{rows}<p class="sb-result">{esc(result(m))}</p><div class="sb-meta">{meta}</div></section>'
+    return f'<section class="scoreboard" aria-label="Result">{rows}<p class="sb-result">{esc(result(m))}</p>'+(f'<p class="sb-facts">{facts}</p>' if facts else '')+f'<div class="sb-meta">{meta}</div></section>'
 def entity_filter_form(kind,name,matches):
     years=sorted({m['date'][:4] for m in matches},reverse=True)
     controls=options('gender',['Men','Women'])+options('format',['Test','ODI','T20I'])+options('year',years,'Year')
@@ -275,6 +352,28 @@ def stats_table(p):
     return career_tables(p, table, stat_value)
 
 def options(name,values,label=None):return f'<label>{esc(label or name.title())}<select name="{name}"><option value="">All</option>'+''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)+'</select></label>'
+
+def render_profile(p,pid,path,rows,apps,*,gp_teams,portraits,pack,curated,checked_at,suffix=''):
+    """Title, description, body and schema for one format-first player profile."""
+    career=p['career'];tot=aggregate(career)
+    title,description=player_seo(p,suffix)
+    illustration=ILLUSTRATIONS.get(p['name'])
+    person,og_image=player_person(p,pid,path,description,portraits,illustration=illustration,base=BASE)
+    badges=''.join(team_badge(t,gp_teams.get(t)) for t in p['teams'] if t in gp_teams)
+    portrait=portrait_figure(pid,p['name'],portraits,illustration=illustration)
+    faq_html,faq_schema=player_faq(p, urls=pack['urls'] if pack else None, name_slug=pack['name_slug'] if pack else slug(p['name']))
+    checked_dates=sorted({checked_at}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')})
+    snapshot_label=' to '.join(dict.fromkeys([checked_dates[0],checked_dates[-1]])) if checked_dates else ''
+    explorer=('<section class="panel pf-block" id="analysis" data-analytics="'+path+'analytics.json"><h2>Explore every recorded innings</h2><p class="pf-fine">'+str(len(apps))+' match appearances in available scorecards. Filters apply to this archive only.</p><button id="load-analysis" class="primary">Open statistical explorer</button><div id="analysis-controls" hidden></div><div id="analysis-results" aria-live="polite"></div></section>')
+    research=opposition_links(rows,path) if curated else ''
+    if research:research=research.replace('<section class="panel pr-section">','<section class="panel pr-section pf-block" id="research">',1)
+    recent='<section class="panel pf-block" id="recent-appearances"><h2>Latest appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]],caption='Recent available appearances')+'</section><p class="pf-links">'+ ' · '.join(a(gp_teams[t],t) for t in p['teams'] if t in gp_teams)+' · '+a('/compare/#filters=a='+path,'Compare with another player')+'</p>'
+    blocks={'tables':stats_table(p),'snapshot':snapshot_label,'glance':career_glance(p,stat_value),'faq':faq_html,'explorer':explorer,'research':research,'recent':recent}
+    body=profile_body(p,portrait=portrait,badges=badges,rows=rows,apps=apps,career=career,totals=tot,blocks=blocks,charts=cw.format_lab,stat_value=stat_value,compare_path='/compare/#filters=a='+path)
+    extra={'mainEntity':person,'breadcrumb_name':p['name']}
+    if og_image:extra['image']=og_image
+    if faq_schema:extra['faq']=faq_schema
+    return title,description,body,extra
 
 def main():
     global PREVIOUS, ILLUSTRATIONS
@@ -349,21 +448,22 @@ def main():
     shutil.copy2(social_source, OUT/'assets/social/site-default.png')
     trust_pages(page, heading, a, careers['meta'].get('checked_at',''))
     print('Building scorecards and player analysis...',flush=True)
+    venue_hosts=venue_host_map(matches)
     for mid,card in all_cards.items():
-        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+scoreboard(m,card['innings'],gp)+actions()
+        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+scoreboard(m,card['innings'],gp,card,people,pp)+actions()
         body+=cw.match_lab(card)
         for index,inn in enumerate(card['innings'],1):
-            body+=render_innings(inn,index,people,pp)
+            body+=render_innings(inn,index,people,pp,(card.get('players') or {}).get(inn['team']))
             if inn.get('super_over'):continue
             bowl={b['id']:b for b in inn['bowling']};bat={b['id']:(pos,b) for pos,b in enumerate(inn['batting'],1)}
             for pid in set(bowl)|set(bat):
-                pos,b=bat.get(pid,(None,{}));w=bowl.get(pid,{});team=inn['team'] if b else next(t for t in m['teams'] if t!=inn['team']);opp=next(t for t in m['teams'] if t!=team);host=HOST_CITIES.get(m.get('city','')) or m.get('host_country');host={'United Kingdom':'England','Wales':'England','Barbados':'West Indies','Jamaica':'West Indies','Trinidad and Tobago':'West Indies','Guyana':'West Indies','Saint Lucia':'West Indies','Antigua and Barbuda':'West Indies','St Kitts and Nevis':'West Indies','Dominica':'West Indies','Grenada':'West Indies'}.get(host,host)
+                pos,b=bat.get(pid,(None,{}));w=bowl.get(pid,{});team=inn['team'] if b else next(t for t in m['teams'] if t!=inn['team']);opp=next(t for t in m['teams'] if t!=team);host=host_country(m,venue_hosts)
                 setting='Unknown' if not host else 'Home' if team==host else 'Away' if opp==host else 'Neutral'
-                outcome='Won' if m['outcome'].get('winner')==team else 'Lost' if m['outcome'].get('winner') else 'Draw / tie / no result'
-                innings[pid].append({'date':m['date'],'match':mid,'url':mp[mid],'format':m['format'],'opponent':opp,'venue':m['venue'],'setting':setting,'result':outcome,'innings':index,'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'out':b.get('out'),'fours':b.get('fours'),'sixes':b.get('sixes'),'dismissal':b.get('dismissal'),'wickets':w.get('wickets'),'legal':w.get('balls'),'conceded':w.get('runs')})
+                outcome='Won' if m['outcome'].get('winner')==team else 'Lost' if m['outcome'].get('winner') else {'draw':'Drawn','tie':'Tied'}.get(m['outcome'].get('result'),'No result')
+                innings[pid].append({'date':m['date'],'match':mid,'url':mp[mid],'format':m['format'],'opponent':opp,'venue':m['venue'],'setting':setting,'result':outcome,'innings':index,'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'out':b.get('out'),'fours':b.get('fours'),'sixes':b.get('sixes'),'dismissal':b.get('dismissal'),'wickets':w.get('wickets'),'legal':w.get('balls'),'conceded':w.get('runs'),'maidens':w.get('maidens'),'event':m.get('event') or None})
         body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+team_badge(team,gp['teams'].get(team))+'</h3>'+''.join('<p>'+(a(pp[p['id']],people[p['id']]['name']) if p['id'] in pp else esc(p['name']))+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section><p class="note">Verified match scorecard. Super overs are excluded from player analysis. A dash means the historical scorecard did not record that field.</p>'
         if not card['innings']:body+='<section class="panel"><h2>No play</h2><p>This match has no recorded innings. Batting and bowling figures do not apply.</p></section>'
-        page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']}})
+        page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']},'competitor':[{'@type':'SportsTeam','name':team,'sport':'Cricket'} for team in m['teams']]})
     for m in hist['matches']:
         if m['id'] in all_cards:continue
         body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+matchup(m)+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
@@ -371,48 +471,14 @@ def main():
     player_q=prepare_player_questions(people,pp,featured_names=set(ILLUSTRATIONS)|set(HERO_CAST),extra_ids=research_ids)
     print('Building career profiles...',flush=True)
     for pid,p in people.items():
-        career=p['career'];tot=aggregate(career);path=pp[pid]; rows=sorted(innings[pid],key=lambda r:r['date']);apps=appearances[pid]
+        career=p['career'];path=pp[pid];rows=sorted(innings[pid],key=lambda r:(r['date'],r['match'],r.get('innings') or 0));apps=appearances[pid]
         summary={'id':pid,'name':p['name'],'teams':p['teams'],'gender':p['gender'],'career':career,'url':path}
         summary['career']={fmt:{k:v for k,v in s.items() if k not in ('source','sources','enrichment_source')} for fmt,s in career.items()}
         dump(path+'summary.json',summary);dump(path+'analytics.json',{'innings':rows,'appearances':apps,'note':'Available official match scorecards within site coverage. Super overs excluded. Unknown venue setting is not inferred.'})
         suffix=' · '+pid if names[slug(p['name'])]>1 else ''
-        title,description=player_seo(p,suffix)
-        intro=player_intro(p)
-        illustration=ILLUSTRATIONS.get(p['name'])
-        person,og_image=player_person(p,pid,path,description,portraits,illustration=illustration,base=BASE)
-        years=' to '.join(part for part in (p.get('first'),p.get('last')) if part)
-        identity='<div class="player-identity"><span class="gender-mark">'+esc(p['gender'])+'</span>'+''.join(team_badge(t,gp['teams'].get(t)) for t in p['teams'] if t in gp['teams'])+(f'<span class="career-years">{esc(years)}</span>' if years else '')+'</div>'
-        subtitle=' · '.join(part for part in [' / '.join(p.get('teams') or []), p.get('gender') or '', years] if part) or 'International career statistics, records and scorecard analysis'
-        profile_title='<div class="player-profile-heading">'+heading(p['name'],subtitle,'PLAYER CAREER')+portrait_figure(pid,p['name'],portraits,illustration=illustration)+'</div>'+identity+f'<p class="player-intro">{esc(intro)}</p>'
-        glance=career_glance(p,stat_value)
-        archive_charts=cw.player_lab(rows,p['name'])
-        tables=stats_table(p)
         pack=player_q.get(pid)
-        faq_html,faq_schema=player_faq(p, urls=pack['urls'] if pack else None, name_slug=pack['name_slug'] if pack else slug(p['name']))
-        picture_id='career-pictures' if archive_charts else ''
-        nav_html=profile_nav(bool(glance),picture_id,True,bool(faq_html),bool(rows))
-        body=profile_title+profile_coverage(p,rows)+nav_html+actions()
-        if tot:
-            role=primary_role(career) if career else 'batter'
-            keys=[('matches','Internationals'),('wickets','Wickets'),('runs','Career runs')] if role=='bowler' else [('matches','Internationals'),('runs','Career runs'),('hundreds','Centuries'),('wickets','Wickets')]
-            body+='<div class="stats">'+''.join(f'<div><strong>{num(tot.get(k))}</strong><span>{label}</span></div>' for k,label in keys)+'</div>'
-        body+=glance+archive_charts
-        checked_dates=sorted({careers['meta']['checked_at'][:10]}|{s['checked_at'][:10] for s in career.values() if s.get('checked_at')})
-        snapshot_label=' to '.join(dict.fromkeys([checked_dates[0],checked_dates[-1]])) if checked_dates else ''
-        body+='<section class="panel career-tables" id="career-records"><h2>Career records by format</h2>'
-        if tables:
-            body+='<p class="muted">Official Test, ODI and T20I figures. Every cell is in the HTML so search engines and downloads see the same numbers as the page.</p>'+tables
-            if snapshot_label:body+=f'<p class="note">Career records checked: {esc(snapshot_label)}. A dash means not recorded; N/A means the statistic does not apply. Career totals are independent of the scorecard archive.</p>'
-        else:
-            body+='<p class="note">This archive identity has no matched career record. Do not treat its archive totals as a complete career.</p>'
-        body+='</section>'
-        body+=faq_html
-        body+='<section class="panel" id="analysis" data-analytics="'+path+'analytics.json"><h2>Explore this player’s available match data</h2><p>'+str(len(apps))+' match appearances in available scorecards. Filters below apply to this archive only.</p><button id="load-analysis" class="primary">Open statistical explorer</button><div id="analysis-controls" hidden></div><div id="analysis-results" aria-live="polite"></div></section>'
-        body+='<section class="panel"><h2>Recent available appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]],caption='Recent available appearances')+'</section><p>'+ ' · '.join(a(gp['teams'][t],t) for t in p['teams'] if t in gp['teams'])+' · '+a('/compare/','Compare with another player')+'</p>'
-        body += profile_research_section(p, rows, path, curated=pid in research_ids)
-        extra={'mainEntity':person,'breadcrumb_name':p['name']}
-        if og_image:extra['image']=og_image
-        if faq_schema:extra['faq']=faq_schema
+        checked_at=careers['meta']['checked_at'][:10]
+        title,description,body,extra=render_profile(p,pid,path,rows,apps,gp_teams=gp['teams'],portraits=portraits,pack=pack,curated=pid in research_ids,checked_at=checked_at,suffix=suffix)
         page(path,title,description,body,'ProfilePage',extra)
     for spec in editorial['pages']:
         if isinstance(spec, tuple):
@@ -612,7 +678,7 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
         bat_rows.append([a(pp[b['id']],people[b['id']]['name']),m['date'],esc(team),esc(opp),m['format'],num(runs),num(balls),decimal_stat(sr),a(mp[m['id']],'Scorecard')])
     bowl_rows=[]
     for wickets,conceded,m,team,opp,b in bowling[:100]:
-        overs_display=b.get('overs_display') or ('—' if b.get('balls') is None else str((b.get('balls') or 0)//6)+'.'+str((b.get('balls') or 0)%6))
+        overs_display=b.get('overs_display') or ('-' if b.get('balls') is None else str((b.get('balls') or 0)//6)+'.'+str((b.get('balls') or 0)%6))
         bowl_rows.append([a(pp[b['id']],people[b['id']]['name']),m['date'],esc(team),esc(opp),m['format'],num(wickets),num(conceded),esc(overs_display),a(mp[m['id']],'Scorecard')])
     performance_body=heading('Best international cricket performances','Official landmark innings first, then the biggest batting and bowling spells in available scorecards.','PERFORMANCE RECORDS')+actions()
     performance_body+='<section class="panel" id="official-records"><h2>Official landmark records</h2><p class="muted">Complete international records, independent of whether this site holds the scorecard.</p>'+official_innings_table(official_innings,table)+'</section>'
@@ -784,7 +850,7 @@ def build_daily_blog(people,pp,careers,all_cards=None,mp=None):
 
     publish('','How to compare two international batters fairly','A practical Cricket Wicket guide to reading runs, batting average and strike rate together, using a Virat Kohli and Rohit Sharma ODI example.','2026-09-10-compare-batters.svg','Infographic comparing Virat Kohli and Rohit Sharma in ODI runs, batting average and strike rate','When two batters are compared, one number rarely settles the question. Runs show accumulated output, average shows what a player scores per dismissal, and strike rate shows scoring pace. Read the three together, and keep the format and career scope the same.','<h2>What the example shows</h2><p>In this ODI snapshot, '+a(pp[left['id']],left['name'])+' leads the run total with <strong>'+num(a1.get('runs'))+'</strong> from '+num(a1.get('innings'))+' innings. '+a(pp[right['id']],right['name'])+' has '+num(a2.get('runs'))+' runs from '+num(a2.get('innings'))+' innings. That is the volume view.</p><p>The average comparison favours '+left['name']+' in this snapshot, while the strike-rate values are close. Era, role, opposition, venues and opportunity still matter.</p>','<div><strong>'+decimal_stat(a1.get('avg'))+'</strong><span>'+left['name']+' ODI average</span></div><div><strong>'+decimal_stat(a2.get('avg'))+'</strong><span>'+right['name']+' ODI average</span></div><div><strong>'+decimal_stat(a1.get('sr'))+' / '+decimal_stat(a2.get('sr'))+'</strong><span>ODI strike rates · '+left['name']+' / '+right['name']+'</span></div>',1200,760)
     publish('average-needs-dismissals','Why batting average needs its denominator','A Cricket Wicket explainer on dismissals, not-outs and the denominator behind every international batting average.','2026-09-10-average-dismissals-data.svg','Data infographic comparing Virat Kohli and Rohit Sharma ODI runs, dismissals and batting average','A batting average is not runs divided by innings. It is runs divided by dismissals, which is why a not-out can lift a player’s average without adding another dismissal. The denominator carries the context.','<h2>Read the denominator first</h2><p>In the same ODI snapshot, '+a(pp[left['id']],left['name'])+' has <strong>'+num(a1.get('runs'))+'</strong> runs and '+num(a1.get('outs'))+' dismissals, producing an average of '+decimal_stat(a1.get('avg'))+'. '+a(pp[right['id']],right['name'])+' has '+num(a2.get('runs'))+' runs from '+num(a2.get('outs'))+' dismissals, producing '+decimal_stat(a2.get('avg'))+'. A not-out contributes runs but leaves the dismissal count unchanged.</p><p>That makes average useful for comparing scoring returns per opportunity, but it should sit beside innings, not-outs and the format. Cricket Wicket keeps unavailable dismissals visible instead of filling them with an estimate.</p>','<div><strong>'+num(a1.get('outs'))+'</strong><span>'+left['name']+' ODI dismissals</span></div><div><strong>'+num(a2.get('outs'))+'</strong><span>'+right['name']+' ODI dismissals</span></div><div><strong>'+decimal_stat(a1.get('avg'))+' / '+decimal_stat(a2.get('avg'))+'</strong><span>ODI batting averages · '+left['name']+' / '+right['name']+'</span></div>',1200,760)
-    publish('strike-rate-needs-balls','Why strike rate needs balls faced','A Cricket Wicket explainer on batting strike rate and the balls-faced denominator that makes pace comparable.','2026-09-10-strike-rate-balls-data.svg','Data infographic comparing Virat Kohli and Rohit Sharma ODI runs, balls faced and batting strike rate','Strike rate describes scoring pace: runs per 100 balls faced. Without balls faced, a run total cannot tell us whether an innings was paced quickly or slowly.','<h2>Pace needs a workload</h2><p>'+a(pp[left['id']],left['name'])+' has '+num(a1.get('runs'))+' ODI runs from '+num(a1.get('balls'))+' balls, a strike rate of '+decimal_stat(a1.get('sr'))+'. '+a(pp[right['id']],right['name'])+' has '+num(a2.get('runs'))+' runs from '+num(a2.get('balls'))+' balls, a strike rate of '+decimal_stat(a2.get('sr'))+'. The formula is simple—100 × runs ÷ balls—but the denominator keeps the comparison honest.</p><p>Strike rate should be read with role, era, opposition and format. A Test rate and a T20I rate answer different questions. If balls are not recorded, the correct result is unavailable, not zero.</p>','<div><strong>'+num(a1.get('balls'))+'</strong><span>'+left['name']+' ODI balls faced</span></div><div><strong>'+num(a2.get('balls'))+'</strong><span>'+right['name']+' ODI balls faced</span></div><div><strong>'+decimal_stat(a1.get('sr'))+' / '+decimal_stat(a2.get('sr'))+'</strong><span>ODI strike rates · '+left['name']+' / '+right['name']+'</span></div>',1200,760)
+    publish('strike-rate-needs-balls','Why strike rate needs balls faced','A Cricket Wicket explainer on batting strike rate and the balls-faced denominator that makes pace comparable.','2026-09-10-strike-rate-balls-data.svg','Data infographic comparing Virat Kohli and Rohit Sharma ODI runs, balls faced and batting strike rate','Strike rate describes scoring pace: runs per 100 balls faced. Without balls faced, a run total cannot tell us whether an innings was paced quickly or slowly.','<h2>Pace needs a workload</h2><p>'+a(pp[left['id']],left['name'])+' has '+num(a1.get('runs'))+' ODI runs from '+num(a1.get('balls'))+' balls, a strike rate of '+decimal_stat(a1.get('sr'))+'. '+a(pp[right['id']],right['name'])+' has '+num(a2.get('runs'))+' runs from '+num(a2.get('balls'))+' balls, a strike rate of '+decimal_stat(a2.get('sr'))+'. The formula is simple: 100 × runs ÷ balls. But the denominator keeps the comparison honest.</p><p>Strike rate should be read with role, era, opposition and format. A Test rate and a T20I rate answer different questions. If balls are not recorded, the correct result is unavailable, not zero.</p>','<div><strong>'+num(a1.get('balls'))+'</strong><span>'+left['name']+' ODI balls faced</span></div><div><strong>'+num(a2.get('balls'))+'</strong><span>'+right['name']+' ODI balls faced</span></div><div><strong>'+decimal_stat(a1.get('sr'))+' / '+decimal_stat(a2.get('sr'))+'</strong><span>ODI strike rates · '+left['name']+' / '+right['name']+'</span></div>',1200,760)
     for file in sorted((ROOT/'content/blog').glob('*.json')):
         note=json.loads(file.read_text(encoding='utf-8'))
         if note['date']>TODAY:continue

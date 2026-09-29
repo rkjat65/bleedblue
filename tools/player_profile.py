@@ -235,22 +235,23 @@ def career_glance(player, stat_value):
             if (stats.get('wickets') or 0) >= 15:
                 extra = f'<p class="format-card-note">{plain(stats, "wickets")} wickets · bowling average {plain(stats, "bowlAvg") or "N/A"}</p>'
         figures = ''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in fields)
+        key = {'Test': 'test', 'ODI': 'odi', 'T20I': 't20i'}[fmt]
         cards += (
-            f'<article class="format-card" data-career-format="{fmt}">'
+            f'<a class="format-card fmt-{key}" href="#{key}" data-fmt-link="{key}">'
             f'<h3>{fmt}</h3>'
             f'<p class="format-card-meta">{stat_value(stats, "matches")} matches'
             f'{(" · " + esc(stats["span"])) if stats.get("span") else ""}</p>'
             f'<div class="format-card-hero"><strong>{esc(hero)}</strong><span>{unit}</span></div>'
             f'<dl>{figures}</dl>{extra}'
             f'<div class="format-card-share" title="{fmt} share of recorded career runs">'
-            f'<i style="width:{share:.1f}%"></i></div></article>'
+            f'<i style="width:{share:.1f}%"></i></div>'
+            f'<span class="format-card-cta">Open the {fmt} record →</span></a>'
         )
     women = "women's " if player.get('gender') == 'Women' else ''
     heading = f'{player["name"]}: {women}{format_list(formats)} stats'
     return (
-        f'<section class="career-glance-wrap" id="career-glance">'
-        f'<p class="eyebrow">BY FORMAT</p><h2>{esc(heading)}</h2>'
-        f'<p class="muted">Key career figures. Full batting, bowling and fielding tables follow the charts.</p>'
+        f'<section class="panel pf-block career-glance-wrap" id="career-glance">'
+        f'<h2>{esc(heading)}</h2>'
         f'<div class="career-glance">{cards}</div></section>'
     )
 

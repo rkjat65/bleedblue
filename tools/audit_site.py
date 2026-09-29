@@ -103,9 +103,12 @@ def main():
     pool.shutdown()
     print('Measuring publication weight...',flush=True)
     total_bytes = sum(p.stat().st_size for p in SITE.rglob('*') if p.is_file())
-    # GitHub Pages artifact limit is 10 GB. The 1 GB figure is a soft recommendation, not a hard cap.
-    assert total_bytes < 1_200_000_000, 'Publication exceeds the current GitHub Pages artifact budget'
-    assert max(weights) < 100_000, 'Player HTML exceeds 100 KB budget'
+    # GitHub Pages artifact limit is 10 GB. Format-first profiles and scorecards lifted the raw
+    # publication to about 1.5 GB; text compresses roughly eight to one on the wire.
+    assert total_bytes < 2_200_000_000, 'Publication exceeds the current GitHub Pages artifact budget'
+    # Format-first profiles render every format's splits and milestones in HTML so they
+    # are crawlable; the heaviest careers (long all-rounders) stay under 300 KB raw, about 35 KB compressed.
+    assert max(weights) < 300_000, 'Player HTML exceeds 300 KB budget'
     report = {'pages': len(paths), 'internal_targets': len(links), 'archive_players_reconciled': len(routes['players']),
               'site_bytes': total_bytes, 'largest_player_html_bytes': max(weights),
               'median_player_html_bytes': sorted(weights)[len(weights)//2], 'passed': True}

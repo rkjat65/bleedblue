@@ -41,7 +41,7 @@ def esc(value):
 
 def num(value):
     if value is None:
-        return '—'
+        return '-'
     return f'{value:,.2f}' if isinstance(value, float) else f'{value:,}' if isinstance(value, int) else esc(value)
 
 
@@ -161,7 +161,7 @@ def batting_article(people, pp, gender, fmt, checked):
     body = '<section class="research-takeaway"><span class="eyebrow">THE FINDING</span><p>' + link(pp[leader['id']], leader['name']) + ' leads the published career snapshot with <strong>' + num(s['runs']) + '</strong> runs from <strong>' + num(s.get('innings')) + '</strong> batting innings. That answers who accumulated the most runs; average answers a different question about runs per dismissal.</p></section>'
     body += horizontal_chart([(p['name'], p['career'][fmt]['runs']) for p in top], 'Eight highest career run totals · ' + gender + ' ' + fmt)
     body += '<h2>Read opportunity alongside output</h2><p>A longer career can create more chances to add runs. The table therefore keeps matches and batting innings next to the run total. Matches include appearances without a batting innings; treating those two counts as interchangeable obscures opportunity.</p>'
-    body += table(['Player', 'Span', 'Matches', 'Innings', 'Runs', 'Dismissals', 'Average', 'Strike rate'], [[link(pp[p['id']], p['name']), esc(p['career'][fmt].get('span', '—'))] + [num(p['career'][fmt].get(k)) for k in ('matches', 'innings', 'runs', 'outs', 'avg', 'sr')] for p in top], gender + ' ' + fmt + ' career run leaders with sample sizes')
+    body += table(['Player', 'Span', 'Matches', 'Innings', 'Runs', 'Dismissals', 'Average', 'Strike rate'], [[link(pp[p['id']], p['name']), esc(p['career'][fmt].get('span', '-'))] + [num(p['career'][fmt].get(k)) for k in ('matches', 'innings', 'runs', 'outs', 'avg', 'sr')] for p in top], gender + ' ' + fmt + ' career run leaders with sample sizes')
     if qualified:
         q = qualified[0]
         qs = q['career'][fmt]

@@ -2,8 +2,8 @@
 (() => {
  'use strict';
  const $=s=>document.querySelector(s), core=window.CWStudio;
- const esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const num=x=>x==null?'—':typeof x==='string'&&!Number.isFinite(Number(x))?x:Number(x).toLocaleString('en-GB',{maximumFractionDigits:2});
+ const esc=x=>String(x??'-').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const num=x=>x==null?'-':typeof x==='string'&&!Number.isFinite(Number(x))?x:Number(x).toLocaleString('en-GB',{maximumFractionDigits:2});
  const titleCase=x=>x.replaceAll('_',' ').replace(/^./,c=>c.toUpperCase());
  const lake=location.hostname==='127.0.0.1'||location.hostname==='localhost'?'/data/lake/':'https://pub-2deb6471d5df4274810ac4497fdf3ab2.r2.dev/';
  const files={careers:'careers',batting:'batting_innings',bowling:'bowling_innings',matches:'matches'};

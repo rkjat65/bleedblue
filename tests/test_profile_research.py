@@ -16,7 +16,7 @@ class ProfileResearchTests(unittest.TestCase):
         self.assertIsNone(total['balls'])
         self.assertIsNone(total['sr'])
         self.assertEqual(total['avg'],62.5)
-        self.assertIn('—',value(total,'sr'))
+        self.assertIn('>-<',value(total,'sr'))
 
     def test_notouts_and_zero_wickets_are_not_applicable(self):
         total=aggregate_rows([batting('a',80,60,False),{'match':'a','wickets':0,'legal':60,'conceded':30}])
@@ -31,7 +31,7 @@ class ProfileResearchTests(unittest.TestCase):
         total=aggregate_rows([batting('a',80,60,None),batting('b',0,1)])
         self.assertIsNone(total['outs'])
         self.assertIsNone(total['avg'])
-        self.assertIn('—',value(total,'avg'))
+        self.assertIn('>-<',value(total,'avg'))
 
     def test_unknown_runs_do_not_become_zero(self):
         total=aggregate_rows([batting('a',None,30),batting('b',100,80)])

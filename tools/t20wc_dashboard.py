@@ -18,19 +18,19 @@ def dashboard_markup():
 
 <div id="wc-dashboard" class="wc-dashboard" data-source="/data/t20wc-deliveries.json">
   <section class="wc-kpis" aria-label="Tournament totals">
-    <article><span>Matches</span><strong data-kpi="matches">—</strong><small>with deliveries</small></article>
-    <article><span>Runs</span><strong data-kpi="runs">—</strong><small>all innings</small></article>
-    <article><span>Wickets</span><strong data-kpi="wickets">—</strong><small>team wickets</small></article>
-    <article><span>Boundaries</span><strong data-kpi="boundaries">—</strong><small>fours + sixes</small></article>
-    <article><span>Avg innings</span><strong data-kpi="average">—</strong><small>runs per innings</small></article>
-    <article><span>Sixes</span><strong data-kpi="sixes">—</strong><small>cleared the rope</small></article>
+    <article><span>Matches</span><strong data-kpi="matches">-</strong><small>with deliveries</small></article>
+    <article><span>Runs</span><strong data-kpi="runs">-</strong><small>all innings</small></article>
+    <article><span>Wickets</span><strong data-kpi="wickets">-</strong><small>team wickets</small></article>
+    <article><span>Boundaries</span><strong data-kpi="boundaries">-</strong><small>fours + sixes</small></article>
+    <article><span>Avg innings</span><strong data-kpi="average">-</strong><small>runs per innings</small></article>
+    <article><span>Sixes</span><strong data-kpi="sixes">-</strong><small>cleared the rope</small></article>
   </section>
 
   <section class="wc-spotlights" aria-label="Tournament leaders">
-    <article><span>Highest total</span><strong data-spot="total">—</strong><small data-spot-note="total"></small></article>
-    <article><span>Most sixes</span><strong data-spot="sixes">—</strong><small data-spot-note="sixes"></small></article>
-    <article><span>Most fours</span><strong data-spot="fours">—</strong><small data-spot-note="fours"></small></article>
-    <article><span>Most wickets</span><strong data-spot="wickets">—</strong><small data-spot-note="wickets"></small></article>
+    <article><span>Highest total</span><strong data-spot="total">-</strong><small data-spot-note="total"></small></article>
+    <article><span>Most sixes</span><strong data-spot="sixes">-</strong><small data-spot-note="sixes"></small></article>
+    <article><span>Most fours</span><strong data-spot="fours">-</strong><small data-spot-note="fours"></small></article>
+    <article><span>Most wickets</span><strong data-spot="wickets">-</strong><small data-spot-note="wickets"></small></article>
   </section>
 
   <section class="wc-dashboard-grid">

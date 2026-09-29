@@ -3,3 +3,12 @@
 .footer-links{display:flex;gap:1rem;flex-wrap:wrap;margin:.75rem 0}.footer-links a{color:#75b9ff}.prose{max-width:820px}.prose h2{margin-top:2rem}.prose p{line-height:1.7}.trust-card{border-left:3px solid var(--blue);padding:1rem 1.25rem;background:#102943;border-radius:8px}.muted{color:var(--muted)}
 .player-profile-heading{display:grid;grid-template-columns:1fr 190px;gap:1.25rem;align-items:start}.portrait{margin:0;border-radius:14px;overflow:hidden;background:#102943;border:1px solid var(--line)}.portrait img{display:block;width:100%;height:208px;object-fit:cover}.portrait figcaption{font-size:.7rem;padding:.45rem;color:var(--muted)}.portrait-fallback{height:208px;display:grid;place-items:center;font-size:3rem;color:#75b9ff}
 @media(max-width:700px){.player-profile-heading{grid-template-columns:1fr 104px}.portrait img,.portrait-fallback{height:130px}.ipl-link{display:block!important;margin-top:.35rem}}
+
+/* Match scorecard: overs beside scores, match facts, fall of wickets and did-not-bat. */
+.sb-scores small{font:600 .42em/1 var(--font-mono,monospace);color:var(--muted);margin-left:8px;letter-spacing:0}
+.sb-facts{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 0;font-size:12px;color:var(--muted)}.sb-facts b{color:var(--ink);font-weight:700}.sb-facts a{font-weight:700}
+.innings-heading small{display:block;margin-top:4px;font-size:12px;font-weight:600;color:var(--muted)}
+.innings-summary small{font-weight:500;color:var(--muted)}
+.fow{margin:0;padding:10px 24px;font-size:12px;line-height:1.9;color:var(--muted);border-top:1px solid var(--border)}.fow span{white-space:nowrap;margin-right:12px}.fow b{color:var(--ink);font-variant-numeric:tabular-nums}.fow-label{display:block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.dnb{margin:0;padding:8px 24px 10px;font-size:12px;color:var(--muted);border-top:1px solid var(--border)}.dnb a{font-weight:650}
+@media(max-width:750px){.fow,.dnb{padding-left:16px;padding-right:16px}.fow span{white-space:normal}}

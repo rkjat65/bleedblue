@@ -193,7 +193,14 @@
 
   /* Section guide: every page with 3-14 real sections gets numbered headings, a desktop
      rail, a mobile "section pill" and a short cue each time a new section takes over. */
-  const guide = (() => {
+  let guide = null, guideAbort = null;
+  function buildGuide() {
+    guideAbort?.abort();
+    guideAbort = new AbortController();
+    const signal = guideAbort.signal;
+    $$('.sec-rail, .sec-pill, .sec-cue').forEach(el => el.remove());
+    $$('.sec-num').forEach(el => el.remove());
+    $$('.sec-head').forEach(el => el.classList.remove('sec-head', 'sec-live'));
     const jumpLinks = $$('[data-arena-jump] a');
     let heads;
     if (jumpLinks.length) {
@@ -250,7 +257,7 @@
     mainBtn.addEventListener('click', () => setSheet(sheet.hidden));
     $('.sec-pill-next', pill).addEventListener('click', () => current >= heads.length - 1 ? scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}) : go(current + 1));
     $('.sec-top', railEl).addEventListener('click', () => scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}));
-    document.addEventListener('click', e => { if (!pill.contains(e.target)) setSheet(false); });
+    document.addEventListener('click', e => { if (!pill.contains(e.target)) setSheet(false); }, {signal});
 
     function update() {
       const line = innerHeight * 0.38;
@@ -288,8 +295,8 @@
       started = true;
     }
     let queued = false;
-    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; update(); }); } }, {passive: true});
-    addEventListener('resize', update);
+    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; update(); }); } }, {passive: true, signal});
+    addEventListener('resize', update, {signal});
     update();
     document.addEventListener('keydown', e => {
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
@@ -297,9 +304,11 @@
       if (e.key === 'j') { e.preventDefault(); go(current + 1); }
       else if (e.key === 'k') { e.preventDefault(); go(current - 1); }
       else if (e.key === 'Escape') setSheet(false);
-    });
+    }, {signal});
     return heads;
-  })();
+  }
+  guide = buildGuide();
+  document.addEventListener('cw:format', () => { guide = buildGuide(); });
 
   /* Recently viewed profiles, scorecards and team pages feed the palette's empty state. */
   const RECENT = 'cw-recent';

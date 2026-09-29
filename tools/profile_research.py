@@ -65,7 +65,7 @@ def value(stats, key):
     denominator = {'avg': 'outs', 'sr': 'balls', 'bowlAvg': 'wickets', 'econ': 'legal', 'bowlSr': 'wickets'}.get(key)
     if denominator and stats.get(denominator) == 0:
         return '<span title="The denominator is zero; this rate does not apply">N/A</span>'
-    return '<span title="Not fully recorded in the available scorecards">—</span>'
+    return '<span title="Not fully recorded in the available scorecards">-</span>'
 
 
 def table(headers, rows, caption):
@@ -223,7 +223,7 @@ def opponent_pages(p, rows, path):
         body += table(['Discipline','Innings','Runs','Wickets / outs','Average','Strike rate'],[
             ['Batting',value(stats,'innings'),value(stats,'runs'),value(stats,'outs'),value(stats,'avg'),value(stats,'sr')],
             ['Bowling',value(stats,'bowling_innings'),value(stats,'conceded'),value(stats,'wickets'),value(stats,'bowlAvg'),value(stats,'bowlSr')]],'Batting runs and dismissals; bowling runs conceded and wickets')
-        body += '<p class="note">Batting average = runs ÷ dismissals; batting strike rate = runs per 100 balls. Bowling average = runs conceded ÷ wickets; bowling strike rate = legal balls per wicket. Rates require fully recorded inputs. — means unrecorded; N/A means a zero denominator.</p>'
+        body += '<p class="note">Batting average = runs ÷ dismissals; batting strike rate = runs per 100 balls. Bowling average = runs conceded ÷ wickets; bowling strike rate = legal balls per wicket. Rates require fully recorded inputs. A hyphen means unrecorded; N/A means a zero denominator.</p>'
         if stats['bowling_innings']:
             body += '<p>Bowling economy: <strong>'+value(stats,'econ')+'</strong> runs per six legal balls. Legal balls recorded: '+value(stats,'legal')+'.</p>'
         if stats['innings']:
@@ -239,7 +239,7 @@ def opponent_pages(p, rows, path):
         body += table(['Setting','Matches','Bat inns','Runs','Bat avg','Bat SR','Bowl inns','Wickets','Bowl avg'],setting_rows,'Opposition record by match setting')+'</section>'
         body += timeline(subset)
         recent = list(reversed(subset))[:20]
-        body += '<section class="panel pr-section"><h2>Recent recorded innings</h2>'+table(['Date','Venue','Innings','Runs','Balls','Wickets','Conceded'],[[link(r['url'],r['date']),esc(r.get('venue','')),str(r.get('innings',''))]+[('—' if r.get(k) is None else str(r[k])) for k in ('runs','balls','wickets','conceded')] for r in recent],'Scorecards supporting this opposition study')+'</section>'
+        body += '<section class="panel pr-section"><h2>Recent recorded innings</h2>'+table(['Date','Venue','Innings','Runs','Balls','Wickets','Conceded'],[[link(r['url'],r['date']),esc(r.get('venue','')),str(r.get('innings',''))]+[('-' if r.get(k) is None else str(r[k])) for k in ('runs','balls','wickets','conceded')] for r in recent],'Scorecards supporting this opposition study')+'</section>'
         body += '<p class="note">This opposition study uses available scorecards in Cricket Wicket’s twelve-team publication scope. It is a dated archive analysis, not a claim of complete career coverage. '+link('/methodology/','Read the coverage and calculation method')+'.</p>'
         yield opposition_path(path,fmt,opponent), title, description, body, 'Article'
 

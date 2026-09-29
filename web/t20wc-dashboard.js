@@ -11,7 +11,7 @@
   const value = (row, key) => row[index[key]];
   const safeRate = (top, bottom, factor = 1) => bottom ? top * factor / bottom : null;
   const number = n => fmt.format(Math.round(n || 0));
-  const decimal = n => n == null || !Number.isFinite(n) ? '—' : n.toFixed(2);
+  const decimal = n => n == null || !Number.isFinite(n) ? '-' : n.toFixed(2);
   const setText = (selector, text) => { const node = document.querySelector(selector); if (node) node.textContent = text; };
 
   function inningsKey(row) { return `${value(row, 'match_id')}|${value(row, 'innings')}`; }
@@ -165,13 +165,13 @@
 
     const kpis = { matches: matches.length, runs, wickets, boundaries: fours + sixes, average: safeRate(runs, stats.innings.length), sixes };
     Object.entries(kpis).forEach(([key, val]) => setText(`[data-kpi="${key}"]`, key === 'average' ? decimal(val) : number(val)));
-    setText('[data-spot="total"]', highest ? `${highest.runs}/${highest.wickets}` : '—');
+    setText('[data-spot="total"]', highest ? `${highest.runs}/${highest.wickets}` : '-');
     setText('[data-spot-note="total"]', highest ? highest.team : '');
-    setText('[data-spot="sixes"]', topSixes ? topSixes.name : '—');
+    setText('[data-spot="sixes"]', topSixes ? topSixes.name : '-');
     setText('[data-spot-note="sixes"]', topSixes ? `${topSixes.sixes} sixes` : '');
-    setText('[data-spot="fours"]', topFours ? topFours.name : '—');
+    setText('[data-spot="fours"]', topFours ? topFours.name : '-');
     setText('[data-spot-note="fours"]', topFours ? `${topFours.fours} fours` : '');
-    setText('[data-spot="wickets"]', topWickets ? topWickets.name : '—');
+    setText('[data-spot="wickets"]', topWickets ? topWickets.name : '-');
     setText('[data-spot-note="wickets"]', topWickets ? `${topWickets.wickets} wickets` : '');
 
     renderBars('#wc-team-wins', [...stats.wins.entries()]);
