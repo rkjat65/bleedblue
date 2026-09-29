@@ -832,3 +832,45 @@ def format_lab(rows, fmt, name, want_bowling, role='batter'):
         ]
     ordered = bowl_charts + bat_charts if role == 'bowler' else bat_charts + bowl_charts
     return ''.join(c for c in ordered if c)
+
+
+def cumulative_overlay(series, key='runs', caption='Cumulative by year'):
+    """Several players' running totals by calendar year on one axis. series: [(name, rows, colour)]."""
+    lines = []
+    for name, rows, colour in series:
+        by_year = defaultdict(int)
+        for r in rows:
+            if r.get(key) is not None and r.get('date'):
+                by_year[r['date'][:4]] += r[key]
+        if len(by_year) < 2:
+            continue
+        running, points = 0, []
+        for year in sorted(by_year):
+            running += by_year[year]
+            points.append((int(year), running))
+        lines.append((name, points, colour))
+    if not lines:
+        return ''
+    years = [y for _, pts, _ in lines for y, _ in pts]
+    peak = max(v for _, pts, _ in lines for _, v in pts) or 1
+    y0, y1 = min(years), max(years)
+    left, right, top, bottom = 44, 470, 14, 150
+    plot_w, plot_h = right - left, bottom - top
+    span = max(1, y1 - y0)
+    xy = lambda year, value: (left + (year - y0) / span * plot_w, bottom - value / peak * plot_h)
+    grid = ''
+    for value in _ticks(peak):
+        if value > peak:
+            continue
+        y = bottom - value / peak * plot_h
+        grid += f'<line class="cw-grid" x1="{left}" y1="{y:.1f}" x2="{right}" y2="{y:.1f}"/><text class="cw-axis" x="{left - 6}" y="{y + 3:.1f}" text-anchor="end">{_n(value)}</text>'
+    step = max(1, math.ceil(span / 6))
+    labels = ''.join(f'<text class="cw-axis" x="{xy(year, 0)[0]:.1f}" y="{bottom + 14}" text-anchor="middle">{year}</text>' for year in range(y0, y1 + 1, step))
+    paths = ''
+    legend = ''
+    for name, points, colour in lines:
+        pts = [xy(year, value) for year, value in points]
+        paths += f'<polyline class="cw-line" fill="none" stroke="{colour}" points="{_polyline(pts)}"/><circle cx="{pts[-1][0]:.1f}" cy="{pts[-1][1]:.1f}" r="3.5" fill="{colour}"><title>{_esc(name)}: {_n(points[-1][1])}</title></circle>'
+        legend += f'<span class="cw-key"><i style="background:{colour}"></i>{_esc(name)} <b>{_n(points[-1][1])}</b></span>'
+    svg = _svg(480, 168, grid + paths + labels, caption)
+    return figure(caption, caption, svg + f'<div class="cw-legend">{legend}</div>', f'Running total of recorded {key} by calendar year for each player.')

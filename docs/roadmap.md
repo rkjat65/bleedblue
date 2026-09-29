@@ -10,15 +10,15 @@ Goal: the most complete international cricket reference short of live scores. Ev
 - **Records hub**: category index; sixteen career leaderboards; highest scores, strike rate, sixes, best bowling, calendar-year runs and wickets, partnerships, team totals, chases and margins, each with team, opponent, ground and year filters.
 - **Ground names**: 667 recorded spellings resolve to 402 grounds; retired ground URLs redirect to the canonical page.
 - **Homepage**: one hero figure with record tiles and search, icons rail, fixtures, results, the three formats side by side, a records grid, rivalries, featured scorecard, leaders and explore tiles. The section rail only appears when the viewport has a real gutter.
+- **Compare**: curated pages for two or three players with an Overview / Test / ODI / T20I switch, best figure marked in every row, normalised measure bars, a cumulative year-by-year overlay and a batting average by opponent table; the tool at /compare/ takes up to three players with the same views.
+- **Light theme**: the same tokens drive both themes; headings and numerals use the same families in light.
 - **Studio**: builder rail with templates, up to six players, any number of measures on one canvas (bars with side figures, grouped bars, small multiples, columns, line, table, headline, match card), Visual / Table / SQL tabs, four themes, PNG, SVG and CSV exports, shareable setup links.
 - Host country resolved for every full-member match; archive rows carry maidens, series name and real result labels; neutral stat tiles with format colours instead of the neon rainbow.
 
 ## Next
 
-1. **Compare pages**: three-way comparisons with year-by-year overlays and opposition filters, reusing the Studio query core.
-2. **Ground metadata**: city, country and capacity on ground mastheads; the ambiguous short names Hyderabad and Wellington ODIs once sources confirm the ground.
-3. **Player pages**: captaincy and wicketkeeping splits when the source data carries them; a "similar players" module from the career table.
-4. **Light theme pass**: the same restraint as dark on every hub.
+1. **Ground metadata**: city, country and capacity on ground mastheads; the ambiguous short names Hyderabad and Wellington ODIs once sources confirm the ground.
+2. **Player pages**: captaincy and wicketkeeping splits when the source data carries them; a "similar players" module from the career table.
 
 ## Working notes
 

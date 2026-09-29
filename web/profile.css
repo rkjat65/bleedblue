@@ -6,6 +6,7 @@ html[data-theme=dark]{--fmt-test:#ff5c7a;--fmt-odi:#00e5ff;--fmt-t20i:#b8ff00}
 
 /* ---------- Masthead ---------- */
 .pf-mast{display:grid;grid-template-columns:168px minmax(0,1fr);gap:28px;align-items:center;margin:18px 0 20px;padding:22px 24px;border:1px solid var(--border);border-radius:var(--arena-radius,18px);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 7%,var(--panel)),var(--panel) 55%)}
+.pf-mast.cmp-mast{grid-template-columns:minmax(0,1fr)}
 .pf-mast .player-portrait{width:168px}
 .pf-mast .player-portrait img,.pf-mast .portrait-initials{height:184px;border-radius:16px}
 .pf-id{min-width:0}
@@ -211,3 +212,31 @@ html[data-theme=dark] .f-w{background:#22c55e;color:#06210f}html[data-theme=dark
 .records-links a:hover{text-decoration:none;background:color-mix(in srgb,var(--fmt) 22%,transparent)}
 .pf-records .pf-table tbody th{min-width:0;width:44px;text-align:center}
 .pf-records .pf-table td:nth-child(2){font-weight:800;color:var(--accent)}
+
+/* ---------- Comparisons ---------- */
+:root{--cmp-0:var(--accent);--cmp-1:#d97706;--cmp-2:#15803d}
+html[data-theme=dark]{--cmp-1:#ffb800;--cmp-2:#b8ff00}
+.cmp-identity{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;margin:18px 0 16px}
+.cmp-identity.cmp-3{grid-template-columns:1fr auto 1fr auto 1fr}
+.cmp-id{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;align-items:center;padding:14px 16px;border:1px solid var(--border);border-top:4px solid var(--who,var(--accent));border-radius:16px;background:var(--panel);color:var(--ink);min-width:0}
+.cmp-id .player-portrait{grid-row:span 2;width:72px}.cmp-id .player-portrait img,.cmp-id .portrait-initials{height:82px;border-radius:12px}.cmp-id .player-portrait figcaption{display:none}
+.cmp-id strong{font-size:18px;line-height:1.15;letter-spacing:-.3px}.cmp-id small{font-size:11px;color:var(--muted)}
+.cmp-id:hover{text-decoration:none;border-color:var(--who,var(--accent))}
+.cmp-vs{align-self:center;font:900 12px/1 var(--font-mono,monospace);letter-spacing:.1em;color:var(--muted)}
+.cmp-tile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 14px}.cmp-tile-grid.cmp-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cmp-tiles{padding:14px 16px;border:1px solid var(--border);border-left:4px solid var(--who,var(--accent));border-radius:14px;background:var(--panel)}
+.cmp-tiles h3{margin:0 0 10px;font-size:15px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}.cmp-tiles h3 small{font-size:11px;color:var(--muted);font-weight:500}
+.cmp-tile-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.cmp-tile-row strong{display:block;font-size:22px;letter-spacing:-.6px;font-variant-numeric:tabular-nums;color:var(--who,var(--accent))}.cmp-tile-row span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.cmp-bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 22px;margin:0 0 16px}
+.cmp-measure h3{margin:0 0 6px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.cmp-bar{display:grid;grid-template-columns:minmax(90px,.9fr) minmax(60px,1.6fr) auto;gap:8px;align-items:center;margin:5px 0;font-size:12px}
+.cmp-bar .cw-htrack i{opacity:.55}.cmp-bar.is-best .cw-htrack i{opacity:1}.cmp-bar.is-best strong{color:var(--ink)}.cmp-bar strong{font-variant-numeric:tabular-nums;color:var(--muted)}
+.cmp-table td{font-variant-numeric:tabular-nums}
+.cmp-best{font-weight:800;color:var(--accent);padding:2px 6px;border-radius:6px;background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.cmp-opp small{display:block;font-size:10px;color:var(--muted);font-weight:400}
+.cmp-fmt-link{font-weight:800}
+.cmp-form label{min-width:150px}
+@media(max-width:800px){.cmp-identity,.cmp-identity.cmp-3{grid-template-columns:1fr}.cmp-vs{justify-self:center}.cmp-tile-grid,.cmp-tile-grid.cmp-3{grid-template-columns:1fr}.cmp-tile-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.pf-block>.cw-figure .cw-svg{max-width:760px;margin:0 auto}

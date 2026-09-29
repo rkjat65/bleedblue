@@ -20,6 +20,7 @@ from profile_research import opposition_links
 from profile_formats import profile_body
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
 from venues import canonicalise_matches
+from compare_pages import PAIRS, find_player, compare_body, comparison_cards
 from records_hub import CAREER_METRICS, INNINGS_RECORDS, MINIMUM_FIELD, MINIMUM_LABEL, CATEGORY_LABEL, innings_rows, team_rows, innings_record_table, career_table, records_table, records_index, headline_records
 from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 from entity_pages import (
@@ -41,6 +42,7 @@ TODAY = india_today().isoformat()
 PAGES = {}
 PREVIOUS = {}
 STUBS = set()  # redirect pages for retired URLs; never indexed, never pruned
+COMPARE_CARDS = []  # curated comparison entries for the compare index
 SETTINGS=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8')) if (ROOT/'data/site-settings.json').exists() else {}
 ASSET_VERSION = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'web').glob('*')) if p.is_file())).hexdigest()[:10]
 ALIASES = {'SR Tendulkar':'Sachin Tendulkar','V Kohli':'Virat Kohli','RG Sharma':'Rohit Sharma','JJ Bumrah':'Jasprit Bumrah','DG Bradman':'Don Bradman','M Muralitharan':'Muttiah Muralitharan','M Muralidaran':'Muttiah Muralitharan','SK Warne':'Shane Warne','RT Ponting':'Ricky Ponting','KC Sangakkara':'Kumar Sangakkara','DPMD Jayawardene':'Mahela Jayawardene','JH Kallis':'Jacques Kallis','BC Lara':'Brian Lara','SM Gavaskar':'Sunil Gavaskar','R Dravid':'Rahul Dravid','A Kumble':'Anil Kumble','R Ashwin':'Ravichandran Ashwin','RA Jadeja':'Ravindra Jadeja','SC Ganguly':'Sourav Ganguly','V Sehwag':'Virender Sehwag','SS Mandhana':'Smriti Mandhana','H Kaur':'Harmanpreet Kaur','M Raj':'Mithali Raj','J Goswami':'Jhulan Goswami','EA Perry':'Ellyse Perry','MM Lanning':'Meg Lanning','JE Root':'Joe Root','SPD Smith':'Steve Smith','KS Williamson':'Kane Williamson','JM Anderson':'James Anderson','DA Warner':'David Warner','AC Gilchrist':'Adam Gilchrist','ST Jayasuriya':'Sanath Jayasuriya','KL Rahul':'KL Rahul','RR Pant':'Rishabh Pant','HH Pandya':'Hardik Pandya','AC Kerr':'Amelia Kerr','SCJ Broad':'Stuart Broad'}
@@ -270,7 +272,7 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     history_assets=(f'<link rel="stylesheet" href="/assets/on-this-day.css?v={ASSET_VERSION}"><script src="/assets/on-this-day.js?v={ASSET_VERSION}" defer></script>' if path=='/' or path.startswith('/on-this-day/') else '')
     t20wc_assets=(f'<link rel="stylesheet" href="/assets/t20wc-dashboard.css?v={ASSET_VERSION}"><script src="/assets/t20wc-dashboard.js?v={ASSET_VERSION}" defer></script>' if path=='/world-cup/mens-t20/dashboard/' else '')
     og_type='profile' if kind=='ProfilePage' else 'website'
-    profile_assets=(f'<link rel="stylesheet" href="/assets/profile.css?v={ASSET_VERSION}">' if kind=='ProfilePage' or path.startswith('/records/') or (path.startswith(('/teams/','/grounds/','/series/','/head-to-head/')) and path.count('/')>=3) else '')
+    profile_assets=(f'<link rel="stylesheet" href="/assets/profile.css?v={ASSET_VERSION}">' if kind=='ProfilePage' or path.startswith(('/records/','/compare/')) or (path.startswith(('/teams/','/grounds/','/series/','/head-to-head/')) and path.count('/')>=3) else '')
     verification=('<meta name="google-site-verification" content="'+esc(SETTINGS['google_site_verification'])+'">') if SETTINGS.get('google_site_verification') else ''
     document=f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">{verification}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0a0a0f"><script src="/assets/theme.js?v={ASSET_VERSION}"></script><meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{social}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{social}"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/publication.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/portraits.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/profile-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/editorial-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/analytics.css?v={ASSET_VERSION}"><script src="/assets/analysis-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script><script src="/assets/analytics.js?v={ASSET_VERSION}" defer></script>{home_assets}{studio_assets}{history_assets}{t20wc_assets}<link rel="stylesheet" href="/assets/dark.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/arena.css?v={ASSET_VERSION}"><script src="/assets/arena.js?v={ASSET_VERSION}" defer></script>{profile_assets}{ld_scripts}</head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}<a class="search-link" href="/search/">Search</a><a class="ipl-link" href="https://crickrida.rkjat.in/">IPL Analytics</a></nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/about/','About')}{a('/contact/','Contact')}{a('/data-coverage/','Data coverage')}{a('/datasets/','Datasets')}{a('/methodology/','Methodology')}{a('/insights/','Statistical insights')}{a('/questions/','Cricket questions')}{a('/blog/','Daily notes')}{a('/on-this-day/','On this day')}{a('/where-to-watch/','Where to watch')}{a('/world-cup/','World Cup archive')}{a('/head-to-head/','Head-to-head records')}{a('/records/best-innings/','Best performances')}{a('/milestones/','Player milestones')}{a('/venue-records/','Venue records')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in/','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Corrections: <a href="mailto:rkideas65@gmail.com">rkideas65@gmail.com</a>.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
     target=OUT/path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(document,encoding='utf-8')
@@ -491,9 +493,23 @@ def main():
         checked_at=careers['meta']['checked_at'][:10]
         title,description,body,extra=render_profile(p,pid,path,rows,apps,gp_teams=gp['teams'],portraits=portraits,pack=pack,curated=pid in research_ids,checked_at=checked_at,suffix=suffix)
         page(path,title,description,body,'ProfilePage',extra)
+    print('Building comparison pages...',flush=True)
+    COMPARE_CARDS.clear()
+    for names in PAIRS:
+        players=[find_player(people,name) for name in names]
+        if any(p is None for p in players) or len({p['id'] for p in players})<len(players):continue
+        path='/compare/'+'-vs-'.join(slug(p['name']) for p in players)+'/'
+        body,faq,description=compare_body(players,innings,pp,portraits,ILLUSTRATIONS)
+        title=' vs '.join(p['name'] for p in players)+' stats: '+', '.join(f for f in ('Test','ODI','T20I') if any(f in p['career'] for p in players))
+        extra={'breadcrumb_name':' vs '.join(p['name'] for p in players)}
+        if faq:extra['faq']={'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':ans}} for q,ans in faq]}
+        page(path,title,description,body,'WebPage',extra)
+        lead=max(((f,sum((p['career'].get(f) or {}).get('matches') or 0 for p in players)) for f in ('Test','ODI','T20I')),key=lambda x:x[1])[0]
+        COMPARE_CARDS.append((path,[p['name'] for p in players],f'{lead} careers side by side: measures, year by year and by opponent.'))
     for spec in editorial['pages']:
         if isinstance(spec, tuple):
             spec=dict(zip(('path','title','description','body'),spec))
+        if spec['path'].startswith('/compare/'):continue
         page(spec['path'],spec['title'],spec['description'],spec['body'],spec.get('kind','Article'),spec.get('extra'))
     for pid in research_ids:
         p=people[pid]
@@ -1085,48 +1101,12 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
         page(path,title,description,body_html.replace('__SCOPE_NAV__'+key+'__',scope_nav(key),1),'CollectionPage')
     records_body=heading('Cricket records','Career, innings, team and partnership records for men and women in Tests, ODIs and T20Is.','RECORDS')+records_index(published_records)
     page('/records/','International cricket records','Test, ODI and T20I records for men and women: career leaderboards, highest scores, best bowling, team totals, partnerships and calendar-year records.',records_body,'CollectionPage')
-    # Flexible comparisons use only the two selected summary files.
+    # The comparison tool reads only the selected players' summary and analytics files.
     choices=''.join(f'<option value="{pp[p["id"]]}">{esc(p["name"])} · {p["gender"]}</option>' for p in ranked[:80])
-    compare=heading('Compare cricket careers','Search for two players and choose a format. Career records are compared independently of archive coverage.')+actions()+f'<form id="compare-form" class="filters"><label>Find another player<input id="compare-search" placeholder="Search all players"></label><label>First player<select name="a">{choices}</select></label><label>Second player<select name="b">{choices}</select></label>'+options('format',['Test','ODI','T20I'])+'<label>Data scope<select name="basis"><option value="career">Career records</option><option value="archive">Available archive</option></select></label><label>From year (archive)<input type="number" name="from" min="1877" max="2100"></label><label>To year (archive)<input type="number" name="to" min="1877" max="2100"></label><label>Opponent (archive)<input name="opponent" placeholder="e.g. Australia"></label><label>Venue setting (archive)<select name="setting"><option value="">All</option><option>Home</option><option>Away</option><option>Neutral</option><option>Unknown</option></select></label><label>Recent batting innings (archive)<select name="recent"><option value="">All</option><option>10</option><option>20</option><option>50</option></select></label><label>Minimum batting innings<input type="number" name="minimum" min="0" value="0"></label><button class="primary">Compare</button></form><div id="compare-result" aria-live="polite"><p>Select two players to compare their career records.</p></div>'
-    if not editorial: compare+='<section class="panel"><h2>Featured comparisons</h2>'
-    for left,right in [('Virat Kohli','Rohit Sharma'),('Sachin Tendulkar','Don Bradman'),('Joe Root','Steve Smith'),('Mithali Raj','Meg Lanning'),('Jasprit Bumrah','James Anderson'),('Shubman Gill','Joe Root'),('Smriti Mandhana','Ellyse Perry')]:
-        p1=next((p for p in ranked if p['name']==left),None);p2=next((p for p in ranked if p['name']==right),None)
-        if not p1 or not p2:continue
-        path='/compare/'+slug(left)+'-vs-'+slug(right)+'/'
-        if not editorial: compare+='<p>'+a(path,left+' vs '+right)+'</p>'
-        pair_art=''
-        if left in ILLUSTRATIONS and right in ILLUSTRATIONS:
-            pair_art='<div class="comparison-avatars"><div><img src="'+ILLUSTRATIONS[left]+'" width="420" height="480" alt="'+esc(left)+'"><strong>'+esc(left)+'</strong></div><span aria-hidden="true">VS</span><div><img src="'+ILLUSTRATIONS[right]+'" width="420" height="480" alt="'+esc(right)+'"><strong>'+esc(right)+'</strong></div></div>'
-        bits=[]
-        faq_items=[]
-        for fmt in ['ODI','Test','T20I']:
-            s1=p1['career'].get(fmt,{});s2=p2['career'].get(fmt,{})
-            if (s1.get('wickets') or 0)>=20 and (s2.get('wickets') or 0)>=20:
-                bits.append(f'{fmt} wickets {s1["wickets"]:,} and {s2["wickets"]:,}')
-                leader=left if s1['wickets']>=s2['wickets'] else right
-                faq_items.append((f'Who has more {fmt} wickets, {left} or {right}?', f'{leader} has more recorded {fmt} wickets: {left} {s1["wickets"]:,}, {right} {s2["wickets"]:,}.'))
-            elif s1.get('runs') is not None and s2.get('runs') is not None:
-                bits.append(f'{fmt} runs {s1["runs"]:,} and {s2["runs"]:,}')
-                leader=left if s1['runs']>=s2['runs'] else right
-                faq_items.append((f'Who has more {fmt} runs, {left} or {right}?', f'{leader} has more recorded {fmt} runs: {left} {s1["runs"]:,}, {right} {s2["runs"]:,}.'))
-        intro=(left+' vs '+right+': '+', '.join(bits)+'. Different eras and sample sizes need context.') if bits else 'Career comparison by format. Different eras and sample sizes need context.'
-        content=heading(left+' vs '+right,intro,'PLAYER COMPARISON')+pair_art+actions()
-        content+=f'<p class="player-intro">{esc(intro)}</p>'
-        for fmt in ['Test','ODI','T20I']:
-            if fmt not in p1['career'] and fmt not in p2['career']:continue
-            s1=p1['career'].get(fmt,{});s2=p2['career'].get(fmt,{})
-            focus='bowling' if (s1.get('wickets') or 0)>(s1.get('runs') or 0) and (s2.get('wickets') or 0)>(s2.get('runs') or 0) else 'batting'
-            content+='<section class="panel"><h2>'+fmt+'</h2>'+cw.pair_lab(left,right,s1,s2,focus)+table([left,'Metric',right],[[num(s1.get(k)),label,num(s2.get(k))] for k,label in [('matches','Matches'),('innings','Innings'),('runs','Runs'),('avg','Batting average'),('sr','Strike rate'),('hundreds','Centuries'),('fifties','Fifties'),('fours','Fours'),('sixes','Sixes'),('balls','Balls faced'),('wickets','Wickets'),('five_w','Five-wicket innings'),('bowlSr','Bowling strike rate'),('bowlAvg','Bowling average'),('econ','Economy')]],caption=left+' vs '+right+' '+fmt+' career figures')+'</section>'
-        if faq_items:
-            content+='<section class="panel player-faq" id="player-questions"><h2>Questions fans ask</h2><dl>'+''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(ans)}</dd></div>' for q,ans in faq_items[:6])+'</dl></section>'
-        content+='<p>'+a(pp[p1['id']],left+' profile')+' · '+a(pp[p2['id']],right+' profile')+' · '+a('/compare/','Choose other players')+'</p>'
-        extra={'breadcrumb_name':left+' vs '+right}
-        if faq_items:
-            extra['faq']={'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':ans}} for q,ans in faq_items[:6]]}
-        page(path,left+' vs '+right+' stats: Test, ODI and T20I',intro if len(intro)<158 else intro[:157].rsplit(' ',1)[0]+'.',content,'WebPage',extra)
-    if editorial: compare += '<section class="panel"><h2>Featured comparisons</h2>'+editorial['comparison_cards']+'</section>'
-    else: compare+='</section>'
-    page('/compare/','Compare cricket players','Compare international cricketers by format, career runs, averages, centuries and wickets.',compare)
+    compare=heading('Compare cricket careers','Two or three players, one format at a time. Official careers first; recorded innings for year-by-year and opposition views.','PLAYER COMPARISON')+actions()
+    compare+=f'<form id="compare-form" class="filters cmp-form"><label>Find a player<input id="compare-search" placeholder="Type a name to add options"></label><label>Player A<select name="a">{choices}</select></label><label>Player B<select name="b">{choices}</select></label><label>Player C (optional)<select name="c"><option value="">None</option>{choices}</select></label>'+options('format',['Test','ODI','T20I'])+'<label>Data scope<select name="basis"><option value="career">Official careers</option><option value="archive">Recorded innings</option></select></label><label>From year (innings)<input type="number" name="from" min="1877" max="2100"></label><label>To year (innings)<input type="number" name="to" min="1877" max="2100"></label><label>Opponent (innings)<input name="opponent" placeholder="e.g. Australia"></label><label>Venue setting (innings)<select name="setting"><option value="">All</option><option>Home</option><option>Away</option><option>Neutral</option><option>Unknown</option></select></label><label>Last N batting innings<select name="recent"><option value="">All</option><option>10</option><option>20</option><option>50</option></select></label><label>Minimum batting innings<input type="number" name="minimum" min="0" value="0"></label><button class="primary">Compare</button></form><div id="compare-result" aria-live="polite"><p class="pf-fine">Choose players and a format, then compare.</p></div>'
+    compare+='<section class="panel pf-block"><h2>Featured comparisons</h2>'+comparison_cards(COMPARE_CARDS)+'</section>'
+    page('/compare/','Compare cricket players','Compare two or three international cricketers by format: runs, averages, strike rates, hundreds, wickets, year-by-year overlays and opposition splits.',compare)
     entity_index=[{'name':name,'url':url,'kind':kind} for kind,g in gp.items() for name,url in g.items()];dump('/data/entity-index.json',entity_index)
     page('/studio/','International cricket content studio','Create and export publication-ready cricket visuals from verified career, match and innings data.',studio_markup(a),'SoftwareApplication',{'applicationCategory':'DesignApplication'})
     page('/embed/','Cricket Wicket player card','An embeddable international cricket career summary.','<div id="embed-result" aria-live="polite">Loading career card…</div>',noindex=True)
