@@ -19,6 +19,7 @@ from player_profile import player_seo, career_glance, career_tables, player_faq,
 from profile_research import opposition_links
 from profile_formats import profile_body
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
+from venues import canonicalise_matches
 from records_hub import CAREER_METRICS, INNINGS_RECORDS, MINIMUM_FIELD, MINIMUM_LABEL, CATEGORY_LABEL, innings_rows, team_rows, innings_record_table, career_table, records_table, records_index
 from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 from entity_pages import (
@@ -388,6 +389,7 @@ def main():
         prior=people.setdefault(p['id'],{**p,'formats':{}});prior['espn_id']=p['espn_id'];prior['gender']=p['gender'];prior['teams']=p['teams'];prior['career']=p['formats'];prior['name']=fullname(prior);prior['first']=p['first'];prior['last']=p['last']
     for p in people.values():p['name']=fullname(p)
     matches=sorted(arc['matches']+hist['matches'],key=lambda m:(m['date'],m['id']),reverse=True)
+    renamed_venues=canonicalise_matches(matches)
     all_cards=load_cards(ROOT,matches,people)
     portraits=load_portraits(ROOT/'data/portraits.json')
     studio_portraits={pid:{k:p[k] for k in ('path','author','license','license_url','source_url')} for pid,p in portraits.items()}
@@ -415,6 +417,12 @@ def main():
         if m['event']:groups['series'][m['event']].append(m)
         for pid in m.get('player_ids',[]):appearances[pid].append({'match':m['id'],'date':m['date'],'format':m['format'],'teams':m['teams'],'venue':m['venue'],'result':result(m),'url':mp[m['id']]})
     gp={kind:{name:f'/{kind}/{slug(name)}-{hashlib.sha1(name.encode()).hexdigest()[:6]}/' for name in g} for kind,g in groups.items()}
+    for old_name,new_name in renamed_venues.items():
+        old_path=f'/grounds/{slug(old_name)}-{hashlib.sha1(old_name.encode()).hexdigest()[:6]}/'
+        new_path=gp['grounds'].get(new_name)
+        if not new_path or old_path==new_path:continue
+        target=OUT/old_path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True)
+        target.write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{esc(old_name)} has moved | Cricket Wicket</title><link rel="canonical" href="{BASE}{new_path}"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url={new_path}"></head><body><p>{esc(old_name)} is now published as <a href="{new_path}">{esc(new_name)}</a>.</p></body></html>',encoding='utf-8')
     editorial=build_editorial(people,matches,pp,mp,gp,all_cards,careers['meta'].get('checked_at',''))
     # Retire the legacy publication and its unscoped global data payloads.
     for name in ['overview','official','about','coverage','batting','bowling','fielding','h2h','formats','tournaments','vendor','images','app.js','styles.css','professional.css','enhancements.js','stats.json','official_records.json','player_images.json']:
