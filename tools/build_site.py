@@ -18,6 +18,7 @@ from data_health import coverage_page
 from player_profile import player_seo, career_glance, career_tables, player_faq, player_person, primary_role
 from profile_research import opposition_links
 from profile_formats import profile_body
+from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel
 from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 from entity_pages import (
     team_totals, ground_totals, team_seo, ground_seo, team_intro, ground_intro,
@@ -266,7 +267,7 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     history_assets=(f'<link rel="stylesheet" href="/assets/on-this-day.css?v={ASSET_VERSION}"><script src="/assets/on-this-day.js?v={ASSET_VERSION}" defer></script>' if path=='/' or path.startswith('/on-this-day/') else '')
     t20wc_assets=(f'<link rel="stylesheet" href="/assets/t20wc-dashboard.css?v={ASSET_VERSION}"><script src="/assets/t20wc-dashboard.js?v={ASSET_VERSION}" defer></script>' if path=='/world-cup/mens-t20/dashboard/' else '')
     og_type='profile' if kind=='ProfilePage' else 'website'
-    profile_assets=(f'<link rel="stylesheet" href="/assets/profile.css?v={ASSET_VERSION}">' if kind=='ProfilePage' else '')
+    profile_assets=(f'<link rel="stylesheet" href="/assets/profile.css?v={ASSET_VERSION}">' if kind=='ProfilePage' or (path.startswith(('/teams/','/grounds/','/series/')) and path.count('/')>=3) else '')
     verification=('<meta name="google-site-verification" content="'+esc(SETTINGS['google_site_verification'])+'">') if SETTINGS.get('google_site_verification') else ''
     document=f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">{verification}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Cricket Wicket</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0a0a0f"><script src="/assets/theme.js?v={ASSET_VERSION}"></script><meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)} | Cricket Wicket"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Cricket Wicket"><meta property="og:image" content="{social}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{social}"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/wicket.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/publication.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/portraits.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/profile-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/editorial-research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/analytics.css?v={ASSET_VERSION}"><script src="/assets/analysis-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/wicket.js?v={ASSET_VERSION}" defer></script><script src="/assets/analytics.js?v={ASSET_VERSION}" defer></script>{home_assets}{studio_assets}{history_assets}{t20wc_assets}<link rel="stylesheet" href="/assets/dark.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/arena.css?v={ASSET_VERSION}"><script src="/assets/arena.js?v={ASSET_VERSION}" defer></script>{profile_assets}{ld_scripts}</head><body><a class="skip" href="#main">Skip to statistics</a><div class="topline"><div class="wrap">THE GAME IN NUMBERS <span>Tests · ODIs · T20Is · Men & women</span></div></div><header><div class="wrap header"><a class="brand" href="/"><img src="/logo.svg" width="36" height="36" alt="">CRICKET WICKET<span>.</span></a><button id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav">{''.join(f'<a href="{url}" '+('aria-current="page"' if path.startswith(url) else '')+f'>{name}</a>' for url,name in nav)}<a class="search-link" href="/search/">Search</a><a class="ipl-link" href="https://crickrida.rkjat.in/">IPL Analytics</a></nav><button id="theme" aria-label="Toggle dark theme" aria-pressed="false">◐</button></div></header><main id="main" class="wrap">{body}</main><footer><div class="wrap"><strong>CRICKET WICKET</strong><p>Official international careers. Twelve national teams. Every format.</p><div class="footer-links">{a('/about/','About')}{a('/contact/','Contact')}{a('/data-coverage/','Data coverage')}{a('/datasets/','Datasets')}{a('/methodology/','Methodology')}{a('/insights/','Statistical insights')}{a('/questions/','Cricket questions')}{a('/blog/','Daily notes')}{a('/on-this-day/','On this day')}{a('/where-to-watch/','Where to watch')}{a('/world-cup/','World Cup archive')}{a('/head-to-head/','Head-to-head records')}{a('/records/best-innings/','Best performances')}{a('/milestones/','Player milestones')}{a('/venue-records/','Venue records')}{a('/corrections/','Report a correction')}{a('https://crickrida.rkjat.in/','IPL on Crickrida')}</div><p class="muted">Ball-by-ball data: <a href="https://cricsheet.org/">Cricsheet</a>. Corrections: <a href="mailto:rkideas65@gmail.com">rkideas65@gmail.com</a>.</p></div></footer><div id="toast" role="status" aria-live="polite"></div></body></html>'''
     target=OUT/path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(document,encoding='utf-8')
@@ -956,42 +957,46 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
             span=f'{ms[-1]["date"][:4]} to {ms[0]["date"][:4]}'
             listing+=f'<a class="feature-card entity-index-card" data-entity-card="{esc(name)}" href="{gp[kind][name]}"><h2>{esc(name)}</h2><p>{len(ms):,} recorded matches</p><small>{esc(span)}</small></a>'
             extra={'breadcrumb_name':name}
+            counts=Counter(m['format'] for m in ms)
+            formats=[f for f in ('Test','ODI','T20I') if counts.get(f)]
+            switch=entity_switch(formats,counts)
+            from urllib.parse import urlencode
+            query={'team':name} if kind=='teams' else {'q':name}
+            tail='<section class="panel pf-block" id="recent-matches"><h2>Recent recorded matches</h2>'+entity_filter_form(kind,name,ms)+'<div id="entity-results" aria-live="polite">'+match_table(ms,mp,50)+'</div></section><p class="pf-links">'+a('/matches/?'+urlencode(query),'Search all matching matches →')+' · '+a('/questions/','Cricket questions')+'</p>'
+            overview_open='<section class="fmt-panel fmt-overview" id="overview" data-fmt-panel="overview" aria-label="Overview">'
             if kind=='teams':
                 totals=team_totals(ms,name)
                 title1,description=team_seo(name,totals)
-                body=heading(name,f'{totals["matches"]:,} recorded matches · {totals["first"][:4]} to {totals["last"][:4]}','TEAMS')+actions()
-                body+=f'<p class="player-intro">{esc(team_intro(name,totals))}</p>'
+                body=heading(name,f'{totals["matches"]:,} recorded matches · {totals["first"][:4]} to {totals["last"][:4]}','TEAMS')+actions()+switch+overview_open
                 body+=official_team_panel(name,official_teams,table)
                 body+=team_glance(name,totals)+cw.result_decades(ms,name)
-                body+='<div class="stats">'+''.join(f'<div><strong>{n:,}</strong><span>{esc(label)}</span></div>' for label,n in [('Won',totals['won']),('Lost',totals['lost']),('Draw / tie / no result',totals['other']),('Matches',totals['matches'])])+'</div>'
                 rivals=defaultdict(Counter)
                 for m in ms:
-                    opp=next(t for t in m['teams'] if t!=name);rivals[opp]['played']+=1;rivals[opp]['wins']+=int(m['outcome'].get('winner')==name)
-                body+='<section class="panel"><h2>Head-to-head results</h2>'+table(['Opponent','Matches','Wins'],[[a(h2h_path(name,opp),opp),str(s['played']),str(s['wins'])] for opp,s in sorted(rivals.items(),key=lambda x:x[1]['played'],reverse=True)],caption=name+' against each full-member opponent')+'</section>'
+                    opp=next(t for t in m['teams'] if t!=name);rivals[opp]['played']+=1;rivals[opp]['wins']+=int(m['outcome'].get('winner')==name);rivals[opp]['losses']+=int(bool(m['outcome'].get('winner')) and m['outcome'].get('winner')!=name)
+                body+='<section class="panel pf-block"><h2>Head-to-head results</h2>'+table(['Opponent','Matches','Wins','Losses','Other'],[[a(h2h_path(name,opp),opp),str(s['played']),str(s['wins']),str(s['losses']),str(s['played']-s['wins']-s['losses'])] for opp,s in sorted(rivals.items(),key=lambda x:x[1]['played'],reverse=True)],caption=name+' against each full-member opponent, all formats')+'</section>'
                 squad=[p for p in ranked if name in p['teams']]
-                body+='<section class="panel"><h2>Explore players</h2><p class="note">Players linked to this team; career totals can include other representative teams.</p>'+table(['Player','Gender','Career runs','Career wickets'],[[a(pp[p['id']],p['name']),p['gender'],num(aggregate(p['career']).get('runs')),num(aggregate(p['career']).get('wickets'))] for p in squad[:30]],caption=name+' players by career runs')+'</section>'
+                body+='<section class="panel pf-block"><h2>Explore players</h2>'+table(['Player','Gender','Career runs','Career wickets'],[[a(pp[p['id']],p['name']),p['gender'],num(aggregate(p['career']).get('runs')),num(aggregate(p['career']).get('wickets'))] for p in squad[:30]],caption=name+' players by career runs')+'</section>'
                 faq_html,faq_schema=team_faq(name,totals,gp[kind][name])
-                body+=faq_html
+                body+=faq_html+tail+'</section>'
+                for fmt in formats:body+=team_format_panel(name,fmt,[m for m in ms if m['format']==fmt],all_cards or {},people,pp,mp,h2h_path)
                 extra.update({'mainEntity':team_schema(name,gp[kind][name],description),'faq':faq_schema})
             elif kind=='grounds':
                 totals=ground_totals(ms)
                 title1,description=ground_seo(name,totals)
-                body=heading(name,f'{totals["matches"]:,} recorded matches · {totals["first"][:4]} to {totals["last"][:4]}','GROUNDS')+actions()
-                body+=f'<p class="player-intro">{esc(ground_intro(name,totals))}</p>'
+                body=heading(name,f'{totals["matches"]:,} recorded matches · {totals["first"][:4]} to {totals["last"][:4]}','GROUNDS')+actions()+switch+overview_open
                 body+=ground_glance(name,totals)+entity_visuals(kind,name,ms)
-                body+='<section class="panel" id="career-records"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']],caption=name+' matches by format and gender')+'</section>'
+                body+='<section class="panel pf-block" id="career-records"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']],caption=name+' matches by format and gender')+'</section>'
                 faq_html,faq_schema=ground_faq(name,totals)
-                body+=faq_html
+                body+=faq_html+tail+'</section>'
+                for fmt in formats:body+=ground_format_panel(name,fmt,[m for m in ms if m['format']==fmt],all_cards or {},people,pp,mp,gp['teams'])
                 extra.update({'mainEntity':ground_schema(name,gp[kind][name],description),'faq':faq_schema})
             else:
                 title1=name+' match records'
-                description=f'{name}: international cricket results, format breakdowns and linked scorecards.'
-                body=heading(name,f'{len(ms):,} recorded matches · {ms[-1]["date"][:4]} to {ms[0]["date"][:4]}',kind.upper())+actions()+entity_visuals(kind,name,ms)
-                body+='<section class="panel"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']],caption=name+' matches by format')+'</section>'
-            body+='<h2>Recent recorded matches</h2>'+entity_filter_form(kind,name,ms)+'<div id="entity-results" aria-live="polite">'+match_table(ms,mp,50)+'</div>'
-            from urllib.parse import urlencode
-            query={'team':name} if kind=='teams' else {'q':name}
-            body+='<p>'+a('/matches/?'+urlencode(query),'Search all matching matches →')+' · '+a('/questions/','Cricket questions')+'</p>'
+                description=f'{name}: international cricket results by edition, scorelines, leading players and linked scorecards.'
+                body=heading(name,f'{len(ms):,} recorded matches · {ms[-1]["date"][:4]} to {ms[0]["date"][:4]}',kind.upper())+actions()+switch+overview_open+entity_visuals(kind,name,ms)
+                body+='<section class="panel pf-block"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']],caption=name+' matches by format')+'</section>'
+                body+=tail+'</section>'
+                for fmt in formats:body+=series_format_panel(name,fmt,[m for m in ms if m['format']==fmt],all_cards or {},people,pp,mp)
             page(gp[kind][name],title1,description,body,'CollectionPage',extra)
         page('/'+kind+'/',title,'Explore '+title.lower()+' and their international match records.',listing+'</div>','CollectionPage')
     records_body=heading('Cricket records','Qualified career leaderboards. Choose a format and gender for meaningful comparisons.')

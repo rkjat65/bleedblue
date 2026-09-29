@@ -27,7 +27,7 @@
  function download(text,type,name){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
  function exportCsv(rows){const safe=v=>{let s=String(v??'');if(/^[=+@-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};download('\ufeff'+rows.map(r=>r.map(safe).join(',')).join('\r\n'),'text/csv;charset=utf-8','cricket-wicket-records.csv');toast('CSV downloaded.');}
  function filterParams(){return new URLSearchParams(location.hash.startsWith('#filters=')?location.hash.slice(9):location.search);}
- function rememberParams(form){const q=new URLSearchParams();new FormData(form).forEach((v,k)=>{if(v)q.set(k,v);});history.replaceState(null,'',location.pathname+(q.size?'#filters='+q.toString():''));}
+ function rememberParams(form){const q=new URLSearchParams();new FormData(form).forEach((v,k)=>{if(v)q.set(k,v);});const keep=/^#(overview|test|odi|t20i)$/.test(location.hash)?location.hash:'';history.replaceState(null,'',location.pathname+(q.size?'#filters='+q.toString():keep));}
  function restore(form){for(const [k,v] of filterParams()){const input=form.elements.namedItem(k);if(input&&typeof input.value==='string')input.value=v;}}
  function attachForm(form,render){restore(form);form.addEventListener('submit',e=>{e.preventDefault();render().catch(e=>toast(e.message));});form.addEventListener('reset',()=>setTimeout(()=>render().catch(e=>toast(e.message)),0));}
  function pager(container,rows,render,size=50){let page=0;function draw(){container.innerHTML=render(rows.slice(page*size,(page+1)*size))+`<nav class="pagination" aria-label="Filtered results"><button data-prev ${page===0?'disabled':''}>Previous</button><span>${num(rows.length)} results · ${page+1} / ${Math.max(1,Math.ceil(rows.length/size))}</span><button data-next ${(page+1)*size>=rows.length?'disabled':''}>Next</button></nav>`;container.querySelector('[data-prev]').onclick=()=>{page--;draw();};container.querySelector('[data-next]').onclick=()=>{page++;draw();};}draw();}
@@ -66,7 +66,7 @@
   const panels=$$('[data-fmt-panel]');
   const known=key=>panels.some(p=>p.dataset.fmtPanel===key);
   const show=key=>{if(!known(key))key='overview';panels.forEach(p=>p.classList.toggle('is-active',p.dataset.fmtPanel===key));$$('[data-fmt]',fsw).forEach(x=>{const on=x.dataset.fmt===key;x.classList.toggle('is-active',on);if(on)x.setAttribute('aria-current','true');else x.removeAttribute('aria-current');});document.dispatchEvent(new CustomEvent('cw:format',{detail:{format:key}}));};
-  const initial=(location.hash||'').slice(1).toLowerCase();
+  const initial=document.documentElement.dataset.fmt||(location.hash||'').slice(1).toLowerCase();
   panels.forEach(p=>p.classList.toggle('is-active',p.dataset.fmtPanel===(known(initial)?initial:'overview')));
   document.getElementById('fmt-boot')?.remove();
   document.documentElement.classList.add('fmt-js');

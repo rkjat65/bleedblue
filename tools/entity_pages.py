@@ -164,14 +164,21 @@ def ground_intro(name, totals):
     return _assert_clean(text)
 
 
-def _card(title, hero, unit, fields, share=0):
+KEYS = {'Test': 'test', 'ODI': 'odi', 'T20I': 't20i'}
+
+
+def _card(title, hero, unit, fields, share=0, fmt=None):
     figures = ''.join(f'<div><dt>{esc(label)}</dt><dd>{esc(value)}</dd></div>' for label, value in fields)
-    return (
-        f'<article class="format-card"><h3>{esc(title)}</h3>'
+    inner = (
+        f'<h3>{esc(title)}</h3>'
         f'<div class="format-card-hero"><strong>{esc(hero)}</strong><span>{esc(unit)}</span></div>'
         f'<dl>{figures}</dl>'
-        f'<div class="format-card-share"><i style="width:{share:.1f}%"></i></div></article>'
+        f'<div class="format-card-share"><i style="width:{share:.1f}%"></i></div>'
     )
+    if fmt in KEYS:
+        return f'<a class="format-card fmt-{KEYS[fmt]}" href="#{KEYS[fmt]}" data-fmt-link="{KEYS[fmt]}">{inner}<span class="format-card-cta">Open the {esc(fmt)} record →</span></a>'
+    return f'<article class="format-card">{inner}</article>'
+
 
 
 def team_glance(name, totals):
@@ -195,10 +202,10 @@ def team_glance(name, totals):
                 ('To', row['last'][:4]),
             ],
             row['matches'] / peak * 100,
+            fmt=row['format'],
         )
     return (
-        f'<section class="career-glance-wrap" id="by-format">'
-        f'<p class="eyebrow">BY FORMAT AND GENDER</p>'
+        f'<section class="panel pf-block career-glance-wrap" id="by-format">'
         f'<h2>{esc(name)}: Tests, ODIs and T20Is</h2>'
         f'<p class="muted">Wins count a recorded winner. Other is draws, ties and no results. Men and women stay separate.</p>'
         f'<div class="career-glance">{cards}</div></section>'
@@ -221,10 +228,10 @@ def ground_glance(name, totals):
                 ('To', row['last'][:4]),
             ],
             row['matches'] / peak * 100,
+            fmt=row['format'],
         )
     return (
-        f'<section class="career-glance-wrap" id="by-format">'
-        f'<p class="eyebrow">BY FORMAT AND GENDER</p>'
+        f'<section class="panel pf-block career-glance-wrap" id="by-format">'
         f'<h2>{esc(name)}: recorded internationals</h2>'
         f'<p class="muted">Each card is a gender and format slice of the published archive.</p>'
         f'<div class="career-glance">{cards}</div></section>'

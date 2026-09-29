@@ -184,3 +184,20 @@ html[data-theme=dark] .format-card dd{color:var(--ink)}
   .pf-ms-list a{grid-template-columns:56px minmax(0,1fr)}
 }
 @media(prefers-reduced-motion:reduce){.pf-chip,.fmt-switch a{transition:none}}
+
+/* ---------- Team, ground and series panels ---------- */
+.pf-formguide{display:inline-flex;gap:4px}
+.pf-formguide i,.pf-oc{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 6px;border-radius:7px;font:800 11px/1 var(--font-mono,monospace);font-style:normal;color:#fff;background:var(--muted)}
+.pf-oc{min-width:0;padding:0 9px;height:24px;font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+.f-w{background:#16a34a}.f-l{background:#dc2626}.f-d,.f-t{background:#64748b}.f-n{background:#94a3b8;color:#111}
+html[data-theme=dark] .f-w{background:#22c55e;color:#06210f}html[data-theme=dark] .f-l{background:#ef4444;color:#2a0606}
+.pf-results .pf-table td:nth-child(3){font-weight:750;color:var(--fmt)}
+.pf-results .pf-table td:nth-child(7){font-weight:750}
+.pf-leaders .pf-table tbody th{min-width:150px}
+.pf-apps{max-width:420px}
+.pf-scoreline{display:inline-flex;align-items:baseline;gap:8px;font-size:20px;font-variant-numeric:tabular-nums}
+.pf-scoreline b{font-size:15px}.pf-scoreline i{font-style:normal;color:var(--muted)}.pf-scoreline small{font-size:12px;color:var(--muted);margin-left:6px}
+.pf-edition-line{margin:0 0 10px}
+.pf-edition-leaders{margin:6px 0 0}.pf-edition-leaders summary{font-size:12px}
+.pf-links{font-size:13px}
+@media(max-width:640px){.pf-scoreline{font-size:17px}.pf-formguide i{min-width:22px;height:22px;font-size:10px}}

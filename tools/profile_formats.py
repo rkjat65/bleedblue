@@ -447,7 +447,7 @@ def format_switch(formats, career):
         count = f'<small>{matches:,}</small>' if matches else ''
         items.append(f'<a href="#{KEYS[fmt]}" data-fmt="{KEYS[fmt]}" class="fmt-{KEYS[fmt]}">{esc(fmt)}{count}</a>')
     script = ("<script>(function(){var h=(location.hash||'').slice(1).toLowerCase(),d=document.documentElement;d.classList.add('fmt-js');"
-              "var ok={overview:1,test:1,odi:1,t20i:1};if(!ok[h])h='overview';var s=document.currentScript.parentNode;"
+              "var ok={overview:1,test:1,odi:1,t20i:1};if(!ok[h])h='overview';d.dataset.fmt=h;var s=document.currentScript.parentNode;"
               "s.querySelectorAll('[data-fmt]').forEach(function(a){var on=a.dataset.fmt===h;a.classList.toggle('is-active',on);on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});"
               "var st=document.createElement('style');st.id='fmt-boot';st.textContent='.fmt-js .fmt-panel:not(#'+h+'){display:none}';document.head.appendChild(st);})();</script>")
     return f'<nav class="fmt-switch" data-fmt-switch aria-label="Choose a format">{"".join(items)}{script}</nav>'
