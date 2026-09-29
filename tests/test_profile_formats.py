@@ -165,5 +165,14 @@ class ChartTests(unittest.TestCase):
         self.assertIn('is-best', bars)
 
 
+class NavigationTests(unittest.TestCase):
+    def test_format_click_handler_ignores_the_html_element(self):
+        """The boot script stores the active format on <html data-fmt>; ordinary links must still navigate."""
+        script = (Path(__file__).resolve().parent.parent / 'web' / 'wicket.js').read_text(encoding='utf-8')
+        self.assertNotIn("closest('[data-fmt]", script)
+        self.assertIn("closest('button[data-fmt],a[data-fmt],[data-fmt-link]')", script)
+        self.assertIn('t===document.documentElement', script)
+
+
 if __name__ == '__main__':
     unittest.main()

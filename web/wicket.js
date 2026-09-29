@@ -92,7 +92,7 @@
   panels.forEach(p=>p.classList.toggle('is-active',p.dataset.fmtPanel===(known(initial)?initial:'overview')));
   document.getElementById('fmt-boot')?.remove();
   document.documentElement.classList.add('fmt-js');
-  document.addEventListener('click',e=>{const t=e.target.closest('[data-fmt],[data-fmt-link]');if(!t)return;const key=t.dataset.fmt||t.dataset.fmtLink;if(!known(key))return;e.preventDefault();show(key);history.replaceState(null,'','#'+key);const top=fsw.getBoundingClientRect().top+scrollY-62;if(t.dataset.fmtLink||scrollY>top)scrollTo({top,behavior:'auto'});});
+  document.addEventListener('click',e=>{const t=e.target.closest('button[data-fmt],a[data-fmt],[data-fmt-link]');if(!t||t===document.documentElement)return;const key=t.dataset.fmt||t.dataset.fmtLink;if(!known(key))return;e.preventDefault();show(key);history.replaceState(null,'','#'+key);const top=fsw.getBoundingClientRect().top+scrollY-62;if(t.dataset.fmtLink||scrollY>top)scrollTo({top,behavior:'auto'});});
   addEventListener('hashchange',()=>{const key=(location.hash||'').slice(1).toLowerCase();if(known(key))show(key);});
  }
  document.addEventListener('click',e=>{const b=e.target.closest('.pf-tabs [data-tab]');if(!b)return;const host=b.closest('.pf-splits')||b.parentElement.parentElement;host.querySelectorAll('.pf-tabs [data-tab]').forEach(x=>{const on=x===b;x.classList.toggle('is-active',on);x.setAttribute('aria-selected',String(on));});host.querySelectorAll('[data-tab-panel]').forEach(p=>p.classList.toggle('is-active',p.dataset.tabPanel===b.dataset.tab));});
