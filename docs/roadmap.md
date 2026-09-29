@@ -9,6 +9,7 @@ Goal: the most complete international cricket reference short of live scores. Ev
 - **Team, ground, series and head-to-head pages**: format panels with men and women separate; records by opponent, venue, toss, year; totals, chases and margins; leading players; series editions with scorelines.
 - **Records hub**: category index; sixteen career leaderboards; highest scores, strike rate, sixes, best bowling, calendar-year runs and wickets, partnerships, team totals, chases and margins, each with team, opponent, ground and year filters.
 - **Ground names**: 667 recorded spellings resolve to 402 grounds; retired ground URLs redirect to the canonical page.
+- **Ground facts**: `tools/fetch_ground_facts.py` pulls city, country, capacity, opening year, bowling ends and coordinates from Cricinfo-derived metadata, Wikidata and the Wikipedia infobox into `data/ground_facts.json`; ground mastheads, index cards, meta descriptions and StadiumOrArena schema use them. Rerun with `--retry-unmatched` after improving the matcher, `--refresh` to refetch everything.
 - **Homepage**: one hero figure with record tiles and search, icons rail, fixtures, results, the three formats side by side, a records grid, rivalries, featured scorecard, leaders and explore tiles. The section rail only appears when the viewport has a real gutter.
 - **Compare**: curated pages for two or three players with an Overview / Test / ODI / T20I switch, best figure marked in every row, normalised measure bars, a cumulative year-by-year overlay and a batting average by opponent table; the tool at /compare/ takes up to three players with the same views.
 - **Light theme**: the same tokens drive both themes; headings and numerals use the same families in light.
@@ -17,7 +18,7 @@ Goal: the most complete international cricket reference short of live scores. Ev
 
 ## Next
 
-1. **Ground metadata**: city, country and capacity on ground mastheads; the ambiguous short names Hyderabad and Wellington ODIs once sources confirm the ground.
+1. **Ambiguous short venue names**: Hyderabad and Wellington ODIs once sources confirm the ground.
 2. **Player pages**: captaincy and wicketkeeping splits when the source data carries them; a "similar players" module from the career table.
 
 ## Working notes

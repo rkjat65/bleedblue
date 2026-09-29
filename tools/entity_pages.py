@@ -129,14 +129,54 @@ def team_seo(name, totals):
     return _assert_clean(title), _assert_clean(clip_meta(description))
 
 
-def ground_seo(name, totals):
+def ground_place(facts):
+    """'Kolkata, India' from the ground facts, or '' when neither is known."""
+    facts = facts or {}
+    return ', '.join(part for part in (facts.get('city'), facts.get('country')) if part)
+
+
+def ground_seo(name, totals, facts=None):
     label = _format_list(totals['formats'])
+    place = ground_place(facts)
     title = f'{name} cricket records: {label}'
+    capacity = f' Capacity {facts["capacity"]:,}.' if facts and facts.get('capacity') else ''
     description = (
-        f'{name} has {totals["matches"]:,} recorded international matches'
-        f' ({label}), men and women. Innings averages, format cards and scorecards.'
+        f'{name}{(", " + place) if place else ""} has {totals["matches"]:,} recorded international matches'
+        f' ({label}), men and women.{capacity} Innings averages, format cards and scorecards.'
     )
     return _assert_clean(title), _assert_clean(clip_meta(description))
+
+
+def ground_masthead(name, totals, facts=None, actions=''):
+    """Masthead with the ground's place, size and history above the format switch."""
+    facts = facts or {}
+    place = ground_place(facts)
+    eyebrow = 'GROUND' + (' · ' + place.upper().replace(', ', ' · ') if place else '')
+    span = f'{totals["first"][:4]} to {totals["last"][:4]}' if totals.get('first') and totals.get('last') else ''
+    sub = ' · '.join(part for part in (f'{totals["matches"]:,} recorded internationals', span, _format_list(totals['formats'])) if part)
+    chips = []
+    if facts.get('capacity'):
+        chips.append(('Capacity', f'{facts["capacity"]:,}'))
+    if facts.get('opened'):
+        chips.append(('Opened', str(facts['opened'])))
+    if facts.get('ends'):
+        chips.append(('Ends', ' and '.join(facts['ends'])))
+    if totals.get('men') is not None:
+        chips.append(('Men and women', f'{totals["men"]:,} and {totals["women"]:,}'))
+    links = []
+    if facts.get('lat') is not None and facts.get('lon') is not None:
+        links.append(('Map', f'https://www.openstreetmap.org/?mlat={facts["lat"]}&mlon={facts["lon"]}#map=16/{facts["lat"]}/{facts["lon"]}'))
+    if facts.get('wikipedia'):
+        links.append(('Wikipedia', facts['wikipedia']))
+    chip_html = ''.join(f'<div class="gr-fact"><span>{esc(label)}</span><strong>{esc(value)}</strong></div>' for label, value in chips)
+    link_html = ' · '.join(f'<a href="{esc(url)}" rel="noopener">{esc(label)}</a>' for label, url in links)
+    return (
+        f'<header class="pf-mast gr-mast"><div class="pf-id"><p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(name)}</h1>'
+        f'<p class="pf-sub">{esc(sub)}</p>'
+        + (f'<div class="gr-facts">{chip_html}</div>' if chip_html else '')
+        + (f'<p class="gr-links pf-fine">{link_html}</p>' if link_html else '')
+        + actions + '</div></header>'
+    )
 
 
 def team_intro(name, totals):
@@ -327,11 +367,26 @@ def team_schema(name, url, description, base='https://cricket.rkjat.in'):
     }
 
 
-def ground_schema(name, url, description, base='https://cricket.rkjat.in'):
-    return {
+def ground_schema(name, url, description, facts=None, base='https://cricket.rkjat.in'):
+    facts = facts or {}
+    schema = {
         '@type': 'StadiumOrArena',
         'name': name,
         'url': base.rstrip('/') + url,
         'description': description,
         'sport': 'Cricket',
     }
+    if facts.get('city') or facts.get('country'):
+        address = {'@type': 'PostalAddress'}
+        if facts.get('city'):
+            address['addressLocality'] = facts['city']
+        if facts.get('country'):
+            address['addressCountry'] = facts['country']
+        schema['address'] = address
+    if facts.get('lat') is not None and facts.get('lon') is not None:
+        schema['geo'] = {'@type': 'GeoCoordinates', 'latitude': facts['lat'], 'longitude': facts['lon']}
+    if facts.get('capacity'):
+        schema['maximumAttendeeCapacity'] = facts['capacity']
+    if facts.get('wikipedia'):
+        schema['sameAs'] = [facts['wikipedia']]
+    return schema

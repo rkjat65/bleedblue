@@ -1,0 +1,7930 @@
+{
+ "meta": {
+  "checked_at": "2026-09-29T15:29:25.388696+00:00",
+  "grounds": 402,
+  "matched": 265,
+  "unmatched": 137,
+  "errors": 0,
+  "with_capacity": 218,
+  "with_city": 397,
+  "with_country": 373,
+  "with_coordinates": 261
+ },
+ "grounds": {
+  "AMI Stadium": {
+   "name": "AMI Stadium",
+   "city": "Christchurch",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:34.181672+00:00",
+   "matches": 9,
+   "spellings": [
+    "AMI Stadium"
+   ]
+  },
+  "Aberdeen": {
+   "name": "Aberdeen",
+   "city": "Aberdeen",
+   "country": "Scotland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:05.136013+00:00",
+   "matches": 1,
+   "spellings": [
+    "Aberdeen"
+   ]
+  },
+  "Adelaide Oval": {
+   "name": "Adelaide Oval",
+   "city": "Adelaide",
+   "country": "Australia",
+   "capacity": 53500,
+   "opened": 1872,
+   "ends": [
+    "River End",
+    "Cathedral End"
+   ],
+   "lat": -34.91556,
+   "lon": 138.59611,
+   "wikipedia": "https://en.wikipedia.org/wiki/Adelaide_Oval",
+   "wikidata": "Q2462430",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:23.546022+00:00",
+   "matches": 212,
+   "spellings": [
+    "Adelaide",
+    "Adelaide Oval"
+   ]
+  },
+  "Albion": {
+   "name": "Albion",
+   "city": "Albion",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:34.705452+00:00",
+   "matches": 5,
+   "spellings": [
+    "Albion"
+   ]
+  },
+  "Albury": {
+   "name": "Albury",
+   "city": "Albury",
+   "country": "Australia",
+   "capacity": 8000,
+   "opened": 1859,
+   "ends": [],
+   "lat": -36.08311,
+   "lon": 146.90877,
+   "wikipedia": "https://en.wikipedia.org/wiki/Albury_Sports_Ground",
+   "wikidata": "Q4712859",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:32.827730+00:00",
+   "matches": 1,
+   "spellings": [
+    "Albury"
+   ]
+  },
+  "Aldershot": {
+   "name": "Aldershot",
+   "city": "Aldershot",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:06.385348+00:00",
+   "matches": 1,
+   "spellings": [
+    "Aldershot"
+   ]
+  },
+  "Allan Border Field": {
+   "name": "Allan Border Field",
+   "city": "Brisbane",
+   "country": "Australia",
+   "capacity": 6500,
+   "opened": null,
+   "ends": [
+    "Crosby Road End",
+    "Albion Park End"
+   ],
+   "lat": -27.43528,
+   "lon": 153.04611,
+   "wikipedia": "https://en.wikipedia.org/wiki/Allan_Border_Field",
+   "wikidata": "Q4730485",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:12.956459+00:00",
+   "matches": 19,
+   "spellings": [
+    "Allan Border Field",
+    "Allan Border Field, Brisbane"
+   ]
+  },
+  "Amritsar": {
+   "name": "Amritsar",
+   "city": "Amritsar",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:37.731559+00:00",
+   "matches": 2,
+   "spellings": [
+    "Amritsar"
+   ]
+  },
+  "Amstelveen": {
+   "name": "Amstelveen",
+   "city": "Amstelveen",
+   "country": "Netherlands",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:26.454679+00:00",
+   "matches": 3,
+   "spellings": [
+    "Amstelveen"
+   ]
+  },
+  "Andhra Cricket Association-Visakhapatnam District Cricket Association Stadium": {
+   "name": "Andhra Cricket Association-Visakhapatnam District Cricket Association Stadium",
+   "city": "Visakhapatnam",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:05.404170+00:00",
+   "matches": 1,
+   "spellings": [
+    "Andhra Cricket Association-Visakhapatnam District Cricket Association Stadium"
+   ]
+  },
+  "Antigua Recreation Ground": {
+   "name": "Antigua Recreation Ground",
+   "city": "St John's",
+   "country": "West Indies",
+   "capacity": 9000,
+   "opened": null,
+   "ends": [],
+   "lat": 17.12222,
+   "lon": -61.83917,
+   "wikipedia": "https://en.wikipedia.org/wiki/Antigua_Recreation_Ground",
+   "wikidata": "Q575701",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:11.714323+00:00",
+   "matches": 30,
+   "spellings": [
+    "St John's",
+    "Antigua Recreation Ground, St John's",
+    "Antigua Recreation Ground",
+    "Antigua Recreation Ground, St John's, Antigua"
+   ]
+  },
+  "Arbab Niaz Stadium": {
+   "name": "Arbab Niaz Stadium",
+   "city": "Peshawar",
+   "country": "Pakistan",
+   "capacity": 30000,
+   "opened": null,
+   "ends": [],
+   "lat": 34.02167,
+   "lon": 71.57833,
+   "wikipedia": "https://en.wikipedia.org/wiki/Imran_Khan_Cricket_Stadium",
+   "wikidata": "Q4784602",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:20.913540+00:00",
+   "matches": 22,
+   "spellings": [
+    "Peshawar",
+    "Arbab Niaz Stadium"
+   ]
+  },
+  "Arnos Vale Ground": {
+   "name": "Arnos Vale Ground",
+   "city": "Kingstown",
+   "country": "West Indies",
+   "capacity": 18000,
+   "opened": null,
+   "ends": [
+    "Airport End",
+    "Bequia End"
+   ],
+   "lat": 13.14186,
+   "lon": -61.21181,
+   "wikipedia": "https://en.wikipedia.org/wiki/Arnos_Vale_Stadium",
+   "wikidata": "Q697149",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:19:14.719833+00:00",
+   "matches": 47,
+   "spellings": [
+    "Kingstown",
+    "Arnos Vale Ground, Kingstown",
+    "Arnos Vale Ground, Kingstown, St Vincent",
+    "Arnos Vale Ground"
+   ]
+  },
+  "Arun Jaitley Stadium": {
+   "name": "Arun Jaitley Stadium",
+   "city": "Delhi",
+   "country": "India",
+   "capacity": 35200,
+   "opened": 1883,
+   "ends": [],
+   "lat": 28.63778,
+   "lon": 77.24306,
+   "wikipedia": "https://en.wikipedia.org/wiki/Arun_Jaitley_Cricket_Stadium",
+   "wikidata": "Q15217611",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:31.004087+00:00",
+   "matches": 91,
+   "spellings": [
+    "Delhi",
+    "Feroz Shah Kotla",
+    "Arun Jaitley Stadium, Delhi",
+    "Arun Jaitley Stadium"
+   ]
+  },
+  "Arundel": {
+   "name": "Arundel",
+   "city": "Arundel",
+   "country": "England",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [
+    "Park End",
+    "Castle End"
+   ],
+   "lat": 50.85861,
+   "lon": -0.55778,
+   "wikipedia": "https://en.wikipedia.org/wiki/Arundel_Castle_Cricket_Ground",
+   "wikidata": "Q4802229",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:03:53.779776+00:00",
+   "matches": 3,
+   "spellings": [
+    "Arundel"
+   ]
+  },
+  "Arundel Castle Cricket Club Ground": {
+   "name": "Arundel Castle Cricket Club Ground",
+   "city": null,
+   "country": "United Kingdom",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [
+    "Park End",
+    "Castle End"
+   ],
+   "lat": 50.85861,
+   "lon": -0.55778,
+   "wikipedia": "https://en.wikipedia.org/wiki/Arundel_Castle_Cricket_Ground",
+   "wikidata": "Q4802229",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:30.561323+00:00",
+   "matches": 1,
+   "spellings": [
+    "Arundel Castle Cricket Club Ground"
+   ]
+  },
+  "Asgiriya Stadium": {
+   "name": "Asgiriya Stadium",
+   "city": "Kandy",
+   "country": "Sri Lanka",
+   "capacity": 10300,
+   "opened": null,
+   "ends": [
+    "Hunnasgiriya End",
+    "Hanthana End"
+   ],
+   "lat": 7.29998,
+   "lon": 80.63406,
+   "wikipedia": "https://en.wikipedia.org/wiki/Asgiriya_Stadium",
+   "wikidata": "Q4804317",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:29.763594+00:00",
+   "matches": 29,
+   "spellings": [
+    "Kandy",
+    "Asgiriya Stadium"
+   ]
+  },
+  "Asian Institute of Technology Ground": {
+   "name": "Asian Institute of Technology Ground",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "capacity": null,
+   "opened": 2006,
+   "ends": [],
+   "lat": 14.0795,
+   "lon": 100.60942,
+   "wikipedia": "https://en.wikipedia.org/wiki/Asian_Institute_of_Technology_Ground",
+   "wikidata": "Q20984339",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:16.164983+00:00",
+   "matches": 1,
+   "spellings": [
+    "Asian Institute of Technology Ground"
+   ]
+  },
+  "Aston Rowant": {
+   "name": "Aston Rowant",
+   "city": "Aston Rowant",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:44.861623+00:00",
+   "matches": 1,
+   "spellings": [
+    "Aston Rowant"
+   ]
+  },
+  "Aurangabad": {
+   "name": "Aurangabad",
+   "city": "Aurangabad",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:29.717667+00:00",
+   "matches": 1,
+   "spellings": [
+    "Aurangabad"
+   ]
+  },
+  "Bahawalpur": {
+   "name": "Bahawalpur",
+   "city": "Bahawalpur",
+   "country": "Pakistan",
+   "capacity": 15000,
+   "opened": null,
+   "ends": [],
+   "lat": 29.40417,
+   "lon": 71.68444,
+   "wikipedia": "https://en.wikipedia.org/wiki/Dring_Stadium%2C_Bahawalpur",
+   "wikidata": "Q4842503",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:09:21.518732+00:00",
+   "matches": 1,
+   "spellings": [
+    "Bahawalpur"
+   ]
+  },
+  "Ballarat": {
+   "name": "Ballarat",
+   "city": "Ballarat",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:15.406126+00:00",
+   "matches": 1,
+   "spellings": [
+    "Ballarat"
+   ]
+  },
+  "Bangabandhu National Stadium": {
+   "name": "Bangabandhu National Stadium",
+   "city": "Dhaka",
+   "country": "Bangladesh",
+   "capacity": 36000,
+   "opened": 1954,
+   "ends": [],
+   "lat": 23.72783,
+   "lon": 90.41344,
+   "wikipedia": "https://en.wikipedia.org/wiki/National_Stadium%2C_Dhaka",
+   "wikidata": "Q806456",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:29.031773+00:00",
+   "matches": 71,
+   "spellings": [
+    "Dhaka",
+    "Bangabandhu National Stadium, Dhaka",
+    "Bangabandhu National Stadium"
+   ]
+  },
+  "Bangkok": {
+   "name": "Bangkok",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:09.049704+00:00",
+   "matches": 6,
+   "spellings": [
+    "Bangkok"
+   ]
+  },
+  "Bankstown Oval": {
+   "name": "Bankstown Oval",
+   "city": "Sydney",
+   "country": "Australia",
+   "capacity": 8000,
+   "opened": null,
+   "ends": [],
+   "lat": -33.92194,
+   "lon": 151.03222,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bankstown_Oval",
+   "wikidata": "Q4856788",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:34.290421+00:00",
+   "matches": 2,
+   "spellings": [
+    "Bankstown Oval, Sydney"
+   ]
+  },
+  "Banstead": {
+   "name": "Banstead",
+   "city": "Banstead",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 51.3217,
+   "lon": -0.1969,
+   "wikipedia": "https://en.wikipedia.org/wiki/Recreation_Ground%2C_Banstead",
+   "wikidata": "Q7303038",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:08:27.316014+00:00",
+   "matches": 1,
+   "spellings": [
+    "Banstead"
+   ]
+  },
+  "Barabati Stadium": {
+   "name": "Barabati Stadium",
+   "city": "Cuttack",
+   "country": "India",
+   "capacity": 45000,
+   "opened": 1958,
+   "ends": [
+    "Mahanadi River End",
+    "Kathajodi River End"
+   ],
+   "lat": 20.48111,
+   "lon": 85.86861,
+   "wikipedia": "https://en.wikipedia.org/wiki/Barabati_Stadium",
+   "wikidata": "Q4858084",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:09.377940+00:00",
+   "matches": 39,
+   "spellings": [
+    "Cuttack",
+    "Barabati Stadium",
+    "Barabati Stadium, Cuttack"
+   ]
+  },
+  "Barnsley": {
+   "name": "Barnsley",
+   "city": "Barnsley",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:17.924218+00:00",
+   "matches": 1,
+   "spellings": [
+    "Barnsley"
+   ]
+  },
+  "Barsapara Cricket Stadium": {
+   "name": "Barsapara Cricket Stadium",
+   "city": "Guwahati",
+   "country": "India",
+   "capacity": 46000,
+   "opened": null,
+   "ends": [
+    "Media End",
+    "Pavilion End"
+   ],
+   "lat": 26.145,
+   "lon": 91.73639,
+   "wikipedia": "https://en.wikipedia.org/wiki/Assam_Cricket_Association_Stadium",
+   "wikidata": "Q4864977",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:11.320929+00:00",
+   "matches": 31,
+   "spellings": [
+    "Guwahati",
+    "Barsapara Cricket Stadium, Guwahati",
+    "Barsapara Cricket Stadium"
+   ]
+  },
+  "Basin Reserve": {
+   "name": "Basin Reserve",
+   "city": "Wellington",
+   "country": "New Zealand",
+   "capacity": 6800,
+   "opened": null,
+   "ends": [
+    "Vance Stand End",
+    "Scoreboard End"
+   ],
+   "lat": -41.30028,
+   "lon": 174.78028,
+   "wikipedia": "https://en.wikipedia.org/wiki/Basin_Reserve",
+   "wikidata": "Q4867501",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:11.312695+00:00",
+   "matches": 139,
+   "spellings": [
+    "Wellington",
+    "Basin Reserve",
+    "Basin Reserve, Wellington"
+   ]
+  },
+  "Bath": {
+   "name": "Bath",
+   "city": "Bath",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:31.383846+00:00",
+   "matches": 3,
+   "spellings": [
+    "Bath"
+   ]
+  },
+  "Bay Oval": {
+   "name": "Bay Oval",
+   "city": "Mount Maunganui",
+   "country": "New Zealand",
+   "capacity": 10000,
+   "opened": 2005,
+   "ends": [
+    "Mount End",
+    "Tauranga End"
+   ],
+   "lat": -37.65278,
+   "lon": 176.19083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bay_Oval",
+   "wikidata": "Q4874048",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:51.705052+00:00",
+   "matches": 62,
+   "spellings": [
+    "Bay Oval",
+    "Bay Oval, Mount Maunganui",
+    "Mount Maunganui"
+   ]
+  },
+  "Beaconsfield": {
+   "name": "Beaconsfield",
+   "city": "Beaconsfield",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:34.420457+00:00",
+   "matches": 1,
+   "spellings": [
+    "Beaconsfield"
+   ]
+  },
+  "Beckenham": {
+   "name": "Beckenham",
+   "city": "Beckenham",
+   "country": "England",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [
+    "City End",
+    "Beckenham End"
+   ],
+   "lat": 51.42,
+   "lon": -0.028,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Cricket_Ground%2C_Beckenham",
+   "wikidata": "Q5177653",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:14.943654+00:00",
+   "matches": 2,
+   "spellings": [
+    "Beckenham"
+   ]
+  },
+  "Bellerive Oval": {
+   "name": "Bellerive Oval",
+   "city": "Hobart",
+   "country": "Australia",
+   "capacity": 16200,
+   "opened": 1914,
+   "ends": [],
+   "lat": -42.87722,
+   "lon": 147.37361,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bellerive_Oval",
+   "wikidata": "Q1134044",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:36.227237+00:00",
+   "matches": 75,
+   "spellings": [
+    "Hobart",
+    "Bellerive Oval",
+    "Bellerive Oval, Hobart"
+   ]
+  },
+  "Bendigo": {
+   "name": "Bendigo",
+   "city": "Bendigo",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:34.940703+00:00",
+   "matches": 1,
+   "spellings": [
+    "Bendigo"
+   ]
+  },
+  "Berri": {
+   "name": "Berri",
+   "city": "Berri",
+   "country": "Australia",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": -34.28607,
+   "lon": 140.60579,
+   "wikipedia": "https://en.wikipedia.org/wiki/Berri_Oval",
+   "wikidata": "Q4894684",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:33.436134+00:00",
+   "matches": 1,
+   "spellings": [
+    "Berri"
+   ]
+  },
+  "Bert Sutcliffe Oval": {
+   "name": "Bert Sutcliffe Oval",
+   "city": "Lincoln",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "City End"
+   ],
+   "lat": -43.6467,
+   "lon": 172.4628,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bert_Sutcliffe_Oval",
+   "wikidata": "Q4895324",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:35.068325+00:00",
+   "matches": 6,
+   "spellings": [
+    "Bert Sutcliffe Oval"
+   ]
+  },
+  "Bharat Ratna Shri Atal Bihari Vajpai Ekana Cricket Stadium": {
+   "name": "Bharat Ratna Shri Atal Bihari Vajpai Ekana Cricket Stadium",
+   "city": "Lucknow",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:15.305490+00:00",
+   "matches": 2,
+   "spellings": [
+    "Bharat Ratna Shri Atal Bihari Vajpai Ekana Cricket Stadium"
+   ]
+  },
+  "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium": {
+   "name": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium",
+   "city": "Lucknow",
+   "country": "India",
+   "capacity": 50100,
+   "opened": 2017,
+   "ends": [],
+   "lat": 26.8112,
+   "lon": 81.0168,
+   "wikipedia": "https://en.wikipedia.org/wiki/Ekana_Cricket_Stadium",
+   "wikidata": "Q109373985",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:09.682976+00:00",
+   "matches": 33,
+   "spellings": [
+    "Lucknow",
+    "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium",
+    "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+   ]
+  },
+  "Billericay": {
+   "name": "Billericay",
+   "city": "Billericay",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:06.951227+00:00",
+   "matches": 1,
+   "spellings": [
+    "Billericay"
+   ]
+  },
+  "Bir Sreshtho Flight Lieutenant Matiur Rahman Stadium": {
+   "name": "Bir Sreshtho Flight Lieutenant Matiur Rahman Stadium",
+   "city": "Chattogram",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:21:55.193567+00:00",
+   "matches": 11,
+   "spellings": [
+    "Bir Sreshtho Flight Lieutenant Matiur Rahman Stadium, Chattogram"
+   ]
+  },
+  "Blackpool": {
+   "name": "Blackpool",
+   "city": "Blackpool",
+   "country": "England",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Nursery End"
+   ],
+   "lat": null,
+   "lon": null,
+   "wikipedia": "https://en.wikipedia.org/wiki/Blackpool_Cricket_Club",
+   "wikidata": "Q4923247",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:04:11.282917+00:00",
+   "matches": 4,
+   "spellings": [
+    "Blackpool"
+   ]
+  },
+  "Bogra": {
+   "name": "Bogra",
+   "city": "Bogra",
+   "country": "Bangladesh",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:26.119503+00:00",
+   "matches": 1,
+   "spellings": [
+    "Bogra"
+   ]
+  },
+  "Boland Bank Park": {
+   "name": "Boland Bank Park",
+   "city": "Paarl",
+   "country": "South Africa",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Riebeeck Kelders End",
+    "Stables End"
+   ],
+   "lat": -33.74139,
+   "lon": 18.99833,
+   "wikipedia": "https://en.wikipedia.org/wiki/Boland_Park",
+   "wikidata": "Q4938914",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:03.461369+00:00",
+   "matches": 2,
+   "spellings": [
+    "Boland Bank Park"
+   ]
+  },
+  "Boland Park": {
+   "name": "Boland Park",
+   "city": "Paarl",
+   "country": "South Africa",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Riebeeck Kelders End",
+    "Stables End"
+   ],
+   "lat": -33.74139,
+   "lon": 18.99833,
+   "wikipedia": "https://en.wikipedia.org/wiki/Boland_Park",
+   "wikidata": "Q4938914",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:09.872274+00:00",
+   "matches": 31,
+   "spellings": [
+    "Boland Park, Paarl",
+    "Boland Park",
+    "Paarl"
+   ]
+  },
+  "Bourda": {
+   "name": "Bourda",
+   "city": "Georgetown",
+   "country": "West Indies",
+   "capacity": 22000,
+   "opened": null,
+   "ends": [
+    "Regent Street End",
+    "North Road End"
+   ],
+   "lat": 6.80817,
+   "lon": -58.14987,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bourda",
+   "wikidata": "Q895200",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:04:16.361255+00:00",
+   "matches": 45,
+   "spellings": [
+    "Georgetown"
+   ]
+  },
+  "Bowral": {
+   "name": "Bowral",
+   "city": "Bowral",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:21.553780+00:00",
+   "matches": 3,
+   "spellings": [
+    "Bowral"
+   ]
+  },
+  "Brabourne Stadium": {
+   "name": "Brabourne Stadium",
+   "city": "Mumbai",
+   "country": "India",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Church Gate End"
+   ],
+   "lat": 18.93222,
+   "lon": 72.82472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Brabourne_Stadium",
+   "wikidata": "Q4786546",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:31.903704+00:00",
+   "matches": 49,
+   "spellings": [
+    "Brabourne Stadium",
+    "Brabourne",
+    "Brabourne Stadium, Mumbai"
+   ]
+  },
+  "Bradman Oval": {
+   "name": "Bradman Oval",
+   "city": "Bowral",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -34.4827,
+   "lon": 150.4249,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bradman_Oval",
+   "wikidata": "Q4955083",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:27.204918+00:00",
+   "matches": 3,
+   "spellings": [
+    "Bradman Oval",
+    "Bradman Oval, Bowral"
+   ]
+  },
+  "Bready Cricket Club": {
+   "name": "Bready Cricket Club",
+   "city": "Bready",
+   "country": "Ireland",
+   "capacity": 3000,
+   "opened": null,
+   "ends": [],
+   "lat": 54.9376,
+   "lon": -7.3818,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bready_Cricket_Club_Ground",
+   "wikidata": "Q20712700",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:11.102599+00:00",
+   "matches": 31,
+   "spellings": [
+    "Bready",
+    "Bready Cricket Club, Magheramason, Bready",
+    "Bready Cricket Club, Magheramason"
+   ]
+  },
+  "Brian Lara Stadium": {
+   "name": "Brian Lara Stadium",
+   "city": "Tarouba",
+   "country": "West Indies",
+   "capacity": 15000,
+   "opened": null,
+   "ends": [
+    "North End",
+    "South End"
+   ],
+   "lat": 10.29639,
+   "lon": -61.43123,
+   "wikipedia": "https://en.wikipedia.org/wiki/Brian_Lara_Cricket_Academy",
+   "wikidata": "Q4964442",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:32.519990+00:00",
+   "matches": 21,
+   "spellings": [
+    "Brian Lara Stadium, Tarouba, Trinidad",
+    "Tarouba",
+    "Brian Lara Stadium, Tarouba"
+   ]
+  },
+  "Brisbane Cricket Ground": {
+   "name": "Brisbane Cricket Ground",
+   "city": "Brisbane",
+   "country": "Australia",
+   "capacity": 42000,
+   "opened": null,
+   "ends": [
+    "Stanley Street End",
+    "Vulture Street End"
+   ],
+   "lat": -27.48583,
+   "lon": 153.03806,
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Gabba",
+   "wikidata": "Q2462392",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:17.625751+00:00",
+   "matches": 182,
+   "spellings": [
+    "Brisbane",
+    "Brisbane Cricket Ground, Woolloongabba",
+    "Brisbane Cricket Ground, Woolloongabba, Brisbane",
+    "Brisbane Cricket Ground"
+   ]
+  },
+  "Buderim": {
+   "name": "Buderim",
+   "city": "Buderim",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:21.227699+00:00",
+   "matches": 1,
+   "spellings": [
+    "Buderim"
+   ]
+  },
+  "Buffalo Park": {
+   "name": "Buffalo Park",
+   "city": "East London",
+   "country": "South Africa",
+   "capacity": 16000,
+   "opened": null,
+   "ends": [
+    "Buffalo Park Drive End",
+    "Bunkers Hill End"
+   ],
+   "lat": -33.00671,
+   "lon": 27.91937,
+   "wikipedia": "https://en.wikipedia.org/wiki/Buffalo_Park",
+   "wikidata": "Q4985806",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:05.916692+00:00",
+   "matches": 27,
+   "spellings": [
+    "Buffalo Park, East London",
+    "Buffalo Park"
+   ]
+  },
+  "Bundaberg Rum Stadium": {
+   "name": "Bundaberg Rum Stadium",
+   "city": "Cairns",
+   "country": "Australia",
+   "capacity": 12000,
+   "opened": 1957,
+   "ends": [
+    "City End",
+    "Club End"
+   ],
+   "lat": -16.93583,
+   "lon": 145.74917,
+   "wikipedia": "https://en.wikipedia.org/wiki/Cazalys_Stadium",
+   "wikidata": "Q5055511",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:05.938310+00:00",
+   "matches": 2,
+   "spellings": [
+    "Bundaberg Rum Stadium, Cairns"
+   ]
+  },
+  "Captain Roop Singh Stadium": {
+   "name": "Captain Roop Singh Stadium",
+   "city": "Gwalior",
+   "country": "India",
+   "capacity": 18000,
+   "opened": null,
+   "ends": [
+    "Railway end",
+    "Pavilion end"
+   ],
+   "lat": 26.2107,
+   "lon": 78.1836,
+   "wikipedia": "https://en.wikipedia.org/wiki/Captain_Roop_Singh_Stadium",
+   "wikidata": "Q3515393",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:36.569054+00:00",
+   "matches": 3,
+   "spellings": [
+    "Captain Roop Singh Stadium",
+    "Captain Roop Singh Stadium, Gwalior"
+   ]
+  },
+  "Carisbrook": {
+   "name": "Carisbrook",
+   "city": "Dunedin",
+   "country": "New Zealand",
+   "capacity": 29000,
+   "opened": 1883,
+   "ends": [
+    "Railway End",
+    "Hillside End"
+   ],
+   "lat": -45.89361,
+   "lon": 170.49056,
+   "wikipedia": "https://en.wikipedia.org/wiki/Carisbrook",
+   "wikidata": "Q1036311",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:23:14.912794+00:00",
+   "matches": 1,
+   "spellings": [
+    "Carisbrook"
+   ]
+  },
+  "Carrara Oval": {
+   "name": "Carrara Oval",
+   "city": "Carrara",
+   "country": "Australia",
+   "capacity": 25000,
+   "opened": 1987,
+   "ends": [
+    "Nerang River, Nerang-Broadbeach Road End",
+    "Broadbeach End, Hinterland End"
+   ],
+   "lat": -28.00639,
+   "lon": 153.36722,
+   "wikipedia": "https://en.wikipedia.org/wiki/Carrara_Stadium",
+   "wikidata": "Q3534981",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:38.616805+00:00",
+   "matches": 7,
+   "spellings": [
+    "Carrara Oval"
+   ]
+  },
+  "Castle Avenue": {
+   "name": "Castle Avenue",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": 3200,
+   "opened": null,
+   "ends": [
+    "City End",
+    "L.P Hughes End"
+   ],
+   "lat": 53.3825,
+   "lon": -6.20722,
+   "wikipedia": "https://en.wikipedia.org/wiki/Castle_Avenue_cricket_ground",
+   "wikidata": "Q5135074",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:11.042365+00:00",
+   "matches": 23,
+   "spellings": [
+    "Castle Avenue, Dublin",
+    "Castle Avenue"
+   ]
+  },
+  "Castries": {
+   "name": "Castries",
+   "city": "Castries",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:55.432290+00:00",
+   "matches": 2,
+   "spellings": [
+    "Castries"
+   ]
+  },
+  "Cayon": {
+   "name": "Cayon",
+   "city": "Cayon",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:20.213240+00:00",
+   "matches": 3,
+   "spellings": [
+    "Cayon"
+   ]
+  },
+  "Cazalys Stadium": {
+   "name": "Cazalys Stadium",
+   "city": "Cairns",
+   "country": "Australia",
+   "capacity": 12000,
+   "opened": 1957,
+   "ends": [
+    "City End",
+    "Club End"
+   ],
+   "lat": -16.93583,
+   "lon": 145.74917,
+   "wikipedia": "https://en.wikipedia.org/wiki/Cazalys_Stadium",
+   "wikidata": "Q5055511",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:08.521192+00:00",
+   "matches": 7,
+   "spellings": [
+    "Cazaly's Stadium, Cairns",
+    "Cairns"
+   ]
+  },
+  "Central Broward Regional Park Stadium Turf Ground": {
+   "name": "Central Broward Regional Park Stadium Turf Ground",
+   "city": "Lauderhill",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:08.963325+00:00",
+   "matches": 18,
+   "spellings": [
+    "Central Broward Regional Park Stadium Turf Ground",
+    "Central Broward Regional Park Stadium Turf Ground, Lauderhill"
+   ]
+  },
+  "Chandigarh": {
+   "name": "Chandigarh",
+   "city": "Chandigarh",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:30.384660+00:00",
+   "matches": 7,
+   "spellings": [
+    "Chandigarh"
+   ]
+  },
+  "Cheltenham": {
+   "name": "Cheltenham",
+   "city": "Cheltenham",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:16.000026+00:00",
+   "matches": 1,
+   "spellings": [
+    "Cheltenham"
+   ]
+  },
+  "Chesterfield": {
+   "name": "Chesterfield",
+   "city": "Chesterfield",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:04.168020+00:00",
+   "matches": 3,
+   "spellings": [
+    "Chesterfield"
+   ]
+  },
+  "Chevrolet Park": {
+   "name": "Chevrolet Park",
+   "city": "Bloemfontein",
+   "country": "South Africa",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Loch Logan End",
+    "Willows End"
+   ],
+   "lat": -29.11668,
+   "lon": 26.20527,
+   "wikipedia": "https://en.wikipedia.org/wiki/Mangaung_Oval",
+   "wikidata": "Q5094407",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:22.552440+00:00",
+   "matches": 2,
+   "spellings": [
+    "Chevrolet Park"
+   ]
+  },
+  "Chilaw Marians Cricket Club Ground": {
+   "name": "Chilaw Marians Cricket Club Ground",
+   "city": "FTZ Sports Complex",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Free Trade Zone End",
+    "Score Board End"
+   ],
+   "lat": 7.1657,
+   "lon": 79.8894,
+   "wikipedia": "https://en.wikipedia.org/wiki/Chilaw_Marians_Cricket_Club_Ground",
+   "wikidata": "Q56290607",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:20.788087+00:00",
+   "matches": 2,
+   "spellings": [
+    "Chilaw Marians Cricket Club Ground"
+   ]
+  },
+  "Chiswick": {
+   "name": "Chiswick",
+   "city": "Chiswick",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 51.4846,
+   "lon": -0.2714,
+   "wikipedia": "https://en.wikipedia.org/wiki/Chiswick_Park_Cricket_Ground",
+   "wikidata": "Q5102164",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:20.245279+00:00",
+   "matches": 1,
+   "spellings": [
+    "Chiswick"
+   ]
+  },
+  "Chittagong Divisional Stadium": {
+   "name": "Chittagong Divisional Stadium",
+   "city": null,
+   "country": "Bangladesh",
+   "capacity": 22000,
+   "opened": null,
+   "ends": [
+    "Walton End",
+    "Alesha Holdings End"
+   ],
+   "lat": 22.3558,
+   "lon": 91.76792,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bir_Shrestho_Flight_Lieutenant_Matiur_Rahman_Cricket_Stadium",
+   "wikidata": "Q36440",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:12.147087+00:00",
+   "matches": 5,
+   "spellings": [
+    "Chittagong Divisional Stadium"
+   ]
+  },
+  "City Oval": {
+   "name": "City Oval",
+   "city": "Pietermaritzburg",
+   "country": "South Africa",
+   "capacity": 12000,
+   "opened": null,
+   "ends": [
+    "Duzi End",
+    "Hulett End"
+   ],
+   "lat": -29.61032,
+   "lon": 30.38083,
+   "wikipedia": "https://en.wikipedia.org/wiki/City_Oval",
+   "wikidata": "Q5123337",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:16.435792+00:00",
+   "matches": 6,
+   "spellings": [
+    "Pietermaritzburg",
+    "City Oval",
+    "City Oval, Pietermaritzburg"
+   ]
+  },
+  "Civil Service Cricket Club, Stormont": {
+   "name": "Civil Service Cricket Club, Stormont",
+   "city": "Belfast",
+   "country": "Ireland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:21:55.189740+00:00",
+   "matches": 69,
+   "spellings": [
+    "Belfast",
+    "Civil Service Cricket Club, Stormont, Belfast",
+    "Civil Service Cricket Club, Stormont"
+   ]
+  },
+  "Clontarf Cricket Club Ground": {
+   "name": "Clontarf Cricket Club Ground",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": 3200,
+   "opened": null,
+   "ends": [
+    "City End",
+    "L.P Hughes End"
+   ],
+   "lat": 53.3825,
+   "lon": -6.20722,
+   "wikipedia": "https://en.wikipedia.org/wiki/Castle_Avenue_cricket_ground",
+   "wikidata": "Q5135074",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:15.970083+00:00",
+   "matches": 74,
+   "spellings": [
+    "Dublin",
+    "Clontarf Cricket Club Ground",
+    "Clontarf Cricket Club Ground, Dublin"
+   ]
+  },
+  "Cobham Oval": {
+   "name": "Cobham Oval",
+   "city": "Whangarei",
+   "country": "New Zealand",
+   "capacity": 5500,
+   "opened": null,
+   "ends": [],
+   "lat": -35.735,
+   "lon": 174.33139,
+   "wikipedia": "https://en.wikipedia.org/wiki/Cobham_Oval",
+   "wikidata": "Q5138887",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:01:25.935333+00:00",
+   "matches": 4,
+   "spellings": [
+    "Whangarei"
+   ]
+  },
+  "Cobham Oval (New)": {
+   "name": "Cobham Oval (New)",
+   "city": "Whangarei",
+   "country": "New Zealand",
+   "capacity": 5500,
+   "opened": null,
+   "ends": [],
+   "lat": -35.735,
+   "lon": 174.33139,
+   "wikipedia": "https://en.wikipedia.org/wiki/Cobham_Oval",
+   "wikidata": "Q5138887",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:06.841629+00:00",
+   "matches": 2,
+   "spellings": [
+    "Cobham Oval (New)"
+   ]
+  },
+  "Coffs Harbour": {
+   "name": "Coffs Harbour",
+   "city": "Coffs Harbour",
+   "country": "Australia",
+   "capacity": 20000,
+   "opened": 1994,
+   "ends": [],
+   "lat": -30.32278,
+   "lon": 153.09528,
+   "wikipedia": "https://en.wikipedia.org/wiki/Coffs_Harbour_International_Stadium",
+   "wikidata": "Q795712",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:23:38.129861+00:00",
+   "matches": 2,
+   "spellings": [
+    "Coffs Harbour"
+   ]
+  },
+  "Colombo Cricket Club Ground": {
+   "name": "Colombo Cricket Club Ground",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Press Box End",
+    "Pavilion End"
+   ],
+   "lat": 6.90781,
+   "lon": 79.86591,
+   "wikipedia": "https://en.wikipedia.org/wiki/Colombo_Cricket_Club_Ground",
+   "wikidata": "Q19707419",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:22.442850+00:00",
+   "matches": 8,
+   "spellings": [
+    "Colombo Cricket Club Ground",
+    "Colombo (CCC)"
+   ]
+  },
+  "Colts Cricket Club Ground": {
+   "name": "Colts Cricket Club Ground",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Havelock Park End",
+    "Pavilion End"
+   ],
+   "lat": 6.88639,
+   "lon": 79.86778,
+   "wikipedia": "https://en.wikipedia.org/wiki/Colts_Cricket_Club_Ground",
+   "wikidata": "Q24747905",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:23.974804+00:00",
+   "matches": 6,
+   "spellings": [
+    "Colts Cricket Club Ground",
+    "Colombo (Colts)"
+   ]
+  },
+  "Coolidge Cricket Ground": {
+   "name": "Coolidge Cricket Ground",
+   "city": "Coolidge",
+   "country": "West Indies",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Airport Road End"
+   ],
+   "lat": 17.14083,
+   "lon": -61.79472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Coolidge_Cricket_Ground",
+   "wikidata": "Q7598735",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:18.214369+00:00",
+   "matches": 14,
+   "spellings": [
+    "Coolidge Cricket Ground, Antigua",
+    "Coolidge",
+    "Coolidge Cricket Ground"
+   ]
+  },
+  "County Ground": {
+   "name": "County Ground",
+   "city": "Bristol",
+   "country": "United Kingdom",
+   "capacity": 8000,
+   "opened": null,
+   "ends": [],
+   "lat": 51.47722,
+   "lon": -2.58417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bristol_County_Ground",
+   "wikidata": "Q5177654",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:25.436826+00:00",
+   "matches": 68,
+   "spellings": [
+    "County Ground"
+   ]
+  },
+  "County Ground, Bristol": {
+   "name": "County Ground, Bristol",
+   "city": "Bristol",
+   "country": "England",
+   "capacity": 8000,
+   "opened": null,
+   "ends": [],
+   "lat": 51.47722,
+   "lon": -2.58417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bristol_County_Ground",
+   "wikidata": "Q5177654",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:11.446117+00:00",
+   "matches": 37,
+   "spellings": [
+    "County Ground, Bristol",
+    "Bristol"
+   ]
+  },
+  "County Ground, Chelmsford": {
+   "name": "County Ground, Chelmsford",
+   "city": "Chelmsford",
+   "country": "England",
+   "capacity": 6500,
+   "opened": null,
+   "ends": [],
+   "lat": 51.73167,
+   "lon": 0.46917,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Cricket_Ground%2C_Chelmsford",
+   "wikidata": "Q5177655",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:23.352320+00:00",
+   "matches": 20,
+   "spellings": [
+    "County Ground, Chelmsford",
+    "Chelmsford"
+   ]
+  },
+  "County Ground, Derby": {
+   "name": "County Ground, Derby",
+   "city": "Derby",
+   "country": "England",
+   "capacity": 9500,
+   "opened": null,
+   "ends": [],
+   "lat": 52.9275,
+   "lon": -1.46111,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Cricket_Ground%2C_Derby",
+   "wikidata": "Q1137282",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:21:55.020566+00:00",
+   "matches": 20,
+   "spellings": [
+    "Derby",
+    "County Ground, Derby"
+   ]
+  },
+  "County Ground, Hove": {
+   "name": "County Ground, Hove",
+   "city": "Brighton",
+   "country": "England",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [],
+   "lat": 50.83,
+   "lon": -0.16417,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Cricket_Ground%2C_Hove",
+   "wikidata": "Q5177658",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:26.155115+00:00",
+   "matches": 16,
+   "spellings": [
+    "County Ground, Hove",
+    "Hove"
+   ]
+  },
+  "County Ground, New Road, Worcester": {
+   "name": "County Ground, New Road, Worcester",
+   "city": "Worcester",
+   "country": "England",
+   "capacity": 4500,
+   "opened": null,
+   "ends": [],
+   "lat": 52.18917,
+   "lon": -2.22694,
+   "wikipedia": "https://en.wikipedia.org/wiki/New_Road%2C_Worcester",
+   "wikidata": "Q3339007",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:52.067856+00:00",
+   "matches": 21,
+   "spellings": [
+    "Worcester",
+    "County Ground, New Road, Worcester",
+    "County Ground, New Road"
+   ]
+  },
+  "County Ground, Northampton": {
+   "name": "County Ground, Northampton",
+   "city": "Northampton",
+   "country": "England",
+   "capacity": 6500,
+   "opened": null,
+   "ends": [],
+   "lat": 52.24806,
+   "lon": -0.87111,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Cricket_Ground%2C_Northampton",
+   "wikidata": "Q5177656",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:05.407444+00:00",
+   "matches": 16,
+   "spellings": [
+    "Northampton",
+    "County Ground, Northampton"
+   ]
+  },
+  "County Ground, Taunton": {
+   "name": "County Ground, Taunton",
+   "city": "Taunton",
+   "country": "England",
+   "capacity": 8500,
+   "opened": null,
+   "ends": [],
+   "lat": 51.01889,
+   "lon": -3.10083,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Ground%2C_Taunton",
+   "wikidata": "Q5177686",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:35.168098+00:00",
+   "matches": 33,
+   "spellings": [
+    "Taunton"
+   ]
+  },
+  "Couva": {
+   "name": "Couva",
+   "city": "Couva",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 10.4221,
+   "lon": -61.4163,
+   "wikipedia": "https://en.wikipedia.org/wiki/National_Cricket_Centre%2C_Couva",
+   "wikidata": "Q111949548",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:05:19.271768+00:00",
+   "matches": 1,
+   "spellings": [
+    "Couva"
+   ]
+  },
+  "Cox's Bazar": {
+   "name": "Cox's Bazar",
+   "city": "Cox's Bazar",
+   "country": "Bangladesh",
+   "capacity": 1600,
+   "opened": null,
+   "ends": [],
+   "lat": 21.43121,
+   "lon": 91.97118,
+   "wikipedia": "https://en.wikipedia.org/wiki/Cox%27s_Bazar_International_Cricket_Stadium",
+   "wikidata": "Q13634262",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:01:07.976139+00:00",
+   "matches": 15,
+   "spellings": [
+    "Cox's Bazar"
+   ]
+  },
+  "Crowthorne": {
+   "name": "Crowthorne",
+   "city": "Crowthorne",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:33.357353+00:00",
+   "matches": 3,
+   "spellings": [
+    "Crowthorne"
+   ]
+  },
+  "DY Patil": {
+   "name": "DY Patil",
+   "city": "Navi Mumbai",
+   "country": "India",
+   "capacity": 45300,
+   "opened": null,
+   "ends": [
+    "Media End",
+    "Pavilion End"
+   ],
+   "lat": 19.04194,
+   "lon": 73.02667,
+   "wikipedia": "https://en.wikipedia.org/wiki/DY_Patil_Stadium",
+   "wikidata": "Q1156264",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:03:20.113215+00:00",
+   "matches": 1,
+   "spellings": [
+    "DY Patil"
+   ]
+  },
+  "Daren Sammy National Cricket Stadium": {
+   "name": "Daren Sammy National Cricket Stadium",
+   "city": "Gros Islet",
+   "country": "West Indies",
+   "capacity": 20000,
+   "opened": 2002,
+   "ends": [
+    "Pavilion End",
+    "Media Centre End"
+   ],
+   "lat": 14.07056,
+   "lon": -60.93165,
+   "wikipedia": "https://en.wikipedia.org/wiki/Daren_Sammy_Cricket_Ground",
+   "wikidata": "Q813440",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:09.479663+00:00",
+   "matches": 81,
+   "spellings": [
+    "Beausejour Stadium, Gros Islet",
+    "Daren Sammy National Cricket Stadium, Gros Islet, St Lucia",
+    "Gros Islet",
+    "Daren Sammy National Cricket Stadium, Gros Islet"
+   ]
+  },
+  "Darren Sammy National Cricket Stadium": {
+   "name": "Darren Sammy National Cricket Stadium",
+   "city": "Gros Islet",
+   "country": "Saint Lucia",
+   "capacity": 20000,
+   "opened": 2002,
+   "ends": [
+    "Pavilion End",
+    "Media Centre End"
+   ],
+   "lat": 14.07056,
+   "lon": -60.93165,
+   "wikipedia": "https://en.wikipedia.org/wiki/Daren_Sammy_Cricket_Ground",
+   "wikidata": "Q813440",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:33.469235+00:00",
+   "matches": 4,
+   "spellings": [
+    "Darren Sammy National Cricket Stadium, St Lucia"
+   ]
+  },
+  "Dartford": {
+   "name": "Dartford",
+   "city": "Dartford",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 51.438,
+   "lon": 0.233,
+   "wikipedia": "https://en.wikipedia.org/wiki/Dartford_Brent",
+   "wikidata": "Q15212996",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:09:21.461660+00:00",
+   "matches": 1,
+   "spellings": [
+    "Dartford"
+   ]
+  },
+  "Davies Park": {
+   "name": "Davies Park",
+   "city": "Queenstown",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:20.181130+00:00",
+   "matches": 1,
+   "spellings": [
+    "Davies Park, Queenstown"
+   ]
+  },
+  "De Beers Diamond Oval": {
+   "name": "De Beers Diamond Oval",
+   "city": "Kimberley",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "North End",
+    "South End"
+   ],
+   "lat": -28.74243,
+   "lon": 24.79772,
+   "wikipedia": "https://en.wikipedia.org/wiki/De_Beers_Diamond_Oval",
+   "wikidata": "Q5244241",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:22.644648+00:00",
+   "matches": 13,
+   "spellings": [
+    "Kimberley",
+    "De Beers Diamond Oval",
+    "De Beers Diamond Oval, Kimberley"
+   ]
+  },
+  "Dehradun": {
+   "name": "Dehradun",
+   "city": "Dehra Dun",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:31.260780+00:00",
+   "matches": 12,
+   "spellings": [
+    "Dehradun"
+   ]
+  },
+  "Devonport": {
+   "name": "Devonport",
+   "city": "Devonport",
+   "country": "Australia",
+   "capacity": 13000,
+   "opened": 1937,
+   "ends": [],
+   "lat": -41.16694,
+   "lon": 146.35889,
+   "wikipedia": "https://en.wikipedia.org/wiki/Devonport_Oval",
+   "wikidata": "Q5267835",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:08:23.274629+00:00",
+   "matches": 1,
+   "spellings": [
+    "Devonport"
+   ]
+  },
+  "Dhanbad": {
+   "name": "Dhanbad",
+   "city": "Dhanbad",
+   "country": "India",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": 23.79228,
+   "lon": 86.43043,
+   "wikipedia": "https://en.wikipedia.org/wiki/Railway_Stadium%2C_Dhanbad",
+   "wikidata": "Q24747950",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:05:10.850845+00:00",
+   "matches": 1,
+   "spellings": [
+    "Dhanbad"
+   ]
+  },
+  "Diamond Oval": {
+   "name": "Diamond Oval",
+   "city": "Kimberley",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "North End",
+    "South End"
+   ],
+   "lat": -28.74243,
+   "lon": 24.79772,
+   "wikipedia": "https://en.wikipedia.org/wiki/De_Beers_Diamond_Oval",
+   "wikidata": "Q5244241",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:08.559038+00:00",
+   "matches": 11,
+   "spellings": [
+    "Diamond Oval",
+    "Diamond Oval, Kimberley"
+   ]
+  },
+  "Docklands Stadium": {
+   "name": "Docklands Stadium",
+   "city": "Melbourne",
+   "country": "Australia",
+   "capacity": 56771,
+   "opened": 2000,
+   "ends": [
+    "Lockett End",
+    "Coventry End"
+   ],
+   "lat": -37.81639,
+   "lon": 144.9475,
+   "wikipedia": "https://en.wikipedia.org/wiki/Docklands_Stadium",
+   "wikidata": "Q917998",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:23.886312+00:00",
+   "matches": 9,
+   "spellings": [
+    "Melbourne (Docklands)",
+    "Docklands Stadium"
+   ]
+  },
+  "Doha": {
+   "name": "Doha",
+   "city": "Doha",
+   "country": "Qatar",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:24.614501+00:00",
+   "matches": 10,
+   "spellings": [
+    "Doha"
+   ]
+  },
+  "Dorking": {
+   "name": "Dorking",
+   "city": "Dorking",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 51.24135,
+   "lon": -0.31976,
+   "wikipedia": "https://en.wikipedia.org/wiki/Dorking_Cricket_Club_Ground",
+   "wikidata": "Q5298043",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:18.016105+00:00",
+   "matches": 1,
+   "spellings": [
+    "Dorking"
+   ]
+  },
+  "Dr DY Patil Sports Academy": {
+   "name": "Dr DY Patil Sports Academy",
+   "city": "Navi Mumbai",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:08.311337+00:00",
+   "matches": 14,
+   "spellings": [
+    "Dr DY Patil Sports Academy, Navi Mumbai",
+    "Dr DY Patil Sports Academy, Mumbai"
+   ]
+  },
+  "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium": {
+   "name": "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium",
+   "city": "Visakhapatnam",
+   "country": "India",
+   "capacity": 27500,
+   "opened": 2003,
+   "ends": [
+    "Vizzy End",
+    "DV Subba Rao End"
+   ],
+   "lat": 17.797,
+   "lon": 83.352,
+   "wikipedia": "https://en.wikipedia.org/wiki/ACA%E2%80%93VDCA_Cricket_Stadium",
+   "wikidata": "Q23975544",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:42.977930+00:00",
+   "matches": 42,
+   "spellings": [
+    "Visakhapatnam",
+    "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",
+    "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium"
+   ]
+  },
+  "Dubai International Cricket Stadium": {
+   "name": "Dubai International Cricket Stadium",
+   "city": "Dubai",
+   "country": "United Arab Emirates",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [
+    "Emirates Road End",
+    "Dubai Sports City End"
+   ],
+   "lat": 25.04667,
+   "lon": 55.21889,
+   "wikipedia": "https://en.wikipedia.org/wiki/Dubai_International_Cricket_Stadium",
+   "wikidata": "Q5206119",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:46.455006+00:00",
+   "matches": 116,
+   "spellings": [
+    "Dubai International Cricket Stadium",
+    "Dubai (DICS)"
+   ]
+  },
+  "Dubai Sports City Cricket Stadium": {
+   "name": "Dubai Sports City Cricket Stadium",
+   "city": "Emirate of Dubai",
+   "country": "United Arab Emirates",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [
+    "Emirates Road End",
+    "Dubai Sports City End"
+   ],
+   "lat": 25.04667,
+   "lon": 55.21889,
+   "wikipedia": "https://en.wikipedia.org/wiki/Dubai_International_Cricket_Stadium",
+   "wikidata": "Q5206119",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:08.627041+00:00",
+   "matches": 2,
+   "spellings": [
+    "Dubai Sports City Cricket Stadium"
+   ]
+  },
+  "Dublin (Malahide)": {
+   "name": "Dublin (Malahide)",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": 11500,
+   "opened": null,
+   "ends": [
+    "Dublin Road End",
+    "Castle End"
+   ],
+   "lat": 53.4493,
+   "lon": -6.1612,
+   "wikipedia": "https://en.wikipedia.org/wiki/Malahide_Cricket_Ground",
+   "wikidata": "Q16894525",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:22.991755+00:00",
+   "matches": 11,
+   "spellings": [
+    "Dublin (Malahide)"
+   ]
+  },
+  "Durham": {
+   "name": "Durham",
+   "city": "Durham",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:35.442035+00:00",
+   "matches": 2,
+   "spellings": [
+    "Durham"
+   ]
+  },
+  "Eden Gardens": {
+   "name": "Eden Gardens",
+   "city": "Kolkata",
+   "country": "India",
+   "capacity": 68000,
+   "opened": null,
+   "ends": [],
+   "lat": 22.56444,
+   "lon": 88.34333,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eden_Gardens",
+   "wikidata": "Q2035004",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:21.053396+00:00",
+   "matches": 98,
+   "spellings": [
+    "Eden Gardens",
+    "Eden Gardens, Kolkata",
+    "Kolkata"
+   ]
+  },
+  "Eden Park": {
+   "name": "Eden Park",
+   "city": "Auckland",
+   "country": "New Zealand",
+   "capacity": 50000,
+   "opened": 1902,
+   "ends": [
+    "Broadcasting End",
+    "Sandringham End"
+   ],
+   "lat": -36.875,
+   "lon": 174.74472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eden_Park",
+   "wikidata": "Q312411",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:28.180566+00:00",
+   "matches": 189,
+   "spellings": [
+    "Auckland",
+    "Eden Park",
+    "Eden Park, Auckland"
+   ]
+  },
+  "Eden Park No 2": {
+   "name": "Eden Park No 2",
+   "city": "Auckland",
+   "country": "New Zealand",
+   "capacity": 50000,
+   "opened": 1902,
+   "ends": [
+    "Broadcasting End",
+    "Sandringham End"
+   ],
+   "lat": -36.875,
+   "lon": 174.74472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eden_Park",
+   "wikidata": "Q312411",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:10.812023+00:00",
+   "matches": 1,
+   "spellings": [
+    "Eden Park No 2"
+   ]
+  },
+  "Eden Park Outer Oval": {
+   "name": "Eden Park Outer Oval",
+   "city": "Auckland",
+   "country": "New Zealand",
+   "capacity": 50000,
+   "opened": 1902,
+   "ends": [
+    "Broadcasting End",
+    "Sandringham End"
+   ],
+   "lat": -36.875,
+   "lon": 174.74472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eden_Park",
+   "wikidata": "Q312411",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:32.049065+00:00",
+   "matches": 2,
+   "spellings": [
+    "Eden Park Outer Oval"
+   ]
+  },
+  "Edgbaston": {
+   "name": "Edgbaston",
+   "city": "Birmingham",
+   "country": "England",
+   "capacity": 21000,
+   "opened": null,
+   "ends": [
+    "Birmingham End",
+    "Pavilion End"
+   ],
+   "lat": 52.45583,
+   "lon": -1.9025,
+   "wikipedia": "https://en.wikipedia.org/wiki/Edgbaston_Cricket_Ground",
+   "wikidata": "Q1284346",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:49.501671+00:00",
+   "matches": 155,
+   "spellings": [
+    "Birmingham",
+    "Edgbaston",
+    "Edgbaston, Birmingham"
+   ]
+  },
+  "Edinburgh": {
+   "name": "Edinburgh",
+   "city": "Edinburgh",
+   "country": "Scotland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:42.578640+00:00",
+   "matches": 1,
+   "spellings": [
+    "Edinburgh"
+   ]
+  },
+  "Exmouth": {
+   "name": "Exmouth",
+   "city": "Exmouth",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:15.465260+00:00",
+   "matches": 1,
+   "spellings": [
+    "Exmouth"
+   ]
+  },
+  "FTZ Sports Complex (BOI)": {
+   "name": "FTZ Sports Complex (BOI)",
+   "city": "Katunayake",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:21.737168+00:00",
+   "matches": 1,
+   "spellings": [
+    "FTZ Sports Complex (BOI)"
+   ]
+  },
+  "Faridabad": {
+   "name": "Faridabad",
+   "city": "Faridabad",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:14.260007+00:00",
+   "matches": 9,
+   "spellings": [
+    "Faridabad"
+   ]
+  },
+  "Fatullah": {
+   "name": "Fatullah",
+   "city": "Fatullah",
+   "country": "Bangladesh",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:20.994588+00:00",
+   "matches": 6,
+   "spellings": [
+    "Fatullah"
+   ]
+  },
+  "Finchampstead": {
+   "name": "Finchampstead",
+   "city": "Finchampstead",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 51.3629,
+   "lon": -0.8624,
+   "wikipedia": "https://en.wikipedia.org/wiki/Memorial_Ground%2C_Finchampstead",
+   "wikidata": "Q6815411",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:26.964976+00:00",
+   "matches": 1,
+   "spellings": [
+    "Finchampstead"
+   ]
+  },
+  "Florence Hall": {
+   "name": "Florence Hall",
+   "city": "Florence Hall",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:13.309418+00:00",
+   "matches": 2,
+   "spellings": [
+    "Florence Hall"
+   ]
+  },
+  "Forthill": {
+   "name": "Forthill",
+   "city": "Dundee",
+   "country": "United Kingdom",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 56.475,
+   "lon": -2.87,
+   "wikipedia": "https://en.wikipedia.org/wiki/Forthill",
+   "wikidata": "Q5472612",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:06.169791+00:00",
+   "matches": 1,
+   "spellings": [
+    "Forthill"
+   ]
+  },
+  "Gaddafi Stadium": {
+   "name": "Gaddafi Stadium",
+   "city": "Lahore",
+   "country": "Pakistan",
+   "capacity": 60000,
+   "opened": 1959,
+   "ends": [
+    "Jinnah End",
+    "Iqbal End"
+   ],
+   "lat": 31.51333,
+   "lon": 74.33333,
+   "wikipedia": "https://en.wikipedia.org/wiki/Gaddafi_Stadium",
+   "wikidata": "Q1490881",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:07.812190+00:00",
+   "matches": 168,
+   "spellings": [
+    "Lahore",
+    "Gaddafi Stadium, Lahore",
+    "Gaddafi Stadium"
+   ]
+  },
+  "Galle International Stadium": {
+   "name": "Galle International Stadium",
+   "city": "Galle",
+   "country": "Sri Lanka",
+   "capacity": 35000,
+   "opened": 1876,
+   "ends": [
+    "City End",
+    "Fort End"
+   ],
+   "lat": 6.0316,
+   "lon": 80.216,
+   "wikipedia": "https://en.wikipedia.org/wiki/Galle_International_Stadium",
+   "wikidata": "Q3522487",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:21.454998+00:00",
+   "matches": 77,
+   "spellings": [
+    "Galle International Stadium",
+    "Galle"
+   ]
+  },
+  "Glasgow": {
+   "name": "Glasgow",
+   "city": "Glasgow",
+   "country": "Scotland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:06.759907+00:00",
+   "matches": 1,
+   "spellings": [
+    "Glasgow"
+   ]
+  },
+  "Gosford": {
+   "name": "Gosford",
+   "city": "Gosford",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:36.449853+00:00",
+   "matches": 1,
+   "spellings": [
+    "Gosford"
+   ]
+  },
+  "Grace Road": {
+   "name": "Grace Road",
+   "city": "Leicester",
+   "country": "England",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [],
+   "lat": 52.60778,
+   "lon": -1.14278,
+   "wikipedia": "https://en.wikipedia.org/wiki/Grace_Road",
+   "wikidata": "Q5591359",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:00.401290+00:00",
+   "matches": 23,
+   "spellings": [
+    "Grace Road",
+    "Grace Road, Leicester",
+    "Leicester"
+   ]
+  },
+  "Grand Prairie Stadium": {
+   "name": "Grand Prairie Stadium",
+   "city": "Dallas",
+   "country": "United States",
+   "capacity": 5445,
+   "opened": 2008,
+   "ends": [],
+   "lat": 32.76806,
+   "lon": -96.98639,
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Prairie_Stadium",
+   "wikidata": "Q7271948",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:35.561808+00:00",
+   "matches": 1,
+   "spellings": [
+    "Grand Prairie Stadium, Dallas"
+   ]
+  },
+  "Great Barrier Reef Arena": {
+   "name": "Great Barrier Reef Arena",
+   "city": "Mackay",
+   "country": "Australia",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [],
+   "lat": -21.15945,
+   "lon": 149.18627,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harrup_Park",
+   "wikidata": "Q7297851",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:11.813578+00:00",
+   "matches": 5,
+   "spellings": [
+    "Great Barrier Reef Arena, Mackay"
+   ]
+  },
+  "Greater Noida": {
+   "name": "Greater Noida",
+   "city": "Greater Noida",
+   "country": "India",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [],
+   "lat": 28.58944,
+   "lon": 77.33945,
+   "wikipedia": "https://en.wikipedia.org/wiki/Noida_Cricket_Stadium",
+   "wikidata": "Q30622722",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:26.476402+00:00",
+   "matches": 12,
+   "spellings": [
+    "Greater Noida"
+   ]
+  },
+  "Green Park": {
+   "name": "Green Park",
+   "city": "Kanpur",
+   "country": "India",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [
+    "Media End",
+    "River End"
+   ],
+   "lat": 26.48194,
+   "lon": 80.34778,
+   "wikipedia": "https://en.wikipedia.org/wiki/Green_Park_Stadium",
+   "wikidata": "Q5602959",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:28.098726+00:00",
+   "matches": 40,
+   "spellings": [
+    "Kanpur",
+    "Green Park",
+    "Green Park, Kanpur"
+   ]
+  },
+  "Greenfield International Stadium": {
+   "name": "Greenfield International Stadium",
+   "city": "Thiruvananthapuram",
+   "country": "India",
+   "capacity": 50000,
+   "opened": 2015,
+   "ends": [],
+   "lat": 8.5715,
+   "lon": 76.8843,
+   "wikipedia": "https://en.wikipedia.org/wiki/Greenfield_International_Stadium",
+   "wikidata": "Q6370461",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:42.924799+00:00",
+   "matches": 13,
+   "spellings": [
+    "Greenfield International Stadium, Thiruvananthapuram",
+    "Greenfield International Stadium",
+    "Thiruvananthapuram"
+   ]
+  },
+  "Guanggong International Cricket Stadium": {
+   "name": "Guanggong International Cricket Stadium",
+   "city": "Guangzhou",
+   "country": "People's Republic of China",
+   "capacity": 12000,
+   "opened": null,
+   "ends": [],
+   "lat": 23.04139,
+   "lon": 113.38083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Guanggong_International_Cricket_Stadium",
+   "wikidata": "Q16891951",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:25.958729+00:00",
+   "matches": 4,
+   "spellings": [
+    "Guanggong International Cricket Stadium"
+   ]
+  },
+  "Guangzhou": {
+   "name": "Guangzhou",
+   "city": "Guangzhou",
+   "country": "China",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:27.408062+00:00",
+   "matches": 1,
+   "spellings": [
+    "Guangzhou"
+   ]
+  },
+  "Guildford": {
+   "name": "Guildford",
+   "city": "Guildford",
+   "country": "England",
+   "capacity": 4500,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Railway End"
+   ],
+   "lat": 51.24278,
+   "lon": -0.57722,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sports_Ground%2C_Woodbridge_Road%2C_Guildford",
+   "wikidata": "Q7579726",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:06:27.491076+00:00",
+   "matches": 4,
+   "spellings": [
+    "Guildford"
+   ]
+  },
+  "Gujranwala": {
+   "name": "Gujranwala",
+   "city": "Gujranwala",
+   "country": "Pakistan",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Scoreboard End"
+   ],
+   "lat": 32.16361,
+   "lon": 74.19083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Jinnah_Stadium%2C_Gujranwala",
+   "wikidata": "Q6202668",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:06:07.518056+00:00",
+   "matches": 13,
+   "spellings": [
+    "Gujranwala"
+   ]
+  },
+  "Gurgaon": {
+   "name": "Gurgaon",
+   "city": "Gurgaon",
+   "country": "India",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nehru_Stadium%2C_Gurgaon",
+   "wikidata": "Q24747985",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:05:07.985862+00:00",
+   "matches": 2,
+   "spellings": [
+    "Gurgaon"
+   ]
+  },
+  "Gwalior": {
+   "name": "Gwalior",
+   "city": "Gwalior",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:13.121785+00:00",
+   "matches": 8,
+   "spellings": [
+    "Gwalior"
+   ]
+  },
+  "Gymkhana Club Ground": {
+   "name": "Gymkhana Club Ground",
+   "city": "Nairobi",
+   "country": "Kenya",
+   "capacity": 7000,
+   "opened": null,
+   "ends": [
+    "City End",
+    "Forest Road End"
+   ],
+   "lat": -1.27,
+   "lon": 36.82736,
+   "wikipedia": "https://en.wikipedia.org/wiki/Gymkhana_Club_Ground",
+   "wikidata": "Q6959784",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:16.241517+00:00",
+   "matches": 2,
+   "spellings": [
+    "Gymkhana Club Ground"
+   ]
+  },
+  "Haarlem": {
+   "name": "Haarlem",
+   "city": "Haarlem",
+   "country": "Netherlands",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:19.298723+00:00",
+   "matches": 1,
+   "spellings": [
+    "Haarlem"
+   ]
+  },
+  "Hagley Oval": {
+   "name": "Hagley Oval",
+   "city": "Christchurch",
+   "country": "New Zealand",
+   "capacity": 9000,
+   "opened": null,
+   "ends": [
+    "Port Hills end",
+    "Botanic Gardens end"
+   ],
+   "lat": -43.534,
+   "lon": 172.619,
+   "wikipedia": "https://en.wikipedia.org/wiki/Hagley_Oval",
+   "wikidata": "Q5638760",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:20.092768+00:00",
+   "matches": 63,
+   "spellings": [
+    "Hagley Oval, Christchurch",
+    "Hagley Oval",
+    "Christchurch"
+   ]
+  },
+  "Hangzhou": {
+   "name": "Hangzhou",
+   "city": "Hangzhou",
+   "country": "China",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:28.772067+00:00",
+   "matches": 3,
+   "spellings": [
+    "Hangzhou"
+   ]
+  },
+  "Harare Sports Club": {
+   "name": "Harare Sports Club",
+   "city": "Harare",
+   "country": "Zimbabwe",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Prayag End",
+    "Cycle Pure End"
+   ],
+   "lat": -17.81417,
+   "lon": 31.05056,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harare_Sports_Club",
+   "wikidata": "Q5654215",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:34.868536+00:00",
+   "matches": 300,
+   "spellings": [
+    "Harare Sports Club",
+    "Harare"
+   ]
+  },
+  "Harlequins": {
+   "name": "Harlequins",
+   "city": "Pretoria",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:08.768583+00:00",
+   "matches": 1,
+   "spellings": [
+    "Harlequins"
+   ]
+  },
+  "Harrogate": {
+   "name": "Harrogate",
+   "city": "Harrogate",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:23.068229+00:00",
+   "matches": 1,
+   "spellings": [
+    "Harrogate"
+   ]
+  },
+  "Haslegrave Ground": {
+   "name": "Haslegrave Ground",
+   "city": "Loughborough",
+   "country": "United Kingdom",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 52.7674,
+   "lon": -1.2301,
+   "wikipedia": "https://en.wikipedia.org/wiki/Haslegrave_Ground",
+   "wikidata": "Q5679294",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:16.107467+00:00",
+   "matches": 5,
+   "spellings": [
+    "Haslegrave Ground"
+   ]
+  },
+  "Hastings": {
+   "name": "Hastings",
+   "city": "Hastings",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:38.722920+00:00",
+   "matches": 1,
+   "spellings": [
+    "Hastings"
+   ]
+  },
+  "Headingley": {
+   "name": "Headingley",
+   "city": "Leeds",
+   "country": "England",
+   "capacity": 17000,
+   "opened": null,
+   "ends": [],
+   "lat": 53.81694,
+   "lon": -1.58222,
+   "wikipedia": "https://en.wikipedia.org/wiki/Headingley_Cricket_Ground",
+   "wikidata": "Q21061609",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:17.338548+00:00",
+   "matches": 143,
+   "spellings": [
+    "Leeds",
+    "Headingley",
+    "Headingley, Leeds"
+   ]
+  },
+  "Himachal Pradesh Cricket Association Stadium": {
+   "name": "Himachal Pradesh Cricket Association Stadium",
+   "city": "Dharamsala",
+   "country": "India",
+   "capacity": 21200,
+   "opened": null,
+   "ends": [
+    "River End",
+    "College End"
+   ],
+   "lat": 32.19767,
+   "lon": 76.326,
+   "wikipedia": "https://en.wikipedia.org/wiki/Himachal_Pradesh_Cricket_Association_Stadium",
+   "wikidata": "Q5635576",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:31.949970+00:00",
+   "matches": 21,
+   "spellings": [
+    "Himachal Pradesh Cricket Association Stadium",
+    "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+    "Dharamsala"
+   ]
+  },
+  "Hinckley": {
+   "name": "Hinckley",
+   "city": "Hinckley",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:31.555771+00:00",
+   "matches": 1,
+   "spellings": [
+    "Hinckley"
+   ]
+  },
+  "Holkar Cricket Stadium": {
+   "name": "Holkar Cricket Stadium",
+   "city": "Indore",
+   "country": "India",
+   "capacity": 30000,
+   "opened": null,
+   "ends": [],
+   "lat": 22.72417,
+   "lon": 75.88,
+   "wikipedia": "https://en.wikipedia.org/wiki/Holkar_Stadium",
+   "wikidata": "Q5880726",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:19.798906+00:00",
+   "matches": 29,
+   "spellings": [
+    "Indore",
+    "Holkar Cricket Stadium, Indore",
+    "Holkar Cricket Stadium"
+   ]
+  },
+  "Hurstville Oval": {
+   "name": "Hurstville Oval",
+   "city": "Sydney",
+   "country": "Australia",
+   "capacity": 1000,
+   "opened": null,
+   "ends": [
+    "Dora St End",
+    "Patrick St End"
+   ],
+   "lat": -33.9611,
+   "lon": 151.0992,
+   "wikipedia": "https://en.wikipedia.org/wiki/Hurstville_Oval",
+   "wikidata": "Q14934839",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:28.813385+00:00",
+   "matches": 2,
+   "spellings": [
+    "Hurstville Oval"
+   ]
+  },
+  "Hyderabad": {
+   "name": "Hyderabad",
+   "city": "Hyderabad",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:39.163352+00:00",
+   "matches": 1,
+   "spellings": [
+    "Hyderabad"
+   ]
+  },
+  "Hyderabad (Deccan)": {
+   "name": "Hyderabad (Deccan)",
+   "city": "Hyderabad",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:27.352237+00:00",
+   "matches": 23,
+   "spellings": [
+    "Hyderabad (Deccan)"
+   ]
+  },
+  "Hyderabad (Sind)": {
+   "name": "Hyderabad (Sind)",
+   "city": "Hyderabad",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:31.012884+00:00",
+   "matches": 11,
+   "spellings": [
+    "Hyderabad (Sind)"
+   ]
+  },
+  "ICC Academy": {
+   "name": "ICC Academy",
+   "city": "Dubai",
+   "country": "United Arab Emirates",
+   "capacity": 49000,
+   "opened": 2009,
+   "ends": [],
+   "lat": 25.03667,
+   "lon": 55.22778,
+   "wikipedia": "https://en.wikipedia.org/wiki/ICC_Academy_Ground",
+   "wikidata": "Q20807637",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:17.672981+00:00",
+   "matches": 1,
+   "spellings": [
+    "ICC Academy"
+   ]
+  },
+  "ICCA Dubai": {
+   "name": "ICCA Dubai",
+   "city": "Dubai",
+   "country": "United Arab Emirates",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:31.526492+00:00",
+   "matches": 1,
+   "spellings": [
+    "ICCA Dubai"
+   ]
+  },
+  "Indian Petrochemicals Corporation Limited Sports Complex Ground": {
+   "name": "Indian Petrochemicals Corporation Limited Sports Complex Ground",
+   "city": "Vadodara",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:08.002714+00:00",
+   "matches": 1,
+   "spellings": [
+    "Indian Petrochemicals Corporation Limited Sports Complex Ground"
+   ]
+  },
+  "International Sports Stadium": {
+   "name": "International Sports Stadium",
+   "city": "Coffs Harbour",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:23.613843+00:00",
+   "rejected": "IGl Sports Stadium",
+   "matches": 2,
+   "spellings": [
+    "International Sports Stadium"
+   ]
+  },
+  "Invercargill": {
+   "name": "Invercargill",
+   "city": "Invercargill",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -46.39917,
+   "lon": 168.37806,
+   "wikipedia": "https://en.wikipedia.org/wiki/Waverley_Park%2C_Invercargill",
+   "wikidata": "Q133568246",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:01:34.716347+00:00",
+   "matches": 10,
+   "spellings": [
+    "Invercargill"
+   ]
+  },
+  "Iqbal Stadium": {
+   "name": "Iqbal Stadium",
+   "city": "Faisalabad",
+   "country": "Pakistan",
+   "capacity": 17000,
+   "opened": 1978,
+   "ends": [],
+   "lat": 31.43389,
+   "lon": 73.08583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Iqbal_Stadium",
+   "wikidata": "Q6065833",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:37.950971+00:00",
+   "matches": 43,
+   "spellings": [
+    "Faisalabad",
+    "Iqbal Stadium",
+    "Iqbal Stadium, Faisalabad"
+   ]
+  },
+  "JSCA International Stadium Complex": {
+   "name": "JSCA International Stadium Complex",
+   "city": "Ranchi",
+   "country": "India",
+   "capacity": 39133,
+   "opened": null,
+   "ends": [
+    "M.S Dhoni Pavilion",
+    "Amitabh Choudhary Pavilion"
+   ],
+   "lat": 23.3101,
+   "lon": 85.2749,
+   "wikipedia": "https://en.wikipedia.org/wiki/JSCA_International_Stadium_Complex",
+   "wikidata": "Q15229080",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:20.317969+00:00",
+   "matches": 20,
+   "spellings": [
+    "JSCA International Stadium Complex",
+    "Ranchi",
+    "JSCA International Stadium Complex, Ranchi"
+   ]
+  },
+  "Jade Stadium": {
+   "name": "Jade Stadium",
+   "city": "Christchurch",
+   "country": "New Zealand",
+   "capacity": 38628,
+   "opened": 1881,
+   "ends": [],
+   "lat": -43.54194,
+   "lon": 172.65417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lancaster_Park",
+   "wikidata": "Q295182",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:27.278601+00:00",
+   "matches": 5,
+   "spellings": [
+    "Jade Stadium",
+    "Jade Stadium, Christchurch"
+   ]
+  },
+  "Jalandhar": {
+   "name": "Jalandhar",
+   "city": "Jalandhar",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:04.224025+00:00",
+   "matches": 4,
+   "spellings": [
+    "Jalandhar"
+   ]
+  },
+  "Jammu": {
+   "name": "Jammu",
+   "city": "Jammu",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:26.092783+00:00",
+   "matches": 3,
+   "spellings": [
+    "Jammu"
+   ]
+  },
+  "Jamshedpur": {
+   "name": "Jamshedpur",
+   "city": "Jamshedpur",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:19.745853+00:00",
+   "matches": 13,
+   "spellings": [
+    "Jamshedpur"
+   ]
+  },
+  "Jodhpur": {
+   "name": "Jodhpur",
+   "city": "Jodhpur",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:31.880645+00:00",
+   "matches": 2,
+   "spellings": [
+    "Jodhpur"
+   ]
+  },
+  "John Davies Oval": {
+   "name": "John Davies Oval",
+   "city": "Queenstown",
+   "country": "New Zealand",
+   "capacity": 19000,
+   "opened": 1997,
+   "ends": [
+    "Remarkables End",
+    "Coronet Peak End"
+   ],
+   "lat": -45.01611,
+   "lon": 168.73833,
+   "wikipedia": "https://en.wikipedia.org/wiki/Queenstown_Events_Centre",
+   "wikidata": "Q7271099",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:07.302664+00:00",
+   "matches": 11,
+   "spellings": [
+    "John Davies Oval, Queenstown",
+    "John Davies Oval"
+   ]
+  },
+  "Junction Oval": {
+   "name": "Junction Oval",
+   "city": "Melbourne",
+   "country": "Australia",
+   "capacity": 10000,
+   "opened": 1856,
+   "ends": [],
+   "lat": -37.85583,
+   "lon": 144.98,
+   "wikipedia": "https://en.wikipedia.org/wiki/Junction_Oval",
+   "wikidata": "Q6311755",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:53.521208+00:00",
+   "matches": 15,
+   "spellings": [
+    "Junction Oval",
+    "Junction Oval, Melbourne"
+   ]
+  },
+  "Karen Rolton Oval": {
+   "name": "Karen Rolton Oval",
+   "city": "Adelaide",
+   "country": "Australia",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": -34.9225,
+   "lon": 138.58528,
+   "wikipedia": "https://en.wikipedia.org/wiki/Karen_Rolton_Oval",
+   "wikidata": "Q55615698",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:15.897810+00:00",
+   "matches": 1,
+   "spellings": [
+    "Karen Rolton Oval"
+   ]
+  },
+  "Katunayake": {
+   "name": "Katunayake",
+   "city": "Katunayake",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:35.758917+00:00",
+   "matches": 1,
+   "spellings": [
+    "Katunayake"
+   ]
+  },
+  "Keenan Stadium": {
+   "name": "Keenan Stadium",
+   "city": "Jamshedpur",
+   "country": "India",
+   "capacity": 19000,
+   "opened": null,
+   "ends": [
+    "Dalma Hills End",
+    "Naoroji Pavilion End"
+   ],
+   "lat": 22.80575,
+   "lon": 86.19138,
+   "wikipedia": "https://en.wikipedia.org/wiki/Keenan_Stadium",
+   "wikidata": "Q6382882",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:16.443635+00:00",
+   "matches": 1,
+   "spellings": [
+    "Keenan Stadium"
+   ]
+  },
+  "Kennington Oval": {
+   "name": "Kennington Oval",
+   "city": "London",
+   "country": "England",
+   "capacity": 23500,
+   "opened": null,
+   "ends": [],
+   "lat": 51.48361,
+   "lon": -0.115,
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Oval",
+   "wikidata": "Q1155836",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:26.981328+00:00",
+   "matches": 216,
+   "spellings": [
+    "The Oval",
+    "Kennington Oval",
+    "Kennington Oval, London"
+   ]
+  },
+  "Kensington Oval": {
+   "name": "Kensington Oval",
+   "city": "Bridgetown",
+   "country": "West Indies",
+   "capacity": 28000,
+   "opened": 1871,
+   "ends": [
+    "Malcolm Marshall End",
+    "Joel Garner End"
+   ],
+   "lat": 13.10505,
+   "lon": -59.62258,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kensington_Oval",
+   "wikidata": "Q167042",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:50.523422+00:00",
+   "matches": 158,
+   "spellings": [
+    "Bridgetown",
+    "Kensington Oval, Bridgetown",
+    "Kensington Oval, Bridgetown, Barbados",
+    "Kensington Oval, Barbados"
+   ]
+  },
+  "Kerrydale Oval": {
+   "name": "Kerrydale Oval",
+   "city": "Gold Coast",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:30.974429+00:00",
+   "matches": 4,
+   "spellings": [
+    "Kerrydale Oval"
+   ]
+  },
+  "Khan Shaheb Osman Ali Stadium": {
+   "name": "Khan Shaheb Osman Ali Stadium",
+   "city": "Fatullah",
+   "country": "Bangladesh",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Press Box End",
+    "Pavilion End"
+   ],
+   "lat": 23.65016,
+   "lon": 90.48881,
+   "wikipedia": "https://en.wikipedia.org/wiki/Shaheed_Ria_Gope_Cricket_Stadium",
+   "wikidata": "Q6603150",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:26.963457+00:00",
+   "matches": 6,
+   "spellings": [
+    "Khan Shaheb Osman Ali Stadium"
+   ]
+  },
+  "Khettarama Stadium": {
+   "name": "Khettarama Stadium",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": 35000,
+   "opened": 1986,
+   "ends": [
+    "Khettarama End",
+    "Maligawatte End"
+   ],
+   "lat": 6.93972,
+   "lon": 79.87194,
+   "wikipedia": "https://en.wikipedia.org/wiki/R._Premadasa_Stadium",
+   "wikidata": "Q2121558",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:19.761938+00:00",
+   "matches": 1,
+   "spellings": [
+    "Khettarama Stadium"
+   ]
+  },
+  "Khulna": {
+   "name": "Khulna",
+   "city": "Khulna",
+   "country": "Bangladesh",
+   "capacity": 15600,
+   "opened": 2004,
+   "ends": [],
+   "lat": 22.84447,
+   "lon": 89.53735,
+   "wikipedia": "https://en.wikipedia.org/wiki/Khulna_Divisional_Stadium",
+   "wikidata": "Q6402920",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:03:33.062892+00:00",
+   "matches": 3,
+   "spellings": [
+    "Khulna"
+   ]
+  },
+  "Kibworth": {
+   "name": "Kibworth",
+   "city": "Kibworth",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 52.5364,
+   "lon": -1.0081,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kibworth_Cricket_Club_New_Ground",
+   "wikidata": "Q6404099",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:03:12.520243+00:00",
+   "matches": 2,
+   "spellings": [
+    "Kibworth"
+   ]
+  },
+  "Kidderminster": {
+   "name": "Kidderminster",
+   "city": "Kidderminster",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Railway End",
+    "Pavilion End"
+   ],
+   "lat": 52.38889,
+   "lon": -2.23167,
+   "wikipedia": "https://en.wikipedia.org/wiki/Chester_Road_North_Ground%2C_Kidderminster",
+   "wikidata": "Q5093698",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:04:24.358552+00:00",
+   "matches": 1,
+   "spellings": [
+    "Kidderminster"
+   ]
+  },
+  "King City (NW)": {
+   "name": "King City (NW)",
+   "city": "King City",
+   "country": "Canada",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:30.341168+00:00",
+   "matches": 2,
+   "spellings": [
+    "King City (NW)"
+   ]
+  },
+  "Kingsmead": {
+   "name": "Kingsmead",
+   "city": "Durban",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Umgeni End",
+    "Old Fort End"
+   ],
+   "lat": -29.85,
+   "lon": 31.02778,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kingsmead_Cricket_Ground",
+   "wikidata": "Q6413355",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:06.210435+00:00",
+   "matches": 127,
+   "spellings": [
+    "Durban",
+    "Kingsmead",
+    "Kingsmead, Durban"
+   ]
+  },
+  "Kinrara Academy Oval": {
+   "name": "Kinrara Academy Oval",
+   "city": "Kuala Lumpur",
+   "country": null,
+   "capacity": 4000,
+   "opened": null,
+   "ends": [
+    "North End",
+    "South End"
+   ],
+   "lat": 3.04778,
+   "lon": 101.6425,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kinrara_Academy_Oval",
+   "wikidata": "Q6414217",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:04.034452+00:00",
+   "matches": 24,
+   "spellings": [
+    "Kinrara Academy Oval",
+    "Kinrara Academy Oval, Kuala Lumpur"
+   ]
+  },
+  "Kirby Muxloe": {
+   "name": "Kirby Muxloe",
+   "city": "Kirby Muxloe",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:24.649238+00:00",
+   "matches": 1,
+   "spellings": [
+    "Kirby Muxloe"
+   ]
+  },
+  "Klerksdorp": {
+   "name": "Klerksdorp",
+   "city": "Klerksdorp",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:21.651094+00:00",
+   "matches": 1,
+   "spellings": [
+    "Klerksdorp"
+   ]
+  },
+  "Kochi": {
+   "name": "Kochi",
+   "city": "Kochi",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:10.687932+00:00",
+   "matches": 6,
+   "spellings": [
+    "Kochi"
+   ]
+  },
+  "Kotambi Stadium": {
+   "name": "Kotambi Stadium",
+   "city": "Vadodara",
+   "country": "India",
+   "capacity": 40000,
+   "opened": 2024,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": "https://en.wikipedia.org/wiki/Baroda_Cricket_Association_Stadium",
+   "wikidata": "Q24748056",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:25.908565+00:00",
+   "matches": 19,
+   "spellings": [
+    "Vadodara",
+    "Kotambi Stadium, Vadodara"
+   ]
+  },
+  "KuGumpo City": {
+   "name": "KuGumpo City",
+   "city": "KuGompo City",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:26.741312+00:00",
+   "matches": 23,
+   "spellings": [
+    "KuGumpo City"
+   ]
+  },
+  "Kuala Lumpur": {
+   "name": "Kuala Lumpur",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:36.902187+00:00",
+   "matches": 2,
+   "spellings": [
+    "Kuala Lumpur"
+   ]
+  },
+  "Kurunegala": {
+   "name": "Kurunegala",
+   "city": "Kurunegala",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:05.169209+00:00",
+   "matches": 2,
+   "spellings": [
+    "Kurunegala"
+   ]
+  },
+  "LC de Villiers Oval": {
+   "name": "LC de Villiers Oval",
+   "city": "Pretoria",
+   "country": "South Africa",
+   "capacity": 2000,
+   "opened": null,
+   "ends": [],
+   "lat": -25.75087,
+   "lon": 28.24712,
+   "wikipedia": "https://en.wikipedia.org/wiki/Tuks_Cricket_Oval",
+   "wikidata": "Q18127163",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:14.073528+00:00",
+   "matches": 1,
+   "spellings": [
+    "LC de Villiers Oval"
+   ]
+  },
+  "Lahore City Cricket Association Ground": {
+   "name": "Lahore City Cricket Association Ground",
+   "city": "Lahore",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": 1980,
+   "ends": [],
+   "lat": 31.51289,
+   "lon": 74.33614,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lahore_City_Cricket_Association_Ground",
+   "wikidata": "Q6473347",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:29.770379+00:00",
+   "matches": 2,
+   "spellings": [
+    "Lahore City Cricket Association Ground"
+   ]
+  },
+  "Lal Bahadur Shastri Stadium": {
+   "name": "Lal Bahadur Shastri Stadium",
+   "city": "Hyderabad",
+   "country": "India",
+   "capacity": 30000,
+   "opened": 1687,
+   "ends": [
+    "Pavilion End",
+    "Hill Fort End"
+   ],
+   "lat": 17.39933,
+   "lon": 78.47333,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lal_Bahadur_Shastri_Stadium%2C_Hyderabad",
+   "wikidata": "Q287770",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:03.269740+00:00",
+   "matches": 1,
+   "spellings": [
+    "Lal Bahadur Shastri Stadium, Hyderabad, Deccan"
+   ]
+  },
+  "Lalabhai Contractor Stadium": {
+   "name": "Lalabhai Contractor Stadium",
+   "city": "Surat",
+   "country": "India",
+   "capacity": 7000,
+   "opened": null,
+   "ends": [
+    "North End",
+    "South End"
+   ],
+   "lat": 21.15539,
+   "lon": 72.76917,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lalabhai_Contractor_Stadium",
+   "wikidata": "Q17068459",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:35.621839+00:00",
+   "matches": 4,
+   "spellings": [
+    "Lalabhai Contractor Stadium"
+   ]
+  },
+  "Lancaster Park": {
+   "name": "Lancaster Park",
+   "city": "Christchurch",
+   "country": "New Zealand",
+   "capacity": 38628,
+   "opened": 1881,
+   "ends": [],
+   "lat": -43.54194,
+   "lon": 172.65417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lancaster_Park",
+   "wikidata": "Q295182",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:03:19.699017+00:00",
+   "matches": 104,
+   "spellings": [
+    "Christchurch"
+   ]
+  },
+  "Launceston": {
+   "name": "Launceston",
+   "city": "Launceston",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:32.077218+00:00",
+   "matches": 1,
+   "spellings": [
+    "Launceston"
+   ]
+  },
+  "Levin": {
+   "name": "Levin",
+   "city": "Levin",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -40.62147,
+   "lon": 175.28197,
+   "wikipedia": "https://en.wikipedia.org/wiki/Levin_Domain",
+   "wikidata": "Q6535627",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:08.344286+00:00",
+   "matches": 2,
+   "spellings": [
+    "Levin"
+   ]
+  },
+  "Lincoln": {
+   "name": "Lincoln",
+   "city": "Lincoln",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:10.174529+00:00",
+   "matches": 67,
+   "spellings": [
+    "Lincoln"
+   ]
+  },
+  "Lismore": {
+   "name": "Lismore",
+   "city": "Lismore",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:11.375030+00:00",
+   "matches": 1,
+   "spellings": [
+    "Lismore"
+   ]
+  },
+  "London": {
+   "name": "London",
+   "city": "London",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:07.475519+00:00",
+   "matches": 1,
+   "spellings": [
+    "London"
+   ]
+  },
+  "Lord's": {
+   "name": "Lord's",
+   "city": "London",
+   "country": "England",
+   "capacity": 31100,
+   "opened": 1814,
+   "ends": [],
+   "lat": 51.5294,
+   "lon": -0.1727,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lord%27s",
+   "wikidata": "Q331613",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:06.490012+00:00",
+   "matches": 256,
+   "spellings": [
+    "Lord's",
+    "Lord's, London"
+   ]
+  },
+  "Loughborough": {
+   "name": "Loughborough",
+   "city": "Loughborough",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:27.818735+00:00",
+   "matches": 5,
+   "spellings": [
+    "Loughborough"
+   ]
+  },
+  "Louth Cricket Club": {
+   "name": "Louth Cricket Club",
+   "city": null,
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:31.183389+00:00",
+   "matches": 1,
+   "spellings": [
+    "Louth Cricket Club"
+   ]
+  },
+  "Lower Hutt": {
+   "name": "Lower Hutt",
+   "city": "Lower Hutt",
+   "country": "New Zealand",
+   "capacity": 9000,
+   "opened": null,
+   "ends": [],
+   "lat": -41.21573,
+   "lon": 174.90466,
+   "wikipedia": "https://en.wikipedia.org/wiki/Hutt_Recreation_Ground",
+   "wikidata": "Q15227200",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:08:17.742219+00:00",
+   "matches": 3,
+   "spellings": [
+    "Lower Hutt"
+   ]
+  },
+  "Lucas Street": {
+   "name": "Lucas Street",
+   "city": "Lucas Street",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:34.475781+00:00",
+   "matches": 2,
+   "spellings": [
+    "Lucas Street"
+   ]
+  },
+  "M Chinnaswamy Stadium": {
+   "name": "M Chinnaswamy Stadium",
+   "city": "Bengaluru",
+   "country": "India",
+   "capacity": 33800,
+   "opened": null,
+   "ends": [
+    "Anil Kumble End",
+    "Rahul Dravid End"
+   ],
+   "lat": 12.97889,
+   "lon": 77.59944,
+   "wikipedia": "https://en.wikipedia.org/wiki/M._Chinnaswamy_Stadium",
+   "wikidata": "Q1861907",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:20.728607+00:00",
+   "matches": 85,
+   "spellings": [
+    "Bengaluru",
+    "M Chinnaswamy Stadium",
+    "M Chinnaswamy Stadium, Bengaluru",
+    "M.Chinnaswamy Stadium"
+   ]
+  },
+  "MA Aziz Stadium": {
+   "name": "MA Aziz Stadium",
+   "city": "Chattogram",
+   "country": "Bangladesh",
+   "capacity": 20000,
+   "opened": 1955,
+   "ends": [
+    "Pedrollo End",
+    "Ispahani End"
+   ],
+   "lat": 22.35584,
+   "lon": 91.76777,
+   "wikipedia": "https://en.wikipedia.org/wiki/District_Stadium%2C_Chittagong",
+   "wikidata": "Q1754076",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:23:13.338144+00:00",
+   "matches": 6,
+   "spellings": [
+    "MA Aziz Stadium",
+    "MA Aziz Stadium, Chittagong"
+   ]
+  },
+  "MA Chidambaram Stadium": {
+   "name": "MA Chidambaram Stadium",
+   "city": "Chennai",
+   "country": "India",
+   "capacity": 38200,
+   "opened": null,
+   "ends": [],
+   "lat": 13.06278,
+   "lon": 80.27944,
+   "wikipedia": "https://en.wikipedia.org/wiki/M._A._Chidambaram_Stadium",
+   "wikidata": "Q1188061",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:07.555980+00:00",
+   "matches": 105,
+   "spellings": [
+    "Chennai",
+    "MA Chidambaram Stadium, Chepauk",
+    "MA Chidambaram Stadium, Chepauk, Chennai",
+    "MA Chidambaram Stadium"
+   ]
+  },
+  "Mackay": {
+   "name": "Mackay",
+   "city": "Mackay",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:17.722412+00:00",
+   "matches": 1,
+   "spellings": [
+    "Mackay"
+   ]
+  },
+  "Madhavrao Scindia Cricket Ground": {
+   "name": "Madhavrao Scindia Cricket Ground",
+   "city": "Rajkot",
+   "country": "India",
+   "capacity": 15000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Airport End"
+   ],
+   "lat": 22.30201,
+   "lon": 70.78904,
+   "wikipedia": "https://en.wikipedia.org/wiki/Madhavrao_Scindia_Cricket_Ground",
+   "wikidata": "Q6727334",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:38.622124+00:00",
+   "matches": 14,
+   "spellings": [
+    "Rajkot",
+    "Madhavrao Scindia Cricket Ground"
+   ]
+  },
+  "Maharaja Yadavindra Singh International Cricket Stadium": {
+   "name": "Maharaja Yadavindra Singh International Cricket Stadium",
+   "city": "New Chandigarh",
+   "country": "India",
+   "capacity": 38000,
+   "opened": null,
+   "ends": [],
+   "lat": 30.77889,
+   "lon": 76.72417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Maharaja_Yadavindra_Singh_International_Cricket_Stadium",
+   "wikidata": "Q24747936",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:08.926250+00:00",
+   "matches": 3,
+   "spellings": [
+    "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh"
+   ]
+  },
+  "Maharani Usharaje Trust Cricket Ground": {
+   "name": "Maharani Usharaje Trust Cricket Ground",
+   "city": "Indore",
+   "country": "India",
+   "capacity": 30000,
+   "opened": null,
+   "ends": [],
+   "lat": 22.72417,
+   "lon": 75.88,
+   "wikipedia": "https://en.wikipedia.org/wiki/Holkar_Stadium",
+   "wikidata": "Q5880726",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:15.105416+00:00",
+   "matches": 2,
+   "spellings": [
+    "Maharani Usharaje Trust Cricket Ground"
+   ]
+  },
+  "Maharashtra Cricket Association Stadium": {
+   "name": "Maharashtra Cricket Association Stadium",
+   "city": "Pune",
+   "country": "India",
+   "capacity": 42700,
+   "opened": 2011,
+   "ends": [
+    "Pavilion End",
+    "Hill End"
+   ],
+   "lat": 18.67444,
+   "lon": 73.70667,
+   "wikipedia": "https://en.wikipedia.org/wiki/Maharashtra_Cricket_Association_Stadium",
+   "wikidata": "Q7631918",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:32.269125+00:00",
+   "matches": 30,
+   "spellings": [
+    "Pune",
+    "Maharashtra Cricket Association Stadium",
+    "Maharashtra Cricket Association Stadium, Pune"
+   ]
+  },
+  "Mahinda Rajapaksa International Cricket Stadium": {
+   "name": "Mahinda Rajapaksa International Cricket Stadium",
+   "city": "Hambantota",
+   "country": "Sri Lanka",
+   "capacity": 35000,
+   "opened": 2009,
+   "ends": [
+    "Thanamalwila End",
+    "Sooriyawewa End"
+   ],
+   "lat": 6.35403,
+   "lon": 81.02681,
+   "wikipedia": "https://en.wikipedia.org/wiki/Mahinda_Rajapaksa_International_Cricket_Stadium",
+   "wikidata": "Q1684285",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:32.230738+00:00",
+   "matches": 42,
+   "spellings": [
+    "Mahinda Rajapaksa International Cricket Stadium, Sooriyawewa",
+    "Mahinda Rajapaksa International Cricket Stadium, Sooriyawewa, Hambantota",
+    "Hambantota"
+   ]
+  },
+  "Maidstone": {
+   "name": "Maidstone",
+   "city": "Maidstone",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:06.896864+00:00",
+   "matches": 1,
+   "spellings": [
+    "Maidstone"
+   ]
+  },
+  "Malahide, Dublin": {
+   "name": "Malahide, Dublin",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": 11500,
+   "opened": null,
+   "ends": [
+    "Dublin Road End",
+    "Castle End"
+   ],
+   "lat": 53.4493,
+   "lon": -6.1612,
+   "wikipedia": "https://en.wikipedia.org/wiki/Malahide_Cricket_Ground",
+   "wikidata": "Q16894525",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:21.524244+00:00",
+   "matches": 2,
+   "spellings": [
+    "Malahide, Dublin"
+   ]
+  },
+  "Mangaung Oval": {
+   "name": "Mangaung Oval",
+   "city": "Bloemfontein",
+   "country": "South Africa",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Loch Logan End",
+    "Willows End"
+   ],
+   "lat": -29.11668,
+   "lon": 26.20527,
+   "wikipedia": "https://en.wikipedia.org/wiki/Mangaung_Oval",
+   "wikidata": "Q5094407",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:22.373125+00:00",
+   "matches": 40,
+   "spellings": [
+    "Bloemfontein",
+    "Mangaung Oval",
+    "Mangaung Oval, Bloemfontein",
+    "OUTsurance Oval"
+   ]
+  },
+  "Manuka Oval": {
+   "name": "Manuka Oval",
+   "city": "Canberra",
+   "country": "Australia",
+   "capacity": 13550,
+   "opened": null,
+   "ends": [
+    "Pool End",
+    "Manuka End"
+   ],
+   "lat": -35.31806,
+   "lon": 149.13472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Manuka_Oval",
+   "wikidata": "Q1891865",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:23.571682+00:00",
+   "matches": 45,
+   "spellings": [
+    "Manuka Oval",
+    "Canberra",
+    "Manuka Oval, Canberra"
+   ]
+  },
+  "Maple Leaf North-West Ground": {
+   "name": "Maple Leaf North-West Ground",
+   "city": "King City",
+   "country": "Canada",
+   "capacity": 7000,
+   "opened": null,
+   "ends": [],
+   "lat": 43.95444,
+   "lon": -79.50859,
+   "wikipedia": "https://en.wikipedia.org/wiki/Maple_Leaf_Cricket_Club",
+   "wikidata": "Q5268956",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:19.878753+00:00",
+   "matches": 2,
+   "spellings": [
+    "Maple Leaf North-West Ground"
+   ]
+  },
+  "Margao": {
+   "name": "Margao",
+   "city": "Margao",
+   "country": "India",
+   "capacity": 19000,
+   "opened": 1989,
+   "ends": [],
+   "lat": 15.28917,
+   "lon": 73.96222,
+   "wikipedia": "https://en.wikipedia.org/wiki/Jawaharlal_Nehru_Stadium_%28Margao%29",
+   "wikidata": "Q1398213",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:02:51.014602+00:00",
+   "matches": 7,
+   "spellings": [
+    "Margao"
+   ]
+  },
+  "Marrara Cricket Ground": {
+   "name": "Marrara Cricket Ground",
+   "city": "Darwin",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -12.401,
+   "lon": 130.888,
+   "wikipedia": "https://en.wikipedia.org/wiki/Marrara_Cricket_Ground",
+   "wikidata": "Q135884176",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:19:14.336128+00:00",
+   "matches": 15,
+   "spellings": [
+    "Darwin",
+    "Marrara Stadium, Darwin",
+    "Marrara Cricket Ground",
+    "Marrara Cricket Ground, Darwin"
+   ]
+  },
+  "McLean Park": {
+   "name": "McLean Park",
+   "city": "Napier",
+   "country": "New Zealand",
+   "capacity": 19700,
+   "opened": 1910,
+   "ends": [
+    "Centennial stand end",
+    "Embankment end"
+   ],
+   "lat": -39.50194,
+   "lon": 176.91278,
+   "wikipedia": "https://en.wikipedia.org/wiki/McLean_Park",
+   "wikidata": "Q2743469",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:29.419195+00:00",
+   "matches": 71,
+   "spellings": [
+    "Napier",
+    "McLean Park",
+    "McLean Park, Napier"
+   ]
+  },
+  "Melbourne Cricket Ground": {
+   "name": "Melbourne Cricket Ground",
+   "city": "Melbourne",
+   "country": "Australia",
+   "capacity": 100024,
+   "opened": 1853,
+   "ends": [
+    "City End",
+    "Shane Warne Stand End"
+   ],
+   "lat": -37.82,
+   "lon": 144.98333,
+   "wikipedia": "https://en.wikipedia.org/wiki/Melbourne_Cricket_Ground",
+   "wikidata": "Q330136",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:31.175213+00:00",
+   "matches": 345,
+   "spellings": [
+    "Melbourne",
+    "Melbourne Cricket Ground"
+   ]
+  },
+  "Mercantile Cricket Association Ground": {
+   "name": "Mercantile Cricket Association Ground",
+   "city": "Colombo",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:29.651910+00:00",
+   "matches": 1,
+   "spellings": [
+    "Mercantile Cricket Association Ground"
+   ]
+  },
+  "Milton Keynes": {
+   "name": "Milton Keynes",
+   "city": "Milton Keynes",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:20.403208+00:00",
+   "matches": 2,
+   "spellings": [
+    "Milton Keynes"
+   ]
+  },
+  "Montego Bay": {
+   "name": "Montego Bay",
+   "city": "Montego Bay",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:11.073450+00:00",
+   "matches": 1,
+   "spellings": [
+    "Montego Bay"
+   ]
+  },
+  "Moors Sports Club Ground": {
+   "name": "Moors Sports Club Ground",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Main Pavilion End",
+    "Score Board End"
+   ],
+   "lat": 6.91778,
+   "lon": 79.85694,
+   "wikipedia": "https://en.wikipedia.org/wiki/Moors_Sports_Club_Ground",
+   "wikidata": "Q24747837",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:02:03.800619+00:00",
+   "matches": 6,
+   "spellings": [
+    "Colombo (Moors)"
+   ]
+  },
+  "Moratuwa": {
+   "name": "Moratuwa",
+   "city": "Moratuwa",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:00.531240+00:00",
+   "matches": 11,
+   "spellings": [
+    "Moratuwa"
+   ]
+  },
+  "Moses Mabhida Stadium": {
+   "name": "Moses Mabhida Stadium",
+   "city": "Durban",
+   "country": "South Africa",
+   "capacity": 62760,
+   "opened": 2009,
+   "ends": [],
+   "lat": -29.829,
+   "lon": 31.0303,
+   "wikipedia": "https://en.wikipedia.org/wiki/Moses_Mabhida_Stadium",
+   "wikidata": "Q175289",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:22:34.723924+00:00",
+   "matches": 1,
+   "spellings": [
+    "Moses Mabhida Stadium"
+   ]
+  },
+  "Mulpani Cricket Ground": {
+   "name": "Mulpani Cricket Ground",
+   "city": "Kathmandu",
+   "country": "Nepal",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Gokarna End",
+    "Mulpani End"
+   ],
+   "lat": 27.72089,
+   "lon": 85.38986,
+   "wikipedia": "https://en.wikipedia.org/wiki/Mulpani_Cricket_Stadium",
+   "wikidata": "Q18378094",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:14.203424+00:00",
+   "matches": 1,
+   "spellings": [
+    "Mulpani Cricket Ground"
+   ]
+  },
+  "Multan Cricket Stadium": {
+   "name": "Multan Cricket Stadium",
+   "city": "Multan",
+   "country": "Pakistan",
+   "capacity": 30000,
+   "opened": null,
+   "ends": [],
+   "lat": 30.17083,
+   "lon": 71.52472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Multan_Cricket_Stadium",
+   "wikidata": "Q6934344",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:39.621273+00:00",
+   "matches": 30,
+   "spellings": [
+    "Multan Cricket Stadium",
+    "Multan"
+   ]
+  },
+  "Mumbai": {
+   "name": "Mumbai",
+   "city": "Mumbai",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:24.622007+00:00",
+   "matches": 12,
+   "spellings": [
+    "Mumbai"
+   ]
+  },
+  "Mysore": {
+   "name": "Mysore",
+   "city": "Mysore",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:14.689539+00:00",
+   "matches": 3,
+   "spellings": [
+    "Mysore"
+   ]
+  },
+  "Nahar Singh Stadium": {
+   "name": "Nahar Singh Stadium",
+   "city": "Faridabad",
+   "country": "India",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [],
+   "lat": 28.38722,
+   "lon": 77.29583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nahar_Singh_Stadium",
+   "wikidata": "Q6959199",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:18.697291+00:00",
+   "matches": 2,
+   "spellings": [
+    "Nahar Singh Stadium",
+    "Nahar Singh Stadium, Faridabad"
+   ]
+  },
+  "Nairobi (Aga)": {
+   "name": "Nairobi (Aga)",
+   "city": "Nairobi",
+   "country": "Kenya",
+   "capacity": null,
+   "opened": 1985,
+   "ends": [],
+   "lat": -1.2605,
+   "lon": 36.82393,
+   "wikipedia": "https://en.wikipedia.org/wiki/Aga_Khan_Sports_Club_Ground",
+   "wikidata": "Q4690946",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:06:32.449932+00:00",
+   "matches": 1,
+   "spellings": [
+    "Nairobi (Aga)"
+   ]
+  },
+  "Nairobi (Club)": {
+   "name": "Nairobi (Club)",
+   "city": "Nairobi",
+   "country": "Kenya",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "Bowling Green End",
+    "Clubhouse End"
+   ],
+   "lat": -1.29694,
+   "lon": 36.81,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nairobi_Club_Ground",
+   "wikidata": "Q6959781",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:03.299171+00:00",
+   "matches": 1,
+   "spellings": [
+    "Nairobi (Club)"
+   ]
+  },
+  "Nairobi (Gym)": {
+   "name": "Nairobi (Gym)",
+   "city": "Nairobi",
+   "country": "Kenya",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:26.238878+00:00",
+   "matches": 21,
+   "spellings": [
+    "Nairobi (Gym)"
+   ]
+  },
+  "Namibia Cricket Ground": {
+   "name": "Namibia Cricket Ground",
+   "city": "Windhoek",
+   "country": "Namibia",
+   "capacity": 7500,
+   "opened": null,
+   "ends": [],
+   "lat": -22.6059,
+   "lon": 17.0875,
+   "wikipedia": "https://en.wikipedia.org/wiki/Namibia_Cricket_Ground",
+   "wikidata": "Q133443345",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:50.184999+00:00",
+   "matches": 3,
+   "spellings": [
+    "Namibia Cricket Ground, Windhoek"
+   ]
+  },
+  "Narayanganj Osmani Stadium": {
+   "name": "Narayanganj Osmani Stadium",
+   "city": "Fatullah",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:12.870983+00:00",
+   "matches": 2,
+   "spellings": [
+    "Narayanganj Osmani Stadium"
+   ]
+  },
+  "Narendra Modi Stadium": {
+   "name": "Narendra Modi Stadium",
+   "city": "Ahmedabad",
+   "country": "India",
+   "capacity": 132000,
+   "opened": 2020,
+   "ends": [
+    "Adani Pavilion End",
+    "Jio End"
+   ],
+   "lat": 23.09167,
+   "lon": 72.5975,
+   "wikipedia": "https://en.wikipedia.org/wiki/Narendra_Modi_Stadium",
+   "wikidata": "Q3531421",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:12.676691+00:00",
+   "matches": 73,
+   "spellings": [
+    "Ahmedabad",
+    "Narendra Modi Stadium, Ahmedabad",
+    "Sardar Patel Stadium, Motera",
+    "Narendra Modi Stadium"
+   ]
+  },
+  "Nassau County International Cricket Stadium": {
+   "name": "Nassau County International Cricket Stadium",
+   "city": "New York",
+   "country": "United States",
+   "capacity": 34000,
+   "opened": 2024,
+   "ends": [
+    "Sir Sam Clark End",
+    "Charlie Whitaker End"
+   ],
+   "lat": 40.73005,
+   "lon": -73.57528,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nassau_County_International_Cricket_Stadium",
+   "wikidata": "Q124397644",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:33.205999+00:00",
+   "matches": 4,
+   "spellings": [
+    "Nassau County International Cricket Stadium, New York"
+   ]
+  },
+  "National Cricket Stadium": {
+   "name": "National Cricket Stadium",
+   "city": "St George's",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:14.807940+00:00",
+   "matches": 1,
+   "spellings": [
+    "National Cricket Stadium"
+   ]
+  },
+  "National Cricket Stadium, St George's": {
+   "name": "National Cricket Stadium, St George's",
+   "city": "St George's",
+   "country": "West Indies",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "River End",
+    "D'Arbeau End"
+   ],
+   "lat": 12.05906,
+   "lon": -61.75211,
+   "wikipedia": "https://en.wikipedia.org/wiki/National_Cricket_Stadium_%28Grenada%29",
+   "wikidata": "Q3537142",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:30.716118+00:00",
+   "matches": 45,
+   "spellings": [
+    "National Cricket Stadium, St George's, Grenada",
+    "National Cricket Stadium, St George's",
+    "St George's",
+    "National Cricket Stadium, Grenada"
+   ]
+  },
+  "National Stadium, Karachi": {
+   "name": "National Stadium, Karachi",
+   "city": "Karachi",
+   "country": "Pakistan",
+   "capacity": 30000,
+   "opened": 1955,
+   "ends": [],
+   "lat": 24.89611,
+   "lon": 67.08139,
+   "wikipedia": "https://en.wikipedia.org/wiki/National_Stadium%2C_Karachi",
+   "wikidata": "Q3007369",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:33.335866+00:00",
+   "matches": 161,
+   "spellings": [
+    "Karachi",
+    "National Stadium, Karachi",
+    "National Stadium"
+   ]
+  },
+  "Nehru Stadium": {
+   "name": "Nehru Stadium",
+   "city": "Kochi",
+   "country": "India",
+   "capacity": 27000,
+   "opened": null,
+   "ends": [
+    "Tilak Road End",
+    "Laxmi Road End"
+   ],
+   "lat": 18.50222,
+   "lon": 73.85556,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nehru_Stadium%2C_Pune",
+   "wikidata": "Q6987910",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:36.404074+00:00",
+   "matches": 11,
+   "spellings": [
+    "Nehru Stadium",
+    "Nehru Stadium, Fatorda",
+    "Nehru Stadium, Poona"
+   ]
+  },
+  "New Chandigarh": {
+   "name": "New Chandigarh",
+   "city": "New Chandigarh",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:24.874950+00:00",
+   "matches": 1,
+   "spellings": [
+    "New Chandigarh"
+   ]
+  },
+  "New Delhi": {
+   "name": "New Delhi",
+   "city": "Delhi",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:17.904682+00:00",
+   "matches": 2,
+   "spellings": [
+    "New Delhi"
+   ]
+  },
+  "Newcastle": {
+   "name": "Newcastle",
+   "city": "Newcastle",
+   "country": "Australia",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:23.660747+00:00",
+   "matches": 3,
+   "spellings": [
+    "Newcastle"
+   ]
+  },
+  "Newlands": {
+   "name": "Newlands",
+   "city": "Cape Town",
+   "country": "South Africa",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [
+    "Wynberg End",
+    "Kelvin Grove End"
+   ],
+   "lat": -33.97361,
+   "lon": 18.46889,
+   "wikipedia": "https://en.wikipedia.org/wiki/Newlands_Cricket_Ground",
+   "wikidata": "Q3045283",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:14.653774+00:00",
+   "matches": 149,
+   "spellings": [
+    "Newlands",
+    "Cape Town",
+    "Newlands, Cape Town"
+   ]
+  },
+  "Niaz Stadium": {
+   "name": "Niaz Stadium",
+   "city": "Sind",
+   "country": "Pakistan",
+   "capacity": 15000,
+   "opened": 1959,
+   "ends": [
+    "Pavilion End",
+    "| international = true"
+   ],
+   "lat": 25.3826,
+   "lon": 68.3381,
+   "wikipedia": "https://en.wikipedia.org/wiki/Niaz_Stadium",
+   "wikidata": "Q7024145",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:29.256999+00:00",
+   "matches": 1,
+   "spellings": [
+    "Niaz Stadium, Hyderabad"
+   ]
+  },
+  "Niranjan Shah Stadium": {
+   "name": "Niranjan Shah Stadium",
+   "city": "Rajkot",
+   "country": "India",
+   "capacity": 28000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Media End"
+   ],
+   "lat": 22.363,
+   "lon": 70.71,
+   "wikipedia": "https://en.wikipedia.org/wiki/Niranjan_Shah_Stadium",
+   "wikidata": "Q7427525",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:23.875201+00:00",
+   "matches": 1,
+   "spellings": [
+    "Niranjan Shah Stadium, Rajkot"
+   ]
+  },
+  "Nisshin": {
+   "name": "Nisshin",
+   "city": null,
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:23.362188+00:00",
+   "matches": 5,
+   "spellings": [
+    "Nisshin"
+   ]
+  },
+  "Nondescripts Cricket Club Ground": {
+   "name": "Nondescripts Cricket Club Ground",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "SSC Ground End",
+    "Tennis Court End"
+   ],
+   "lat": 6.90778,
+   "lon": 79.8675,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nondescripts_Cricket_Club_Ground",
+   "wikidata": "Q20987451",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:32.778007+00:00",
+   "matches": 12,
+   "spellings": [
+    "Nondescripts Cricket Club Ground",
+    "Colombo (NCC)"
+   ]
+  },
+  "North Marine Road Ground": {
+   "name": "North Marine Road Ground",
+   "city": "Scarborough",
+   "country": "England",
+   "capacity": 9000,
+   "opened": null,
+   "ends": [
+    "Peasholm Park End",
+    "Trafalgar Square End"
+   ],
+   "lat": 54.28833,
+   "lon": -0.40528,
+   "wikipedia": "https://en.wikipedia.org/wiki/North_Marine_Road_Ground%2C_Scarborough",
+   "wikidata": "Q7056048",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:01.981176+00:00",
+   "matches": 10,
+   "spellings": [
+    "Scarborough",
+    "North Marine Road Ground"
+   ]
+  },
+  "North Sydney Oval": {
+   "name": "North Sydney Oval",
+   "city": "Sydney",
+   "country": "Australia",
+   "capacity": 20000,
+   "opened": 1867,
+   "ends": [],
+   "lat": -33.83194,
+   "lon": 151.20944,
+   "wikipedia": "https://en.wikipedia.org/wiki/North_Sydney_Oval",
+   "wikidata": "Q7056914",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:07.663984+00:00",
+   "matches": 36,
+   "spellings": [
+    "North Sydney",
+    "North Sydney Oval",
+    "North Sydney Oval, Sydney"
+   ]
+  },
+  "North-West University No1 Ground": {
+   "name": "North-West University No1 Ground",
+   "city": "Potchefstroom",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -26.6919,
+   "lon": 27.1002,
+   "wikipedia": "https://en.wikipedia.org/wiki/Absa_Puk_Oval",
+   "wikidata": "Q4669636",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:08.186170+00:00",
+   "matches": 3,
+   "spellings": [
+    "North-West University No1 Ground"
+   ]
+  },
+  "Nykobing Mors": {
+   "name": "Nykobing Mors",
+   "city": "Nykobing Mors",
+   "country": "Denmark",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 56.79293,
+   "lon": 8.87583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nyk%C3%B8bing_Mors_Cricket_Club_Ground",
+   "wikidata": "Q15145059",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:06:18.036014+00:00",
+   "matches": 2,
+   "spellings": [
+    "Nykobing Mors"
+   ]
+  },
+  "Oamaru": {
+   "name": "Oamaru",
+   "city": "Oamaru",
+   "country": "New Zealand",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": -45.07,
+   "lon": 170.98417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Centennial_Park%2C_Oamaru",
+   "wikidata": "Q5059190",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:06:05.111287+00:00",
+   "matches": 1,
+   "spellings": [
+    "Oamaru"
+   ]
+  },
+  "Observatory Lane, Rathmines": {
+   "name": "Observatory Lane, Rathmines",
+   "city": "Dublin",
+   "country": null,
+   "capacity": 2018,
+   "opened": 1865,
+   "ends": [],
+   "lat": 53.3256,
+   "lon": -6.262,
+   "wikipedia": "https://en.wikipedia.org/wiki/Observatory_Lane",
+   "wikidata": "Q55627250",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:15.175360+00:00",
+   "matches": 1,
+   "spellings": [
+    "Observatory Lane, Rathmines"
+   ]
+  },
+  "Old Hararians, Harare": {
+   "name": "Old Hararians, Harare",
+   "city": "Harare",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -17.81486,
+   "lon": 31.02736,
+   "wikipedia": "https://en.wikipedia.org/wiki/Old_Hararians",
+   "wikidata": "Q55627429",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:10.830365+00:00",
+   "matches": 1,
+   "spellings": [
+    "Old Hararians, Harare"
+   ]
+  },
+  "Old Trafford": {
+   "name": "Old Trafford",
+   "city": "Manchester",
+   "country": "England",
+   "capacity": 19000,
+   "opened": null,
+   "ends": [],
+   "lat": 53.45639,
+   "lon": -2.28639,
+   "wikipedia": "https://en.wikipedia.org/wiki/Old_Trafford_Cricket_Ground",
+   "wikidata": "Q1572215",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:19:14.490799+00:00",
+   "matches": 170,
+   "spellings": [
+    "Manchester",
+    "Old Trafford",
+    "Old Trafford, Manchester"
+   ]
+  },
+  "Osterley": {
+   "name": "Osterley",
+   "city": "Osterley",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:30.486776+00:00",
+   "matches": 1,
+   "spellings": [
+    "Osterley"
+   ]
+  },
+  "P Sara Oval": {
+   "name": "P Sara Oval",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": 15000,
+   "opened": null,
+   "ends": [
+    "Janashakthi Complex End",
+    "Scoreboard End"
+   ],
+   "lat": 6.91889,
+   "lon": 79.88389,
+   "wikipedia": "https://en.wikipedia.org/wiki/Paikiasothy_Saravanamuttu_Stadium",
+   "wikidata": "Q7124759",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:30.904646+00:00",
+   "matches": 55,
+   "spellings": [
+    "Colombo (PSS)",
+    "P Sara Oval",
+    "P Sara Oval, Colombo",
+    "P Saravanamuttu Stadium"
+   ]
+  },
+  "Pallekele International Cricket Stadium": {
+   "name": "Pallekele International Cricket Stadium",
+   "city": "Kandy",
+   "country": "Sri Lanka",
+   "capacity": 35000,
+   "opened": 2009,
+   "ends": [
+    "Hunnasgiriya End",
+    "Rikillagaskada End"
+   ],
+   "lat": 7.28028,
+   "lon": 80.72222,
+   "wikipedia": "https://en.wikipedia.org/wiki/Pallekele_International_Cricket_Stadium",
+   "wikidata": "Q1896585",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:37.730044+00:00",
+   "matches": 93,
+   "spellings": [
+    "Pallekele International Cricket Stadium",
+    "Pallekele"
+   ]
+  },
+  "Palmerston North": {
+   "name": "Palmerston North",
+   "city": "Palmerston North",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:11.682650+00:00",
+   "matches": 4,
+   "spellings": [
+    "Palmerston North"
+   ]
+  },
+  "Patna": {
+   "name": "Patna",
+   "city": "Patna",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:26.355620+00:00",
+   "matches": 7,
+   "spellings": [
+    "Patna"
+   ]
+  },
+  "Pembroke Cricket Club": {
+   "name": "Pembroke Cricket Club",
+   "city": "Dublin",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:13.396893+00:00",
+   "matches": 9,
+   "spellings": [
+    "Pembroke Cricket Club, Sandymount, Dublin",
+    "Pembroke Cricket Club, Sandymount"
+   ]
+  },
+  "Perth (Lilac Hill)": {
+   "name": "Perth (Lilac Hill)",
+   "city": "Perth",
+   "country": "Australia",
+   "capacity": 12000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "River End"
+   ],
+   "lat": -31.89167,
+   "lon": 115.97333,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lilac_Hill_Park",
+   "wikidata": "Q6547515",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:04:36.678663+00:00",
+   "matches": 1,
+   "spellings": [
+    "Perth (Lilac Hill)"
+   ]
+  },
+  "Perth Stadium": {
+   "name": "Perth Stadium",
+   "city": "Perth",
+   "country": "Australia",
+   "capacity": 60000,
+   "opened": 2017,
+   "ends": [
+    "WACA Member's End",
+    "Langer Stand End"
+   ],
+   "lat": -31.95111,
+   "lon": 115.88917,
+   "wikipedia": "https://en.wikipedia.org/wiki/Perth_Stadium",
+   "wikidata": "Q7170896",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:50:21.694730+00:00",
+   "matches": 17,
+   "spellings": [
+    "Perth Stadium",
+    "Perth"
+   ]
+  },
+  "Peter Burge Oval": {
+   "name": "Peter Burge Oval",
+   "city": "Brisbane",
+   "country": "Australia",
+   "capacity": null,
+   "opened": 1999,
+   "ends": [],
+   "lat": -27.4904,
+   "lon": 153.2359,
+   "wikipedia": "https://en.wikipedia.org/wiki/Peter_Burge_Oval",
+   "wikidata": "Q28219644",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:01.610898+00:00",
+   "matches": 2,
+   "spellings": [
+    "Peter Burge Oval"
+   ]
+  },
+  "Potchefstroom (Uni 2)": {
+   "name": "Potchefstroom (Uni 2)",
+   "city": "Potchefstroom",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:14.044154+00:00",
+   "matches": 7,
+   "spellings": [
+    "Potchefstroom (Uni 2)"
+   ]
+  },
+  "Potchefstroom (Uni)": {
+   "name": "Potchefstroom (Uni)",
+   "city": "Potchefstroom",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:15.738002+00:00",
+   "matches": 5,
+   "spellings": [
+    "Potchefstroom (Uni)"
+   ]
+  },
+  "Pretoria": {
+   "name": "Pretoria",
+   "city": "Pretoria",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:11.988315+00:00",
+   "matches": 32,
+   "spellings": [
+    "Pretoria"
+   ]
+  },
+  "Providence Stadium": {
+   "name": "Providence Stadium",
+   "city": "Guyana",
+   "country": "West Indies",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Media Centre End",
+    "Pavilion End"
+   ],
+   "lat": 6.75777,
+   "lon": -58.17799,
+   "wikipedia": "https://en.wikipedia.org/wiki/Providence_Stadium",
+   "wikidata": "Q1853159",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:21:55.176663+00:00",
+   "matches": 62,
+   "spellings": [
+    "Providence Stadium",
+    "Providence Stadium, Guyana",
+    "Providence"
+   ]
+  },
+  "Pukekura Park": {
+   "name": "Pukekura Park",
+   "city": "New Plymouth",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "South Terrace End",
+    "North City End"
+   ],
+   "lat": -39.06444,
+   "lon": 174.07944,
+   "wikipedia": "https://en.wikipedia.org/wiki/Pukekura_Park",
+   "wikidata": "Q7259118",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:33.426836+00:00",
+   "matches": 8,
+   "spellings": [
+    "New Plymouth",
+    "Pukekura Park"
+   ]
+  },
+  "Punjab Cricket Association IS Bindra Stadium": {
+   "name": "Punjab Cricket Association IS Bindra Stadium",
+   "city": "Chandigarh",
+   "country": "India",
+   "capacity": 26950,
+   "opened": null,
+   "ends": [
+    "Yuvraj Singh End",
+    "Harbhajan Singh End"
+   ],
+   "lat": 30.69086,
+   "lon": 76.73726,
+   "wikipedia": "https://en.wikipedia.org/wiki/I._S._Bindra_Stadium",
+   "wikidata": "Q3522142",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:18.154969+00:00",
+   "matches": 50,
+   "spellings": [
+    "Punjab Cricket Association Stadium, Mohali",
+    "Mohali",
+    "Punjab Cricket Association IS Bindra Stadium, Mohali",
+    "Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh"
+   ]
+  },
+  "Queen's Park (New)": {
+   "name": "Queen's Park (New)",
+   "city": "St George's",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:15.871626+00:00",
+   "matches": 2,
+   "spellings": [
+    "Queen's Park (New), St George's, Grenada"
+   ]
+  },
+  "Queen's Park Oval": {
+   "name": "Queen's Park Oval",
+   "city": "Port of Spain",
+   "country": "West Indies",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [
+    "Brian Lara Pavilion End",
+    "Media Centre End"
+   ],
+   "lat": 10.66739,
+   "lon": -61.5237,
+   "wikipedia": "https://en.wikipedia.org/wiki/Queen%27s_Park_Oval",
+   "wikidata": "Q2223408",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:30.895426+00:00",
+   "matches": 143,
+   "spellings": [
+    "Port of Spain",
+    "Queen's Park Oval, Port of Spain",
+    "Queen's Park Oval, Port of Spain, Trinidad",
+    "Queen's Park Oval, Trinidad"
+   ]
+  },
+  "Queens Sports Club": {
+   "name": "Queens Sports Club",
+   "city": "Bulawayo",
+   "country": "Zimbabwe",
+   "capacity": 12490,
+   "opened": null,
+   "ends": [
+    "City End",
+    "Airport End"
+   ],
+   "lat": -20.145,
+   "lon": 28.58889,
+   "wikipedia": "https://en.wikipedia.org/wiki/Queens_Sports_Club",
+   "wikidata": "Q7270821",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:34.866331+00:00",
+   "matches": 139,
+   "spellings": [
+    "Bulawayo",
+    "Queens Sports Club",
+    "Queens Sports Club, Bulawayo"
+   ]
+  },
+  "Queenstown Events Centre": {
+   "name": "Queenstown Events Centre",
+   "city": "Queenstown",
+   "country": "New Zealand",
+   "capacity": 19000,
+   "opened": 1997,
+   "ends": [
+    "Remarkables End",
+    "Coronet Peak End"
+   ],
+   "lat": -45.01611,
+   "lon": 168.73833,
+   "wikipedia": "https://en.wikipedia.org/wiki/Queenstown_Events_Centre",
+   "wikidata": "Q7271099",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:15.143777+00:00",
+   "matches": 9,
+   "spellings": [
+    "Queenstown Events Centre",
+    "Queenstown"
+   ]
+  },
+  "Quetta": {
+   "name": "Quetta",
+   "city": "Quetta",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:37.698414+00:00",
+   "matches": 3,
+   "spellings": [
+    "Quetta"
+   ]
+  },
+  "R Premadasa Stadium": {
+   "name": "R Premadasa Stadium",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": 35000,
+   "opened": 1986,
+   "ends": [
+    "Khettarama End",
+    "Maligawatte End"
+   ],
+   "lat": 6.93972,
+   "lon": 79.87194,
+   "wikipedia": "https://en.wikipedia.org/wiki/R._Premadasa_Stadium",
+   "wikidata": "Q2121558",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:07.064227+00:00",
+   "matches": 271,
+   "spellings": [
+    "Colombo (RPS)",
+    "R Premadasa Stadium",
+    "R Premadasa Stadium, Colombo",
+    "R.Premadasa Stadium, Khettarama"
+   ]
+  },
+  "Rajiv Gandhi International Stadium": {
+   "name": "Rajiv Gandhi International Stadium",
+   "city": "Hyderabad",
+   "country": "India",
+   "capacity": 39200,
+   "opened": null,
+   "ends": [
+    "North end",
+    "Pavellion end"
+   ],
+   "lat": 17.40639,
+   "lon": 78.55028,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rajiv_Gandhi_International_Cricket_Stadium",
+   "wikidata": "Q7286209",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:20.895469+00:00",
+   "matches": 17,
+   "spellings": [
+    "Rajiv Gandhi International Stadium, Uppal",
+    "Rajiv Gandhi International Stadium, Uppal, Hyderabad"
+   ]
+  },
+  "Rangiora": {
+   "name": "Rangiora",
+   "city": "Rangiora",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -43.29217,
+   "lon": 172.59936,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rangiora_Recreation_Ground",
+   "wikidata": "Q7292846",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:08:08.397873+00:00",
+   "matches": 2,
+   "spellings": [
+    "Rangiora"
+   ]
+  },
+  "Rangiri Dambulla International Stadium": {
+   "name": "Rangiri Dambulla International Stadium",
+   "city": "Dambulla",
+   "country": "Sri Lanka",
+   "capacity": 16800,
+   "opened": null,
+   "ends": [
+    "Press Box End",
+    "Scoreboard End"
+   ],
+   "lat": 7.85944,
+   "lon": 80.63389,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rangiri_Dambulla_International_Stadium",
+   "wikidata": "Q3534773",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:23.123499+00:00",
+   "matches": 91,
+   "spellings": [
+    "Rangiri Dambulla International Stadium",
+    "Dambulla"
+   ]
+  },
+  "Rawalpindi Cricket Stadium": {
+   "name": "Rawalpindi Cricket Stadium",
+   "city": "Rawalpindi",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": 1992,
+   "ends": [],
+   "lat": 33.65151,
+   "lon": 73.07606,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rawalpindi_Cricket_Stadium",
+   "wikidata": "Q7296930",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:21.008866+00:00",
+   "matches": 72,
+   "spellings": [
+    "Rawalpindi Cricket Stadium",
+    "Rawalpindi"
+   ]
+  },
+  "Ray Mitchell Oval": {
+   "name": "Ray Mitchell Oval",
+   "city": "Mackay",
+   "country": "Australia",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [],
+   "lat": -21.15945,
+   "lon": 149.18627,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harrup_Park",
+   "wikidata": "Q7297851",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:13.805418+00:00",
+   "matches": 3,
+   "spellings": [
+    "Ray Mitchell Oval, Harrup Park, Mackay"
+   ]
+  },
+  "Reading": {
+   "name": "Reading",
+   "city": "Reading",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:03.417253+00:00",
+   "matches": 2,
+   "spellings": [
+    "Reading"
+   ]
+  },
+  "Reliance Stadium": {
+   "name": "Reliance Stadium",
+   "city": "Vadodara",
+   "country": "India",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [],
+   "lat": 22.34772,
+   "lon": 73.1417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Reliance_Stadium",
+   "wikidata": "Q5972984",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:34.300428+00:00",
+   "matches": 9,
+   "spellings": [
+    "Reliance Stadium"
+   ]
+  },
+  "Riverside Ground": {
+   "name": "Riverside Ground",
+   "city": "Chester-le-Street",
+   "country": "England",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": 54.84972,
+   "lon": -1.56083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Riverside_Ground",
+   "wikidata": "Q1337792",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:37.619370+00:00",
+   "matches": 46,
+   "spellings": [
+    "Riverside Ground",
+    "Riverside Ground, Chester-le-Street",
+    "Chester-le-Street"
+   ]
+  },
+  "Riverway Stadium": {
+   "name": "Riverway Stadium",
+   "city": "Townsville",
+   "country": "Australia",
+   "capacity": 10000,
+   "opened": 2007,
+   "ends": [],
+   "lat": -19.31722,
+   "lon": 146.73167,
+   "wikipedia": "https://en.wikipedia.org/wiki/Riverway_Stadium",
+   "wikidata": "Q7822627",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:32.608691+00:00",
+   "matches": 1,
+   "spellings": [
+    "Riverway Stadium, Townsville"
+   ]
+  },
+  "Roehampton": {
+   "name": "Roehampton",
+   "city": "Roehampton",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:07.916706+00:00",
+   "matches": 1,
+   "spellings": [
+    "Roehampton"
+   ]
+  },
+  "Rotorua": {
+   "name": "Rotorua",
+   "city": "Rotorua",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:39.982907+00:00",
+   "matches": 1,
+   "spellings": [
+    "Rotorua"
+   ]
+  },
+  "Rotterdam": {
+   "name": "Rotterdam",
+   "city": "Rotterdam",
+   "country": "Netherlands",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:18.036632+00:00",
+   "matches": 2,
+   "spellings": [
+    "Rotterdam"
+   ]
+  },
+  "Royal Selangor Club": {
+   "name": "Royal Selangor Club",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "capacity": null,
+   "opened": 1884,
+   "ends": [],
+   "lat": 3.14917,
+   "lon": 101.69278,
+   "wikipedia": "https://en.wikipedia.org/wiki/Royal_Selangor_Club",
+   "wikidata": "Q1114991",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:32.395177+00:00",
+   "matches": 1,
+   "spellings": [
+    "Royal Selangor Club"
+   ]
+  },
+  "Rustenburg": {
+   "name": "Rustenburg",
+   "city": "Rustenburg",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:20.108825+00:00",
+   "matches": 1,
+   "spellings": [
+    "Rustenburg"
+   ]
+  },
+  "Sabina Park": {
+   "name": "Sabina Park",
+   "city": "Kingston",
+   "country": "West Indies",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Michael Holding End",
+    "Courtney Walsh End"
+   ],
+   "lat": 17.97778,
+   "lon": -76.7825,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sabina_Park",
+   "wikidata": "Q1370745",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:55.088356+00:00",
+   "matches": 122,
+   "spellings": [
+    "Kingston",
+    "Sabina Park, Kingston",
+    "Sabina Park, Kingston, Jamaica",
+    "Sabina Park, Jamaica"
+   ]
+  },
+  "Sahiwal": {
+   "name": "Sahiwal",
+   "city": "Sahiwal",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:09.565056+00:00",
+   "matches": 2,
+   "spellings": [
+    "Sahiwal"
+   ]
+  },
+  "Sardar Patel (Gujarat) Stadium": {
+   "name": "Sardar Patel (Gujarat) Stadium",
+   "city": "Ahmedabad",
+   "country": "India",
+   "capacity": 132000,
+   "opened": 2020,
+   "ends": [
+    "Adani Pavilion End",
+    "Jio End"
+   ],
+   "lat": 23.09167,
+   "lon": 72.5975,
+   "wikipedia": "https://en.wikipedia.org/wiki/Narendra_Modi_Stadium",
+   "wikidata": "Q3531421",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:28.673348+00:00",
+   "matches": 2,
+   "spellings": [
+    "Sardar Patel (Gujarat) Stadium, Motera"
+   ]
+  },
+  "Sargodha": {
+   "name": "Sargodha",
+   "city": "Sargodha",
+   "country": "Pakistan",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Railway End"
+   ],
+   "lat": 32.50083,
+   "lon": 74.55389,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sargodha_Cricket_Stadium",
+   "wikidata": "Q24747909",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:08:10.492680+00:00",
+   "matches": 1,
+   "spellings": [
+    "Sargodha"
+   ]
+  },
+  "Saurashtra Cricket Association Stadium": {
+   "name": "Saurashtra Cricket Association Stadium",
+   "city": "Rajkot",
+   "country": "India",
+   "capacity": 28000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Media End"
+   ],
+   "lat": 22.363,
+   "lon": 70.71,
+   "wikipedia": "https://en.wikipedia.org/wiki/Niranjan_Shah_Stadium",
+   "wikidata": "Q7427525",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:39.514591+00:00",
+   "matches": 16,
+   "spellings": [
+    "Saurashtra Cricket Association Stadium, Rajkot",
+    "Saurashtra Cricket Association Stadium"
+   ]
+  },
+  "Savar (2)": {
+   "name": "Savar (2)",
+   "city": "Savar",
+   "country": "Bangladesh",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:36.801738+00:00",
+   "matches": 2,
+   "spellings": [
+    "Savar (2)"
+   ]
+  },
+  "Savar (3)": {
+   "name": "Savar (3)",
+   "city": "Savar",
+   "country": "Bangladesh",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:37.765283+00:00",
+   "matches": 1,
+   "spellings": [
+    "Savar (3)"
+   ]
+  },
+  "Sawai Mansingh Stadium": {
+   "name": "Sawai Mansingh Stadium",
+   "city": "Jaipur",
+   "country": "India",
+   "capacity": 30000,
+   "opened": null,
+   "ends": [
+    "Van Vihar Colony End",
+    "Garh Ganesh Temple End"
+   ],
+   "lat": 26.89403,
+   "lon": 75.80322,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sawai_Mansingh_Stadium",
+   "wikidata": "Q7428548",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:12.017482+00:00",
+   "matches": 30,
+   "spellings": [
+    "Jaipur",
+    "Sawai Mansingh Stadium",
+    "Sawai Mansingh Stadium, Jaipur"
+   ]
+  },
+  "Saxton Oval": {
+   "name": "Saxton Oval",
+   "city": "Nelson",
+   "country": "New Zealand",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [
+    "Town End",
+    "Richmond End"
+   ],
+   "lat": -41.33083,
+   "lon": 173.21278,
+   "wikipedia": "https://en.wikipedia.org/wiki/Saxton_Oval",
+   "wikidata": "Q7428879",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:22:08.222550+00:00",
+   "matches": 27,
+   "spellings": [
+    "Saxton Oval",
+    "Saxton Oval, Nelson",
+    "Nelson"
+   ]
+  },
+  "Sector 16 Stadium": {
+   "name": "Sector 16 Stadium",
+   "city": "Chandigarh",
+   "country": "India",
+   "capacity": 30000,
+   "opened": null,
+   "ends": [],
+   "lat": 30.74162,
+   "lon": 76.77476,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sector_16_Stadium",
+   "wikidata": "Q7444709",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:37.819004+00:00",
+   "matches": 1,
+   "spellings": [
+    "Sector 16 Stadium"
+   ]
+  },
+  "Seddon Park": {
+   "name": "Seddon Park",
+   "city": "Hamilton",
+   "country": "New Zealand",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Members End",
+    "City End"
+   ],
+   "lat": -37.78667,
+   "lon": 175.27417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Seddon_Park",
+   "wikidata": "Q7445167",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:51.134290+00:00",
+   "matches": 113,
+   "spellings": [
+    "Seddon Park",
+    "Hamilton",
+    "Seddon Park, Hamilton",
+    "Westpac Park, Hamilton"
+   ]
+  },
+  "Sedgars Park": {
+   "name": "Sedgars Park",
+   "city": "Potchefstroom",
+   "country": "South Africa",
+   "capacity": 18000,
+   "opened": null,
+   "ends": [
+    "JB Marks End",
+    "University End"
+   ],
+   "lat": -26.69566,
+   "lon": 27.10077,
+   "wikipedia": "https://en.wikipedia.org/wiki/JB_Marks_Oval",
+   "wikidata": "Q7451419",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:18.566198+00:00",
+   "matches": 2,
+   "spellings": [
+    "Sedgars Park, Potchefstroom",
+    "Sedgars Park"
+   ]
+  },
+  "Senwes Park": {
+   "name": "Senwes Park",
+   "city": "Potchefstroom",
+   "country": "South Africa",
+   "capacity": 18000,
+   "opened": null,
+   "ends": [
+    "JB Marks End",
+    "University End"
+   ],
+   "lat": -26.69566,
+   "lon": 27.10077,
+   "wikipedia": "https://en.wikipedia.org/wiki/JB_Marks_Oval",
+   "wikidata": "Q7451419",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:36.702426+00:00",
+   "matches": 56,
+   "spellings": [
+    "Senwes Park",
+    "Potchefstroom",
+    "Senwes Park, Potchefstroom"
+   ]
+  },
+  "Shaheed Chandu Stadium": {
+   "name": "Shaheed Chandu Stadium",
+   "city": "Bogra",
+   "country": "Bangladesh",
+   "capacity": 20000,
+   "opened": 2002,
+   "ends": [],
+   "lat": 24.83962,
+   "lon": 89.36522,
+   "wikipedia": "https://en.wikipedia.org/wiki/Shaheed_Chandu_Stadium",
+   "wikidata": "Q6586224",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:14.351237+00:00",
+   "matches": 5,
+   "spellings": [
+    "Shaheed Chandu Stadium"
+   ]
+  },
+  "Shaheed Veer Narayan Singh International Stadium": {
+   "name": "Shaheed Veer Narayan Singh International Stadium",
+   "city": "Raipur",
+   "country": "India",
+   "capacity": 65000,
+   "opened": null,
+   "ends": [
+    "North End",
+    "South End"
+   ],
+   "lat": 21.20417,
+   "lon": 81.82333,
+   "wikipedia": "https://en.wikipedia.org/wiki/Shaheed_Veer_Narayan_Singh_International_Cricket_Stadium",
+   "wikidata": "Q7285044",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:18.924308+00:00",
+   "matches": 4,
+   "spellings": [
+    "Shaheed Veer Narayan Singh International Stadium, Raipur"
+   ]
+  },
+  "Shahid Kamruzzaman Stadium": {
+   "name": "Shahid Kamruzzaman Stadium",
+   "city": "Rajshahi",
+   "country": "Bangladesh",
+   "capacity": 15000,
+   "opened": 2004,
+   "ends": [],
+   "lat": 24.3813,
+   "lon": 88.59111,
+   "wikipedia": "https://en.wikipedia.org/wiki/Shaheed_Qamaruzzaman_Stadium",
+   "wikidata": "Q3449478",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:22:03.075485+00:00",
+   "matches": 3,
+   "spellings": [
+    "Shahid Kamruzzaman Stadium, Rajshahi"
+   ]
+  },
+  "Sharjah Cricket Association Stadium": {
+   "name": "Sharjah Cricket Association Stadium",
+   "city": "Sharjah",
+   "country": "United Arab Emirates",
+   "capacity": 12000,
+   "opened": null,
+   "ends": [],
+   "lat": 25.33083,
+   "lon": 55.42083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sharjah_Cricket_Stadium",
+   "wikidata": "Q3056365",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:15.077618+00:00",
+   "matches": 4,
+   "spellings": [
+    "Sharjah Cricket Association Stadium"
+   ]
+  },
+  "Sharjah Cricket Stadium": {
+   "name": "Sharjah Cricket Stadium",
+   "city": "Sharjah",
+   "country": "United Arab Emirates",
+   "capacity": 12000,
+   "opened": null,
+   "ends": [],
+   "lat": 25.33083,
+   "lon": 55.42083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sharjah_Cricket_Stadium",
+   "wikidata": "Q3056365",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:14.580761+00:00",
+   "matches": 294,
+   "spellings": [
+    "Sharjah",
+    "Sharjah Cricket Stadium"
+   ]
+  },
+  "Sheffield": {
+   "name": "Sheffield",
+   "city": "Sheffield",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:15.592462+00:00",
+   "matches": 1,
+   "spellings": [
+    "Sheffield"
+   ]
+  },
+  "Sheikh Abu Naser Stadium": {
+   "name": "Sheikh Abu Naser Stadium",
+   "city": "Khulna",
+   "country": "Bangladesh",
+   "capacity": 15600,
+   "opened": 2004,
+   "ends": [],
+   "lat": 22.84447,
+   "lon": 89.53735,
+   "wikipedia": "https://en.wikipedia.org/wiki/Khulna_Divisional_Stadium",
+   "wikidata": "Q6402920",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:23.094291+00:00",
+   "matches": 9,
+   "spellings": [
+    "Sheikh Abu Naser Stadium"
+   ]
+  },
+  "Sheikh Kamal International Cricket Stadium": {
+   "name": "Sheikh Kamal International Cricket Stadium",
+   "city": "Cox's Bazar",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:24.280174+00:00",
+   "matches": 2,
+   "spellings": [
+    "Sheikh Kamal International Cricket Stadium"
+   ]
+  },
+  "Sheikh Zayed Stadium": {
+   "name": "Sheikh Zayed Stadium",
+   "city": "Abu Dhabi",
+   "country": "United Arab Emirates",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "North End",
+    "Pavilion End"
+   ],
+   "lat": 24.39639,
+   "lon": 54.54056,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sheikh_Zayed_Cricket_Stadium",
+   "wikidata": "Q7492977",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:07.639945+00:00",
+   "matches": 97,
+   "spellings": [
+    "Sheikh Zayed Stadium",
+    "Abu Dhabi",
+    "Zayed Cricket Stadium, Abu Dhabi",
+    "Sheikh Zayed Stadium, Abu Dhabi"
+   ]
+  },
+  "Sheikhupura Stadium": {
+   "name": "Sheikhupura Stadium",
+   "city": "Sheikhupura",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 31.708,
+   "lon": 73.975,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sheikhupura_Stadium",
+   "wikidata": "Q25545688",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:22:50.646899+00:00",
+   "matches": 4,
+   "spellings": [
+    "Sheikhupura",
+    "Sheikhupura Stadium"
+   ]
+  },
+  "Shenley": {
+   "name": "Shenley",
+   "city": "Shenley",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:33.195316+00:00",
+   "matches": 9,
+   "spellings": [
+    "Shenley"
+   ]
+  },
+  "Shere Bangla National Stadium": {
+   "name": "Shere Bangla National Stadium",
+   "city": "Dhaka",
+   "country": "Bangladesh",
+   "capacity": 25416,
+   "opened": null,
+   "ends": [
+    "TVS Apache RTR End",
+    "Runner End"
+   ],
+   "lat": 23.80692,
+   "lon": 90.36358,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sher-e-Bangla_National_Cricket_Stadium",
+   "wikidata": "Q16135053",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:06.642468+00:00",
+   "matches": 254,
+   "spellings": [
+    "Shere Bangla National Stadium",
+    "Shere Bangla National Stadium, Mirpur",
+    "Mirpur",
+    "Sher-e-Bangla National Cricket Stadium"
+   ]
+  },
+  "Shireoaks": {
+   "name": "Shireoaks",
+   "city": "Shireoaks",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:03.743056+00:00",
+   "matches": 1,
+   "spellings": [
+    "Shireoaks"
+   ]
+  },
+  "Shrimant Madhavrao Scindia Cricket Stadium": {
+   "name": "Shrimant Madhavrao Scindia Cricket Stadium",
+   "city": "Gwalior",
+   "country": "India",
+   "capacity": 30000,
+   "opened": 2024,
+   "ends": [],
+   "lat": 26.234,
+   "lon": 78.125,
+   "wikipedia": "https://en.wikipedia.org/wiki/Shrimant_Madhavrao_Scindia_Cricket_Stadium",
+   "wikidata": "Q24748068",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:52:24.077560+00:00",
+   "matches": 1,
+   "spellings": [
+    "Shrimant Madhavrao Scindia Cricket Stadium, Gwalior"
+   ]
+  },
+  "Sialkot": {
+   "name": "Sialkot",
+   "city": "Sialkot",
+   "country": "Pakistan",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:37.167741+00:00",
+   "matches": 13,
+   "spellings": [
+    "Sialkot"
+   ]
+  },
+  "Silchar": {
+   "name": "Silchar",
+   "city": "Silchar",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:12.704217+00:00",
+   "matches": 1,
+   "spellings": [
+    "Silchar"
+   ]
+  },
+  "Simonds Stadium": {
+   "name": "Simonds Stadium",
+   "city": "Geelong",
+   "country": "Australia",
+   "capacity": 33500,
+   "opened": null,
+   "ends": [],
+   "lat": -38.15806,
+   "lon": 144.35472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kardinia_Park_%28stadium%29",
+   "wikidata": "Q3193033",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:18:40.840480+00:00",
+   "matches": 2,
+   "spellings": [
+    "Simonds Stadium, South Geelong"
+   ]
+  },
+  "Singapore": {
+   "name": "Singapore",
+   "city": "Singapore",
+   "country": "Singapore",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:10.837169+00:00",
+   "matches": 14,
+   "spellings": [
+    "Singapore"
+   ]
+  },
+  "Sinhalese Sports Club Ground": {
+   "name": "Sinhalese Sports Club Ground",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Tennis Courts End",
+    "Vidhya Mawatha End"
+   ],
+   "lat": 6.90583,
+   "lon": 79.86944,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sinhalese_Sports_Club_Cricket_Ground",
+   "wikidata": "Q3522423",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:43:06.617289+00:00",
+   "matches": 131,
+   "spellings": [
+    "Colombo (SSC)",
+    "Sinhalese Sports Club Ground",
+    "Sinhalese Sports Club Ground, Colombo",
+    "Sinhalese Sports Club"
+   ]
+  },
+  "Sinovich Park": {
+   "name": "Sinovich Park",
+   "city": "Pretoria",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sinovich_Park",
+   "wikidata": "Q7524971",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:10.133695+00:00",
+   "matches": 1,
+   "spellings": [
+    "Sinovich Park, Sinoville"
+   ]
+  },
+  "Sir Paul Getty's Ground": {
+   "name": "Sir Paul Getty's Ground",
+   "city": "Wormsley",
+   "country": "England",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": 51.6447,
+   "lon": -0.9342,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wormsley_Park",
+   "wikidata": "Q8036889",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:18:40.936513+00:00",
+   "matches": 3,
+   "spellings": [
+    "Sir Paul Getty's Ground"
+   ]
+  },
+  "Sir Vivian Richards Stadium": {
+   "name": "Sir Vivian Richards Stadium",
+   "city": "North Sound",
+   "country": "West Indies",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Andy Roberts End",
+    "Curtly Ambrose End"
+   ],
+   "lat": 17.10333,
+   "lon": -61.78472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sir_Vivian_Richards_Stadium",
+   "wikidata": "Q1937335",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:24.952728+00:00",
+   "matches": 77,
+   "spellings": [
+    "Sir Vivian Richards Stadium, North Sound, Antigua",
+    "Sir Vivian Richards Stadium, North Sound",
+    "Sir Vivian Richards Stadium",
+    "Sir Vivian Richards Stadium, Antigua"
+   ]
+  },
+  "Sky Stadium": {
+   "name": "Sky Stadium",
+   "city": "Wellington",
+   "country": "New Zealand",
+   "capacity": 34500,
+   "opened": 2000,
+   "ends": [
+    "Hutt End",
+    "City End"
+   ],
+   "lat": -41.27306,
+   "lon": 174.78583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wellington_Regional_Stadium",
+   "wikidata": "Q1348677",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:19:14.717956+00:00",
+   "matches": 8,
+   "spellings": [
+    "Sky Stadium, Wellington",
+    "Sky Stadium"
+   ]
+  },
+  "Solihull": {
+   "name": "Solihull",
+   "city": "Solihull",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:17.491199+00:00",
+   "matches": 6,
+   "spellings": [
+    "Solihull"
+   ]
+  },
+  "Sophia Gardens": {
+   "name": "Sophia Gardens",
+   "city": "Cardiff",
+   "country": "England",
+   "capacity": 15643,
+   "opened": null,
+   "ends": [],
+   "lat": 51.48722,
+   "lon": -3.19139,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sophia_Gardens_%28cricket_ground%29",
+   "wikidata": "Q7395150",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:34.867598+00:00",
+   "matches": 51,
+   "spellings": [
+    "Sophia Gardens",
+    "Sophia Gardens, Cardiff",
+    "Cardiff"
+   ]
+  },
+  "Southend Club Cricket Stadium": {
+   "name": "Southend Club Cricket Stadium",
+   "city": "Karachi",
+   "country": "Pakistan",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [],
+   "lat": 24.79583,
+   "lon": 67.05639,
+   "wikipedia": "https://en.wikipedia.org/wiki/Southend_Club_Cricket_Stadium",
+   "wikidata": "Q5251195",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:03.492058+00:00",
+   "matches": 12,
+   "spellings": [
+    "Southend Club Cricket Stadium, Karachi",
+    "Southend Club Cricket Stadium"
+   ]
+  },
+  "Southgate": {
+   "name": "Southgate",
+   "city": "Southgate",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:58.221965+00:00",
+   "matches": 1,
+   "spellings": [
+    "Southgate"
+   ]
+  },
+  "Sportpark Maarschalkerweerd": {
+   "name": "Sportpark Maarschalkerweerd",
+   "city": "Utrecht",
+   "country": "Netherlands",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 52.07722,
+   "lon": 5.15389,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sportpark_Maarschalkerweerd",
+   "wikidata": "Q2235985",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:22:22.496632+00:00",
+   "matches": 1,
+   "spellings": [
+    "Sportpark Maarschalkerweerd"
+   ]
+  },
+  "Srinagar": {
+   "name": "Srinagar",
+   "city": "Srinagar",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:27.864659+00:00",
+   "matches": 2,
+   "spellings": [
+    "Srinagar"
+   ]
+  },
+  "St Andrew's": {
+   "name": "St Andrew's",
+   "city": "St Andrew's",
+   "country": "West Indies",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:41.934579+00:00",
+   "matches": 2,
+   "spellings": [
+    "St Andrew's"
+   ]
+  },
+  "St George's Park": {
+   "name": "St George's Park",
+   "city": "Gqeberha",
+   "country": "South Africa",
+   "capacity": 19000,
+   "opened": null,
+   "ends": [
+    "Duckpond End",
+    "Park Drive End"
+   ],
+   "lat": -33.96639,
+   "lon": 25.61028,
+   "wikipedia": "https://en.wikipedia.org/wiki/St_George%27s_Park_Cricket_Ground",
+   "wikidata": "Q3495321",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:31.411080+00:00",
+   "matches": 88,
+   "spellings": [
+    "Gqeberha",
+    "St George's Park",
+    "St George's Park, Gqeberha",
+    "St George's Park, Port Elizabeth"
+   ]
+  },
+  "St Lawrence Ground": {
+   "name": "St Lawrence Ground",
+   "city": "Canterbury",
+   "country": "England",
+   "capacity": 6000,
+   "opened": null,
+   "ends": [],
+   "lat": 51.267,
+   "lon": 1.091,
+   "wikipedia": "https://en.wikipedia.org/wiki/St_Lawrence_Ground",
+   "wikidata": "Q7593963",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:26.317547+00:00",
+   "matches": 18,
+   "spellings": [
+    "Canterbury",
+    "St Lawrence Ground, Canterbury",
+    "St Lawrence Ground"
+   ]
+  },
+  "St Saviour": {
+   "name": "St Saviour",
+   "city": "St Saviour",
+   "country": "Jersey",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:35.860321+00:00",
+   "matches": 3,
+   "spellings": [
+    "St Saviour"
+   ]
+  },
+  "Stadium Australia": {
+   "name": "Stadium Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "capacity": 83500,
+   "opened": 1999,
+   "ends": [],
+   "lat": -33.84722,
+   "lon": 151.06306,
+   "wikipedia": "https://en.wikipedia.org/wiki/Stadium_Australia",
+   "wikidata": "Q295886",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:32.903446+00:00",
+   "matches": 5,
+   "spellings": [
+    "Stadium Australia"
+   ]
+  },
+  "Stellenbosch": {
+   "name": "Stellenbosch",
+   "city": "Stellenbosch",
+   "country": "South Africa",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:05.393629+00:00",
+   "matches": 2,
+   "spellings": [
+    "Stellenbosch"
+   ]
+  },
+  "Stellenbosch University 1": {
+   "name": "Stellenbosch University 1",
+   "city": null,
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:35.044723+00:00",
+   "matches": 1,
+   "spellings": [
+    "Stellenbosch University 1"
+   ]
+  },
+  "Strabane": {
+   "name": "Strabane",
+   "city": "Strabane",
+   "country": "Ireland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 54.8333,
+   "lon": -7.4664,
+   "wikipedia": "https://en.wikipedia.org/wiki/New_Strabane_Park",
+   "wikidata": "Q55625050",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:05:25.814104+00:00",
+   "matches": 1,
+   "spellings": [
+    "Strabane"
+   ]
+  },
+  "Stratford-upon-Avon": {
+   "name": "Stratford-upon-Avon",
+   "city": "Stratford-upon-Avon",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 52.18877,
+   "lon": -1.70196,
+   "wikipedia": "https://en.wikipedia.org/wiki/Stratford-upon-Avon_Cricket_Club_Ground",
+   "wikidata": "Q7621932",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:03:25.297783+00:00",
+   "matches": 3,
+   "spellings": [
+    "Stratford-upon-Avon"
+   ]
+  },
+  "Subrata Roy Sahara Stadium": {
+   "name": "Subrata Roy Sahara Stadium",
+   "city": "Pune",
+   "country": "India",
+   "capacity": 42700,
+   "opened": 2011,
+   "ends": [
+    "Pavilion End",
+    "Hill End"
+   ],
+   "lat": 18.67444,
+   "lon": 73.70667,
+   "wikipedia": "https://en.wikipedia.org/wiki/Maharashtra_Cricket_Association_Stadium",
+   "wikidata": "Q7631918",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:24.384713+00:00",
+   "matches": 1,
+   "spellings": [
+    "Subrata Roy Sahara Stadium"
+   ]
+  },
+  "Sunrise Sports Club": {
+   "name": "Sunrise Sports Club",
+   "city": "Harare",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": -17.8438,
+   "lon": 31.0168,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sunrise_Sports_Club",
+   "wikidata": "Q7641132",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:05.837318+00:00",
+   "matches": 1,
+   "spellings": [
+    "Sunrise Sports Club, Harare"
+   ]
+  },
+  "SuperSport Park": {
+   "name": "SuperSport Park",
+   "city": "Centurion",
+   "country": "South Africa",
+   "capacity": 23000,
+   "opened": null,
+   "ends": [
+    "West Lane End",
+    "Hennops River End"
+   ],
+   "lat": -25.85972,
+   "lon": 28.19528,
+   "wikipedia": "https://en.wikipedia.org/wiki/Centurion_Park",
+   "wikidata": "Q142670",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:08.971118+00:00",
+   "matches": 113,
+   "spellings": [
+    "SuperSport Park",
+    "Centurion",
+    "SuperSport Park, Centurion"
+   ]
+  },
+  "Surat": {
+   "name": "Surat",
+   "city": "Surat",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:23:29.305320+00:00",
+   "matches": 3,
+   "spellings": [
+    "Surat"
+   ]
+  },
+  "Swansea": {
+   "name": "Swansea",
+   "city": "Swansea",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:02.290228+00:00",
+   "matches": 2,
+   "spellings": [
+    "Swansea"
+   ]
+  },
+  "Sydney Cricket Ground": {
+   "name": "Sydney Cricket Ground",
+   "city": "Sydney",
+   "country": "Australia",
+   "capacity": 43649,
+   "opened": null,
+   "ends": [
+    "Paddington End",
+    "Randwick End"
+   ],
+   "lat": -33.89167,
+   "lon": 151.22472,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sydney_Cricket_Ground",
+   "wikidata": "Q856393",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:48:29.672115+00:00",
+   "matches": 334,
+   "spellings": [
+    "Sydney",
+    "Sydney Cricket Ground"
+   ]
+  },
+  "Sydney Parade": {
+   "name": "Sydney Parade",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 53.32499,
+   "lon": -6.21507,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sydney_Parade",
+   "wikidata": "Q7660082",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:06.822872+00:00",
+   "matches": 2,
+   "spellings": [
+    "Sydney Parade"
+   ]
+  },
+  "Sydney Showground Stadium": {
+   "name": "Sydney Showground Stadium",
+   "city": "Sydney",
+   "country": "Australia",
+   "capacity": 25000,
+   "opened": 1998,
+   "ends": [],
+   "lat": -33.84306,
+   "lon": 151.06778,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sydney_Showground_Stadium",
+   "wikidata": "Q5359559",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:26.789170+00:00",
+   "matches": 3,
+   "spellings": [
+    "Sydney Showground Stadium"
+   ]
+  },
+  "Sylhet International Cricket Stadium": {
+   "name": "Sylhet International Cricket Stadium",
+   "city": "Sylhet",
+   "country": "Bangladesh",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "UCB End",
+    "Runner End"
+   ],
+   "lat": 24.92083,
+   "lon": 91.86861,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sylhet_International_Cricket_Stadium",
+   "wikidata": "Q6406663",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:32.749743+00:00",
+   "matches": 64,
+   "spellings": [
+    "Sylhet International Cricket Stadium",
+    "Sylhet Stadium",
+    "Sylhet",
+    "Sylhet International Cricket Stadium, Academy Ground"
+   ]
+  },
+  "Tangier": {
+   "name": "Tangier",
+   "city": "Tangier",
+   "country": "Morocco",
+   "capacity": 5000,
+   "opened": 2002,
+   "ends": [],
+   "lat": 35.77167,
+   "lon": -5.85583,
+   "wikipedia": "https://en.wikipedia.org/wiki/National_Cricket_Stadium%2C_Tangier",
+   "wikidata": "Q6971992",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:05:19.602020+00:00",
+   "matches": 7,
+   "spellings": [
+    "Tangier"
+   ]
+  },
+  "Taupo": {
+   "name": "Taupo",
+   "city": "Taupo",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:04.500905+00:00",
+   "matches": 3,
+   "spellings": [
+    "Taupo"
+   ]
+  },
+  "Teddington": {
+   "name": "Teddington",
+   "city": "Teddington",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:29:09.024335+00:00",
+   "matches": 1,
+   "spellings": [
+    "Teddington"
+   ]
+  },
+  "Terdthai Cricket Ground": {
+   "name": "Terdthai Cricket Ground",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "capacity": 4000,
+   "opened": 2010,
+   "ends": [],
+   "lat": 13.6936,
+   "lon": 100.8516,
+   "wikipedia": "https://en.wikipedia.org/wiki/Terdthai_Cricket_Ground",
+   "wikidata": "Q20984366",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:56:26.786210+00:00",
+   "matches": 1,
+   "spellings": [
+    "Terdthai Cricket Ground"
+   ]
+  },
+  "The Cooper Associates County Ground": {
+   "name": "The Cooper Associates County Ground",
+   "city": "Taunton",
+   "country": "United Kingdom",
+   "capacity": 8500,
+   "opened": null,
+   "ends": [],
+   "lat": 51.01889,
+   "lon": -3.10083,
+   "wikipedia": "https://en.wikipedia.org/wiki/County_Ground%2C_Taunton",
+   "wikidata": "Q5177686",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:17.798323+00:00",
+   "matches": 14,
+   "spellings": [
+    "The Cooper Associates County Ground, Taunton",
+    "The Cooper Associates County Ground"
+   ]
+  },
+  "The Hills Cricket Club Ground": {
+   "name": "The Hills Cricket Club Ground",
+   "city": "Dublin",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:28.360096+00:00",
+   "matches": 1,
+   "spellings": [
+    "The Hills Cricket Club Ground"
+   ]
+  },
+  "The Rose Bowl": {
+   "name": "The Rose Bowl",
+   "city": "Southampton",
+   "country": "England",
+   "capacity": 15000,
+   "opened": null,
+   "ends": [],
+   "lat": 50.924,
+   "lon": -1.3219,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rose_Bowl_%28cricket_ground%29",
+   "wikidata": "Q7367656",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:42:34.876304+00:00",
+   "matches": 70,
+   "spellings": [
+    "The Rose Bowl",
+    "The Rose Bowl, Southampton",
+    "Southampton"
+   ]
+  },
+  "The Royal & Sun Alliance County Ground": {
+   "name": "The Royal & Sun Alliance County Ground",
+   "city": "Bristol",
+   "country": "United Kingdom",
+   "capacity": 8000,
+   "opened": null,
+   "ends": [],
+   "lat": 51.47722,
+   "lon": -2.58417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bristol_County_Ground",
+   "wikidata": "Q5177654",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:06.342510+00:00",
+   "matches": 1,
+   "spellings": [
+    "The Royal & Sun Alliance County Ground, Bristol"
+   ]
+  },
+  "The Village": {
+   "name": "The Village",
+   "city": "Dublin",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:19.252771+00:00",
+   "matches": 11,
+   "spellings": [
+    "The Village, Malahide"
+   ]
+  },
+  "The Village, Malahide": {
+   "name": "The Village, Malahide",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": 11500,
+   "opened": null,
+   "ends": [
+    "Dublin Road End",
+    "Castle End"
+   ],
+   "lat": 53.4493,
+   "lon": -6.1612,
+   "wikipedia": "https://en.wikipedia.org/wiki/Malahide_Cricket_Ground",
+   "wikidata": "Q16894525",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:08.176887+00:00",
+   "matches": 16,
+   "spellings": [
+    "The Village, Malahide, Dublin",
+    "Malahide"
+   ]
+  },
+  "The Vineyard": {
+   "name": "The Vineyard",
+   "city": "Dublin",
+   "country": "Ireland",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 53.56492,
+   "lon": -6.14482,
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Vineyard%2C_Dublin",
+   "wikidata": "Q7772715",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:55:26.550244+00:00",
+   "matches": 1,
+   "spellings": [
+    "The Vineyard"
+   ]
+  },
+  "The Wanderers Stadium": {
+   "name": "The Wanderers Stadium",
+   "city": "Johannesburg",
+   "country": "South Africa",
+   "capacity": 34000,
+   "opened": null,
+   "ends": [
+    "Corlett Drive End",
+    "Golf Course End"
+   ],
+   "lat": -26.13111,
+   "lon": 28.0575,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wanderers_Stadium",
+   "wikidata": "Q856387",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:05.593791+00:00",
+   "matches": 180,
+   "spellings": [
+    "Johannesburg",
+    "New Wanderers Stadium",
+    "The Wanderers Stadium",
+    "The Wanderers Stadium, Johannesburg"
+   ]
+  },
+  "Three Ws Oval": {
+   "name": "Three Ws Oval",
+   "city": "Cave Hill",
+   "country": "Barbados",
+   "capacity": 2000,
+   "opened": null,
+   "ends": [],
+   "lat": 13.13556,
+   "lon": -59.63083,
+   "wikipedia": "https://en.wikipedia.org/wiki/Three_Ws_Oval",
+   "wikidata": "Q4636432",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:51:22.804600+00:00",
+   "matches": 6,
+   "spellings": [
+    "Three Ws Oval, Cave Hill, Barbados"
+   ]
+  },
+  "Thurstan College Ground": {
+   "name": "Thurstan College Ground",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:25:08.625341+00:00",
+   "matches": 1,
+   "spellings": [
+    "Colombo (Thurstan)"
+   ]
+  },
+  "Timaru": {
+   "name": "Timaru",
+   "city": "Timaru",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:06.032224+00:00",
+   "matches": 2,
+   "spellings": [
+    "Timaru"
+   ]
+  },
+  "Tolerance Oval": {
+   "name": "Tolerance Oval",
+   "city": "Abu Dhabi",
+   "country": "United Arab Emirates",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 24.39639,
+   "lon": 54.54056,
+   "wikipedia": "https://en.wikipedia.org/wiki/Tolerance_Oval",
+   "wikidata": "Q107439427",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:28.886168+00:00",
+   "matches": 1,
+   "spellings": [
+    "Tolerance Oval"
+   ]
+  },
+  "Tony Ireland Stadium": {
+   "name": "Tony Ireland Stadium",
+   "city": "Townsville",
+   "country": "Australia",
+   "capacity": 10000,
+   "opened": 2007,
+   "ends": [],
+   "lat": -19.31722,
+   "lon": 146.73167,
+   "wikipedia": "https://en.wikipedia.org/wiki/Riverway_Stadium",
+   "wikidata": "Q7822627",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:01.814304+00:00",
+   "matches": 2,
+   "spellings": [
+    "Tony Ireland Stadium, Townsville"
+   ]
+  },
+  "Toronto": {
+   "name": "Toronto",
+   "city": "Toronto",
+   "country": "Canada",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:27:14.344815+00:00",
+   "matches": 22,
+   "spellings": [
+    "Toronto"
+   ]
+  },
+  "Trent Bridge": {
+   "name": "Trent Bridge",
+   "city": "Nottingham",
+   "country": "England",
+   "capacity": 15350,
+   "opened": null,
+   "ends": [],
+   "lat": 52.93694,
+   "lon": -1.13222,
+   "wikipedia": "https://en.wikipedia.org/wiki/Trent_Bridge",
+   "wikidata": "Q2096399",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:44:19.430270+00:00",
+   "matches": 144,
+   "spellings": [
+    "Nottingham",
+    "Trent Bridge",
+    "Trent Bridge, Nottingham"
+   ]
+  },
+  "Truro": {
+   "name": "Truro",
+   "city": "Truro",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:34.418759+00:00",
+   "matches": 1,
+   "spellings": [
+    "Truro"
+   ]
+  },
+  "Tunbridge Wells": {
+   "name": "Tunbridge Wells",
+   "city": "Tunbridge Wells",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:11.295940+00:00",
+   "matches": 2,
+   "spellings": [
+    "Tunbridge Wells"
+   ]
+  },
+  "University Oval, Dunedin": {
+   "name": "University Oval, Dunedin",
+   "city": "Dunedin",
+   "country": "New Zealand",
+   "capacity": 3500,
+   "opened": 1920,
+   "ends": [
+    "Southern End",
+    "Northern End"
+   ],
+   "lat": -45.86583,
+   "lon": 170.52528,
+   "wikipedia": "https://en.wikipedia.org/wiki/University_of_Otago_Oval",
+   "wikidata": "Q7894851",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:05.404917+00:00",
+   "matches": 74,
+   "spellings": [
+    "Dunedin",
+    "University Oval",
+    "University Oval, Dunedin"
+   ]
+  },
+  "VRA Cricket Ground": {
+   "name": "VRA Cricket Ground",
+   "city": "Amstelveen",
+   "country": "Netherlands",
+   "capacity": null,
+   "opened": null,
+   "ends": [
+    "City End",
+    "Mulder's End"
+   ],
+   "lat": 52.31944,
+   "lon": 4.84917,
+   "wikipedia": "https://en.wikipedia.org/wiki/VRA_Amsterdam_Cricket_Ground",
+   "wikidata": "Q7907474",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:39.165942+00:00",
+   "matches": 2,
+   "spellings": [
+    "VRA Cricket Ground"
+   ]
+  },
+  "Vapi": {
+   "name": "Vapi",
+   "city": "Vapi",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:26:23.965724+00:00",
+   "matches": 2,
+   "spellings": [
+    "Vapi"
+   ]
+  },
+  "Vidarbha C.A. Ground": {
+   "name": "Vidarbha C.A. Ground",
+   "city": "Nagpur",
+   "country": "India",
+   "capacity": 40000,
+   "opened": null,
+   "ends": [
+    "Jaika End",
+    "Church End"
+   ],
+   "lat": 21.15728,
+   "lon": 79.07653,
+   "wikipedia": "https://en.wikipedia.org/wiki/Vidarbha_Cricket_Association_Ground",
+   "wikidata": "Q7927722",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:59:20.064916+00:00",
+   "matches": 2,
+   "spellings": [
+    "Vidarbha C.A. Ground"
+   ]
+  },
+  "Vidarbha Cricket Association Ground": {
+   "name": "Vidarbha Cricket Association Ground",
+   "city": "Nagpur",
+   "country": "India",
+   "capacity": 40000,
+   "opened": null,
+   "ends": [
+    "Jaika End",
+    "Church End"
+   ],
+   "lat": 21.15728,
+   "lon": 79.07653,
+   "wikipedia": "https://en.wikipedia.org/wiki/Vidarbha_Cricket_Association_Ground",
+   "wikidata": "Q7927722",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:35.120737+00:00",
+   "matches": 22,
+   "spellings": [
+    "Nagpur",
+    "Vidarbha Cricket Association Ground"
+   ]
+  },
+  "Vidarbha Cricket Association Stadium": {
+   "name": "Vidarbha Cricket Association Stadium",
+   "city": "Nagpur",
+   "country": "India",
+   "capacity": 45000,
+   "opened": null,
+   "ends": [
+    "Secretary End",
+    "Pavilion End"
+   ],
+   "lat": 21.01357,
+   "lon": 79.0396,
+   "wikipedia": "https://en.wikipedia.org/wiki/Vidarbha_Cricket_Association_Stadium",
+   "wikidata": "Q7927721",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:49:19.647372+00:00",
+   "matches": 29,
+   "spellings": [
+    "Vidarbha Cricket Association Stadium, Jamtha",
+    "Vidarbha Cricket Association Stadium, Jamtha, Nagpur",
+    "Nagpur"
+   ]
+  },
+  "Vijayawada": {
+   "name": "Vijayawada",
+   "city": "Vijayawada",
+   "country": "India",
+   "capacity": 25000,
+   "opened": null,
+   "ends": [
+    "Dr. G .Ganga Raju End",
+    "| international = true"
+   ],
+   "lat": 16.505,
+   "lon": 80.63806,
+   "wikipedia": "https://en.wikipedia.org/wiki/Indira_Gandhi_Stadium_%28Vijayawada%29",
+   "wikidata": "Q24748105",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:01:20.709208+00:00",
+   "matches": 8,
+   "spellings": [
+    "Vijayawada"
+   ]
+  },
+  "Vizianagaram": {
+   "name": "Vizianagaram",
+   "city": "Vizianagaram",
+   "country": "India",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:24:21.264084+00:00",
+   "matches": 2,
+   "spellings": [
+    "Vizianagaram"
+   ]
+  },
+  "Voorburg": {
+   "name": "Voorburg",
+   "city": "Voorburg",
+   "country": "Netherlands",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 52.0676,
+   "lon": 4.374,
+   "wikipedia": "https://en.wikipedia.org/wiki/Voorburg_Cricket_Club",
+   "wikidata": "Q3405922",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:05:18.150164+00:00",
+   "matches": 1,
+   "spellings": [
+    "Voorburg"
+   ]
+  },
+  "WACA Ground": {
+   "name": "WACA Ground",
+   "city": "Perth",
+   "country": "Australia",
+   "capacity": 20000,
+   "opened": 1890,
+   "ends": [],
+   "lat": -31.95985,
+   "lon": 115.8795,
+   "wikipedia": "https://en.wikipedia.org/wiki/WACA_Ground",
+   "wikidata": "Q2738971",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:17.366390+00:00",
+   "matches": 147,
+   "spellings": [
+    "W.A.C.A",
+    "Western Australia Cricket Association Ground",
+    "W.A.C.A. Ground",
+    "Perth"
+   ]
+  },
+  "Wanganui": {
+   "name": "Wanganui",
+   "city": "Wanganui",
+   "country": "New Zealand",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:28:03.764475+00:00",
+   "matches": 3,
+   "spellings": [
+    "Wanganui"
+   ]
+  },
+  "Wankhede Stadium": {
+   "name": "Wankhede Stadium",
+   "city": "Mumbai",
+   "country": "India",
+   "capacity": 33108,
+   "opened": 1974,
+   "ends": [],
+   "lat": 18.93889,
+   "lon": 72.82583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wankhede_Stadium",
+   "wikidata": "Q177067",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:47:19.660860+00:00",
+   "matches": 81,
+   "spellings": [
+    "Wankhede",
+    "Wankhede Stadium",
+    "Wankhede Stadium, Mumbai"
+   ]
+  },
+  "Warner Park": {
+   "name": "Warner Park",
+   "city": "Basseterre",
+   "country": "West Indies",
+   "capacity": 10000,
+   "opened": null,
+   "ends": [
+    "Pavilion End",
+    "Lozack Road End"
+   ],
+   "lat": 17.29861,
+   "lon": -62.72194,
+   "wikipedia": "https://en.wikipedia.org/wiki/Warner_Park_Sporting_Complex",
+   "wikidata": "Q1640640",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:46:13.704669+00:00",
+   "matches": 73,
+   "spellings": [
+    "Basseterre",
+    "Warner Park, Basseterre",
+    "Warner Park, Basseterre, St Kitts",
+    "Warner Park, St Kitts"
+   ]
+  },
+  "Welagedara Stadium": {
+   "name": "Welagedara Stadium",
+   "city": "Kurunegala",
+   "country": "Sri Lanka",
+   "capacity": 10000,
+   "opened": 1972,
+   "ends": [
+    "City End",
+    "Swimming Pool End"
+   ],
+   "lat": 7.4923,
+   "lon": 80.3676,
+   "wikipedia": "https://en.wikipedia.org/wiki/Welagedara_Stadium",
+   "wikidata": "Q7980488",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:58:22.060382+00:00",
+   "matches": 2,
+   "spellings": [
+    "Welagedara Stadium"
+   ]
+  },
+  "Wellington": {
+   "name": "Wellington",
+   "city": "Wellington",
+   "country": "New Zealand",
+   "capacity": 34500,
+   "opened": 2000,
+   "ends": [
+    "Hutt End",
+    "City End"
+   ],
+   "lat": -41.27306,
+   "lon": 174.78583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wellington_Regional_Stadium",
+   "wikidata": "Q1348677",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:00:23.066425+00:00",
+   "matches": 18,
+   "spellings": [
+    "Wellington"
+   ]
+  },
+  "West End Park International Cricket Stadium": {
+   "name": "West End Park International Cricket Stadium",
+   "city": "Doha",
+   "country": "Qatar",
+   "capacity": 14500,
+   "opened": null,
+   "ends": [
+    "Salwa Road End",
+    "West End"
+   ],
+   "lat": 25.18917,
+   "lon": 51.46,
+   "wikipedia": "https://en.wikipedia.org/wiki/West_End_Park_International_Cricket_Stadium",
+   "wikidata": "Q18378601",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:57:08.501120+00:00",
+   "matches": 4,
+   "spellings": [
+    "West End Park International Cricket Stadium"
+   ]
+  },
+  "Westpac Stadium": {
+   "name": "Westpac Stadium",
+   "city": "Wellington",
+   "country": "New Zealand",
+   "capacity": 34500,
+   "opened": 2000,
+   "ends": [
+    "Hutt End",
+    "City End"
+   ],
+   "lat": -41.27306,
+   "lon": 174.78583,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wellington_Regional_Stadium",
+   "wikidata": "Q1348677",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:54:20.907573+00:00",
+   "matches": 38,
+   "spellings": [
+    "Westpac Stadium",
+    "Westpac Stadium, Wellington"
+   ]
+  },
+  "Wetherby": {
+   "name": "Wetherby",
+   "city": "Wetherby",
+   "country": "England",
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": 53.91935,
+   "lon": -1.3811,
+   "wikipedia": "https://en.wikipedia.org/wiki/Grange_Park%2C_Wetherby",
+   "wikidata": "Q18125859",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:07:30.534127+00:00",
+   "matches": 3,
+   "spellings": [
+    "Wetherby"
+   ]
+  },
+  "Willowmoore Park": {
+   "name": "Willowmoore Park",
+   "city": "Benoni",
+   "country": "South Africa",
+   "capacity": 20000,
+   "opened": null,
+   "ends": [
+    "Chalet End",
+    "Ekurhuleni End"
+   ],
+   "lat": -26.19528,
+   "lon": 28.31806,
+   "wikipedia": "https://en.wikipedia.org/wiki/Willowmoore_Park",
+   "wikidata": "Q16903483",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:45:38.291788+00:00",
+   "matches": 31,
+   "spellings": [
+    "Benoni",
+    "Willowmoore Park, Benoni",
+    "Willowmoore Park"
+   ]
+  },
+  "Windsor Park": {
+   "name": "Windsor Park",
+   "city": "Roseau",
+   "country": "West Indies",
+   "capacity": 12000,
+   "opened": null,
+   "ends": [
+    "River End",
+    "Botanical Gardens End"
+   ],
+   "lat": 15.30194,
+   "lon": -61.38417,
+   "wikipedia": "https://en.wikipedia.org/wiki/Windsor_Park_%28Dominica%29",
+   "wikidata": "Q1354676",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:28.281096+00:00",
+   "matches": 19,
+   "spellings": [
+    "Windsor Park, Roseau",
+    "Roseau",
+    "Windsor Park, Roseau, Dominica"
+   ]
+  },
+  "Wormsley": {
+   "name": "Wormsley",
+   "city": "Wormsley",
+   "country": "England",
+   "capacity": 5000,
+   "opened": null,
+   "ends": [],
+   "lat": 51.6447,
+   "lon": -0.9342,
+   "wikipedia": "https://en.wikipedia.org/wiki/Wormsley_Park",
+   "wikidata": "Q8036889",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:02:23.334502+00:00",
+   "matches": 2,
+   "spellings": [
+    "Wormsley"
+   ]
+  },
+  "YMCA Cricket Club": {
+   "name": "YMCA Cricket Club",
+   "city": "Dublin",
+   "country": null,
+   "capacity": null,
+   "opened": null,
+   "ends": [],
+   "lat": null,
+   "lon": null,
+   "wikipedia": null,
+   "wikidata": null,
+   "status": "unmatched",
+   "checked_at": "2026-09-29T15:22:17.145172+00:00",
+   "matches": 10,
+   "spellings": [
+    "YMCA Cricket Club"
+   ]
+  },
+  "Zahur Ahmed Chowdhury Stadium": {
+   "name": "Zahur Ahmed Chowdhury Stadium",
+   "city": "Chattogram",
+   "country": "Bangladesh",
+   "capacity": 22000,
+   "opened": null,
+   "ends": [
+    "Walton End",
+    "Alesha Holdings End"
+   ],
+   "lat": 22.3558,
+   "lon": 91.76792,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bir_Shrestho_Flight_Lieutenant_Matiur_Rahman_Cricket_Stadium",
+   "wikidata": "Q36440",
+   "status": "matched",
+   "checked_at": "2026-09-29T15:19:27.500894+00:00",
+   "matches": 87,
+   "spellings": [
+    "Zahur Ahmed Chowdhury Stadium",
+    "Chattogram",
+    "Zahur Ahmed Chowdhury Stadium, Chattogram",
+    "Zohur Ahmed Chowdhury Stadium"
+   ]
+  },
+  "Zhejiang University of Technology Cricket Field": {
+   "name": "Zhejiang University of Technology Cricket Field",
+   "city": "Hangzhou",
+   "country": null,
+   "capacity": 1347,
+   "opened": null,
+   "ends": [
+    "Library End",
+    "Stadium End"
+   ],
+   "lat": 30.2285,
+   "lon": 120.0314,
+   "wikipedia": "https://en.wikipedia.org/wiki/Zhejiang_University_of_Technology_Cricket_Field",
+   "wikidata": "Q122733558",
+   "status": "matched",
+   "checked_at": "2026-09-29T14:53:11.896011+00:00",
+   "matches": 6,
+   "spellings": [
+    "Zhejiang University of Technology Cricket Field"
+   ]
+  }
+ }
+}

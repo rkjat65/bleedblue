@@ -240,3 +240,12 @@ html[data-theme=dark]{--cmp-1:#ffb800;--cmp-2:#b8ff00}
 @media(max-width:800px){.cmp-identity,.cmp-identity.cmp-3{grid-template-columns:1fr}.cmp-vs{justify-self:center}.cmp-tile-grid,.cmp-tile-grid.cmp-3{grid-template-columns:1fr}.cmp-tile-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .pf-block>.cw-figure .cw-svg{max-width:760px;margin:0 auto}
+
+/* Ground masthead facts */
+.gr-mast{grid-template-columns:minmax(0,1fr)}
+.gr-facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:4px 0 12px}
+.gr-fact{display:flex;flex-direction:column;gap:2px;min-width:96px}
+.gr-fact span{font:600 10px/1.2 var(--font-mono,monospace);letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.gr-fact strong{font:700 15px/1.25 var(--font-heading,inherit);color:var(--ink)}
+.gr-links{margin:0 0 12px}
+.gr-links a{color:var(--accent)}
