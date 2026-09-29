@@ -201,3 +201,13 @@ html[data-theme=dark] .f-w{background:#22c55e;color:#06210f}html[data-theme=dark
 .pf-edition-leaders{margin:6px 0 0}.pf-edition-leaders summary{font-size:12px}
 .pf-links{font-size:13px}
 @media(max-width:640px){.pf-scoreline{font-size:17px}.pf-formguide i{min-width:22px;height:22px;font-size:10px}}
+
+/* ---------- Records hub ---------- */
+.records-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+.records-item{padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.records-item h3{margin:0 0 8px;font-size:15px}
+.records-links{display:flex;flex-wrap:wrap;gap:6px}
+.records-links a{padding:5px 10px;border-radius:999px;font-size:11px;font-weight:700;color:var(--fmt);background:color-mix(in srgb,var(--fmt) 12%,transparent);border:1px solid color-mix(in srgb,var(--fmt) 30%,transparent)}
+.records-links a:hover{text-decoration:none;background:color-mix(in srgb,var(--fmt) 22%,transparent)}
+.pf-records .pf-table tbody th{min-width:0;width:44px;text-align:center}
+.pf-records .pf-table td:nth-child(2){font-weight:800;color:var(--accent)}

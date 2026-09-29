@@ -477,3 +477,61 @@ def series_format_panel(name, fmt, matches, cards, people, pp, mp):
 def entity_switch(formats, counts):
     from profile_formats import format_switch
     return format_switch(formats, {fmt: {'matches': counts.get(fmt)} for fmt in formats})
+
+
+# ------------------------------------------------------------- head-to-head
+
+def h2h_format_panel(left, right, fmt, matches, cards, people, pp, mp, host_of):
+    """One rivalry, one format: per gender record, venues, years, totals, margins and leaders."""
+    key = KEYS[fmt]
+    body = f'<section class="fmt-panel fmt-{key}" id="{key}" data-fmt-panel="{key}" aria-label="{esc(left)} v {esc(right)} {esc(fmt)} record">'
+    for gender in GENDERS:
+        ms = [m for m in matches if m.get('gender') == gender]
+        if not ms:
+            continue
+        wins = Counter((m.get('outcome') or {}).get('winner') for m in ms)
+        other = len(ms) - wins[left] - wins[right]
+        span = f"{min(m['date'] for m in ms)[:4]} to {max(m['date'] for m in ms)[:4]}"
+        body += (f'<header class="pf-fmt-head"><div><p class="eyebrow">{esc(gender.upper())} · {esc(fmt.upper())} · {esc(span)}</p>'
+                 f'<h2>{esc(left)} v {esc(right)}: {esc(gender.lower())} {esc(fmt)}s</h2></div>{form_chips(record(ms, left)["form"])}</header>')
+        body += hero([('Matches', n(len(ms))), (f'{left} wins', n(wins[left])), (f'{right} wins', n(wins[right])), ('Drawn / tied / NR', n(other)),
+                      (f'{left} win %', r2(rate(wins[left] * 100, len(ms)), len(ms))), ('Last played', esc(max(m['date'] for m in ms)[:4]))], f'{left} v {right} {gender} {fmt}')
+        share = max(1, len(ms))
+        body += (f'<div class="pf-share"><span class="pf-share-label">Share of results</span><div class="pf-share-bar">'
+                 f'<i class="f-w" style="width:{100 * wins[left] / share:.2f}%" title="{esc(left)} {wins[left]}"></i>'
+                 f'<i class="f-d" style="width:{100 * other / share:.2f}%" title="Drawn, tied or no result {other}"></i>'
+                 f'<i class="f-l" style="width:{100 * wins[right] / share:.2f}%" title="{esc(right)} {wins[right]}"></i></div>'
+                 f'<div class="pf-share-legend"><span><i class="f-w"></i>{esc(left)} <b>{wins[left]}</b></span><span><i class="f-d"></i>Other <b>{other}</b></span><span><i class="f-l"></i>{esc(right)} <b>{wins[right]}</b></span></div></div>')
+        def where(m):
+            host = host_of(m)
+            return f'In {host}' if host in (left, right) else 'Neutral venue' if host else 'Unknown venue'
+        venues = group_matches(ms, where, order=[f'In {left}', f'In {right}', 'Neutral venue', 'Unknown venue'])
+        head = ['Where', ('P', 'Played'), (left, f'{left} wins'), (right, f'{right} wins'), ('Other', 'Drawn, tied or no result'), ('Last', 'Most recent match')]
+        def rows_for(groups):
+            out = []
+            for label, group in groups:
+                w = Counter((m.get('outcome') or {}).get('winner') for m in group)
+                out.append([esc(label), n(len(group)), n(w[left]), n(w[right]), n(len(group) - w[left] - w[right]), esc(max(m['date'] for m in group)[:4])])
+            return out
+        foot = ['All', n(len(ms)), n(wins[left]), n(wins[right]), n(other), esc(max(m['date'] for m in ms)[:4])]
+        body += f'<section class="panel pf-block"><h2>{esc(gender)} {esc(fmt)} results by venue</h2>{lean_table(f"{left} v {right} {gender} {fmt} by venue", head, rows_for(venues), foot, css="pf-results")}'
+        grounds = group_matches(ms, lambda m: m.get('venue'), minimum=2, limit=12, sort_by_size=True)
+        if grounds:
+            body += lean_table(f'{left} v {right} {gender} {fmt} by ground', ['Ground'] + head[1:], rows_for(grounds), css='pf-results')
+        body += '</section>'
+        years = group_matches(ms, lambda m: m['date'][:4])
+        if len(years) > 1:
+            decades = group_matches(ms, lambda m: m['date'][:3] + '0s')
+            body += f'<section class="panel pf-block"><h2>{esc(gender)} {esc(fmt)} results by year</h2>'
+            if len(years) > 12:
+                body += lean_table(f'{left} v {right} {gender} {fmt} by decade', ['Decade'] + head[1:], rows_for(decades), foot, css='pf-results')
+            body += lean_table(f'{left} v {right} {gender} {fmt} by year', ['Year'] + head[1:], rows_for(list(reversed(years))), css='pf-results') + '</section>'
+        records = totals_tables(ms, cards, mp, fmt=fmt) + margin_tables(ms, mp, left, fmt, limit=3) + margin_tables(ms, mp, right, fmt, limit=3)
+        if records:
+            body += f'<section class="panel pf-block"><h2>{esc(gender)} {esc(fmt)} records in this rivalry</h2>{records}</section>'
+        top = leaders(ms, cards, people, pp, mp, fmt=fmt, show_team=True)
+        if top:
+            body += f'<section class="panel pf-block"><h2>{esc(gender)} {esc(fmt)} leading players</h2>{top}</section>'
+        body += f'<section class="panel pf-block"><h2>Latest {esc(gender.lower())} {esc(fmt)} matches</h2>{recent_matches_table(ms, mp)}</section>'
+    body += '</section>'
+    return body
