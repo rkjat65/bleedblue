@@ -40,6 +40,7 @@ BASE = 'https://cricket.rkjat.in'
 TODAY = india_today().isoformat()
 PAGES = {}
 PREVIOUS = {}
+STUBS = set()  # redirect pages for retired URLs; never indexed, never pruned
 SETTINGS=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8')) if (ROOT/'data/site-settings.json').exists() else {}
 ASSET_VERSION = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'web').glob('*')) if p.is_file())).hexdigest()[:10]
 ALIASES = {'SR Tendulkar':'Sachin Tendulkar','V Kohli':'Virat Kohli','RG Sharma':'Rohit Sharma','JJ Bumrah':'Jasprit Bumrah','DG Bradman':'Don Bradman','M Muralitharan':'Muttiah Muralitharan','M Muralidaran':'Muttiah Muralitharan','SK Warne':'Shane Warne','RT Ponting':'Ricky Ponting','KC Sangakkara':'Kumar Sangakkara','DPMD Jayawardene':'Mahela Jayawardene','JH Kallis':'Jacques Kallis','BC Lara':'Brian Lara','SM Gavaskar':'Sunil Gavaskar','R Dravid':'Rahul Dravid','A Kumble':'Anil Kumble','R Ashwin':'Ravichandran Ashwin','RA Jadeja':'Ravindra Jadeja','SC Ganguly':'Sourav Ganguly','V Sehwag':'Virender Sehwag','SS Mandhana':'Smriti Mandhana','H Kaur':'Harmanpreet Kaur','M Raj':'Mithali Raj','J Goswami':'Jhulan Goswami','EA Perry':'Ellyse Perry','MM Lanning':'Meg Lanning','JE Root':'Joe Root','SPD Smith':'Steve Smith','KS Williamson':'Kane Williamson','JM Anderson':'James Anderson','DA Warner':'David Warner','AC Gilchrist':'Adam Gilchrist','ST Jayasuriya':'Sanath Jayasuriya','KL Rahul':'KL Rahul','RR Pant':'Rishabh Pant','HH Pandya':'Hardik Pandya','AC Kerr':'Amelia Kerr','SCJ Broad':'Stuart Broad'}
@@ -421,7 +422,7 @@ def main():
         old_path=f'/grounds/{slug(old_name)}-{hashlib.sha1(old_name.encode()).hexdigest()[:6]}/'
         new_path=gp['grounds'].get(new_name)
         if not new_path or old_path==new_path:continue
-        target=OUT/old_path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True)
+        STUBS.add(old_path);target=OUT/old_path.lstrip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True)
         target.write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{esc(old_name)} has moved | Cricket Wicket</title><link rel="canonical" href="{BASE}{new_path}"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url={new_path}"></head><body><p>{esc(old_name)} is now published as <a href="{new_path}">{esc(new_name)}</a>.</p></body></html>',encoding='utf-8')
     editorial=build_editorial(people,matches,pp,mp,gp,all_cards,careers['meta'].get('checked_at',''))
     # Retire the legacy publication and its unscoped global data payloads.
@@ -543,7 +544,7 @@ def main():
     for index in OUT.rglob('index.html'):
         path='/'+index.parent.relative_to(OUT).as_posix().strip('./')+'/'
         if path=='//':path='/'
-        if path in PAGES or path in ('/embed/','/search/','/saved/','/international/'):continue
+        if path in PAGES or path in STUBS or path in ('/embed/','/search/','/saved/','/international/'):continue
         for name in ['index.html','summary.json','analytics.json','records.json']:(index.parent/name).unlink(missing_ok=True)
     missing=Counter();not_applicable=Counter()
     for p in people.values():
