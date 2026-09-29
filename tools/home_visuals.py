@@ -1,11 +1,17 @@
-"""Server-rendered homepage art and charts, using publication records only."""
+"""Server-rendered homepage modules, using publication records only."""
 import html
 import json
 from collections import Counter
 
+FORMAT_KEY = {'Test': 'test', 'ODI': 'odi', 'T20I': 't20i'}
+
 
 def _metric(value):
     return '-' if value is None else f'{value:,}' if isinstance(value, int) else f'{value:.2f}' if isinstance(value, float) else str(value)
+
+
+def _e(value):
+    return html.escape(str(value if value is not None else ''), quote=True)
 
 
 def _team_record(matches, left, right):
@@ -60,65 +66,92 @@ def homepage_insights(matches, match_routes, people, team_routes, official_h2h=N
             compare_cards+='<tr><th>'+label+'</th><td>'+_metric(s1.get(key))+'</td><td>'+_metric(s2.get(key))+'</td></tr>'
         compare_cards+='</tbody></table><a href="'+compare_path+'">Open comparison →</a></article>'
     return f'''<section class="home-insights" aria-labelledby="home-insights-title"><div class="section-heading"><div><p class="eyebrow">FEATURED RECORDS</p><h2 id="home-insights-title">Compare teams, players and tournaments</h2></div><a href="/studio/">Build a chart →</a></div>
-      <div class="home-insight-grid"><article class="home-insight-card home-h2h"><div class="home-card-label"><span>TEAM HEAD-TO-HEAD · OFFICIAL</span><a href="{html.escape(india_route)}">India</a><b>vs</b><a href="{html.escape(australia_route)}">Australia</a></div><div class="home-h2h-total">{h2h_total}</div><figure class="home-chart" aria-label="India and Australia wins by format"><figcaption>Official wins by format</figcaption>{h2h_chart}</figure><a class="home-card-link" href="/teams/">Explore every international rivalry →</a></article>
+      <div class="home-insight-grid"><article class="home-insight-card home-h2h"><div class="home-card-label"><span>TEAM HEAD-TO-HEAD · OFFICIAL</span><a href="{html.escape(india_route)}">India</a><b>vs</b><a href="{html.escape(australia_route)}">Australia</a></div><div class="home-h2h-total">{h2h_total}</div><figure class="home-chart" aria-label="India and Australia wins by format"><figcaption>Official wins by format</figcaption>{h2h_chart}</figure><a class="home-card-link" href="/head-to-head/">Explore every international rivalry →</a></article>
       <article class="home-insight-card home-world"><div class="home-card-label"><span>WORLD CUP RECORDS</span><strong>{world_total:,}</strong><small>tournament matches in this archive</small></div><h3>World Cup results and winners</h3><figure class="home-chart home-world-chart" aria-label="World Cup matches by tournament category"><figcaption>Recorded World Cup matches by tournament</figcaption>{world_chart}</figure><a class="home-card-link" href="/world-cup/">World Cup winners and records →</a></article></div>
       <div class="home-comparisons"><div class="section-heading"><div><p class="eyebrow">PLAYER COMPARISONS</p><h3>Career records by format</h3></div><a href="/compare/">Compare any two players →</a></div><div class="grid two">{compare_cards}</div></div></section>'''
-
-
-HERO_DELIVERY = '''<svg class="hero-delivery" viewBox="0 0 1280 470" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
-        <defs><radialGradient id="hd-ball" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#ffb4a8"/><stop offset=".45" stop-color="#e5322d"/><stop offset="1" stop-color="#7a0f12"/></radialGradient>
-        <linearGradient id="hd-trail" x1="0" x2="1"><stop offset="0" stop-color="#7cc4ff" stop-opacity="0"/><stop offset="1" stop-color="#fff2c7" stop-opacity=".95"/></linearGradient>
-        <filter id="hd-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter></defs>
-        <g class="hd-lights"><circle cx="820" cy="96" r="3"/><circle cx="846" cy="92" r="2.4"/><circle cx="872" cy="99" r="2.8"/><circle cx="905" cy="140" r="2.2"/><circle cx="932" cy="137" r="2.6"/><circle cx="1090" cy="118" r="2.4"/></g>
-        <path id="hd-path" class="hd-path" d="M560 150 Q 820 60 1010 402 Q 1080 300 1210 318" pathLength="100"/>
-        <path class="hd-trail" d="M560 150 Q 820 60 1010 402 Q 1080 300 1210 318" pathLength="100"><animate attributeName="stroke-dashoffset" values="100;0;0;-100" keyTimes="0;.62;.7;1" dur="4.2s" repeatCount="indefinite"/></path>
-        <ellipse class="hd-bounce" cx="1010" cy="406" rx="4" ry="1.5"><animate attributeName="rx" values="0;0;38;52" keyTimes="0;.42;.5;1" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;.9;0" keyTimes="0;.42;.46;.8" dur="4.2s" repeatCount="indefinite"/></ellipse>
-        <g class="hd-ball"><circle r="16" fill="#ff6a4d" opacity=".45" filter="url(#hd-glow)"/><circle r="9" fill="url(#hd-ball)"/><path d="M-6 -6 Q 0 0 -6 6 M6 -6 Q 0 0 6 6" stroke="#fff6" stroke-width="1.2" fill="none"><animateTransform attributeName="transform" type="rotate" from="0" to="720" dur="4.2s" repeatCount="indefinite"/></path>
-          <animateMotion dur="4.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.62;1" calcMode="linear"><mpath href="#hd-path"/></animateMotion>
-          <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.04;.6;.66;1" dur="4.2s" repeatCount="indefinite"/></g>
-        <g class="hd-impact" transform="translate(1212 318)"><circle r="10" class="hd-ring"><animate attributeName="r" values="0;0;70" keyTimes="0;.62;.9" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.61;.63;.9" dur="4.2s" repeatCount="indefinite"/></circle>
-          <g class="hd-sparks">''' + ''.join(f'<line x1="0" y1="0" x2="{x}" y2="{y}"><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.62;.64;.85" dur="4.2s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1.5" keyTimes="0;.62;.7;1" dur="4.2s" repeatCount="indefinite"/></line>' for x,y in [(-40,-34),(-52,4),(-30,38),(36,-44),(50,-8),(26,40),(0,-56)]) + '''</g>
-          <rect class="hd-bail" x="-22" y="-62" width="22" height="6" rx="3"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-60 -90;-110 -40" keyTimes="0;.62;.8;1" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.61;.63;.9;1" dur="4.2s" repeatCount="indefinite"/></rect>
-          <rect class="hd-bail" x="2" y="-62" width="22" height="6" rx="3"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;50 -110;90 -60" keyTimes="0;.62;.8;1" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.61;.63;.9;1" dur="4.2s" repeatCount="indefinite"/></rect></g>
-      </svg>'''
 
 
 def _hero_facts(facts):
     if not facts:
         return ''
     chips = ''.join(
-        f'<a class="hero-fact" href="{html.escape(url, quote=True)}" style="--i:{i}"><strong data-count="{value}">{value:,}</strong>'
-        f'<span>{html.escape(label)}</span><em>{html.escape(name)}</em></a>'
+        f'<a class="hero-fact" href="{_e(url)}" style="--i:{i}"><strong data-count="{value}">{value:,}</strong>'
+        f'<span>{_e(label)}</span><em>{_e(name)}</em></a>'
         for i, (value, label, name, url) in enumerate(facts[:3]))
     return f'<div class="hero-facts" aria-label="Record holders">{chips}</div>'
 
 
 def homepage_hero(player_count, match_count, faces=None, facts=None, quick=None):
-    cast = ''
+    """One hero figure, the record tiles and the search. The other icons get their own rail."""
+    figure = ''
     if faces:
-        items = ''
-        for index, (name, src, href) in enumerate(faces[:8]):
-            load = 'eager' if index < 4 else 'lazy'
-            items += (
-                f'<a class="hero-face" href="{html.escape(href, quote=True)}" style="--i:{index}">'
-                f'<img src="{html.escape(src, quote=True)}" width="420" height="480" alt="{html.escape(name)}" loading="{load}" decoding="async">'
-                f'<span>{html.escape(name)}</span></a>'
-            )
-        cast = f'<div class="hero-stage" aria-hidden="true"></div><div class="hero-cast" aria-label="Featured international players">{items}</div>'
+        name, src, href = faces[0][:3]
+        figure = (f'<a class="hero-figure" href="{_e(href)}" aria-label="{_e(name)} profile"><span class="hero-stage" aria-hidden="true"></span>'
+                  f'<img src="{_e(src)}" width="420" height="480" alt="{_e(name)}" fetchpriority="high" decoding="async"><span class="hero-figure-name">{_e(name)}</span></a>')
+    quick_items = ''.join(f'<li><a href="{_e(url)}">{_e(label)}</a></li>' for label, url in (quick or []))
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
-      <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" fetchpriority="high"></picture></div>
-      <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET</p>
-        <h1 id="hero-title">Every run. Every wicket.<br><em>Every match.</em></h1>
-        <p class="hero-description">Men’s and women’s Tests, ODIs and T20Is. Career records, head-to-heads and ball-by-ball scorecards with match charts.</p>
-        <ul class="hero-quick" aria-label="Popular">{''.join(f'<li><a href="{html.escape(url, quote=True)}">{html.escape(label)}</a></li>' for label, url in (quick or []))}<li><a href="/head-to-head/">India v Australia</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
-        <div class="hero-actions"><a class="button hero-primary" href="/players/">Explore the players <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/matches/">Open a scorecard <span aria-hidden="true">→</span></a></div>
-        <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Search a player, team or match…" required autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="submit">Search</button></div></form>
+      <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" loading="eager"></picture></div>
+      <div class="hero-grid">
+        <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET · MEN &amp; WOMEN</p>
+          <h1 id="hero-title">Every run. Every wicket.<br><em>Every match.</em></h1>
+          <p class="hero-description">The complete record of Tests, ODIs and T20Is: official careers, ball-by-ball scorecards, rivalries and records, all split by format.</p>
+          <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Player, team, ground or match" required autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="submit">Search</button></div></form>
+          <ul class="hero-quick" aria-label="Popular">{quick_items}<li><a href="/head-to-head/">India v Australia</a></li><li><a href="/records/">Records</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
+        </div>
+        {figure}
+        {_hero_facts(facts)}
       </div>
-      {cast}
-      {HERO_DELIVERY}
-      {_hero_facts(facts)}
-      <button type="button" class="hero-motion" data-hero-motion aria-pressed="false">Pause motion</button>
-      <div class="hero-bottom"><span><strong data-count="{player_count}">{player_count:,}</strong> PLAYERS <b>·</b> <strong data-count="{match_count}">{match_count:,}</strong> MATCHES <b>·</b> TEST · ODI · T20I <i>MEN &amp; WOMEN</i></span></div>
+      <div class="hero-bottom"><span><strong data-count="{player_count}">{player_count:,}</strong> PLAYERS <b>·</b> <strong data-count="{match_count}">{match_count:,}</strong> MATCHES <b>·</b> 12 TEAMS <b>·</b> TEST · ODI · T20I</span><button type="button" class="hero-motion" data-hero-motion aria-pressed="false">Pause motion</button></div>
+    </section>'''
+
+
+def icons_rail(icons):
+    """icons: [(name, src, href, stat_value, stat_label, team)]."""
+    if not icons:
+        return ''
+    cards = ''
+    for i, (name, src, href, value, label, team) in enumerate(icons):
+        cards += (f'<li style="--i:{i}"><a class="icon-card" href="{_e(href)}"><img src="{_e(src)}" width="210" height="240" alt="" loading="lazy" decoding="async">'
+                  f'<span class="icon-team">{_e(team)}</span><strong>{_e(name)}</strong><span class="icon-stat"><b>{_e(value)}</b> {_e(label)}</span></a></li>')
+    return f'''<section class="arena-section home-icons" id="icons" aria-labelledby="icons-title">
+      <div class="section-heading"><div><p class="eyebrow">THE ICONS</p><h2 id="icons-title">Start with the greats</h2></div><a href="/players/">All players →</a></div>
+      <ol class="icons-rail" tabindex="0" aria-label="Featured players">{cards}</ol>
+    </section>'''
+
+
+def format_trio(counts, leaders, links):
+    """counts: {fmt: {'Men': n, 'Women': n}}; leaders: {fmt: {gender: [(label, name, value, url), ...]}}."""
+    tiles = ''
+    blurb = {'Test': 'Five days, two innings each, the original examination.', 'ODI': 'Fifty overs a side, World Cups since 1975.', 'T20I': 'Twenty overs, the fastest-growing format.'}
+    for fmt in ('Test', 'ODI', 'T20I'):
+        c = counts.get(fmt, {})
+        rows = ''
+        for gender in ('Men', 'Women'):
+            for label, name, value, url in leaders.get(fmt, {}).get(gender, []):
+                rows += f'<div class="ft-row"><span>{_e(gender)} · {_e(label)}</span><a href="{_e(url)}">{_e(name)}</a><b>{value:,}</b></div>'
+        tiles += (f'<article class="format-tile fmt-{FORMAT_KEY[fmt]}"><div class="ft-head"><span class="ft-kicker">{_e(fmt.upper())}</span><strong>{c.get("Men", 0) + c.get("Women", 0):,}</strong><small>matches recorded · {c.get("Men", 0):,} men · {c.get("Women", 0):,} women</small></div>'
+                  f'<p>{_e(blurb[fmt])}</p><div class="ft-rows">{rows}</div><div class="ft-links">' + ''.join(f'<a href="{_e(url)}">{_e(label)}</a>' for label, url in links.get(fmt, [])) + '</div></article>')
+    return f'''<section class="arena-section home-formats" id="formats" aria-labelledby="formats-title">
+      <div class="section-heading"><div><p class="eyebrow">THREE FORMATS</p><h2 id="formats-title">Test, ODI and T20I, side by side</h2></div><a href="/records/">All records →</a></div>
+      <div class="format-trio">{tiles}</div>
+    </section>'''
+
+
+def records_grid(tiles):
+    """tiles: [(fmt, kind_label, [(gender, value_text, name, detail, url), ...])]."""
+    if not tiles:
+        return ''
+    cells = ''
+    for fmt, kind, entries in tiles:
+        if not entries:
+            continue
+        lead = entries[0]
+        rest = ''.join(f'<span class="rg-alt"><em>{_e(g)}</em> <b>{_e(v)}</b> {_e(n)}<small>{_e(d)}</small></span>' for g, v, n, d, u in entries[1:])
+        cells += (f'<a class="rg-tile fmt-{FORMAT_KEY[fmt]}" href="{_e(lead[4])}"><span class="rg-kicker">{_e(fmt.upper())} · {_e(kind.upper())}</span>'
+                  f'<strong>{_e(lead[1])}</strong><span class="rg-name">{_e(lead[2])}</span><small>{_e(lead[3])}</small>{rest}<span class="rg-go">Full list →</span></a>')
+    return f'''<section class="arena-section home-records" id="records-grid" aria-labelledby="records-grid-title">
+      <div class="section-heading"><div><p class="eyebrow">RECORDS THAT MATTER</p><h2 id="records-grid-title">The numbers every fan asks for</h2></div><a href="/records/">Records hub →</a></div>
+      <div class="records-tiles">{cells}</div>
     </section>'''
 
 

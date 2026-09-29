@@ -76,12 +76,9 @@ html[data-theme=dark] .batting-table tbody tr>:nth-child(3){color:var(--lime)}
 html[data-theme=dark] .bowling-table tbody tr>:nth-child(5){color:var(--magenta)}
 html[data-theme=dark] #batting-career tbody tr>:nth-child(5){color:var(--lime);font-weight:600}
 html[data-theme=dark] #bowling-career tbody tr>:nth-child(7){color:var(--magenta);font-weight:600}
-html[data-theme=dark] :is(.stats>div:nth-child(4n+1) strong,.format-card-hero strong,.question-hero strong){color:var(--accent)}
-html[data-theme=dark] .stats>div:nth-child(4n+2) strong{color:var(--lime)}
-html[data-theme=dark] .stats>div:nth-child(4n+3) strong{color:var(--magenta)}
-html[data-theme=dark] .stats>div:nth-child(4n+4) strong{color:var(--gold)}
-html[data-theme=dark] :is(.daily-note .data-callout div:nth-child(3n+2) strong,.format-card dd){color:var(--lime)}
-html[data-theme=dark] .daily-note .data-callout div:nth-child(3n+3) strong{color:var(--gold)}
+html[data-theme=dark] :is(.stats>div:first-child strong,.format-card-hero strong,.question-hero strong,.daily-note .data-callout div:first-child strong){color:var(--accent)}
+html[data-theme=dark] :is(.stats>div strong,.format-card dd,.daily-note .data-callout strong){color:var(--ink)}
+html[data-theme=dark] :is(.stats>div:first-child strong,.format-card-hero strong,.question-hero strong,.daily-note .data-callout div:first-child strong){color:var(--accent)}
 html[data-theme=dark] .player-portrait--illustration img{background:var(--soft)}
 html[data-theme=dark] .portrait{background:var(--panel);border-color:var(--border)}
 
@@ -140,3 +137,10 @@ html[data-theme=dark] .studio-query{background:var(--bg);color:var(--ink);border
 html[data-theme=dark] .export-frame{background:var(--bg)}
 html[data-theme=dark] #toast:not(:empty){background:var(--soft);color:var(--ink);border-color:#00e5ff33;box-shadow:none}
 @media(max-width:750px){html[data-theme=dark] .score-table :is(th,td){padding:10px 12px}}
+
+/* Shared type tokens: the same families in both themes. */
+:root{--font-body:'CW Inter',Inter,Segoe UI,Arial,sans-serif;--font-heading:'CW Space Grotesk',Inter,Segoe UI,sans-serif;--font-mono:'CW JetBrains Mono',ui-monospace,Consolas,monospace;--fmt-test:#c2264d;--fmt-odi:#1d4ed8;--fmt-t20i:#15803d}
+html:not([data-theme=dark]) body{font-family:var(--font-body)}
+html:not([data-theme=dark]) :is(h1,h2,h3,.brand,.stats strong,.format-card-hero strong,.question-hero strong,.innings-total,.pf-hero strong){font-family:var(--font-heading);font-weight:700}
+html:not([data-theme=dark]) :is(.cell-number,.pf-table td,.format-card dd,.stats strong){font-variant-numeric:tabular-nums}
+html[data-theme=dark]{--fmt-test:#ff5c7a;--fmt-odi:#00e5ff;--fmt-t20i:#b8ff00}

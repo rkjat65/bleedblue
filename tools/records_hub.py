@@ -87,43 +87,12 @@ def innings_rows(matches, cards, people, gender, fmt):
 
 def partnerships(inn, m, people):
     """Stands rebuilt from the batting order and the fall of wickets; abandoned if the order is inconsistent."""
-    fall = sorted((w for w in inn.get('fall') or [] if w.get('runs') is not None and w.get('wicket')), key=lambda w: w['wicket'])
-    batting = inn.get('batting') or []
-    if len(batting) < 2 or not fall:
-        return []
-    names = [b.get('name') for b in batting]
-    ids = [b.get('id') for b in batting]
-    if len(set(names)) != len(names):
-        return []
-    at_crease = [0, 1]
-    next_in = 2
-    previous = 0
-    out = []
+    from cricket_charts import stand_pairs
+    stands = stand_pairs(inn) or []
     bat_team = inn.get('team')
     opp = next((x for x in m['teams'] if x != bat_team), '')
-    for w in fall:
-        if w['wicket'] != len(out) + 1:
-            return []
-        if w.get('player') not in names:
-            return []
-        gone = names.index(w['player'])
-        if gone not in at_crease:
-            return []
-        pair = tuple(sorted(at_crease))
-        out.append({'runs': w['runs'] - previous, 'wicket': w['wicket'], 'pids': (ids[pair[0]], ids[pair[1]]), 'team': bat_team, 'opp': opp,
-                    'venue': m.get('venue') or '', 'date': m['date'], 'match': m['id'], 'unbroken': False})
-        previous = w['runs']
-        if next_in >= len(batting):
-            at_crease = [x for x in at_crease if x != gone]
-            break
-        at_crease[at_crease.index(gone)] = next_in
-        next_in += 1
-    total = inn.get('runs')
-    if total is not None and total > previous and len(at_crease) == 2 and len(out) < 10:
-        pair = tuple(sorted(at_crease))
-        out.append({'runs': total - previous, 'wicket': len(out) + 1, 'pids': (ids[pair[0]], ids[pair[1]]), 'team': bat_team, 'opp': opp,
-                    'venue': m.get('venue') or '', 'date': m['date'], 'match': m['id'], 'unbroken': True})
-    return [s for s in out if s['runs'] >= 0 and all(pid in people for pid in s['pids'])]
+    return [{'runs': s['runs'], 'wicket': s['wicket'], 'pids': s['ids'], 'team': bat_team, 'opp': opp, 'venue': m.get('venue') or '',
+             'date': m['date'], 'match': m['id'], 'unbroken': s['unbroken']} for s in stands if s['runs'] >= 0 and all(pid in people for pid in s['ids'])]
 
 
 def team_rows(matches, cards, gender, fmt):
@@ -294,3 +263,32 @@ def records_index(gender_format_links):
                 out += f'<div class="records-item"><h3>{esc(label)}</h3><div class="records-links">{links}</div></div>'
         out += '</div></section>'
     return out
+
+
+def headline_records(matches, cards, people):
+    """Highest score and best bowling per (gender, format) in one pass over the cards."""
+    best = {}
+    for m in matches:
+        card = cards.get(m['id'])
+        if not card:
+            continue
+        key = (m.get('gender'), m.get('format'))
+        slot = best.setdefault(key, {'score': None, 'bowling': None})
+        for inn in card.get('innings') or []:
+            if inn.get('super_over'):
+                continue
+            bat_team = inn.get('team')
+            bowl_team = next((x for x in m['teams'] if x != bat_team), '')
+            for b in inn.get('batting') or []:
+                if b.get('id') not in people or b.get('runs') is None:
+                    continue
+                cand = (b['runs'], b.get('out') is False, b['id'], bat_team, bowl_team, m)
+                if slot['score'] is None or cand[:2] > slot['score'][:2]:
+                    slot['score'] = cand
+            for b in inn.get('bowling') or []:
+                if b.get('id') not in people or b.get('wickets') is None or b.get('runs') is None:
+                    continue
+                cand = (b['wickets'], -b['runs'], b['id'], bowl_team, bat_team, m)
+                if slot['bowling'] is None or cand[:2] > slot['bowling'][:2]:
+                    slot['bowling'] = cand
+    return best

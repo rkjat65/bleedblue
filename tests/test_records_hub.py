@@ -62,3 +62,28 @@ class RankingTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class StandPairTests(unittest.TestCase):
+    def test_chart_names_both_batters(self):
+        import cricket_charts as cw
+        inn = {'team': 'India', 'runs': 120,
+               'batting': [{'id': 'a', 'name': 'A One'}, {'id': 'b', 'name': 'B Two'}, {'id': 'c', 'name': 'C Three'}],
+               'fall': [{'wicket': 1, 'runs': 50, 'player': 'A One'}]}
+        stands = cw.stand_pairs(inn)
+        self.assertEqual([(s['wicket'], s['runs'], s['names'], s['unbroken']) for s in stands], [(1, 50, ('A One', 'B Two'), False), (2, 70, ('B Two', 'C Three'), True)])
+        chart = cw.partnerships(inn)
+        self.assertIn('A One &amp; B Two', chart)
+        self.assertIn('2nd wicket (unbroken)', chart)
+
+
+class HeadlineTests(unittest.TestCase):
+    def test_headline_records_pick_best_per_gender_and_format(self):
+        from records_hub import headline_records
+        m = dict(MATCH)
+        cards = {'m1': {'innings': [{'team': 'India', 'batting': [{'id': 'a', 'runs': 120, 'out': False}, {'id': 'b', 'runs': 120, 'out': True}], 'bowling': [{'id': 'c', 'wickets': 5, 'runs': 30}, {'id': 'd', 'wickets': 5, 'runs': 20}]}]}}
+        heads = headline_records([m], cards, PEOPLE)
+        score = heads[('Men', 'ODI')]['score']
+        self.assertEqual((score[0], score[1], score[2]), (120, True, 'a'))
+        bowling = heads[('Men', 'ODI')]['bowling']
+        self.assertEqual((bowling[0], -bowling[1], bowling[2]), (5, 20, 'd'))

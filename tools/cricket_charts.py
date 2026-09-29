@@ -154,33 +154,80 @@ def manhattan(inn, title=None):
     return f'<div class="cw-scroll" tabindex="0">{figure(caption, caption, svg, "Bar height is runs in that over. Dots above a bar are wickets in the over.")}</div>'
 
 
-def partnerships(inn):
-    fall = [w for w in (inn.get('fall') or []) if w.get('runs') is not None and w.get('wicket') is not None]
-    if not fall:
-        return ''
-    fall = sorted(fall, key=lambda w: (w['wicket'], w['runs']))
-    rows = []
+def stand_pairs(inn):
+    """Partnerships rebuilt from the batting order and the fall of wickets.
+
+    Returns a list of {'wicket', 'runs', 'names', 'ids', 'unbroken'} or None when the
+    recorded order is inconsistent (for example a retirement the card does not mark).
+    """
+    fall = sorted((w for w in inn.get('fall') or [] if w.get('runs') is not None and w.get('wicket')), key=lambda w: w['wicket'])
+    batting = inn.get('batting') or []
+    if len(batting) < 2 or not fall:
+        return None
+    names = [b.get('name') for b in batting]
+    ids = [b.get('id') for b in batting]
+    if len(set(names)) != len(names):
+        return None
+    at_crease = [0, 1]
+    next_in = 2
     previous = 0
-    for wicket in fall:
-        added = wicket['runs'] - previous
+    out = []
+    for w in fall:
+        if w['wicket'] != len(out) + 1 or w.get('player') not in names:
+            return None
+        gone = names.index(w['player'])
+        if gone not in at_crease:
+            return None
+        pair = tuple(sorted(at_crease))
+        added = w['runs'] - previous
         if added < 0:
-            return ''
-        label = f"{wicket['wicket']}{({1:'st',2:'nd',3:'rd'}.get(wicket['wicket'],'th'))} wicket"
-        rows.append((label, added, wicket.get('player') or ''))
-        previous = wicket['runs']
+            return None
+        out.append({'wicket': w['wicket'], 'runs': added, 'names': (names[pair[0]], names[pair[1]]), 'ids': (ids[pair[0]], ids[pair[1]]), 'unbroken': False})
+        previous = w['runs']
+        if next_in >= len(batting):
+            at_crease = [x for x in at_crease if x != gone]
+            break
+        at_crease[at_crease.index(gone)] = next_in
+        next_in += 1
     total = inn.get('runs')
-    if total is not None and total > previous:
-        rows.append(('Unbroken stand', total - previous, ''))
+    if total is not None and total > previous and len(at_crease) == 2 and len(out) < 10:
+        pair = tuple(sorted(at_crease))
+        out.append({'wicket': len(out) + 1, 'runs': total - previous, 'names': (names[pair[0]], names[pair[1]]), 'ids': (ids[pair[0]], ids[pair[1]]), 'unbroken': True})
+    return out
+
+
+def partnerships(inn):
+    stands = stand_pairs(inn)
+    rows = []
+    if stands:
+        for s in stands:
+            label = f"{s['wicket']}{({1: 'st', 2: 'nd', 3: 'rd'}.get(s['wicket'], 'th'))} wicket" + (' (unbroken)' if s['unbroken'] else '')
+            rows.append((label, s['runs'], ' & '.join(s['names'])))
+    else:
+        fall = [w for w in (inn.get('fall') or []) if w.get('runs') is not None and w.get('wicket') is not None]
+        if not fall:
+            return ''
+        fall = sorted(fall, key=lambda w: (w['wicket'], w['runs']))
+        previous = 0
+        for wicket in fall:
+            added = wicket['runs'] - previous
+            if added < 0:
+                return ''
+            label = f"{wicket['wicket']}{({1: 'st', 2: 'nd', 3: 'rd'}.get(wicket['wicket'], 'th'))} wicket"
+            rows.append((label, added, wicket.get('player') or ''))
+            previous = wicket['runs']
+        total = inn.get('runs')
+        if total is not None and total > previous:
+            rows.append(('Unbroken stand', total - previous, ''))
     peak = max((runs for _, runs, _ in rows), default=0)
     if peak <= 0:
         return ''
     bars = ''
-    for label, runs, player in rows:
+    for label, runs, who in rows:
         width = runs / peak * 100
-        who = f' · {_esc(player)}' if player else ''
-        bars += f'<div class="cw-hbar"><span>{label}{who}</span><div class="cw-htrack"><i style="width:{width:.2f}%"></i></div><strong>{runs}</strong></div>'
+        bars += f'<div class="cw-hbar cw-stand"><span><b>{_esc(label)}</b>{(" · " + _esc(who)) if who else ""}</span><div class="cw-htrack"><i style="width:{width:.2f}%"></i></div><strong>{runs}</strong></div>'
     team = inn.get('team') or 'Innings'
-    return figure(f'Partnerships · {team}', f'Partnership runs for {team}', bars, 'Stands are the runs added between recorded falls of wicket. An unbroken stand is the remainder after the last fall.')
+    return figure(f'Partnerships · {team}', f'Partnership runs for {team}', bars, 'Stands are the runs added between recorded falls of wicket; both batters are named when the order can be rebuilt.')
 
 
 def phases(inn, fmt):

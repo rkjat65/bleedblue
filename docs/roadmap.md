@@ -5,19 +5,20 @@ Goal: the most complete international cricket reference short of live scores. Ev
 ## Shipped (September 2026)
 
 - **Player profiles**: masthead, sticky Overview / Test / ODI / T20I switch, per-format official line, hero tiles, career arc and by-year charts, form, score distribution, dismissals, batting position, tabbed splits (opposition, home and away, batting first or chasing, position, result, year, ground, series), milestones, best performances, latest matches.
-- **Match scorecards**: overs and run rate, toss, player of the match, extras breakdown, fall of wickets, did-not-bat, super-over results, SportsEvent competitors.
-- **Team, ground and series pages**: format panels with men and women separate. Teams: record tiles and form guide, results by opponent, home and away, toss and batting order, decade and year, team records, leading players, latest matches. Grounds: innings averages, bat-first and chase win rates, toss effect, totals and chases, team records and leading players at the venue. Series: editions with scorelines, results and leading players.
-- **Head-to-head pages**: per-format panels with venue, ground and year splits, rivalry records and leading players.
-- **Records hub**: category index; sixteen career leaderboards with spans and full columns; highest scores, strike rate, sixes, best bowling, calendar-year runs and wickets, partnerships rebuilt from the fall of wickets, team totals, chases and margins, each with team, opponent, ground and year filters.
+- **Match scorecards**: overs and run rate, toss, player of the match, extras breakdown, fall of wickets, did-not-bat, super-over results, partnerships naming both batters, SportsEvent competitors.
+- **Team, ground, series and head-to-head pages**: format panels with men and women separate; records by opponent, venue, toss, year; totals, chases and margins; leading players; series editions with scorelines.
+- **Records hub**: category index; sixteen career leaderboards; highest scores, strike rate, sixes, best bowling, calendar-year runs and wickets, partnerships, team totals, chases and margins, each with team, opponent, ground and year filters.
 - **Ground names**: 667 recorded spellings resolve to 402 grounds; retired ground URLs redirect to the canonical page.
-- Host country resolved for every full-member match; archive rows carry maidens, series name and real result labels.
+- **Homepage**: one hero figure with record tiles and search, icons rail, fixtures, results, the three formats side by side, a records grid, rivalries, featured scorecard, leaders and explore tiles. The section rail only appears when the viewport has a real gutter.
+- **Studio**: builder rail with templates, up to six players, any number of measures on one canvas (bars with side figures, grouped bars, small multiples, columns, line, table, headline, match card), Visual / Table / SQL tabs, four themes, PNG, SVG and CSV exports, shareable setup links.
+- Host country resolved for every full-member match; archive rows carry maidens, series name and real result labels; neutral stat tiles with format colours instead of the neon rainbow.
 
 ## Next
 
-1. **Design refresh**: shared tokens for spacing and type, calmer stat tiles, consistent format colours across the home page and hubs.
-2. **Compare**: three-way comparisons, year-by-year overlays, position and opposition filters.
-3. **Ground metadata**: city, country and capacity on ground mastheads; the remaining ambiguous short names (Hyderabad, Wellington ODIs) once sources confirm the ground.
-4. **Player pages**: captaincy and wicketkeeping splits when the source data carries them.
+1. **Compare pages**: three-way comparisons with year-by-year overlays and opposition filters, reusing the Studio query core.
+2. **Ground metadata**: city, country and capacity on ground mastheads; the ambiguous short names Hyderabad and Wellington ODIs once sources confirm the ground.
+3. **Player pages**: captaincy and wicketkeeping splits when the source data carries them; a "similar players" module from the career table.
+4. **Light theme pass**: the same restraint as dark on every hub.
 
 ## Working notes
 

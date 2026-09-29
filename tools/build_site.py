@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 from cricket_scope import publication_data, FULL_MEMBERS, load_cards, complete_career_counts,career_scorecards
-from home_visuals import homepage_hero, homepage_insights, archive_visuals
+from home_visuals import homepage_hero, homepage_insights, archive_visuals, icons_rail, format_trio, records_grid
 from on_this_day import publish_history, india_today
 import cricket_charts as cw
 from publication_assets import prepare_assets, social_image
@@ -20,7 +20,7 @@ from profile_research import opposition_links
 from profile_formats import profile_body
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
 from venues import canonicalise_matches
-from records_hub import CAREER_METRICS, INNINGS_RECORDS, MINIMUM_FIELD, MINIMUM_LABEL, CATEGORY_LABEL, innings_rows, team_rows, innings_record_table, career_table, records_table, records_index
+from records_hub import CAREER_METRICS, INNINGS_RECORDS, MINIMUM_FIELD, MINIMUM_LABEL, CATEGORY_LABEL, innings_rows, team_rows, innings_record_table, career_table, records_table, records_index, headline_records
 from player_questions import prepare_player_questions, question_page, featured_question_cards, player_question_directory, assert_clean_bundle
 from entity_pages import (
     team_totals, ground_totals, team_seo, ground_seo, team_intro, ground_intro,
@@ -73,7 +73,7 @@ def load_illustrations(people=None):
         if path: found[player['name']]='/assets/art/players/'+path.stem+'.webp'
     return found
 ILLUSTRATIONS = {}
-HERO_CAST = ('Virat Kohli','Rohit Sharma','Smriti Mandhana','Harmanpreet Kaur','MS Dhoni','Ellyse Perry','Sachin Tendulkar','Pat Cummins')
+HERO_CAST = ('Virat Kohli','Rohit Sharma','Smriti Mandhana','Harmanpreet Kaur','MS Dhoni','Ellyse Perry','Sachin Tendulkar','Pat Cummins','Joe Root','Kane Williamson','Steve Smith')
 # Cricket host territories, used only for these unambiguous city labels.
 HOST_CITIES = {}
 for country, cities in {"India": "Mumbai|Chennai|Delhi|New Delhi|Kolkata|Bengaluru|Bangalore|Hyderabad|Ahmedabad|Pune|Nagpur|Mohali|Chandigarh|New Chandigarh|Dharamsala|Dharamshala|Ranchi|Rajkot|Indore|Lucknow|Kanpur|Visakhapatnam|Cuttack|Guwahati|Thiruvananthapuram|Raipur|Vadodara|Jaipur|Kochi|Gwalior|Jamshedpur|Margao|Faridabad|Kottayam|Vijayawada|Dehradun|Greater Noida|Mulapadu|Navi Mumbai|Surat|Tirunelveli|Bhubaneswar|Noida", "Australia": "Carrara|Kerrydale|Bowral|Bradman Oval|Sydney|Melbourne|Adelaide|Perth|Brisbane|Hobart|Canberra|Cairns|Darwin|Geelong|Townsville|Mackay|Coffs Harbour|Launceston|Alice Springs", "England": "County Ground, Hove|London|Manchester|Birmingham|Nottingham|Leeds|Southampton|Chester-le-Street|Cardiff|Bristol|Taunton|Worcester|Leicester|Derby|Hove|Chelmsford|Canterbury|Northampton|Scarborough|Cheltenham|Arundel|Beckenham|Loughborough|Wormsley|Durham", "New Zealand": "Auckland|Wellington|Christchurch|Hamilton|Dunedin|Napier|Mount Maunganui|Nelson|Queenstown|Whangarei|New Plymouth|Lincoln|Palmerston North|Tauranga|Invercargill|Rangiora", "South Africa": "Cape Town|Johannesburg|Durban|Centurion|Pretoria|Gqeberha|Port Elizabeth|Paarl|Bloemfontein|Potchefstroom|East London|Kimberley|Benoni|Pietermaritzburg|Stellenbosch|Oudtshoorn", "Pakistan": "Lahore|Karachi|Rawalpindi|Multan|Faisalabad|Peshawar|Gujranwala|Sheikhupura|Quetta|Sialkot|Sargodha|Abbottabad|Islamabad", "Sri Lanka": "Chilaw|Colombo|Galle|Kandy|Dambulla|Pallekele|Hambantota|Moratuwa|Khettarama|Katunayake|Kurunegala|Matara", "Bangladesh": "Rajshahi|Sheikh Kamal|Dhaka|Mirpur|Chattogram|Chittagong|Sylhet|Khulna|Fatullah|Bogra|Savar|Narayanganj", "Zimbabwe": "Harare|Bulawayo|Kwekwe|Mutare", "Afghanistan": "Kabul", "United Arab Emirates": "Dubai|Sharjah|Abu Dhabi|Ajman", "Ireland": "Louth|Dublin|Belfast|Bready|Malahide|Stormont|Clontarf|Comber|Waringstown|Londonderry", "West Indies": "Bridgetown|Kingston|Kingstown|Gros Islet|Port of Spain|Providence|Basseterre|North Sound|Roseau|Tarouba|Barbados|Guyana|Trinidad|Antigua|Jamaica|St Lucia|St Kitts|Grenada|Dominica|St Vincent|Arnos Vale|Georgetown|Castries|Coolidge|Cave Hill|St George's", "Namibia": "Windhoek", "Netherlands": "Amstelveen|Rotterdam|The Hague|Utrecht|Deventer|Voorburg|Schiedam", "Scotland": "Edinburgh|Aberdeen|Glasgow|Ayr|Dundee|Forfar", "Nepal": "Kirtipur|Kathmandu", "Oman": "Al Amerat|Al Amarat|Muscat", "United States of America": "Lauderhill|New York|Dallas|Grand Prairie|Morrisville|Houston|Pearland", "Canada": "Toronto|King City|Brampton", "Malaysia": "Kuala Lumpur|Bangi|Johor", "Kenya": "Nairobi|Mombasa", "Singapore": "Singapore", "Qatar": "Doha", "Hong Kong": "Hong Kong|Mong Kok", "Thailand": "Bangkok|Chiang Mai", "Papua New Guinea": "Port Moresby", "Uganda": "Entebbe|Kampala", "Rwanda": "Kigali|Kigali City", "Botswana": "Gaborone", "Nigeria": "Lagos|Abuja", "Ghana": "Accra", "Japan": "Sano", "Spain": "Almeria|Murcia|La Manga", "Italy": "Rome|Bologna", "Germany": "Krefeld", "Finland": "Kerava|Vantaa", "Czech Republic": "Prague", "Romania": "Ilfov County", "Bulgaria": "Sofia", "Malta": "Marsa", "Cyprus": "Episkopi", "Argentina": "Buenos Aires", "Indonesia": "Bali", "Vanuatu": "Port Vila", "Bhutan": "Gelephu", "Belgium": "Waterloo|Gent", "Denmark": "Brondby", "Portugal": "Albergaria", "Austria": "Seebarn|Vienna", "Jersey": "St Saviour|St Clement", "Guernsey": "St Peter Port|Castel", "Isle of Man": "Castletown", "Mexico": "Naucalpan", "Sweden": "Stockholm|Malmo", "Estonia": "Tallinn", "Serbia": "Belgrade", "Croatia": "Zagreb", "Hungary": "Budapest", "Greece": "Corfu", "Luxembourg": "Walferdange", "Slovenia": "Ljubljana", "Gibraltar": "Gibraltar", "Cayman Islands": "George Town", "Peru": "Lima", "Chile": "Santiago", "Brazil": "Sao Paulo|Brasilia", "Costa Rica": "San Jose", "Panama": "Panama City", "Belize": "Belize City", "Tanzania": "Dar es Salaam", "Mozambique": "Maputo", "Eswatini": "Mbabane", "Lesotho": "Maseru", "Malawi": "Blantyre|Lilongwe", "Zambia": "Lusaka", "Cameroon": "Yaounde", "Sierra Leone": "Freetown", "Gambia": "Banjul", "Mali": "Bamako", "Ivory Coast": "Abidjan", "Saudi Arabia": "Riyadh|Jeddah", "Bahrain": "Manama|Riffa", "Iran": "Tehran|Chabahar", "Uzbekistan": "Tashkent", "Mongolia": "Ulaanbaatar", "South Korea": "Incheon|Seoul", "China": "Guanggong|Guangzhou|Hangzhou", "Cambodia": "Phnom Penh", "Myanmar": "Yangon", "Philippines": "Manila", "Maldives": "Male", "Fiji": "Suva|Nadi", "Samoa": "Apia", "Cook Islands": "Rarotonga", "Timor-Leste": "Dili", "Suriname": "Paramaribo"}.items():
@@ -912,11 +912,15 @@ def build_daily_blog(people,pp,careers,all_cards=None,mp=None):
 def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=None,all_cards=None,history_home=''):
     ranked=sorted(people.values(),key=lambda p:aggregate(p['career']).get('runs') or 0,reverse=True)
     latest=matches[:8]
-    faces=[]
+    faces=[];icons=[]
     for name in HERO_CAST:
         src=ILLUSTRATIONS.get(name)
         player=next((p for p in people.values() if p.get('name')==name),None)
-        if src and player:faces.append((name,src,pp[player['id']]))
+        if not (src and player):continue
+        faces.append((name,src,pp[player['id']]))
+        tot=aggregate(player['career']);role=primary_role(player['career'])
+        value,label=((tot.get('wickets') or 0),'international wickets') if role=='bowler' else ((tot.get('runs') or 0),'international runs')
+        icons.append((name,src,pp[player['id']],f'{value:,}',label,' / '.join(player.get('teams') or [])))
     def career_leader(fmt,metric,gender):
         pool=[p for p in people.values() if p.get('gender')==gender and (p['career'].get(fmt) or {}).get(metric)]
         best=max(pool,key=lambda p:p['career'][fmt][metric],default=None)
@@ -925,10 +929,37 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
     # Player URLs come from the stable route map; published slugs can differ from display names.
     quick=[(p['name'],pp[p['id']]) for name in ('Virat Kohli','Smriti Mandhana') for p in people.values() if p.get('name')==name and p['id'] in pp][:2]
     body=homepage_hero(len(people),len(matches),faces,facts,quick)
-    body+=section_jump([('match-centre','Fixtures','calendar'),('on-this-day','On this day','star'),('home-insights-title','Rivalries','versus'),('featured-scorecard','Scorecard','chart'),('leaders','Leaders','trophy'),('results','Results','stumps'),('explore','Explore','book')])
+    body+=section_jump([('match-centre','Fixtures','calendar'),('icons','Icons','bat'),('results','Results','stumps'),('formats','Formats','ball'),('records-grid','Records','trophy'),('on-this-day','On this day','star'),('home-insights-title','Rivalries','versus'),('featured-scorecard','Scorecard','chart'),('leaders','Leaders','trophy'),('explore','Explore','book')])
     broadcast_data,broadcast_fixtures=load_broadcasts(ROOT,TODAY)
     body+=match_centre(broadcast_fixtures,TODAY)
     body+=stats_band([(len(people),'Player profiles','bat'),(len(matches),'Match records','stumps'),(len(groups['teams']),'National teams','pin'),(3,'Formats covered','ball')])
+    body+=icons_rail(icons)
+    body+=result_cards(latest,mp,result)
+    format_counts={fmt:Counter(m['gender'] for m in matches if m['format']==fmt) for fmt in ('Test','ODI','T20I')}
+    format_leaders={}
+    for fmt in ('Test','ODI','T20I'):
+        format_leaders[fmt]={}
+        for gender in ('Men','Women'):
+            rows=[]
+            for metric,label in (('runs','most runs'),('wickets','most wickets')):
+                lead=career_leader(fmt,metric,gender)
+                if lead:rows.append((label,lead[2],lead[0],lead[3]))
+            format_leaders[fmt][gender]=rows
+    format_links={fmt:[('Records',f'/records/men/{fmt.lower()}/most-runs/'),('Matches',f'/matches/?format={fmt}'),('Highest scores',f'/records/men/{fmt.lower()}/highest-scores/')] for fmt in ('Test','ODI','T20I')}
+    body+=format_trio(format_counts,format_leaders,format_links)
+    heads=headline_records(matches,all_cards or {},people)
+    tiles=[]
+    for fmt in ('Test','ODI','T20I'):
+        for kind,slot in (('Highest score','score'),('Best bowling','bowling')):
+            entries=[]
+            for gender in ('Men','Women'):
+                rec=(heads.get((gender,fmt)) or {}).get(slot)
+                if not rec:continue
+                v1,v2,pid,team,opp,m=rec
+                value=f'{v1}{"*" if slot=="score" and v2 else ""}' if slot=='score' else f'{v1}/{-v2}'
+                entries.append((gender,value,people[pid]['name'],f'{team} v {opp} · {m["date"][:4]}',f'/records/{gender.lower()}/{fmt.lower()}/{"highest-scores" if slot=="score" else "best-bowling-innings"}/'))
+            tiles.append((fmt,kind,entries))
+    body+=records_grid(tiles)
     body+='<div id="on-this-day" class="arena-anchor">'+history_home+'</div>'
     official_teams=load_team_records();official_innings=load_innings_records()
     h2h_official=official_h2h(official_teams,'India','Australia')
@@ -945,8 +976,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
         leaders=sorted(ranked,key=lambda p:aggregate(p['career']).get(metric) or 0,reverse=True)[:10]
         boards.append((metric,title,[(p['name'],pp[p['id']],' / '.join(p['teams']),aggregate(p['career']).get(metric) or 0) for p in leaders]))
     body+=leaders_race(boards)
-    body+=result_cards(latest,mp,result)
-    body+=explore_bento([('/records/men/odi/most-runs/','trophy','CAREER RECORDS','Batting and bowling leaders','Qualified records across Tests, ODIs and T20Is.'),('/compare/','compare','PLAYER COMPARISON','Compare two careers','Pick a format and put two players side by side.'),('/teams/','pin','TEAM RECORDS','Results by team','Filter by format, opponent, year and venue.'),('/world-cup/','star','WORLD CUP','World Cup records','Winners, finals, scorecards and tournament records.'),('/head-to-head/','versus','HEAD-TO-HEAD','Team head-to-head','Results between full-member teams.'),('/records/best-innings/','bat','PERFORMANCES','Best innings','Highest scores and bowling figures.'),('/milestones/','ball','MILESTONES','Player milestones','Centuries, fifties and five-fors by year.'),('/venue-records/','stumps','VENUES','Venue records','Matches and highest totals by ground.'),('/where-to-watch/','tv','WATCH IN INDIA','TV & streaming guide','Channels and OTT for every upcoming series.')])
+    body+=explore_bento([('/records/','trophy','RECORDS','Every record, by format','Career, innings, team and partnership records.'),('/compare/','compare','PLAYER COMPARISON','Compare two careers','Pick a format and put two players side by side.'),('/teams/','pin','TEAM RECORDS','Results by team','Opponent, venue, toss and year splits.'),('/world-cup/','star','WORLD CUP','World Cup records','Winners, finals, scorecards and tournament records.'),('/head-to-head/','versus','HEAD-TO-HEAD','Team rivalries','Format-by-format results between the twelve teams.'),('/grounds/','pin','GROUNDS','Venue records','How every ground plays, format by format.'),('/studio/','chart','STUDIO','Build your own chart','Query the archive and export the visual.'),('/where-to-watch/','tv','WATCH IN INDIA','TV and streaming guide','Channels and OTT for every upcoming series.')])
     body+='<p class="note">Career data updated '+careers['meta']['checked_at'][:10]+'. Historical result-only matches are labeled. '+a('/methodology/','Understand coverage →')+'</p>'
     page('/','Cricket stats, player records & scorecards','Cricket Wicket: international cricket career statistics, player comparisons, match scorecards, team records and analysis.',body,'WebSite')
     page('/where-to-watch/','Live cricket telecast and streaming in India','Today and upcoming international cricket matches on Indian television and official OTT streaming platforms.',watch_page(broadcast_data,broadcast_fixtures,TODAY),'CollectionPage')

@@ -22,7 +22,8 @@
       const y = (event.clientY - box.top) / box.height - 0.5;
       hero.style.setProperty('--art-x', `${(-x * 16).toFixed(1)}px`);
       hero.style.setProperty('--art-y', `${(-y * 10).toFixed(1)}px`);
-      hero.style.setProperty('--cast-x', `${(x * 10).toFixed(1)}px`);
+      hero.style.setProperty('--fig-x', `${(x * 12).toFixed(1)}px`);
+      hero.style.setProperty('--fig-y', `${(y * 6).toFixed(1)}px`);
     });
   }
 })();

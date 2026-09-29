@@ -31,3 +31,21 @@ class StudioQueries(unittest.TestCase):
         rows=json.loads(subprocess.check_output(['node','-e',code],cwd=ROOT,text=True))
         self.assertEqual(rows,[{'label':'2021','value':18426,'sample':463},{'label':'Unknown','value':None,'sample':0}])
 if __name__=='__main__':unittest.main()
+
+
+class StudioMultiMeasure(StudioQueries):
+    def test_multiple_measures_and_primary_sort(self):
+        s=self.state(metrics='runs,avg,sr');s['metric']='avg'
+        rows=self.query(s)
+        self.assertEqual(len(rows[0]),6)
+        self.assertEqual([r[0] for r in rows],['Same Name','Same Name'])
+    def test_players_list(self):
+        s=self.state(players='a,b')
+        self.assertEqual(len(self.query(s)),2)
+        s=self.state(players="a,b' OR 1=1 --")
+        self.assertEqual(len(self.query(s)),1)
+    def test_measures_helper_and_row_normalisation(self):
+        code="const c=require('./web/studio-core.js');console.log(JSON.stringify([c.measures({dataset:'bowling',metrics:'wickets,runs,econ',metric:'econ'}),c.normalizeRow({label:2021n,m_runs:'120',value:'120',sample:3n})]));"
+        out=json.loads(subprocess.check_output(['node','-e',code],cwd=ROOT,text=True))
+        self.assertEqual(out[0],{'list':['wickets','econ'],'primary':'econ'})
+        self.assertEqual(out[1],{'label':'2021','m_runs':120,'value':120,'sample':3})
