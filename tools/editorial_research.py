@@ -61,12 +61,12 @@ def table(headings, rows, caption):
     return f'<div class="table-wrap" tabindex="0" role="region" aria-label="{esc(caption)}"><table class="score-table research-table"><caption>{esc(caption)}</caption><thead><tr>{heads}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
-def heading(title, subtitle, category='CRICKET WICKET RESEARCH'):
+def heading(title, subtitle, category='CRICKRIDA RESEARCH'):
     return f'<section class="page-head"><div class="eyebrow">{esc(category)}</div><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></section>'
 
 
 def dates(checked):
-    return f'<p class="research-byline">Cricket Wicket · Published <time datetime="{PUBLISHED}">{PUBLISHED}</time> · Data checked <time datetime="{esc(checked)}">{esc(checked)}</time></p>'
+    return f'<p class="research-byline">Crickrida · Published <time datetime="{PUBLISHED}">{PUBLISHED}</time> · Data checked <time datetime="{esc(checked)}">{esc(checked)}</time></p>'
 
 
 def actions():
@@ -81,8 +81,8 @@ def article(path, title, description, body, checked):
     content = heading(title, description) + dates(checked) + actions() + '<div class="research-article">' + body + '</div>'
     return dict(path=path, title=title, description=description, body=content, kind='Article', extra={
         'headline': title, 'datePublished': PUBLISHED, 'dateModified': PUBLISHED,
-        'author': {'@type': 'Organization', 'name': 'Cricket Wicket', 'url': 'https://cricket.rkjat.in/about/'},
-        'publisher': {'@type': 'Organization', 'name': 'Cricket Wicket', 'url': 'https://cricket.rkjat.in/'},
+        'author': {'@type': 'Organization', 'name': 'Crickrida', 'url': 'https://crickrida.com/about/'},
+        'publisher': {'@type': 'Organization', 'name': 'Crickrida', 'url': 'https://crickrida.com/'},
     })
 
 

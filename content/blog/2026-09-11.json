@@ -36,7 +36,7 @@
     {"id": "ba607b88", "name": "Virat Kohli", "runs": 14941, "fours": 1389, "sixes": 171, "boundary_runs": 6582, "boundary_share": "44.05"},
     {"id": "740742ef", "name": "Rohit Sharma", "runs": 11895, "fours": 1126, "sixes": 369, "boundary_runs": 6718, "boundary_share": "56.48"}
   ],
-  "methodology": "Boundary runs = 4 × fours + 6 × sixes. Boundary share = boundary runs ÷ total runs × 100, rounded to two decimal places. Figures are frozen for this article from Cricket Wicket’s career snapshot checked 6–7 September 2026; this is not a live tally.",
+  "methodology": "Boundary runs = 4 × fours + 6 × sixes. Boundary share = boundary runs ÷ total runs × 100, rounded to two decimal places. Figures are frozen for this article from Crickrida’s career snapshot checked 6–7 September 2026; this is not a live tally.",
   "provenance": {
     "totals": "data/careers.json",
     "totals_checked_at": "2026-09-07T07:41:03+00:00",

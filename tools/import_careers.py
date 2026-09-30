@@ -28,7 +28,7 @@ CLASSES = {1: ('Test', 'Men'), 2: ('ODI', 'Men'), 3: ('T20I', 'Men'), 8: ('Test'
 def fetch(url):
     for attempt in range(3):
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'BleedBlueRecords/1.0 (cricket.rkjat.in)', 'Accept': 'text/html,application/json'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'Crickrida/1.0 (crickrida.com)', 'Accept': 'text/html,application/json'})
             with urllib.request.urlopen(req, timeout=45) as response:
                 return response.read()
         except urllib.error.HTTPError as error:

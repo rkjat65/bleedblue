@@ -26,7 +26,7 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / '.data-cache' / 'portraits'
-USER_AGENT = 'CricketWicket/1.0 (https://cricket.rkjat.in; international cricket reference)'
+USER_AGENT = 'Crickrida/1.0 (https://crickrida.com; international cricket reference)'
 
 # Explicit article disambiguation and country prevent collisions (e.g. Rashid
 # Khan of Afghanistan versus the Pakistan player, and two Australian Smiths).

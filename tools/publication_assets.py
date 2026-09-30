@@ -51,7 +51,7 @@ def prepare_assets(out):
     brand=out/'assets/brand';brand.mkdir(parents=True,exist_ok=True)
     icon(1024).save(brand/'cricket-wicket-icon.png')
     wordmark=Image.new('RGBA',(1500,300));wordmark.paste(icon(240),(30,30))
-    d=ImageDraw.Draw(wordmark);d.text((310,65),'CRICKET WICKET',font=font(90,True),fill='#10233f');d.text((315,184),'INTERNATIONAL CRICKET, IN PERSPECTIVE',font=font(25),fill='#4e6686');wordmark.save(brand/'cricket-wicket-wordmark.png')
+    d=ImageDraw.Draw(wordmark);d.text((310,65),'CRICKRIDA',font=font(90,True),fill='#10233f');d.text((315,184),'INTERNATIONAL CRICKET, IN PERSPECTIVE',font=font(25),fill='#4e6686');wordmark.save(brand/'cricket-wicket-wordmark.png')
 
 
 def social_image(out,title,category='INTERNATIONAL CRICKET'):
@@ -62,7 +62,7 @@ def social_image(out,title,category='INTERNATIONAL CRICKET'):
     im=Image.new('RGB',(1200,630),'#081b35');d=ImageDraw.Draw(im)
     for radius,colour in ((330,'#0b2447'),(235,'#102f59'),(140,'#17427a')):
         d.ellipse((1110-radius,180-radius,1110+radius,180+radius),fill=colour)
-    im.paste(icon(66),(60,48),icon(66));d.text((145,60),'CRICKET WICKET',font=font(29,True),fill='white')
+    im.paste(icon(66),(60,48),icon(66));d.text((145,60),'CRICKRIDA',font=font(29,True),fill='white')
     d.text((64,170),category.upper(),font=font(20,True),fill='#8fbfff')
     lines=[];line='';titlefont=font(58,True)
     for word in title.split():
@@ -73,6 +73,6 @@ def social_image(out,title,category='INTERNATIONAL CRICKET'):
     for i,line in enumerate(lines[:4]):d.text((60,215+i*73),line,font=titlefont,fill='#f2f7ff')
     d.line((60,545,1140,545),fill='#2d4b70',width=2)
     d.text((64,571),'TESTS  /  ODIs  /  T20Is     •     MEN & WOMEN',font=font(18),fill='#adc5e4')
-    d.text((912,570),'cricket.rkjat.in',font=font(21,True),fill='#efb75b')
+    d.text((912,570),'crickrida.com',font=font(21,True),fill='#efb75b')
     im.save(target,optimize=True)
     return url

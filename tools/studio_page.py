@@ -57,7 +57,7 @@ def studio_markup(link):
         </details>
         <details class="st-step"><summary><span class="st-step-num">3</span>Style</summary>
           {select('design-type', 'Visual', [('auto', 'Automatic'), ('bar', 'Bars with side figures'), ('grouped', 'Grouped bars, every measure'), ('multiples', 'Small multiples'), ('column', 'Columns'), ('line', 'Line'), ('table', 'Table'), ('number', 'Headline number'), ('card', 'Match card')])}
-          <div class="st-grid2">{select('design-size', 'Canvas', [('landscape', 'Landscape 1200 × 675'), ('square', 'Square 1080 × 1080'), ('portrait', 'Portrait 1080 × 1920')])}{select('design-theme', 'Theme', [('wicket', 'Cricket Wicket dark'), ('light', 'Light'), ('navy', 'Navy'), ('paper', 'Paper')])}</div>
+          <div class="st-grid2">{select('design-size', 'Canvas', [('landscape', 'Landscape 1200 × 675'), ('square', 'Square 1080 × 1080'), ('portrait', 'Portrait 1080 × 1920')])}{select('design-theme', 'Theme', [('wicket', 'Crickrida dark'), ('light', 'Light'), ('navy', 'Navy'), ('paper', 'Paper')])}</div>
           <div class="st-grid2"><label class="st-field">Accent<input type="color" id="design-accent" value="#00e5ff"></label>{select('design-labels', 'Value labels', [('on', 'Show values'), ('off', 'Hide values')])}</div>
           <label class="st-field">Title<input id="design-title" maxlength="100" placeholder="Automatic title"></label>
           <label class="st-field">Subtitle<input id="design-subtitle" maxlength="160" placeholder="Your line under the title"></label>

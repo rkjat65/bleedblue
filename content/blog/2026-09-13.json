@@ -25,6 +25,6 @@
   ],
   "columns": [["matches","Tests"],["innings","Batting innings"],["runs","Runs"],["outs","Dismissals"],["notouts","Not-outs"],["avg","Batting average"],["hundreds","100s"],["fifties","50s (50–99)"],["highest","Highest score"]],
   "callouts": [{"value":"1,643","label":"Runs to draw level"},{"value":"1,644","label":"Runs to go ahead"},{"value":"51 / 41","label":"Test hundreds · Tendulkar / Root"}],
-  "methodology": "Figures frozen from Cricket Wicket’s official career snapshot checked 13 September 2026, including the Edgbaston Test. Batting average is runs divided by dismissals, displayed to two decimal places using the source’s truncation convention. Fifties count scores from 50 to 99; centuries are separate. An asterisk denotes not out. Caricatures are original illustrations. Career totals are independent of ball-by-ball archive coverage.",
+  "methodology": "Figures frozen from Crickrida’s official career snapshot checked 13 September 2026, including the Edgbaston Test. Batting average is runs divided by dismissals, displayed to two decimal places using the source’s truncation convention. Fifties count scores from 50 to 99; centuries are separate. An asterisk denotes not out. Caricatures are original illustrations. Career totals are independent of ball-by-ball archive coverage.",
   "provenance": {"totals":"data/careers.json","checked_at":"2026-09-13T04:00:59+00:00","format":"Test","match_id":"1496584"}
 }

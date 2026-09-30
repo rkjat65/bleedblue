@@ -240,7 +240,7 @@ def opponent_pages(p, rows, path):
         body += timeline(subset)
         recent = list(reversed(subset))[:20]
         body += '<section class="panel pr-section"><h2>Recent recorded innings</h2>'+table(['Date','Venue','Innings','Runs','Balls','Wickets','Conceded'],[[link(r['url'],r['date']),esc(r.get('venue','')),str(r.get('innings',''))]+[('-' if r.get(k) is None else str(r[k])) for k in ('runs','balls','wickets','conceded')] for r in recent],'Scorecards supporting this opposition study')+'</section>'
-        body += '<p class="note">This opposition study uses available scorecards in Cricket Wicket’s twelve-team publication scope. It is a dated archive analysis, not a claim of complete career coverage. '+link('/methodology/','Read the coverage and calculation method')+'.</p>'
+        body += '<p class="note">This opposition study uses available scorecards in Crickrida’s twelve-team publication scope. It is a dated archive analysis, not a claim of complete career coverage. '+link('/methodology/','Read the coverage and calculation method')+'.</p>'
         yield opposition_path(path,fmt,opponent), title, description, body, 'Article'
 
 

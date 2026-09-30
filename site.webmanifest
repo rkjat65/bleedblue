@@ -1,7 +1,7 @@
 {
-  "name": "Cricket Wicket \u2014 International Cricket",
-  "short_name": "Cricket Wicket",
-  "description": "International cricket scorecards, player profiles and archive statistics for men and women.",
+  "name": "Crickrida: cricket statistics",
+  "short_name": "Crickrida",
+  "description": "International careers in every format, scorecards and records, plus ball-by-ball IPL and T20 World Cup analytics.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

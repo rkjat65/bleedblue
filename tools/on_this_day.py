@@ -140,7 +140,7 @@ def render_card(event, key, out, illustrations):
     draw.rectangle((55, 55, 61, 116), fill='#00e5ff')
     draw.text((78, 52), 'ON THIS DAY', font=font(20, True), fill='#00e5ff')
     draw.text((76, 78), day_label(key).upper(), font=font(32, True), fill='#e8e8ed')
-    draw.text((855, 60), 'CRICKET WICKET', font=font(23, True), fill='#e8e8ed')
+    draw.text((855, 60), 'CRICKRIDA', font=font(23, True), fill='#e8e8ed')
     draw.text((860, 96), 'THE GAME IN NUMBERS', font=font(14), fill='#8888a0')
     if event:
         draw.text((60, 157), f"{event['year']}  /  {event['gender'].upper()}  /  {event['format']}", font=font(22), fill='#8888a0')
@@ -174,7 +174,7 @@ def render_card(event, key, out, illustrations):
         draw.text((60, 310), 'No dated match in this archive yet.', font=font(29), fill='#8888a0')
     draw.line((60, 596, 1140, 596), fill='#282836', width=2)
     draw.text((62, 616), 'INDIA & INTERNATIONAL CRICKET HISTORY', font=font(16), fill='#8888a0')
-    draw.text((922, 616), 'cricket.rkjat.in', font=font(18, True), fill='#00e5ff')
+    draw.text((922, 616), 'crickrida.com', font=font(18, True), fill='#00e5ff')
     im.save(path, optimize=True)
     return '/assets/on-this-day/' + path.name
 
@@ -231,7 +231,7 @@ def publish_history(matches, cards, people, player_routes, match_routes, page, d
         image = render_card(events[0] if events else None, key, out, illustrations)
         markup = content(key, events, image)
         label = day_label(key)
-        extra = {'image': 'https://cricket.rkjat.in' + image}
+        extra = {'image': 'https://crickrida.com' + image}
         page(day_path(key), f'On this day in cricket: {label}', f'Cricket history on {label}: India matches, player performances and international scorecards across the years.', f'<section class="otd-section" data-otd-key="{key}">{markup}</section>', 'CollectionPage', extra)
         home = content(key, events, image, 'home')
         dump(f'/data/on-this-day/{key}.json', {'key': key, 'home': home, 'page': markup, 'built_at': today.isoformat()})

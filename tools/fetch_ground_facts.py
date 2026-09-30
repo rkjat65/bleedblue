@@ -25,7 +25,7 @@ from venues import canonicalise_matches  # noqa: E402
 
 CACHE = ROOT / '.data-cache/free-backfill/ground-facts'
 OUT = ROOT / 'data/ground_facts.json'
-HEADERS = {'User-Agent': 'CricketWicket/1.0 (https://cricket.rkjat.in; rkdevanda65@gmail.com)', 'Accept': 'application/json'}
+HEADERS = {'User-Agent': 'Crickrida/1.0 (https://crickrida.com; rkdevanda65@gmail.com)', 'Accept': 'application/json'}
 WIKI = 'https://en.wikipedia.org/w/api.php'
 DATA = 'https://www.wikidata.org/w/api.php'
 STOP = {'the', 'cricket', 'stadium', 'ground', 'oval', 'international', 'sports', 'club', 'park', 'field', 'complex', 'national', 'association', 'of', 'and', 'at'}

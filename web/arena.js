@@ -315,7 +315,7 @@
   const readRecent = () => { try { return JSON.parse(localStorage.getItem(RECENT)) || []; } catch { return []; } };
   const kindOf = path => ({players: 'Player', matches: 'Match', teams: 'Team', grounds: 'Ground', series: 'Series'})[path.split('/')[1]];
   if (kindOf(location.pathname) && location.pathname.split('/').length > 3) {
-    const title = ($('main h1')?.textContent || document.title.replace(/ \| Cricket Wicket$/, '')).trim();
+    const title = ($('main h1')?.textContent || document.title.replace(/ \| Crickrida$/, '')).trim();
     const items = [{url: location.pathname, title, kind: kindOf(location.pathname)}, ...readRecent().filter(r => r.url !== location.pathname)].slice(0, 6);
     try { localStorage.setItem(RECENT, JSON.stringify(items)); } catch { /* Storage may be unavailable. */ }
   }

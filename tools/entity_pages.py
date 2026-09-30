@@ -357,7 +357,7 @@ def ground_faq(name, totals):
     return markup, schema
 
 
-def team_schema(name, url, description, base='https://cricket.rkjat.in'):
+def team_schema(name, url, description, base='https://crickrida.com'):
     return {
         '@type': 'SportsTeam',
         'name': name,
@@ -367,7 +367,7 @@ def team_schema(name, url, description, base='https://cricket.rkjat.in'):
     }
 
 
-def ground_schema(name, url, description, facts=None, base='https://cricket.rkjat.in'):
+def ground_schema(name, url, description, facts=None, base='https://crickrida.com'):
     facts = facts or {}
     schema = {
         '@type': 'StadiumOrArena',

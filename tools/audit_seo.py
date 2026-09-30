@@ -12,7 +12,7 @@ def main():
     for path in set(examples):
         text=(SITE/path.strip('/')/'index.html').read_text(encoding='utf-8')
         assert len(re.findall(r'<h1(?:\s[^>]*)?>',text))==1,path
-        assert f'href="https://cricket.rkjat.in{path}"' in text,path
+        assert f'href="https://crickrida.com{path}"' in text,path
         assert '<meta name="description"' in text,path
         assert 'index,follow,max-image-preview:large' in text,path
         assert 'name="viewport"' in text,path

@@ -1,4 +1,4 @@
-"""Build compact, browser-queryable Parquet tables for Cricket Wicket Studio."""
+"""Build compact, browser-queryable Parquet tables for Crickrida Studio."""
 from __future__ import annotations
 import hashlib, json, shutil
 from datetime import datetime, timezone
@@ -41,6 +41,6 @@ def main():
                 bowling.append({'match_id':mid,'date':m['date'],'year':int(m['date'][:4]),'format':m['format'],'gender':m['gender'],'innings_number':n,'player_id':b['id'],'player':people.get(b['id'],{}).get('name',b['id']),'team':opp,'opponent':inn['team'],'venue':m.get('venue'),'wickets':b.get('wickets'),'legal':b.get('balls'),'conceded':b.get('runs'),'maidens':b.get('maidens')})
             for pos,b in enumerate(inn.get('batting',[]),1):batting.append({'match_id':mid,'date':m['date'],'year':int(m['date'][:4]),'format':m['format'],'gender':m['gender'],'innings_number':n,'player_id':b['id'],'player':people.get(b['id'],{}).get('name',b['id']),'team':inn['team'],'opponent':opp,'venue':m.get('venue'),'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'fours':b.get('fours'),'sixes':b.get('sixes'),'out':b.get('out'),'dismissal':b.get('dismissal')})
     tables={'matches':write_table('matches',match_rows),'careers':write_table('careers',career_rows),'batting_innings':write_table('batting_innings',batting),'bowling_innings':write_table('bowling_innings',bowling)}
-    now=datetime.now(timezone.utc);manifest={'name':'Cricket Wicket Analytics Lake','version':now.strftime('%Y%m%d%H%M%S'),'generated_at':now.isoformat(),'career_checked_at':careers['meta'].get('checked_at'),'match_date_from':min(m['date'] for m in matches),'match_date_to':max(m['date'] for m in matches),'scope':'Official international careers; twelve-team match archive','license_note':'Cricsheet attribution applies to ball-derived records.','tables':tables}
+    now=datetime.now(timezone.utc);manifest={'name':'Crickrida Analytics Lake','version':now.strftime('%Y%m%d%H%M%S'),'generated_at':now.isoformat(),'career_checked_at':careers['meta'].get('checked_at'),'match_date_from':min(m['date'] for m in matches),'match_date_to':max(m['date'] for m in matches),'scope':'Official international careers; twelve-team match archive','license_note':'Cricsheet attribution applies to ball-derived records.','tables':tables}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8');print(json.dumps({k:{'rows':v['rows'],'bytes':v['bytes']} for k,v in tables.items()},indent=2))
 if __name__=='__main__':main()

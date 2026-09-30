@@ -36,11 +36,11 @@ def main():
     for index,(path,text) in enumerate(pool.map(rendered,paths)):
         if index and index % 5000 == 0: print(f'Checked {index} pages', flush=True)
         assert len(re.findall(r'<h1(?:\s[^>]*)?>', text)) == 1, path
-        assert f'rel="canonical" href="https://cricket.rkjat.in{path}"' in text, path
+        assert f'rel="canonical" href="https://crickrida.com{path}"' in text, path
         assert '<meta name="description" content="' in text, path
         assert 'noindex' not in text, path
         schema = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text).group(1))
-        assert schema['url'] == 'https://cricket.rkjat.in' + path, path
+        assert schema['url'] == 'https://crickrida.com' + path, path
         for url in re.findall(r'(?:href|src)="([^"]+)"', text):
             if url.startswith('/') and not url.startswith('//'):
                 links.add(unquote(urlsplit(unescape(url)).path))
@@ -50,8 +50,10 @@ def main():
             assert 'career-stat-grid' not in text
             assert 'international.json' not in text and 'careers.json' not in text
     print('Checking internal destinations...', flush=True)
+    # /ipl and /t20-world-cup are served by the crickrida app on the same domain, not this build.
+    app_prefixes = ('/ipl/', '/t20-world-cup/')
     for link in links:
-        if link in paths: continue
+        if link in paths or link.startswith(app_prefixes): continue
         target = SITE / link.lstrip('/')
         if not target.is_file() and not (target / 'index.html').is_file():
             errors.append(link)
@@ -59,7 +61,7 @@ def main():
     sitemap_paths = set()
     for xml in SITE.glob('sitemap-*.xml'):
         tree = ET.parse(xml)
-        sitemap_paths.update(e.text.replace('https://cricket.rkjat.in', '') for e in tree.findall('.//{*}loc'))
+        sitemap_paths.update(e.text.replace('https://crickrida.com', '') for e in tree.findall('.//{*}loc'))
     assert sitemap_paths == paths, 'Sitemap and publication disagree'
     archive,careers,history=publication_data(ROOT)
     people={p['id']:{**p,'career':{}} for p in archive['players']}

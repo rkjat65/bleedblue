@@ -501,7 +501,7 @@ def player_faq(player, urls=None, name_slug=None):
     return markup, schema
 
 
-def player_person(player, pid, path, description, portraits, illustration=None, base='https://cricket.rkjat.in'):
+def player_person(player, pid, path, description, portraits, illustration=None, base='https://crickrida.com'):
     person = {
         '@type': 'Person',
         'name': player['name'],

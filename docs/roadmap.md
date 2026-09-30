@@ -1,6 +1,21 @@
-# Cricket Wicket product roadmap
+# Crickrida product roadmap
 
-Goal: the most complete international cricket reference short of live scores. Every page is format-first (Test, ODI, T20I), pre-rendered, crawlable and honest about coverage.
+Goal: one cricket site at crickrida.com, the most complete reference short of live scores. Every page is format-first (Test, ODI, T20I, IPL, T20 World Cup), pre-rendered where people search, crawlable and honest about coverage.
+
+## One site (October 2026)
+
+crickrida.com is a single site with a single brand. Caddy on the Oracle server routes by path:
+
+- `/api`, `/app`, `/ipl`, `/t20-world-cup` go to the crickrida app container (repo IPL-Analytics). The app's pre-merge addresses 301 to their `/ipl` or `/t20-world-cup` form.
+- Everything else is this archive, still built here and published to GitHub Pages at cricket.rkjat.in, which Caddy proxies. Direct visitors to cricket.rkjat.in are sent to the same path on crickrida.com, and every canonical points at crickrida.com.
+- The Caddy config lives in IPL-Analytics `.github/workflows/domain.yml`.
+
+Merge steps:
+
+1. Done: one domain, one brand, shared navigation, redirects from both old addresses.
+2. One page per player, team and ground: add IPL and T20 World Cup tabs to the archive's profiles, built from the same Cricsheet ball-by-ball files.
+3. Rebuild the app's interactive pages (matchups, phases, studio, fantasy, quiz) on the shared Parquet lake, then redirect their `/ipl` URLs to the unified pages.
+4. Retire the second codebase: host the static build on the server itself, turn cricket.rkjat.in into a plain 301, merge the two Google Analytics properties and the two privacy pages.
 
 ## Shipped (September 2026)
 

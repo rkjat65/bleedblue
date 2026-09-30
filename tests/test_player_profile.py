@@ -142,7 +142,7 @@ class PlayerProfileTests(unittest.TestCase):
         self.assertEqual(clip_meta('Short text'), 'Short text')
         self.assertTrue(clip_meta('word ' * 80).endswith('.'))
         self.assertLessEqual(len(clip_meta('word ' * 80)), 160)
-        clipped = clip_meta('Virat Kohli has 9,230 Test runs at 46.85, 14,941 ODI runs at 58.59 and 4,188 T20I runs at 48.69. Official Test, ODI and T20I tables, career pictures and scorecard analysis on Cricket Wicket.')
+        clipped = clip_meta('Virat Kohli has 9,230 Test runs at 46.85, 14,941 ODI runs at 58.59 and 4,188 T20I runs at 48.69. Official Test, ODI and T20I tables, career pictures and scorecard analysis on Crickrida.')
         self.assertTrue(clipped.endswith('48.69.'))
         self.assertFalse(clipped.endswith(' and.'))
 

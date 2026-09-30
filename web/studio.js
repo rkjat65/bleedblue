@@ -108,7 +108,7 @@
   const scope=current.dataset==='careers'?'Official career snapshot':current.dataset==='matches'?'International match archive':'Recorded innings';
   const scopeText=[scope,current.gender,current.format||'all formats',current.from||current.to?[current.from||'start',current.to||'latest'].join(' to '):'',current.opponent?'v '+current.opponent:'',current.team?'Team '+current.team:'',current.venue?current.venue:'',current.position?'No. '+current.position:'',Number(current.minimum)>0?`min ${current.minimum} matches`:'',pages>1?`page ${page+1} of ${pages}`:''].filter(Boolean).join(' · ');
   let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title+' · '+scopeText)}"><rect width="${W}" height="${H}" fill="${bg}"/><rect width="${W}" height="6" fill="${accent}"/>`;
-  svg+=text(56,58,'CRICKET WICKET',15,accent,'start',800)+text(W-56,58,scope.toUpperCase(),12,muted,'end',700);
+  svg+=text(56,58,'CRICKRIDA',15,accent,'start',800)+text(W-56,58,scope.toUpperCase(),12,muted,'end',700);
   const photoWidth=cardPhotos.length?cardPhotos.length*172:0;let top=118;
   for(const l of wrap(title,Math.min(46,Math.floor((W-140-photoWidth)/20))).slice(0,2)){svg+=text(56,top,l,38,ink,'start',800);top+=44;}
   if(design.subtitle)for(const l of wrap(design.subtitle,Math.min(90,Math.floor((W-140-photoWidth)/10))).slice(0,2)){svg+=text(56,top-6,l,18,muted);top+=24;}
@@ -155,7 +155,7 @@
   }
   const credits=cardPhotos.filter(p=>p.credit).map(p=>p.credit);if(credits.length){svg+=text(56,H-70,'Photo: '+credits.map(c=>c.author+' / '+c.license).join('; ')+' · cropped',11,muted);svg+='<metadata>'+esc(JSON.stringify(credits))+'</metadata>';}
   let foot=H-48;for(const l of wrap(scopeText,120).slice(0,1)){svg+=text(56,foot,l,13,muted);foot+=18;}
-  svg+=text(56,H-22,'cricket.rkjat.in',14,muted,'start',700)+text(W-56,H-22,(current.dataset==='careers'?'Career check '+String(manifest.career_checked_at||'Unknown').slice(0,10):'Archive through '+manifest.match_date_to)+' · Cricsheet',12,muted,'end')+'</svg>';
+  svg+=text(56,H-22,'crickrida.com',14,muted,'start',700)+text(W-56,H-22,(current.dataset==='careers'?'Career check '+String(manifest.career_checked_at||'Unknown').slice(0,10):'Archive through '+manifest.match_date_to)+' · Cricsheet',12,muted,'end')+'</svg>';
   svgText=svg;$('#story-card').innerHTML=svg;$('#export-frame').dataset.size=design.size;
   const cols=current.template==='team'?['label','value','_venue']:Object.keys(rows[0]);const head=cols.map(k=>k==='label'?(GROUP_LABEL[current.group]||titleCase(current.group)):k==='value'?(current.template==='team'?'Result':'Sort value'):k==='sample'?'Matches':k==='_venue'?'Ground':k.startsWith('m_')?core.metrics[k.slice(2)]:titleCase(k));
   $('#studio-result-table').innerHTML=`<div class="table-wrap"><table class="score-table"><caption>${esc(scopeText)}</caption><thead><tr>${head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${data.map(r=>`<tr>${cols.map(k=>`<td>${esc(k==='label'||k==='_venue'||typeof r[k]==='string'?r[k]:k.startsWith('m_')?fmtVal(k.slice(2),r[k]):num(r[k]))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;

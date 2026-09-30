@@ -58,7 +58,7 @@ def portrait_figure(player_id, name, portraits, *, compact=False, illustration=N
             + '</a><span class="portrait-changes">' + e(p['changes']) + '</span></div></details></figcaption></figure>')
 
 
-def portrait_schema(player_id, portraits, base='https://cricket.rkjat.in'):
+def portrait_schema(player_id, portraits, base='https://crickrida.com'):
     """ImageObject usable as a Person's image; None for a fallback."""
     p = portraits.get(player_id)
     if not p:

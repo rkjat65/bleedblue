@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">How to compare two international batters</title>
-  <desc id="desc">A Cricket Wicket infographic explaining volume, efficiency and pace with a Virat Kohli and Rohit Sharma ODI example.</desc>
+  <desc id="desc">A Crickrida infographic explaining volume, efficiency and pace with a Virat Kohli and Rohit Sharma ODI example.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a34"/><stop offset="1" stop-color="#123d78"/></linearGradient>
     <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#7db4ff"/></linearGradient>
@@ -11,7 +11,7 @@
   <circle cx="1050" cy="90" r="160" fill="#3b82f6" opacity=".12"/>
   <circle cx="1100" cy="690" r="210" fill="#f4b942" opacity=".08"/>
   <g font-family="Inter,Segoe UI,Arial,sans-serif" fill="#fff">
-    <text x="72" y="72" font-size="20" font-weight="700" letter-spacing="4" fill="#9cc6ff">CRICKET WICKET · DAILY NOTE</text>
+    <text x="72" y="72" font-size="20" font-weight="700" letter-spacing="4" fill="#9cc6ff">CRICKRIDA · DAILY NOTE</text>
     <text x="72" y="138" font-size="48" font-weight="800">Compare batters in 60 seconds</text>
     <text x="72" y="178" font-size="21" fill="#c6d7ef">Read volume, efficiency and pace together — in the same format.</text>
   </g>

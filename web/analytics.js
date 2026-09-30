@@ -1,4 +1,4 @@
-/* Cricket Wicket audience measurement with a quiet, persistent opt-out. */
+/* Crickrida audience measurement with a quiet, persistent opt-out. */
 (function () {
   'use strict';
   const measurementId = 'G-DXRDX6R7YY';
@@ -28,7 +28,7 @@
   }
 
   function eraseAnalyticsCookies() {
-    const domains = ['', 'cricket.rkjat.in', 'rkjat.in'];
+    const domains = ['', 'crickrida.com', 'cricket.rkjat.in', 'rkjat.in'];
     document.cookie.split(';').forEach(function (part) {
       const name = part.trim().split('=')[0];
       if (!/^_ga(?:_|$)/.test(name)) return;
