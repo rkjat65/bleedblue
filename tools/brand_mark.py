@@ -12,7 +12,8 @@ ROOT = Path(__file__).resolve().parent.parent
 FONT_BOLD = ROOT / 'tools/fonts/SpaceGrotesk-Bold.ttf'
 FONT_MEDIUM = ROOT / 'tools/fonts/SpaceGrotesk-Medium.ttf'
 
-LIME = '#B8FF00'      # the site's lime accent, so logo and theme match exactly
+CYAN = '#00E5FF'      # the bat: the site's primary accent
+MAGENTA = '#FF2D78'   # the ball: the site's second accent, and a red cricket ball
 INK = '#E8E8ED'       # text on dark
 NIGHT = '#0A0A0F'     # page background
 PANEL = '#111118'
@@ -59,7 +60,7 @@ def mark_paths():
     return stem, bat, seams
 
 
-def svg_mark(stem='currentColor', lime=LIME, mask_id='crSeam', label='Crickrida', width=None, height=None, extra=''):
+def svg_mark(stem='currentColor', bat=CYAN, ball=MAGENTA, mask_id='crSeam', label='Crickrida', width=None, height=None, extra=''):
     """The mark alone. The seam is cut out, so it shows whatever sits behind."""
     stem_d, bat_d, seams_d = mark_paths()
     cx, cy, r = BALL
@@ -68,17 +69,17 @@ def svg_mark(stem='currentColor', lime=LIME, mask_id='crSeam', label='Crickrida'
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"{size}{aria}{extra}>'
             f'<defs><mask id="{mask_id}"><rect width="{W}" height="{H}" fill="#fff"/>'
             f'<path d="{seams_d}" stroke="#000" stroke-width="{SEAM_WIDTH}" stroke-linecap="round"/></mask></defs>'
-            f'<path d="{stem_d}" fill="{stem}"/><path d="{bat_d}" fill="{lime}"/>'
-            f'<circle cx="{cx:g}" cy="{cy:g}" r="{r:g}" fill="{lime}" mask="url(#{mask_id})"/></svg>')
+            f'<path d="{stem_d}" fill="{stem}"/><path d="{bat_d}" fill="{bat}"/>'
+            f'<circle cx="{cx:g}" cy="{cy:g}" r="{r:g}" fill="{ball}" mask="url(#{mask_id})"/></svg>')
 
 
-def svg_icon(tile=NIGHT, stem=INK, lime=LIME, radius=58, pad=44):
+def svg_icon(tile=NIGHT, stem=INK, bat=CYAN, ball=MAGENTA, radius=58, pad=44):
     """Square app icon: the mark centred on a rounded tile (256 x 256)."""
     inner = 256 - 2 * pad
     scale = inner / max(W, H)
     dx = (256 - W * scale) / 2
     dy = (256 - H * scale) / 2
-    mark = svg_mark(stem=stem, lime=lime, mask_id='crIcon', label=None)
+    mark = svg_mark(stem=stem, bat=bat, ball=ball, mask_id='crIcon', label=None)
     body = mark[mark.index('>') + 1:-len('</svg>')]
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Crickrida">'
             f'<rect width="256" height="256" rx="{radius}" fill="{tile}"/>'
@@ -93,7 +94,7 @@ def font(size, bold=True):
     return ImageFont.load_default(size=size)
 
 
-def draw_mark(im, box, stem=INK, lime=LIME, seam=None):
+def draw_mark(im, box, stem=INK, bat=CYAN, ball=MAGENTA, seam=None):
     """Draw the mark into ``box`` (x, y, w, h) of an RGBA image. ``seam`` is the
     colour behind the ball; None cuts the seam out to transparency."""
     x, y, w, h = box
@@ -102,9 +103,9 @@ def draw_mark(im, box, stem=INK, lime=LIME, seam=None):
     pt = lambda px, py: (ox + px * s, oy + py * s)
     d = ImageDraw.Draw(im)
     d.polygon([pt(*p) for p in STEM], fill=stem)
-    d.polygon([pt(*p) for p in _bat_points()], fill=lime)
+    d.polygon([pt(*p) for p in _bat_points()], fill=bat)
     cx, cy, r = BALL
-    d.ellipse([pt(cx - r, cy - r), pt(cx + r, cy + r)], fill=lime)
+    d.ellipse([pt(cx - r, cy - r), pt(cx + r, cy + r)], fill=ball)
     colour = seam if seam else (0, 0, 0, 0)
     for x0, y0, x1, y1 in _seam_segments():
         layer = Image.new('L', im.size, 0)
@@ -115,24 +116,24 @@ def draw_mark(im, box, stem=INK, lime=LIME, seam=None):
         im.paste(Image.new('RGBA', im.size, colour), (0, 0), cut)
 
 
-def icon(size, tile=NIGHT, stem=INK, lime=LIME, pad=0.17, rounded=True):
+def icon(size, tile=NIGHT, stem=INK, bat=CYAN, ball=MAGENTA, pad=0.17, rounded=True):
     """Square icon at ``size`` px, drawn at 4x and reduced for smooth edges."""
     big = size * 4
     im = Image.new('RGBA', (big, big), (0, 0, 0, 0))
     if tile:
         ImageDraw.Draw(im).rounded_rectangle((0, 0, big - 1, big - 1), radius=round(big * 0.22) if rounded else 0, fill=tile)
     inset = round(big * pad)
-    draw_mark(im, (inset, inset, big - 2 * inset, big - 2 * inset), stem=stem, lime=lime, seam=tile)
+    draw_mark(im, (inset, inset, big - 2 * inset, big - 2 * inset), stem=stem, bat=bat, ball=ball, seam=tile)
     return im.resize((size, size), Image.Resampling.LANCZOS)
 
 
-def wordmark(width, height, stem=INK, lime=LIME, text=INK, background=None, tagline=None, tagline_colour=MUTED):
+def wordmark(width, height, stem=INK, bat=CYAN, ball=MAGENTA, text=INK, background=None, tagline=None, tagline_colour=MUTED):
     """Mark plus the lowercase wordmark, left aligned and vertically centred."""
     scale = 3
     big = Image.new('RGBA', (width * scale, height * scale), background or (0, 0, 0, 0))
     mark_h = round(height * scale * (0.62 if tagline else 0.72))
     top = (height * scale - mark_h) // 2 - (round(height * scale * 0.06) if tagline else 0)
-    draw_mark(big, (0, top, round(mark_h * W / H), mark_h), stem=stem, lime=lime, seam=background)
+    draw_mark(big, (0, top, round(mark_h * W / H), mark_h), stem=stem, bat=bat, ball=ball, seam=background)
     f = font(round(mark_h * 0.78))
     d = ImageDraw.Draw(big)
     x = round(mark_h * W / H + mark_h * 0.16)
@@ -151,11 +152,11 @@ def social_card(title, category, lines_font=58):
     glow = Image.new('RGBA', (1200, 630), (0, 0, 0, 0))
     gd = ImageDraw.Draw(glow)
     for radius, alpha in ((360, 10), (250, 16), (150, 24)):
-        gd.ellipse((1120 - radius, 110 - radius, 1120 + radius, 110 + radius), fill=(184, 255, 0, alpha))
+        gd.ellipse((1120 - radius, 110 - radius, 1120 + radius, 110 + radius), fill=(0, 229, 255, alpha))
     im.alpha_composite(glow)
     im.alpha_composite(wordmark(360, 70), (60, 44))
     d = ImageDraw.Draw(im)
-    d.text((64, 170), category.upper(), font=font(20), fill=LIME)
+    d.text((64, 170), category.upper(), font=font(20), fill=CYAN)
     lines, line, tf = [], '', font(lines_font)
     for word in title.split():
         candidate = (line + ' ' + word).strip()
@@ -170,5 +171,5 @@ def social_card(title, category, lines_font=58):
         d.text((60, 212 + i * 72), text, font=tf, fill=INK)
     d.line((60, 548, 1140, 548), fill='#1E1E2A', width=2)
     d.text((64, 570), 'INTERNATIONALS  ·  IPL  ·  T20 WORLD CUP', font=font(18, bold=False), fill=MUTED)
-    d.text((1140 - d.textlength('crickrida.com', font=font(22)), 566), 'crickrida.com', font=font(22), fill=LIME)
+    d.text((1140 - d.textlength('crickrida.com', font=font(22)), 566), 'crickrida.com', font=font(22), fill=CYAN)
     return im.convert('RGB')
