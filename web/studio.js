@@ -5,7 +5,7 @@
  const esc=x=>String(x??'-').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const num=x=>x==null?'-':typeof x==='string'&&!Number.isFinite(Number(x))?x:Number(x).toLocaleString('en-GB',{maximumFractionDigits:2});
  const titleCase=x=>String(x).replaceAll('_',' ').replace(/^./,c=>c.toUpperCase());
- const lake=location.hostname==='127.0.0.1'||location.hostname==='localhost'?'/data/lake/':'https://pub-2deb6471d5df4274810ac4497fdf3ab2.r2.dev/';
+ const lake=location.hostname==='127.0.0.1'||location.hostname==='localhost'?'/data/lake/':location.hostname==='crickrida.com'?'/lake/':'https://pub-2deb6471d5df4274810ac4497fdf3ab2.r2.dev/';
  const files={careers:'careers',batting:'batting_innings',bowling:'bowling_innings',matches:'matches'};
  const ids={dataset:'st-dataset',team:'st-team',opponent:'st-opponent',venue:'st-venue',from:'st-from',to:'st-to',position:'st-position',innings_number:'st-innings',group:'st-group',minimum:'st-minimum',limit:'st-limit',match:'st-match',metric:'st-sort',type:'design-type',size:'design-size',theme:'design-theme',accent:'design-accent',title:'design-title',subtitle:'design-subtitle',labels:'design-labels'};
  const GROUP_LABEL={player:'Player',teams:'Team',team:'Team',format:'Format',gender:'Gender',opponent:'Opponent',venue:'Ground',year:'Year',position:'Batting position',innings_number:'Innings of match',winner:'Winner'};
