@@ -20,14 +20,14 @@ function boot(value, blocked = false) {
 }
 const dark = boot('"dark"');
 assert.equal(dark.root.dataset.theme, 'dark', 'Saved dark mode applies before the body exists');
-assert.equal(dark.meta.content, '#0c1210');
+assert.equal(dark.meta.content, '#0a0a0f');
 dark.mount();
 assert.equal(dark.attrs['aria-pressed'], 'true');
 assert.equal(dark.attrs['aria-label'], 'Switch to light mode');
 dark.toggle();
 assert.equal(dark.root.dataset.theme, 'light');
 assert.equal(dark.saved(), '"light"');
-assert.equal(dark.meta.content, '#17211f');
+assert.equal(dark.meta.content, '#10233f');
 assert.equal(boot(dark.saved()).root.dataset.theme, 'light');
 for (const invalid of [null, '{broken', '"unexpected"']) assert.equal(boot(invalid).root.dataset.theme, 'dark');
 const blocked = boot(null, true);
