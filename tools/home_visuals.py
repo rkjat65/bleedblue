@@ -82,12 +82,9 @@ def _hero_facts(facts):
 
 
 def homepage_hero(player_count, match_count, faces=None, facts=None, quick=None):
-    """One hero figure, the record tiles and the search. The other icons get their own rail."""
-    figure = ''
-    if faces:
-        name, src, href = faces[0][:3]
-        figure = (f'<a class="hero-figure" href="{_e(href)}" aria-label="{_e(name)} profile"><span class="hero-stage" aria-hidden="true"></span>'
-                  f'<img src="{_e(src)}" width="420" height="480" alt="{_e(name)}" fetchpriority="high" decoding="async"><span class="hero-figure-name">{_e(name)}</span></a>')
+    """Headline, search and the record tiles over the stadium art. No single player
+    fronts the site: the stumps in the artwork fill the middle column."""
+    figure = '<div class="hero-space" aria-hidden="true"></div>'
     quick_items = ''.join(f'<li><a href="{_e(url)}">{_e(label)}</a></li>' for label, url in (quick or []))
     return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
       <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" loading="eager"></picture></div>

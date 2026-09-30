@@ -13,6 +13,7 @@ crickrida.com is a single site with a single brand. Caddy on the Oracle server r
 Merge steps:
 
 1. Done: one domain, one brand, shared navigation, redirects from both old addresses.
+   Brand: the "Play K" mark (tools/brand_mark.py) in both headers, icons and share images; the analytics section uses the site header plus a sticky section bar; the homepage hero has no player cut-out.
 2. One page per player, team and ground: add IPL and T20 World Cup tabs to the archive's profiles, built from the same Cricsheet ball-by-ball files.
 3. Rebuild the app's interactive pages (matchups, phases, studio, fantasy, quiz) on the shared Parquet lake, then redirect their `/ipl` URLs to the unified pages.
 4. Retire the second codebase: host the static build on the server itself, turn cricket.rkjat.in into a plain 301, merge the two Google Analytics properties and the two privacy pages.

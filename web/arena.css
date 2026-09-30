@@ -18,8 +18,8 @@ nav#nav{gap:4px}
 nav#nav a{padding:8px 12px;border-radius:999px;transition:background .2s,color .2s}
 nav#nav a:hover{text-decoration:none;background:var(--hover,var(--soft));color:var(--ink)}
 nav#nav a[aria-current]{box-shadow:none;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
-.brand img{transition:transform .6s var(--arena-ease)}
-.brand:hover img{transform:rotate(-12deg) scale(1.08)}
+.brand .brand-mark{transition:transform .6s var(--arena-ease)}
+.brand:hover .brand-mark{transform:rotate(-6deg) scale(1.06)}
 #theme{border-radius:999px;width:40px;height:40px;padding:0}
 
 /* Scroll progress: a cricket ball rolls along the top edge. */
@@ -358,3 +358,15 @@ body>header{view-transition-name:site-header}
 .arena-js .scoreboard .sb-team{animation:sb-in .6s var(--arena-ease) both}
 .arena-js .scoreboard .sb-team+.sb-team{animation-delay:.12s}
 @keyframes sb-in{from{opacity:0;transform:translateX(-14px)}}
+
+/* Crickrida mark and wordmark */
+.brand{gap:10px}
+.brand .brand-mark{width:30px;height:30px;flex:none;color:var(--ink)}
+.brand .brand-word{font-family:var(--font-heading,inherit);font-weight:700;font-size:23px;letter-spacing:-.9px;text-transform:none;color:var(--ink)}
+.footer-brand{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-heading,inherit);letter-spacing:-.4px}
+.footer-brand .brand-mark{width:22px;height:22px;color:var(--ink)}
+.brand-preview{display:flex;align-items:center;gap:18px;color:var(--ink)}
+.brand-preview strong{font-family:var(--font-heading,inherit);font-size:44px;letter-spacing:-1.6px}
+.hero-space{min-height:1px}
+@media(max-width:1100px){.brand .brand-word{font-size:20px}.brand .brand-mark{width:27px;height:27px}.hero-space{display:none}}
+@media(max-width:360px){.brand .brand-word{font-size:17px}.brand .brand-mark{width:23px;height:23px}}
