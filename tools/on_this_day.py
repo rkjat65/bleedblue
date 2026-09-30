@@ -134,18 +134,18 @@ def render_card(event, key, out, illustrations):
     path = dest / f'{key}-{version}.png'
     if path.exists():
         return '/assets/on-this-day/' + path.name
-    im = Image.new('RGB', (1200, 675), '#0c1210')
+    im = Image.new('RGB', (1200, 675), '#0a0a0f')
     draw = ImageDraw.Draw(im)
-    draw.rounded_rectangle((20, 20, 1180, 655), radius=26, fill='#121a17', outline='#282836', width=2)
-    draw.rectangle((55, 55, 61, 116), fill='#c3f23b')
-    draw.text((78, 52), 'ON THIS DAY', font=font(20, True), fill='#c3f23b')
-    draw.text((76, 78), day_label(key).upper(), font=font(32, True), fill='#f3f4ee')
-    draw.text((855, 60), 'CRICKRIDA', font=font(23, True), fill='#f3f4ee')
-    draw.text((860, 96), 'THE GAME IN NUMBERS', font=font(14), fill='#9aa69f')
+    draw.rounded_rectangle((20, 20, 1180, 655), radius=26, fill='#111118', outline='#282836', width=2)
+    draw.rectangle((55, 55, 61, 116), fill='#00e5ff')
+    draw.text((78, 52), 'ON THIS DAY', font=font(20, True), fill='#00e5ff')
+    draw.text((76, 78), day_label(key).upper(), font=font(32, True), fill='#e8e8ed')
+    draw.text((855, 60), 'CRICKRIDA', font=font(23, True), fill='#e8e8ed')
+    draw.text((860, 96), 'THE GAME IN NUMBERS', font=font(14), fill='#8888a0')
     if event:
-        draw.text((60, 157), f"{event['year']}  /  {event['gender'].upper()}  /  {event['format']}", font=font(22), fill='#9aa69f')
-        draw.text((54, 193), event['metric'], font=font(108, True), fill='#2dd4bf' if event['kind'] == 'batting' else '#ff2d78' if event['kind'] == 'bowling' else '#c3f23b')
-        draw.text((62, 318), event['metric_label'], font=font(23), fill='#f3f4ee')
+        draw.text((60, 157), f"{event['year']}  /  {event['gender'].upper()}  /  {event['format']}", font=font(22), fill='#8888a0')
+        draw.text((54, 193), event['metric'], font=font(108, True), fill='#b8ff00' if event['kind'] == 'batting' else '#ff2d78' if event['kind'] == 'bowling' else '#00e5ff')
+        draw.text((62, 318), event['metric_label'], font=font(23), fill='#e8e8ed')
         portrait = illustrations.get(event.get('player_name'))
         source = out / portrait.lstrip('/') if portrait else None
         if source and source.is_file():
@@ -155,7 +155,7 @@ def render_card(event, key, out, illustrations):
         else:
             # A neutral cricket motif, never an invented photograph of the historical game.
             for x in (905, 975, 1045):
-                draw.rounded_rectangle((x, 280, x+16, 551), radius=8, fill='#c3f23b')
+                draw.rounded_rectangle((x, 280, x+16, 551), radius=8, fill='#00e5ff')
             draw.rounded_rectangle((892, 260, 1072, 273), radius=6, fill='#ffb800')
             draw.ellipse((1035, 164, 1090, 219), fill='#ff2d78')
         lines, line = [], ''
@@ -167,14 +167,14 @@ def render_card(event, key, out, illustrations):
                 line = candidate
         lines.append(line)
         for i, line in enumerate(lines[:3]):
-            draw.text((60, 380+i*43), line, font=font(34, True), fill='#f3f4ee')
-        draw.text((62, 553), 'TEST MATCH START ANNIVERSARY' if event['format'] == 'Test' else 'INTERNATIONAL MATCH RECORD', font=font(16), fill='#9aa69f')
+            draw.text((60, 380+i*43), line, font=font(34, True), fill='#e8e8ed')
+        draw.text((62, 553), 'TEST MATCH START ANNIVERSARY' if event['format'] == 'Test' else 'INTERNATIONAL MATCH RECORD', font=font(16), fill='#8888a0')
     else:
-        draw.text((60, 225), 'A day to explore', font=font(60, True), fill='#f3f4ee')
-        draw.text((60, 310), 'No dated match in this archive yet.', font=font(29), fill='#9aa69f')
+        draw.text((60, 225), 'A day to explore', font=font(60, True), fill='#e8e8ed')
+        draw.text((60, 310), 'No dated match in this archive yet.', font=font(29), fill='#8888a0')
     draw.line((60, 596, 1140, 596), fill='#282836', width=2)
-    draw.text((62, 616), 'INDIA & INTERNATIONAL CRICKET HISTORY', font=font(16), fill='#9aa69f')
-    draw.text((922, 616), 'crickrida.com', font=font(18, True), fill='#c3f23b')
+    draw.text((62, 616), 'INDIA & INTERNATIONAL CRICKET HISTORY', font=font(16), fill='#8888a0')
+    draw.text((922, 616), 'crickrida.com', font=font(18, True), fill='#00e5ff')
     im.save(path, optimize=True)
     return '/assets/on-this-day/' + path.name
 

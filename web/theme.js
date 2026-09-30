@@ -5,7 +5,7 @@
   function apply(mode) {
     const dark = mode !== 'light';
     root.dataset.theme = dark ? 'dark' : 'light';
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#0c1210' : '#1f3026');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#0a0a0f' : '#10233f');
     const button = document.getElementById('theme');
     if (button) {
       button.setAttribute('aria-pressed', String(dark));
