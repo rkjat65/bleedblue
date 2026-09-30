@@ -1,15 +1,15 @@
 /* Arena layer: navigation, homepage modules and motion, loaded after every other stylesheet.
    Motion is progressive: it only starts once arena.js marks <html> with .arena-js,
    and every animation is disabled under prefers-reduced-motion. */
-:root{--arena-radius:18px;--arena-ease:cubic-bezier(.2,.8,.2,1);--arena-red:#e5322d;--arena-glow:0 0 0 1px #00e5ff33,0 18px 40px -18px #00e5ff55;--lime:#b8ff00;--magenta:#ff2d78}
-html:not([data-theme=dark]){--arena-glow:0 0 0 1px #1d4ed833,0 18px 40px -20px #1d4ed866;--lime:#3f8f00;--magenta:#d4195f;--hover:#eef3ff}
+:root{--arena-radius:18px;--arena-ease:cubic-bezier(.2,.8,.2,1);--arena-red:#e5322d;--arena-glow:0 0 0 1px #c3f23b33,0 18px 40px -18px #c3f23b55;--lime:#2dd4bf;--magenta:#ff2d78}
+html:not([data-theme=dark]){--arena-glow:0 0 0 1px #3f621233,0 18px 40px -20px #3f621266;--lime:#3f8f00;--magenta:#d4195f;--hover:#eef3ff}
 html{scroll-behavior:smooth;scroll-padding-top:132px}
 body{overflow-x:hidden}
 
 /* ---------- Header: sticky glass bar ---------- */
 .topline{font-size:10px}
 body>header{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);transition:box-shadow .3s,background .3s}
-html[data-theme=dark] body>header{background:#12121acc}
+html[data-theme=dark] body>header{background:#111916cc}
 html:not([data-theme=dark]) body>header{background:#ffffffd9}
 body>header.is-scrolled{box-shadow:0 10px 30px -18px #000c}
 body>header .header{min-height:68px;transition:min-height .3s var(--arena-ease)}
@@ -29,7 +29,7 @@ nav#nav a[aria-current]{box-shadow:none;background:color-mix(in srgb,var(--accen
 .tabbar{display:none}
 @media (max-width:760px){
   .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:50;border:1px solid var(--border);border-radius:20px;padding:6px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 18px 40px -12px #000c}
-  html[data-theme=dark] .tabbar{background:#12121ae6}
+  html[data-theme=dark] .tabbar{background:#111916e6}
   html:not([data-theme=dark]) .tabbar{background:#ffffffeb}
   .tabbar a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:14px;color:var(--muted);font-size:10.5px;font-weight:700;letter-spacing:.2px}
   .tabbar a:hover{text-decoration:none}
@@ -59,17 +59,17 @@ main table tbody tr:hover{background:color-mix(in srgb,var(--accent) 7%,transpar
 
 /* ---------- Hero (layout lives in home.css) ---------- */
 .hero-quick{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.hero-quick a{display:inline-block;padding:6px 12px;border-radius:999px;border:1px solid #9fc5ff40;background:#0d2238b0;color:#d7e6ff;font-size:12px;font-weight:700;transition:background .2s,border-color .2s,transform .2s}
-.hero-quick a:hover{text-decoration:none;background:#163456;border-color:#c5dcff;transform:translateY(-2px)}
+.hero-quick a{display:inline-block;padding:6px 12px;border-radius:999px;border:1px solid #c4dacd40;background:#1b2a21b0;color:#e7efea;font-size:12px;font-weight:700;transition:background .2s,border-color .2s,transform .2s}
+.hero-quick a:hover{text-decoration:none;background:#2a4234;border-color:#dce8e1;transform:translateY(-2px)}
 .hero-find>div{position:relative}
-.hero-find kbd{position:absolute;right:104px;top:50%;transform:translateY(-50%);font:600 11px/1 var(--font-mono,monospace);color:#9fb6d6;border:1px solid #9fc5ff40;border-radius:6px;padding:4px 7px;pointer-events:none}
+.hero-find kbd{position:absolute;right:104px;top:50%;transform:translateY(-50%);font:600 11px/1 var(--font-mono,monospace);color:#b0c6b9;border:1px solid #c4dacd40;border-radius:6px;padding:4px 7px;pointer-events:none}
 .hero-facts{display:grid;gap:10px;align-content:center}
-.hero-fact{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline;padding:14px 16px;border-radius:14px;background:#06142acc;border:1px solid #9fc5ff33;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#e7f0ff;box-shadow:0 14px 30px -14px #000;animation:hero-float 6s ease-in-out infinite;animation-delay:calc(var(--i)*-2s);transition:border-color .2s,transform .2s}
-.hero-fact:hover{text-decoration:none;border-color:#b9dcff;transform:translateX(-4px)}
+.hero-fact{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline;padding:14px 16px;border-radius:14px;background:#131d17cc;border:1px solid #c4dacd33;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#e7f0ff;box-shadow:0 14px 30px -14px #000;animation:hero-float 6s ease-in-out infinite;animation-delay:calc(var(--i)*-2s);transition:border-color .2s,transform .2s}
+.hero-fact:hover{text-decoration:none;border-color:#d4e4db;transform:translateX(-4px)}
 .hero-fact strong{font:700 24px/1.1 var(--font-heading,inherit);color:#fff;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
-.hero-fact span{font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#8fc6ff}
-.hero-fact em{grid-column:1/-1;font-style:normal;font-size:12px;color:#becde0}
-.hero-fact:nth-child(1) strong{color:var(--fmt-odi,#00e5ff)}.hero-fact:nth-child(2) strong{color:var(--fmt-test,#ff5c7a)}.hero-fact:nth-child(3) strong{color:var(--fmt-odi,#00e5ff)}
+.hero-fact span{font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#bbd3c5}
+.hero-fact em{grid-column:1/-1;font-style:normal;font-size:12px;color:#c8d6ce}
+.hero-fact:nth-child(1) strong{color:var(--fmt-odi,#c3f23b)}.hero-fact:nth-child(2) strong{color:var(--fmt-test,#ff5c7a)}.hero-fact:nth-child(3) strong{color:var(--fmt-odi,#c3f23b)}
 @keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .cricket-hero.motion-paused .hero-fact{animation-play-state:paused}
 @media (max-width:700px){.hero-find kbd{display:none}}
@@ -149,7 +149,7 @@ main table tbody tr:hover{background:color-mix(in srgb,var(--accent) 7%,transpar
 .rc-card:hover{text-decoration:none;transform:translateY(-4px);box-shadow:var(--arena-glow);border-color:color-mix(in srgb,var(--accent) 45%,var(--border))}
 .rc-meta{display:flex;gap:8px;align-items:center;font-size:11px;color:var(--muted);font-weight:700}
 .rc-meta time{margin-left:auto}
-.rc-format{padding:2px 8px;border-radius:999px;color:#0a0a0f;font-weight:800;letter-spacing:.5px}
+.rc-format{padding:2px 8px;border-radius:999px;color:#0c1210;font-weight:800;letter-spacing:.5px}
 .rc-test{background:#f2efe6}.rc-odi{background:var(--accent)}.rc-t20i{background:var(--lime)}
 .rc-teams{display:grid;gap:8px}
 .rc-team{display:flex;align-items:center;gap:10px;color:var(--muted)}
@@ -290,7 +290,7 @@ main table tbody tr:hover{background:color-mix(in srgb,var(--accent) 7%,transpar
 .sec-sheet a:hover{text-decoration:none;background:var(--hover,var(--soft))}
 
 /* ---------- Section-change cue ---------- */
-.sec-cue{position:fixed;left:0;right:0;margin-inline:auto;width:max-content;top:84px;z-index:55;display:flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border));background:color-mix(in srgb,var(--panel) 94%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 44px -18px #000,0 0 0 1px #00e5ff14;pointer-events:none;opacity:0;transform:translateY(-12px) scale(.96);transition:opacity .3s,transform .45s var(--arena-ease);overflow:hidden;max-width:calc(100vw - 32px)}
+.sec-cue{position:fixed;left:0;right:0;margin-inline:auto;width:max-content;top:84px;z-index:55;display:flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border));background:color-mix(in srgb,var(--panel) 94%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 44px -18px #000,0 0 0 1px #c3f23b14;pointer-events:none;opacity:0;transform:translateY(-12px) scale(.96);transition:opacity .3s,transform .45s var(--arena-ease);overflow:hidden;max-width:calc(100vw - 32px)}
 .sec-cue.is-on{opacity:1;transform:none}
 .sec-cue.from-above.is-on{animation:cue-drop .45s var(--arena-ease)}
 @keyframes cue-drop{from{transform:translateY(-26px)}}

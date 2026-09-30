@@ -22,7 +22,7 @@
   match:{dataset:'matches',metrics:'matches',group:'format',type:'card',limit:'1'},
   custom:{dataset:'batting',metrics:'runs',group:'player',type:'auto',limit:'12'},
  };
- const PALETTES={wicket:{bg:'#0a0a0f',panel:'#14141d',ink:'#e8e8ed',muted:'#8888a0',line:'#26263a',series:['#00e5ff','#ffb800','#b8ff00','#ff5c7a','#8b5cf6','#4aa3ff','#f97316','#22c55e']},
+ const PALETTES={wicket:{bg:'#0c1210',panel:'#14141d',ink:'#f3f4ee',muted:'#9aa69f',line:'#26263a',series:['#c3f23b','#ffb800','#2dd4bf','#ff5c7a','#8b5cf6','#4aa3ff','#f97316','#22c55e']},
   light:{bg:'#ffffff',panel:'#f3f6fb',ink:'#10233f',muted:'#5b6c76',line:'#dce4f0',series:['#1d4ed8','#d97706','#15803d','#c2264d','#7c3aed','#0e7490','#ea580c','#0f766e']},
   navy:{bg:'#0b1c36',panel:'#112a4f',ink:'#f2f6fc',muted:'#b6c7df',line:'#2c4670',series:['#79b8ff','#ffd166','#9be15d','#ff7b9c','#c4b5fd','#67e8f9','#fdba74','#86efac']},
   paper:{bg:'#faf7ef',panel:'#f1ecdf',ink:'#202a35',muted:'#626973',line:'#dcd5c5',series:['#1f4e79','#b45309','#2f6f4f','#9f1239','#5b21b6','#0f5e6b','#c2410c','#166534']}};
@@ -183,7 +183,7 @@
   $('#copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(setupLink());$('#studio-status').textContent='Setup link copied.';}catch{$('#studio-status').textContent='Copy the page address to share this setup.';history.replaceState(null,'',setupLink());}};
   $('#save-design').onclick=()=>{try{localStorage.setItem('cw-studio-design',JSON.stringify(state()));$('#studio-status').textContent='Design saved on this device. Local images are not saved.';}catch{$('#studio-status').textContent='This browser could not save the design.';}};
   $('#load-design').onclick=()=>{try{const saved=JSON.parse(localStorage.getItem('cw-studio-design'));if(!saved)throw new Error();restore(saved);photos.reset();render();}catch{$('#studio-status').textContent='No valid saved design on this device.';}};
-  $('#reset-design').onclick=()=>{for(const [k,v] of Object.entries({type:'auto',size:'landscape',theme:'wicket',accent:'#00e5ff',title:'',subtitle:'',labels:'on'}))$('#'+ids[k]).value=v;photos.reset();paint();};
+  $('#reset-design').onclick=()=>{for(const [k,v] of Object.entries({type:'auto',size:'landscape',theme:'wicket',accent:'#c3f23b',title:'',subtitle:'',labels:'on'}))$('#'+ids[k]).value=v;photos.reset();paint();};
  }
  async function boot(){try{const response=await fetch(lake+'manifest.json',{cache:'no-cache'});if(!response.ok)throw new Error('Dataset catalogue is unavailable');manifest=await response.json();if(!manifest.tables?.bowling_innings)throw new Error('The updated dataset is being published. Please retry shortly');
   const duckdb=await import('https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.33.1-dev57.0/+esm'),bundle=await duckdb.selectBundle(duckdb.getJsDelivrBundles()),worker=await duckdb.createWorker(bundle.mainWorker);db=new duckdb.AsyncDuckDB(new duckdb.ConsoleLogger(),worker);await db.instantiate(bundle.mainModule,bundle.pthreadWorker);conn=await db.connect();

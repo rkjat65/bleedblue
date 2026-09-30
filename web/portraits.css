@@ -11,7 +11,7 @@
 .player-portrait--compact img,.player-portrait--compact .portrait-initials{height:116px;border-radius:14px}
 .player-portrait--compact .portrait-initials{font-size:2rem}
 .player-portrait--fallback figcaption{font-size:11px;text-align:center}
-.player-portrait--illustration img{object-fit:contain;object-position:center bottom;background:linear-gradient(145deg,#eaf2ff,#d7e7ff);padding:7px}
+.player-portrait--illustration img{object-fit:contain;object-position:center bottom;background:linear-gradient(145deg,#eaf2ff,#e7efea);padding:7px}
 .comparison-avatars{display:grid;grid-template-columns:180px 50px 180px;justify-content:center;align-items:center;gap:20px;margin:18px 0 24px;padding:12px 20px;border:1px solid var(--border);border-radius:14px;background:var(--soft)}.comparison-avatars>div{text-align:center}.comparison-avatars img{display:block;width:180px;height:160px;object-fit:contain;object-position:center bottom;margin:auto}.comparison-avatars strong{display:block;margin-top:3px;font-size:13px}.comparison-avatars>span{font-weight:800;color:var(--accent);text-align:center}
 @media(max-width:640px){.player-profile-heading{grid-template-columns:minmax(0,1fr) 104px;gap:18px;align-items:start}.player-profile-heading .player-portrait{width:104px}.player-profile-heading .player-portrait img,.player-profile-heading .portrait-initials{height:124px;border-radius:14px}.player-profile-heading .portrait-initials{font-size:2.4rem}.player-portrait figcaption{font-size:9px}}
 @media(max-width:640px){.comparison-avatars{grid-template-columns:1fr 28px 1fr;gap:7px;padding:10px}.comparison-avatars img{width:110px;height:125px}.comparison-avatars strong{font-size:11px}}

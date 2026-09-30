@@ -5,8 +5,8 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f5f7fa",
-  "theme_color": "#10233f",
+  "background_color": "#f7f5ef",
+  "theme_color": "#17211f",
   "lang": "en",
   "categories": [
     "sports"

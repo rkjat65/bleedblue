@@ -44,9 +44,9 @@ def prepare_assets(out):
     brand_mark.icon(512, pad=0.26, rounded=False).convert('RGB').save(out/'icon-maskable.png')
     brand=out/'assets/brand';brand.mkdir(parents=True,exist_ok=True)
     brand_mark.icon(1024).save(brand/'crickrida-icon.png')
-    brand_mark.wordmark(1500,300,stem='#0A0A0F',text='#0A0A0F').save(brand/'crickrida-wordmark.png')
+    brand_mark.wordmark(1500,300,stem='#0C1210',text='#0C1210').save(brand/'crickrida-wordmark.png')
     brand_mark.wordmark(1500,300).save(brand/'crickrida-wordmark-dark.png')
-    (brand/'crickrida-mark.svg').write_text(brand_mark.svg_mark(stem='#0A0A0F'),encoding='utf-8')
+    (brand/'crickrida-mark.svg').write_text(brand_mark.svg_mark(stem='#0C1210'),encoding='utf-8')
     (brand/'crickrida-mark-on-dark.svg').write_text(brand_mark.svg_mark(stem=brand_mark.INK),encoding='utf-8')
     (brand/'crickrida-icon.svg').write_text(brand_mark.svg_icon(),encoding='utf-8')
 

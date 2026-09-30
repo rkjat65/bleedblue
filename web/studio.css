@@ -53,7 +53,7 @@
 .st-note button{font-size:11px;padding:5px 9px}
 .st-table .table-wrap{margin:0}
 .st-sql{display:grid;gap:8px}
-.studio-query{margin:0;max-height:360px;overflow:auto;padding:14px 16px;border-radius:12px;background:#0c1a2e;color:#d9e8ff;font:12px/1.6 var(--font-mono,ui-monospace,Consolas,monospace);white-space:pre-wrap;word-break:break-word}
+.studio-query{margin:0;max-height:360px;overflow:auto;padding:14px 16px;border-radius:12px;background:#17231c;color:#e8f0eb;font:12px/1.6 var(--font-mono,ui-monospace,Consolas,monospace);white-space:pre-wrap;word-break:break-word}
 .card-photo-editor summary{font-size:12px}
 .card-photo-grid{display:grid;gap:10px}
 .card-photo-slot{padding:10px;border:1px solid var(--border);border-radius:10px;background:var(--soft)}

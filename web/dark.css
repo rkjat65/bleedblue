@@ -6,19 +6,19 @@
 
 html[data-theme=dark]{
   color-scheme:dark;
-  --bg:#0a0a0f;
-  --panel:#111118;
-  --soft:#16161f;
-  --hover:#1a1a24;
-  --ink:#e8e8ed;
-  --muted:#8888a0;
-  --quiet:#555566;
-  --border:#1e1e2a;
+  --bg:#0c1210;
+  --panel:#121a17;
+  --soft:#17211f;
+  --hover:#1d2925;
+  --ink:#f3f4ee;
+  --muted:#9aa69f;
+  --quiet:#7c8983;
+  --border:#22302b;
   --line:var(--border);
-  --accent:#00e5ff;
+  --accent:#c3f23b;
   --blue:var(--accent);
-  --blue-2:#00e5ff;
-  --lime:#b8ff00;
+  --blue-2:#c3f23b;
+  --lime:#2dd4bf;
   --gold:#ffb800;
   --magenta:#ff2d78;
   --purple:#8b5cf6;
@@ -33,7 +33,7 @@ html[data-theme=dark]{
 html[data-theme=dark] :is(h1,h2,h3,.brand,.stats strong,.format-card-hero strong,.question-hero strong,.innings-total,.data-callout strong){font-family:var(--font-heading);font-weight:700}
 html[data-theme=dark] :is(code,pre,.cell-number,.career-years,.innings-summary strong,.format-card dd,.research-bar-row strong,.cw-value,.pr-value){font-family:var(--font-mono);font-variant-numeric:tabular-nums}
 html[data-theme=dark] :is(.eyebrow,.stats span,.format-card dt,.gender-mark){font-family:var(--font-mono)}
-html[data-theme=dark] ::selection{background:#00e5ff33;color:var(--ink)}
+html[data-theme=dark] ::selection{background:#c3f23b33;color:var(--ink)}
 html[data-theme=dark] :focus-visible{outline-color:var(--accent)}
 
 /* The reference's elevated navigation, cyan selection and restrained controls. */
@@ -45,21 +45,21 @@ html[data-theme=dark] body>footer :is(a,.footer-links a){color:var(--accent)}
 html[data-theme=dark] body>footer .muted{color:var(--muted)}
 html[data-theme=dark] nav#nav a:hover{color:var(--ink);text-decoration:none}
 html[data-theme=dark] nav#nav a[aria-current]{color:var(--accent);box-shadow:inset 0 -2px var(--accent)}
-html[data-theme=dark] nav#nav .ipl-link{background:#ffb8001a;color:var(--gold)!important;border:1px solid #ffb80033;box-shadow:none}
-html[data-theme=dark] nav#nav .ipl-link:hover{background:#ffb80033;transform:none}
+html[data-theme=dark] nav#nav .ipl-link{background:#c3f23b14;color:var(--accent)!important;border:1px solid #c3f23b40;box-shadow:none}
+html[data-theme=dark] nav#nav .ipl-link:hover{background:#c3f23b29;transform:none}
 html[data-theme=dark] :is(button,.button,input,select,textarea){border-radius:8px}
 html[data-theme=dark] :is(input,select,textarea){background:var(--panel);border-color:var(--border);color:var(--ink);accent-color:var(--accent)}
 html[data-theme=dark] input::placeholder,html[data-theme=dark] textarea::placeholder{color:var(--muted);opacity:1}
-html[data-theme=dark] :is(button,.button):hover{background-color:var(--hover);border-color:#00e5ff33}
+html[data-theme=dark] :is(button,.button):hover{background-color:var(--hover);border-color:#c3f23b33}
 html[data-theme=dark] :is(.primary,.hero-primary){background:var(--accent);border-color:var(--accent);color:var(--bg);box-shadow:none}
-html[data-theme=dark] :is(.primary,.hero-primary):hover{background:#33eaff;border-color:#33eaff;color:var(--bg)}
-html[data-theme=dark] :is(.format-switch button.active,.segmented button.active,.template-card.active,#theme[aria-pressed=true]){background:#00e5ff1a;border-color:#00e5ff33;color:var(--accent);box-shadow:none}
+html[data-theme=dark] :is(.primary,.hero-primary):hover{background:#d4f76a;border-color:#d4f76a;color:var(--bg)}
+html[data-theme=dark] :is(.format-switch button.active,.segmented button.active,.template-card.active,#theme[aria-pressed=true]){background:#c3f23b1a;border-color:#c3f23b33;color:var(--accent);box-shadow:none}
 html[data-theme=dark] .template-card.active :is(span,small){color:var(--accent)}
-html[data-theme=dark] .studio-section-title span{background:#00e5ff1a;color:var(--accent)}
+html[data-theme=dark] .studio-section-title span{background:#c3f23b1a;color:var(--accent)}
 
 /* Cards and data tables share the same neutral surfaces, including sticky cells. */
 html[data-theme=dark] :is(.panel,.feature-card,.format-card,.leader-panel,.entity-chart,.cw-lab,.cw-figure,.pr-chart-box,.research-bars,.research-method,.research-takeaway,.comparison-identity>a,.studio-config,.studio-design,.daily-infographic){background:var(--panel);border-color:var(--border);box-shadow:none;border-radius:12px}
-html[data-theme=dark] :is(.feature-card:hover,.format-card:hover,.template-card:hover){background:var(--hover);border-color:#00e5ff33;transform:none}
+html[data-theme=dark] :is(.feature-card:hover,.format-card:hover,.template-card:hover){background:var(--hover);border-color:#c3f23b33;transform:none}
 html[data-theme=dark] :is(.hero-search,.result-banner,.trust-card,.studio-mast){background:var(--panel);color:var(--ink);border:1px solid var(--border);box-shadow:none}
 html[data-theme=dark] .result-banner{border-left:3px solid var(--lime)}
 html[data-theme=dark] .trust-card{border-left:3px solid var(--accent)}
@@ -120,22 +120,22 @@ html[data-theme=dark] .cw-form i.wicket{background:var(--gold)}
 
 /* Home imagery keeps its detail; surrounding UI uses the same dashboard theme. */
 html[data-theme=dark] .cricket-hero{background:var(--bg);color:var(--ink);border:1px solid var(--border);box-shadow:none}
-html[data-theme=dark] .cricket-hero:after{background:linear-gradient(90deg,#0a0a0f 0%,#0a0a0ff2 26%,#0a0a0fa8 42%,#0a0a0f40 58%,transparent 72%),linear-gradient(0deg,#0a0a0f 0%,#0a0a0fd8 10%,transparent 28%)}
+html[data-theme=dark] .cricket-hero:after{background:linear-gradient(90deg,#0c1210 0%,#0c1210f2 26%,#0c1210a8 42%,#0c121040 58%,transparent 72%),linear-gradient(0deg,#0c1210 0%,#0c1210d8 10%,transparent 28%)}
 html[data-theme=dark] .hero-copy h1 em{background:none;color:var(--accent)}
 html[data-theme=dark] :is(.hero-kicker,.studio-mast .eyebrow){color:var(--accent)}
 html[data-theme=dark] .hero-kicker>span{background:var(--accent);box-shadow:none}
 html[data-theme=dark] :is(.hero-description,.studio-mast p,.studio-mast-stat span,.hero-bottom>span){color:var(--muted)}
 html[data-theme=dark] :is(.hero-secondary,.hero-find label){color:var(--ink)}
-html[data-theme=dark] .hero-offer a{background:#00e5ff0d;border-color:#00e5ff33;color:var(--accent)}
-html[data-theme=dark] .hero-offer a:hover{background:#00e5ff1a}
+html[data-theme=dark] .hero-offer a{background:#c3f23b0d;border-color:#c3f23b33;color:var(--accent)}
+html[data-theme=dark] .hero-offer a:hover{background:#c3f23b1a}
 html[data-theme=dark] .hero-find>div{background:var(--panel);border:1px solid var(--border);box-shadow:none;animation:none}
-html[data-theme=dark] .hero-find>div:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px #00e5ff33}
+html[data-theme=dark] .hero-find>div:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px #c3f23b33}
 html[data-theme=dark] .hero-find input{color:var(--ink);background:transparent}
 html[data-theme=dark] .hero-find button{background:var(--accent);color:var(--bg)}
-html[data-theme=dark] .hero-find button:hover{background:#33eaff}
+html[data-theme=dark] .hero-find button:hover{background:#d4f76a}
 html[data-theme=dark] .studio-query{background:var(--bg);color:var(--ink);border:1px solid var(--border)}
 html[data-theme=dark] .export-frame{background:var(--bg)}
-html[data-theme=dark] #toast:not(:empty){background:var(--soft);color:var(--ink);border-color:#00e5ff33;box-shadow:none}
+html[data-theme=dark] #toast:not(:empty){background:var(--soft);color:var(--ink);border-color:#c3f23b33;box-shadow:none}
 @media(max-width:750px){html[data-theme=dark] .score-table :is(th,td){padding:10px 12px}}
 
 /* Shared type tokens: the same families in both themes. */
@@ -143,4 +143,4 @@ html[data-theme=dark] #toast:not(:empty){background:var(--soft);color:var(--ink)
 html:not([data-theme=dark]) body{font-family:var(--font-body)}
 html:not([data-theme=dark]) :is(h1,h2,h3,.brand,.stats strong,.format-card-hero strong,.question-hero strong,.innings-total,.pf-hero strong){font-family:var(--font-heading);font-weight:700}
 html:not([data-theme=dark]) :is(.cell-number,.pf-table td,.format-card dd,.stats strong){font-variant-numeric:tabular-nums}
-html[data-theme=dark]{--fmt-test:#ff5c7a;--fmt-odi:#00e5ff;--fmt-t20i:#b8ff00}
+html[data-theme=dark]{--fmt-test:#ff5c7a;--fmt-odi:#38bdf8;--fmt-t20i:#2dd4bf}
