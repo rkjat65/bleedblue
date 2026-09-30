@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-28T09:11:22+00:00",
+  "checked_at": "2026-09-30T17:55:34+00:00",
   "scopes": [
     {
       "class_id": 1,
@@ -29,7 +29,7 @@
       "class_id": 2,
       "discipline": "batting",
       "pages": 64,
-      "expected": 3161,
+      "expected": 3162,
       "complete": true,
       "error": null
     },
@@ -37,7 +37,7 @@
       "class_id": 2,
       "discipline": "bowling",
       "pages": 64,
-      "expected": 3161,
+      "expected": 3162,
       "complete": true,
       "error": null
     },
@@ -45,7 +45,7 @@
       "class_id": 2,
       "discipline": "fielding",
       "pages": 64,
-      "expected": 3161,
+      "expected": 3162,
       "complete": true,
       "error": null
     },
