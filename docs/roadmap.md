@@ -7,8 +7,10 @@ Goal: one cricket site at crickrida.com, the most complete reference short of li
 crickrida.com is a single site with a single brand. Caddy on the Oracle server routes by path:
 
 - `/api`, `/app`, `/ipl`, `/t20-world-cup` go to the crickrida app container (repo IPL-Analytics). The app's pre-merge addresses 301 to their `/ipl` or `/t20-world-cup` form.
-- Everything else is this archive, still built here and published to GitHub Pages at cricket.rkjat.in, which Caddy proxies. Direct visitors to cricket.rkjat.in are sent to the same path on crickrida.com, and every canonical points at crickrida.com.
-- The Caddy config lives in IPL-Analytics `.github/workflows/domain.yml`.
+- `/lake` goes to the analytics lake on Cloudflare R2.
+- Everything else is this archive, served from `/srv/crickrida/site` on the server. Each audited release is uploaded to R2 by content hash (`tools/publish_site.py`, manifest written last) and the `crickrida-site-sync` timer applies it within two minutes. Every canonical points at crickrida.com.
+- cricket.rkjat.in: GitHub Pages still receives each release there as a fallback. Once its DNS A record points at the server, Caddy answers it with a plain 301 to the same path on crickrida.com.
+- The Caddy config, the sync job and its timer live in IPL-Analytics `deploy/` and are applied by `.github/workflows/domain.yml`.
 
 Merge steps:
 
@@ -20,7 +22,8 @@ Merge steps:
 3. Done: the app's interactive tools run on the shared Parquet lake as one page each for every competition: `/matchups/`, `/phases/`, `/fantasy/`, `/quiz/`, and Studio gained the IPL. A `/tools/` hub replaces Studio in the site menu.
    `tools/build_ball_lake.py` builds the ball-by-ball tables (matchups, phases by player and team, overs, fantasy points, IPL scorecards) from Cricsheet's six international zips and the IPL zip, plus the reconstructed men's T20 World Cup matches; the weekly Cricsheet downloads are cached in CI and only new content-addressed files go to R2.
    The app's `/ipl` and `/t20-world-cup` tool addresses 301 to these pages with the matching competition filter (player names become Cricsheet ids); its stat-card studio goes to Studio with the IPL or T20I format.
-4. Retire the second codebase: host the static build on the server itself, turn cricket.rkjat.in into a plain 301, merge the two Google Analytics properties and the two privacy pages.
+4. Done: one host, one analytics property, one set of policies. The archive is served from the server, not proxied from GitHub Pages. Every page reports to Google Analytics property G-DXRDX6R7YY through `web/analytics.js`, with one opt-out; the app's G-4V7XW1QPZ8 is retired. `/privacy/`, `/terms/` and `/account-deletion/` cover the site and the mobile app, and the app's addresses 301 to them. cricket.rkjat.in becomes a plain 301 when its DNS moves.
+5. Retire the app's front end: rebuild the remaining `/ipl` and `/t20-world-cup` pages (overview, matches and scorecards, batting and bowling, players, teams, venues, seasons, head to head, insights, pulse, records, impact ratings) as static pages here, keep the API for the mobile app, then 301 the React routes and drop the container's page rendering.
 
 ## Shipped (September 2026)
 

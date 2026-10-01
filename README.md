@@ -45,9 +45,9 @@ Tables use left-aligned labels, compact numeric columns, consistent rate formatt
 
 ## Publication and refresh
 
-GitHub Actions validates records, builds the site, audits links/statistics/page weights and deploys GitHub Pages on pushes to `main`. Monday at 02:15 UTC, or a manual run with refresh enabled, stages fresh sources separately and preserves the current data on failure. Verified historical scorecards are reused; missing or stale summaries are imported. Successful refreshes commit the validated data before deployment.
+GitHub Actions validates records, builds the site, audits links/statistics/page weights, uploads the release to R2 for the crickrida.com server to mirror, and deploys the GitHub Pages fallback on pushes to `main`. Monday at 02:15 UTC, or a manual run with refresh enabled, stages fresh sources separately and preserves the current data on failure. Verified historical scorecards are reused; missing or stale summaries are imported. Successful refreshes commit the validated data before deployment.
 
-The site is a dated statistical publication, not a live-score service. Search Console verification and indexing remain external to the build. Submit https://cricket.rkjat.in/sitemap.xml in the verified property.
+The site is a dated statistical publication, not a live-score service. Search Console verification and indexing remain external to the build. Submit https://crickrida.com/sitemap.xml in the verified property.
 
 ## Data credit
 
