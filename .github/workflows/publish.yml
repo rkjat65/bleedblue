@@ -65,13 +65,15 @@ jobs:
       - name: Build crawlable publication
         run: |
           mkdir -p _site/data
-          curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/build-manifest.json -o _site/previous-manifest.json && mv _site/previous-manifest.json _site/build-manifest.json || rm -f _site/previous-manifest.json
-          curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/data/routes.json -o _site/data/previous-routes.json && mv _site/data/previous-routes.json _site/data/routes.json || rm -f _site/data/previous-routes.json
+          curl --fail --silent --show-error --location --max-time 60 https://crickrida.com/build-manifest.json -o _site/previous-manifest.json && mv _site/previous-manifest.json _site/build-manifest.json || rm -f _site/previous-manifest.json
+          curl --fail --silent --show-error --location --max-time 60 https://crickrida.com/data/routes.json -o _site/data/previous-routes.json && mv _site/data/previous-routes.json _site/data/routes.json || rm -f _site/data/previous-routes.json
           python tools/build_analytics_lake.py
           if [ -n "${R2_ACCESS_KEY_ID:-}" ]; then python tools/publish_analytics_lake.py; fi
           python tools/build_site.py
           python tools/audit_site.py
           python tools/audit_seo.py
+          # The crickrida.com server mirrors each audited release from R2.
+          if [ -n "${R2_ACCESS_KEY_ID:-}" ]; then python tools/publish_site.py; fi
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
