@@ -62,6 +62,7 @@ jobs:
             .data-cache/t20s_female_json.zip
             .data-cache/ipl_json.zip
           key: cricsheet-${{ steps.week.outputs.week }}
+      - name: Build crawlable publication
         run: |
           mkdir -p _site/data
           curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/build-manifest.json -o _site/previous-manifest.json && mv _site/previous-manifest.json _site/build-manifest.json || rm -f _site/previous-manifest.json
