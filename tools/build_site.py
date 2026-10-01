@@ -4,7 +4,7 @@ import argparse, hashlib, html, json, math, re, shutil, unicodedata
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import quote, unquote
 from cricket_scope import publication_data, FULL_MEMBERS, load_cards, complete_career_counts,career_scorecards
 from home_visuals import homepage_hero, homepage_insights, archive_visuals, icons_rail, format_trio, records_grid
 from on_this_day import publish_history, india_today
@@ -25,6 +25,7 @@ import tool_pages as tp
 import world_cup_2027 as wc27
 import league_matches as lm
 import league_seasons as ls
+import league_teams as lt
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
 from venues import canonicalise_matches
 from compare_pages import PAIRS, find_player, compare_body, comparison_cards
@@ -424,14 +425,31 @@ def build_ipl_scorecards(people,pp):
         prev=(order[i-1],ls.year_of(by_season[order[i-1]])) if i else None
         nxt=(order[i+1],ls.year_of(by_season[order[i+1]])) if i+1<len(order) else None
         title,description,body,extra=ls.build(season,by_season[season],season_links,season_names,result,pretty_date,a,(prev,nxt))
-        path=ls.season_path(season)
-        page(path,title,description,lm.section_bar('/ipl','/seasons')+body,'CollectionPage',extra)
-        PAGES.pop(path,None)
-        if '%' in path:
-            decoded=OUT/unquote(path).lstrip('/')/'index.html';decoded.parent.mkdir(parents=True,exist_ok=True)
-            shutil.copy2(OUT/path.lstrip('/')/'index.html',decoded)
+        league_page(ls.season_path(season),title,description,lm.section_bar('/ipl','/seasons')+body,'CollectionPage',extra)
     print(f'Built {len(order)} IPL season pages',flush=True)
+    teams=lt.build_all(by_season,season_links,season_names,result,pretty_date,a)
+    for team,(title,description,body,extra) in teams.items():
+        league_page(lt.team_path(team),title,description,lm.section_bar('/ipl','/teams')+body,'CollectionPage',extra)
+    print(f'Built {len(teams)} IPL team pages',flush=True)
     return count
+
+def league_page(path,title,description,body,kind,extra):
+    """A page at an app address: indexable, kept out of this sitemap (the app's IPL sitemap lists it),
+    and copied to the decoded path that Caddy looks up when the address has escaped characters."""
+    page(path,title,description,body,kind,extra)
+    PAGES.pop(path,None)
+    if '%' in path:
+        decoded=OUT/unquote(path).lstrip('/')/'index.html';decoded.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(OUT/path.lstrip('/')/'index.html',decoded)
+
+def redirect_stub(app_path,target,what='This page'):
+    """An app address that now lives elsewhere on the site: an instant redirect with a canonical link."""
+    url=BASE+target.split('#')[0]
+    doc=(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved | Crickrida</title><link rel="canonical" href="{url}">'
+         f'<meta http-equiv="refresh" content="0;url={esc(target)}"><meta name="robots" content="noindex,follow"></head>'
+         f'<body><p>{esc(what)} is at <a href="{esc(target)}">{esc(url)}</a>.</p></body></html>')
+    for path in {app_path,unquote(app_path)}:
+        out=OUT/path.lstrip('/')/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(doc,encoding='utf-8')
 
 def t20wc_match_redirects(all_cards,mp):
     """T20 World Cup matches already have full scorecards here; their app addresses point to them."""
@@ -439,11 +457,7 @@ def t20wc_match_redirects(all_cards,mp):
     for source in sorted((ROOT/'data/t20wc_matches').glob('*.json')):
         mid=source.stem
         if mid not in all_cards or mid not in mp:continue
-        target=mp[mid];url=BASE+target
-        doc=(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scorecard moved | Crickrida</title><link rel="canonical" href="{url}">'
-             f'<meta http-equiv="refresh" content="0;url={target}"><meta name="robots" content="noindex,follow"></head>'
-             f'<body><p>This T20 World Cup scorecard is at <a href="{target}">{esc(url)}</a>.</p></body></html>')
-        out=OUT/'t20-world-cup/matches'/mid/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(doc,encoding='utf-8')
+        redirect_stub('/t20-world-cup/matches/'+mid,mp[mid],'This T20 World Cup scorecard')
         count+=1
     print(f'Pointed {count:,} T20 World Cup match addresses at their scorecards',flush=True)
     return count
@@ -1090,6 +1104,9 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
             page(path,title+(' · Page '+str(number) if number>1 else ''),f'Browse {title.lower()}, page {number}. Search by name, format and gender.',body,'CollectionPage')
     ipl_venues=le.load(ROOT,'ipl-venues.json');wc_teams=le.load(ROOT,'t20wc-teams.json')
     ipl_grounds=le.ground_index(ipl_venues,set(groups['grounds']))
+    # The app's IPL venue addresses point at the ground pages' IPL tab.
+    for ground,venue in ipl_grounds.items():
+        redirect_stub('/ipl/venues/'+quote(venue['name'],safe=''),gp['grounds'][ground]+'#ipl',f'IPL at {ground}')
     for kind,g in groups.items():
         title={'teams':'International teams','grounds':'Cricket grounds','series':'International series'}[kind]
         all_years=sorted({m['date'][:4] for ms in g.values() for m in ms},reverse=True)

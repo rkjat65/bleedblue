@@ -475,3 +475,16 @@ body>header{view-transition-name:site-header}
 .season-facts span{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700}
 .season-facts strong{font-size:22px;font-variant-numeric:tabular-nums}
 .season-facts small{color:var(--muted);font-size:12px}
+/* ---------- IPL team pages ---------- */
+.team-mast{display:flex;align-items:center;gap:20px;margin:16px 0 14px;padding:22px 24px;border:1px solid color-mix(in srgb,var(--club) 45%,var(--border));border-radius:18px;background:linear-gradient(120deg,color-mix(in srgb,var(--club) 16%,var(--panel)),var(--panel) 60%)}
+.team-mast h1{margin:4px 0 6px;font-size:clamp(28px,4vw,44px);letter-spacing:-1px;line-height:1.05}
+.team-mast p{margin:0;color:var(--muted)}
+.team-mast .eyebrow{font-size:10px;letter-spacing:2px;color:var(--muted)}
+.team-titles{margin-top:6px!important;color:var(--gold)!important;font-weight:750}
+.club-mark-lg{flex:none;min-width:84px;height:84px;border-radius:20px;font-size:22px}
+.season-facts+.panel{margin-top:14px}
+.finish{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:750;border:1px solid var(--border);color:var(--muted)}
+.finish-champions{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 55%,var(--border));background:color-mix(in srgb,var(--gold) 12%,transparent)}
+.finish-runners-up{color:var(--ink);border-color:color-mix(in srgb,var(--accent) 45%,var(--border))}
+.finish-playoffs{color:var(--accent)}
+@media(max-width:600px){.team-mast{flex-direction:column;align-items:flex-start;padding:18px}.club-mark-lg{min-width:64px;height:64px;font-size:18px}}

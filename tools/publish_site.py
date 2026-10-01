@@ -1,13 +1,15 @@
 """Publish the built site to R2 so the crickrida.com server can mirror it.
 
-Files are stored by content hash under site/objects/, so a file that has
-not changed is never uploaded again. site/manifest.json maps every path to
+Files are stored gzip-compressed by content hash under site/objz/, so a
+file that has not changed is never uploaded again and a release that
+touches every page moves a fifth of the bytes. site/manifest.json maps every path to
 its hash and is written last: the server's sync job only ever sees a
 complete release. Objects that neither the new nor the previous release
 uses are removed afterwards.
 """
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import mimetypes
@@ -24,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / '_site'
 BUCKET = 'cricket-wicket-data'
 PREFIX = 'site/'
+STORE = 'objz'
 TYPES = {'.webmanifest': 'application/manifest+json', '.parquet': 'application/vnd.apache.parquet', '.xml': 'application/xml',
          '.json': 'application/json', '.js': 'text/javascript', '.woff2': 'font/woff2', '.svg': 'image/svg+xml'}
 
@@ -42,8 +45,8 @@ def digest(path):
     return h.hexdigest()
 
 
-def key(sha):
-    return f'{PREFIX}objects/{sha[:2]}/{sha}'
+def key(sha, store=STORE):
+    return f'{PREFIX}{store}/{sha[:2]}/{sha}'
 
 
 def content_type(path):
@@ -62,7 +65,7 @@ def main():
     except s3.exceptions.NoSuchKey:
         previous = {'files': {}}
     stored = set()
-    for page in s3.get_paginator('list_objects_v2').paginate(Bucket=BUCKET, Prefix=PREFIX + 'objects/'):
+    for page in s3.get_paginator('list_objects_v2').paginate(Bucket=BUCKET, Prefix=PREFIX + STORE + '/'):
         stored.update(o['Key'] for o in page.get('Contents', []))
     upload = {}
     for rel, sha in hashes.items():
@@ -72,17 +75,24 @@ def main():
     def put(item):
         sha, rel = item
         path = SITE / rel
-        s3.upload_file(str(path), BUCKET, key(sha), ExtraArgs={'ContentType': content_type(path), 'CacheControl': 'public, max-age=31536000, immutable'})
-        return path.stat().st_size
+        body = gzip.compress(path.read_bytes(), 6, mtime=0)
+        s3.put_object(Bucket=BUCKET, Key=key(sha), Body=body, ContentType='application/gzip',
+                      Metadata={'source-type': content_type(path)}, CacheControl='public, max-age=31536000, immutable')
+        return len(body)
 
     with ThreadPoolExecutor(24) as pool:
         sent = sum(pool.map(put, upload.items()))
     now = datetime.now(timezone.utc)
-    manifest = {'version': os.environ.get('GITHUB_SHA', '')[:12] + '-' + now.strftime('%Y%m%d%H%M%S'), 'generated_at': now.isoformat(timespec='seconds'),
+    manifest = {'store': STORE, 'version': os.environ.get('GITHUB_SHA', '')[:12] + '-' + now.strftime('%Y%m%d%H%M%S'), 'generated_at': now.isoformat(timespec='seconds'),
                 'files': hashes, 'bytes': sum((SITE / rel).stat().st_size for rel in hashes)}
     s3.put_object(Bucket=BUCKET, Key=PREFIX + 'manifest.json', Body=json.dumps(manifest, separators=(',', ':')).encode(),
                   ContentType='application/json', CacheControl='no-cache')
-    keep = {key(sha) for sha in hashes.values()} | {key(sha) for sha in (previous.get('files') or {}).values()}
+    keep = {key(sha) for sha in hashes.values()}
+    if previous.get('store', 'objects') == STORE:
+        keep |= {key(sha) for sha in (previous.get('files') or {}).values()}
+        # Both live releases are compressed now, so the old uncompressed copies can go.
+        for page in s3.get_paginator('list_objects_v2').paginate(Bucket=BUCKET, Prefix=PREFIX + 'objects/'):
+            stored.update(o['Key'] for o in page.get('Contents', []))
     stale = sorted(stored - keep)
     for i in range(0, len(stale), 1000):
         s3.delete_objects(Bucket=BUCKET, Delete={'Objects': [{'Key': k} for k in stale[i:i + 1000]], 'Quiet': True})
