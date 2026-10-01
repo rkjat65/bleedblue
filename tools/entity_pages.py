@@ -106,7 +106,7 @@ def _format_list(formats):
         return formats[0]
     if len(formats) == 2:
         return f'{formats[0]} and {formats[1]}'
-    return f'{formats[0]}, {formats[1]} and {formats[2]}'
+    return ', '.join(formats[:-1]) + f' and {formats[-1]}'
 
 
 def team_seo(name, totals):
@@ -135,14 +135,15 @@ def ground_place(facts):
     return ', '.join(part for part in (facts.get('city'), facts.get('country')) if part)
 
 
-def ground_seo(name, totals, facts=None):
+def ground_seo(name, totals, facts=None, ipl_matches=0):
     label = _format_list(totals['formats'])
     place = ground_place(facts)
-    title = f'{name} cricket records: {label}'
+    title = f'{name} cricket records: ' + _format_list(list(totals['formats']) + (['IPL'] if ipl_matches else []))
     capacity = f' Capacity {facts["capacity"]:,}.' if facts and facts.get('capacity') else ''
+    ipl = f' Plus {ipl_matches:,} IPL matches, ball by ball.' if ipl_matches else ''
     description = (
         f'{name}{(", " + place) if place else ""} has {totals["matches"]:,} recorded international matches'
-        f' ({label}), men and women.{capacity} Innings averages, format cards and scorecards.'
+        f' ({label}), men and women.{ipl}{capacity} Innings averages, format cards and scorecards.'
     )
     return _assert_clean(title), _assert_clean(clip_meta(description))
 

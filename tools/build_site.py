@@ -18,6 +18,8 @@ from data_health import coverage_page
 from player_profile import player_seo, career_glance, career_tables, player_faq, player_person, primary_role
 from profile_research import opposition_links
 from profile_formats import profile_body
+import league_panels as lp
+import league_entities as le
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
 from venues import canonicalise_matches
 from compare_pages import PAIRS, find_player, compare_body, comparison_cards
@@ -360,10 +362,11 @@ def stats_table(p):
 
 def options(name,values,label=None):return f'<label>{esc(label or name.title())}<select name="{name}"><option value="">All</option>'+''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)+'</select></label>'
 
-def render_profile(p,pid,path,rows,apps,*,gp_teams,portraits,pack,curated,checked_at,suffix=''):
+def render_profile(p,pid,path,rows,apps,*,gp_teams,portraits,pack,curated,checked_at,suffix='',leagues=None):
     """Title, description, body and schema for one format-first player profile."""
     career=p['career'];tot=aggregate(career)
-    title,description=player_seo(p,suffix)
+    found=lp.player_leagues(pid,leagues or {})
+    title,description=player_seo(p,suffix,lp.seo_clause(found))
     illustration=ILLUSTRATIONS.get(p['name'])
     person,og_image=player_person(p,pid,path,description,portraits,illustration=illustration,base=BASE)
     badges=''.join(team_badge(t,gp_teams.get(t)) for t in p['teams'] if t in gp_teams)
@@ -375,8 +378,9 @@ def render_profile(p,pid,path,rows,apps,*,gp_teams,portraits,pack,curated,checke
     research=opposition_links(rows,path) if curated else ''
     if research:research=research.replace('<section class="panel pr-section">','<section class="panel pr-section pf-block" id="research">',1)
     recent='<section class="panel pf-block" id="recent-appearances"><h2>Latest appearances</h2>'+table(['Date','Match','Format','Result'],[[x['date'],a(x['url'],' v '.join(x['teams'])),x['format'],esc(x['result'])] for x in apps[:12]],caption='Recent available appearances')+'</section><p class="pf-links">'+ ' · '.join(a(gp_teams[t],t) for t in p['teams'] if t in gp_teams)+' · '+a('/compare/#filters=a='+path,'Compare with another player')+'</p>'
-    blocks={'tables':stats_table(p),'snapshot':snapshot_label,'glance':career_glance(p,stat_value),'faq':faq_html,'explorer':explorer,'research':research,'recent':recent}
-    body=profile_body(p,portrait=portrait,badges=badges,rows=rows,apps=apps,career=career,totals=tot,blocks=blocks,charts=cw.format_lab,stat_value=stat_value,compare_path='/compare/#filters=a='+path)
+    blocks={'tables':stats_table(p),'snapshot':snapshot_label,'glance':career_glance(p,stat_value),'faq':faq_html,'explorer':explorer,'research':research,'recent':recent,'leagues':lp.overview_block(found)}
+    tabs={'keys':[k for k,_ in found],'chips':lp.chips(found),'switch':lp.switch_items(found),'panels':''.join(lp.league_panel(p,k,r,leagues[k].get('meta') or {}) for k,r in found)} if found else None
+    body=profile_body(p,portrait=portrait,badges=badges,rows=rows,apps=apps,career=career,totals=tot,blocks=blocks,charts=cw.format_lab,stat_value=stat_value,compare_path='/compare/#filters=a='+path,extra=tabs)
     extra={'mainEntity':person,'breadcrumb_name':p['name']}
     if og_image:extra['image']=og_image
     if faq_schema:extra['faq']=faq_schema
@@ -484,6 +488,7 @@ def main():
         page(mp[m['id']],match_labels[m['id']]+' result',f'{result(m)}. Historical {m["format"]} result at {m["venue"]}.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket'})
     player_q=prepare_player_questions(people,pp,featured_names=set(ILLUSTRATIONS)|set(HERO_CAST),extra_ids=research_ids)
     print('Building career profiles...',flush=True)
+    leagues=lp.load_leagues(ROOT)
     for pid,p in people.items():
         career=p['career'];path=pp[pid];rows=sorted(innings[pid],key=lambda r:(r['date'],r['match'],r.get('innings') or 0));apps=appearances[pid]
         summary={'id':pid,'name':p['name'],'teams':p['teams'],'gender':p['gender'],'career':career,'url':path}
@@ -492,7 +497,7 @@ def main():
         suffix=' · '+pid if names[slug(p['name'])]>1 else ''
         pack=player_q.get(pid)
         checked_at=careers['meta']['checked_at'][:10]
-        title,description,body,extra=render_profile(p,pid,path,rows,apps,gp_teams=gp['teams'],portraits=portraits,pack=pack,curated=pid in research_ids,checked_at=checked_at,suffix=suffix)
+        title,description,body,extra=render_profile(p,pid,path,rows,apps,gp_teams=gp['teams'],portraits=portraits,pack=pack,curated=pid in research_ids,checked_at=checked_at,suffix=suffix,leagues=leagues)
         page(path,title,description,body,'ProfilePage',extra)
     print('Building comparison pages...',flush=True)
     COMPARE_CARDS.clear()
@@ -1010,6 +1015,8 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
             else:body+=match_table(items[i:i+size],mp,size)
             body+='</div><nav class="pagination" aria-label="Directory pages">'+(a(f'/{kind}/' if number==2 else f'/{kind}/page/{number-1}/','← Previous') if number>1 else '')+f'<span>Page {number} / {math.ceil(len(items)/size)}</span>'+(a(f'/{kind}/page/{number+1}/','Next →') if i+size<len(items) else '')+'</nav>'
             page(path,title+(' · Page '+str(number) if number>1 else ''),f'Browse {title.lower()}, page {number}. Search by name, format and gender.',body,'CollectionPage')
+    ipl_venues=le.load(ROOT,'ipl-venues.json');wc_teams=le.load(ROOT,'t20wc-teams.json')
+    ipl_grounds=le.ground_index(ipl_venues,set(groups['grounds']))
     for kind,g in groups.items():
         title={'teams':'International teams','grounds':'Cricket grounds','series':'International series'}[kind]
         all_years=sorted({m['date'][:4] for ms in g.values() for m in ms},reverse=True)
@@ -1021,7 +1028,12 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
             extra={'breadcrumb_name':name}
             counts=Counter(m['format'] for m in ms)
             formats=[f for f in ('Test','ODI','T20I') if counts.get(f)]
-            switch=entity_switch(formats,counts)
+            league_tab=None
+            if kind=='grounds' and name in ipl_grounds:
+                venue=ipl_grounds[name];league_tab=('ipl','IPL',venue['matches'],le.ground_panel(name,venue,ipl_venues.get('meta') or {},pp))
+            elif kind=='teams' and name in (wc_teams.get('teams') or {}) and any(m['gender']=='Men' and m['format']=='T20I' for m in ms):
+                team=wc_teams['teams'][name];league_tab=('t20wc','T20 World Cup',team['matches'],le.team_panel(name,team,wc_teams.get('meta') or {},pp))
+            switch=entity_switch(formats,counts,{'keys':[league_tab[0]],'switch':le.switch_item(*league_tab[:3])} if league_tab else None)
             from urllib.parse import urlencode
             query={'team':name} if kind=='teams' else {'q':name}
             tail='<section class="panel pf-block" id="recent-matches"><h2>Recent recorded matches</h2>'+entity_filter_form(kind,name,ms)+'<div id="entity-results" aria-live="polite">'+match_table(ms,mp,50)+'</div></section><p class="pf-links">'+a('/matches/?'+urlencode(query),'Search all matching matches →')+' · '+a('/questions/','Cricket questions')+'</p>'
@@ -1041,16 +1053,18 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
                 faq_html,faq_schema=team_faq(name,totals,gp[kind][name])
                 body+=faq_html+tail+'</section>'
                 for fmt in formats:body+=team_format_panel(name,fmt,[m for m in ms if m['format']==fmt],all_cards or {},people,pp,mp,h2h_path)
+                if league_tab:body+=league_tab[3]
                 extra.update({'mainEntity':team_schema(name,gp[kind][name],description),'faq':faq_schema})
             elif kind=='grounds':
                 totals=ground_totals(ms);facts=GROUND_FACTS.get(name,{})
-                title1,description=ground_seo(name,totals,facts)
+                title1,description=ground_seo(name,totals,facts,ipl_grounds[name]['matches'] if name in ipl_grounds else 0)
                 body=ground_masthead(name,totals,facts,actions())+switch+overview_open
                 body+=ground_glance(name,totals)+entity_visuals(kind,name,ms)
                 body+='<section class="panel pf-block" id="career-records"><h2>Recorded matches by format</h2>'+table(['Format','Men','Women'],[[fmt,str(sum(m['format']==fmt and m['gender']=='Men' for m in ms)),str(sum(m['format']==fmt and m['gender']=='Women' for m in ms))] for fmt in ['Test','ODI','T20I']],caption=name+' matches by format and gender')+'</section>'
                 faq_html,faq_schema=ground_faq(name,totals)
                 body+=faq_html+tail+'</section>'
                 for fmt in formats:body+=ground_format_panel(name,fmt,[m for m in ms if m['format']==fmt],all_cards or {},people,pp,mp,gp['teams'])
+                if league_tab:body+=league_tab[3]
                 extra.update({'mainEntity':ground_schema(name,gp[kind][name],description,facts),'faq':faq_schema})
             else:
                 title1=name+' match records'

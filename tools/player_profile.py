@@ -55,7 +55,7 @@ def format_list(formats):
         return formats[0]
     if len(formats) == 2:
         return f'{formats[0]} and {formats[1]}'
-    return f'{formats[0]}, {formats[1]} and {formats[2]}'
+    return ', '.join(formats[:-1]) + f' and {formats[-1]}'
 
 
 def plain(stats, key):
@@ -119,17 +119,22 @@ def _assert_clean(text):
     return text
 
 
-def player_seo(player, suffix=''):
-    """Unique title and description from official career figures only."""
+def player_seo(player, suffix='', league_clause=''):
+    """Unique title and description from official career figures only.
+
+    `league_clause` (for example '9,336 IPL runs') adds the IPL to the title and description.
+    """
     name = player['name']
     career = player.get('career') or {}
     formats = formats_present(career)
     gender = player.get('gender') or ''
-    label = format_list(formats)
+    label = format_list(formats + (['IPL'] if league_clause else []))
     women = "women's " if gender == 'Women' else ''
     title = f'{name}{suffix} stats: {women}{label} career records'
     clauses = [format_clause(fmt, career[fmt]) for fmt in formats]
     clauses = [c for c in clauses if c]
+    if league_clause:
+        clauses.append(league_clause)
     if clauses:
         joined = clauses[0] if len(clauses) == 1 else ', '.join(clauses[:-1]) + ' and ' + clauses[-1]
         scope = " in women's internationals" if gender == 'Women' else ''

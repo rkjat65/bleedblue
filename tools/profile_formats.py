@@ -440,29 +440,34 @@ def format_panel(player, fmt, stats, rows, apps, charts, stat_value):
     return body
 
 
-def format_switch(formats, career):
+def format_switch(formats, career, extra=None):
+    extra = extra or {}
     items = ['<a href="#overview" data-fmt="overview" class="is-active" aria-current="true">Overview</a>']
     for fmt in formats:
         matches = (career.get(fmt) or {}).get('matches')
         count = f'<small>{matches:,}</small>' if matches else ''
         items.append(f'<a href="#{KEYS[fmt]}" data-fmt="{KEYS[fmt]}" class="fmt-{KEYS[fmt]}">{esc(fmt)}{count}</a>')
+    if extra.get('switch'):
+        items.append(extra['switch'])
+    keys = ['overview', 'test', 'odi', 't20i'] + list(extra.get('keys') or [])
     script = ("<script>(function(){var h=(location.hash||'').slice(1).toLowerCase(),d=document.documentElement;d.classList.add('fmt-js');"
-              "var ok={overview:1,test:1,odi:1,t20i:1};if(!ok[h])h='overview';d.dataset.fmt=h;var s=document.currentScript.parentNode;"
+              "var ok={" + ','.join(f'{k}:1' for k in keys) + "};if(!ok[h])h='overview';d.dataset.fmt=h;var s=document.currentScript.parentNode;"
               "s.querySelectorAll('[data-fmt]').forEach(function(a){var on=a.dataset.fmt===h;a.classList.toggle('is-active',on);on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});"
               "var st=document.createElement('style');st.id='fmt-boot';st.textContent='.fmt-js .fmt-panel:not(#'+h+'){display:none}';document.head.appendChild(st);})();</script>")
     return f'<nav class="fmt-switch" data-fmt-switch aria-label="Choose a format">{"".join(items)}{script}</nav>'
 
 
-def format_chips(formats, career):
+def format_chips(formats, career, extra_chips=''):
     chips = ''
     for fmt in formats:
         s = career.get(fmt) or {}
         detail = f"{s['matches']:,} matches" if s.get('matches') else 'scorecards only'
         chips += f'<a class="pf-chip fmt-{KEYS[fmt]}" href="#{KEYS[fmt]}" data-fmt-link="{KEYS[fmt]}"><i></i><b>{esc(fmt)}</b><span>{detail}</span></a>'
+    chips += extra_chips
     return f'<div class="pf-chips">{chips}</div>' if chips else ''
 
 
-def masthead(player, portrait, badges, role, formats, career, totals, compare_path):
+def masthead(player, portrait, badges, role, formats, career, totals, compare_path, extra_chips=''):
     years = ' to '.join(part for part in (player.get('first'), player.get('last')) if part)
     parts = [role, years]
     if totals.get('matches'):
@@ -472,7 +477,7 @@ def masthead(player, portrait, badges, role, formats, career, totals, compare_pa
     actions = (f'<div class="actions pf-actions"><a class="button primary" href="{esc(compare_path)}">Compare</a>'
                '<button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>')
     return (f'<header class="pf-mast">{portrait}<div class="pf-id"><p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(player["name"])}</h1>'
-            f'<p class="pf-sub">{esc(sub)}</p><div class="pf-teams">{badges}</div>{format_chips(formats, career)}{actions}</div></header>')
+            f'<p class="pf-sub">{esc(sub)}</p><div class="pf-teams">{badges}</div>{format_chips(formats, career, extra_chips)}{actions}</div></header>')
 
 
 def overview_hero(totals, career, stat_value):
@@ -526,6 +531,7 @@ def overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_va
     else:
         body += '<p class="pf-flag">This archive identity has no matched career record. Do not treat its archive totals as a complete career.</p>'
     body += '</section>'
+    body += blocks.get('leagues', '')
     if blocks['glance']:
         body += blocks['glance']
     strip = share_strip(career, formats) if career else ''
@@ -541,16 +547,21 @@ def overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_va
     return body
 
 
-def profile_body(player, *, portrait, badges, rows, apps, career, totals, blocks, charts, stat_value, compare_path):
-    """Assemble the whole profile: masthead, format switch, overview and one panel per format."""
+def profile_body(player, *, portrait, badges, rows, apps, career, totals, blocks, charts, stat_value, compare_path, extra=None):
+    """Assemble the whole profile: masthead, format switch, overview and one panel per format.
+
+    `extra` adds competition tabs after the formats: keys, chips, switch items and panels.
+    """
+    extra = extra or {}
     rows_by_fmt = defaultdict(list)
     for r in rows:
         rows_by_fmt[r['format']].append(r)
     formats = [fmt for fmt in FORMATS if fmt in career or rows_by_fmt.get(fmt)]
     role = role_label(career, rows)
-    body = masthead(player, portrait, badges, role, formats, career, totals, compare_path)
-    body += format_switch(formats, career)
+    body = masthead(player, portrait, badges, role, formats, career, totals, compare_path, extra.get('chips', ''))
+    body += format_switch(formats, career, extra)
     body += overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_value)
     for fmt in formats:
         body += format_panel(player, fmt, career.get(fmt), rows_by_fmt.get(fmt, []), apps, charts, stat_value)
+    body += extra.get('panels', '')
     return body

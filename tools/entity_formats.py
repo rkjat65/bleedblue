@@ -474,9 +474,9 @@ def series_format_panel(name, fmt, matches, cards, people, pp, mp):
     return body
 
 
-def entity_switch(formats, counts):
+def entity_switch(formats, counts, extra=None):
     from profile_formats import format_switch
-    return format_switch(formats, {fmt: {'matches': counts.get(fmt)} for fmt in formats})
+    return format_switch(formats, {fmt: {'matches': counts.get(fmt)} for fmt in formats}, extra)
 
 
 # ------------------------------------------------------------- head-to-head

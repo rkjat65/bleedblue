@@ -14,7 +14,9 @@ Merge steps:
 
 1. Done: one domain, one brand, shared navigation, redirects from both old addresses.
    Brand: the "Play K" mark (tools/brand_mark.py) in both headers, icons and share images; the analytics section uses the site header plus a sticky section bar; the homepage hero has no player cut-out.
-2. One page per player, team and ground: add IPL and T20 World Cup tabs to the archive's profiles, built from the same Cricsheet ball-by-ball files.
+2. Done: one page per player, team and ground. Player profiles carry IPL and T20 World Cup tabs, IPL grounds an IPL tab, national teams a T20 World Cup tab.
+   The app exports them from its ball-by-ball databases (`/api/export/careers`, `/venues`, `/teams`, keyed by Cricsheet id); `tools/fetch_league_careers.py` snapshots them into `data/leagues/` during the weekly refresh and keeps the last good copy if the app is down.
+   Matches played come from stored line-ups, so players who only fielded are counted. IPL grounds map to archive grounds through `tools/venues.py`.
 3. Rebuild the app's interactive pages (matchups, phases, studio, fantasy, quiz) on the shared Parquet lake, then redirect their `/ipl` URLs to the unified pages.
 4. Retire the second codebase: host the static build on the server itself, turn cricket.rkjat.in into a plain 301, merge the two Google Analytics properties and the two privacy pages.
 

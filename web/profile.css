@@ -249,3 +249,13 @@ html[data-theme=dark]{--cmp-1:#ffb800;--cmp-2:#b8ff00}
 .gr-fact strong{font:700 15px/1.25 var(--font-heading,inherit);color:var(--ink)}
 .gr-links{margin:0 0 12px}
 .gr-links a{color:var(--accent)}
+/* IPL and T20 World Cup tabs: gold and violet beside the format colours */
+:root{--fmt-ipl:#b45309;--fmt-t20wc:#6d28d9}
+html[data-theme=dark]{--fmt-ipl:#ffb800;--fmt-t20wc:#a78bfa}
+.fmt-ipl{--fmt:var(--fmt-ipl)}.fmt-t20wc{--fmt:var(--fmt-t20wc)}
+.lg-teams{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.lg-team{padding:6px 12px;border:1px solid var(--border);border-radius:999px;background:var(--soft);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.lg-team b{color:var(--ink);font-weight:750}
+.lg-deep p{margin:0 0 10px}
+.lg-deep .button{display:inline-flex;align-items:center;padding:8px 16px;font-size:12px;margin:0 6px 6px 0}
+.lg-deep .button:hover{text-decoration:none}

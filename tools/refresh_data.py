@@ -50,6 +50,8 @@ def main():
         for script,args in [('backfill_free_data.py',['careers','--workers','3']),('backfill_free_data.py',['bowling','--workers','3']),('backfill_free_data.py',['scorecards','--workers','3']),('reconcile_careers.py',[]),('backfill_grounds.py',[])]:
             subprocess.run([sys.executable,str(stage/'tools'/script),*args],cwd=stage,check=True)
         subprocess.run([sys.executable, str(stage/'tools/build_t20wc_dashboard.py')], cwd=stage, check=True)
+        # IPL and T20 World Cup careers from the analytics app; keeps the last snapshot if the app is unreachable.
+        subprocess.run([sys.executable, str(stage/'tools/fetch_league_careers.py')], cwd=stage, check=True)
         after = counts(stage)
         for key, value in before.items():
             if after[key] < value * .99:
