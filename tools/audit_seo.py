@@ -42,7 +42,7 @@ def main():
             assert 'career-glance' in text or 'venue-conditions' in text,path
         if path.startswith('/world-cup/') and path!='/world-cup/':
             assert 'Official timeline' in text or 'Most titles' in text,path
-        if path=='/datasets/':assert schema['@type']=='Dataset' and len(schema['distribution'])==4
+        if path=='/datasets/':assert schema['@type']=='Dataset' and len(schema['distribution'])>=4
     report={'passed':True,'representative_pages_checked':len(set(examples)),'sitemap_indexable_pages':len(paths),'titles_unique':len(set(p['title'] for p in paths.values()))==len(paths),'indexing_status':'Unknown: Google Search Console access required','field_core_web_vitals':'Not measured: requires real visitor data','advertising':'No ad network enabled; no audience claims'}
     (SITE/'seo-report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report,indent=2))

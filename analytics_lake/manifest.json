@@ -1,18 +1,18 @@
 {
-  "name": "Cricket Wicket Analytics Lake",
-  "version": "20260930182329",
-  "generated_at": "2026-09-30T18:23:29.170851+00:00",
+  "name": "Crickrida Analytics Lake",
+  "version": "20261001060210",
+  "generated_at": "2026-10-01T06:02:10.050235+00:00",
   "career_checked_at": "2026-09-30T17:55:33+00:00",
   "match_date_from": "1877-03-15",
   "match_date_to": "2026-09-30",
-  "scope": "Official international careers; twelve-team match archive",
+  "scope": "Official international careers; twelve-team match archive; ball-by-ball internationals, IPL and T20 World Cup",
   "license_note": "Cricsheet attribution applies to ball-derived records.",
   "tables": {
     "matches": {
-      "file": "matches-4c942f08b0d756a9.parquet",
-      "rows": 10820,
-      "bytes": 122653,
-      "sha256": "4c942f08b0d756a9131ed43b5644a6fbd9354eff90c23858e8aa4ce608d452a5",
+      "file": "matches-68430ffc8042d7bf.parquet",
+      "rows": 12063,
+      "bytes": 137480,
+      "sha256": "68430ffc8042d7bff3be5ebd4acb42c22ea4463d3677fd4ec709237025760095",
       "columns": [
         {
           "name": "match_id",
@@ -77,10 +77,10 @@
       ]
     },
     "careers": {
-      "file": "careers-b898f935ef4fe70d.parquet",
-      "rows": 9498,
-      "bytes": 386630,
-      "sha256": "b898f935ef4fe70d7933ab2e0e89c28722f3835f3ab91655e292830ce57df73f",
+      "file": "careers-8b2010279d5b7800.parquet",
+      "rows": 10307,
+      "bytes": 424779,
+      "sha256": "8b2010279d5b7800e54f28dcbb75316e0b4620ca11e8a654d7fbe1784a587bd6",
       "columns": [
         {
           "name": "player_id",
@@ -225,10 +225,10 @@
       ]
     },
     "batting_innings": {
-      "file": "batting_innings-b828c74275b94325.parquet",
-      "rows": 230349,
-      "bytes": 2011466,
-      "sha256": "b828c74275b94325060fc41c40c07324dbe331acf32032a4cf889105dc997a92",
+      "file": "batting_innings-037266df6a33b8b8.parquet",
+      "rows": 249460,
+      "bytes": 2141001,
+      "sha256": "037266df6a33b8b89cca77d9c767d75c8b0c46c83f27189e1589e52f3a789986",
       "columns": [
         {
           "name": "match_id",
@@ -305,10 +305,10 @@
       ]
     },
     "bowling_innings": {
-      "file": "bowling_innings-3ff7b18d7143c549.parquet",
-      "rows": 146670,
-      "bytes": 1029960,
-      "sha256": "3ff7b18d7143c549ee3864ea78ac2b015b2d322cf2b41795e41016a0be42510a",
+      "file": "bowling_innings-3ab7ff182863ff19.parquet",
+      "rows": 161370,
+      "bytes": 1125117,
+      "sha256": "3ab7ff182863ff19048c7df109f16adbd3ffd469dd2ece582595a91dd64f0906",
       "columns": [
         {
           "name": "match_id",
@@ -368,6 +368,418 @@
         },
         {
           "name": "maidens",
+          "type": "int64"
+        }
+      ]
+    },
+    "ball_matches": {
+      "file": "ball_matches-516e393dfd4cde15.parquet",
+      "rows": 11112,
+      "bytes": 155430,
+      "sha256": "516e393dfd4cde1589c1dfb6f8e7952db894cc272819cf8e4d69683fcfff20ef",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "competition",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "tournament",
+          "type": "string"
+        },
+        {
+          "name": "season",
+          "type": "int64"
+        },
+        {
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "name": "team_1",
+          "type": "string"
+        },
+        {
+          "name": "team_2",
+          "type": "string"
+        },
+        {
+          "name": "winner",
+          "type": "string"
+        },
+        {
+          "name": "result",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        },
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "toss_winner",
+          "type": "string"
+        },
+        {
+          "name": "toss_decision",
+          "type": "string"
+        },
+        {
+          "name": "batted_first",
+          "type": "string"
+        },
+        {
+          "name": "event",
+          "type": "string"
+        },
+        {
+          "name": "stage",
+          "type": "string"
+        }
+      ]
+    },
+    "ball_players": {
+      "file": "ball_players-121d9a1d9932f8ba.parquet",
+      "rows": 9814,
+      "bytes": 160560,
+      "sha256": "121d9a1d9932f8ba1371e6e1283e97d7c0d3c642d8a98a5accb784f5a1364f13",
+      "columns": [
+        {
+          "name": "player_id",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "teams",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "type": "string"
+        }
+      ]
+    },
+    "ball_matchups": {
+      "file": "ball_matchups-071d05872c0eb4bf.parquet",
+      "rows": 458609,
+      "bytes": 2543233,
+      "sha256": "071d05872c0eb4bfbcbedfffaa8a42ff9f03c3fc48a47fa49f674f4ae820a5ed",
+      "columns": [
+        {
+          "name": "competition",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "tournament",
+          "type": "string"
+        },
+        {
+          "name": "year",
+          "type": "int64"
+        },
+        {
+          "name": "batter_id",
+          "type": "string"
+        },
+        {
+          "name": "bowler_id",
+          "type": "string"
+        },
+        {
+          "name": "balls",
+          "type": "int32"
+        },
+        {
+          "name": "runs",
+          "type": "int32"
+        },
+        {
+          "name": "outs",
+          "type": "int32"
+        },
+        {
+          "name": "dots",
+          "type": "int32"
+        },
+        {
+          "name": "fours",
+          "type": "int32"
+        },
+        {
+          "name": "sixes",
+          "type": "int32"
+        },
+        {
+          "name": "innings",
+          "type": "int32"
+        }
+      ]
+    },
+    "ball_phase_players": {
+      "file": "ball_phase_players-8aa795550e117b57.parquet",
+      "rows": 130807,
+      "bytes": 978806,
+      "sha256": "8aa795550e117b57cae82cf0b136a935d44220b63aac6eded6c4e544949b1f0e",
+      "columns": [
+        {
+          "name": "competition",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "tournament",
+          "type": "string"
+        },
+        {
+          "name": "year",
+          "type": "int64"
+        },
+        {
+          "name": "player_id",
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "type": "string"
+        },
+        {
+          "name": "role",
+          "type": "string"
+        },
+        {
+          "name": "phase",
+          "type": "string"
+        },
+        {
+          "name": "innings",
+          "type": "int32"
+        },
+        {
+          "name": "balls",
+          "type": "int32"
+        },
+        {
+          "name": "runs",
+          "type": "int32"
+        },
+        {
+          "name": "outs",
+          "type": "int32"
+        },
+        {
+          "name": "dots",
+          "type": "int32"
+        },
+        {
+          "name": "fours",
+          "type": "int32"
+        },
+        {
+          "name": "sixes",
+          "type": "int32"
+        }
+      ]
+    },
+    "ball_phase_teams": {
+      "file": "ball_phase_teams-8532e8aa180661f5.parquet",
+      "rows": 56776,
+      "bytes": 345734,
+      "sha256": "8532e8aa180661f55aa9732593380b100cdec98601f926eff6f98c092b9b1d00",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "innings",
+          "type": "int64"
+        },
+        {
+          "name": "team",
+          "type": "string"
+        },
+        {
+          "name": "opponent",
+          "type": "string"
+        },
+        {
+          "name": "phase",
+          "type": "string"
+        },
+        {
+          "name": "balls",
+          "type": "int64"
+        },
+        {
+          "name": "runs",
+          "type": "int64"
+        },
+        {
+          "name": "wickets",
+          "type": "int64"
+        },
+        {
+          "name": "dots",
+          "type": "int64"
+        },
+        {
+          "name": "fours",
+          "type": "int64"
+        },
+        {
+          "name": "sixes",
+          "type": "int64"
+        }
+      ]
+    },
+    "ball_overs": {
+      "file": "ball_overs-9ebd83e1972c9985.parquet",
+      "rows": 530416,
+      "bytes": 588682,
+      "sha256": "9ebd83e1972c99855b5056c3d0a9232d81e6f5d3a2553c92b4e519798ad9007c",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "innings",
+          "type": "int64"
+        },
+        {
+          "name": "team",
+          "type": "string"
+        },
+        {
+          "name": "over",
+          "type": "int64"
+        },
+        {
+          "name": "balls",
+          "type": "int64"
+        },
+        {
+          "name": "runs",
+          "type": "int64"
+        },
+        {
+          "name": "wickets",
+          "type": "int64"
+        }
+      ]
+    },
+    "ball_fantasy": {
+      "file": "ball_fantasy-71d74849b4b8ff5e.parquet",
+      "rows": 154695,
+      "bytes": 920969,
+      "sha256": "71d74849b4b8ff5e7b1f9a0fcef667ba600a6a4bf972dd28ff4e331efb67d56b",
+      "columns": [
+        {
+          "name": "match_id",
+          "type": "string"
+        },
+        {
+          "name": "competition",
+          "type": "string"
+        },
+        {
+          "name": "gender",
+          "type": "string"
+        },
+        {
+          "name": "tournament",
+          "type": "string"
+        },
+        {
+          "name": "season",
+          "type": "int64"
+        },
+        {
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "type": "string"
+        },
+        {
+          "name": "opponent",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        },
+        {
+          "name": "player_id",
+          "type": "string"
+        },
+        {
+          "name": "runs",
+          "type": "int64"
+        },
+        {
+          "name": "balls",
+          "type": "int64"
+        },
+        {
+          "name": "fours",
+          "type": "int64"
+        },
+        {
+          "name": "sixes",
+          "type": "int64"
+        },
+        {
+          "name": "out",
+          "type": "bool"
+        },
+        {
+          "name": "wickets",
+          "type": "int64"
+        },
+        {
+          "name": "lbw_bowled",
+          "type": "int64"
+        },
+        {
+          "name": "catches",
+          "type": "int64"
+        },
+        {
+          "name": "stumpings",
+          "type": "int64"
+        },
+        {
+          "name": "run_outs",
+          "type": "int64"
+        },
+        {
+          "name": "points",
           "type": "int64"
         }
       ]

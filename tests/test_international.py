@@ -25,7 +25,8 @@ class InternationalDataTests(unittest.TestCase):
         self.assertEqual(len(self.data['players']), self.data['meta']['players'])
 
     def test_all_downloaded_international_files_are_included(self):
-        archives = list((ROOT / '.data-cache').glob('*_json.zip'))
+        # Only the six international downloads; the IPL zip shares the cache for the ball-by-ball lake.
+        archives = [p for p in (ROOT / '.data-cache').glob('*_json.zip') if p.name.split('_')[0] in ('tests', 'odis', 't20s')]
         if not archives:
             self.skipTest('Source ZIPs are locally cached; run the importer to verify original files')
         expected = set()

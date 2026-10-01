@@ -1,0 +1,1364 @@
+{
+ "Afghanistan": {
+  "Abdollah Ahmadzai": {
+   "id": "345b7a1e",
+   "name": "Abdollah Ahmadzai"
+  },
+  "Aftab Alam": {
+   "id": "2a3a3786",
+   "name": "Aftab Alam"
+  },
+  "Amir Hamza": {
+   "id": "local-0b680d8092de",
+   "name": "Amir Hamza"
+  },
+  "Asghar Afghan": {
+   "id": "88679525",
+   "name": "Asghar Stanikzai"
+  },
+  "Azmatullah Omarzai": {
+   "id": "8f6dd463",
+   "name": "Azmatullah Omarzai"
+  },
+  "Darwish Rasooli": {
+   "id": "3b2114a5",
+   "name": "Darwish Rasooli"
+  },
+  "Dawlat Ahmadzai": {
+   "id": "80f81038",
+   "name": "Dawlat Ahmadzai"
+  },
+  "Dawlat Zadran": {
+   "id": "1fba2ae3",
+   "name": "Dawlat Zadran"
+  },
+  "Fareed Ahmad": {
+   "id": "67b7bad4",
+   "name": "Fareed Ahmad"
+  },
+  "Fazalhaq Farooqi": {
+   "id": "e9c7f0d0",
+   "name": "Fazalhaq Farooqi"
+  },
+  "Gulbadin Naib": {
+   "id": "9f77963a",
+   "name": "Gulbadeen Naib"
+  },
+  "Hamid Hassan": {
+   "id": "093ae70b",
+   "name": "Hamid Hassan"
+  },
+  "Hazratullah Zazai": {
+   "id": "5ea51c25",
+   "name": "Hazratullah Zazai"
+  },
+  "Ibrahim Zadran": {
+   "id": "d4550956",
+   "name": "Ibrahim Zadran"
+  },
+  "Izatullah Dawlatzai": {
+   "id": "f96933f0",
+   "name": "Izatullah Dawlatzai"
+  },
+  "Karim Janat": {
+   "id": "62175638",
+   "name": "Karim Janat"
+  },
+  "Karim Sadiq": {
+   "id": "13e5908b",
+   "name": "Karim Sadiq"
+  },
+  "Mirwais Ashraf": {
+   "id": "bdd985f2",
+   "name": "Mirwais Ashraf"
+  },
+  "Mohammad Nabi": {
+   "id": "62af8546",
+   "name": "Mohammad Nabi"
+  },
+  "Mohammad Shahzad": {
+   "id": "local-c69c4edf747d",
+   "name": "Mohammad Shahzad"
+  },
+  "Mujeeb Ur Rahman": {
+   "id": "7d92277a",
+   "name": "Mujeeb Ur Rahman"
+  },
+  "Najeeb Tarakai": {
+   "id": "2683e28b",
+   "name": "Najeeb Tarakai"
+  },
+  "Najibullah Zadran": {
+   "id": "1212cbec",
+   "name": "Najibullah Zadaran"
+  },
+  "Nangeyalia Khan": {
+   "id": "local-cc6d69bc2830",
+   "name": "Nangeyalia Khan"
+  },
+  "Naveen-ul-Haq": {
+   "id": "c0c411cb",
+   "name": "Naveen-ul-Haq"
+  },
+  "Nawroz Mangal": {
+   "id": "0503ae22",
+   "name": "Nawroz Mangal"
+  },
+  "Noor Ahmad": {
+   "id": "efc04be7",
+   "name": "Noor Ahmad"
+  },
+  "Noor Ali Zadran": {
+   "id": "72e46d30",
+   "name": "Noor Ali Zadran"
+  },
+  "Rahmanullah Gurbaz": {
+   "id": "0bacade8",
+   "name": "Rahmanullah Gurbaz"
+  },
+  "Rais Ahmadzai": {
+   "id": "local-7eb25a2db960",
+   "name": "Rais Ahmadzai"
+  },
+  "Rashid Khan": {
+   "id": "5f547c8b",
+   "name": "Rashid Khan"
+  },
+  "Samiullah Shinwari": {
+   "id": "local-d38e4151c5ef",
+   "name": "Samiullah Shinwari"
+  },
+  "Sediqullah Atal": {
+   "id": "3c28853f",
+   "name": "Sediqullah Atal"
+  },
+  "Shafiqullah": {
+   "id": "ba4d600a",
+   "name": "Shafiqullah"
+  },
+  "Shapoor Zadran": {
+   "id": "fccebff9",
+   "name": "Shapoor Zadran"
+  },
+  "Sharafuddin Ashraf": {
+   "id": "7e678d00",
+   "name": "Sharafuddin Ashraf"
+  },
+  "Usman Ghani": {
+   "id": "e3829b2a",
+   "name": "Usman Ghani"
+  },
+  "Ziaur Rahman": {
+   "id": "c27518d2",
+   "name": "Ziaur Rahman"
+  }
+ },
+ "Australia": {
+  "Adam Zampa": {
+   "id": "14f96089",
+   "name": "Adam Zampa"
+  },
+  "Ashton Agar": {
+   "id": "a2421394",
+   "name": "Ashton Agar"
+  },
+  "Cameron Green": {
+   "id": "eaa76d3c",
+   "name": "Cameron Green"
+  },
+  "David Warner": {
+   "id": "dcce6f09",
+   "name": "David Warner"
+  },
+  "Glenn Maxwell": {
+   "id": "b681e71e",
+   "name": "Glenn Maxwell"
+  },
+  "Josh Hazlewood": {
+   "id": "03806cf8",
+   "name": "Josh Hazlewood"
+  },
+  "Kane Richardson": {
+   "id": "dfc4d8b5",
+   "name": "Kane Richardson"
+  },
+  "Marcus Stoinis": {
+   "id": "d9273ee7",
+   "name": "Marcus Stoinis"
+  },
+  "Matthew Wade": {
+   "id": "afa7e784",
+   "name": "Matthew Wade"
+  },
+  "Mitchell Marsh": {
+   "id": "3d8feaf8",
+   "name": "Mitchell Marsh"
+  },
+  "Pat Cummins": {
+   "id": "ded9240e",
+   "name": "Anderson Cummins"
+  },
+  "Steven Smith": {
+   "id": "30a45b23",
+   "name": "Steven Smith"
+  },
+  "Tim David": {
+   "id": "f1f99156",
+   "name": "Tim David"
+  },
+  "Travis Head": {
+   "id": "12b610c2",
+   "name": "Travis Head"
+  }
+ },
+ "Bangladesh": {
+  "Abdur Razzak": {
+   "id": "888e32bf",
+   "name": "Abdur Razzak"
+  },
+  "Al-Amin Hossain": {
+   "id": "3f5f39cd",
+   "name": "Al-Amin Hossain"
+  },
+  "Anamul Haque": {
+   "id": "72b245dd",
+   "name": "Anamul Haque"
+  },
+  "Farhad Reza": {
+   "id": "4948a447",
+   "name": "Farhad Reza"
+  },
+  "Litton Das": {
+   "id": "0404d43c",
+   "name": "Litton Das"
+  },
+  "Mahmudullah": {
+   "id": "bf1d7d3e",
+   "name": "Mahmudullah"
+  },
+  "Mashrafe Mortaza": {
+   "id": "e186f49c",
+   "name": "Mashrafe Mortaza"
+  },
+  "Mustafizur Rahman": {
+   "id": "0a8fce53",
+   "name": "Mustafizur Rahman"
+  },
+  "Najmul Hossain Shanto": {
+   "id": "1274d7ab",
+   "name": "Nazmul Hossain Shanto"
+  },
+  "Rishad Hossain": {
+   "id": "5935d694",
+   "name": "Rishad Hossain"
+  },
+  "Sabbir Rahman": {
+   "id": "7147f314",
+   "name": "Sabbir Rahman"
+  },
+  "Shakib Al Hasan": {
+   "id": "7dc35884",
+   "name": "Shakib Al Hasan"
+  },
+  "Soumya Sarkar": {
+   "id": "4d9f9686",
+   "name": "Soumya Sarkar"
+  },
+  "Tamim Iqbal": {
+   "id": "3b041a12",
+   "name": "Tamim Iqbal"
+  },
+  "Tanzid Hasan": {
+   "id": "80fe764d",
+   "name": "Tanzid Hasan"
+  },
+  "Tanzim Hasan Sakib": {
+   "id": "0b0cc297",
+   "name": "Tanzim Hasan Sakib"
+  },
+  "Taskin Ahmed": {
+   "id": "ef18b66e",
+   "name": "Taskin Ahmed"
+  },
+  "Towhid Hridoy": {
+   "id": "9e52a414",
+   "name": "Towhid Hridoy"
+  }
+ },
+ "Canada": {
+  "Ansh Patel": {
+   "id": "9e76cdb3",
+   "name": "Ansh Patel"
+  },
+  "Dilon Heyliger": {
+   "id": "f8c72766",
+   "name": "Dilon Heyliger"
+  },
+  "Dilpreet Bajwa": {
+   "id": "e3540b8c",
+   "name": "Dilpreet Bajwa"
+  },
+  "Harsh Thaker": {
+   "id": "c01d7726",
+   "name": "Harsh Thaker"
+  },
+  "Jaskaran Singh": {
+   "id": "d7b3a420",
+   "name": "Jaskaran Singh Buttar"
+  },
+  "Kaleem Sana": {
+   "id": "14810ee7",
+   "name": "Kaleem Sana"
+  },
+  "Navneet Dhaliwal": {
+   "id": "cbabd6ad",
+   "name": "Navneet Dhaliwal"
+  },
+  "Nicholas Kirton": {
+   "id": "6b75c2b1",
+   "name": "Nicholas Kirton"
+  },
+  "Saad Bin Zafar": {
+   "id": "f28a60e0",
+   "name": "Saad Bin Zafar"
+  },
+  "Shreyas Movva": {
+   "id": "ee229588",
+   "name": "Shreyas Movva"
+  },
+  "Yuvraaj Samra": {
+   "id": "d02c40ab",
+   "name": "Yuvraaj Samra"
+  }
+ },
+ "England": {
+  "Adil Rashid": {
+   "id": "249d60c9",
+   "name": "Adil Rashid"
+  },
+  "Alex Hales": {
+   "id": "92aeac25",
+   "name": "Alex Hales"
+  },
+  "Ben Stokes": {
+   "id": "e087956b",
+   "name": "Ben Stokes"
+  },
+  "Chris Jordan": {
+   "id": "ffe699c0",
+   "name": "Chris Jordan"
+  },
+  "Chris Woakes": {
+   "id": "4c5d73db",
+   "name": "Chris Woakes"
+  },
+  "Craig Kieswetter": {
+   "id": "1e960f2a",
+   "name": "Craig Kieswetter"
+  },
+  "David Willey": {
+   "id": "7f048519",
+   "name": "David Willey"
+  },
+  "Dawid Malan": {
+   "id": "ad9c32a2",
+   "name": "Dawid Malan"
+  },
+  "Eoin Morgan": {
+   "id": "d2a6c0e6",
+   "name": "Eoin Morgan"
+  },
+  "Graeme Swann": {
+   "id": "221ad9d9",
+   "name": "Graeme Swann"
+  },
+  "Harry Brook": {
+   "id": "4ae1755b",
+   "name": "Harry Brook"
+  },
+  "Jade Dernbach": {
+   "id": "7be8a0ed",
+   "name": "Jade Dernbach"
+  },
+  "James Vince": {
+   "id": "a15618fe",
+   "name": "James Vince"
+  },
+  "Jason Roy": {
+   "id": "d1c36f5c",
+   "name": "Jason Roy"
+  },
+  "Joe Root": {
+   "id": "a343262c",
+   "name": "Joe Root"
+  },
+  "Jonny Bairstow": {
+   "id": "abb83e27",
+   "name": "Jonny Bairstow"
+  },
+  "Jos Buttler": {
+   "id": "99b75528",
+   "name": "Jos Buttler"
+  },
+  "Liam Livingstone": {
+   "id": "50c6bc2b",
+   "name": "Liam Livingstone"
+  },
+  "Liam Plunkett": {
+   "id": "9a963804",
+   "name": "Liam Plunkett"
+  },
+  "Luke Wright": {
+   "id": "cca50cd6",
+   "name": "Luke Wright"
+  },
+  "Mark Wood": {
+   "id": "8d92a2c3",
+   "name": "Mark Wood"
+  },
+  "Moeen Ali": {
+   "id": "bb351c23",
+   "name": "Moeen Ali"
+  },
+  "Sam Curran": {
+   "id": "e94915e6",
+   "name": "Sam Curran"
+  },
+  "Samit Patel": {
+   "id": "18fac429",
+   "name": "Samit Patel"
+  },
+  "Steven Finn": {
+   "id": "ccdd8308",
+   "name": "Steven Finn"
+  },
+  "Stuart Broad": {
+   "id": "eba6a852",
+   "name": "Stuart Broad"
+  }
+ },
+ "Hong Kong": {
+  "Aizaz Khan": {
+   "id": "f6c2659d",
+   "name": "Aizaz Khan"
+  },
+  "Anshy Rath": {
+   "id": "552b228c",
+   "name": "Anshuman Rath"
+  },
+  "Babar Hayat": {
+   "id": "fbb657bb",
+   "name": "Babar Hayat"
+  },
+  "Haseeb Amjad": {
+   "id": "fb0abc20",
+   "name": "Haseeb Amjad"
+  },
+  "Irfan Ahmed": {
+   "id": "5c124657",
+   "name": "Irfan Ahmed"
+  },
+  "Jamie Atkinson": {
+   "id": "bf2d865c",
+   "name": "Jamie Atkinson"
+  },
+  "Kinchit Shah": {
+   "id": "d5ae21a2",
+   "name": "Kinchit Shah"
+  },
+  "Mark Chapman": {
+   "id": "7fa12533",
+   "name": "Mark Chapman"
+  },
+  "Munir Dar": {
+   "id": "04029c44",
+   "name": "Munir Dar"
+  },
+  "Nadeem Ahmed": {
+   "id": "023f6b02",
+   "name": "Nadeem Ahmed"
+  },
+  "Nizakat Khan": {
+   "id": "e3eb9e46",
+   "name": "Nizakat Khan"
+  },
+  "Ryan Campbell": {
+   "id": "f6993a56",
+   "name": "Ryan Campbell"
+  },
+  "Tanwir Afzal": {
+   "id": "5f5ca1a7",
+   "name": "Tanwir Afzal"
+  },
+  "Waqas Barkat": {
+   "id": "a2eac9df",
+   "name": "Waqas Barkat"
+  }
+ },
+ "India": {
+  "Arshdeep Singh": {
+   "id": "244048f6",
+   "name": "Arshdeep Singh"
+  },
+  "Ashish Nehra": {
+   "id": "96fd40ae",
+   "name": "Ashish Nehra"
+  },
+  "Axar Patel": {
+   "id": "2e171977",
+   "name": "Axar Patel"
+  },
+  "Gautam Gambhir": {
+   "id": "bb345e0b",
+   "name": "Gautam Gambhir"
+  },
+  "Harbhajan Singh": {
+   "id": "8b5b6769",
+   "name": "Harbhajan Singh"
+  },
+  "Hardik Pandya": {
+   "id": "dbe50b21",
+   "name": "Hardik Pandya"
+  },
+  "Irfan Pathan": {
+   "id": "5fa06777",
+   "name": "Irfan Pathan"
+  },
+  "Jasprit Bumrah": {
+   "id": "462411b3",
+   "name": "Jasprit Bumrah"
+  },
+  "KL Rahul": {
+   "id": "b17e2f24",
+   "name": "Kannur Lokesh Rahul"
+  },
+  "Kuldeep Yadav": {
+   "id": "8d2c70ad",
+   "name": "Kuldeep Singh Yadav"
+  },
+  "Lakshmipathy Balaji": {
+   "id": "b2b50355",
+   "name": "Lakshmipathy Balaji"
+  },
+  "MS Dhoni": {
+   "id": "4a8a2e3b",
+   "name": "Mahendra Singh Dhoni"
+  },
+  "Mohammed Shami": {
+   "id": "8cf9814c",
+   "name": "Mohammed Shami"
+  },
+  "Murali Vijay": {
+   "id": "4b57e452",
+   "name": "Murali Vijay"
+  },
+  "Praveen Kumar": {
+   "id": "e938e1bc",
+   "name": "Praveen Kumar"
+  },
+  "Ravichandran Ashwin": {
+   "id": "495d42a5",
+   "name": "Ravichandran Ashwin"
+  },
+  "Ravindra Jadeja": {
+   "id": "fe93fd9d",
+   "name": "Ravindra Jadeja"
+  },
+  "Rishabh Pant": {
+   "id": "919a3be2",
+   "name": "Rishabh Pant"
+  },
+  "Rohit Sharma": {
+   "id": "740742ef",
+   "name": "Rohit Sharma"
+  },
+  "Shardul Thakur": {
+   "id": "1abb78f8",
+   "name": "Shardul Thakur"
+  },
+  "Shivam Dube": {
+   "id": "a4e37e47",
+   "name": "Shivam Dube"
+  },
+  "Suresh Raina": {
+   "id": "1dc12ab9",
+   "name": "Suresh Raina"
+  },
+  "Suryakumar Yadav": {
+   "id": "271f83cd",
+   "name": "Suryakumar Yadav"
+  },
+  "Virat Kohli": {
+   "id": "ba607b88",
+   "name": "Virat Kohli"
+  },
+  "Virender Sehwag": {
+   "id": "8ba8195d",
+   "name": "Virender Sehwag"
+  },
+  "Yusuf Pathan": {
+   "id": "3c6ffae8",
+   "name": "Yusuf Pathan"
+  },
+  "Yuvraj Singh": {
+   "id": "1c914163",
+   "name": "Yuvraj Singh"
+  },
+  "Zaheer Khan": {
+   "id": "91a4a398",
+   "name": "Zaheer Khan"
+  }
+ },
+ "Namibia": {
+  "Bernard Scholtz": {
+   "id": "e85d03d6",
+   "name": "Bernard Scholtz"
+  },
+  "Craig Williams": {
+   "id": "e16e7347",
+   "name": "Craig Williams"
+  },
+  "David Wiese": {
+   "id": "aa8d28ae",
+   "name": "David Wiese"
+  },
+  "Gerhard Erasmus": {
+   "id": "local-9f6a904a8e8c",
+   "name": "Gerhard Erasmus"
+  },
+  "JJ Smit": {
+   "id": "bb134e5c",
+   "name": "Smit"
+  },
+  "Jan Frylinck": {
+   "id": "3c87f0c3",
+   "name": "Jan Frylinck"
+  },
+  "Jan Nicol Loftie-Eaton": {
+   "id": "f468293b",
+   "name": "Jan Nicol Loftie-Eaton"
+  },
+  "Michael van Lingen": {
+   "id": "7eb36269",
+   "name": "Michael van Lingen"
+  },
+  "Pikky Ya France": {
+   "id": "local-8974c412fa25",
+   "name": "Pikky Ya France"
+  },
+  "Ruben Trumpelmann": {
+   "id": "ff6a7ab5",
+   "name": "Ruben Trumpelmann"
+  },
+  "Zane Green": {
+   "id": "8716233e",
+   "name": "Zane Green"
+  }
+ },
+ "Nepal": {
+  "Basant Regmi": {
+   "id": "98d05440",
+   "name": "Basant Regmi"
+  },
+  "Binod Bhandari": {
+   "id": "82342b13",
+   "name": "Binod Bhandari"
+  },
+  "Gyanendra Malla": {
+   "id": "b2e1d224",
+   "name": "Gyanendra Malla"
+  },
+  "Jitendra Mukhiya": {
+   "id": "f8dcfe4e",
+   "name": "Jitendra Mukhiya"
+  },
+  "Naresh Budayair": {
+   "id": "9d280648",
+   "name": "Naresh Budayair"
+  },
+  "Paras Khadka": {
+   "id": "12c3ba4d",
+   "name": "Paras Khadka"
+  },
+  "Sagar Pun": {
+   "id": "3c4007d3",
+   "name": "Sagar Pun"
+  },
+  "Shakti Gauchan": {
+   "id": "2d8aae2f",
+   "name": "Shakti Gauchan"
+  },
+  "Sharad Vesawkar": {
+   "id": "3de06845",
+   "name": "Sharad Vesawkar"
+  },
+  "Sompal Kami": {
+   "id": "1adb8ee8",
+   "name": "Sompal Kami"
+  },
+  "Subash Khakurel": {
+   "id": "9a6b71d1",
+   "name": "Subash Khakurel"
+  }
+ },
+ "New Zealand": {
+  "Adam Milne": {
+   "id": "350bb1b1",
+   "name": "Adam Milne"
+  },
+  "Daryl Mitchell": {
+   "id": "eade4650",
+   "name": "Daryl Mitchell"
+  },
+  "Devon Conway": {
+   "id": "df5a6881",
+   "name": "Devon Conway"
+  },
+  "Finn Allen": {
+   "id": "bf74b130",
+   "name": "Finn Allen"
+  },
+  "Glenn Phillips": {
+   "id": "9a46c4e5",
+   "name": "Glenn Phillips"
+  },
+  "Ish Sodhi": {
+   "id": "641ac5ff",
+   "name": "Ish Sodhi"
+  },
+  "Jacob Duffy": {
+   "id": "dadbdb68",
+   "name": "Jacob Duffy"
+  },
+  "James Neesham": {
+   "id": "9219eff0",
+   "name": "James Neesham"
+  },
+  "Kane Williamson": {
+   "id": "d027ba9f",
+   "name": "Kane Williamson"
+  },
+  "Lockie Ferguson": {
+   "id": "2f9d0389",
+   "name": "Lockie Ferguson"
+  },
+  "Mark Chapman": {
+   "id": "7fa12533",
+   "name": "Mark Chapman"
+  },
+  "Martin Guptill": {
+   "id": "2be41edb",
+   "name": "Martin Guptill"
+  },
+  "Matt Henry": {
+   "id": "e84ac20c",
+   "name": "Matthew Henry"
+  },
+  "Michael Bracewell": {
+   "id": "local-d41d18678875",
+   "name": "Michael Bracewell"
+  },
+  "Mitchell Santner": {
+   "id": "e4a0deae",
+   "name": "Mitchell Santner"
+  },
+  "Rachin Ravindra": {
+   "id": "ba5e1069",
+   "name": "Rachin Ravindra"
+  },
+  "Tim Seifert": {
+   "id": "4663bd23",
+   "name": "Tim Seifert"
+  },
+  "Tim Southee": {
+   "id": "13c35c9e",
+   "name": "Tim Southee"
+  },
+  "Trent Boult": {
+   "id": "a818c1be",
+   "name": "Trent Boult"
+  }
+ },
+ "Pakistan": {
+  "Asif Ali": {
+   "id": "0a4736eb",
+   "name": "Asif Ali"
+  },
+  "Babar Azam": {
+   "id": "8a75e999",
+   "name": "Babar Azam"
+  },
+  "Fakhar Zaman": {
+   "id": "1777c020",
+   "name": "Fakhar Zaman"
+  },
+  "Haris Rauf": {
+   "id": "24bb1c2f",
+   "name": "Haris Rauf"
+  },
+  "Hasan Ali": {
+   "id": "2911de16",
+   "name": "Hasan Ali"
+  },
+  "Imad Wasim": {
+   "id": "9cb8d7a6",
+   "name": "Imad Wasim"
+  },
+  "Mohammad Hafeez": {
+   "id": "9ab63e7b",
+   "name": "Mohammad Hafeez"
+  },
+  "Mohammad Rizwan": {
+   "id": "2f26ac1a",
+   "name": "Mohammad Rizwan"
+  },
+  "Shadab Khan": {
+   "id": "9de62878",
+   "name": "Shadab Khan"
+  },
+  "Shaheen Shah Afridi": {
+   "id": "45a7e761",
+   "name": "Shaheen Shah Afridi"
+  },
+  "Shoaib Malik": {
+   "id": "64c34cd0",
+   "name": "Shoaib Malik"
+  }
+ },
+ "Papua New Guinea": {
+  "Alei Nao": {
+   "id": "4d1ec7eb",
+   "name": "Alei Nao"
+  },
+  "Assad Vala": {
+   "id": "72e60730",
+   "name": "Assad Vala"
+  },
+  "Chad Soper": {
+   "id": "9920dd86",
+   "name": "Chad Soper"
+  },
+  "Hiri Hiri": {
+   "id": "9dc3ea7e",
+   "name": "Hiri Hiri"
+  },
+  "John Kariko": {
+   "id": "cde067e1",
+   "name": "John Kariko"
+  },
+  "Kiplin Doriga": {
+   "id": "365229a8",
+   "name": "Kiplin Doriga"
+  },
+  "Lega Siaka": {
+   "id": "6b4593ee",
+   "name": "Lega Siaka"
+  },
+  "Norman Vanua": {
+   "id": "a36915ce",
+   "name": "Norman Vanua"
+  },
+  "Semo Kamea": {
+   "id": "0730a707",
+   "name": "Semo Kamea"
+  },
+  "Sese Bau": {
+   "id": "9a95bebb",
+   "name": "Sese Bau"
+  },
+  "Tony Ura": {
+   "id": "a82eb3fb",
+   "name": "Tony Ura"
+  }
+ },
+ "Scotland": {
+  "Alasdair Evans": {
+   "id": "e9a870ed",
+   "name": "Alasdair Evans"
+  },
+  "Brad Wheal": {
+   "id": "3f61a062",
+   "name": "Brad Wheal"
+  },
+  "Calum MacLeod": {
+   "id": "9c376401",
+   "name": "Calum MacLeod"
+  },
+  "Chris Greaves": {
+   "id": "f42064d5",
+   "name": "Chris Greaves"
+  },
+  "George Munsey": {
+   "id": "local-28a3054dba16",
+   "name": "George Munsey"
+  },
+  "Josh Davey": {
+   "id": "d3868bd0",
+   "name": "Josh Davey"
+  },
+  "Kyle Coetzer": {
+   "id": "85d8110a",
+   "name": "Kyle Coetzer"
+  },
+  "Mark Watt": {
+   "id": "1252f71a",
+   "name": "Mark Watt"
+  },
+  "Matt Machan": {
+   "id": "8c7d6cbe",
+   "name": "Matt Machan"
+  },
+  "Matthew Cross": {
+   "id": "8b261d84",
+   "name": "Matthew Cross"
+  },
+  "Michael Leask": {
+   "id": "28131839",
+   "name": "Michael Leask"
+  },
+  "Preston Mommsen": {
+   "id": "a56f4b65",
+   "name": "Preston Mommsen"
+  },
+  "Richie Berrington": {
+   "id": "e21bc7f3",
+   "name": "Richie Berrington"
+  },
+  "Safyaan Sharif": {
+   "id": "f43dd8c2",
+   "name": "Safyaan Sharif"
+  }
+ },
+ "South Africa": {
+  "AB de Villiers": {
+   "id": "c4487b84",
+   "name": "AB de Villiers"
+  },
+  "Aiden Markram": {
+   "id": "6a26221c",
+   "name": "Aiden Markram"
+  },
+  "Albie Morkel": {
+   "id": "c3d35165",
+   "name": "Albie Morkel"
+  },
+  "Anrich Nortje": {
+   "id": "acdc62f5",
+   "name": "Anrich Nortje"
+  },
+  "Charl Langeveldt": {
+   "id": "d1c94b25",
+   "name": "Charl Langeveldt"
+  },
+  "Chris Morris": {
+   "id": "fb66ce1f",
+   "name": "Chris Morris"
+  },
+  "Dale Steyn": {
+   "id": "8fd1a8f5",
+   "name": "Dale Steyn"
+  },
+  "David Miller": {
+   "id": "d67d5f00",
+   "name": "David Miller"
+  },
+  "David Wiese": {
+   "id": "aa8d28ae",
+   "name": "David Wiese"
+  },
+  "Dewald Brevis": {
+   "id": "844e79d1",
+   "name": "Dewald Brevis"
+  },
+  "Faf du Plessis": {
+   "id": "3355b542",
+   "name": "Faf Du Plessis"
+  },
+  "George Linde": {
+   "id": "e5437608",
+   "name": "George Linde"
+  },
+  "Graeme Smith": {
+   "id": "72861603",
+   "name": "Graeme Smith"
+  },
+  "Hashim Amla": {
+   "id": "e798611a",
+   "name": "Hashim Amla"
+  },
+  "Imran Tahir": {
+   "id": "acee4cc4",
+   "name": "Imran Tahir"
+  },
+  "Jacques Kallis": {
+   "id": "86dc8f2e",
+   "name": "Jacques Kallis"
+  },
+  "Jean-Paul Duminy": {
+   "id": "2e8994e7",
+   "name": "Jean-Paul Duminy"
+  },
+  "Kagiso Rabada": {
+   "id": "e62dd25d",
+   "name": "Kagiso Rabada"
+  },
+  "Keshav Maharaj": {
+   "id": "0b60eb09",
+   "name": "Keshav Maharaj"
+  },
+  "Kyle Abbott": {
+   "id": "a9da7784",
+   "name": "Kyle Abbott"
+  },
+  "Loots Bosman": {
+   "id": "73e749e1",
+   "name": "Loots Bosman"
+  },
+  "Lungi Ngidi": {
+   "id": "f834dcfc",
+   "name": "Lungi Ngidi"
+  },
+  "Marco Jansen": {
+   "id": "81c36ee9",
+   "name": "Marco Jansen"
+  },
+  "Mark Boucher": {
+   "id": "f3cb53a1",
+   "name": "Mark Boucher"
+  },
+  "Morne Morkel": {
+   "id": "5bb5a915",
+   "name": "Morne Morkel"
+  },
+  "Quinton de Kock": {
+   "id": "372455c4",
+   "name": "Quinton de Kock"
+  },
+  "Reeza Hendricks": {
+   "id": "b8cc58c9",
+   "name": "Reeza Hendricks"
+  },
+  "Roelof van der Merwe": {
+   "id": "05c2ca46",
+   "name": "Roelof van der Merwe"
+  },
+  "Ryan Rickelton": {
+   "id": "e66732f8",
+   "name": "Ryan Rickelton"
+  },
+  "Tabraiz Shamsi": {
+   "id": "a03bba42",
+   "name": "Tabraiz Shamsi"
+  },
+  "Tristan Stubbs": {
+   "id": "85b3fab2",
+   "name": "Tristan Stubbs"
+  }
+ },
+ "Sri Lanka": {
+  "Angelo Mathews": {
+   "id": "896d78ad",
+   "name": "Angelo Mathews"
+  },
+  "Bhanuka Rajapaksa": {
+   "id": "6c882e9a",
+   "name": "Bhanuka Rajapaksa"
+  },
+  "Chamara Kapugedera": {
+   "id": "cfad138c",
+   "name": "Chamara Kapugedera"
+  },
+  "Charith Asalanka": {
+   "id": "732c038e",
+   "name": "Charith Asalanka"
+  },
+  "Dasun Shanaka": {
+   "id": "3ff033bb",
+   "name": "Dasun Shanaka"
+  },
+  "Dhananjaya de Silva": {
+   "id": "7d608e12",
+   "name": "Dhananjaya de Silva"
+  },
+  "Dinesh Chandimal": {
+   "id": "8dd02a98",
+   "name": "Dinesh Chandimal"
+  },
+  "Dushmantha Chameera": {
+   "id": "327b58d3",
+   "name": "Dushmantha Chameera"
+  },
+  "Kasun Rajitha": {
+   "id": "8012d0b8",
+   "name": "Kasun Rajitha"
+  },
+  "Kusal Mendis": {
+   "id": "5d1e7582",
+   "name": "Kusal Mendis"
+  },
+  "Lahiru Kumara": {
+   "id": "4751caa3",
+   "name": "Lahiru Kumara"
+  },
+  "Lahiru Thirimanne": {
+   "id": "c5928dec",
+   "name": "Lahiru Thirimanne"
+  },
+  "Maheesh Theekshana": {
+   "id": "f24c6701",
+   "name": "Maheesh Theekshana"
+  },
+  "Milinda Siriwardana": {
+   "id": "bf7842c9",
+   "name": "Milinda Siriwardana"
+  },
+  "Nuwan Kulasekara": {
+   "id": "469ea22b",
+   "name": "Nuwan Kulasekara"
+  },
+  "Pathum Nissanka": {
+   "id": "8ee36b18",
+   "name": "Pathum Nissanka"
+  },
+  "Pramod Madushan": {
+   "id": "local-7af48d66d52f",
+   "name": "Pramod Madushan"
+  },
+  "Rangana Herath": {
+   "id": "d2fcce2f",
+   "name": "Rangana Herath"
+  },
+  "Thisara Perera": {
+   "id": "0f12f9df",
+   "name": "Thisara Perera"
+  },
+  "Tillakaratne Dilshan": {
+   "id": "5bdcdb72",
+   "name": "Tillakaratne Dilshan"
+  },
+  "Wanindu Hasaranga": {
+   "id": "a97c8ec2",
+   "name": "Wanindu Hasaranga"
+  }
+ },
+ "Uganda": {
+  "Alpesh Ramjani": {
+   "id": "30d8136b",
+   "name": "Alpesh Ramjani"
+  },
+  "Bilal Hassan": {
+   "id": "local-cd01a6dffb6e",
+   "name": "Bilal Hassan"
+  },
+  "Brian Masaba": {
+   "id": "f33cfd25",
+   "name": "Brian Masaba"
+  },
+  "Cosmas Kyewuta": {
+   "id": "395695ce",
+   "name": "Cosmas Kyewuta"
+  },
+  "Dinesh Nakrani": {
+   "id": "46a7ac78",
+   "name": "Dinesh Nakrani"
+  },
+  "Henry Ssenyondo": {
+   "id": "local-5c5bf56fcc69",
+   "name": "Henry Ssenyondo"
+  },
+  "Riazat Ali Shah": {
+   "id": "269cc4ff",
+   "name": "Riazat Ali Shah"
+  },
+  "Robinson Obuya": {
+   "id": "6bc04a3e",
+   "name": "Robinson Obuya"
+  },
+  "Roger Mukasa": {
+   "id": "011f6b42",
+   "name": "Roger Mukasa"
+  },
+  "Ronak Patel": {
+   "id": "f88dc8de",
+   "name": "Ronak Patel"
+  },
+  "Simon Ssesazi": {
+   "id": "local-d1bc2c2bdf14",
+   "name": "Simon Ssesazi"
+  }
+ },
+ "United Arab Emirates": {
+  "Alishan Sharafu": {
+   "id": "06cad4f0",
+   "name": "Alishan Sharafu"
+  },
+  "Aryansh Sharma": {
+   "id": "5661ef90",
+   "name": "Aryansh Sharma"
+  },
+  "Haider Ali": {
+   "id": "dd572696",
+   "name": "Haider Ali (2)"
+  },
+  "Harshit Kaushik": {
+   "id": "2bfec670",
+   "name": "Harshit Kaushik"
+  },
+  "Junaid Siddique": {
+   "id": "84dc72db",
+   "name": "Junaid Siddique (2)"
+  },
+  "Muhammad Arfan": {
+   "id": "1294ee6d",
+   "name": "Muhammad Arfan"
+  },
+  "Muhammad Jawadullah": {
+   "id": "098a757c",
+   "name": "Muhammad Jawadullah"
+  },
+  "Muhammad Waseem": {
+   "id": "local-536a2933df88",
+   "name": "Muhammad Waseem"
+  },
+  "Simranjeet Singh": {
+   "id": "local-eabb8d35ed4d",
+   "name": "Simranjeet Singh"
+  },
+  "Sohaib Khan": {
+   "id": "21afb939",
+   "name": "Sohaib Khan"
+  },
+  "Syed Haider": {
+   "id": "ab23a6a1",
+   "name": "Syed Haider"
+  }
+ },
+ "West Indies": {
+  "Akeal Hosein": {
+   "id": "4d7f517e",
+   "name": "Akeal Hosein"
+  },
+  "Alzarri Joseph": {
+   "id": "b0946605",
+   "name": "Alzarri Joseph"
+  },
+  "Andre Fletcher": {
+   "id": "1bae756b",
+   "name": "Andre Fletcher"
+  },
+  "Andre Russell": {
+   "id": "bbd41817",
+   "name": "Andre Russell"
+  },
+  "Brandon King": {
+   "id": "7fca84b7",
+   "name": "Brandon King"
+  },
+  "Carlos Brathwaite": {
+   "id": "e342e5fb",
+   "name": "Carlos Brathwaite"
+  },
+  "Daren Sammy": {
+   "id": "c03c6200",
+   "name": "Daren Sammy"
+  },
+  "Denesh Ramdin": {
+   "id": "d1523761",
+   "name": "Denesh Ramdin"
+  },
+  "Dwayne Bravo": {
+   "id": "87e562a9",
+   "name": "Dwayne Bravo"
+  },
+  "Evin Lewis": {
+   "id": "0ebfb1ad",
+   "name": "Evin Lewis"
+  },
+  "Gudakesh Motie": {
+   "id": "97bdec3d",
+   "name": "Gudakesh Motie"
+  },
+  "Johnson Charles": {
+   "id": "09a9d073",
+   "name": "Johnson Charles"
+  },
+  "Marlon Samuels": {
+   "id": "f846de6a",
+   "name": "Marlon Samuels"
+  },
+  "Nicholas Pooran": {
+   "id": "3241e3fd",
+   "name": "Nicholas Pooran"
+  },
+  "Obed McCoy": {
+   "id": "529eb9e0",
+   "name": "Obed McCoy"
+  },
+  "Rovman Powell": {
+   "id": "650d5e49",
+   "name": "Rovman Powell"
+  },
+  "Samuel Badree": {
+   "id": "76388dc8",
+   "name": "Samuel Badree"
+  },
+  "Shai Hope": {
+   "id": "1fc6ef83",
+   "name": "Shai Hope"
+  },
+  "Sherfane Rutherford": {
+   "id": "d014d5ac",
+   "name": "Sherfane Rutherford"
+  },
+  "Sulieman Benn": {
+   "id": "364ee2cf",
+   "name": "Sulieman Benn"
+  }
+ },
+ "Zimbabwe": {
+  "Donald Tiripano": {
+   "id": "dbfb8218",
+   "name": "Donald Tiripano"
+  },
+  "Elton Chigumbura": {
+   "id": "d2babdd5",
+   "name": "Elton Chigumbura"
+  },
+  "Hamilton Masakadza": {
+   "id": "31fbf891",
+   "name": "Hamilton Masakadza"
+  },
+  "Malcolm Waller": {
+   "id": "ec4dada1",
+   "name": "Malcolm Waller"
+  },
+  "Richmond Mutumbami": {
+   "id": "5fef85ee",
+   "name": "Richmond Mutumbami"
+  },
+  "Sean Williams": {
+   "id": "afe57f7a",
+   "name": "Sean Williams"
+  },
+  "Sikandar Raza": {
+   "id": "26d041c4",
+   "name": "Sikandar Raza"
+  },
+  "Tendai Chatara": {
+   "id": "5bbabe59",
+   "name": "Tendai Chatara"
+  },
+  "Tinashe Panyangara": {
+   "id": "3b417422",
+   "name": "Tinashe Panyangara"
+  },
+  "Vusi Sibanda": {
+   "id": "0fdabe05",
+   "name": "Vusi Sibanda"
+  },
+  "Wellington Masakadza": {
+   "id": "4bc0a378",
+   "name": "Wellington Masakadza"
+  }
+ }
+}

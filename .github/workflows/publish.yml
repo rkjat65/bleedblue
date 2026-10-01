@@ -46,7 +46,22 @@ jobs:
           node --check web/studio-core.js
           node --check web/wicket.js
           node --check web/home.js
-      - name: Build crawlable publication
+          for f in lake matchups phases fantasy quiz; do node --check web/$f.js; done
+      - name: Week number for the Cricsheet download cache
+        id: week
+        run: echo "week=$(date -u +%G-%V)" >> "$GITHUB_OUTPUT"
+      - name: Restore this week's Cricsheet downloads
+        uses: actions/cache@v4
+        with:
+          path: |
+            .data-cache/tests_male_json.zip
+            .data-cache/tests_female_json.zip
+            .data-cache/odis_male_json.zip
+            .data-cache/odis_female_json.zip
+            .data-cache/t20s_male_json.zip
+            .data-cache/t20s_female_json.zip
+            .data-cache/ipl_json.zip
+          key: cricsheet-${{ steps.week.outputs.week }}
         run: |
           mkdir -p _site/data
           curl --fail --silent --show-error --max-time 30 https://cricket.rkjat.in/build-manifest.json -o _site/previous-manifest.json && mv _site/previous-manifest.json _site/build-manifest.json || rm -f _site/previous-manifest.json

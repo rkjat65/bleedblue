@@ -17,7 +17,9 @@ Merge steps:
 2. Done: one page per player, team and ground. Player profiles carry IPL and T20 World Cup tabs, IPL grounds an IPL tab, national teams a T20 World Cup tab.
    The app exports them from its ball-by-ball databases (`/api/export/careers`, `/venues`, `/teams`, keyed by Cricsheet id); `tools/fetch_league_careers.py` snapshots them into `data/leagues/` during the weekly refresh and keeps the last good copy if the app is down.
    Matches played come from stored line-ups, so players who only fielded are counted. IPL grounds map to archive grounds through `tools/venues.py`.
-3. Rebuild the app's interactive pages (matchups, phases, studio, fantasy, quiz) on the shared Parquet lake, then redirect their `/ipl` URLs to the unified pages.
+3. Done: the app's interactive tools run on the shared Parquet lake as one page each for every competition: `/matchups/`, `/phases/`, `/fantasy/`, `/quiz/`, and Studio gained the IPL. A `/tools/` hub replaces Studio in the site menu.
+   `tools/build_ball_lake.py` builds the ball-by-ball tables (matchups, phases by player and team, overs, fantasy points, IPL scorecards) from Cricsheet's six international zips and the IPL zip, plus the reconstructed men's T20 World Cup matches; the weekly Cricsheet downloads are cached in CI and only new content-addressed files go to R2.
+   The app's `/ipl` and `/t20-world-cup` tool addresses 301 to these pages with the matching competition filter (player names become Cricsheet ids); its stat-card studio goes to Studio with the IPL or T20I format.
 4. Retire the second codebase: host the static build on the server itself, turn cricket.rkjat.in into a plain 301, merge the two Google Analytics properties and the two privacy pages.
 
 ## Shipped (September 2026)

@@ -42,7 +42,7 @@ def studio_markup(link):
         <details class="st-step" open><summary><span class="st-step-num">1</span>Data</summary>
           {select('st-dataset', 'Dataset', [('careers', 'Official careers'), ('batting', 'Batting innings'), ('bowling', 'Bowling innings'), ('matches', 'Match archive')])}
           {segmented('st-gender', 'Gender', [('Men', 'Men'), ('Women', 'Women')])}
-          {segmented('st-format', 'Format', [('', 'All'), ('Test', 'Test'), ('ODI', 'ODI'), ('T20I', 'T20I')])}
+          {segmented('st-format', 'Format', [('', 'All'), ('Test', 'Test'), ('ODI', 'ODI'), ('T20I', 'T20I'), ('IPL', 'IPL')])}
           <div class="st-field" id="st-players-field"><span class="st-label">Players <small>up to six</small></span><div class="st-players" id="st-players"></div><div class="st-add"><input id="st-player-input" list="studio-players" placeholder="Type a name and press Enter" autocomplete="off" aria-label="Add a player"><button type="button" id="st-player-add">Add</button></div><datalist id="studio-players"></datalist></div>
           <div class="st-grid2">{select('st-team', 'Team', [('', 'All teams')])}{select('st-opponent', 'Opponent', [('', 'All opponents')])}</div>
           <div class="st-grid2">{select('st-venue', 'Ground', [('', 'All grounds')])}{select('st-position', 'Batting position', [('', 'Any')] + [(str(i), f'No. {i}') for i in range(1, 12)])}</div>

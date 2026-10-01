@@ -43,6 +43,8 @@
   if(s.from&&s.to&&Number(s.from)>Number(s.to))throw new Error('Start year must be no later than end year.');
   let where=' WHERE 1=1';
   for(const k of ['format','gender'])if(s[k])where+=` AND ${k}=${quote(s[k])}`;
+   // All formats means international cricket; the IPL is its own choice.
+   if(!s.format)where+=` AND format IN ('Test','ODI','T20I')`;
   const players=idList(s.players);
   if(dataset!=='matches'){
    if(players.length)where+=` AND player_id IN (${players.map(quote).join(',')})`;

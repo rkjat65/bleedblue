@@ -26,6 +26,17 @@ class StudioQueries(unittest.TestCase):
         s=self.state(player='a');s.update(dataset='bowling',metric='bowlAvg');self.assertEqual(self.query(s)[0][1],25)
     def test_minimum_matches(self):
         self.assertEqual(len(self.query(self.state(minimum='2'))),1)
+    def test_all_formats_means_international(self):
+        code="const c=require('./web/studio-core.js');console.log(c.sql(JSON.parse(process.argv[1]),'sample'));"
+        con=duckdb.connect()
+        con.execute('CREATE TABLE sample (player_id VARCHAR,player VARCHAR,gender VARCHAR,format VARCHAR,match_id VARCHAR,year INTEGER,runs INTEGER,balls INTEGER,"out" BOOLEAN,wickets INTEGER,legal INTEGER,conceded INTEGER,team VARCHAR,opponent VARCHAR,venue VARCHAR,position INTEGER)')
+        con.execute("INSERT INTO sample VALUES ('a','A','Men','ODI','1',2020,100,80,true,0,0,0,'India','England','G',1),('a','A','Men','IPL','2',2020,50,30,true,0,0,0,'RCB','MI','G',1)")
+        try:
+            for fmt,expected in (('',100),('IPL',50)):
+                state=dict(dataset='batting',metric='runs',group='player',gender='Men',limit='10',format=fmt)
+                sql=subprocess.check_output(['node','-e',code,json.dumps(state)],cwd=ROOT,text=True).strip()
+                self.assertEqual(con.execute(sql).fetchall()[0][1],expected)
+        finally:con.close()
     def test_arrow_numeric_results(self):
         code="const c=require('./web/studio-core.js');console.log(JSON.stringify([c.normalizeRow({label:'2021',value:'18426',sample:463n}),c.normalizeRow({label:'Unknown',value:null,sample:'0'})]));"
         rows=json.loads(subprocess.check_output(['node','-e',code],cwd=ROOT,text=True))

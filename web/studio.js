@@ -44,7 +44,7 @@
   for(const [id,show] of [['st-opponent',!['careers','matches'].includes(dataset)],['st-venue',dataset!=='careers'],['st-position',dataset==='batting'],['st-innings',['batting','bowling'].includes(dataset)],['st-from',dataset!=='careers'],['st-to',dataset!=='careers'],['st-match',template==='match']])$('#'+id).closest('.st-field').hidden=!show;
   $('#st-match-field').hidden=template!=='match';
   $('#st-metrics').closest('.st-field').hidden=special;$('#st-sort').closest('.st-field').hidden=special;$('#st-group').closest('.st-field').hidden=special;$('#st-minimum').closest('.st-field').hidden=special;
-  $('#st-match').innerHTML=matches.filter(m=>m.gender===seg('st-gender')&&(!seg('st-format')||m.format===seg('st-format'))).slice(0,400).map(m=>`<option value="${esc(m.match_id)}">${esc(m.date+' · '+m.team_1+' v '+m.team_2+' · '+m.format)}</option>`).join('');
+  $('#st-match').innerHTML=matches.filter(m=>m.gender===seg('st-gender')&&(seg('st-format')?m.format===seg('st-format'):m.format!=='IPL')).slice(0,400).map(m=>`<option value="${esc(m.match_id)}">${esc(m.date+' · '+m.team_1+' v '+m.team_2+' · '+m.format)}</option>`).join('');
   $('#studio-players').innerHTML=players.filter(p=>p.gender===seg('st-gender')).map(p=>`<option value="${esc(p.choice)}"></option>`).join('');
  }
  function sortOptions(){const chosen=metricsChosen();const keep=$('#st-sort').value;$('#st-sort').innerHTML=chosen.map(m=>`<option value="${m}">${esc(core.metrics[m])}</option>`).join('')||'<option value="">First measure</option>';$('#st-sort').value=chosen.includes(keep)?keep:(chosen[0]||'');}
@@ -68,7 +68,7 @@
  function restore(saved){saved=core.clean(saved);preset(saved.template||'profile',false);
   if(['Men','Women'].includes(saved.gender))setSeg('st-gender',saved.gender);
   if(core.allowed[saved.dataset])$('#st-dataset').value=saved.dataset;
-  setSeg('st-format',['','Test','ODI','T20I'].includes(saved.format)?saved.format:'');
+  setSeg('st-format',['','Test','ODI','T20I','IPL'].includes(saved.format)?saved.format:'');
   fields();
   playerChips=[];for(const id of core.idList(saved.players)){const p=players.find(x=>x.player_id===id);if(p)playerChips.push(p);}drawChips();
   if(saved.metrics){const want=saved.metrics.split(',');$$('#st-metrics button').forEach(b=>b.setAttribute('aria-pressed',String(want.includes(b.dataset.metric))));}
@@ -82,7 +82,7 @@
    if(s.from&&s.to&&Number(s.from)>Number(s.to))throw new Error('Start year must be no later than end year.');
    let sql;
    if(s.template==='match'){sql=`SELECT date,team_1,team_2,format,gender,winner,result,venue,margin_runs,margin_wickets FROM ${source('matches')} WHERE match_id=${core.quote(s.match)}`;}
-   else if(s.template==='team'){if(!s.team)throw new Error('Choose a team.');sql=`SELECT date,team_1,team_2,winner,result,format,venue FROM ${source('matches')} WHERE (team_1=${core.quote(s.team)} OR team_2=${core.quote(s.team)}) AND gender=${core.quote(s.gender)}${s.format?' AND format='+core.quote(s.format):''}${s.from?' AND year>='+Number(s.from):''}${s.to?' AND year<='+Number(s.to):''} ORDER BY date DESC LIMIT ${Math.min(200,Math.max(1,Number(s.limit)||12))}`;}
+   else if(s.template==='team'){if(!s.team)throw new Error('Choose a team.');sql=`SELECT date,team_1,team_2,winner,result,format,venue FROM ${source('matches')} WHERE (team_1=${core.quote(s.team)} OR team_2=${core.quote(s.team)}) AND gender=${core.quote(s.gender)}${s.format?' AND format='+core.quote(s.format):" AND format<>'IPL'"}${s.from?' AND year>='+Number(s.from):''}${s.to?' AND year<='+Number(s.to):''} ORDER BY date DESC LIMIT ${Math.min(200,Math.max(1,Number(s.limit)||12))}`;}
    else sql=core.sql(s,source(s.dataset));
    $('#sql').textContent=sql;const result=await query(sql);if(token!==generation)return;
    rows=result;current=s;page=0;
@@ -187,13 +187,13 @@
  }
  async function boot(){try{const response=await fetch(lake+'manifest.json',{cache:'no-cache'});if(!response.ok)throw new Error('Dataset catalogue is unavailable');manifest=await response.json();if(!manifest.tables?.bowling_innings)throw new Error('The updated dataset is being published. Please retry shortly');
   const duckdb=await import('https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.33.1-dev57.0/+esm'),bundle=await duckdb.selectBundle(duckdb.getJsDelivrBundles()),worker=await duckdb.createWorker(bundle.mainWorker);db=new duckdb.AsyncDuckDB(new duckdb.ConsoleLogger(),worker);await db.instantiate(bundle.mainModule,bundle.pthreadWorker);conn=await db.connect();
-  players=await query(`SELECT DISTINCT player_id,player,gender,teams FROM ${source('careers')} ORDER BY player`);players=players.map(p=>({...p,choice:p.player+' · '+p.gender+' · '+(p.teams||'')}));
+  players=await query(`SELECT player_id,any_value(player) player,gender,string_agg(DISTINCT teams,' / ') teams FROM ${source('careers')} GROUP BY player_id,gender ORDER BY player`);players=players.map(p=>({...p,choice:p.player+' · '+p.gender+' · '+(p.teams||'')}));
   const teams=await query(`SELECT team_1 team FROM ${source('matches')} UNION SELECT team_2 FROM ${source('matches')} ORDER BY 1`),venues=await query(`SELECT venue, count(*) n FROM ${source('matches')} WHERE venue IS NOT NULL GROUP BY venue ORDER BY n DESC, venue`);
   choices('st-team',teams.map(x=>x.team),'All teams');choices('st-opponent',teams.map(x=>x.team),'All opponents');choices('st-venue',venues.map(x=>x.venue),'All grounds');
   matches=await query(`SELECT match_id,date,team_1,team_2,format,gender FROM ${source('matches')} ORDER BY date DESC`);
   $('#lake-version').textContent='Dataset '+manifest.version+' · match archive '+manifest.match_date_from+' to '+manifest.match_date_to+' · career check '+String(manifest.career_checked_at||'unrecorded').slice(0,10);
   bind();let saved;try{saved=JSON.parse(decodeURIComponent(location.hash.slice(1)));}catch{try{saved=JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(1)))));}catch{}}
-  if(saved)restore(saved);else preset('profile',false);
+  if(saved)restore(saved);else{preset('profile',false);const f=new URLSearchParams(location.search).get('format');if(['Test','ODI','T20I','IPL'].includes(f))setSeg('st-format',f);}
   await render();
  }catch(e){$('#studio-status').textContent='Studio could not load: '+e.message+'. Reload to retry.';}}
  addEventListener('DOMContentLoaded',boot);
