@@ -301,7 +301,9 @@ def toss_table(matches, cards, team, fmt):
     return results_table(f'{fmt} record by toss and batting order', groups, team, first='Situation', with_last=False)
 
 
-def team_format_panel(name, fmt, matches, cards, people, pp, mp, h2h_path):
+def team_format_panel(name, fmt, matches, cards, people, pp, mp, h2h_path, official=None):
+    """`official` maps format to the men's official results line; the headline uses it so it matches
+    the overview table, and the splits below say they come from the recorded matches."""
     key = KEYS[fmt]
     body = f'<section class="fmt-panel fmt-{key}" id="{key}" data-fmt-panel="{key}" aria-label="{esc(name)} {esc(fmt)} record">'
     for gender in GENDERS:
@@ -312,7 +314,14 @@ def team_format_panel(name, fmt, matches, cards, people, pp, mp, h2h_path):
         span = f"{min(m['date'] for m in ms)[:4]} to {max(m['date'] for m in ms)[:4]}"
         body += (f'<header class="pf-fmt-head"><div><p class="eyebrow">{esc(gender.upper())} · {esc(fmt.upper())} · {esc(span)}</p>'
                  f'<h2>{esc(name)} {esc(gender.lower())} in {esc(fmt)}s</h2></div>{form_chips(rec["form"])}</header>')
-        body += hero([('Played', n(rec['played'])), ('Won', n(rec['won'])), ('Lost', n(rec['lost'])), ('Drawn / tied', n(rec['drawn'] + rec['tied'])), ('No result', n(rec['nr'])), ('Win %', r2(rec['win_pct'], rec['played']))], f'{name} {gender} {fmt} record')
+        line = (official or {}).get(fmt) if gender == 'Men' else None
+        if line and line.get('played'):
+            drawn = (line.get('draw') or 0) + (line.get('tied') or 0)
+            body += hero([('Played', n(line['played'])), ('Won', n(line['won'])), ('Lost', n(line['lost'])), ('Drawn / tied', n(drawn)), ('No result', n(line.get('nr') or 0)), ('Win %', f"{100 * line['won'] / line['played']:.2f}")], f'{name} {gender} {fmt} official results')
+            if line['played'] != rec['played']:
+                body += f'<p class="pf-fine">Official results above. The tables below use the {rec["played"]:,} {esc(fmt)}s in these scorecards and results, which can include matches the official count leaves out, such as ones abandoned without a ball bowled.</p>'
+        else:
+            body += hero([('Played', n(rec['played'])), ('Won', n(rec['won'])), ('Lost', n(rec['lost'])), ('Drawn / tied', n(rec['drawn'] + rec['tied'])), ('No result', n(rec['nr'])), ('Win %', r2(rec['win_pct'], rec['played']))], f'{name} {gender} {fmt} record')
         opp = group_matches(ms, lambda m: next((x for x in m['teams'] if x != name), ''), sort_by_size=True)
         opp_rows = [(f'<a href="{esc(h2h_path(name, o))}">{esc(o)}</a>', group) for o, group in opp]
         body += f'<section class="panel pf-block"><h2>{esc(gender)} {esc(fmt)} results by opponent</h2>{results_table(f"{name} {gender} {fmt} results by opponent", opp_rows, name, first="Opponent")}</section>'

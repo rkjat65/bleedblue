@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'_site'
 def main():
     manifest=json.loads((SITE/'build-manifest.json').read_text(encoding='utf-8'))
-    paths=manifest['indexable'];examples=['/','/players/','/matches/','/records/','/compare/','/studio/','/data-coverage/','/datasets/','/research/']
+    paths=manifest['indexable'];examples=['/','/players/','/matches/','/records/','/compare/','/studio/','/data-coverage/','/research/']
     for prefix in ('/players/','/records/men/','/records/women/','/research/','/compare/','/questions/how-many-','/teams/','/grounds/','/world-cup/'):
         examples.extend([p for p in paths if p.startswith(prefix) and p!=prefix][:2])
     for path in set(examples):
@@ -42,7 +42,6 @@ def main():
             assert 'career-glance' in text or 'venue-conditions' in text,path
         if path.startswith('/world-cup/') and path!='/world-cup/':
             assert 'Official timeline' in text or 'Most titles' in text,path
-        if path=='/datasets/':assert schema['@type']=='Dataset' and len(schema['distribution'])>=4
     report={'passed':True,'representative_pages_checked':len(set(examples)),'sitemap_indexable_pages':len(paths),'titles_unique':len(set(p['title'] for p in paths.values()))==len(paths),'indexing_status':'Unknown: Google Search Console access required','field_core_web_vitals':'Not measured: requires real visitor data','advertising':'No ad network enabled; no audience claims'}
     (SITE/'seo-report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report,indent=2))

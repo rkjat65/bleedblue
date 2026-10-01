@@ -70,7 +70,7 @@ def dates(checked):
 
 
 def actions():
-    return '<div class="actions"><button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>'
+    return ''
 
 
 def card(spec, category):
@@ -246,7 +246,7 @@ def scoring_article(cards, checked):
             change = round(finish - start, 2)
             body += '<p>Using periods with at least 100 included innings, the ' + esc(first[0]) + ' sample scores at <strong>' + num(start) + '</strong> runs per 100 balls and the ' + esc(last[0]) + ' sample at <strong>' + num(finish) + '</strong>, a change of ' + num(change) + ' runs per 100 balls. These are the first and last qualifying archive periods, not estimates of every ODI played in those decades.</p>'
     body += '<h2>Why the missing-data column matters</h2><p>Discarding only the batters with missing balls would keep some of an innings’ runs and remove part of its denominator. That can produce a misleading rate. Here the entire affected innings is excluded. Older scorecards can be less complete, so the surviving sample can still be selective.</p><p>Team extras do not appear in the numerator. Reduced-overs and unfinished innings remain when their batting figures are usable. The current decade is partial. Differences can reflect the mix of teams, venues, innings lengths and conditions; this table does not identify which factor caused a change.</p>'
-    body += scope_box('Published senior ODI scorecards between the site’s twelve full-member countries, grouped by match-start decade and gender. These are archive samples, not the independent full career records.', ['In the match archive select ODI and one gender; group scorecards by the first three digits of the match year.', 'Ignore super overs and innings without batting. Exclude an innings if any batter lacks runs or balls, or has positive runs recorded against zero balls.', 'For retained innings, sum all batter runs and all balls faced. Calculate 100 × summed runs / summed balls. Use the coverage counts above when comparing decades.'])
+    body += scope_box('Published senior ODI scorecards, every official ODI with a scorecard, grouped by match-start decade and gender. These are archive samples, not the independent full career records.', ['In the match archive select ODI and one gender; group scorecards by the first three digits of the match year.', 'Ignore super overs and innings without batting. Exclude an innings if any batter lacks runs or balls, or has positive runs recorded against zero balls.', 'For retained innings, sum all batter runs and all balls faced. Calculate 100 × summed runs / summed balls. Use the coverage counts above when comparing decades.'])
     return article('/insights/odi-scoring-rates-by-decade/', title, desc, body, checked)
 
 
@@ -289,7 +289,7 @@ def draw_article(matches, checked):
         body += horizontal_chart([(period, rate(v['draws'], v['completed'], 100)) for period, v in rows], gender + ' Test draw percentage among completed results', '%')
         body += table(['Decade', 'Recorded Tests', 'Winner', 'Draw', 'Tie', 'Other/no result', 'Draw %'], [[esc(period)] + [num(v[k]) for k in ('matches', 'decided', 'draws', 'ties', 'no_result')] + [num(rate(v['draws'], v['completed'], 100))] for period, v in rows], gender + ' Test result mix by decade')
     body += '<h2>What the comparison can establish</h2><p>The table describes the result distribution in the published archive. More scheduled matches can produce more draws even when the draw share is lower. Women’s decade samples can be much smaller, so a single result may move their percentages substantially.</p><p>A result label does not say how much play was lost or whether a pitch, tactical choice or weather determined the outcome. Those explanations need additional evidence. The current decade is unfinished; its percentage can change with each newly added result.</p>'
-    body += scope_box('Published official Tests between the twelve full-member countries, separated by gender and match-start decade. No-result and unknown outcomes are displayed but excluded from the draw-percentage denominator.', [link('/matches/?format=Test', 'Open Test match results') + ' and choose a gender.', 'Count matches with a winner, drawn result or tied result. Add those counts to obtain the denominator.', 'Divide draws by that denominator and multiply by 100. A period without a completed result has no applicable draw percentage.'])
+    body += scope_box('Published official Tests, separated by gender and match-start decade. No-result and unknown outcomes are displayed but excluded from the draw-percentage denominator.', [link('/matches/?format=Test', 'Open Test match results') + ' and choose a gender.', 'Count matches with a winner, drawn result or tied result. Add those counts to obtain the denominator.', 'Divide draws by that denominator and multiply by 100. A period without a completed result has no applicable draw percentage.'])
     return article('/insights/test-draws-by-decade/', title, desc, body, checked)
 
 
@@ -298,8 +298,8 @@ def rivalry_article(matches, mp, gp, checked):
     if not selected:
         return None
     title = 'India vs Australia: one rivalry, six separate international records'
-    desc = 'India–Australia results separated into men’s and women’s Tests, ODIs and T20Is, with draws, ties and sample sizes.'
-    body = '<section class="research-takeaway"><span class="eyebrow">THE FINDING</span><p>The published India–Australia archive contains <strong>' + num(len(selected)) + '</strong> match records. Combining all six format-and-gender groups into a single win figure hides their different schedules and result patterns. The table keeps each group separate.</p></section>'
+    desc = 'India v Australia results separated into men’s and women’s Tests, ODIs and T20Is, with draws, ties and sample sizes.'
+    body = '<section class="research-takeaway"><span class="eyebrow">THE FINDING</span><p>The published India v Australia archive contains <strong>' + num(len(selected)) + '</strong> match records. Combining all six format-and-gender groups into a single win figure hides their different schedules and result patterns. The table keeps each group separate.</p></section>'
     rows = []
     for gender in ('Men', 'Women'):
         for fmt in FORMATS:
@@ -308,7 +308,7 @@ def rivalry_article(matches, mp, gp, checked):
                 continue
             c = outcome_counts(ms, 'India')
             rows.append([esc(gender + ' · ' + fmt), num(c['matches']), num(c['wins']), num(c['losses']), num(c['draws']), num(c['ties']), num(c['no_result']), num(rate(c['wins'], c['decided'], 100))])
-    body += table(['Group', 'Matches', 'India wins', 'Australia wins', 'Draws', 'Ties', 'Other/no result', 'India share of wins %'], rows, 'India–Australia international match results by format and gender')
+    body += table(['Group', 'Matches', 'India wins', 'Australia wins', 'Draws', 'Ties', 'Other/no result', 'India share of wins %'], rows, 'India v Australia international match results by format and gender')
     body += '<h2>How to read a share of wins</h2><p>India’s share of wins divides India wins by all matches with a recorded winner in that group. It excludes draws, ties and other outcomes. A Test win share can therefore differ from wins divided by all Tests. The full counts remain visible so either denominator can be reconstructed.</p><p>This record includes the available matches in the site’s published scope. It does not adjust for home advantage or identify a stronger team today. Start with a format and gender, inspect the time span, then use the linked scorecards to examine a narrower period.</p>'
     first, last = min(selected, key=lambda m: m['date']), max(selected, key=lambda m: m['date'])
     body += '<h2>Open the endpoints</h2><div class="research-endpoints"><div><span>EARLIEST PUBLISHED RECORD</span>' + link(mp[first['id']], first['date'] + ' · ' + first['gender'] + ' ' + first['format']) + '</div><div><span>LATEST PUBLISHED RECORD</span>' + link(mp[last['id']], last['date'] + ' · ' + last['gender'] + ' ' + last['format']) + '</div></div>'
@@ -338,7 +338,7 @@ def entity_context(kind, name, matches, mp):
     if kind == 'grounds':
         body += '<p class="note">Result frequency alone does not establish whether a ground favours batting, bowling or chasing. Venue aliases are kept as supplied by the verified match records; differently named entries may describe the same physical ground.</p>'
     else:
-        body += '<p class="note">All opponent countries shown here are in the publication’s twelve-team scope. Player career records can include additional recognized international opponents.</p>'
+        body += '<p class="note">Player career records can include additional recognized international opponents.</p>'
     earliest = min(matches, key=lambda m: (m['date'], m['id']))
     latest = max(matches, key=lambda m: (m['date'], m['id']))
     body += '<div class="research-endpoints"><div><span>EARLIEST PUBLISHED</span>' + link(mp[earliest['id']], earliest['date'] + ' · ' + ' v '.join(earliest['teams'])) + '</div><div><span>LATEST PUBLISHED</span>' + link(mp[latest['id']], latest['date'] + ' · ' + ' v '.join(latest['teams'])) + '</div></div></section>'

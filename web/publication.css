@@ -9,6 +9,6 @@
 .sb-facts{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 0;font-size:12px;color:var(--muted)}.sb-facts b{color:var(--ink);font-weight:700}.sb-facts a{font-weight:700}
 .innings-heading small{display:block;margin-top:4px;font-size:12px;font-weight:600;color:var(--muted)}
 .innings-summary small{font-weight:500;color:var(--muted)}
-.fow{margin:0;padding:10px 24px;font-size:12px;line-height:1.9;color:var(--muted);border-top:1px solid var(--border)}.fow span{white-space:nowrap;margin-right:12px}.fow b{color:var(--ink);font-variant-numeric:tabular-nums}.fow-label{display:block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.fow{margin:0;padding:10px 24px;font-size:12px;line-height:1.9;color:var(--muted);border-top:1px solid var(--border)}.fow span{display:inline-block;white-space:nowrap;margin-right:12px}.fow b{color:var(--ink);font-variant-numeric:tabular-nums}.fow-label{display:block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
 .dnb{margin:0;padding:8px 24px 10px;font-size:12px;color:var(--muted);border-top:1px solid var(--border)}.dnb a{font-weight:650}
 @media(max-width:750px){.fow,.dnb{padding-left:16px;padding-right:16px}.fow span{white-space:normal}}

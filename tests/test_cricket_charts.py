@@ -100,7 +100,7 @@ class CricketChartTests(unittest.TestCase):
     def test_zero_wickets_do_not_divide_by_zero(self):
         rows = [{'date': f'2020-01-0{i}', 'format': 'ODI', 'wickets': 0, 'legal': 24, 'conceded': 20, 'opponent': 'Australia'} for i in range(1, 6)]
         self.assertNotIn('Error', cw.player_lab(rows, 'Bowler'))
-        self.assertEqual(cw.trajectory(rows, 'wickets'), '')
+        self.assertEqual(cw.form_line(rows, 'wickets'), '')
 
 
 if __name__ == '__main__':

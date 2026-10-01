@@ -45,7 +45,7 @@ class BodyTests(unittest.TestCase):
         self.assertIn('data-fmt-panel="odi"', body)
         self.assertIn('data-fmt-panel="test"', body)
         self.assertIn('B Two did not play Tests', body)
-        self.assertIn('runs by year, cumulative', body)
+        self.assertIn('runs in each year', body)
         self.assertIn('ODI batting average by opponent', body)
         self.assertTrue(any('ODI runs' in q for q, _ in faq))
         self.assertNotIn('—', re.sub(r'<[^>]+>', '', body))

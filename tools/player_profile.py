@@ -491,7 +491,7 @@ def player_faq(player, urls=None, name_slug=None):
         rows.append(f'<div><dt>{question}</dt><dd>{esc(spec["answer"])}</dd></div>')
     markup = (
         f'<section class="panel player-faq" id="player-questions">'
-        f'<h2>Questions fans ask about {esc(player["name"])}</h2>'
+        f'<h2>Frequently asked questions about {esc(player["name"])}</h2>'
         f'<p class="muted">Answers use official career figures. Linked questions open a dedicated, crawlable page for that search.</p>'
         f'<dl>{"".join(rows)}</dl></section>'
     )

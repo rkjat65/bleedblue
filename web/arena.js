@@ -1,5 +1,5 @@
-/* Arena layer: reveal motion, count-ups, chart drawing, match-centre countdowns,
-   section tracking and the quick-search palette. Pages are complete without it. */
+/* Arena layer: reveal motion, count-ups, chart drawing, match-centre countdowns
+   and the quick-search palette. Pages are complete without it. */
 (() => {
   'use strict';
   const $ = (s, root = document) => root.querySelector(s);
@@ -76,7 +76,7 @@
   });
 
   /* Reveal blocks that start below the fold; anything already visible stays put. */
-  const blocks = $$('main > :is(section, .panel, .grid, .stats, .table-wrap, figure, div), .arena-band .band-cell, .rc-grid > li, .bento-tile, .race-panel, .home-insight-card, .format-card, .grid > .feature-card');
+  const blocks = $$('main > :is(section, .panel, .grid, .stats, .table-wrap, figure, div), .rc-grid > li, .bento-tile, .race-panel, .home-insight-card, .format-card, .grid > .feature-card');
   if (!reduce && IO) {
     root.classList.add('arena-js');
     const fold = innerHeight * 0.92;
@@ -84,7 +84,7 @@
       if (e.isIntersecting) { e.target.classList.add('in'); reveal.unobserve(e.target); }
     }), {rootMargin: '0px 0px -8% 0px'});
     blocks.forEach(el => {
-      if (el.getBoundingClientRect().top < fold || el.closest('.cricket-hero')) return;
+      if (el.getBoundingClientRect().top < fold || el.closest('.home-hero')) return;
       const sibs = el.parentElement ? [...el.parentElement.children] : [];
       el.style.setProperty('--rv-delay', `${Math.min(sibs.indexOf(el), 6) * 70}ms`);
       el.classList.add('rv');
@@ -98,18 +98,6 @@
       if (e.isIntersecting) { countUp(e.target); count.unobserve(e.target); }
     }), {threshold: 0.6});
     counters.forEach(el => count.observe(el));
-  }
-
-  /* Hero: pause the SMIL delivery with the existing motion toggle and when off screen. */
-  const hero = $('[data-cricket-hero]');
-  const delivery = $('.hero-delivery');
-  if (hero && delivery && delivery.pauseAnimations) {
-    let visible = true;
-    const sync = () => (hero.classList.contains('motion-paused') || !visible || reduce) ? delivery.pauseAnimations() : delivery.unpauseAnimations();
-    new MutationObserver(sync).observe(hero, {attributes: true, attributeFilter: ['class']});
-    if (IO) new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }).observe(hero);
-    document.addEventListener('visibilitychange', () => { visible = !document.hidden; sync(); });
-    sync();
   }
 
   /* Match centre: countdowns to IST start times and rail arrows. */
@@ -133,27 +121,6 @@
     const step = dir => rail.scrollBy({left: dir * (rail.clientWidth * 0.8), behavior: reduce ? 'auto' : 'smooth'});
     $('[data-mc-prev]')?.addEventListener('click', () => step(-1));
     $('[data-mc-next]')?.addEventListener('click', () => step(1));
-  }
-
-  /* Section jump bar highlights the section in view. */
-  const jump = $('[data-arena-jump]');
-  if (jump) {
-    const links = $$('a', jump);
-    const targets = links.map(a => document.getElementById(a.hash.slice(1)));
-    let current = -1, queued = false;
-    const spy = () => {
-      queued = false;
-      const line = innerHeight * 0.35;
-      let index = -1;
-      targets.forEach((t, i) => { if (t && t.getBoundingClientRect().top <= line) index = i; });
-      if (index === current) return;
-      current = index;
-      links.forEach((a, i) => a.classList.toggle('is-active', i === index));
-      const on = links[index];
-      if (on) { const track = on.parentElement; track.scrollTo({left: on.offsetLeft - (track.clientWidth - on.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth'}); }
-    };
-    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(spy); } }, {passive: true});
-    spy();
   }
 
   /* Leaderboard tabs on narrow screens; both boards show side by side on wide screens. */
@@ -191,124 +158,6 @@
     labBody.after(more);
   }
 
-  /* Section guide: every page with 3-14 real sections gets numbered headings, a desktop
-     rail, a mobile "section pill" and a short cue each time a new section takes over. */
-  let guide = null, guideAbort = null;
-  function buildGuide() {
-    guideAbort?.abort();
-    guideAbort = new AbortController();
-    const signal = guideAbort.signal;
-    $$('.sec-rail, .sec-pill, .sec-cue').forEach(el => el.remove());
-    $$('.sec-num').forEach(el => el.remove());
-    $$('.sec-head').forEach(el => el.classList.remove('sec-head', 'sec-live'));
-    const jumpLinks = $$('[data-arena-jump] a');
-    let heads;
-    if (jumpLinks.length) {
-      heads = jumpLinks.map(a => {
-        const target = document.getElementById(a.hash.slice(1));
-        return target && {el: target, label: a.textContent.trim()};
-      }).filter(Boolean);
-    } else {
-      const h1 = ($('main h1')?.textContent || '').trim();
-      heads = $$('main h2').filter(h => !h.closest('a, .feature-card, table, .palette, .race-panel, .cw-lab-grid, dialog, details:not([open])') && h.offsetParent !== null)
-        .map(h => {
-          let label = h.textContent.replace(/\s+/g, ' ').trim();
-          if (h1 && label.startsWith(h1 + ':')) label = label.slice(h1.length + 1).trim();
-          label = label.charAt(0).toUpperCase() + label.slice(1);
-          return {el: h, label: label.length > 34 ? label.slice(0, 32).trimEnd() + '…' : label};
-        });
-    }
-    if (heads.length < 3 || heads.length > 14) return null;
-    const pad = n => String(n).padStart(2, '0');
-    const slug = t => t.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'section';
-    const used = new Set();
-    heads.forEach((h, i) => {
-      if (!h.el.id) { let id = 'sec-' + slug(h.label); while (used.has(id) || document.getElementById(id)) id += '-' + i; h.el.id = id; }
-      used.add(h.el.id);
-      h.mark = h.el.tagName === 'H2' ? h.el : $('h2', h.el);
-      h.mark?.classList.add('sec-head');
-      h.el.style.scrollMarginTop = '130px';
-      if (!jumpLinks.length && h.el.tagName === 'H2' && !$('.sec-num', h.el)) h.el.insertAdjacentHTML('afterbegin', `<span class="sec-num" aria-hidden="true">${pad(i + 1)}</span>`);
-    });
-
-    const total = pad(heads.length);
-    const railEl = document.createElement('nav');
-    railEl.className = 'sec-rail';
-    railEl.setAttribute('aria-label', 'Sections on this page');
-    railEl.innerHTML = `<div class="sec-rail-track"><i class="sec-rail-fill"></i></div><ol>${heads.map((h, i) => `<li><a href="#${h.el.id}" data-i="${i}"><span class="sec-rail-num">${pad(i + 1)}</span><span class="sec-rail-label">${h.label.replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]))}</span></a></li>`).join('')}</ol><button type="button" class="sec-top" aria-label="Back to top">↑</button>`;
-    document.body.append(railEl);
-
-    const pill = document.createElement('div');
-    pill.className = 'sec-pill';
-    pill.hidden = Boolean(jumpLinks.length);
-    pill.innerHTML = `<button type="button" class="sec-pill-main" aria-expanded="false"><span class="sec-pill-ball" aria-hidden="true"></span><span class="sec-pill-count"><b>01</b>/${total}</span><span class="sec-pill-label"></span></button><button type="button" class="sec-pill-next" aria-label="Next section">↓</button><div class="sec-sheet" hidden><p>On this page</p><ol>${heads.map((h, i) => `<li><a href="#${h.el.id}" data-i="${i}"><span>${pad(i + 1)}</span>${railEl.querySelectorAll('.sec-rail-label')[i].innerHTML}</a></li>`).join('')}</ol></div>`;
-    document.body.append(pill);
-
-    const cue = document.createElement('div');
-    cue.className = 'sec-cue';
-    cue.setAttribute('aria-hidden', 'true');
-    document.body.append(cue);
-
-    const railLinks = $$('ol a', railEl), sheetLinks = $$('.sec-sheet a', pill), sheet = $('.sec-sheet', pill), mainBtn = $('.sec-pill-main', pill);
-    let current = -2, cueTimer, started = false;
-    const go = i => { const h = heads[Math.max(0, Math.min(heads.length - 1, i))]; h.el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'}); };
-    const setSheet = open => { sheet.hidden = !open; mainBtn.setAttribute('aria-expanded', String(open)); };
-    [...railLinks, ...sheetLinks].forEach(a => a.addEventListener('click', e => { e.preventDefault(); setSheet(false); go(+a.dataset.i); history.replaceState(null, '', a.hash); }));
-    mainBtn.addEventListener('click', () => setSheet(sheet.hidden));
-    $('.sec-pill-next', pill).addEventListener('click', () => current >= heads.length - 1 ? scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}) : go(current + 1));
-    $('.sec-top', railEl).addEventListener('click', () => scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}));
-    document.addEventListener('click', e => { if (!pill.contains(e.target)) setSheet(false); }, {signal});
-
-    function update() {
-      const line = innerHeight * 0.38;
-      let index = -1;
-      heads.forEach((h, i) => { if (h.el.getBoundingClientRect().top <= line) index = i; });
-      const first = heads[0].el.getBoundingClientRect().top + scrollY;
-      const last = heads[heads.length - 1].el.getBoundingClientRect().top + scrollY;
-      const span = Math.max(1, last - first);
-      railEl.style.setProperty('--fill', Math.max(0, Math.min(1, (scrollY + line - first) / span)).toFixed(3));
-      const visible = scrollY > innerHeight * 0.5;
-      railEl.classList.toggle('is-on', visible);
-      pill.classList.toggle('is-on', visible);
-      if (index === current) return;
-      const down = index > current;
-      current = index;
-      railLinks.forEach((a, i) => { a.classList.toggle('is-active', i === index); a.classList.toggle('is-done', i < index); });
-      sheetLinks.forEach((a, i) => a.classList.toggle('is-active', i === index));
-      const shown = Math.max(0, index);
-      $('.sec-pill-count b', pill).textContent = pad(shown + 1);
-      const label = $('.sec-pill-label', pill);
-      label.textContent = heads[shown].label;
-      pill.classList.remove('flip'); void pill.offsetWidth; pill.classList.add('flip');
-      $('.sec-pill-next', pill).textContent = index >= heads.length - 1 ? '↑' : '↓';
-      $('.sec-pill-next', pill).setAttribute('aria-label', index >= heads.length - 1 ? 'Back to top' : 'Next section: ' + (heads[index + 1]?.label || ''));
-      if (index >= 0) {
-        heads[index].mark?.classList.add('sec-live');
-        if (started && !reduce) {
-          const next = heads[index + 1];
-          cue.innerHTML = `<span class="sec-cue-ball"></span><span class="sec-cue-num">${pad(index + 1)}<small>/${total}</small></span><span class="sec-cue-text"><b>${railLinks[index].querySelector('.sec-rail-label').innerHTML}</b>${next ? `<small>Next · ${railLinks[index + 1].querySelector('.sec-rail-label').innerHTML}</small>` : '<small>Last section</small>'}</span>`;
-          cue.className = 'sec-cue is-on ' + (down ? 'from-below' : 'from-above');
-          clearTimeout(cueTimer);
-          cueTimer = setTimeout(() => cue.classList.remove('is-on'), 1900);
-        }
-      }
-      started = true;
-    }
-    let queued = false;
-    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; update(); }); } }, {passive: true, signal});
-    addEventListener('resize', update, {signal});
-    update();
-    document.addEventListener('keydown', e => {
-      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
-      if (typing || e.metaKey || e.ctrlKey || e.altKey || (palette && !palette.hidden)) return;
-      if (e.key === 'j') { e.preventDefault(); go(current + 1); }
-      else if (e.key === 'k') { e.preventDefault(); go(current - 1); }
-      else if (e.key === 'Escape') setSheet(false);
-    }, {signal});
-    return heads;
-  }
-  guide = buildGuide();
-  document.addEventListener('cw:format', () => { guide = buildGuide(); });
 
   /* Recently viewed profiles, scorecards and team pages feed the palette's empty state. */
   const RECENT = 'cw-recent';
@@ -354,7 +203,7 @@
       + (q.trim() ? `<li><a href="/search/?q=${encodeURIComponent(q.trim())}" role="option" aria-selected="${!hits.length}"><span>Search all results for “${esc(q.trim())}”</span><small>Enter</small></a></li>` : '');
     if (!q.trim()) {
       const recent = readRecent().filter(r => r.url !== location.pathname);
-      const sections = guide || [];
+      const sections = [];
       list.innerHTML = (recent.length ? '<li class="pal-group">Recently viewed</li>' + recent.map(r => `<li><a href="${esc(r.url)}" role="option"><span>${esc(r.title)}</span><small>${esc(r.kind)}</small></a></li>`).join('') : '')
         + (sections.length ? '<li class="pal-group">On this page</li>' + sections.map((h, i) => `<li><a href="#${esc(h.el.id)}" role="option" data-close><span>${String(i + 1).padStart(2, '0')} · ${esc(h.label)}</span><small>Section</small></a></li>`).join('') : '')
         + (!recent.length && !sections.length ? '<li class="pal-empty">Type a player, team, ground or series.</li>' : '');

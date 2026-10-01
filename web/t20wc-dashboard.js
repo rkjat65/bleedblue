@@ -22,9 +22,9 @@
     const batting = new Map();
     const bowling = new Map();
     const phaseDefs = [
-      ['Powerplay', 'Overs 1–6', over => over < 6],
-      ['Middle overs', 'Overs 7–15', over => over >= 6 && over < 15],
-      ['Death overs', 'Overs 16–20', over => over >= 15],
+      ['Powerplay', 'Overs 1 to 6', over => over < 6],
+      ['Middle overs', 'Overs 7 to 15', over => over >= 6 && over < 15],
+      ['Death overs', 'Overs 16 to 20', over => over >= 15],
     ];
     const phases = phaseDefs.map(([name, label]) => ({ name, label, runs: 0, balls: 0, dots: 0, boundaries: 0, wickets: 0 }));
     const batterInnings = new Map();

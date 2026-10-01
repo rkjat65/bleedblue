@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent.parent
 sys.path.insert(0,str(ROOT/'tools'))
-from cricket_scope import publication_data,load_cards,complete_career_counts,FULL_MEMBERS
+from cricket_scope import publication_data,load_cards,complete_career_counts,REPRESENTATIVE
 from backfill_free_data import normalize_card
 from build_site import rate,stat_value
 from import_careers import CLASSES,parse_page
@@ -20,11 +20,17 @@ class ScopeTests(unittest.TestCase):
         for p in cls.careers['players']:cls.people.setdefault(p['id'],{}).update(espn_id=p['espn_id'],career=p['formats'])
         cls.cards=load_cards(ROOT,cls.archive['matches']+cls.history['matches'],cls.people)
 
-    def test_only_full_member_recognized_matches(self):
+    def test_every_official_international_is_published(self):
         official=json.loads((ROOT/'data/official_match_registry.json').read_text(encoding='utf8'))['matches']
-        for m in self.archive['matches']+self.history['matches']:
-            self.assertTrue(set(m['teams'])<=FULL_MEMBERS)
+        published=self.archive['matches']+self.history['matches']
+        self.assertEqual({m['id'] for m in published},set(official))
+        for m in published:
+            self.assertEqual(len(m['teams']),2)
             self.assertEqual(CLASSES[official[m['id']]],(m['format'],m['gender']))
+
+    def test_representative_sides_are_not_a_nationality(self):
+        for p in self.careers['players']:
+            self.assertFalse(set(p['teams'])&REPRESENTATIVE,p['name'])
 
     def test_representative_team_does_not_hide_national_career(self):
         rashid=next(p for p in self.careers['players'] if p['espn_id']=='793463')

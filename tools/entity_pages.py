@@ -180,6 +180,42 @@ def ground_masthead(name, totals, facts=None, actions=''):
     )
 
 
+def team_masthead(name, totals, actions=''):
+    """Masthead for a national team: flag, span and the headline results, men and women together."""
+    span = f'{totals["first"][:4]} to {totals["last"][:4]}' if totals.get('first') and totals.get('last') else ''
+    sub = ' · '.join(part for part in (f'{totals["matches"]:,} recorded internationals', span, _format_list(totals['formats'])) if part)
+    chips = [('Won', f'{totals["won"]:,}'), ('Lost', f'{totals["lost"]:,}'), ('Drawn, tied, no result', f'{totals["other"]:,}')]
+    if totals['matches']:
+        chips.append(('Win %', f'{100 * totals["won"] / totals["matches"]:.1f}%'))
+    chips.append(('Men and women', f'{totals["men"]:,} and {totals["women"]:,}'))
+    chip_html = ''.join(f'<div class="gr-fact"><span>{esc(label)}</span><strong>{esc(value)}</strong></div>' for label, value in chips)
+    flag = f'<img class="team-mast-flag" src="/assets/flags/{slug(name)}.svg" width="56" height="40" alt="">'
+    return (
+        f'<header class="pf-mast gr-mast"><div class="pf-id"><p class="eyebrow">NATIONAL TEAM · MEN AND WOMEN</p><h1>{flag}{esc(name)}</h1>'
+        f'<p class="pf-sub">{esc(sub)}</p><div class="gr-facts">{chip_html}</div>' + actions + '</div></header>'
+    )
+
+
+def team_index_card(name, url, totals, counts, compact=False):
+    """Directory card: flag, record, win % and the format mix as one stacked bar. Compact cards
+    (associates) keep the flag, figures and bar only."""
+    rate = f'{100 * totals["won"] / totals["matches"]:.1f}%' if totals['matches'] else '-'
+    span = f'{totals["first"][:4]} to {totals["last"][:4]}' if totals.get('first') and totals.get('last') else ''
+    total = sum(counts.values()) or 1
+    bar = ''.join(f'<i class="fmt-{KEYS[f]}" style="width:{100 * counts[f] / total:.1f}%" title="{f}: {counts[f]:,}"></i>' for f in FORMATS if counts.get(f))
+    legend = ''.join(f'<span class="fmt-{KEYS[f]}"><i></i>{f} <b>{counts[f]:,}</b></span>' for f in FORMATS if counts.get(f))
+    if compact:
+        return (f'<a class="team-card is-compact" href="{esc(url)}" data-team="{esc(name.lower())}"><div class="tc-head"><img src="/assets/flags/{slug(name)}.svg" width="40" height="28" alt="" loading="lazy">'
+                f'<div><h2>{esc(name)}</h2><small>{totals["matches"]:,} matches · {esc(span)}</small></div><div class="tc-rate"><strong>{rate}</strong><span>won</span></div></div>'
+                f'<div class="tc-bar" aria-hidden="true">{bar}</div></a>')
+    return (f'<a class="team-card" href="{esc(url)}" data-team="{esc(name.lower())}"><div class="tc-head"><img src="/assets/flags/{slug(name)}.svg" width="48" height="34" alt="">'
+            f'<div><h2>{esc(name)}</h2><small>{totals["matches"]:,} matches</small><small>{esc(span)}</small></div>'
+            f'<div class="tc-rate"><strong>{rate}</strong><span>won</span></div></div>'
+            f'<div class="tc-bar" aria-hidden="true">{bar}</div><div class="tc-legend">{legend}</div>'
+            f'<dl class="tc-record"><div><dt>Won</dt><dd>{totals["won"]:,}</dd></div><div><dt>Lost</dt><dd>{totals["lost"]:,}</dd></div>'
+            f'<div><dt>Draw, tie, NR</dt><dd>{totals["other"]:,}</dd></div></dl></a>')
+
+
 def team_intro(name, totals):
     span = ''
     if totals['first'] and totals['last']:
@@ -263,7 +299,7 @@ def ground_glance(name, totals):
         cards += _card(
             f"{row['gender']}'s {row['format']}",
             f'{row["matches"]:,}',
-            'matches',
+            'match' if row['matches'] == 1 else 'matches',
             [
                 ('From', row['first'][:4]),
                 ('To', row['last'][:4]),
@@ -310,7 +346,7 @@ def team_faq(name, totals, team_url):
     html_items = ''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in items)
     markup = (
         f'<section class="panel player-faq" id="team-questions">'
-        f'<h2>Questions fans ask about {esc(name)}</h2>'
+        f'<h2>Frequently asked questions about {esc(name)}</h2>'
         f'<p class="muted">Answers use recorded match results on this page. Open a scorecard for innings detail.</p>'
         f'<dl>{html_items}</dl></section>'
     )
@@ -343,7 +379,7 @@ def ground_faq(name, totals):
     html_items = ''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in items)
     markup = (
         f'<section class="panel player-faq" id="ground-questions">'
-        f'<h2>Questions fans ask about {esc(name)}</h2>'
+        f'<h2>Frequently asked questions about {esc(name)}</h2>'
         f'<p class="muted">Answers use recorded matches at this venue. Innings averages appear in the venue charts above.</p>'
         f'<dl>{html_items}</dl></section>'
     )

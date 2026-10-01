@@ -7,6 +7,15 @@ def national_match(match):
 def national_player(player):
     return bool(FULL_MEMBERS.intersection(player['teams']))
 
+# Representative sides play official internationals but are never a player's nationality.
+REPRESENTATIVE = frozenset({'ICC World XI', 'World XI', 'World', 'Asia XI', 'Africa XI', 'International XI'})
+
+
+def published_match(match, official):
+    """Every official international between two sides, full member or associate: a player's
+    scorecards must add up to the official career, which counts them all."""
+    return len(match['teams']) == 2 and match['id'] in official
+
 
 def complete_career_counts(cards,people):
     """Derive only when every career batting innings and dismissal reconciles."""
@@ -60,15 +69,34 @@ def load_cards(root, matches, people):
     identities={p['espn_id']:pid for pid,p in people.items() if p.get('espn_id')}
     registry=root/'data/identity_registry.json'
     if registry.exists():identities.update({eid:pid for eid,pid in json.loads(registry.read_text(encoding='utf-8'))['espn_to_id'].items() if pid in people})
-    def team_name(name):return re.sub(r'\s*(?:Women|Wmn|\(Women\))$','',name).strip()
+    def team_name(name):return re.sub(r'\s*(?:Women|Wmn|\(Women\))$','',name).strip().replace(' & ',' and ')
+    # The source sometimes gives two people one id (Pakistan's and Bahrain's Asif Ali). A row outside
+    # the mapped player's career years moves to the one same-named player whose career covers it.
+    namesakes={}
+    for pid,p in people.items():
+        if p.get('career') and p.get('first') and p.get('last'):namesakes.setdefault((p.get('name'),p.get('gender')),[]).append(pid)
+    def owner(pid,team,year):
+        p=people.get(pid)
+        if not p or not p.get('career') or not p.get('first') or str(p['first'])[:4]<=year<=str(p['last'])[:4]:return pid
+        others=[q for q in namesakes.get((p.get('name'),p.get('gender')),[]) if q!=pid and str(people[q]['first'])[:4]<=year<=str(people[q]['last'])[:4] and team in people[q].get('teams',[])]
+        if len(others)==1:return others[0]
+        # Outside the official career with no namesake to take it: someone else, shown unlinked.
+        return pid+'~'+re.sub(r'[^a-z]+','-',team.lower())
+    # World Cup archives (tools/import_world_cup_data.py): extra scorecards in the historical shape,
+    # and over-by-over runs for innings the scorecards hold without deliveries.
+    extra=root/'data/world_cup_scorecards.json'
+    overs_path=root/'data/world_cup_overs.json'
+    extra_overs=json.loads(overs_path.read_text(encoding='utf-8')) if overs_path.exists() else {}
     for folder in ['scorecards','historical_scorecards']:
-        for file in sorted((root/'data'/folder).glob('*.json')):
+        files=sorted((root/'data'/folder).glob('*.json'))+([extra] if folder=='historical_scorecards' and extra.exists() else [])
+        for file in files:
             for mid,card in json.loads(file.read_text(encoding='utf-8')).items():
                 if mid not in selected or mid in cards:continue
                 match=selected[mid]
                 if folder=='historical_scorecards':
                     def identify(row,team,played=False):
                         eid=row['espn_id'];pid=identities.get(eid,'espn-'+eid);row['id']=pid
+                        if eid.startswith('unlinked:'):return   # a name the import could not tie to a career: shown, not profiled
                         if pid not in people and played:people[pid]={'id':pid,'espn_id':eid,'name':row['name'],'teams':[team],'gender':match['gender'],'career':{},'formats':{},'first':match['date'][:4],'last':match['date'][:4]}
                         if pid in people:people[pid]['full_name']=row['name']
                     card['players']={team_name(t):squad for t,squad in card['players'].items()}
@@ -83,6 +111,35 @@ def load_cards(root, matches, people):
                     match['player_ids']=sorted({p['id'] for squad in card['players'].values() for p in squad if p['id'] in people}|{p['id'] for inn in card['innings'] for p in inn['batting']+inn['bowling']})
                     match['coverage']=card['coverage']
                     match['totals']=[{k:inn[k] for k in ['team','runs','wickets','balls','super_over']} for inn in card['innings']]
+                # A source id shared by two people of different genders (a handful of associate
+                # players) stays with the person whose career it is; the other appearances unlink.
+                g=match['gender'];year=match['date'][:4];remap={}
+                if folder=='historical_scorecards':owner_of=lambda pid,team,year:pid   # ESPN ids map exactly
+                else:owner_of=owner
+                for team,squad in (card.get('players') or {}).items():
+                    for row in squad:
+                        if row.get('id'):
+                            new=owner_of(row['id'],team_name(team),year)
+                            if new!=row['id']:remap[row['id']]=new;row['id']=new
+                for inn in card['innings']:
+                    other=next((t for t in match['teams'] if t!=team_name(inn['team'])),'')
+                    for row in inn['batting']:
+                        if row.get('id'):row['id']=owner_of(row['id'],team_name(inn['team']),year)
+                        if row.get('dismissal_bowler'):row['dismissal_bowler']=owner_of(row['dismissal_bowler'],other,year)
+                    for row in inn['bowling']:
+                        if row.get('id'):row['id']=owner_of(row['id'],other,year)
+                if remap and match.get('player_ids'):match['player_ids']=sorted({remap.get(pid,pid) for pid in match['player_ids']})
+                def split(row):
+                    if row.get('id') in people and people[row['id']].get('gender') not in (None,g):row['id']=row['id']+'~'+g[0].lower()
+                for squad in (card.get('players') or {}).values():
+                    for row in squad:split(row)
+                for inn in card['innings']:
+                    for row in inn['batting']+inn['bowling']:split(row)
+                    for row in inn['batting']:
+                        if row.get('dismissal_bowler') in people and people[row['dismissal_bowler']].get('gender') not in (None,g):row['dismissal_bowler']+='~'+g[0].lower()
+                if match.get('player_ids'):match['player_ids']=[pid+'~'+g[0].lower() if pid in people and people[pid].get('gender') not in (None,g) else pid for pid in match['player_ids']]
+                for inn in card['innings']:
+                    if not inn.get('overs') and not inn.get('super_over') and inn.get('team') in extra_overs.get(mid,{}):inn['overs']=extra_overs[mid][inn['team']]
                 card['match']=match;cards[mid]=card
     return cards
 
@@ -93,8 +150,8 @@ def publication_data(root):
     def read(name):return json.loads((root/'data'/name).read_text(encoding='utf-8'))
     arc,careers,hist=read('international.json'),read('careers.json'),read('historical_matches.json')
     official=read('official_match_registry.json')['matches']
-    arc['matches']=[m for m in arc['matches'] if national_match(m) and m['id'] in official]
-    hist['matches']=[m for m in hist['matches'] if national_match(m) and m['id'] in official]
+    arc['matches']=[m for m in arc['matches'] if published_match(m,official)]
+    hist['matches']=[m for m in hist['matches'] if published_match(m,official)]
     if (root/'data/ground_metadata.json').exists():
         venues=read('ground_metadata.json')['venues']
         for m in hist['matches']:
@@ -102,6 +159,7 @@ def publication_data(root):
     # National affiliation is an identity fact, not a player's last listed team.
     # Some careers include representative XIs or a later change of nationality.
     selected={m['id']:m for m in arc['matches']+hist['matches']}
+    gender_of={p['id']:p['gender'] for p in arc['players']};gender_of.update({p['id']:p['gender'] for p in careers['players']})
     countries=defaultdict(set)
     identities={p['espn_id']:p['id'] for p in careers['players']}
     if (root/'data/identity_registry.json').exists():identities.update(read('identity_registry.json')['espn_to_id'])
@@ -110,17 +168,16 @@ def publication_data(root):
             for mid,card in json.loads(file.read_text(encoding='utf-8')).items():
                 if mid not in selected:continue
                 for team,squad in card['players'].items():
-                    team=re.sub(r'\s*(?:Women|Wmn|\(Women\))$','',team).strip()
-                    if team not in FULL_MEMBERS:continue
+                    team=re.sub(r'\s*(?:Women|Wmn|\(Women\))$','',team).strip().replace(' & ',' and ')
+                    if team in REPRESENTATIVE:continue
                     for p in squad:
                         pid=p.get('id') or identities.get(p.get('espn_id'))
-                        if pid:countries[pid].add(team)
+                        if pid and gender_of.get(pid,selected[mid]['gender'])==selected[mid]['gender']:countries[pid].add(team)
     visible_ids={pid for m in arc['matches'] for pid in m['player_ids']}
     arc['players']=[p for p in arc['players'] if p['id'] in visible_ids]
-    careers['players']=[p for p in careers['players'] if national_player(p) or countries[p['id']]]
-    for p in careers['players']:p['teams']=sorted(set(p['teams']).intersection(FULL_MEMBERS)|countries[p['id']])
-    for p in arc['players']:p['teams']=sorted(set(p['teams']).intersection(FULL_MEMBERS)|countries[p['id']])
-    arc['meta'].update(matches=len(arc['matches']),players=len(arc['players']),teams=sorted(FULL_MEMBERS),formats=dict(Counter(m['format'] for m in arc['matches'])),gender=dict(Counter(m['gender'] for m in arc['matches'])))
+    for p in careers['players']:p['teams']=sorted((set(p['teams'])-REPRESENTATIVE)|countries[p['id']])
+    for p in arc['players']:p['teams']=sorted((set(p['teams'])-REPRESENTATIVE)|countries[p['id']])
+    arc['meta'].update(matches=len(arc['matches']),players=len(arc['players']),teams=sorted({t for m in arc['matches']+hist['matches'] for t in m['teams']}),formats=dict(Counter(m['format'] for m in arc['matches'])),gender=dict(Counter(m['gender'] for m in arc['matches'])))
     hist['meta']['added_matches']=len(hist['matches'])
     careers['meta']['players']=len(careers['players'])
     careers['meta']['archive_players_without_career']=len(visible_ids-{p['id'] for p in careers['players']})

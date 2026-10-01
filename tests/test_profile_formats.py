@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'tools'))
 import cricket_charts as cw
 from profile_formats import (
     bat_totals, bowl_totals, coverage, coverage_label, format_role, format_switch, innings_label,
-    lean_table, profile_body, split_groups, split_section,
+    lean_table, profile_body, rank_note, split_groups, split_section,
 )
 
 
@@ -145,14 +145,35 @@ class MarkupTests(unittest.TestCase):
 
 
 class ChartTests(unittest.TestCase):
-    def test_career_arc_marks_milestones_and_thins_points(self):
-        rows = [bat(str(i), 50, 40, date=f'20{10 + i // 20:02d}-01-{1 + i % 20:02d}') for i in range(600)]
-        svg = cw.career_arc(rows, 'runs', 'Runs')
-        self.assertIn('cw-mark', svg)
-        self.assertIn('>5k<', svg)
+    def test_split_footer_reconciles_with_the_official_career(self):
+        rows = [bat(str(i), 50, 60, date=f'2020-01-{1 + i:02d}') for i in range(5)]
+        official = {'matches': 7, 'innings': 7, 'notouts': 0, 'runs': 400, 'outs': 7, 'avg': 57.14}
+        html = split_section(rows, 'ODI', 'Tester', False, official)
+        self.assertIn('In these scorecards', html)
+        self.assertIn('Official career', html)
+        self.assertIn('>400<', html)
+        self.assertIn('>All<', split_section(rows, 'ODI', 'Tester', False, {'runs': 250, 'innings': 5}))
+
+    def test_rank_notes_only_for_counting_figures_in_the_top_hundred(self):
+        ranks = {('All', 'runs'): 1, ('Test', 'wickets'): 22, ('ODI', 'runs'): 140, ('Test', 'avg'): 3}
+        self.assertIn('1st among men', rank_note(ranks, 'All', 'runs', 'Men'))
+        self.assertIn('22nd among women', rank_note(ranks, 'Test', 'wickets', 'Women'))
+        self.assertEqual(rank_note(ranks, 'ODI', 'runs', 'Men'), '')
+        self.assertEqual(rank_note(ranks, 'Test', 'avg', 'Men'), '')
+
+    def test_form_line_shows_rolling_average_against_overall(self):
+        rows = [bat(str(i), 80 if 200 <= i < 260 else 20, 40, date=f'20{10 + i // 30:02d}-01-{1 + i % 28:02d}') for i in range(600)]
+        svg = cw.form_line(rows, 'runs', 'Form')
+        self.assertIn('Best 80.0', svg)
+        self.assertIn('Overall 26.0', svg)
+        self.assertIn('cw-target', svg)
         points = svg.split('<polyline')[1].split('points="')[1].split('"')[0].split()
         self.assertLess(len(points), 260)
-        self.assertEqual(cw.career_arc(rows[:3], 'runs', 'Runs'), '')
+        self.assertEqual(cw.form_line(rows[:11], 'runs', 'Runs'), '')
+
+    def test_form_line_counts_not_outs_like_an_average(self):
+        rows = [bat(str(i), 30, 40, out=i % 2 == 0, date=f'2020-01-{1 + i:02d}') for i in range(12)]
+        self.assertIn('Overall 60.0', cw.form_line(rows, 'runs', 'Form'))
 
     def test_histogram_conversion_note_and_year_bars(self):
         rows = [bat(str(i), v, 40) for i, v in enumerate([0, 5, 12, 30, 55, 70, 105, 130])]

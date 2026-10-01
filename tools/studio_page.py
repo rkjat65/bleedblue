@@ -67,7 +67,7 @@ def studio_markup(link):
       </form>
       <div class="st-canvas-col">
         <div class="st-canvas-bar"><div class="st-tabs" role="tablist" aria-label="Output"><button type="button" role="tab" data-out="visual" aria-selected="true">Visual</button><button type="button" role="tab" data-out="table" aria-selected="false">Table</button><button type="button" role="tab" data-out="sql" aria-selected="false">SQL</button></div>
-          <div class="st-exports"><button id="download-card" disabled>PNG</button><button id="download-svg" disabled>SVG</button><button id="download-data" disabled>CSV</button><button id="full-preview" disabled>Open</button><button id="copy-link">Copy link</button><button id="save-design">Save</button><button id="load-design">Load</button></div></div>
+          <div class="st-exports"><button id="download-card" disabled>PNG</button><button id="download-svg" disabled>SVG</button><button id="full-preview" disabled>Open</button><button id="copy-link">Copy link</button><button id="save-design">Save</button><button id="load-design">Load</button></div></div>
         <div id="export-frame" class="st-frame" data-out-panel="visual"><div id="story-card" aria-live="polite"><p class="studio-empty">Choose a template or build a query, then run it.</p></div><p id="preview-note" class="st-note"></p></div>
         <div id="studio-result-table" class="st-table" data-out-panel="table" hidden></div>
         <div class="st-sql" data-out-panel="sql" hidden><pre id="sql" class="studio-query"></pre><p id="lake-version" class="note"></p></div>

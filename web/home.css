@@ -1,30 +1,25 @@
-/* Homepage: one hero figure, record tiles, an icons rail, the three formats and the records grid.
-   Format colours carry meaning (Test crimson, ODI blue, T20I green); everything else stays neutral. */
-.cricket-hero{isolation:isolate;position:relative;overflow:hidden;min-height:520px;margin:18px 0 0;border-radius:22px;background:#041124;color:#fff;box-shadow:0 30px 80px -30px #000c;--art-x:0px;--art-y:0px;--fig-x:0px;--fig-y:0px}
-.hero-art{position:absolute;inset:-4%;z-index:0;transform:translate3d(var(--art-x),var(--art-y),0) scale(1.06);transition:transform .45s ease-out;pointer-events:none}
-.hero-art img{width:100%;height:100%;object-fit:cover;object-position:70% center;opacity:.55;animation:stadium-drift 22s ease-in-out infinite alternate}
-.cricket-hero:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#041124 0%,#041124f5 30%,#041124b8 48%,#0411244a 66%,#04112400 82%),linear-gradient(0deg,#041124 0%,#041124e0 12%,transparent 34%)}
-.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.7fr) 236px;gap:24px;align-items:center;padding:40px 36px 64px}
-.hero-copy{min-width:0}
-.hero-kicker{display:flex;align-items:center;gap:10px;margin:0 0 16px;font:800 10px/1 var(--font-mono,monospace);letter-spacing:2.2px;color:#a9ccff}.hero-kicker>span{height:7px;width:7px;border-radius:50%;background:#00e5ff;box-shadow:0 0 14px #00e5ff}
-.hero-copy h1{margin:0 0 14px;font-size:clamp(38px,4.6vw,66px);line-height:.98;letter-spacing:-2.6px;font-weight:800}.hero-copy h1 em{font-style:normal;background:linear-gradient(110deg,#5ff2ff,#c9f6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-description{max-width:520px;margin:0 0 22px;font-size:15px;line-height:1.6;color:#c5d3e6}
-.hero-find{max-width:560px;margin:0 0 16px}.hero-find label{display:block;margin-bottom:7px;font:800 9px/1 var(--font-mono,monospace);letter-spacing:.16em;text-transform:uppercase;color:#d7e8ff}
-.hero-find>div{display:flex;align-items:stretch;background:#f4f8ff;border:2px solid #9ec2ff;border-radius:12px;overflow:hidden;box-shadow:0 18px 44px -14px #000,0 0 0 4px #00e5ff26}
-.hero-find input{flex:1;min-width:0;min-height:48px;padding:10px 14px;border:0;background:transparent;color:#10233f;font-size:15px;font-weight:600}.hero-find input::placeholder{color:#5b6c76;opacity:1}.hero-find input:focus{outline:none}
-.hero-find>div:focus-within{border-color:#00e5ff;box-shadow:0 18px 44px -14px #000,0 0 0 4px #00e5ff55}
-.hero-find button{border:0;border-radius:0;min-width:96px;padding:0 18px;background:#00e5ff;color:#041124;font-size:13px;font-weight:900}.hero-find button:hover{background:#4defff}
-.hero-figure{position:relative;display:block;justify-self:center;align-self:end;width:min(100%,300px);margin-bottom:-64px;transform:translate3d(var(--fig-x),var(--fig-y),0);transition:transform .45s ease-out;text-decoration:none}
-.hero-figure img{position:relative;z-index:2;display:block;width:100%;height:auto;filter:drop-shadow(0 28px 26px #000b)}
-.hero-stage{position:absolute;left:50%;bottom:8%;z-index:1;width:150%;height:56%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse at 50% 60%,#00e5ff66 0%,#1d4ed855 35%,transparent 70%);filter:blur(10px);animation:stage-pulse 7s ease-in-out infinite}
-.hero-figure-name{position:absolute;left:50%;bottom:72px;z-index:3;transform:translateX(-50%);padding:6px 12px;border-radius:999px;background:#041124d9;border:1px solid #9fc5ff40;font:800 11px/1 var(--font-mono,monospace);letter-spacing:.08em;text-transform:uppercase;color:#e7f0ff;white-space:nowrap;opacity:0;transition:opacity .25s}
-.hero-figure:hover .hero-figure-name{opacity:1}
-.hero-bottom{position:absolute;left:36px;right:36px;bottom:16px;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.hero-bottom>span{font:700 10px/1 var(--font-mono,monospace);letter-spacing:1.8px;color:#c1d2e8}.hero-bottom strong{font-weight:800;color:#fff}.hero-bottom b{margin:0 9px;color:#6385af}
-.hero-motion{font:700 11px/1 var(--font-body,inherit);color:#e8f1ff;background:#112941cc;border:1px solid #7aa4d0;padding:8px 12px;border-radius:8px;min-height:34px;backdrop-filter:blur(8px)}
-.cricket-hero.motion-paused *{animation-play-state:paused!important}.cricket-hero.motion-paused :is(.hero-art,.hero-figure){transform:none;transition:none}
-@keyframes stadium-drift{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.05) translate3d(0,-10px,0)}}
-@keyframes stage-pulse{0%,100%{opacity:.7;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.05)}}
+/* Homepage: hero panel with the record holders, the archive in numbers, an icons rail, the three
+   formats and the records grid. Format colours carry meaning (Test crimson, ODI blue, T20I green). */
+.home-hero{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:stretch;margin:18px 0 14px;padding:32px;border:1px solid var(--border);border-radius:20px;background:radial-gradient(circle at 88% 10%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 46%),linear-gradient(135deg,color-mix(in srgb,var(--accent) 8%,var(--panel)),var(--panel) 62%)}
+.home-hero-copy{min-width:0;align-self:center}
+.home-hero .eyebrow{margin:0 0 12px;color:var(--accent);font-size:10px;letter-spacing:2px}
+.home-hero h1{margin:0 0 12px;font-size:clamp(36px,4.6vw,60px);line-height:1;letter-spacing:-1.8px}
+.home-hero h1 em{font-style:normal;color:var(--accent)}
+.home-lede{margin:0 0 22px;max-width:560px;color:var(--muted);font-size:16px;line-height:1.55}
+.hero-find{max-width:560px;margin:0 0 14px}.hero-find label{display:block;margin-bottom:7px;font:800 9px/1 var(--font-mono,monospace);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero-find>div{display:flex;align-items:stretch;background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.hero-find input{flex:1;min-width:0;min-height:48px;padding:10px 14px;border:0;background:transparent;color:var(--ink);font-size:15px;font-weight:600}.hero-find input::placeholder{color:var(--muted);opacity:1}.hero-find input:focus{outline:none}
+.hero-find>div:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
+.hero-find button{border:0;border-radius:0;min-width:96px;padding:0 18px;background:var(--accent);color:var(--bg);font-size:13px;font-weight:800}.hero-find button:hover{filter:brightness(1.1)}
+.home-board{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid var(--border);border-radius:16px;background:color-mix(in srgb,var(--bg) 45%,var(--panel))}
+.home-board .eyebrow{margin:0 0 4px;color:var(--muted)}
+.hb-row{--fmt:var(--accent);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px;align-items:baseline;padding:11px 14px;border:1px solid var(--border);border-left:3px solid var(--fmt);border-radius:10px;background:var(--panel);color:var(--ink)}
+.hb-row.fmt-test{--fmt:var(--fmt-test)}.hb-row.fmt-odi{--fmt:var(--fmt-odi)}.hb-row.fmt-t20i{--fmt:var(--fmt-t20i)}
+.hb-row:hover{text-decoration:none;border-color:color-mix(in srgb,var(--fmt) 55%,var(--border));border-left-color:var(--fmt)}
+.hb-row span{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.hb-row strong{grid-row:span 2;align-self:center;font:700 26px/1 var(--font-heading,inherit);letter-spacing:-.6px;color:var(--fmt);font-variant-numeric:tabular-nums}
+.hb-row em{font-style:normal;font-size:14px;font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb-more{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700}
 
 /* ---------- Icons rail ---------- */
 .icons-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(178px,1fr);gap:14px;list-style:none;margin:0;padding:4px 4px 12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
@@ -84,7 +79,7 @@
 .cricket-timeline{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0;gap:22px;margin:28px 0 36px}.cricket-timeline li{border-top:2px solid var(--border);position:relative;padding-top:15px}.cricket-timeline li:before{content:"";position:absolute;top:-5px;left:0;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}.timeline-year{font-size:30px;font-weight:850;letter-spacing:-1px;color:var(--accent)}.cricket-timeline a{display:block;position:relative;padding:17px 38px 17px 18px;background:var(--panel);border:1px solid var(--border);border-radius:10px;margin-top:10px;color:var(--ink);transition:transform .2s,border-color .2s}.cricket-timeline a:hover{transform:translateY(-3px);border-color:var(--accent);text-decoration:none}.cricket-timeline .eyebrow{font-size:9px;letter-spacing:1px}.cricket-timeline h3{margin:7px 0;font-size:15px}.cricket-timeline time{font-size:11px;color:var(--muted)}.timeline-arrow{position:absolute;right:17px;top:20px;color:var(--accent)}
 
 /* ---------- Responsive ---------- */
-@media(max-width:1100px){.hero-grid{grid-template-columns:minmax(0,1fr) 220px;padding:32px 28px 60px}.hero-figure{display:none}.format-trio,.records-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-bottom{left:28px;right:28px}}
-@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.hero-fact{padding:12px}.hero-fact strong{font-size:20px}.home-insight-grid{grid-template-columns:1fr}.cricket-timeline{grid-template-columns:1fr}}
-@media(max-width:700px){.cricket-hero{min-height:0;border-radius:16px}.hero-grid{padding:24px 18px 56px}.hero-copy h1{font-size:clamp(32px,9.5vw,42px);letter-spacing:-1.6px}.hero-description{font-size:14px}.hero-find button{min-width:76px;padding:0 12px}.hero-facts{grid-template-columns:1fr 1fr}.hero-fact:nth-child(3){grid-column:1/-1}.hero-bottom{left:18px;right:18px;flex-direction:column;align-items:flex-start;gap:8px}.hero-bottom>span{font-size:9px;letter-spacing:1.2px}.hero-motion{display:none}.format-trio,.records-tiles{grid-template-columns:1fr}.icons-rail{grid-auto-columns:minmax(150px,1fr)}.icon-card{height:210px}.home-insights{margin:28px 0}.home-insight-card{padding:16px}.home-comparisons{margin-top:24px}}
-@media(prefers-reduced-motion:reduce){.hero-art img,.hero-stage,.hero-fact{animation:none!important}.hero-art,.hero-figure,.icon-card,.rg-tile{transition:none!important}}
+@media(max-width:1100px){.home-hero{grid-template-columns:minmax(0,1fr) 300px}.format-trio,.records-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.home-hero{grid-template-columns:minmax(0,1fr)}.home-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.home-board .eyebrow,.hb-more{grid-column:1/-1}.home-facts{grid-template-columns:repeat(3,minmax(0,1fr))}.home-insight-grid{grid-template-columns:1fr}.cricket-timeline{grid-template-columns:1fr}}
+@media(max-width:700px){.home-hero{padding:22px 18px;border-radius:16px}.home-hero h1{font-size:clamp(32px,9.5vw,42px);letter-spacing:-1.2px}.home-lede{font-size:14px}.hero-find button{min-width:76px;padding:0 12px}.home-board{grid-template-columns:minmax(0,1fr)}.home-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.format-trio,.records-tiles{grid-template-columns:1fr}.icons-rail{grid-auto-columns:minmax(150px,1fr)}.icon-card{height:210px}.home-insights{margin:28px 0}.home-insight-card{padding:16px}.home-comparisons{margin-top:24px}}
+@media(prefers-reduced-motion:reduce){.icon-card,.rg-tile{transition:none!important}}

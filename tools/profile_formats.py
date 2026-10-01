@@ -197,7 +197,8 @@ def lean_table(caption, head, body, foot=None, css='', titles=True, left=()):
     rows = ''.join('<tr><th scope="row">' + cells[0] + '</th>' + ''.join(f'<td{" class=t" if i in left else ""}>{c}</td>' for i, c in enumerate(cells) if i) + '</tr>' for cells in body)
     tfoot = ''
     if foot:
-        tfoot = '<tfoot><tr><th scope="row">' + foot[0] + '</th>' + ''.join(f'<td>{c}</td>' for c in foot[1:]) + '</tr></tfoot>'
+        foot_rows = foot if isinstance(foot[0], list) else [foot]
+        tfoot = '<tfoot>' + ''.join('<tr><th scope="row">' + row[0] + '</th>' + ''.join(f'<td>{c}</td>' for c in row[1:]) + '</tr>' for row in foot_rows) + '</tfoot>'
     return (f'<div class="table-wrap pf-wrap{(" " + css) if css else ""}" tabindex="0" role="region" aria-label="{esc(caption)}">'
             f'<table class="score-table pf-table"><caption>{esc(caption)}</caption><thead><tr>{ths}</tr></thead>'
             f'<tbody>{rows}</tbody>{tfoot}</table></div>')
@@ -263,8 +264,15 @@ def split_groups(rows, fmt, discipline):
     return [(key, title, items) for key, title, items in groups if items]
 
 
-def split_section(rows, fmt, name, want_bowling):
-    """Tabbed batting and bowling splits for one format."""
+class _Official(dict):
+    """An official career line read like archive totals; absent figures stay missing."""
+    def __missing__(self, key):
+        return None
+
+
+def split_section(rows, fmt, name, want_bowling, stats=None, played=None):
+    """Tabbed batting and bowling splits for one format. When the scorecards hold less than the
+    official career (matches against other teams, or no scorecard), the footer shows both lines."""
     bat_groups = split_groups(rows, fmt, 'bat')
     bowl_groups = split_groups(rows, fmt, 'bowl') if want_bowling else []
     if not bat_groups and not bowl_groups:
@@ -276,6 +284,20 @@ def split_section(rows, fmt, name, want_bowling):
     tabs = ''.join(f'<button type="button" role="tab" data-tab="{key}" aria-selected="{"true" if i == 0 else "false"}"{" class=is-active" if i == 0 else ""}>{esc(title)}</button>' for i, (key, title) in enumerate(keys))
     bat_all = bat_totals(rows)
     bowl_all = bowl_totals(rows)
+    if played:   # every match in the scorecards, including those where the player did not bat or bowl
+        bat_all = {**bat_all, 'matches': played}
+        bowl_all = {**bowl_all, 'matches': played}
+    official = _Official(stats or {})
+    bat_gap = bool(stats) and official['runs'] is not None and (official['runs'], official['innings']) != (bat_all['runs'], bat_all['innings'])
+    bowl_gap = bool(stats) and official['wickets'] is not None and (official['wickets'], official['bowling_innings']) != (bowl_all['wickets'], bowl_all['bowling_innings'])
+    # When the innings reconcile, a remaining match difference is only abandoned matches (the source
+    # does not say whether a toss was made), so the footer takes the official match count.
+    if not bat_gap and official['matches']:
+        bat_all = {**bat_all, 'matches': official['matches']}
+    if not bowl_gap and official['matches']:
+        bowl_all = {**bowl_all, 'matches': official['matches']}
+    bat_foot = [bat_cells('In these scorecards', bat_all), bat_cells('Official career', official)] if bat_gap else bat_cells('All', bat_all)
+    bowl_foot = [bowl_cells('In these scorecards', bowl_all), bowl_cells('Official career', official)] if bowl_gap else bowl_cells('All', bowl_all)
     panels = ''
     for i, (key, title) in enumerate(keys):
         body = ''
@@ -283,14 +305,16 @@ def split_section(rows, fmt, name, want_bowling):
             if gkey != key:
                 continue
             body += lean_table(f'{name}: {fmt} batting by {gtitle.lower()}', [('', '')] + BAT_HEAD,
-                               [bat_cells(esc(label), bat_totals(group)) for label, group in items], bat_cells('All', bat_all), css='pf-bat', titles=False)
+                               [bat_cells(esc(label), bat_totals(group)) for label, group in items], bat_foot, css='pf-bat', titles=False)
         for gkey, gtitle, items in bowl_groups:
             if gkey != key:
                 continue
             body += lean_table(f'{name}: {fmt} bowling by {gtitle.lower()}', [('', '')] + BOWL_HEAD,
-                               [bowl_cells(esc(label), bowl_totals(group)) for label, group in items], bowl_cells('All', bowl_all), css='pf-bowl', titles=False)
+                               [bowl_cells(esc(label), bowl_totals(group)) for label, group in items], bowl_foot, css='pf-bowl', titles=False)
         panels += f'<div class="pf-tabpanel{" is-active" if i == 0 else ""}" role="tabpanel" data-tab-panel="{key}">{body}</div>'
-    return f'<div class="pf-tabs" role="tablist" aria-label="Split by">{tabs}</div>{panels}'
+    note = ('<p class="pf-fine">The official career includes innings these scorecards do not hold, mostly older matches without a full scorecard. '
+            'Splits use the scorecards; the last footer line is the official total.</p>') if bat_gap or bowl_gap else ''
+    return f'<div class="pf-tabs" role="tablist" aria-label="Split by">{tabs}</div>{panels}{note}'
 
 
 # ------------------------------------------------------------- milestones
@@ -369,7 +393,22 @@ def recent_matches(rows, apps, fmt, limit=10):
 
 # ----------------------------------------------------------------- panels
 
-def hero_tiles(stats, role, fmt, stat_value):
+RANKED = {'matches', 'runs', 'hundreds', 'wickets', 'catches', 'stumpings', 'five_w'}
+
+
+def ordinal(n):
+    return f'{n:,}' + ('th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th'))
+
+
+def rank_note(ranks, scope, key, gender):
+    """'3rd among men' under a counting figure, for the top 100 only; a long tail rank adds nothing."""
+    rank = (ranks or {}).get((scope, key))
+    if key not in RANKED or not rank or rank > 100 or gender not in ('Men', 'Women'):
+        return ''
+    return f'<small class="pf-rank">{ordinal(rank)} among {gender.lower()}</small>'
+
+
+def hero_tiles(stats, role, fmt, stat_value, ranks=None, gender=None):
     s = stats or {}
     if role == 'bowler':
         spec = [('wickets', 'Wickets'), ('bowlAvg', 'Average'), ('econ', 'Economy'), ('bowlSr', 'Strike rate'), ('best_bowling', 'Best'), ('five_w', 'Five-fors')]
@@ -379,7 +418,7 @@ def hero_tiles(stats, role, fmt, stat_value):
         spec = [('runs', 'Runs'), ('avg', 'Average'), ('sr', 'Strike rate'), ('hundreds', 'Hundreds'), ('catches', 'Catches'), ('stumpings', 'Stumpings')]
     else:
         spec = [('runs', 'Runs'), ('avg', 'Average'), ('sr', 'Strike rate'), ('hundreds', 'Hundreds'), ('fifties', 'Fifties'), ('highest_display', 'Highest')]
-    tiles = ''.join(f'<div{" class=lead" if i == 0 else ""}><strong>{stat_value(s, key)}</strong><span>{label}</span></div>' for i, (key, label) in enumerate(spec))
+    tiles = ''.join(f'<div{" class=lead" if i == 0 else ""}><strong>{stat_value(s, key)}</strong><span>{label}</span>{rank_note(ranks, fmt, key, gender)}</div>' for i, (key, label) in enumerate(spec))
     return f'<div class="pf-hero" aria-label="{esc(fmt)} career headline figures">{tiles}</div>'
 
 
@@ -397,7 +436,7 @@ def official_lines(stats, fmt, stat_value, want_bowling):
     return out
 
 
-def format_panel(player, fmt, stats, rows, apps, charts, stat_value):
+def format_panel(player, fmt, stats, rows, apps, charts, stat_value, ranks=None):
     """One complete per-format view: official line, charts, splits, milestones."""
     name = player['name']
     key = KEYS[fmt]
@@ -413,7 +452,7 @@ def format_panel(player, fmt, stats, rows, apps, charts, stat_value):
     body = f'<section class="fmt-panel fmt-{key}" id="{key}" data-fmt-panel="{key}" aria-label="{esc(fmt)} career">'
     body += head
     if stats:
-        body += hero_tiles(stats, role, fmt, stat_value)
+        body += hero_tiles(stats, role, fmt, stat_value, ranks, player.get('gender'))
         body += f'<section class="panel pf-block"><h2>Official {esc(fmt)} record</h2>{official_lines(stats, fmt, stat_value, want_bowling)}</section>'
     else:
         body += '<p class="pf-flag">No official career snapshot is matched for this format. Figures below come from available scorecards only.</p>'
@@ -423,7 +462,7 @@ def format_panel(player, fmt, stats, rows, apps, charts, stat_value):
     form = recent_form(rows, want_bowling)
     if form:
         body += f'<section class="panel pf-block"><h2>Recent {esc(fmt)} form</h2><div class="pf-forms">{form}</div></section>'
-    splits = split_section(rows, fmt, name, want_bowling)
+    splits = split_section(rows, fmt, name, want_bowling, stats, sum(1 for a in apps if a.get('format') == fmt))
     if splits:
         scope = 'complete career' if cov['complete_batting'] and (not want_bowling or cov['complete_bowling']) else f'{cov["archive_innings"]:,} recorded innings'
         body += f'<section class="panel pf-block pf-splits"><div class="pf-block-head"><h2>{esc(fmt)} record by situation</h2><span class="pill">{esc(scope)}</span></div>{splits}<p class="pf-fine">- not recorded in the scorecards · N/A no dismissals or balls to divide by</p></section>'
@@ -461,7 +500,7 @@ def format_chips(formats, career, extra_chips=''):
     chips = ''
     for fmt in formats:
         s = career.get(fmt) or {}
-        detail = f"{s['matches']:,} matches" if s.get('matches') else 'scorecards only'
+        detail = f"{s['matches']:,} {'match' if s['matches'] == 1 else 'matches'}" if s.get('matches') else 'scorecards only'
         chips += f'<a class="pf-chip fmt-{KEYS[fmt]}" href="#{KEYS[fmt]}" data-fmt-link="{KEYS[fmt]}"><i></i><b>{esc(fmt)}</b><span>{detail}</span></a>'
     chips += extra_chips
     return f'<div class="pf-chips">{chips}</div>' if chips else ''
@@ -474,13 +513,11 @@ def masthead(player, portrait, badges, role, formats, career, totals, compare_pa
         parts.append(f"{totals['matches']:,} internationals")
     sub = ' · '.join(p for p in parts if p)
     eyebrow = 'PLAYER · ' + ' · '.join(x for x in [' / '.join(player.get('teams') or []).upper(), (player.get('gender') or '').upper()] if x)
-    actions = (f'<div class="actions pf-actions"><a class="button primary" href="{esc(compare_path)}">Compare</a>'
-               '<button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>')
     return (f'<header class="pf-mast">{portrait}<div class="pf-id"><p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(player["name"])}</h1>'
-            f'<p class="pf-sub">{esc(sub)}</p><div class="pf-teams">{badges}</div>{format_chips(formats, career, extra_chips)}{actions}</div></header>')
+            f'<p class="pf-sub">{esc(sub)}</p><div class="pf-teams">{badges}</div>{format_chips(formats, career, extra_chips)}</div></header>')
 
 
-def overview_hero(totals, career, stat_value):
+def overview_hero(totals, career, stat_value, ranks=None, gender=None):
     keeper = sum((s.get('stumpings') or 0) for s in career.values()) >= 5
     spec = [('matches', 'Internationals'), ('runs', 'Runs'), ('hundreds', 'Hundreds'), ('wickets', 'Wickets'), ('catches', 'Catches')]
     if keeper:
@@ -489,7 +526,7 @@ def overview_hero(totals, career, stat_value):
     for i, (key, label) in enumerate(spec):
         value = totals.get(key)
         shown = f'{value:,}' if isinstance(value, int) else stat_value(totals, key)
-        tiles += f'<div{" class=lead" if i == 0 else ""}><strong>{shown}</strong><span>{label}</span></div>'
+        tiles += f'<div{" class=lead" if i == 0 else ""}><strong>{shown}</strong><span>{label}</span>{rank_note(ranks, "All", key, gender)}</div>'
     return f'<div class="pf-hero pf-hero-all" aria-label="Career totals across formats">{tiles}</div>'
 
 
@@ -497,7 +534,7 @@ def share_strip(career, formats):
     """Runs and wickets by format as proportional bars."""
     out = ''
     for key, label in (('runs', 'Runs by format'), ('wickets', 'Wickets by format')):
-        values = [(fmt, career[fmt].get(key) or 0) for fmt in formats]
+        values = [(fmt, career[fmt].get(key) or 0) for fmt in formats if fmt in career]
         total = sum(v for _, v in values)
         if total <= 0 or sum(v > 0 for _, v in values) < 2 or (key == 'wickets' and total < 20):
             continue
@@ -518,11 +555,11 @@ def coverage_table(formats, career, rows_by_fmt):
     return lean_table('Scorecard coverage of the official career', ['Format', ('Official bat inns', 'Official batting innings'), ('In scorecards', 'Batting innings with a scorecard'), ('Official bowl inns', 'Official bowling innings'), ('In scorecards', 'Bowling innings with a scorecard'), ('First', 'First scorecard'), ('Latest', 'Latest scorecard'), 'Coverage'], body, css='pf-coverage', left=(7,))
 
 
-def overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_value):
+def overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_value, ranks=None):
     """The cross-format view: official tables by format, format cards and the tools."""
     body = '<section class="fmt-panel fmt-overview" id="overview" data-fmt-panel="overview" aria-label="Career overview">'
     if career:
-        body += overview_hero(totals, career, stat_value)
+        body += overview_hero(totals, career, stat_value, ranks, player.get('gender'))
     body += '<section class="panel career-tables pf-block" id="career-records"><h2>Career records by format</h2>'
     if blocks['tables']:
         body += blocks['tables']
@@ -539,7 +576,6 @@ def overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_va
         body += f'<section class="panel pf-block"><h2>Where the career sits</h2>{strip}</section>'
     if any(rows_by_fmt.values()):
         body += f'<section class="panel pf-block"><h2>Scorecard coverage</h2>{coverage_table(formats, career, rows_by_fmt)}</section>'
-    body += blocks['faq']
     body += blocks['explorer']
     body += blocks['research']
     body += blocks['recent']
@@ -547,7 +583,7 @@ def overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_va
     return body
 
 
-def profile_body(player, *, portrait, badges, rows, apps, career, totals, blocks, charts, stat_value, compare_path, extra=None):
+def profile_body(player, *, portrait, badges, rows, apps, career, totals, blocks, charts, stat_value, compare_path, extra=None, ranks=None):
     """Assemble the whole profile: masthead, format switch, overview and one panel per format.
 
     `extra` adds competition tabs after the formats: keys, chips, switch items and panels.
@@ -560,8 +596,9 @@ def profile_body(player, *, portrait, badges, rows, apps, career, totals, blocks
     role = role_label(career, rows)
     body = masthead(player, portrait, badges, role, formats, career, totals, compare_path, extra.get('chips', ''))
     body += format_switch(formats, career, extra)
-    body += overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_value)
+    body += overview_panel(player, formats, career, totals, rows_by_fmt, blocks, stat_value, ranks)
     for fmt in formats:
-        body += format_panel(player, fmt, career.get(fmt), rows_by_fmt.get(fmt, []), apps, charts, stat_value)
+        body += format_panel(player, fmt, career.get(fmt), rows_by_fmt.get(fmt, []), apps, charts, stat_value, ranks)
     body += extra.get('panels', '')
+    body += blocks.get('faq', '')   # questions close the page, below every tab
     return body

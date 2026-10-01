@@ -135,7 +135,7 @@ def masthead(players, formats, title):
     eyebrow = ' · '.join(['PLAYER COMPARISON'] + genders)
     fmt_text = ', '.join(formats[:-1]) + (' and ' if len(formats) > 1 else '') + formats[-1] if formats else 'International'
     sub = f"{fmt_text} careers side by side: official records first, recorded innings for year-by-year and opposition views."
-    actions = '<div class="actions pf-actions"><a class="button primary" href="/compare/">Choose players</a><button data-save>Save page</button><button data-share>Share link</button><button data-csv>Download table CSV</button></div>'
+    actions = '<div class="actions pf-actions"><a class="button primary" href="/compare/">Choose other players</a></div>'
     return f'<header class="pf-mast cmp-mast"><div class="pf-id"><p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(title)}</h1><p class="pf-sub">{esc(sub)}</p>{actions}</div></header>'
 
 
@@ -146,8 +146,9 @@ def identity_strip(players, pp, portraits, illustrations):
         first = min((s.split('-')[0] for s in spans), default='')
         last = max((s.split('-')[-1] for s in spans), default='')
         art = portrait_figure(p['id'], p['name'], portraits, compact=True, illustration=illustrations.get(p['name']))
-        cards += (f'<a class="cmp-id" href="{esc(pp[p["id"]])}" style="--who:var(--cmp-{i})">{art}<strong>{esc(p["name"])}</strong>'
-                  f'<small>{esc(" / ".join(p.get("teams") or []))}{(" · " + first + " to " + last) if first else ""}</small></a>')
+        # A div, not a link: a photo's attribution links inside a link would break the card apart.
+        cards += (f'<div class="cmp-id" style="--who:var(--cmp-{i})">{art}<strong><a href="{esc(pp[p["id"]])}">{esc(p["name"])}</a></strong>'
+                  f'<small>{esc(" / ".join(p.get("teams") or []))}{(" · " + first + " to " + last) if first else ""}</small></div>')
         if i < len(players) - 1:
             cards += '<span class="cmp-vs" aria-hidden="true">VS</span>'
     return f'<div class="cmp-identity cmp-{len(players)}">{cards}</div>'
@@ -189,9 +190,6 @@ def compare_body(players, rows_by_pid, pp, portraits, illustrations, stat_value=
             best = best_index(values, key)
             glance.append([f'<a href="#{KEYS[fmt]}" data-fmt-link="{KEYS[fmt]}" class="fmt-{KEYS[fmt]} cmp-fmt-link">{fmt}</a> · {label}'] + [f'<span class="cmp-best">{value_text(s, key)}</span>' if i in best else value_text(s, key) for i, s in enumerate(stats)])
     body += f'<section class="panel pf-block" id="career-records"><h2>Career records by format</h2>{lean_table("Official careers side by side", ["Format · measure"] + names, glance, css="pf-line cmp-table")}</section>'
-    items = faq_items(players, formats)
-    if items:
-        body += '<section class="panel pf-block player-faq" id="player-questions"><h2>Questions fans ask</h2><dl>' + ''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in items) + '</dl></section>'
     body += '<p class="pf-links">' + ' · '.join(f'<a href="{esc(pp[p["id"]])}">{esc(p["name"])} profile</a>' for p in players) + f' · <a href="/compare/#filters={"&".join(f"{k}={pp[p["id"]]}" for k, p in zip("abc", players))}">Open in the comparison tool</a></p>'
     body += '</section>'
     # One panel per format
@@ -214,14 +212,17 @@ def compare_body(players, rows_by_pid, pp, portraits, illustrations, stat_value=
         body += f'<div class="cmp-tile-grid cmp-{len(players)}">{tiles}</div>'
         body += f'<section class="panel pf-block"><h2>{esc(fmt)} measures side by side</h2>{key_bars(players, stats, KEY_BOWL + KEY_BAT[:2] if bowl_focus else KEY_BAT + [k for k in KEY_BOWL[:2] if any(((s or {}).get("wickets") or 0) >= 10 for s in stats)], colours)}'
         body += compare_table(players, stats, BAT_METRICS + BOWL_METRICS + FIELD_METRICS, f'{fmt} official career records') + '</section>'
-        from cricket_charts import cumulative_overlay
-        overlay = cumulative_overlay([(p['name'], rows, colours[i]) for i, (p, rows) in enumerate(zip(players, rows_list))], 'wickets' if bowl_focus else 'runs', f'{fmt} {"wickets" if bowl_focus else "runs"} by year, cumulative')
+        from cricket_charts import yearly_overlay
+        overlay = yearly_overlay([(p['name'], rows, colours[i]) for i, (p, rows) in enumerate(zip(players, rows_list))], 'wickets' if bowl_focus else 'runs', f'{fmt} {"wickets" if bowl_focus else "runs"} in each year')
         covs = ' · '.join(f"{p['name']}: {coverage(s, rows)['archive_innings']:,} of {n((s or {}).get('innings'))} innings" for p, s, rows in zip(players, stats, rows_list) if s)
         opp = opposition_table(players, rows_list, fmt) if not bowl_focus else ''
         if overlay or opp:
             body += f'<section class="panel pf-block"><div class="pf-block-head"><h2>{esc(fmt)} year by year and by opponent</h2><span class="pill">recorded innings</span></div>{overlay}{opp}<p class="pf-fine">Scorecard coverage · {esc(covs)}</p></section>'
         body += '</section>'
     description = f'{title}: ' + '; '.join(f"{fmt} runs " + ' v '.join(f"{(p['career'].get(fmt) or {}).get('runs') or 0:,}" for p in players) for fmt in formats[:2]) + '. Official careers by format, year-by-year overlay and opposition splits.'
+    items = faq_items(players, formats)
+    if items:
+        body += '<section class="panel pf-block player-faq" id="player-questions"><h2>Frequently asked questions</h2><dl>' + ''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in items) + '</dl></section>'
     return body, items, description[:158]
 
 

@@ -71,35 +71,24 @@ def homepage_insights(matches, match_routes, people, team_routes, official_h2h=N
       <div class="home-comparisons"><div class="section-heading"><div><p class="eyebrow">PLAYER COMPARISONS</p><h3>Career records by format</h3></div><a href="/compare/">Compare any two players →</a></div><div class="grid two">{compare_cards}</div></div></section>'''
 
 
-def _hero_facts(facts):
-    if not facts:
-        return ''
-    chips = ''.join(
-        f'<a class="hero-fact" href="{_e(url)}" style="--i:{i}"><strong data-count="{value}">{value:,}</strong>'
-        f'<span>{_e(label)}</span><em>{_e(name)}</em></a>'
-        for i, (value, label, name, url) in enumerate(facts[:3]))
-    return f'<div class="hero-facts" aria-label="Record holders">{chips}</div>'
-
-
-def homepage_hero(player_count, match_count, faces=None, facts=None, quick=None):
-    """Headline, search and the record tiles over the stadium art. No single player
-    fronts the site: the stumps in the artwork fill the middle column."""
-    figure = '<div class="hero-space" aria-hidden="true"></div>'
+def homepage_hero(stats, board, quick=None):
+    """Headline, search and the career record holders on a plain panel, the same layout as the
+    World Cup page, then the archive in numbers. No artwork and no motion: the figures lead.
+    stats: [(label, value_text)]; board: [(fmt, label, value, name, url)]."""
     quick_items = ''.join(f'<li><a href="{_e(url)}">{_e(label)}</a></li>' for label, url in (quick or []))
-    return f'''<section class="cricket-hero" aria-labelledby="hero-title" data-cricket-hero>
-      <div class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="/assets/art/cricket-hero-640.webp 640w, /assets/art/cricket-hero-960.webp 960w, /assets/art/cricket-hero-1536.webp 1536w" sizes="(max-width:700px) 100vw, 60vw"><img src="/assets/art/cricket-hero-1536.webp" width="1536" height="1024" alt="" loading="eager"></picture></div>
-      <div class="hero-grid">
-        <div class="hero-copy"><p class="hero-kicker"><span></span> INTERNATIONAL CRICKET · MEN &amp; WOMEN</p>
-          <h1 id="hero-title">Every run. Every wicket.<br><em>Every match.</em></h1>
-          <p class="hero-description">The complete record of Tests, ODIs and T20Is: official careers, ball-by-ball scorecards, rivalries and records, all split by format.</p>
-          <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Player, team, ground or match" required autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="submit">Search</button></div></form>
-          <ul class="hero-quick" aria-label="Popular">{quick_items}<li><a href="/head-to-head/">India v Australia</a></li><li><a href="/records/">Records</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
-        </div>
-        {figure}
-        {_hero_facts(facts)}
+    rows = ''.join(f'<a class="hb-row fmt-{FORMAT_KEY.get(fmt, "odi")}" href="{_e(url)}"><span>{_e(label)}</span><strong>{value:,}</strong><em>{_e(name)}</em></a>'
+                   for fmt, label, value, name, url in board)
+    facts = ''.join(f'<div><strong>{_e(value)}</strong><span>{_e(label)}</span></div>' for label, value in stats)
+    return f'''<section class="home-hero" aria-labelledby="hero-title">
+      <div class="home-hero-copy"><p class="eyebrow">INTERNATIONAL CRICKET · MEN AND WOMEN · TEST, ODI AND T20I</p>
+        <h1 id="hero-title">Every run. Every wicket. <em>Every match.</em></h1>
+        <p class="home-lede">Official career figures, ball-by-ball scorecards, rivalries and records, every one split by format.</p>
+        <form class="hero-find" action="/search/" role="search"><label for="home-search">Search the archive</label><div><input id="home-search" name="q" type="search" placeholder="Player, team, ground or match" required autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="submit">Search</button></div></form>
+        <ul class="hero-quick" aria-label="Popular">{quick_items}<li><a href="/head-to-head/">India v Australia</a></li><li><a href="/records/">Records</a></li><li><a href="/world-cup/">World Cups</a></li></ul>
       </div>
-      <div class="hero-bottom"><span><strong data-count="{player_count}">{player_count:,}</strong> PLAYERS <b>·</b> <strong data-count="{match_count}">{match_count:,}</strong> MATCHES <b>·</b> 12 TEAMS <b>·</b> TEST · ODI · T20I</span><button type="button" class="hero-motion" data-hero-motion aria-pressed="false">Pause motion</button></div>
-    </section>'''
+      <aside class="home-board" aria-labelledby="board-title"><p class="eyebrow" id="board-title">CAREER RECORD HOLDERS</p>{rows}<a class="hb-more" href="/records/">Every record by format →</a></aside>
+    </section>
+    <div class="wc-facts home-facts" aria-label="The archive in numbers">{facts}</div>'''
 
 
 def icons_rail(icons):

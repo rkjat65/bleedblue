@@ -76,7 +76,7 @@
   for(const [key,id] of Object.entries(ids))if(saved[key]!=null&&key!=='dataset')$('#'+id).value=saved[key];
  }
  const setupLink=()=>location.origin+location.pathname+'#'+encodeURIComponent(JSON.stringify(state()));
- function disableExport(on){for(const id of ['download-card','download-svg','download-data','full-preview'])$('#'+id).disabled=on||!!photos?.busy();}
+ function disableExport(on){for(const id of ['download-card','download-svg','full-preview'])$('#'+id).disabled=on||!!photos?.busy();}
  async function render(){const token=++generation;disableExport(true);$('#studio-status').textContent='Querying…';$('#story-card').setAttribute('aria-busy','true');
   try{const s=state();
    if(s.from&&s.to&&Number(s.from)>Number(s.to))throw new Error('Start year must be no later than end year.');
@@ -164,7 +164,6 @@
  }
  function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
  async function png(){if(!svgText)return;const button=$('#download-card');button.disabled=true;try{const url=URL.createObjectURL(new Blob([svgText],{type:'image/svg+xml'})),img=new Image();try{await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url;});const canvas=document.createElement('canvas');canvas.width=img.width*2;canvas.height=img.height*2;const ctx=canvas.getContext('2d');ctx.scale(2,2);ctx.drawImage(img,0,0);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw new Error('PNG encoding failed');download(blob,'cricket-wicket-'+template+'.png');}finally{URL.revokeObjectURL(url);}}catch(e){$('#studio-status').textContent='Could not export PNG. SVG export is available.';}finally{button.disabled=!rows.length;}}
- function csv(){if(!rows.length)return;const safe=x=>'"'+String(x??'').replace(/^[=+@-]/,"'"+'$&').replaceAll('"','""')+'"',keys=Object.keys(rows[0]);download(new Blob(['﻿'+[keys,...rows.map(r=>keys.map(k=>r[k]))].map(r=>r.map(safe).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}),'cricket-wicket-'+template+'.csv');}
  function showOut(which){$$('[data-out]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.out===which)));$$('[data-out-panel]').forEach(p=>p.hidden=p.dataset.outPanel!==which);}
  function bind(){photos=window.CWStudioImages.create({change:()=>{paint();disableExport(!rows.length);}});
   $$('[data-template]').forEach(b=>b.onclick=()=>preset(b.dataset.template));
@@ -179,7 +178,7 @@
   Object.entries(ids).filter(([k,id])=>id.startsWith('design-')).forEach(([k,id])=>$('#'+id).oninput=()=>{paint();history.replaceState(null,'',setupLink());});
   $$('[data-out]').forEach(b=>b.onclick=()=>showOut(b.dataset.out));
   $('#full-preview').onclick=()=>{const url=URL.createObjectURL(new Blob([svgText],{type:'image/svg+xml'}));window.open(url,'_blank','noopener');setTimeout(()=>URL.revokeObjectURL(url),60000);};
-  $('#download-card').onclick=png;$('#download-svg').onclick=()=>download(new Blob([svgText],{type:'image/svg+xml'}),'cricket-wicket-'+template+'.svg');$('#download-data').onclick=csv;
+  $('#download-card').onclick=png;$('#download-svg').onclick=()=>download(new Blob([svgText],{type:'image/svg+xml'}),'cricket-wicket-'+template+'.svg');
   $('#copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(setupLink());$('#studio-status').textContent='Setup link copied.';}catch{$('#studio-status').textContent='Copy the page address to share this setup.';history.replaceState(null,'',setupLink());}};
   $('#save-design').onclick=()=>{try{localStorage.setItem('cw-studio-design',JSON.stringify(state()));$('#studio-status').textContent='Design saved on this device. Local images are not saved.';}catch{$('#studio-status').textContent='This browser could not save the design.';}};
   $('#load-design').onclick=()=>{try{const saved=JSON.parse(localStorage.getItem('cw-studio-design'));if(!saved)throw new Error();restore(saved);photos.reset();render();}catch{$('#studio-status').textContent='No valid saved design on this device.';}};

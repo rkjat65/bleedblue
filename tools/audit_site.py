@@ -7,7 +7,7 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 from html import unescape
-from cricket_scope import publication_data, load_cards, FULL_MEMBERS
+from cricket_scope import publication_data, load_cards, REPRESENTATIVE
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / '_site'
@@ -64,8 +64,8 @@ def main():
         sitemap_paths.update(e.text.replace('https://crickrida.com', '') for e in tree.findall('.//{*}loc'))
     assert sitemap_paths == paths, 'Sitemap and publication disagree'
     archive,careers,history=publication_data(ROOT)
-    people={p['id']:{**p,'career':{}} for p in archive['players']}
-    for p in careers['players']:people.setdefault(p['id'],{}).update(espn_id=p['espn_id'])
+    from build_site import assemble_people
+    people=assemble_people(archive,careers)
     matches=archive['matches']+history['matches']
     cards=load_cards(ROOT,matches,people)
     assert set(routes['matches'])=={m['id'] for m in matches}
@@ -80,10 +80,14 @@ def main():
     assert 'FEATURED SCORECARD' in homepage
     assert 'Worm · cumulative runs by over' in homepage or 'MATCH CHARTS' in homepage
     assert 'archive-chart-data' not in homepage, 'Legacy matches-per-year chart is still on the homepage'
-    assert all(set(m['teams'])<=FULL_MEMBERS for m in read(SITE/'data/match-index.json'))
-    assert all(set(p['teams'])<=FULL_MEMBERS for p in read(SITE/'data/player-index.json'))
+    official=json.loads((ROOT/'data/official_match_registry.json').read_text(encoding='utf-8'))['matches']
+    index=read(SITE/'data/match-index.json')
+    assert len(index)==len(official), (len(index), len(official))   # every official international, associates included
+    assert all(len(m['teams'])==2 for m in index)
+    assert not any(set(p['teams'])&REPRESENTATIVE for p in read(SITE/'data/player-index.json'))
     expected=Counter();appearances=Counter()
     for m in matches:
+        if m['id'] in cards and not cards[m['id']]['innings']:continue   # no play is not an appearance
         for pid in m['player_ids']:appearances[pid,m['format']]+=1
     for card in cards.values():
         fmt=card['match']['format']
@@ -105,12 +109,14 @@ def main():
     pool.shutdown()
     print('Measuring publication weight...',flush=True)
     total_bytes = sum(p.stat().st_size for p in SITE.rglob('*') if p.is_file())
-    # GitHub Pages artifact limit is 10 GB. Format-first profiles and scorecards lifted the raw
-    # publication to about 1.5 GB; text compresses roughly eight to one on the wire.
-    assert total_bytes < 2_200_000_000, 'Publication exceeds the current GitHub Pages artifact budget'
-    # Format-first profiles render every format's splits and milestones in HTML so they
-    # are crawlable; the heaviest careers (long all-rounders) stay under 300 KB raw, about 35 KB compressed.
-    assert max(weights) < 300_000, 'Player HTML exceeds 300 KB budget'
+    # Every official international (associates included) puts the raw publication at about 2.3 GB.
+    # crickrida.com is served from R2 copies stored gzip-compressed (about a fifth of that); the
+    # GitHub Pages fallback artifact limit is 10 GB.
+    assert total_bytes < 3_500_000_000, 'Publication exceeds the 3.5 GB budget'
+    # Format-first profiles render every format's splits and milestones in HTML so they are
+    # crawlable. With associate opponents in the splits, the heaviest careers (long all-rounders
+    # such as Shakib Al Hasan) reach about 300 KB raw, about 40 KB compressed.
+    assert max(weights) < 340_000, 'Player HTML exceeds 340 KB budget'
     report = {'pages': len(paths), 'internal_targets': len(links), 'archive_players_reconciled': len(routes['players']),
               'site_bytes': total_bytes, 'largest_player_html_bytes': max(weights),
               'median_player_html_bytes': sorted(weights)[len(weights)//2], 'passed': True}

@@ -111,7 +111,7 @@ def quiz_markup():
 
 def tools_markup(link):
     cards = [
-        ('/studio/', 'STUDIO', 'Build a chart and export it', 'Pick players, measures and a breakdown, then download PNG, SVG or CSV.'),
+        ('/studio/', 'STUDIO', 'Build a chart and export it', 'Pick players, measures and a breakdown, then export a PNG or SVG image.'),
         ('/matchups/', 'MATCHUPS', 'Batter v bowler', 'Every ball between two players, across Tests, ODIs, T20Is, the IPL and the T20 World Cup.'),
         ('/phases/', 'PHASES', 'Powerplay, middle, death', 'How innings are built, over by over, with phase leaders and grounds.'),
         ('/compare/', 'COMPARE', 'Two or three careers', 'Side by side by format, with the best figure marked in every row.'),

@@ -104,7 +104,7 @@ def yearly_chart(rows, fmt, metric, context):
 
 
 def trends(rows, context, heading='Performance by year'):
-    result = '<section class="panel pr-section"><div class="pr-heading"><div><span class="eyebrow">CAREER BY FORMAT</span><h2>'+esc(heading)+'</h2></div><span class="pill">Available scorecards</span></div><p class="note">Formats are shown separately. These totals cover published scorecards against the twelve national teams; they can differ from complete official career records.</p>'
+    result = '<section class="panel pr-section"><div class="pr-heading"><div><span class="eyebrow">CAREER BY FORMAT</span><h2>'+esc(heading)+'</h2></div><span class="pill">Available scorecards</span></div><p class="note">Formats are shown separately. These totals cover published scorecards; they can differ from complete official career records.</p>'
     has_data = False
     for fmt in FORMATS:
         subset = [r for r in rows if r['format'] == fmt]
@@ -217,7 +217,7 @@ def opponent_pages(p, rows, path):
         subset = sorted(subset,key=lambda r:(r['date'],r['match'],r.get('innings',0)))
         title = p['name']+' '+fmt+' record against '+opponent
         description = f'{title}: {stats["matches"]} matches with recorded figures, batting and bowling averages, yearly charts and linked scorecards from {subset[0]["date"]} to {subset[-1]["date"]}.'
-        body = f'<section class="page-head"><span class="eyebrow">PLAYER RESEARCH · {esc(p["gender"])}</span><h1>{esc(title)}</h1><p>{esc(subset[0]["date"])} – {esc(subset[-1]["date"])} · Available official international scorecards</p></section>'
+        body = f'<section class="page-head"><span class="eyebrow">PLAYER RESEARCH · {esc(p["gender"])}</span><h1>{esc(title)}</h1><p>{esc(subset[0]["date"])} to {esc(subset[-1]["date"])} · Available official international scorecards</p></section>'
         body += '<p>'+link(path,p['name']+' complete career profile')+' · '+link('/research/','More player studies')+'</p>'
         body += '<section class="panel pr-section"><h2>The record at a glance</h2><p>This study covers <strong>'+str(stats['matches'])+' '+esc(fmt)+' matches</strong> against '+esc(opponent)+' with recorded batting or bowling figures: '+str(stats['innings'])+' batting innings and '+str(stats['bowling_innings'])+' bowling innings. Matches with no batting or bowling entry for this player are outside this sample.</p>'
         body += table(['Discipline','Innings','Runs','Wickets / outs','Average','Strike rate'],[
@@ -240,7 +240,7 @@ def opponent_pages(p, rows, path):
         body += timeline(subset)
         recent = list(reversed(subset))[:20]
         body += '<section class="panel pr-section"><h2>Recent recorded innings</h2>'+table(['Date','Venue','Innings','Runs','Balls','Wickets','Conceded'],[[link(r['url'],r['date']),esc(r.get('venue','')),str(r.get('innings',''))]+[('-' if r.get(k) is None else str(r[k])) for k in ('runs','balls','wickets','conceded')] for r in recent],'Scorecards supporting this opposition study')+'</section>'
-        body += '<p class="note">This opposition study uses available scorecards in Crickrida’s twelve-team publication scope. It is a dated archive analysis, not a claim of complete career coverage. '+link('/methodology/','Read the coverage and calculation method')+'.</p>'
+        body += '<p class="note">This opposition study uses available scorecards. It is a dated archive analysis, not a claim of complete career coverage. '+link('/methodology/','Read the coverage and calculation method')+'.</p>'
         yield opposition_path(path,fmt,opponent), title, description, body, 'Article'
 
 

@@ -241,6 +241,14 @@ def career_table(field, label, kind, entries, minimum, lower, pp):
     else:
         head = ['Rank', label, 'Player', 'Team', 'Span', ('Mat', 'Matches'), ('Inns', 'Innings'), ('NO', 'Not outs'), 'Runs', ('HS', 'Highest score'), ('Avg', 'Average'), ('SR', 'Strike rate'), '100', '50', ('0', 'Ducks')]
         body = [[str(rk), fmt_value(p), f'<a href="{esc(p["url"])}">{esc(p["name"])}</a>', esc(' / '.join(p['teams'])), esc(p.get('span') or '-'), n(p.get('matches')), n(p.get('innings')), n(p.get('notouts')), n(p.get('runs')), esc(p.get('highest_display') or '-'), r2(p.get('avg'), p.get('outs')), r2(p.get('sr'), p.get('balls')), n(p.get('hundreds')), n(p.get('fifties')), n(p.get('ducks'))] for rk, p in ranked]
+    # The ranked figure leads the row; drop the same figure where it repeats among the columns.
+    repeat = {'runs': 'Runs', 'wickets': 'Wkts', 'matches': 'Mat', 'hundreds': '100', 'fifties': '50', 'ducks': '0', 'avg': 'Avg', 'sr': 'SR',
+              'bowlAvg': 'Avg', 'econ': 'Econ', 'bowlSr': 'SR', 'five_w': '5w', 'catches': 'Ct', 'stumpings': 'St'}.get(field)
+    labels = [h if isinstance(h, str) else h[0] for h in head]
+    if repeat in labels[2:]:
+        j = labels.index(repeat, 2)
+        head = head[:j] + head[j + 1:]
+        body = [row[:j] + row[j + 1:] for row in body]
     return head, body, qualified
 
 
@@ -248,21 +256,41 @@ def records_table(head, body, caption, left=()):
     return lean_table(caption, head, [[c for c in row] for row in body], css='pf-records', left=left)
 
 
-def records_index(gender_format_links):
-    """Hub page grouped by category, then gender and format."""
-    out = ''
-    categories = [('bat', 'Batting'), ('bowl', 'Bowling'), ('team', 'Team'), ('stand', 'Partnerships'), ('year', 'Calendar year'), ('field', 'Fielding')]
-    for cat, title in categories:
-        keys = [(k, label) for k, f, label, lower, minimum, kind in CAREER_METRICS if kind == cat] + [(k, label) for k, label, kind in INNINGS_RECORDS if kind == cat]
-        if not keys:
-            continue
-        out += f'<section class="panel pf-block records-cat"><h2>{esc(title)} records</h2><div class="records-grid">'
-        for key, label in keys:
-            links = ''.join(f'<a href="/records/{g.lower()}/{f.lower()}/{key}/" class="fmt-{f.lower()}">{esc(g)} {esc(f)}</a>' for g in GENDERS for f in FORMATS if (g, f, key) in gender_format_links)
-            if links:
-                out += f'<div class="records-item"><h3>{esc(label)}</h3><div class="records-links">{links}</div></div>'
-        out += '</div></section>'
-    return out
+def records_index(leaders):
+    """One gender and format at a time, each record with its holder and figure, linking to the full
+    table. leaders: {(gender, fmt, key): (holder, value, detail)}, holder already escaped; only published records appear.
+    The six views are all in the page for search; a small script switches between them."""
+    categories = [('bat', 'Batting'), ('bowl', 'Bowling'), ('field', 'Fielding'), ('year', 'Calendar year'), ('stand', 'Partnerships'), ('team', 'Team')]
+    labels = {k: label for k, f, label, lower, minimum, kind in CAREER_METRICS}
+    labels.update({k: label for k, label, kind in INNINGS_RECORDS})
+    kinds = {k: kind for k, f, label, lower, minimum, kind in CAREER_METRICS}
+    kinds.update({k: kind for k, label, kind in INNINGS_RECORDS})
+    order = [k for k, *_ in CAREER_METRICS] + [k for k, *_ in INNINGS_RECORDS]
+    switch = ('<div class="rh-switch" role="group" aria-label="Choose records">'
+              '<div class="rh-seg" data-rh="g">' + ''.join(f'<button type="button" data-v="{g.lower()}"{" aria-pressed=true" if g == "Men" else " aria-pressed=false"}>{g}</button>' for g in GENDERS) + '</div>'
+              '<div class="rh-seg" data-rh="f">' + ''.join(f'<button type="button" class="fmt-{f.lower()}" data-v="{f.lower()}"{" aria-pressed=true" if f == "Test" else " aria-pressed=false"}>{f}</button>' for f in FORMATS) + '</div></div>')
+    panels = ''
+    for g in GENDERS:
+        for f in FORMATS:
+            groups = ''
+            for cat, title in categories:
+                rows = ''
+                for key in order:
+                    if kinds[key] != cat or (g, f, key) not in leaders:
+                        continue
+                    holder, value, detail = leaders[(g, f, key)]
+                    rows += (f'<li><a class="rh-row" href="/records/{g.lower()}/{f.lower()}/{key}/"><span class="rh-label">{esc(labels[key])}</span>'
+                             f'<strong class="rh-value">{esc(value)}</strong><span class="rh-holder">{holder}</span>'
+                             + (f'<small>{esc(detail)}</small>' if detail else '') + '</a></li>')
+                if rows:
+                    groups += f'<section class="rh-group"><h3>{esc(title)}</h3><ol>{rows}</ol></section>'
+            hidden = '' if (g, f) == ('Men', 'Test') else ' hidden'
+            panels += f'<div class="rh-panel fmt-{f.lower()}" data-g="{g.lower()}" data-f="{f.lower()}"{hidden}><h2>{g} {f} records</h2><div class="rh-groups">{groups}</div></div>'
+    script = ("<script>(function(){var hub=document.querySelector('.rh');if(!hub)return;var pick={g:'men',f:'test'};"
+              "function show(){hub.querySelectorAll('.rh-panel').forEach(function(p){p.hidden=!(p.dataset.g===pick.g&&p.dataset.f===pick.f);});"
+              "hub.querySelectorAll('.rh-seg').forEach(function(s){s.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.v===pick[s.dataset.rh]));});});}"
+              "hub.querySelectorAll('.rh-seg button').forEach(function(b){b.addEventListener('click',function(){pick[b.parentNode.dataset.rh]=b.dataset.v;show();});});})();</script>")
+    return f'<div class="rh">{switch}{panels}</div>{script}'
 
 
 def headline_records(matches, cards, people):

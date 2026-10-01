@@ -10,7 +10,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from import_careers import ROOT, CLASSES, fetch
 from build_record_layers import number
-from cricket_scope import national_match, national_player, publication_data,load_cards,complete_career_counts
+from cricket_scope import national_match, national_player, published_match, publication_data,load_cards,complete_career_counts
 
 CACHE=ROOT/'.data-cache/free-backfill'
 DEST=ROOT/'data'
@@ -108,7 +108,9 @@ def main(mode,workers,limit):
                     tasks.append((p['id'],p['espn_id'],fmt,cls,{'Mat':s.get('matches'),'Inns':s.get('bowling_innings'),'Wkts':s.get('wickets'),'Runs':s.get('conceded')}))
         fn=fetch_bowling
     else:
-        tasks=[m for m in read(DEST/'historical_matches.json')['matches'] if national_match(m)]
+        # Every official international without a Cricsheet scorecard, associates included.
+        official=read(DEST/'official_match_registry.json')['matches']
+        tasks=[m for m in read(DEST/'historical_matches.json')['matches'] if published_match(m,official)]
         fn=fetch_card
     if limit:tasks=tasks[:limit]
     done=[];errors=[];print(f'{mode}: {len(tasks)} records',flush=True)

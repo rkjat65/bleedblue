@@ -70,6 +70,6 @@ def main():
     career_rows+=ipl_careers(people)
     tables={'matches':write_table('matches',match_rows),'careers':write_table('careers',career_rows),'batting_innings':write_table('batting_innings',batting),'bowling_innings':write_table('bowling_innings',bowling)}
     tables.update(ball_tables)
-    now=datetime.now(timezone.utc);manifest={'name':'Crickrida Analytics Lake','version':now.strftime('%Y%m%d%H%M%S'),'generated_at':now.isoformat(),'career_checked_at':careers['meta'].get('checked_at'),'match_date_from':min(m['date'] for m in matches),'match_date_to':max(m['date'] for m in matches),'scope':'Official international careers; twelve-team match archive; ball-by-ball internationals, IPL and T20 World Cup','license_note':'Cricsheet attribution applies to ball-derived records.','tables':tables}
+    now=datetime.now(timezone.utc);manifest={'name':'Crickrida Analytics Lake','version':now.strftime('%Y%m%d%H%M%S'),'generated_at':now.isoformat(),'career_checked_at':careers['meta'].get('checked_at'),'match_date_from':min(m['date'] for m in matches),'match_date_to':max(m['date'] for m in matches),'scope':'Official international careers; every official international; ball-by-ball internationals, IPL and T20 World Cup','license_note':'Cricsheet attribution applies to ball-derived records.','tables':tables}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8');print(json.dumps({k:{'rows':v['rows'],'bytes':v['bytes']} for k,v in tables.items()},indent=2))
 if __name__=='__main__':main()

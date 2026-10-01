@@ -59,12 +59,6 @@ def icon(name, size=22):
             f'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
 
 
-def section_jump(items):
-    """Sticky chip bar that jumps between homepage sections and tracks the one in view."""
-    links = ''.join(f'<a href="#{_e(anchor)}">{icon(ic, 16)}<span>{_e(label)}</span></a>' for anchor, label, ic in items)
-    return f'<nav class="arena-jump" aria-label="On this page" data-arena-jump><div class="arena-jump-track">{links}</div></nav>'
-
-
 def match_centre(fixtures, today, limit=12):
     """Horizontally scrolling fixture cards with IST start times; arena.js adds live countdowns."""
     cards = ''
@@ -91,16 +85,6 @@ def match_centre(fixtures, today, limit=12):
       <div class="mc-controls"><button type="button" class="mc-arrow" data-mc-prev aria-label="Scroll fixtures left">←</button><button type="button" class="mc-arrow" data-mc-next aria-label="Scroll fixtures right">→</button><a href="/where-to-watch/">Where to watch →</a></div></div>
       <ol class="mc-rail" data-mc-rail tabindex="0" aria-label="Upcoming fixtures">{cards}</ol>
     </section>'''
-
-
-def stats_band(items):
-    """Headline numbers that count up when scrolled into view."""
-    cells = ''
-    for value, label, ic in items:
-        text = f'{value:,}' if isinstance(value, int) else _e(value)
-        count = f' data-count="{value}"' if isinstance(value, int) else ''
-        cells += f'<div class="band-cell">{icon(ic, 26)}<strong{count}>{text}</strong><span>{_e(label)}</span></div>'
-    return f'<section class="arena-band" aria-label="Archive in numbers">{cells}</section>'
 
 
 def leaders_race(boards):

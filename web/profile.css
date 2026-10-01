@@ -55,6 +55,7 @@ html[data-theme=dark]{--fmt-test:#ff5c7a;--fmt-odi:#00e5ff;--fmt-t20i:#b8ff00}
 .pf-hero>div.lead strong{color:var(--fmt)}
 .pf-hero span{display:block;margin-top:5px;font-size:10px;letter-spacing:.9px;text-transform:uppercase;color:var(--muted);font-weight:700}
 .pf-hero .missing,.pf-hero .not-applicable{font-size:16px}
+.pf-hero .pf-rank{display:inline-block;margin-top:7px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;color:var(--fmt,var(--accent));background:color-mix(in srgb,var(--fmt,var(--accent)) 12%,transparent)}
 
 /* ---------- Blocks inside panels ---------- */
 .pf-block{padding:18px 20px}
@@ -111,7 +112,12 @@ html[data-theme=dark] .pf-table tfoot th,html[data-theme=dark] .pf-table tfoot t
 .fmt-panel .cw-form i.hundred,.fmt-panel .cw-form i.five{background:var(--fmt)}
 .fmt-panel .cw-form i.duck{background:var(--muted);opacity:.5}
 .fmt-panel .cw-form i.wicket{background:color-mix(in srgb,var(--fmt) 70%,var(--muted))}
-.fmt-panel .cw-order-cell i{background:color-mix(in srgb,var(--fmt) 26%,transparent)}
+/* The key matches the format-coloured bars above it. */
+.fmt-panel .cw-form-key span:not([class]):before{background:color-mix(in srgb,var(--fmt) 55%,var(--muted))}
+.fmt-panel .cw-form-key span.notout:before{background:transparent;box-shadow:inset 0 0 0 2px var(--ink)}
+html:not([data-theme=dark]) .fmt-panel .cw-form-key span.hundred:before{background:var(--fmt)}
+html:not([data-theme=dark]) .fmt-panel .cw-form-key span.duck:before{background:var(--muted);opacity:.5}
+
 .arena-js .ch .cw-bucket-track i{transform:scaleY(0);transform-origin:bottom;transition:transform .9s var(--arena-ease)}
 .arena-js .ch.in .cw-bucket-track i{transform:none}
 .arena-js .ch .cw-bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);transition:transform .7s var(--arena-ease)}
@@ -214,12 +220,6 @@ html[data-theme=dark] .f-w{background:#22c55e;color:#06210f}html[data-theme=dark
 @media(max-width:640px){.pf-scoreline{font-size:17px}.pf-formguide i{min-width:22px;height:22px;font-size:10px}}
 
 /* ---------- Records hub ---------- */
-.records-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
-.records-item{padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
-.records-item h3{margin:0 0 8px;font-size:15px}
-.records-links{display:flex;flex-wrap:wrap;gap:6px}
-.records-links a{padding:5px 10px;border-radius:999px;font-size:11px;font-weight:700;color:var(--fmt);background:color-mix(in srgb,var(--fmt) 12%,transparent);border:1px solid color-mix(in srgb,var(--fmt) 30%,transparent)}
-.records-links a:hover{text-decoration:none;background:color-mix(in srgb,var(--fmt) 22%,transparent)}
 .pf-records .pf-table tbody th{min-width:0;width:44px;text-align:center}
 .pf-records .pf-table td:nth-child(2){font-weight:800;color:var(--accent)}
 
@@ -232,6 +232,7 @@ html[data-theme=dark]{--cmp-1:#ffb800;--cmp-2:#b8ff00}
 .cmp-id .player-portrait{grid-row:span 2;width:72px}.cmp-id .player-portrait img,.cmp-id .portrait-initials{height:82px;border-radius:12px}.cmp-id .player-portrait figcaption{display:none}
 .cmp-id strong{font-size:18px;line-height:1.15;letter-spacing:-.3px}.cmp-id small{font-size:11px;color:var(--muted)}
 .cmp-id:hover{text-decoration:none;border-color:var(--who,var(--accent))}
+.cmp-id{position:relative}.cmp-id strong a{color:inherit}.cmp-id strong a:after{content:"";position:absolute;inset:0;border-radius:16px}.cmp-id strong a:hover{text-decoration:none}
 .cmp-vs{align-self:center;font:900 12px/1 var(--font-mono,monospace);letter-spacing:.1em;color:var(--muted)}
 .cmp-tile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 14px}.cmp-tile-grid.cmp-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .cmp-tiles{padding:14px 16px;border:1px solid var(--border);border-left:4px solid var(--who,var(--accent));border-radius:14px;background:var(--panel)}
@@ -256,6 +257,7 @@ html[data-theme=dark]{--cmp-1:#ffb800;--cmp-2:#b8ff00}
 .gr-facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:4px 0 12px}
 .gr-fact{display:flex;flex-direction:column;gap:2px;min-width:96px}
 .gr-fact span{font:600 10px/1.2 var(--font-mono,monospace);letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.pf-mast h1 .team-mast-flag{display:inline-block;width:56px;height:40px;margin-right:14px;vertical-align:-4px;border-radius:6px;box-shadow:0 0 0 1px var(--border)}
 .gr-fact strong{font:700 15px/1.25 var(--font-heading,inherit);color:var(--ink)}
 .gr-links{margin:0 0 12px}
 .gr-links a{color:var(--accent)}

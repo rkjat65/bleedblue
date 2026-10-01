@@ -1,32 +1,4 @@
-/* Homepage motion is optional; archive values remain available without JavaScript. */
-(() => {
-  'use strict';
-  const hero = document.querySelector('[data-cricket-hero]');
-  if (hero) {
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const toggle = hero.querySelector('[data-hero-motion]');
-    const setPaused = paused => {
-      hero.classList.toggle('motion-paused', paused);
-      if (toggle) {
-        toggle.setAttribute('aria-pressed', String(paused));
-        toggle.textContent = paused ? 'Play motion' : 'Pause motion';
-      }
-    };
-    setPaused(reduce.matches);
-    if (toggle) toggle.addEventListener('click', () => setPaused(!hero.classList.contains('motion-paused')));
-    if (reduce.addEventListener) reduce.addEventListener('change', event => setPaused(event.matches));
-    hero.addEventListener('pointermove', event => {
-      if (hero.classList.contains('motion-paused') || window.innerWidth < 701) return;
-      const box = hero.getBoundingClientRect();
-      const x = (event.clientX - box.left) / box.width - 0.5;
-      const y = (event.clientY - box.top) / box.height - 0.5;
-      hero.style.setProperty('--art-x', `${(-x * 16).toFixed(1)}px`);
-      hero.style.setProperty('--art-y', `${(-y * 10).toFixed(1)}px`);
-      hero.style.setProperty('--fig-x', `${(x * 12).toFixed(1)}px`);
-      hero.style.setProperty('--fig-y', `${(y * 6).toFixed(1)}px`);
-    });
-  }
-})();
+/* Homepage: the decade chart on coverage pages redraws for the chosen format and gender. */
 (() => {
   'use strict';
   const story = document.querySelector('[data-archive-story]');
