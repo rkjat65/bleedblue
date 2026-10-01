@@ -448,3 +448,30 @@ body>header{view-transition-name:site-header}
 .wc-leaders strong{font-variant-numeric:tabular-nums}
 @media(max-width:900px){.wc-hero{grid-template-columns:minmax(0,1fr)}.wc-facts{grid-template-columns:repeat(3,minmax(0,1fr))}.wc-stages{grid-template-columns:repeat(2,minmax(0,1fr))}.wc-history-top{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.wc-hero{padding:20px}.wc-countdown strong{font-size:48px}.wc-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.wc-stages,.wc-keydates,.wc-two{grid-template-columns:minmax(0,1fr)}.wc-promo{flex-direction:column;align-items:flex-start}.wc-promo-days{text-align:left}.wc-title-bar{grid-template-columns:100px minmax(0,1fr) 24px}}
+/* ---------- IPL and T20 World Cup pages built into the site ---------- */
+.league-bar{display:flex;align-items:center;gap:14px;margin:14px 0 4px;padding:5px;border:1px solid var(--border);border-radius:12px;background:color-mix(in srgb,var(--panel) 92%,transparent);overflow-x:auto;scrollbar-width:none}
+.league-bar::-webkit-scrollbar{display:none}
+.league-toggle{display:flex;flex:none;padding:2px;border:1px solid var(--border);border-radius:9px;background:var(--soft)}
+.league-toggle a{padding:5px 10px;border-radius:7px;color:var(--muted);font-size:12px;font-weight:800}
+.league-toggle a[aria-current]{background:var(--lime);color:var(--bg)}
+.league-links{display:flex;gap:16px;flex:none}
+.league-links a{padding:7px 0;color:var(--muted);font-size:13px;font-weight:650;white-space:nowrap}
+.league-links a[aria-current]{color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+.league-bar a:hover{text-decoration:none;color:var(--ink)}
+.club-badge{display:inline-flex;align-items:center;gap:8px}
+.club-mark{display:inline-grid;place-items:center;min-width:34px;height:22px;padding:0 5px;border-radius:6px;background:color-mix(in srgb,var(--club) 22%,transparent);border:1px solid color-mix(in srgb,var(--club) 60%,transparent);color:var(--ink);font:800 10px/1 var(--font-mono,monospace);letter-spacing:.5px}
+/* ---------- IPL season pages ---------- */
+.season-final{display:grid;gap:6px;margin:0 0 14px;padding:18px 20px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--border));border-radius:16px;background:linear-gradient(110deg,color-mix(in srgb,var(--gold) 12%,var(--panel)),var(--panel) 65%)}
+.season-final .eyebrow{color:var(--gold);font-size:10px;letter-spacing:2px}
+.season-champ .team-badge{font-size:22px;font-weight:800}
+.season-champ .club-mark{min-width:44px;height:28px;font-size:12px}
+.season-final p{margin:0;color:var(--muted)}
+.season-table td,.season-table th{text-align:right;font-variant-numeric:tabular-nums}
+.season-table td.t,.season-table th.t{text-align:left}
+.season-table tr.is-playoff th{box-shadow:inset 3px 0 0 var(--lime)}
+.season-table b{color:var(--ink)}
+.season-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.season-facts div{display:flex;flex-direction:column;gap:3px;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.season-facts span{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.season-facts strong{font-size:22px;font-variant-numeric:tabular-nums}
+.season-facts small{color:var(--muted);font-size:12px}

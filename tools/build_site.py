@@ -4,6 +4,7 @@ import argparse, hashlib, html, json, math, re, shutil, unicodedata
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
+from urllib.parse import unquote
 from cricket_scope import publication_data, FULL_MEMBERS, load_cards, complete_career_counts,career_scorecards
 from home_visuals import homepage_hero, homepage_insights, archive_visuals, icons_rail, format_trio, records_grid
 from on_this_day import publish_history, india_today
@@ -22,6 +23,8 @@ import league_panels as lp
 import league_entities as le
 import tool_pages as tp
 import world_cup_2027 as wc27
+import league_matches as lm
+import league_seasons as ls
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
 from venues import canonicalise_matches
 from compare_pages import PAIRS, find_player, compare_body, comparison_cards
@@ -32,7 +35,7 @@ from entity_pages import (ground_masthead, ground_place,
     team_glance, ground_glance, team_faq, ground_faq,
     team_schema, ground_schema, h2h_path,
 )
-from world_cup import FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note, analysis_heading, analysis_lede
+from world_cup import pretty_date, FAMILIES, merge_official, titles_leaderboard, timeline_table, official_record_rows, coverage_note, analysis_heading, analysis_lede
 from official_public import load_team_records, load_innings_records, official_team_panel, official_innings_table, official_h2h
 from broadcasts import load_broadcasts, watch_page
 from tidy import tidy_copy
@@ -208,7 +211,7 @@ def aggregate(formats):
 def result(m):
     o=m['outcome']
     if o.get('winner'):
-        margin=m.get('margin_text') or ' and '.join('an innings' if k=='innings' and v==1 else f'{v} {k}' for k,v in o.get('by',{}).items())
+        margin=m.get('margin_text') or ' and '.join('an innings' if k=='innings' and v==1 else f'{v} {k[:-1] if v==1 else k}' for k,v in o.get('by',{}).items())
         text=o['winner']+' won'+(' by '+margin if margin else '')
         if o.get('method'):text+=' ('+str(o['method'])+' method)'
         return text
@@ -255,8 +258,9 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     canonical=BASE+path; section=path.strip('/').split('/')[0]
     crumbs=[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'}]
     if len(path.strip('/').split('/'))>1:
-        body='<nav class="breadcrumbs" aria-label="Breadcrumb">'+a('/','Home')+' / '+a('/'+section+'/',section.replace('-',' ').title())+' / <span>'+esc(crumb_name)+'</span></nav>'+body
-        crumbs.append({'@type':'ListItem','position':2,'name':section.replace('-',' ').title(),'item':BASE+'/'+section+'/'})
+        section_name,section_url={'ipl':('IPL','/ipl/dashboard'),'t20-world-cup':('T20 World Cup','/t20-world-cup/dashboard')}.get(section,(section.replace('-',' ').title(),'/'+section+'/'))
+        body='<nav class="breadcrumbs" aria-label="Breadcrumb">'+a('/','Home')+' / '+a(section_url,section_name)+' / <span>'+esc(crumb_name)+'</span></nav>'+body
+        crumbs.append({'@type':'ListItem','position':2,'name':section_name,'item':BASE+section_url})
         crumbs.append({'@type':'ListItem','position':3,'name':crumb_name,'item':canonical})
     elif path!='/':
         crumbs.append({'@type':'ListItem','position':2,'name':title,'item':canonical})
@@ -271,8 +275,8 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     ld_scripts=f'<script type="application/ld+json">{ld}</script>'
     if faq:
         ld_scripts+=f'<script type="application/ld+json">{json.dumps(faq,ensure_ascii=False).replace("<","\\u003c")}</script>'
-    nav=[('/matches/','Matches'),('/players/','Players'),('/teams/','Teams'),('/records/','Records'),('/compare/','Compare'),('/tools/','Tools'),('/series/','Series'),('/where-to-watch/','Watch')]
-    tool_paths={'/tools/','/studio/',*tp.TOOL_PAGES}
+    nav=[('/matches/','Matches'),('/players/','Players'),('/teams/','Teams'),('/records/','Records'),('/world-cup/','World Cups'),('/tools/','Tools'),('/series/','Series'),('/where-to-watch/','Watch')]
+    tool_paths={'/tools/','/studio/','/compare/',*tp.TOOL_PAGES}
     tools_assets=(f'<link rel="stylesheet" href="/assets/tools.css?v={ASSET_VERSION}"><script src="/assets/lake.js?v={ASSET_VERSION}" defer></script><script src="/assets/{tp.TOOL_PAGES[path]}.js?v={ASSET_VERSION}" defer></script>' if path in tp.TOOL_PAGES else f'<link rel="stylesheet" href="/assets/tools.css?v={ASSET_VERSION}">' if path=='/tools/' else '')
     home_assets=(f'<link rel="stylesheet" href="/assets/home.css?v={ASSET_VERSION}"><script src="/assets/home.js?v={ASSET_VERSION}" defer></script>' if path=='/' else '')
     studio_assets=(f'<link rel="stylesheet" href="/assets/studio.css?v={ASSET_VERSION}"><script src="/assets/studio-core.js?v={ASSET_VERSION}" defer></script><script src="/assets/studio-images.js?v={ASSET_VERSION}" defer></script><script src="/assets/studio.js?v={ASSET_VERSION}" defer></script>' if path=='/studio/' else '')
@@ -297,13 +301,13 @@ def matchup(match,path=None):
     return f'<a class="matchup-link" href="{esc(path)}">{label}</a>' if path else label
 def match_table(matches,paths,limit=40):
     return table(['Date','Match','Format','Result','Coverage'],[[esc(m['date']),matchup(m,paths[m['id']]),esc(m['format']+' · '+m['gender']),esc(result(m)),pill('Result only' if m.get('coverage')=='result-only' else 'No play' if m.get('coverage')=='no-play' else 'Scorecard')] for m in matches[:limit]],caption='International match results')
-def scoreboard(m,innings,gp,card=None,people=None,pp=None):
+def scoreboard(m,innings,gp,card=None,people=None,pp=None,badge=None):
     """Result header: each side's innings as linked scores with overs, the winner lit, toss, award, ground and series."""
     winner=(m.get('outcome') or {}).get('winner')
     rows=''
     for team in m['teams']:
         scores=' <span class="sb-and">&amp;</span> '.join(f'<a href="#innings-{i}">{score_text(inn)}'+(f'<small>{esc(overs_text(inn))} ov</small>' if overs_text(inn) else '')+'</a>' for i,inn in enumerate(innings,1) if inn['team']==team and not inn.get('super_over'))
-        rows+=f'<div class="sb-team{" is-winner" if team==winner else ""}">'+team_badge(team,gp['teams'].get(team))+f'<span class="sb-scores">{scores or "-"}</span></div>'
+        rows+=f'<div class="sb-team{" is-winner" if team==winner else ""}">'+(badge or team_badge)(team,gp['teams'].get(team))+f'<span class="sb-scores">{scores or "-"}</span></div>'
     facts=''
     toss=(card or {}).get('toss') or {}
     if toss.get('winner'):
@@ -390,6 +394,60 @@ def render_profile(p,pid,path,rows,apps,*,gp_teams,portraits,pack,curated,checke
     if faq_schema:extra['faq']=faq_schema
     return title,description,body,extra
 
+def build_ipl_scorecards(people,pp):
+    """IPL scorecards at the app's addresses, /ipl/matches/<id>; Caddy serves them ahead of the app.
+    They stay out of this sitemap because the app's IPL sitemap already lists the same addresses."""
+    source=ROOT/'.data-cache/ipl_json.zip'
+    if not source.exists():
+        print('IPL scorecards skipped: .data-cache/ipl_json.zip is missing',flush=True);return 0
+    print('Building IPL scorecards...',flush=True)
+    count=0;by_season=defaultdict(list);season_links={};season_names={}
+    for card in lm.ipl_cards(source):
+        m=card['match'];path='/ipl/matches/'+m['id']
+        lpeople,lpp=lm.links_for(card,people,pp);lgp=lm.league_gp(card)
+        by_season[m['season']].append(card);season_links.update(lpp);season_names.update({pid:v['name'] for pid,v in lpeople.items()})
+        teams_label=' v '.join(m['teams'])
+        body=lm.section_bar('/ipl')+heading(teams_label,f'{pretty_date(m["date"])} · {lm.label(m)} · {m["venue"]}','IPL SCORECARD')+scoreboard(m,card['innings'],lgp,card,lpeople,lpp,badge=lm.club_badge)+actions()
+        if card['innings']:body+=cw.match_lab(card)
+        for index,inn in enumerate(card['innings'],1):body+=render_innings(inn,index,lpeople,lpp,(card.get('players') or {}).get(inn['team']))
+        if not card['innings']:body+='<section class="panel"><h2>No play</h2><p>This match has no recorded innings.</p></section>'
+        body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+lm.club_badge(team,lgp['teams'].get(team))+'</h3>'+''.join('<p>'+a(lpp[p['id']],lpeople[p['id']]['name'])+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section>'
+        body+='<p class="note">Scorecard from Cricsheet ball-by-ball data. '+a('/ipl/matches','All IPL matches')+' · '+a(lgp['series'].get(m['event'],'/ipl/seasons'),'IPL '+m['date'][:4]+' season')+' · '+a('/matchups/?comp=IPL','IPL matchups')+'</p>'
+        page(path,f'{teams_label}, {lm.label(m)}: scorecard',f'{result(m)}. Full IPL scorecard from {pretty_date(m["date"])} at {m["venue"]}: batting, bowling, worm and over-by-over runs.',body,'SportsEvent',
+             {'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']},'competitor':[{'@type':'SportsTeam','name':t,'sport':'Cricket'} for t in m['teams']],'breadcrumb_name':teams_label+', '+pretty_date(m['date'])})
+        PAGES.pop(path,None)
+        count+=1
+    print(f'Built {count:,} IPL scorecards',flush=True)
+    # Season pages. Labels like '2007/08' keep the app's encoded address; a copy also sits at the decoded path Caddy looks up.
+    order=sorted(by_season,key=lambda s:ls.year_of(by_season[s]))
+    for i,season in enumerate(order):
+        prev=(order[i-1],ls.year_of(by_season[order[i-1]])) if i else None
+        nxt=(order[i+1],ls.year_of(by_season[order[i+1]])) if i+1<len(order) else None
+        title,description,body,extra=ls.build(season,by_season[season],season_links,season_names,result,pretty_date,a,(prev,nxt))
+        path=ls.season_path(season)
+        page(path,title,description,lm.section_bar('/ipl','/seasons')+body,'CollectionPage',extra)
+        PAGES.pop(path,None)
+        if '%' in path:
+            decoded=OUT/unquote(path).lstrip('/')/'index.html';decoded.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(OUT/path.lstrip('/')/'index.html',decoded)
+    print(f'Built {len(order)} IPL season pages',flush=True)
+    return count
+
+def t20wc_match_redirects(all_cards,mp):
+    """T20 World Cup matches already have full scorecards here; their app addresses point to them."""
+    count=0
+    for source in sorted((ROOT/'data/t20wc_matches').glob('*.json')):
+        mid=source.stem
+        if mid not in all_cards or mid not in mp:continue
+        target=mp[mid];url=BASE+target
+        doc=(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scorecard moved | Crickrida</title><link rel="canonical" href="{url}">'
+             f'<meta http-equiv="refresh" content="0;url={target}"><meta name="robots" content="noindex,follow"></head>'
+             f'<body><p>This T20 World Cup scorecard is at <a href="{target}">{esc(url)}</a>.</p></body></html>')
+        out=OUT/'t20-world-cup/matches'/mid/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(doc,encoding='utf-8')
+        count+=1
+    print(f'Pointed {count:,} T20 World Cup match addresses at their scorecards',flush=True)
+    return count
+
 def main():
     global PREVIOUS, ILLUSTRATIONS
     OUT.mkdir(exist_ok=True)
@@ -472,7 +530,7 @@ def main():
     print('Building scorecards and player analysis...',flush=True)
     venue_hosts=venue_host_map(matches)
     for mid,card in all_cards.items():
-        m=card['match'];body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+scoreboard(m,card['innings'],gp,card,people,pp)+actions()
+        m=card['match'];body=heading(' v '.join(m['teams']),f'{pretty_date(m["date"])} · {m["format"]} · {m["gender"]} · {m["venue"]}','MATCH SCORECARD')+scoreboard(m,card['innings'],gp,card,people,pp)+actions()
         body+=cw.match_lab(card)
         for index,inn in enumerate(card['innings'],1):
             body+=render_innings(inn,index,people,pp,(card.get('players') or {}).get(inn['team']))
@@ -485,11 +543,13 @@ def main():
                 innings[pid].append({'date':m['date'],'match':mid,'url':mp[mid],'format':m['format'],'opponent':opp,'venue':m['venue'],'setting':setting,'result':outcome,'innings':index,'position':pos,'runs':b.get('runs'),'balls':b.get('balls'),'out':b.get('out'),'fours':b.get('fours'),'sixes':b.get('sixes'),'dismissal':b.get('dismissal'),'wickets':w.get('wickets'),'legal':w.get('balls'),'conceded':w.get('runs'),'maidens':w.get('maidens'),'event':m.get('event') or None})
         body+='<section class="panel"><h2>Playing XIs</h2><div class="grid two">'+''.join('<div><h3>'+team_badge(team,gp['teams'].get(team))+'</h3>'+''.join('<p>'+(a(pp[p['id']],people[p['id']]['name']) if p['id'] in pp else esc(p['name']))+'</p>' for p in squad)+'</div>' for team,squad in card['players'].items())+'</div></section><p class="note">Verified match scorecard. Super overs are excluded from player analysis. A dash means the historical scorecard did not record that field.</p>'
         if not card['innings']:body+='<section class="panel"><h2>No play</h2><p>This match has no recorded innings. Batting and bowling figures do not apply.</p></section>'
-        page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']},'competitor':[{'@type':'SportsTeam','name':team,'sport':'Cricket'} for team in m['teams']]})
+        page(mp[mid],match_labels[mid]+' scorecard',f'{result(m)}. {m["format"]} scorecard at {m["venue"]}, including batting, bowling and over-by-over totals.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','location':{'@type':'Place','name':m['venue']},'competitor':[{'@type':'SportsTeam','name':team,'sport':'Cricket'} for team in m['teams']],'breadcrumb_name':' v '.join(m['teams'])+', '+pretty_date(m['date'])})
+    build_ipl_scorecards(people,pp)
+    t20wc_match_redirects(all_cards,mp)
     for m in hist['matches']:
         if m['id'] in all_cards:continue
-        body=heading(' v '.join(m['teams']),f'{m["date"]} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+matchup(m)+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
-        page(mp[m['id']],match_labels[m['id']]+' result',f'{result(m)}. Historical {m["format"]} result at {m["venue"]}.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket'})
+        body=heading(' v '.join(m['teams']),f'{pretty_date(m["date"])} · {m["format"]} · {m["gender"]}','HISTORICAL RESULT')+matchup(m)+f'<div class="result-banner">{esc(result(m))}</div><p>{a(gp["grounds"][m["venue"]],m["venue"])}</p>'+actions()+'<section class="panel"><h2>Match coverage</h2><p>This record contains the result. Local innings, lineups and ball data are unavailable.</p>'+ ' · '.join(a(gp['teams'][t],t) for t in m['teams'])+'</section>'
+        page(mp[m['id']],match_labels[m['id']]+' result',f'{result(m)}. Historical {m["format"]} result at {m["venue"]}.',body,'SportsEvent',{'startDate':m['date'],'sport':'Cricket','breadcrumb_name':' v '.join(m['teams'])+', '+pretty_date(m['date'])})
     player_q=prepare_player_questions(people,pp,featured_names=set(ILLUSTRATIONS)|set(HERO_CAST),extra_ids=research_ids)
     print('Building career profiles...',flush=True)
     leagues=lp.load_leagues(ROOT)

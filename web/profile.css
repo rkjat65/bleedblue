@@ -173,6 +173,16 @@ html[data-theme=dark] .format-card dd{color:var(--ink)}
   .pf-mast .player-portrait figcaption{font-size:9px}
   .pf-id h1{font-size:clamp(26px,8vw,34px)}
   .pf-chips,.pf-actions,.pf-teams{grid-column:1/-1}
+  /* Portrait pages: name beside the picture, chips and actions across the full width. */
+  .pf-mast:has(>.player-portrait) .pf-id{display:contents}
+  .pf-mast:has(>.player-portrait)>.player-portrait{grid-row:1/span 3}
+  .pf-mast:has(>.player-portrait) .pf-id>.eyebrow,.pf-mast:has(>.player-portrait) .pf-id>h1,.pf-mast:has(>.player-portrait) .pf-id>.pf-sub{grid-column:2;margin-bottom:4px}
+  .pf-mast:has(>.player-portrait) .pf-teams{margin:6px 0 0}
+  .pf-chips{gap:6px;margin:2px 0 4px}
+  .pf-chip{padding:6px 10px 6px 8px;font-size:11px;gap:6px}
+  .pf-actions{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px}
+  .pf-actions::-webkit-scrollbar{display:none}
+  .pf-actions>*{flex:none;min-height:38px;padding:8px 12px;font-size:12px}
   .fmt-switch{top:54px;border-radius:12px;margin-left:-4%;margin-right:-4%;width:108%;border-left:0;border-right:0;border-radius:0}
   .fmt-switch a{min-height:38px;padding:0 12px;font-size:12px}
   .pf-hero>div{padding:12px 12px 10px}.pf-hero strong{font-size:20px}
