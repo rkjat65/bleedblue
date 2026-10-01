@@ -1,50 +1,696 @@
 {
   "name": "ICC Men's Cricket World Cup 2027",
   "short": "Cricket World Cup 2027",
-  "start": "2027-10-04",
+  "start": "2027-10-02",
   "end": "2027-11-21",
-  "hosts": ["South Africa", "Zimbabwe", "Namibia"],
+  "hosts": [
+    "South Africa",
+    "Zimbabwe",
+    "Namibia"
+  ],
   "teams_total": 14,
   "matches_total": 57,
   "utc_offset_minutes": 120,
-  "schedule_announced": null,
-  "schedule_note": "The ICC announces the full schedule in Cape Town on 1 October 2026 at 5:30 pm South Africa time (9 pm in India), one year before the tournament.",
+  "schedule_announced": "2026-10-01",
+  "schedule_note": "The ICC announced the schedule in Cape Town on 1 October 2026. Start times have not been published yet.",
   "qualified": [
-    {"team": "South Africa", "route": "Host"},
-    {"team": "Zimbabwe", "route": "Host"},
-    {"team": "Afghanistan", "route": "ODI rankings"},
-    {"team": "Australia", "route": "ODI rankings"},
-    {"team": "Bangladesh", "route": "ODI rankings"},
-    {"team": "England", "route": "ODI rankings"},
-    {"team": "India", "route": "ODI rankings"},
-    {"team": "New Zealand", "route": "ODI rankings"},
-    {"team": "Pakistan", "route": "ODI rankings"},
-    {"team": "Sri Lanka", "route": "ODI rankings"}
+    {
+      "team": "South Africa",
+      "route": "Host"
+    },
+    {
+      "team": "Zimbabwe",
+      "route": "Host"
+    },
+    {
+      "team": "Afghanistan",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "Australia",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "Bangladesh",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "England",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "India",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "New Zealand",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "Pakistan",
+      "route": "ODI rankings"
+    },
+    {
+      "team": "Sri Lanka",
+      "route": "ODI rankings"
+    }
   ],
   "qualifier_note": "The last four places go to the 2027 World Cup Qualifier. Namibia, a co-host but not a Full Member, and two-time champions West Indies must qualify there.",
   "format": [
-    {"stage": "Super Series", "matches": 3, "detail": "The three lowest-seeded teams play each other once. The winner joins the group stage."},
-    {"stage": "Group stage", "matches": 30, "detail": "Twelve teams in two groups of six play each other once."},
-    {"stage": "Super 7", "matches": 21, "detail": "The top three from each group and the best fourth-placed team play each other once. The top four reach the semi-finals."},
-    {"stage": "Semi-finals and final", "matches": 3, "detail": "Semi-finals on 17 and 18 November; the final on 21 November 2027."}
+    {
+      "stage": "Super Series",
+      "matches": 3,
+      "detail": "Three qualifiers (QF1, QF2 and QF3) play each other once in Windhoek, 2 to 6 October. The winner joins the group stage."
+    },
+    {
+      "stage": "Group stage",
+      "matches": 30,
+      "detail": "Twelve teams in two groups of six play each other once."
+    },
+    {
+      "stage": "Super 7",
+      "matches": 21,
+      "detail": "The top three from each group and the best fourth-placed team play each other once. The top four reach the semi-finals."
+    },
+    {
+      "stage": "Semi-finals and final",
+      "matches": 3,
+      "detail": "Semi-finals on 17 and 18 November; the final on 21 November 2027."
+    }
   ],
   "venues": [
-    {"name": "Wanderers Stadium", "city": "Johannesburg", "country": "South Africa", "capacity": 34000, "ground": "The Wanderers Stadium"},
-    {"name": "SuperSport Park", "city": "Centurion", "country": "South Africa", "capacity": 22000, "ground": "SuperSport Park"},
-    {"name": "Newlands", "city": "Cape Town", "country": "South Africa", "capacity": 25000, "ground": "Newlands"},
-    {"name": "Kingsmead", "city": "Durban", "country": "South Africa", "capacity": 25000, "ground": "Kingsmead"},
-    {"name": "St George's Park", "city": "Gqeberha", "country": "South Africa", "capacity": 19000, "ground": "St George's Park"},
-    {"name": "Mangaung Oval", "city": "Bloemfontein", "country": "South Africa", "capacity": 20000, "ground": "Mangaung Oval"},
-    {"name": "Boland Park", "city": "Paarl", "country": "South Africa", "capacity": 10000, "ground": "Boland Park"},
-    {"name": "Buffalo Park", "city": "KuGompo City (East London)", "country": "South Africa", "capacity": 16000, "ground": "Buffalo Park"},
-    {"name": "Harare Sports Club", "city": "Harare", "country": "Zimbabwe", "capacity": 10000, "ground": "Harare Sports Club"},
-    {"name": "Queens Sports Club", "city": "Bulawayo", "country": "Zimbabwe", "capacity": 12500, "ground": "Queens Sports Club"},
-    {"name": "Mosi-oa-Tunya International Cricket Stadium", "city": "Victoria Falls", "country": "Zimbabwe", "capacity": 10000, "ground": null},
-    {"name": "Namibia Cricket Ground", "city": "Windhoek", "country": "Namibia", "capacity": 7000, "ground": "Namibia Cricket Ground"}
+    {
+      "name": "Wanderers Stadium",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "capacity": 34000,
+      "ground": "The Wanderers Stadium"
+    },
+    {
+      "name": "SuperSport Park",
+      "city": "Centurion",
+      "country": "South Africa",
+      "capacity": 22000,
+      "ground": "SuperSport Park"
+    },
+    {
+      "name": "Newlands",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "capacity": 25000,
+      "ground": "Newlands"
+    },
+    {
+      "name": "Kingsmead",
+      "city": "Durban",
+      "country": "South Africa",
+      "capacity": 25000,
+      "ground": "Kingsmead"
+    },
+    {
+      "name": "St George's Park",
+      "city": "Gqeberha",
+      "country": "South Africa",
+      "capacity": 19000,
+      "ground": "St George's Park"
+    },
+    {
+      "name": "Mangaung Oval",
+      "city": "Bloemfontein",
+      "country": "South Africa",
+      "capacity": 20000,
+      "ground": "Mangaung Oval"
+    },
+    {
+      "name": "Boland Park",
+      "city": "Paarl",
+      "country": "South Africa",
+      "capacity": 10000,
+      "ground": "Boland Park"
+    },
+    {
+      "name": "Buffalo Park",
+      "city": "KuGompo City (East London)",
+      "country": "South Africa",
+      "capacity": 16000,
+      "ground": "Buffalo Park"
+    },
+    {
+      "name": "Harare Sports Club",
+      "city": "Harare",
+      "country": "Zimbabwe",
+      "capacity": 10000,
+      "ground": "Harare Sports Club"
+    },
+    {
+      "name": "Queens Sports Club",
+      "city": "Bulawayo",
+      "country": "Zimbabwe",
+      "capacity": 12500,
+      "ground": "Queens Sports Club"
+    },
+    {
+      "name": "Mosi-oa-Tunya International Cricket Stadium",
+      "city": "Victoria Falls",
+      "country": "Zimbabwe",
+      "capacity": 10000,
+      "ground": null
+    },
+    {
+      "name": "Namibia Cricket Ground",
+      "city": "Windhoek",
+      "country": "Namibia",
+      "capacity": 7000,
+      "ground": "Namibia Cricket Ground"
+    }
   ],
-  "fixtures": [],
+  "fixtures": [
+    {
+      "match": 1,
+      "date": "2027-10-02",
+      "time": null,
+      "stage": "Super Series",
+      "team1": "QF1",
+      "team2": "QF3",
+      "venue": "Namibia Cricket Ground"
+    },
+    {
+      "match": 2,
+      "date": "2027-10-04",
+      "time": null,
+      "stage": "Super Series",
+      "team1": "QF1",
+      "team2": "QF2",
+      "venue": "Namibia Cricket Ground"
+    },
+    {
+      "match": 3,
+      "date": "2027-10-06",
+      "time": null,
+      "stage": "Super Series",
+      "team1": "QF2",
+      "team2": "QF3",
+      "venue": "Namibia Cricket Ground"
+    },
+    {
+      "match": 4,
+      "date": "2027-10-07",
+      "time": null,
+      "stage": "Group A",
+      "team1": "India",
+      "team2": "Australia",
+      "venue": "Newlands"
+    },
+    {
+      "match": 5,
+      "date": "2027-10-08",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Pakistan",
+      "team2": "Afghanistan",
+      "venue": "SuperSport Park"
+    },
+    {
+      "match": 6,
+      "date": "2027-10-08",
+      "time": null,
+      "stage": "Group B",
+      "team1": "England",
+      "team2": "Bangladesh",
+      "venue": "Namibia Cricket Ground"
+    },
+    {
+      "match": 7,
+      "date": "2027-10-09",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Zimbabwe",
+      "team2": "Qualifier A",
+      "venue": "Queens Sports Club"
+    },
+    {
+      "match": 8,
+      "date": "2027-10-09",
+      "time": null,
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "New Zealand",
+      "venue": "Newlands"
+    },
+    {
+      "match": 9,
+      "date": "2027-10-10",
+      "time": null,
+      "stage": "Group A",
+      "team1": "India",
+      "team2": "Pakistan",
+      "venue": "Wanderers Stadium"
+    },
+    {
+      "match": 10,
+      "date": "2027-10-10",
+      "time": null,
+      "stage": "Group B",
+      "team1": "Sri Lanka",
+      "team2": "Qualifier B",
+      "venue": "Namibia Cricket Ground"
+    },
+    {
+      "match": 11,
+      "date": "2027-10-11",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Zimbabwe",
+      "team2": "Afghanistan",
+      "venue": "Queens Sports Club"
+    },
+    {
+      "match": 12,
+      "date": "2027-10-12",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Australia",
+      "team2": "Qualifier A",
+      "venue": "Boland Park"
+    },
+    {
+      "match": 13,
+      "date": "2027-10-12",
+      "time": null,
+      "stage": "Group B",
+      "team1": "New Zealand",
+      "team2": "Bangladesh",
+      "venue": "Buffalo Park"
+    },
+    {
+      "match": 14,
+      "date": "2027-10-13",
+      "time": null,
+      "stage": "Group B",
+      "team1": "England",
+      "team2": "Sri Lanka",
+      "venue": "Namibia Cricket Ground"
+    },
+    {
+      "match": 15,
+      "date": "2027-10-13",
+      "time": null,
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "Qualifier B",
+      "venue": "Boland Park"
+    },
+    {
+      "match": 16,
+      "date": "2027-10-14",
+      "time": null,
+      "stage": "Group A",
+      "team1": "India",
+      "team2": "Afghanistan",
+      "venue": "SuperSport Park"
+    },
+    {
+      "match": 17,
+      "date": "2027-10-15",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Pakistan",
+      "team2": "Qualifier A",
+      "venue": "Mangaung Oval"
+    },
+    {
+      "match": 18,
+      "date": "2027-10-15",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Zimbabwe",
+      "team2": "Australia",
+      "venue": "Harare Sports Club"
+    },
+    {
+      "match": 19,
+      "date": "2027-10-16",
+      "time": null,
+      "stage": "Group B",
+      "team1": "Sri Lanka",
+      "team2": "Bangladesh",
+      "venue": "Kingsmead"
+    },
+    {
+      "match": 20,
+      "date": "2027-10-16",
+      "time": null,
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "England",
+      "venue": "St George's Park"
+    },
+    {
+      "match": 21,
+      "date": "2027-10-17",
+      "time": null,
+      "stage": "Group A",
+      "team1": "India",
+      "team2": "Qualifier A",
+      "venue": "Mangaung Oval"
+    },
+    {
+      "match": 22,
+      "date": "2027-10-17",
+      "time": null,
+      "stage": "Group B",
+      "team1": "New Zealand",
+      "team2": "Qualifier B",
+      "venue": "Harare Sports Club"
+    },
+    {
+      "match": 23,
+      "date": "2027-10-18",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Australia",
+      "team2": "Afghanistan",
+      "venue": "Buffalo Park"
+    },
+    {
+      "match": 24,
+      "date": "2027-10-19",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Zimbabwe",
+      "team2": "Pakistan",
+      "venue": "Harare Sports Club"
+    },
+    {
+      "match": 25,
+      "date": "2027-10-19",
+      "time": null,
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "Bangladesh",
+      "venue": "Kingsmead"
+    },
+    {
+      "match": 26,
+      "date": "2027-10-20",
+      "time": null,
+      "stage": "Group B",
+      "team1": "New Zealand",
+      "team2": "Sri Lanka",
+      "venue": "Wanderers Stadium"
+    },
+    {
+      "match": 27,
+      "date": "2027-10-20",
+      "time": null,
+      "stage": "Group B",
+      "team1": "England",
+      "team2": "Qualifier B",
+      "venue": "Harare Sports Club"
+    },
+    {
+      "match": 28,
+      "date": "2027-10-21",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Afghanistan",
+      "team2": "Qualifier A",
+      "venue": "Buffalo Park"
+    },
+    {
+      "match": 29,
+      "date": "2027-10-22",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Australia",
+      "team2": "Pakistan",
+      "venue": "Boland Park"
+    },
+    {
+      "match": 30,
+      "date": "2027-10-22",
+      "time": null,
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "Sri Lanka",
+      "venue": "Wanderers Stadium"
+    },
+    {
+      "match": 31,
+      "date": "2027-10-23",
+      "time": null,
+      "stage": "Group B",
+      "team1": "England",
+      "team2": "New Zealand",
+      "venue": "St George's Park"
+    },
+    {
+      "match": 32,
+      "date": "2027-10-23",
+      "time": null,
+      "stage": "Group B",
+      "team1": "Bangladesh",
+      "team2": "Qualifier B",
+      "venue": "SuperSport Park"
+    },
+    {
+      "match": 33,
+      "date": "2027-10-24",
+      "time": null,
+      "stage": "Group A",
+      "team1": "Zimbabwe",
+      "team2": "India",
+      "venue": "Mosi-oa-Tunya International Cricket Stadium"
+    },
+    {
+      "match": 34,
+      "date": "2027-10-25",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 2nd",
+      "team2": "Group B 3rd",
+      "venue": "Wanderers Stadium"
+    },
+    {
+      "match": 35,
+      "date": "2027-10-26",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 1st",
+      "team2": "Group A 3rd",
+      "venue": "St George's Park"
+    },
+    {
+      "match": 36,
+      "date": "2027-10-27",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 2nd",
+      "team2": "Best 4th place",
+      "venue": "SuperSport Park"
+    },
+    {
+      "match": 37,
+      "date": "2027-10-28",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 1st",
+      "team2": "Group A 2nd",
+      "venue": "Mosi-oa-Tunya International Cricket Stadium"
+    },
+    {
+      "match": 38,
+      "date": "2027-10-29",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 1st",
+      "team2": "Group B 3rd",
+      "venue": "Buffalo Park"
+    },
+    {
+      "match": 39,
+      "date": "2027-10-30",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 3rd",
+      "team2": "Best 4th place",
+      "venue": "Mosi-oa-Tunya International Cricket Stadium"
+    },
+    {
+      "match": 40,
+      "date": "2027-10-31",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 2nd",
+      "team2": "Group A 1st",
+      "venue": "Wanderers Stadium"
+    },
+    {
+      "match": 41,
+      "date": "2027-11-01",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 2nd",
+      "team2": "Group B 1st",
+      "venue": "Mosi-oa-Tunya International Cricket Stadium"
+    },
+    {
+      "match": 42,
+      "date": "2027-11-02",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 3rd",
+      "team2": "Best 4th place",
+      "venue": "Newlands"
+    },
+    {
+      "match": 43,
+      "date": "2027-11-03",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 2nd",
+      "team2": "Group A 3rd",
+      "venue": "Kingsmead"
+    },
+    {
+      "match": 44,
+      "date": "2027-11-04",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 1st",
+      "team2": "Group B 1st",
+      "venue": "Boland Park"
+    },
+    {
+      "match": 45,
+      "date": "2027-11-05",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 2nd",
+      "team2": "Best 4th place",
+      "venue": "Kingsmead"
+    },
+    {
+      "match": 46,
+      "date": "2027-11-06",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 2nd",
+      "team2": "Group B 3rd",
+      "venue": "Mangaung Oval"
+    },
+    {
+      "match": 47,
+      "date": "2027-11-07",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 1st",
+      "team2": "Group A 3rd",
+      "venue": "Newlands"
+    },
+    {
+      "match": 48,
+      "date": "2027-11-08",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 1st",
+      "team2": "Best 4th place",
+      "venue": "Kingsmead"
+    },
+    {
+      "match": 49,
+      "date": "2027-11-09",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 2nd",
+      "team2": "Group A 2nd",
+      "venue": "St George's Park"
+    },
+    {
+      "match": 50,
+      "date": "2027-11-10",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 3rd",
+      "team2": "Group B 3rd",
+      "venue": "Mangaung Oval"
+    },
+    {
+      "match": 51,
+      "date": "2027-11-11",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 1st",
+      "team2": "Best 4th place",
+      "venue": "St George's Park"
+    },
+    {
+      "match": 52,
+      "date": "2027-11-12",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group B 2nd",
+      "team2": "Group B 1st",
+      "venue": "Newlands"
+    },
+    {
+      "match": 53,
+      "date": "2027-11-13",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 2nd",
+      "team2": "Group A 3rd",
+      "venue": "Mangaung Oval"
+    },
+    {
+      "match": 54,
+      "date": "2027-11-14",
+      "time": null,
+      "stage": "Super 7",
+      "team1": "Group A 1st",
+      "team2": "Group B 3rd",
+      "venue": "Kingsmead"
+    },
+    {
+      "match": 55,
+      "date": "2027-11-17",
+      "time": null,
+      "stage": "Semi-final 1",
+      "team1": null,
+      "team2": null,
+      "venue": "Newlands"
+    },
+    {
+      "match": 56,
+      "date": "2027-11-18",
+      "time": null,
+      "stage": "Semi-final 2",
+      "team1": null,
+      "team2": null,
+      "venue": "SuperSport Park"
+    },
+    {
+      "match": 57,
+      "date": "2027-11-21",
+      "time": null,
+      "stage": "Final",
+      "team1": null,
+      "team2": null,
+      "venue": "Wanderers Stadium"
+    }
+  ],
   "sources": [
-    {"label": "ICC: venues and format", "url": "https://www.icc-cricket.com/news/men-s-cricket-world-cup-2027-venues-and-brand-revealed"},
-    {"label": "Wikipedia: 2027 Cricket World Cup", "url": "https://en.wikipedia.org/wiki/2027_Cricket_World_Cup"}
+    {
+      "label": "ICC fixtures announcement, 1 October 2026",
+      "url": null
+    },
+    {
+      "label": "ICC: venues and format",
+      "url": "https://www.icc-cricket.com/news/men-s-cricket-world-cup-2027-venues-and-brand-revealed"
+    },
+    {
+      "label": "Wikipedia: 2027 Cricket World Cup",
+      "url": "https://en.wikipedia.org/wiki/2027_Cricket_World_Cup"
+    }
   ]
 }

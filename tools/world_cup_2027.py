@@ -93,7 +93,9 @@ def fixtures_section(wc, team_paths):
                 '<div class="wc-keydates"><div><span>Opening day</span><strong>' + esc(long_date(wc['start'])) + '</strong></div>'
                 '<div><span>Semi-finals</span><strong>17 and 18 November 2027</strong></div>'
                 '<div><span>Final</span><strong>' + esc(long_date(wc['end'])) + '</strong></div></div></section>')
-    teams = sorted({t for f in fixtures for t in (f.get('team1'), f.get('team2')) if t})
+    # The team filter lists real sides and the two qualifier places, not slots such as "Group A 1st".
+    named = {q['team'] for q in wc['qualified']}
+    teams = sorted({t for f in fixtures for t in (f.get('team1'), f.get('team2')) if t and (t in named or t.startswith('Qualifier '))})
     venues = sorted({f['venue'] for f in fixtures if f.get('venue')})
     stages = list(dict.fromkeys(f.get('stage') or '' for f in fixtures))
     offset = wc.get('utc_offset_minutes', 120)
@@ -206,9 +208,9 @@ def build(wc, family, team_paths, ground_paths, ground_matches, leaders, record_
         ('Which team has won the most Cricket World Cups?', f'{titles.most_common(1)[0][0]}, with {titles.most_common(1)[0][1]} titles.'),
         ('When was the World Cup last held in Africa?', 'In 2003, hosted by South Africa, Zimbabwe and Kenya. Australia beat India in the final at the Wanderers in Johannesburg.'),
     ]
-    body += ('<section class="panel wc-block player-faq" id="questions"><p class="eyebrow">QUESTIONS</p><h2>2027 World Cup questions</h2><dl>'
+    body += ('<section class="panel wc-block player-faq" id="questions"><p class="eyebrow">QUESTIONS</p><h2>Frequently asked questions about the 2027 World Cup</h2><dl>'
              + ''.join(f'<div><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in faq) + '</dl></section>')
-    body += ('<p class="note">Tournament facts from the ICC and published reports: ' + ' · '.join(f'<a href="{esc(s["url"])}">{esc(s["label"])}</a>' for s in wc['sources'])
+    body += ('<p class="note">Tournament facts from the ICC and published reports: ' + ' · '.join((f'<a href="{esc(s["url"])}">{esc(s["label"])}</a>' if s.get('url') else esc(s['label'])) for s in wc['sources'])
              + '. History and records from the official World Cup record. ' + '<a href="/world-cup/">All World Cups</a></p>')
 
     schema_faq = {'@context': 'https://schema.org', '@type': 'FAQPage',

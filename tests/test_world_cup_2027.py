@@ -26,12 +26,14 @@ class WorldCup2027Tests(unittest.TestCase):
         self.assertLessEqual(len(self.wc['qualified']), self.wc['teams_total'])
         self.assertEqual({v['country'] for v in self.wc['venues']}, set(self.wc['hosts']))
 
-    def test_page_before_the_schedule(self):
+    def test_page_with_the_announced_schedule(self):
         title, description, body, kind, extra = self.render()
         self.assertEqual(kind, 'SportsEvent')
         self.assertLessEqual(len(description), 160)
         self.assertIn('Full schedule', body)
-        self.assertIn('368', body)   # days from 1 October 2026 to 4 October 2027
+        self.assertIn('366', body)   # days from 1 October 2026 to 2 October 2027
+        self.assertEqual(body.count('<tr data-teams'), 57)
+        self.assertNotIn('>Group A 1st</option>', body)
         self.assertIn('Australia', body)
         self.assertIn('<a href="/grounds/newlands/">Newlands</a>', body)
         self.assertEqual(extra['faq']['@type'], 'FAQPage')
