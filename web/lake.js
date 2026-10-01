@@ -22,7 +22,8 @@
     for(const name of tables||[]){
       const t=manifest.tables[name];
       if(!t)throw new Error('The '+name.replace(/_/g,' ')+' table is being published. Please retry shortly');
-      if(!open.views.has(name)){open.views.add(name);await conn.query(`CREATE OR REPLACE VIEW ${name} AS SELECT * FROM read_parquet('${new URL(LAKE+t.file,location.href).href}')`);}
+      // Each table is a few hundred kilobytes to 2.5 MB: one download into memory beats a range request per query.
+      if(!open.views.has(name)){open.views.add(name);await conn.query(`CREATE TABLE ${name} AS SELECT * FROM read_parquet('${new URL(LAKE+t.file,location.href).href}')`);}
     }
     return manifest;
   }
