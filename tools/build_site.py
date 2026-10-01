@@ -645,6 +645,8 @@ def main():
         path='/'+index.parent.relative_to(OUT).as_posix().strip('./')+'/'
         if path=='//':path='/'
         if path in PAGES or path in STUBS or path in ('/embed/','/search/','/saved/','/international/'):continue
+        # Pages at the app's addresses stay out of this sitemap on purpose; they are not stale.
+        if path.startswith(('/ipl/','/t20-world-cup/')):continue
         for name in ['index.html','summary.json','analytics.json','records.json']:(index.parent/name).unlink(missing_ok=True)
     missing=Counter();not_applicable=Counter()
     for p in people.values():
