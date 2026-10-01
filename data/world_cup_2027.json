@@ -1,0 +1,50 @@
+{
+  "name": "ICC Men's Cricket World Cup 2027",
+  "short": "Cricket World Cup 2027",
+  "start": "2027-10-04",
+  "end": "2027-11-21",
+  "hosts": ["South Africa", "Zimbabwe", "Namibia"],
+  "teams_total": 14,
+  "matches_total": 57,
+  "utc_offset_minutes": 120,
+  "schedule_announced": null,
+  "schedule_note": "The ICC announces the full schedule in Cape Town on 1 October 2026, one year before the tournament.",
+  "qualified": [
+    {"team": "South Africa", "route": "Host"},
+    {"team": "Zimbabwe", "route": "Host"},
+    {"team": "Afghanistan", "route": "ODI rankings"},
+    {"team": "Australia", "route": "ODI rankings"},
+    {"team": "Bangladesh", "route": "ODI rankings"},
+    {"team": "England", "route": "ODI rankings"},
+    {"team": "India", "route": "ODI rankings"},
+    {"team": "New Zealand", "route": "ODI rankings"},
+    {"team": "Pakistan", "route": "ODI rankings"},
+    {"team": "Sri Lanka", "route": "ODI rankings"}
+  ],
+  "qualifier_note": "The last four places go to the 2027 World Cup Qualifier. Namibia, a co-host but not a Full Member, and two-time champions West Indies must qualify there.",
+  "format": [
+    {"stage": "Super Series", "matches": 3, "detail": "The three lowest-seeded teams play each other once. The winner joins the group stage."},
+    {"stage": "Group stage", "matches": 30, "detail": "Twelve teams in two groups of six play each other once."},
+    {"stage": "Super 7", "matches": 21, "detail": "The top three from each group and the best fourth-placed team play each other once. The top four reach the semi-finals."},
+    {"stage": "Semi-finals and final", "matches": 3, "detail": "Semi-finals on 17 and 18 November; the final on 21 November 2027."}
+  ],
+  "venues": [
+    {"name": "Wanderers Stadium", "city": "Johannesburg", "country": "South Africa", "capacity": 34000, "ground": "The Wanderers Stadium"},
+    {"name": "SuperSport Park", "city": "Centurion", "country": "South Africa", "capacity": 22000, "ground": "SuperSport Park"},
+    {"name": "Newlands", "city": "Cape Town", "country": "South Africa", "capacity": 25000, "ground": "Newlands"},
+    {"name": "Kingsmead", "city": "Durban", "country": "South Africa", "capacity": 25000, "ground": "Kingsmead"},
+    {"name": "St George's Park", "city": "Gqeberha", "country": "South Africa", "capacity": 19000, "ground": "St George's Park"},
+    {"name": "Mangaung Oval", "city": "Bloemfontein", "country": "South Africa", "capacity": 20000, "ground": "Mangaung Oval"},
+    {"name": "Boland Park", "city": "Paarl", "country": "South Africa", "capacity": 10000, "ground": "Boland Park"},
+    {"name": "Buffalo Park", "city": "KuGompo City (East London)", "country": "South Africa", "capacity": 16000, "ground": "Buffalo Park"},
+    {"name": "Harare Sports Club", "city": "Harare", "country": "Zimbabwe", "capacity": 10000, "ground": "Harare Sports Club"},
+    {"name": "Queens Sports Club", "city": "Bulawayo", "country": "Zimbabwe", "capacity": 12500, "ground": "Queens Sports Club"},
+    {"name": "Mosi-oa-Tunya International Cricket Stadium", "city": "Victoria Falls", "country": "Zimbabwe", "capacity": 10000, "ground": null},
+    {"name": "Namibia Cricket Ground", "city": "Windhoek", "country": "Namibia", "capacity": 7000, "ground": "Namibia Cricket Ground"}
+  ],
+  "fixtures": [],
+  "sources": [
+    {"label": "ICC: venues and format", "url": "https://www.icc-cricket.com/news/men-s-cricket-world-cup-2027-venues-and-brand-revealed"},
+    {"label": "Wikipedia: 2027 Cricket World Cup", "url": "https://en.wikipedia.org/wiki/2027_Cricket_World_Cup"}
+  ]
+}

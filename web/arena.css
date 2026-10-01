@@ -370,3 +370,81 @@ body>header{view-transition-name:site-header}
 .hero-space{min-height:1px}
 @media(max-width:1100px){.brand .brand-word{font-size:20px}.brand .brand-mark{width:27px;height:27px}.hero-space{display:none}}
 @media(max-width:360px){.brand .brand-word{font-size:17px}.brand .brand-mark{width:23px;height:23px}}
+/* ---------- Cricket World Cup 2027 ---------- */
+.wc-promo{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:18px 0;padding:16px 20px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--border));border-radius:16px;background:linear-gradient(110deg,color-mix(in srgb,var(--gold) 14%,var(--panel)),var(--panel) 60%);color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.wc-promo:hover{text-decoration:none;border-color:var(--gold);transform:translateY(-1px)}
+.wc-promo-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
+.wc-promo .eyebrow{margin:0;color:var(--gold);font-size:10px;letter-spacing:2px}
+.wc-promo strong{font-size:clamp(16px,2vw,20px);line-height:1.25}
+.wc-promo-copy>span:last-child{color:var(--muted);font-size:13px}
+.wc-promo-days{flex:none;text-align:right;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.wc-promo-days strong{display:block;color:var(--gold);font-size:32px;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.wc-hero{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:24px;align-items:stretch;margin:18px 0 14px;padding:28px;border:1px solid var(--border);border-radius:20px;background:radial-gradient(circle at 85% 20%,color-mix(in srgb,var(--gold) 22%,transparent),transparent 45%),linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--panel)),var(--panel) 60%)}
+.wc-hero .eyebrow{margin:0 0 10px;color:var(--gold);font-size:10px;letter-spacing:2px}
+.wc-hero h1{margin:0 0 10px;font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-1.6px}
+.wc-lede{margin:0 0 18px;max-width:640px;color:var(--muted);font-size:16px}
+.wc-hero-links{display:flex;flex-wrap:wrap;gap:8px}
+.wc-hero-links .button{display:inline-flex;align-items:center}
+.wc-hero-links .button:hover{text-decoration:none}
+.wc-countdown{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:20px;border:1px solid color-mix(in srgb,var(--gold) 40%,var(--border));border-radius:16px;background:color-mix(in srgb,var(--gold) 8%,var(--panel));text-align:center}
+.wc-countdown strong{font-size:64px;line-height:1;color:var(--gold);letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.wc-countdown span{font-size:12px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted)}
+.wc-countdown small{margin-top:10px;font-size:12px;color:var(--muted)}
+.wc-facts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;margin:0 0 14px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--border)}
+.wc-facts div{padding:14px 16px;background:var(--panel)}
+.wc-facts strong{display:block;font-size:22px;line-height:1.15;font-variant-numeric:tabular-nums}
+.wc-facts span{display:block;margin-top:4px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.wc-jump{position:sticky;top:58px;z-index:20;display:flex;gap:4px;margin:0 0 14px;padding:5px;border:1px solid var(--border);border-radius:12px;background:color-mix(in srgb,var(--panel) 90%,transparent);backdrop-filter:blur(10px);overflow-x:auto;scrollbar-width:none}
+.wc-jump a{flex:none;padding:7px 12px;border-radius:8px;color:var(--muted);font-size:13px;font-weight:650}
+.wc-jump a:hover{text-decoration:none;color:var(--ink);background:var(--soft)}
+.wc-block{padding:20px 22px;margin:0 0 14px;scroll-margin-top:120px}
+.wc-block .eyebrow{margin:0 0 4px;color:var(--gold);font-size:10px;letter-spacing:2px}
+.wc-block h2{margin:0 0 12px}
+.wc-block-head{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.wc-count{color:var(--muted);font-size:13px}
+.wc-wait{margin:0 0 14px;color:var(--muted)}
+.wc-keydates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.wc-keydates div{padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.wc-keydates span{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.wc-keydates strong{display:block;margin-top:4px;font-size:17px}
+.wc-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
+.wc-filters label{display:flex;flex-direction:column;gap:4px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.wc-table td,.wc-table th{font-variant-numeric:tabular-nums}
+.wc-table td{text-align:right}
+.wc-table td.t,.wc-table th.t{text-align:left}
+.wc-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.wc-stages li{display:flex;gap:12px;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.wc-stage-n{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-weight:800;font-size:18px}
+.wc-stages h3{margin:0 0 4px;font-size:15px}
+.wc-stages p{margin:0;font-size:13px;color:var(--muted)}
+.wc-teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:12px 0}
+.wc-team{padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.wc-team.is-open{border-style:dashed;background:transparent}
+.wc-team h3{margin:0;font-size:17px}
+.wc-route{margin:2px 0 10px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700}
+.wc-team dl{display:grid;grid-template-columns:repeat(3,auto);gap:8px;margin:0}
+.wc-team dt{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
+.wc-team dd{margin:2px 0 0;font-weight:750}
+.wc-won{margin:8px 0 0;font-size:12px;color:var(--muted)}
+.wc-history-top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:center;margin:0 0 16px}
+.wc-history-top h3{margin:0 0 8px;font-size:15px}
+.wc-title-bar{display:grid;grid-template-columns:130px minmax(0,1fr) 30px;gap:10px;align-items:center;margin:0 0 6px;font-size:13px}
+.wc-title-bar i{display:block;height:12px;border-radius:6px;background:linear-gradient(90deg,var(--gold),color-mix(in srgb,var(--gold) 55%,var(--magenta)))}
+.wc-title-bar strong{font-variant-numeric:tabular-nums}
+.wc-history-note{margin:0;color:var(--muted)}
+.wc-editions{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin:0 0 14px}
+.wc-edition{padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.wc-edition.is-africa{border-color:color-mix(in srgb,var(--gold) 50%,var(--border))}
+.wc-edition-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:0 0 6px}
+.wc-year{font-size:22px;font-weight:800;letter-spacing:-.5px;color:var(--gold);font-variant-numeric:tabular-nums}
+.wc-host{font-size:11px;color:var(--muted);text-align:right}
+.wc-champ{margin:0;font-size:17px;font-weight:750}
+.wc-final,.wc-semis,.wc-meta{margin:4px 0 0;font-size:12px;color:var(--muted)}
+.wc-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:10px}
+.wc-two h3{margin:0 0 8px;font-size:15px}
+.wc-leaders{margin:0;padding:0;list-style:none;counter-reset:wl}
+.wc-leaders li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);counter-increment:wl}
+.wc-leaders li span:before{content:counter(wl) ". ";color:var(--muted)}
+.wc-leaders strong{font-variant-numeric:tabular-nums}
+@media(max-width:900px){.wc-hero{grid-template-columns:minmax(0,1fr)}.wc-facts{grid-template-columns:repeat(3,minmax(0,1fr))}.wc-stages{grid-template-columns:repeat(2,minmax(0,1fr))}.wc-history-top{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.wc-hero{padding:20px}.wc-countdown strong{font-size:48px}.wc-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.wc-stages,.wc-keydates,.wc-two{grid-template-columns:minmax(0,1fr)}.wc-promo{flex-direction:column;align-items:flex-start}.wc-promo-days{text-align:left}.wc-title-bar{grid-template-columns:100px minmax(0,1fr) 24px}}

@@ -21,6 +21,7 @@ from profile_formats import profile_body
 import league_panels as lp
 import league_entities as le
 import tool_pages as tp
+import world_cup_2027 as wc27
 from entity_formats import entity_switch, team_format_panel, ground_format_panel, series_format_panel, h2h_format_panel
 from venues import canonicalise_matches
 from compare_pages import PAIRS, find_player, compare_body, comparison_cards
@@ -254,7 +255,7 @@ def page(path,title,description,body,kind='WebPage',extra=None,noindex=False):
     canonical=BASE+path; section=path.strip('/').split('/')[0]
     crumbs=[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'}]
     if len(path.strip('/').split('/'))>1:
-        body='<nav class="breadcrumbs" aria-label="Breadcrumb">'+a('/','Home')+' / '+a('/'+section+'/',section.title())+' / <span>'+esc(crumb_name)+'</span></nav>'+body
+        body='<nav class="breadcrumbs" aria-label="Breadcrumb">'+a('/','Home')+' / '+a('/'+section+'/',section.replace('-',' ').title())+' / <span>'+esc(crumb_name)+'</span></nav>'+body
         crumbs.append({'@type':'ListItem','position':2,'name':section.replace('-',' ').title(),'item':BASE+'/'+section+'/'})
         crumbs.append({'@type':'ListItem','position':3,'name':crumb_name,'item':canonical})
     elif path!='/':
@@ -605,6 +606,8 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
         analysis_bit=f' Ball-by-ball analysis from {from_year}.' if from_year else ''
         glance+=f'<a class="format-card" href="/world-cup/{key}/"><h3>{esc(label)}</h3><div class="format-card-hero"><strong>{esc(str(count))}</strong><span>titles · {esc(champ)}</span></div><p class="format-card-note">{len(rec["editions"])} official editions, {first} to {latest}.{analysis_bit} Last champion: {esc(last or "not recorded")}.</p></a>'
     world_body=heading('World Cup cricket records','Official winners, finals, semi-finalists and landmark records for men and women. Ball-by-ball analysis starts from the first year deliveries exist.','WORLD CUP DATA')+actions()
+    wc2027=wc27.load(ROOT)
+    world_body+=wc27.promo(wc2027,TODAY)
     world_body+='<p class="player-intro">The men\'s ODI World Cup began in 1975. The latest completed edition is 2023, won by Australia, their sixth title. Women\'s ODI World Cups began in 1973. T20 World Cups began in 2007 for men and 2009 for women. Title counts and the timeline on these pages are the official tournament record. They are not inferred from the ball-by-ball archive. Player tables start at the first year with over-by-over deliveries, so granular analysis is possible from that date. Afghanistan World Cup games Cricsheet withholds are attached when the date sits inside an official edition.</p>'
     if glance: world_body+='<section class="career-glance-wrap" id="by-format"><p class="eyebrow">THE GLOBAL EVENTS</p><h2>Who has won, from the first World Cup to now</h2><div class="career-glance">'+glance+'</div></section>'
     official_editions=sum(len(rec['editions']) for rec in families.values())
@@ -657,6 +660,12 @@ def build_evergreen_hubs(people,matches,pp,mp,gp,all_cards):
         if titles: world_body+=table(['Team','Titles'],titles[:8],caption=label+' official titles')
         world_body+=table(['Year','Host','Champion','Runner-up','Semi-finalists','Result'],timeline_table(rec,gp['teams']),caption=label+' official timeline')
         world_body+='<p>'+a(path,'Full '+label+' records')+'</p></section>'
+    # The next men's ODI World Cup, with every edition before it.
+    odi=families['mens-odi'];ground_names={v['ground'] for v in wc2027['venues'] if v.get('ground')}
+    ground_matches={g:[m for m in matches if m.get('venue')==g] for g in ground_names}
+    wc_leaders={k:[{**r,'link':a(pp.get(r['id'],'/players/'),r['name'])} for r in (odi['leaders'].get(k) or [])] for k in ('runs','wickets')}
+    title27,desc27,body27,kind27,extra27=wc27.build(wc2027,odi,gp['teams'],gp['grounds'],ground_matches,wc_leaders,official_record_rows(odi),TODAY)
+    page(wc27.PATH,title27,desc27,body27,kind27,extra27)
     all_wc=[m for rec in families.values() for m in rec['archive']['matches']]
     recent=sorted(all_wc,key=lambda m:(m['date'],m['id']),reverse=True)[:20]
     if recent: world_body+='<section class="panel"><h2>Recent World Cup scorecards in this archive</h2>'+match_table(recent,mp,20)+'</section>'
@@ -954,6 +963,7 @@ def build_collections(people,matches,pp,mp,gp,groups,careers,arc,hist,editorial=
     # Player URLs come from the stable route map; published slugs can differ from display names.
     quick=[(p['name'],pp[p['id']]) for name in ('Virat Kohli','Smriti Mandhana') for p in people.values() if p.get('name')==name and p['id'] in pp][:2]
     body=homepage_hero(len(people),len(matches),faces,facts,quick)
+    body+=wc27.promo(wc27.load(ROOT),TODAY)
     body+=section_jump([('match-centre','Fixtures','calendar'),('icons','Icons','bat'),('results','Results','stumps'),('formats','Formats','ball'),('records-grid','Records','trophy'),('on-this-day','On this day','star'),('home-insights-title','Rivalries','versus'),('featured-scorecard','Scorecard','chart'),('leaders','Leaders','trophy'),('explore','Explore','book')])
     broadcast_data,broadcast_fixtures=load_broadcasts(ROOT,TODAY)
     body+=match_centre(broadcast_fixtures,TODAY)
