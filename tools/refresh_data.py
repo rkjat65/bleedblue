@@ -55,7 +55,7 @@ def main(matches_only=False):
             write(stage/'.data-cache/free-backfill/bowling'/f'{r["espn_id"]}-{cls}.json',r)
         for file in (stage/'data/historical_scorecards').glob('*.json'):
             for mid,c in json.loads(file.read_text(encoding='utf-8')).items():write(stage/'.data-cache/free-backfill/scorecards'/f'{mid}.json',c)
-        steps=[('backfill_free_data.py',['careers','--workers','3']),('backfill_free_data.py',['bowling','--workers','3']),('backfill_free_data.py',['scorecards','--workers','3']),('reconcile_careers.py',[]),('backfill_grounds.py',[])]
+        steps=[('backfill_free_data.py',['careers','--workers','3']),('backfill_free_data.py',['bowling','--workers','3']),('backfill_free_data.py',['scorecards','--workers','3']),('reconcile_careers.py',[]),('official_innings.py',[]),('backfill_grounds.py',[])]
         for script,args in [] if matches_only else steps:   # all ESPNcricinfo reads: weekly only
             subprocess.run([sys.executable,str(stage/'tools'/script),*args],cwd=stage,check=True)
         subprocess.run([sys.executable, str(stage/'tools/build_t20wc_dashboard.py')], cwd=stage, check=True)

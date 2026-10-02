@@ -65,7 +65,7 @@ def career_scorecards(root,published,people):
             cards[mid]=card
     return cards
 
-def load_cards(root, matches, people):
+def load_cards(root, matches, people, overlay=True):
     import json,re
     selected={m['id']:m for m in matches};cards={}
     identities={p['espn_id']:pid for pid,p in people.items() if p.get('espn_id')}
@@ -143,6 +143,10 @@ def load_cards(root, matches, people):
                 for inn in card['innings']:
                     if not inn.get('overs') and not inn.get('super_over') and inn.get('team') in extra_overs.get(mid,{}):inn['overs']=extra_overs[mid][inn['team']]
                 card['match']=match;cards[mid]=card
+    if overlay:
+        # Official innings differences (tools/official_innings.py): a batter who faced no ball, a run or wicket credited differently.
+        from official_innings import apply_overlay
+        apply_overlay(root,cards,people)
     return cards
 
 def publication_data(root):

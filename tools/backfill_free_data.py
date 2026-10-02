@@ -73,10 +73,14 @@ def normalize_card(body,expected):
             if bowler:dismissal+=' b '+bowler
             bat.append({**player(b['player']),'runs':b.get('runs'),'balls':b.get('balls'),'minutes':b.get('minutes'),'fours':b.get('fours'),'sixes':b.get('sixes'),'sr':b.get('strikerate'),'out':b.get('isOut'),'dismissal':dismissal})
         bowl=[{**player(b['player']),'balls':b.get('balls'),'overs':b.get('overs'),'maidens':b.get('maidens'),'runs':b.get('conceded'),'wickets':b.get('wickets'),'econ':b.get('economy'),'wides':b.get('wides'),'noballs':b.get('noballs')} for b in i.get('inningBowlers',[]) if b.get('bowledType')=='yes']
-        extra=i.get('extras')
+        extra=i.get('extras');unreconciled=0
         if i.get('runs') is not None and extra is not None and all(b['runs'] is not None for b in bat):
-            if sum(b['runs'] for b in bat)+extra!=i['runs']:raise ValueError('Innings runs do not reconcile')
-        innings.append({'team':i['team'].get('longName') or i['team']['name'],'runs':i.get('runs'),'wickets':i.get('wickets'),'balls':i.get('balls'),'overs_display':str(i.get('overs')),'balls_per_over':i.get('ballsPerOver') or m.get('ballsPerOver') or 6,'extras':extra,'super_over':False,'declared':i.get('event')==2,'batting':bat,'bowling':bowl,'overs':[],'fall':[{'player':(w.get('dismissalBatsman') or {}).get('longName') or (w.get('dismissalBatsman') or {}).get('name') or 'Batter not recorded','runs':w.get('fowRuns'),'wicket':w.get('fowWicketNum'),'balls':w.get('fowBalls'),'overs':w.get('fowOvers')} for w in i.get('inningFallOfWickets',[])]})
+            gap=i['runs']-(sum(b['runs'] for b in bat)+extra)
+            # The source sometimes leaves a few runs out of batters' lines. Keep the scorecard (the official
+            # innings overlay corrects the line); a larger gap means the card itself is wrong.
+            if abs(gap)>5:raise ValueError('Innings runs do not reconcile')
+            unreconciled=gap
+        innings.append({'team':i['team'].get('longName') or i['team']['name'],'runs':i.get('runs'),'wickets':i.get('wickets'),'balls':i.get('balls'),'overs_display':str(i.get('overs')),'balls_per_over':i.get('ballsPerOver') or m.get('ballsPerOver') or 6,'extras':extra,'super_over':False,'declared':i.get('event')==2,**({'unreconciled':unreconciled} if unreconciled else {}),'batting':bat,'bowling':bowl,'overs':[],'fall':[{'player':(w.get('dismissalBatsman') or {}).get('longName') or (w.get('dismissalBatsman') or {}).get('name') or 'Batter not recorded','runs':w.get('fowRuns'),'wicket':w.get('fowWicketNum'),'balls':w.get('fowBalls'),'overs':w.get('fowOvers')} for w in i.get('inningFallOfWickets',[])]})
     if not innings and m.get('hasScorecard') and m.get('status') not in ('POSTPONED','CANCELLED','ABANDONED') and not m.get('isCancelled') and not re.search(r'abandon|no result|cancel|without a ball',str(m.get('statusText','')),re.I):raise ValueError('Advertised scorecard has no innings')
     return {'match':expected,'innings':innings,'players':{t['team'].get('longName') or t['team']['name']:[player(p['player']) for p in t.get('players',[])] for t in (c.get('matchPlayers') or {}).get('teamPlayers',[]) if t.get('type')=='PLAYING'},'international_class':cls,'coverage':'scorecard' if innings else 'no-play','source':f'https://stats.cricinfo.com/ci/engine/match/{expected["id"]}.html','checked_at':datetime.now(timezone.utc).isoformat()}
 

@@ -69,6 +69,12 @@ def main():
     matches=archive['matches']+history['matches']
     cards=load_cards(ROOT,matches,people)
     assert set(routes['matches'])=={m['id'] for m in matches}
+    # Scorecards must add up to the official careers, innings by innings (tools/official_innings.py closes the gaps).
+    from official_innings import survey,gaps
+    bat,bowl,_=survey(cards,people)
+    open_gaps=gaps(cards,people,bat,bowl)
+    print(f'{len(open_gaps)} player formats do not reconcile with the official career',flush=True)
+    assert len(open_gaps)<=120,f'Scorecards no longer add up to official careers: {len(open_gaps)} player formats'
     homepage = (SITE/'index.html').read_text(encoding='utf-8')
     # The homepage is intentionally insight-led: users should see cricket
     # questions and useful records before archive-volume charts.
