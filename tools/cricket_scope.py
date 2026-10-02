@@ -11,10 +11,12 @@ def national_player(player):
 REPRESENTATIVE = frozenset({'ICC World XI', 'World XI', 'World', 'Asia XI', 'Africa XI', 'International XI'})
 
 
-def published_match(match, official):
+def published_match(match, official, since=None):
     """Every official international between two sides, full member or associate: a player's
-    scorecards must add up to the official career, which counts them all."""
-    return len(match['teams']) == 2 and match['id'] in official
+    scorecards must add up to the official career, which counts them all. A Cricsheet match
+    played since the official list was last checked (`since`) is published provisionally; the
+    weekly refresh confirms it."""
+    return len(match['teams']) == 2 and (match['id'] in official or bool(since and match['date'] >= since))
 
 
 def complete_career_counts(cards,people):
@@ -149,8 +151,8 @@ def publication_data(root):
     import re
     def read(name):return json.loads((root/'data'/name).read_text(encoding='utf-8'))
     arc,careers,hist=read('international.json'),read('careers.json'),read('historical_matches.json')
-    official=read('official_match_registry.json')['matches']
-    arc['matches']=[m for m in arc['matches'] if published_match(m,official)]
+    registry=read('official_match_registry.json');official=registry['matches']
+    arc['matches']=[m for m in arc['matches'] if published_match(m,official,registry['checked_at'][:10])]
     hist['matches']=[m for m in hist['matches'] if published_match(m,official)]
     if (root/'data/ground_metadata.json').exists():
         venues=read('ground_metadata.json')['venues']

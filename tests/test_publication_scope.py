@@ -23,10 +23,12 @@ class ScopeTests(unittest.TestCase):
     def test_every_official_international_is_published(self):
         official=json.loads((ROOT/'data/official_match_registry.json').read_text(encoding='utf8'))['matches']
         published=self.archive['matches']+self.history['matches']
-        self.assertEqual({m['id'] for m in published},set(official))
+        since=json.loads((ROOT/'data/official_match_registry.json').read_text(encoding='utf8'))['checked_at'][:10]
+        self.assertLessEqual(set(official),{m['id'] for m in published})
+        self.assertTrue(all(m['date']>=since for m in published if m['id'] not in official))   # provisional: newer than the list
         for m in published:
             self.assertEqual(len(m['teams']),2)
-            self.assertEqual(CLASSES[official[m['id']]],(m['format'],m['gender']))
+            if m['id'] in official:self.assertEqual(CLASSES[official[m['id']]],(m['format'],m['gender']))
 
     def test_representative_sides_are_not_a_nationality(self):
         for p in self.careers['players']:

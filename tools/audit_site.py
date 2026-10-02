@@ -82,7 +82,10 @@ def main():
     assert 'archive-chart-data' not in homepage, 'Legacy matches-per-year chart is still on the homepage'
     official=json.loads((ROOT/'data/official_match_registry.json').read_text(encoding='utf-8'))['matches']
     index=read(SITE/'data/match-index.json')
-    assert len(index)==len(official), (len(index), len(official))   # every official international, associates included
+    since=json.loads((ROOT/'data/official_match_registry.json').read_text(encoding='utf-8'))['checked_at'][:10]
+    published={m['id']:m for m in index}
+    assert set(official)<=set(published), len(set(official)-set(published))   # every official international, associates included
+    assert all(published[mid]['date']>=since for mid in set(published)-set(official))   # only recent Cricsheet matches are provisional
     assert all(len(m['teams'])==2 for m in index)
     assert not any(set(p['teams'])&REPRESENTATIVE for p in read(SITE/'data/player-index.json'))
     expected=Counter();appearances=Counter()

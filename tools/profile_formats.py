@@ -312,8 +312,15 @@ def split_section(rows, fmt, name, want_bowling, stats=None, played=None):
             body += lean_table(f'{name}: {fmt} bowling by {gtitle.lower()}', [('', '')] + BOWL_HEAD,
                                [bowl_cells(esc(label), bowl_totals(group)) for label, group in items], bowl_foot, css='pf-bowl', titles=False)
         panels += f'<div class="pf-tabpanel{" is-active" if i == 0 else ""}" role="tabpanel" data-tab-panel="{key}">{body}</div>'
-    note = ('<p class="pf-fine">The official career includes innings these scorecards do not hold, mostly older matches without a full scorecard. '
-            'Splits use the scorecards; the last footer line is the official total.</p>') if bat_gap or bowl_gap else ''
+    ahead = (bat_gap and (bat_all['innings'] or 0) > (official['innings'] or 0)) or (bowl_gap and (bowl_all['bowling_innings'] or 0) > (official['bowling_innings'] or 0))
+    if ahead:   # scorecards arrive daily, official totals weekly
+        note = ('<p class="pf-fine">These scorecards include matches newer than the official totals, which update every Monday. '
+                'Splits use the scorecards; the last footer line is the official total.</p>')
+    elif bat_gap or bowl_gap:
+        note = ('<p class="pf-fine">The official career includes innings these scorecards do not hold, mostly older matches without a full scorecard. '
+                'Splits use the scorecards; the last footer line is the official total.</p>')
+    else:
+        note = ''
     return f'<div class="pf-tabs" role="tablist" aria-label="Split by">{tabs}</div>{panels}{note}'
 
 
